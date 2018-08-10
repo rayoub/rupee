@@ -1,0 +1,27 @@
+
+CREATE TABLE cath_domain
+(
+    cath_sid SERIAL,
+    cath_id VARCHAR NOT NULL,
+    pdb_id VARCHAR NOT NULL DEFAULT '',
+    c INTEGER NOT NULL,
+    a INTEGER NOT NULL,
+    t INTEGER NOT NULL,
+    h INTEGER NOT NULL,
+    s INTEGER NOT NULL,
+    o INTEGER NOT NULL,
+    l INTEGER NOT NULL,
+    i INTEGER NOT NULL,
+    d INTEGER NOT NULL,
+    ca VARCHAR NOT NULL DEFAULT '',
+    cat VARCHAR NOT NULL DEFAULT '',
+    cath VARCHAR NOT NULL DEFAULT '',
+    solid VARCHAR NOT NULL DEFAULT '',
+    topology_rep BOOLEAN NOT NULL DEFAULT FALSE,
+    superfamily_rep BOOLEAN NOT NULL DEFAULT FALSE,
+    s35_rep BOOLEAN NOT NULL DEFAULT FALSE,
+    residue_count INTEGER NOT NULL,
+    resolution NUMERIC NOT NULL
+);
+
+CREATE UNIQUE INDEX idx_cath_domain_unique ON cath_domain (cath_sid);

@@ -1,0 +1,10 @@
+
+CREATE TABLE scop_hashes
+(
+    scop_id VARCHAR NOT NULL,
+    min_hashes INTEGER ARRAY NOT NULL,
+    band_hashes INTEGER ARRAY NOT NULL
+);
+
+CREATE UNIQUE INDEX idx_scop_hashes_unique ON scop_hashes (scop_id);
+

@@ -1,0 +1,46 @@
+
+# data directories
+pdb/pdb/
+pdb/obsolete/
+pdb/index/
+cath/pdb/
+scop/pdb/
+chain/pdb/
+ecod/pdb/
+upload/
+
+# big data files
+scop/dir.cla.scop.1.73.txt
+scop/dir.des.scop.1.73.txt
+scop/dir.cla.scope.2.07-stable.txt
+scop/dir.des.scope.2.07-stable.txt
+scop/domains.txt
+scop/names.txt
+scop/segments.txt
+cath/cath-domain-boundaries-v4_2_0.txt
+cath/cath-domain-list-v4_2_0.txt
+cath/domains.txt
+cath/names.txt
+cath/segments.txt
+ecod/ecod.develop210.domains.txt
+ecod/domains.txt
+ecod/names.txt
+ecod/segments.txt
+
+# intermediate results
+results/rupee/
+results/rupee.results
+
+# build ignores
+rupee-mgr/target/
+
+# any vim swap files
+**/*.swp
+
+# eclim
+**/workbench.xmi
+rupee-mgr/.settings/
+rupee-mgr/.classpath
+rupee-mgr/.project
+rupee-mgr/.gitignore
+
