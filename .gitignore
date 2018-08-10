@@ -1,31 +1,31 @@
 
 # data directories
-pdb/pdb/
-pdb/obsolete/
-pdb/index/
-cath/pdb/
-scop/pdb/
-chain/pdb/
-ecod/pdb/
-upload/
+data/pdb/pdb/
+data/pdb/obsolete/
+data/pdb/index/
+data/cath/pdb/
+data/scop/pdb/
+data/chain/pdb/
+data/ecod/pdb/
+data/upload/
 
 # big data files
-scop/dir.cla.scop.1.73.txt
-scop/dir.des.scop.1.73.txt
-scop/dir.cla.scope.2.07-stable.txt
-scop/dir.des.scope.2.07-stable.txt
-scop/domains.txt
-scop/names.txt
-scop/segments.txt
-cath/cath-domain-boundaries-v4_2_0.txt
-cath/cath-domain-list-v4_2_0.txt
-cath/domains.txt
-cath/names.txt
-cath/segments.txt
-ecod/ecod.develop210.domains.txt
-ecod/domains.txt
-ecod/names.txt
-ecod/segments.txt
+data/scop/dir.cla.scop.1.73.txt
+data/scop/dir.des.scop.1.73.txt
+data/scop/dir.cla.scope.2.07-stable.txt
+data/scop/dir.des.scope.2.07-stable.txt
+data/scop/domains.txt
+data/scop/names.txt
+data/scop/segments.txt
+data/cath/cath-domain-boundaries-v4_2_0.txt
+data/cath/cath-domain-list-v4_2_0.txt
+data/cath/domains.txt
+data/cath/names.txt
+data/cath/segments.txt
+data/ecod/ecod.develop210.domains.txt
+data/ecod/domains.txt
+data/ecod/names.txt
+data/ecod/segments.txt
 
 # intermediate results
 results/rupee/
