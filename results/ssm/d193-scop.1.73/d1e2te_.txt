@@ -1,0 +1,27 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;"> PDBe Fold v2.59. (src3) 14 Apr 2014 result file.
+
+                   RESULT SUMMARY
+
+   ##      Q-score      P-score     Z-score   RMSD    Nalgn Nsse Ngaps Seq-%     Nmd Nres-Q Nsse-Q Nres-T Nsse-T Query Target
+    1           1       75.33       26.15     0.000   274   18    0           1    0    274     18    274     18    SCOP d1e2te_  SCOP d1e2te_
+    2      0.9973       36.43       18.01     0.157   274   16    0           1    0    274     18    274     19    SCOP d1e2te_  SCOP d1e2td_
+    3       0.997       42.46       19.55     0.163   274   18    0           1    0    274     18    274     18    SCOP d1e2te_  SCOP d1e2tg_
+    4      0.9965       43.51        19.8     0.179   274   18    0           1    0    274     18    274     18    SCOP d1e2te_  SCOP d1e2ta_
+    5      0.9952       38.73       18.76     0.209   274   17    0           1    0    274     18    274     19    SCOP d1e2te_  SCOP d1e2th_
+    6      0.9944       33.76       17.32     0.226   274   15    0           1    0    274     18    274     18    SCOP d1e2te_  SCOP d1e2tf_
+    7      0.9933        39.1       19.04     0.246   274   17    0           1    0    274     18    274     18    SCOP d1e2te_  SCOP d1e2tc_
+    8       0.992       38.05       18.49     0.269   274   18    0           1    0    274     18    274     18    SCOP d1e2te_  SCOP d1e2tb_
+    9      0.6498        5.53       8.263     1.863   260   17    7      0.9423    0    274     18    274     18    SCOP d1e2te_  SCOP d1gx3d_
+   10      0.6238       4.943       7.975     1.972   259   17    7      0.9459    0    274     18    274     19    SCOP d1e2te_  SCOP d1gx3b_
+   11      0.6144       5.597       8.263     2.022   259   17    7      0.9421    0    274     18    274     19    SCOP d1e2te_  SCOP d1gx3a_
+   12      0.6047       5.746       8.335     2.034   256   17    7      0.9414    0    274     18    271     19    SCOP d1e2te_  SCOP d1w6fa1
+   13      0.6047       5.597       8.263     2.034   256   17    7      0.9414    0    274     18    271     19    SCOP d1e2te_  SCOP d1w5ra1
+   14       0.602       5.249       8.096     2.048   256   17    7      0.9414    0    274     18    271     19    SCOP d1e2te_  SCOP d1w5rb1
+   15      0.5973       5.294        8.12     2.060   255   17    7      0.9412    0    274     18    270     19    SCOP d1e2te_  SCOP d1w6fc1
+   16       0.592       4.972       7.975     2.117   258   17    7      0.9457    0    274     18    274     19    SCOP d1e2te_  SCOP d1gx3c_
+   17      0.5859          -0       2.529     1.966   248   17   11      0.9153    0    274     18    268     18    SCOP d1e2te_  SCOP d2bsza1
+   18      0.5729          -0       2.502     2.051   248   17   10      0.9194    0    274     18    267     18    SCOP d1e2te_  SCOP d2bszb1
+   19      0.5714       4.344       7.637     2.136   251   17    7      0.9442    0    274     18    267     19    SCOP d1e2te_  SCOP d1w6fb1
+   20      0.5574       5.114       7.821     2.178   250   18    8       0.928    0    274     18    268     20    SCOP d1e2te_  SCOP d1w6fd1
+   21      0.4134          -0       1.622     2.395   225   17   14      0.8889    0    274     18    273     19    SCOP d1e2te_  SCOP d1w4ta1
+</pre></body></html>

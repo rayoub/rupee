@@ -1,0 +1,33 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;"> PDBe Fold v2.59. (src3) 14 Apr 2014 result file.
+
+                   RESULT SUMMARY
+
+   ##      Q-score      P-score     Z-score   RMSD    Nalgn Nsse Ngaps Seq-%     Nmd Nres-Q Nsse-Q Nres-T Nsse-T Query Target
+    1           1       17.94       12.58     0.000   100    6    0           1    0    100      6    100      6    SCOP d4ubpa_  SCOP d1s3ta_
+    2           1       24.55       14.78     0.000   100    6    0           1    0    100      6    100      6    SCOP d4ubpa_  SCOP d3ubpa_
+    3           1       24.55       14.78     0.000   100    6    0           1    0    100      6    100      6    SCOP d4ubpa_  SCOP d2ubpa_
+    4           1       24.55       14.78     0.000   100    6    0           1    0    100      6    100      6    SCOP d4ubpa_  SCOP d1ie7a_
+    5           1       17.94       12.58     0.000   100    6    0           1    0    100      6    100      6    SCOP d4ubpa_  SCOP d1ubpa_
+    6           1       24.55       14.78     0.000   100    6    0           1    0    100      6    100      6    SCOP d4ubpa_  SCOP d4ubpa_
+    7           1       14.67       11.41     0.000   100    5    0           1    0    100      6    100      6    SCOP d4ubpa_  SCOP d1a5oa_
+    8           1       14.67       11.41     0.000   100    5    0           1    0    100      6    100      6    SCOP d4ubpa_  SCOP d1krca_
+    9           1       17.94       12.58     0.000   100    6    0           1    0    100      6    100      6    SCOP d4ubpa_  SCOP d1krba_
+   10           1       24.55       14.78     0.000   100    6    0           1    0    100      6    100      6    SCOP d4ubpa_  SCOP d1kraa_
+   11           1       17.04       12.25     0.000   100    6    0           1    0    100      6    100      6    SCOP d4ubpa_  SCOP d1a5na_
+   12           1       17.94       12.58     0.000   100    6    0           1    0    100      6    100      6    SCOP d4ubpa_  SCOP d1a5la_
+   13           1       14.67       11.41     0.000   100    5    0           1    0    100      6    100      6    SCOP d4ubpa_  SCOP d1a5ka_
+   14           1       14.67       11.41     0.000   100    5    0           1    0    100      6    100      6    SCOP d4ubpa_  SCOP d1fwja_
+   15           1       17.94       12.58     0.000   100    6    0           1    0    100      6    100      6    SCOP d4ubpa_  SCOP d1fwea_
+   16           1       17.04       12.25     0.000   100    6    0           1    0    100      6    100      6    SCOP d4ubpa_  SCOP d1a5ma_
+   17           1       17.04       12.25     0.000   100    6    0           1    0    100      6    100      6    SCOP d4ubpa_  SCOP d1fwha_
+   18           1       17.94       12.58     0.000   100    6    0           1    0    100      6    100      6    SCOP d4ubpa_  SCOP d2kaua_
+   19           1       17.94       12.58     0.000   100    6    0           1    0    100      6    100      6    SCOP d4ubpa_  SCOP d1fwfa_
+   20           1       17.94       12.58     0.000   100    6    0           1    0    100      6    100      6    SCOP d4ubpa_  SCOP d1fwia_
+   21           1       17.94       12.58     0.000   100    6    0           1    0    100      6    100      6    SCOP d4ubpa_  SCOP d1fwga_
+   22           1       17.94       12.58     0.000   100    6    0           1    0    100      6    100      6    SCOP d4ubpa_  SCOP d1fwaa_
+   23           1       17.94       12.58     0.000   100    6    0           1    0    100      6    100      6    SCOP d4ubpa_  SCOP d1fwba_
+   24           1       17.94       12.58     0.000   100    6    0           1    0    100      6    100      6    SCOP d4ubpa_  SCOP d1fwca_
+   25           1       17.94       12.58     0.000   100    6    0           1    0    100      6    100      6    SCOP d4ubpa_  SCOP d1fwda_
+   26           1       10.37        9.47     0.000   100    6    0           1    0    100      6    100      6    SCOP d4ubpa_  SCOP d1e9ya2
+   27           1        10.6       9.581     0.000   100    6    0           1    0    100      6    100      6    SCOP d4ubpa_  SCOP d1e9za2
+</pre></body></html>

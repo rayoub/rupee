@@ -1,0 +1,18 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;"> PDBe Fold v2.59. (src3) 14 Apr 2014 result file.
+
+                   RESULT SUMMARY
+
+   ##      Q-score      P-score     Z-score   RMSD    Nalgn Nsse Ngaps Seq-%     Nmd Nres-Q Nsse-Q Nres-T Nsse-T Query Target
+    1           1       39.32       18.81     0.000   197   16    0           1    0    197     17    197     16    SCOP d1mk2a_  SCOP d1mjsa_
+    2           1       71.08        25.4     0.000   197   17    0           1    0    197     17    197     17    SCOP d1mk2a_  SCOP d1mk2a_
+    3      0.9034       13.74       10.97     0.813   194   16    3      0.9536    0    197     17    197     17    SCOP d1mk2a_  SCOP d1u7fa_
+    4     0.00811          -0   1.907e-06    13.884    84   16   13     0.04762    0    197     17    197     16    SCOP d1mk2a_  SCOP d1khua_
+    5    0.007734          -0   1.907e-06    12.814    76   15   13      0.1184    0    197     17    197     17    SCOP d1mk2a_  SCOP d1khxa_
+    6    0.007479          -0   1.907e-06    14.124    82   16   13     0.03659    0    197     17    197     17    SCOP d1mk2a_  SCOP d1deva_
+    7    0.007274          -0   1.907e-06    14.513    83   16   13     0.04819    0    197     17    197     17    SCOP d1mk2a_  SCOP d1u7va_
+    8    0.004979          -0   1.907e-06    14.144    67   13   14      0.0597    0    197     17    197     18    SCOP d1mk2a_  SCOP d1qwta_
+    9    0.002837          -0   9.537e-06     9.547    35   15    7           0    0    197     17    197     17    SCOP d1mk2a_  SCOP d1ygsa_
+   10    0.002519          -0   5.913e-05    10.188    35   14    7           0    0    197     17    197     18    SCOP d1mk2a_  SCOP d1dd1a_
+   11    0.002519          -0   5.913e-05    10.188    35   14    7           0    0    197     17    197     16    SCOP d1mk2a_  SCOP d1mr1a_
+   12    0.002519          -0   5.913e-05    10.188    35   14    7           0    0    197     17    197     18    SCOP d1mk2a_  SCOP d1g88a_
+</pre></body></html>

@@ -27,10 +27,6 @@ data/ecod/domains.txt
 data/ecod/names.txt
 data/ecod/segments.txt
 
-# intermediate results
-results/rupee/
-results/rupee.results
-
 # build ignores
 rupee-mgr/target/
 

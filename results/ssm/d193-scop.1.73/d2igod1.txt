@@ -1,0 +1,35 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;"> PDBe Fold v2.59. (src3) 14 Apr 2014 result file.
+
+                   RESULT SUMMARY
+
+   ##      Q-score      P-score     Z-score   RMSD    Nalgn Nsse Ngaps Seq-%     Nmd Nres-Q Nsse-Q Nres-T Nsse-T Query Target
+    1           1       41.31       20.62     0.000   379   19    0           1    0    379     21    379     21    SCOP d2igod1  SCOP d1tzld1
+    2           1       88.08        28.3     0.000   379   21    0           1    0    379     21    379     21    SCOP d2igod1  SCOP d2igod1
+    3           1       63.29       24.01     0.000   379   20    0           1    0    379     21    379     20    SCOP d2igod1  SCOP d2ignd1
+    4       0.998       51.66       21.79     0.133   379   19    0           1    0    379     21    379     21    SCOP d2igod1  SCOP d2igoe1
+    5       0.998       44.28       21.19     0.133   379   20    0           1    0    379     21    379     22    SCOP d2igod1  SCOP d1tzle1
+    6       0.998       50.47       21.54     0.133   379   19    0           1    0    379     21    379     21    SCOP d2igod1  SCOP d2igne1
+    7      0.9971       54.65       22.29     0.162   379   20    0           1    0    379     21    379     20    SCOP d2igod1  SCOP d2igoc1
+    8      0.9971       61.45       23.65     0.162   379   20    0           1    0    379     21    379     20    SCOP d2igod1  SCOP d2ignc1
+    9      0.9971       42.02       19.52     0.162   379   19    0           1    0    379     21    379     19    SCOP d2igod1  SCOP d1tzlc1
+   10       0.997       42.24       20.91     0.164   379   19    0           1    0    379     21    379     21    SCOP d2igod1  SCOP d2f6ca1
+   11       0.997       42.24       20.91     0.164   379   19    0           1    0    379     21    379     21    SCOP d2igod1  SCOP d2f5va1
+   12       0.997       52.67       22.01     0.164   379   19    0           1    0    379     21    379     21    SCOP d2igod1  SCOP d2igna1
+   13       0.997        44.7       21.32     0.164   379   20    0           1    0    379     21    379     22    SCOP d2igod1  SCOP d1tzla1
+   14       0.997       49.83       21.41     0.164   379   19    0           1    0    379     21    379     21    SCOP d2igod1  SCOP d2igoa1
+   15       0.997       54.94       22.39     0.166   379   20    0           1    0    379     21    379     22    SCOP d2igod1  SCOP d2igoh1
+   16       0.997       50.25        21.5     0.166   379   19    0           1    0    379     21    379     21    SCOP d2igod1  SCOP d2ignh1
+   17       0.997       38.16        19.8     0.166   379   18    0           1    0    379     21    379     20    SCOP d2igod1  SCOP d1tzlh1
+   18      0.9964       51.41       21.74     0.181   379   19    0           1    0    379     21    379     21    SCOP d2igod1  SCOP d2ignf1
+   19      0.9964       44.28       21.15     0.181   379   20    0           1    0    379     21    379     22    SCOP d2igod1  SCOP d1tzlf1
+   20      0.9964       51.41       21.74     0.181   379   19    0           1    0    379     21    379     21    SCOP d2igod1  SCOP d2igof1
+   21      0.9957       44.42       21.19     0.196   379   20    0           1    0    379     21    379     22    SCOP d2igod1  SCOP d1tzlb1
+   22      0.9957       52.67       22.01     0.196   379   19    0           1    0    379     21    379     21    SCOP d2igod1  SCOP d2igob1
+   23      0.9957       51.66       21.79     0.196   379   19    0           1    0    379     21    379     21    SCOP d2igod1  SCOP d2ignb1
+   24      0.9957       45.26        21.5     0.197   379   20    0           1    0    379     21    379     22    SCOP d2igod1  SCOP d1tzlg1
+   25      0.9957       47.38       20.88     0.197   379   19    0           1    0    379     21    379     21    SCOP d2igod1  SCOP d2igog1
+   26      0.9957       50.25        21.5     0.197   379   19    0           1    0    379     21    379     21    SCOP d2igod1  SCOP d2igng1
+   27    0.007074          -0      0.4526     4.766    23   15    3     0.08696    0    379     21     56     20    SCOP d2igod1  SCOP d1coya1
+   28    0.007074          -0      0.4526     4.766    23   15    3     0.08696    0    379     21     56     20    SCOP d2igod1  SCOP d3coxa1
+   29   0.0009108          -0     0.05864     7.618    12   15    2     0.08333    0    379     21     56     21    SCOP d2igod1  SCOP d1cc2a1
+</pre></body></html>

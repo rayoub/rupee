@@ -1,0 +1,20 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;"> PDBe Fold v2.59. (src3) 14 Apr 2014 result file.
+
+                   RESULT SUMMARY
+
+   ##      Q-score      P-score     Z-score   RMSD    Nalgn Nsse Ngaps Seq-%     Nmd Nres-Q Nsse-Q Nres-T Nsse-T Query Target
+    1           1       25.84       15.18     0.000   147   11    0           1    0    147     11    147     13    SCOP d1i7pa2  SCOP d1umka2
+    2           1       45.64       20.29     0.000   147   11    0           1    0    147     11    147     11    SCOP d1i7pa2  SCOP d1ib0a2
+    3           1       45.64       20.29     0.000   147   11    0           1    0    147     11    147     11    SCOP d1i7pa2  SCOP d1i7pa2
+    4           1       45.64       20.29     0.000   147   11    0           1    0    147     11    147     11    SCOP d1i7pa2  SCOP d1qx4a2
+    5        0.15          -0        1.92     4.374   101    8    8      0.9208    0    147     11    148      9    SCOP d1i7pa2  SCOP d1rc8a1
+    6     0.08908          -0       3.427     3.008    32    8    3      0.0625    0    147     11     39      9    SCOP d1i7pa2  SCOP d1cqxa3
+    7     0.02081          -0     0.07952     5.977    38    8    4     0.02632    0    147     11     95     11    SCOP d1i7pa2  SCOP d1krha2
+    8     0.01867          -0   3.624e-05     9.111    64    8    8     0.09375    0    147     11    146     10    SCOP d1i7pa2  SCOP d1cnfa2
+    9     0.01865          -0   1.907e-06     9.978    63    9    9     0.07937    0    147     11    120     10    SCOP d1i7pa2  SCOP d2piaa2
+   10     0.01818          -0      0.2218     6.280    26    8    3     0.03846    0    147     11     47     10    SCOP d1i7pa2  SCOP d1gvha3
+   11     0.01742          -0   2.098e-05     7.928    55    8    9     0.09091    0    147     11    148     11    SCOP d1i7pa2  SCOP d1fdra2
+   12    0.009251          -0   1.907e-06    13.292    64   11   10     0.04688    0    147     11    146     14    SCOP d1i7pa2  SCOP d2cnda2
+   13      0.0056          -0   0.0002422     9.144    48    8    5      0.0625    0    147     11    272      9    SCOP d1i7pa2  SCOP d1wjga_
+   14     0.00291          -0   3.624e-05     9.552    36    8    6     0.05556    0    147     11    272      9    SCOP d1i7pa2  SCOP d1mjha_
+</pre></body></html>
