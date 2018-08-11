@@ -69,44 +69,54 @@ public class Main {
     
         OptionGroup group = new OptionGroup();
 
-        group.addOption(Option.builder("i").longOpt("import")
+        group.addOption(Option.builder("i")
+                .longOpt("import")
                 .numberOfArgs(1)
                 .argName("DB_TYPE")
-                .desc("import grams from pdb files").build());
-        group.addOption(Option.builder("h").longOpt("hash")
+                .build());
+        group.addOption(Option.builder("h")
+                .longOpt("hash")
                 .numberOfArgs(1)
                 .argName("DB_TYPE")
-                .desc("min-hashing and LSH of grams").build());
-        group.addOption(Option.builder("a").longOpt("align")
+                .build());
+        group.addOption(Option.builder("a")
+                .longOpt("align")
                 .numberOfArgs(4)
                 .argName("ID_TYPE><DB_ID_1>,<DB_ID_2><ALIGN")
                 .valueSeparator(',')
-                .desc("align domains using aligner").build());
-        group.addOption(Option.builder("l").longOpt("lcs")
+                .build());
+        group.addOption(Option.builder("l")
+                .longOpt("lcs")
                 .numberOfArgs(3)
                 .argName("ID_TYPE>,<DB_ID_1>,<DB_ID_2")
                 .valueSeparator(',')
-                .desc("align domains using LCS ").build());
-        group.addOption(Option.builder("s").longOpt("search")
-                .numberOfArgs(15)
-                .argName("SEARCH_BY><ID_TYPE>,<DB_TYPE>,<DB_ID>,<PAGE>,<PAGE_SIZE>,<LIMIT>,<REP1>,<REP2>,<REP3>,<DIFF1>,<DIFF2><DIFF3><ALIGN>,<SORT")
+                .build());
+        group.addOption(Option.builder("s")
+                .longOpt("search")
+                .numberOfArgs(13)
+                .argName("SEARCH_BY><ID_TYPE>,<DB_TYPE>,<DB_ID>,<LIMIT>,<REP1>,<REP2>,<REP3>,<DIFF1>,<DIFF2><DIFF3><ALIGN>,<SORT")
                 .valueSeparator(',')
-                .desc("get similar domains").build());
-        group.addOption(Option.builder("u").longOpt("upload")
+                .build());
+        group.addOption(Option.builder("u")
+                .longOpt("upload")
                 .numberOfArgs(1)
                 .argName("FILE_PATH")
-                .desc("upload a pdb file").build());
-        group.addOption(Option.builder("c").longOpt("cache")
+                .build());
+        group.addOption(Option.builder("c")
+                .longOpt("cache")
                 .numberOfArgs(2)
                 .argName("DB_TYPE>,<DB_ID")
                 .valueSeparator(',')
-                .desc("cache alignment scores").build());
-        group.addOption(Option.builder("t").longOpt("test")
+                .build());
+        group.addOption(Option.builder("t")
+                .longOpt("test")
                 .numberOfArgs(1)
                 .argName("TEST_ARG")
-                .desc("run a snippet of test code").build());
-        group.addOption(Option.builder("?").longOpt("help").desc("view these options again").build());
-        
+                .build());
+        group.addOption(Option.builder("?")
+                .longOpt("help")
+                .build());
+
         group.setRequired(true);
         options.addOptionGroup(group);
 
@@ -347,69 +357,59 @@ public class Main {
         // id
         String id = args[3];
 
-        // numerics
-        int page = tryParseInt(args[4]);
-        int pageSize = tryParseInt(args[5]);
-        int limit = tryParseInt(args[6]);
+        // limit
+        int limit = tryParseInt(args[4]);
 
-        if (page == -1) {
-            System.err.println("The <PAGE> argument must be a positive integer.");
-            return;
-        }
-        if (pageSize == -1) {
-            System.err.println("The <PAGE_SIZE> argument must be a positive integer.");
-            return;
-        }
         if (limit == -1) {
             System.err.println("The <LIMIT> argument must be a positive integer.");
             return;
         }
 
         // booleans
-        if (!args[7].equals("TRUE") && !args[7].equals("FALSE")) {
+        if (!args[5].equals("TRUE") && !args[5].equals("FALSE")) {
             System.err.println("The <REP1> argument must be TRUE or FALSE");
             return;
         }
-        if (!args[8].equals("TRUE") && !args[8].equals("FALSE")) {
+        if (!args[6].equals("TRUE") && !args[6].equals("FALSE")) {
             System.err.println("The <REP2> argument must be TRUE or FALSE");
             return;
         }
-        if (!args[9].equals("TRUE") && !args[9].equals("FALSE")) {
+        if (!args[7].equals("TRUE") && !args[7].equals("FALSE")) {
             System.err.println("The <REP3> argument must be TRUE or FALSE");
             return;
         }
-        if (!args[10].equals("TRUE") && !args[10].equals("FALSE")) {
+        if (!args[8].equals("TRUE") && !args[8].equals("FALSE")) {
             System.err.println("The <DIFF1> argument must be TRUE or FALSE");
             return;
         }
-        if (!args[11].equals("TRUE") && !args[11].equals("FALSE")) {
+        if (!args[9].equals("TRUE") && !args[9].equals("FALSE")) {
             System.err.println("The <DIFF2> argument must be TRUE or FALSE");
             return;
         }
-        if (!args[12].equals("TRUE") && !args[12].equals("FALSE")) {
+        if (!args[10].equals("TRUE") && !args[10].equals("FALSE")) {
             System.err.println("The <DIFF3> argument must be TRUE or FALSE");
             return;
         }
 
-        boolean rep1 = Boolean.parseBoolean(args[7]);
-        boolean rep2 = Boolean.parseBoolean(args[8]);
-        boolean rep3 = Boolean.parseBoolean(args[9]);
-        boolean diff1 = Boolean.parseBoolean(args[10]);
-        boolean diff2 = Boolean.parseBoolean(args[11]);
-        boolean diff3 = Boolean.parseBoolean(args[12]);
+        boolean rep1 = Boolean.parseBoolean(args[5]);
+        boolean rep2 = Boolean.parseBoolean(args[6]);
+        boolean rep3 = Boolean.parseBoolean(args[7]);
+        boolean diff1 = Boolean.parseBoolean(args[8]);
+        boolean diff2 = Boolean.parseBoolean(args[9]);
+        boolean diff3 = Boolean.parseBoolean(args[10]);
        
         // alignment and sorting 
-        if (!alignNames.contains(args[13])) {
+        if (!alignNames.contains(args[11])) {
             System.err.println("The <ALIGN> argument must be one of " + alignNames.toString());
             return;
         }
-        if (!sortNames.contains(args[14])) {
+        if (!sortNames.contains(args[12])) {
             System.err.println("The <SORT> argument must be one of " + sortNames.toString());
             return;
         }
 
-        AlignCriteria align = AlignCriteria.valueOf(args[13]);
-        SortCriteria sort = SortCriteria.valueOf(args[14]);
+        AlignCriteria align = AlignCriteria.valueOf(args[11]);
+        SortCriteria sort = SortCriteria.valueOf(args[12]);
 
         // consistency rule
         if (align == AlignCriteria.NONE) {
@@ -436,8 +436,8 @@ public class Main {
                 criteria.uploadId = Integer.parseInt(id);
             }
 
-            criteria.page = page;
-            criteria.pageSize = pageSize;
+            criteria.page = 1;
+            criteria.pageSize = limit;
             criteria.limit = limit;
             criteria.topologyReps = rep1;
             criteria.superfamilyReps = rep2;
@@ -504,8 +504,8 @@ public class Main {
                 criteria.uploadId = Integer.parseInt(id);
             }
 
-            criteria.page = page;
-            criteria.pageSize = pageSize;
+            criteria.page = 1;
+            criteria.pageSize = limit;
             criteria.limit = limit;
             criteria.align = align;
             criteria.sort = sort;
@@ -566,8 +566,8 @@ public class Main {
                 criteria.uploadId = Integer.parseInt(id);
             }
 
-            criteria.page = page;
-            criteria.pageSize = pageSize;
+            criteria.page = 1;
+            criteria.pageSize = limit;
             criteria.limit = limit;
             criteria.align = align;
             criteria.sort = sort;
@@ -628,8 +628,8 @@ public class Main {
                 criteria.uploadId = Integer.parseInt(id);
             }
 
-            criteria.page = page;
-            criteria.pageSize = pageSize;
+            criteria.page = 1;
+            criteria.pageSize = limit;
             criteria.limit = limit;
             criteria.align = align;
             criteria.sort = sort;
@@ -761,8 +761,7 @@ public class Main {
         HelpFormatter formatter = new HelpFormatter();
         formatter.setOptionComparator(new OptionComparator());
         formatter.setSyntaxPrefix(headerPrefix);
-        formatter.setWidth(180);
-        formatter.setDescPadding(10);
+        formatter.setWidth(140);
         formatter.setLeftPadding(5);
         return formatter;
     }
