@@ -19,6 +19,10 @@ data/scop/names.txt
 data/scop/segments.txt
 data/cath/cath-domain-boundaries-v4_2_0.txt
 data/cath/cath-domain-list-v4_2_0.txt
+data/cath/cath-names-v4_2_0.txt
+data/cath/cath-domain-boundaries-v4_1_0.txt
+data/cath/cath-domain-list-v4_1_0.txt
+data/cath/cath-names-v4_1_0.txt
 data/cath/domains.txt
 data/cath/names.txt
 data/cath/segments.txt
