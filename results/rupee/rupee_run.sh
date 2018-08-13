@@ -1,6 +1,9 @@
 #! /bin/bash
 
-# create output directory
-[ -d ./rupee ] || mkdir ./rupee
+# delete temp directory if it exist
+[ -d ./temp ] && rm -r temp
 
-xargs -a ./cath-diverse-family-reps.txt -L1 ./rupee.sh
+# create temp directory
+mkdir ./temp
+
+xargs -a ../benchmarks/cath-diverse-family-reps.txt -L8 ./rupee.sh
