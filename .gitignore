@@ -33,6 +33,9 @@ rupee-mgr/target/
 # any vim swap files
 **/*.swp
 
+# any tar files
+**/*.tar
+
 # eclim
 **/workbench.xmi
 rupee-mgr/.settings/

@@ -420,7 +420,7 @@ public class Main {
         //***  OUTPUT
         //*************************************************************
 
-        boolean verbose = true; 
+        boolean verbose = false; 
 
         if (dbType == DbTypeCriteria.CATH) {
         
@@ -476,12 +476,11 @@ public class Main {
                 else {
            
                     // gathering results
-                    System.out.printf("%-10d %-10s %-10s %-10.2f %-10.2f %-10.2f\n", 
-                        record.getN(),
-                        record.getDbId1(),
-                        record.getDbId2(),
-                        record.getSimilarity(),
-                        record.getRmsd(),
+                    System.out.println(
+                        record.getN() + "," +
+                        record.getDbId1() + "," +
+                        record.getDbId2() + "," +
+                        record.getRmsd() + "," +
                         record.getTmScore()
                     );
                 }
@@ -536,12 +535,11 @@ public class Main {
                 else {
            
                     // gathering results
-                    System.out.printf("%-10d %-10s %-10s %-10.2f %-10.2f %-10.2f\n", 
-                        record.getN(),
-                        record.getDbId1(),
-                        record.getDbId2(),
-                        record.getSimilarity(),
-                        record.getRmsd(),
+                    System.out.println(
+                        record.getN() + "," +
+                        record.getDbId1() + "," +
+                        record.getDbId2() + "," +
+                        record.getRmsd() + "," +
                         record.getTmScore()
                     );
                 }
@@ -596,12 +594,11 @@ public class Main {
                 else {
            
                     // gathering results
-                    System.out.printf("%-10d %-10s %-10s %-10.2f %-10.2f %-10.2f\n", 
-                        record.getN(),
-                        record.getDbId1(),
-                        record.getDbId2(),
-                        record.getSimilarity(),
-                        record.getRmsd(),
+                    System.out.println(
+                        record.getN() + "," +
+                        record.getDbId1() + "," +
+                        record.getDbId2() + "," +
+                        record.getRmsd() + "," +
                         record.getTmScore()
                     );
                 }
@@ -649,12 +646,11 @@ public class Main {
                 else {
            
                     // gathering results
-                    System.out.printf("%-10d %-10s %-10s %-10.2f %-10.2f %-10.2f\n", 
-                        record.getN(),
-                        record.getDbId1(),
-                        record.getDbId2(),
-                        record.getSimilarity(),
-                        record.getRmsd(),
+                    System.out.println(
+                        record.getN() + "," +
+                        record.getDbId1() + "," +
+                        record.getDbId2() + "," +
+                        record.getRmsd() + "," +
                         record.getTmScore()
                     );
                 }

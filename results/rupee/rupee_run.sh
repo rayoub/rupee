@@ -1,9 +1,11 @@
 #! /bin/bash
 
-# delete temp directory if it exist
-[ -d ./temp ] && rm -r temp
+bm=$1
 
-# create temp directory
-mkdir ./temp
+# delete output directory if it exist
+[ -d ./${bm} ] && rm -r ${bm}
 
-xargs -a ../benchmarks/cath-diverse-family-reps.txt -L8 ./rupee.sh
+# create output directory
+mkdir ./${bm}
+
+xargs -a ../benchmarks/${bm}.txt -L1 ./rupee.sh ${bm}
