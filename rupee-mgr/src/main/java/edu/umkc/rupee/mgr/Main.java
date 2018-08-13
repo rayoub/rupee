@@ -476,16 +476,13 @@ public class Main {
                 else {
            
                     // gathering results
-                    System.out.printf("%-10s %-10s %-16s %-16s %-10.2f %-10.2f %-10.2f %-10.2f %-10.2f\n", 
+                    System.out.printf("%-10d %-10s %-10s %-10.2f %-10.2f %-10.2f\n", 
+                        record.getN(),
                         record.getDbId1(),
                         record.getDbId2(),
-                        record.getC() + "." + record.getA() + "." + record.getT() + "." + record.getH(), 
-                        record.getS() + "." + record.getO() + "." + record.getL() + "." + record.getI() + "." + record.getD(),
                         record.getSimilarity(),
                         record.getRmsd(),
-                        record.getTmScore(),
-                        -1.0,
-                        -1.0
+                        record.getTmScore()
                     );
                 }
             }
@@ -539,15 +536,13 @@ public class Main {
                 else {
            
                     // gathering results
-                    System.out.printf("%-10s %-10s %-16s %-10.2f %-10.2f %-10.2f %-10.2f %-10.2f\n", 
+                    System.out.printf("%-10d %-10s %-10s %-10.2f %-10.2f %-10.2f\n", 
+                        record.getN(),
                         record.getDbId1(),
                         record.getDbId2(),
-                        record.getCl() + "." + record.getCf() + "." + record.getSf() + "." + record.getFa(), 
                         record.getSimilarity(),
                         record.getRmsd(),
-                        record.getTmScore(),
-                        -1.0,
-                        -1.0
+                        record.getTmScore()
                     );
                 }
             }
@@ -601,15 +596,13 @@ public class Main {
                 else {
            
                     // gathering results
-                    System.out.printf("%-10s %-10s %-16s %-10.2f %-10.2f %-10.2f %-10.2f %-10.2f\n", 
+                    System.out.printf("%-10d %-10s %-10s %-10.2f %-10.2f %-10.2f\n", 
+                        record.getN(),
                         record.getDbId1(),
                         record.getDbId2(),
-                        record.getX() + "." + record.getH() + "." + record.getT() + "." + record.getF(), 
                         record.getSimilarity(),
                         record.getRmsd(),
-                        record.getTmScore(),
-                        -1.0,
-                        -1.0
+                        record.getTmScore()
                     );
                 }
             }
@@ -656,14 +649,13 @@ public class Main {
                 else {
            
                     // gathering results
-                    System.out.printf("%-10s %-10s %-10.2f %-10.2f %-10.2f %-10.2f %-10.2f\n", 
+                    System.out.printf("%-10d %-10s %-10s %-10.2f %-10.2f %-10.2f\n", 
+                        record.getN(),
                         record.getDbId1(),
                         record.getDbId2(),
                         record.getSimilarity(),
                         record.getRmsd(),
-                        record.getTmScore(),
-                        -1.0,
-                        -1.0
+                        record.getTmScore()
                     );
                 }
             }
