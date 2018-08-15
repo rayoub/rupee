@@ -26,6 +26,10 @@ public class Constants {
     //public final static String CHAIN_PATH = "/home/ec2-user/data/chain/pdb/";
     //public final static String UPLOAD_PATH = "/home/ec2-user/data/upload/";
     
+    public final static String DOWNLOAD_PATH = "/home/ayoub/Downloads/";
+    public final static String SSM_PATH = "/home/ayoub/git/rupee/results/ssm/temp/";
+    public final static String MTM_PATH = "/home/ayoub/git/rupee/results/mtm/temp/";
+    
     public final static int MIN_GRAM_COUNT = 10;
     public final static int MIN_HASH_COUNT = 99;
     public final static int BAND_HASH_COUNT = 33;

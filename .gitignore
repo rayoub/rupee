@@ -31,6 +31,10 @@ data/ecod/domains.txt
 data/ecod/names.txt
 data/ecod/segments.txt
 
+# temp directories
+results/mtm/temp/
+results/ssm/temp/
+
 # build ignores
 rupee-mgr/target/
 
