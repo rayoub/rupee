@@ -22,6 +22,7 @@ import org.apache.commons.cli.OptionGroup;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 
+import edu.umkc.rupee.auto.mTMSearchDriver;
 import edu.umkc.rupee.base.Search;
 import edu.umkc.rupee.base.SearchCriteria;
 import edu.umkc.rupee.base.SearchRecord;
@@ -48,7 +49,6 @@ import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
 import edu.umkc.rupee.lib.DbTypeCriteria;
 import edu.umkc.rupee.lib.Hashes;
-import edu.umkc.rupee.lib.DbId;
 import edu.umkc.rupee.lib.LCS;
 import edu.umkc.rupee.lib.LCSResults;
 import edu.umkc.rupee.lib.SearchByCriteria;
@@ -732,11 +732,8 @@ public class Main {
 
     private static void option_t(CommandLine line) {
 
-        String[] args = line.getOptionValues("t");
-
-        if (DbId.isScopId(args[0])) {
-            System.out.println("It is a SCOP ID");
-        }
+        mTMSearchDriver driver = new mTMSearchDriver();
+        driver.doSearchBatch();
     }
 
     private static void option_help(Options options) {
