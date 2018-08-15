@@ -18,8 +18,12 @@ eres=$7
 eins=$8
 
 # exit if file doesn't exist
-if [ ! -e "../pdb/pdb/pdb${pdb_id}.ent.gz" ]; then
-    echo "File for ${ecod_id} doesn't exist."
+if [ -e "../pdb/pdb/pdb${pdb_id}.ent.gz" ]; then
+    dir="pdb"
+elif [ -e "../pdb/obsolete/pdb${pdb_id}.ent.gz" ]; then 
+    dir="obsolete"
+else
+    echo "Pdb file for ${ecod_id} doesn't exist."
     exit 1
 fi
 
@@ -30,7 +34,7 @@ end=${eres#NA}${eins#NA}
 
 # 1. get ATOM and HETATM records only
 # 2. stop processing at the end of the first model 
-gunzip -c "../pdb/pdb/pdb${pdb_id}.ent.gz" | sed -rn -e '/^(ATOM|HETATM)/p' -e '/^ENDMDL/q' |
+gunzip -c "../pdb/${dir}/pdb${pdb_id}.ent.gz" | sed -rn -e '/^(ATOM|HETATM)/p' -e '/^ENDMDL/q' |
 
 # 1. range pattern for the current range
 # 2. get the end as a distinct rule since 1. is not greedy

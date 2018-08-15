@@ -17,15 +17,13 @@ sins=$6
 eres=$7
 eins=$8
 
-# if chopping obsolete update dir variable
-dir="obsolete"
-
 # exit if file doesn't exist
-if [ ! -e "../pdb/${dir}/pdb${pdb_id}.ent.gz" ]; then
-    echo "Source file for ${scop_id} doesn't exist."
-    exit 1
-elif [ -e "./pdb/${scop_id}.pdb.gz" ]; then
-    echo "Destination file for ${scop_id} already exist."
+if [ -e "../pdb/pdb/pdb${pdb_id}.ent.gz" ]; then
+    dir="pdb"
+elif [ -e "../pdb/obsolete/pdb${pdb_id}.ent.gz" ]; then 
+    dir="obsolete"
+else
+    echo "Pdb file for ${scop_id} doesn't exist."
     exit 1
 fi
 

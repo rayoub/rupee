@@ -476,11 +476,11 @@ public class Main {
                 else {
            
                     // gathering results
-                    System.out.println(
-                        record.getN() + "," +
-                        record.getDbId1() + "," +
-                        record.getDbId2() + "," +
-                        record.getRmsd() + "," +
+                    System.out.printf("%d,%s,%s,%.4f,%.4f\n",
+                        record.getN(),
+                        record.getDbId1(),
+                        record.getDbId2(),
+                        record.getRmsd(),
                         record.getTmScore()
                     );
                 }
@@ -535,11 +535,11 @@ public class Main {
                 else {
            
                     // gathering results
-                    System.out.println(
-                        record.getN() + "," +
-                        record.getDbId1() + "," +
-                        record.getDbId2() + "," +
-                        record.getRmsd() + "," +
+                    System.out.printf("%d,%s,%s,%.4f,%.4f\n",
+                        record.getN(),
+                        record.getDbId1(),
+                        record.getDbId2(),
+                        record.getRmsd(),
                         record.getTmScore()
                     );
                 }
@@ -594,11 +594,11 @@ public class Main {
                 else {
            
                     // gathering results
-                    System.out.println(
-                        record.getN() + "," +
-                        record.getDbId1() + "," +
-                        record.getDbId2() + "," +
-                        record.getRmsd() + "," +
+                    System.out.printf("%d,%s,%s,%.4f,%.4f\n",
+                        record.getN(),
+                        record.getDbId1(),
+                        record.getDbId2(),
+                        record.getRmsd(),
                         record.getTmScore()
                     );
                 }
@@ -646,11 +646,11 @@ public class Main {
                 else {
            
                     // gathering results
-                    System.out.println(
-                        record.getN() + "," +
-                        record.getDbId1() + "," +
-                        record.getDbId2() + "," +
-                        record.getRmsd() + "," +
+                    System.out.printf("%d,%s,%s,%.4f,%.4f\n",
+                        record.getN(),
+                        record.getDbId1(),
+                        record.getDbId2(),
+                        record.getRmsd(),
                         record.getTmScore()
                     );
                 }

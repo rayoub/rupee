@@ -30,8 +30,6 @@ import org.biojava.nbio.structure.io.PDBFileReader;
 import org.postgresql.ds.PGSimpleDataSource;
 
 import edu.umkc.rupee.lib.AlignCriteria;
-import edu.umkc.rupee.lib.AlignmentScores;
-import edu.umkc.rupee.lib.Cache;
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
 import edu.umkc.rupee.lib.DbTypeCriteria;
@@ -146,37 +144,24 @@ public abstract class Search {
                     final Structure queryStructure = structure;
                     final Atom[] queryAtoms = StructureTools.getAtomCAArray(queryStructure);
 
-                    final Map<String,AlignmentScores> cache = Cache.getCachedAlignmentScores(criteria.dbId);
-
                     // perform parallel alignments with candidates
                     records.stream().parallel().forEach(record -> {
                         
                         try {
                          
-                            boolean useCache = true;
+                            StructureAlignment alg = StructureAlignmentFactory.getAlgorithm(criteria.align.getAlgorithmName());
 
-                            if (useCache && cache.containsKey(record.getDbId2())) {
+                            FileInputStream targetFile = new FileInputStream(getDbType().getImportPath() + record.getDbId2() + ".pdb.gz");
+                            GZIPInputStream targetFileGz = new GZIPInputStream(targetFile);
 
-                                AlignmentScores scores = cache.get(record.getDbId2());
-                                record.setRmsd(scores.getRmsd(criteria.align));
-                                record.setTmScore(scores.getTmScore(criteria.align));
-                            }
-                            else {
-                                
-                                StructureAlignment alg = StructureAlignmentFactory.getAlgorithm(criteria.align.getAlgorithmName());
+                            Structure targetStructure = reader.getStructure(targetFileGz);
+                            Atom[] targetAtoms = StructureTools.getAtomCAArray(targetStructure);
+                       
+                            AFPChain afps = alg.align(queryAtoms, targetAtoms, criteria.align.getParams());
+                            afps.setTMScore(AFPChainScorer.getTMScore(afps, queryAtoms, targetAtoms));
 
-                                FileInputStream targetFile = new FileInputStream(getDbType().getImportPath() + record.getDbId2() + ".pdb.gz");
-                                GZIPInputStream targetFileGz = new GZIPInputStream(targetFile);
-
-                                Structure targetStructure = reader.getStructure(targetFileGz);
-                                Atom[] targetAtoms = StructureTools.getAtomCAArray(targetStructure);
-                           
-                                AFPChain afps = alg.align(queryAtoms, targetAtoms, criteria.align.getParams());
-                                afps.setTMScore(AFPChainScorer.getTMScore(afps, queryAtoms, targetAtoms));
-
-                                record.setRmsd(afps.getTotalRmsdOpt());
-                                record.setTmScore(afps.getTMScore());
-                            }
+                            record.setRmsd(afps.getTotalRmsdOpt());
+                            record.setTmScore(afps.getTMScore());
                         }
                         catch (IOException e) {
                             Logger.getLogger(Search.class.getName()).log(Level.INFO, null, e);
