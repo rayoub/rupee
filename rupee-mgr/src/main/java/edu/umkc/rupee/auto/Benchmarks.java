@@ -68,7 +68,7 @@ public class Benchmarks {
             Connection conn = ds.getConnection();
             conn.setAutoCommit(false);
        
-            PreparedStatement stmt = conn.prepareCall("SELECT SUBSTR(scop_id,1,7) AS scop_id FROM benchmark_d500 ORDER BY scop_id;");
+            PreparedStatement stmt = conn.prepareCall("SELECT scop_id AS scop_id FROM benchmark_d500 ORDER BY scop_id;");
             
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {

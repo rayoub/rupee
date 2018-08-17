@@ -16,7 +16,7 @@ import edu.umkc.rupee.lib.Constants;
 public class mTMSearchDriver extends DriverBase {
 
     private final int SUBMIT_TIMEOUT = 60;
-    private final int SEARCH_TIMEOUT = 720;
+    private final int SEARCH_TIMEOUT = 840;
 
     public void doSearch(String scopId) throws Exception {
         

@@ -730,10 +730,15 @@ public class Main {
         Cache.cacheAlignmentScores(dbId, criteria, search);
     }
 
-    private static void option_t(CommandLine line) {
+    private static void option_t(CommandLine line) throws Exception {
+
+        // set locaton of chromedriver
+        System.setProperty("webdriver.chrome.driver", "/home/ayoub/selenium/chromedriver");
 
         mTMSearchDriver driver = new mTMSearchDriver();
+        driver.setUp();
         driver.doSearchBatch();
+        driver.tearDown();
     }
 
     private static void option_help(Options options) {
