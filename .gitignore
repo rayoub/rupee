@@ -37,6 +37,9 @@ data/ecod/segments.txt
 results/mtm/temp/
 results/ssm/temp/
 
+# result import files
+results/rupee/rupee_results.txt
+
 # build ignores
 rupee-mgr/target/
 

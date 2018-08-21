@@ -1,8 +1,10 @@
 #! /bin/bash
 
-dir=$1
+bm=$1
+ver=$2
+dir=${bm}_${ver}
 
 for id in $(find ${dir} -name '*.txt' -printf '%f\n'); do
-    cat ${dir}/${id}
+    xargs -a ${dir}/${id} -L1 printf "%s,%s\n" ${ver}
 done;
 
