@@ -5,8 +5,11 @@
 
 # chops downloaded pdbs and copies to pdb directory
 
+# delete output directory if it already exist
+[ -d ./pdb ] && rm -r pdb
+
 # create output directory
-[ -d ./pdb ] || mkdir ./pdb
+mkdir ./pdb
 
 ecod_id=$1
 seg_num=$2

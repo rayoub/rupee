@@ -43,6 +43,10 @@ results/cathedral/cathedral_results.txt
 results/mtm/mtm_results.txt
 results/ssm/ssm_results.txt
 
+# data version files
+data/cath/version.txt
+data/scop/version.txt
+
 # build ignores
 rupee-mgr/target/
 

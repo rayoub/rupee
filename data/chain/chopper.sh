@@ -4,8 +4,11 @@
 
 # chops downloaded pdbs and copies to pdb directory
 
+# delete output directory if it already exist
+[ -d ./pdb ] && rm -r pdb
+
 # create output directory
-[ -d ./pdb ] || mkdir ./pdb
+mkdir ./pdb
 
 pdb_id=$1
 chain_id=$2

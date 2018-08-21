@@ -1,0 +1,32 @@
+
+ver=$1
+
+# parse definition files
+awk -f domains.awk cath-domain-list-${ver}.txt > domains.txt
+awk -f segments.awk cath-domain-boundaries-${ver}.txt > segments.txt
+awk -f names.awk cath-names-${ver}.txt > names.txt
+
+# parse pdb files
+xargs -a segments.txt -L1 ./chopper.sh
+
+# move to db directory
+cd ../../db
+
+# prepare database (will prompt for password)
+psql -d rupee <<EOF
+    truncate table cath_name;
+    truncate table cath_domain;
+    truncate table cath_grams;
+    truncate table cath_hashes;
+    \i x_cath_name.sql
+    \i x_cath_domain.sql
+EOF
+
+## move to app directory
+cd ../rupee-mgr/target
+
+## import and hash
+java -jar rupee-mgr-0.0.1-SNAPSHOT-jar-with-dependencies.jar -i CATH
+java -jar rupee-mgr-0.0.1-SNAPSHOT-jar-with-dependencies.jar -h CATH
+
+

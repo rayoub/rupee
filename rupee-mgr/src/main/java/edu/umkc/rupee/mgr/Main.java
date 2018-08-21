@@ -22,7 +22,6 @@ import org.apache.commons.cli.OptionGroup;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 
-import edu.umkc.rupee.auto.mTMSearchDriver;
 import edu.umkc.rupee.base.Search;
 import edu.umkc.rupee.base.SearchCriteria;
 import edu.umkc.rupee.base.SearchRecord;
@@ -43,6 +42,7 @@ import edu.umkc.rupee.ecod.EcodSearchCriteria;
 import edu.umkc.rupee.ecod.EcodSearchRecord;
 import edu.umkc.rupee.lib.AlignCriteria;
 import edu.umkc.rupee.lib.AlignRecord;
+import edu.umkc.rupee.lib.AlignResults;
 import edu.umkc.rupee.lib.Aligning;
 import edu.umkc.rupee.lib.Cache;
 import edu.umkc.rupee.lib.Constants;
@@ -732,6 +732,9 @@ public class Main {
 
     private static void option_t(CommandLine line) throws Exception {
 
+        AlignResults.alignMtmResults();
+
+        /* 
         // set locaton of chromedriver
         System.setProperty("webdriver.chrome.driver", "/home/ayoub/selenium/chromedriver");
 
@@ -739,6 +742,7 @@ public class Main {
         driver.setUp();
         driver.doSearchBatch();
         driver.tearDown();
+        */
     }
 
     private static void option_help(Options options) {
