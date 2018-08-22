@@ -28,13 +28,13 @@ public class AlignResults
 
     public static void alignMtmDomResults() {
 
-        List<String> d499 = Benchmarks.get("scop_d499");
+        List<String> dbIds = Benchmarks.get("scop_d499");
 
         counter.set(0);
-        d499.parallelStream().forEach(scopId -> alignMtmDomResults(scopId));
+        dbIds.parallelStream().forEach(dbId -> alignMtmDomResults(dbId));
     }
 
-    public static void alignMtmDomResults(String scopId) {
+    public static void alignMtmDomResults(String dbId) {
 
         try {
 
@@ -46,7 +46,7 @@ public class AlignResults
             PreparedStatement stmt = conn.prepareCall(
                     "SELECT * FROM mtm_dom_result_matched WHERE version = 'dom_v08_03_2018' AND db_id_1 = ? AND n <= ? ORDER BY n;");
            
-            stmt.setString(1, scopId); 
+            stmt.setString(1, dbId); 
             stmt.setInt(2, 50); // TODO: low for testing
 
             ResultSet rs = stmt.executeQuery();
@@ -54,7 +54,7 @@ public class AlignResults
             PDBFileReader reader = new PDBFileReader();
             reader.setFetchBehavior(FetchBehavior.LOCAL_ONLY);
                 
-            FileInputStream queryFile = new FileInputStream(DbTypeCriteria.SCOP.getImportPath() + scopId + ".pdb.gz");
+            FileInputStream queryFile = new FileInputStream(DbTypeCriteria.SCOP.getImportPath() + dbId + ".pdb.gz");
             GZIPInputStream queryFileGz = new GZIPInputStream(queryFile);
             Structure queryStructure = reader.getStructure(queryFileGz);
 
@@ -74,7 +74,7 @@ public class AlignResults
 
                 updt.setDouble(1,ce.afps.getTotalRmsdOpt());
                 updt.setDouble(2,ce.afps.getTMScore());
-                updt.setString(3,scopId);
+                updt.setString(3,dbId);
                 updt.setString(4,dbId2);
 
                 updt.execute();
@@ -98,8 +98,16 @@ public class AlignResults
             Logger.getLogger(Aligning.class.getName()).log(Level.SEVERE, null, e);
         } 
     }
-/*
-    public static void batchAlignCathResults() {
+
+    public static void alignCathedralResults() {
+
+        List<String> dbIds = Benchmarks.get("cath_diverse_family");
+
+        counter.set(0);
+        dbIds.parallelStream().forEach(scopId -> alignCathedralResults(scopId));
+    }
+
+    public static void alignCathedralResults(String dbId) {
 
         try {
 
@@ -109,37 +117,38 @@ public class AlignResults
             conn.setAutoCommit(false);
             
             PreparedStatement stmt = conn.prepareCall(
-                    "WITH results AS (SELECT ROW_NUMBER() OVER (ORDER BY ssap_score DESC) AS n, cath_id_1, cath_id_2 FROM cath_result) " + 
-                    "SELECT * FROM results WHERE n <= ? ORDER BY n;");
-            
-            stmt.setInt(1, 50);
+                    "SELECT * FROM mtm_dom_result_matched WHERE version = 'dom_v08_03_2018' AND db_id_1 = ? AND n <= ? ORDER BY n;");
+           
+            stmt.setString(1, dbId); 
+            stmt.setInt(2, 50); 
 
             ResultSet rs = stmt.executeQuery();
 
-            PreparedStatement updt = conn.prepareStatement(
-                    "UPDATE cath_result SET cecp_rmsd = ?, cecp_tm_score = ?, fatcat_rmsd = ?, fatcat_tm_score = ? " +
-                    "WHERE cath_id_1 = ? AND cath_id_2 = ?;");
-
             PDBFileReader reader = new PDBFileReader();
             reader.setFetchBehavior(FetchBehavior.LOCAL_ONLY);
+                
+            FileInputStream queryFile = new FileInputStream(DbTypeCriteria.SCOP.getImportPath() + dbId + ".pdb.gz");
+            GZIPInputStream queryFileGz = new GZIPInputStream(queryFile);
+            Structure queryStructure = reader.getStructure(queryFileGz);
 
             while (rs.next()) {
 
-                String cathId1 = rs.getString("cath_id_1");
-                String cathId2 = rs.getString("cath_id_2");
+                String dbId2 = rs.getString("db_id_2");
                 
-                Structure queryStructure = reader.getStructure(Constants.PDB_PATH + cathId1 + ".pdb");
-                Structure structure = reader.getStructure(Constants.PDB_PATH + cathId2 + ".pdb");
+                FileInputStream targetFile = new FileInputStream(DbTypeCriteria.SCOP.getImportPath() + dbId2 + ".pdb.gz");
+                GZIPInputStream targetFileGz = new GZIPInputStream(targetFile);
+                Structure targetStructure = reader.getStructure(targetFileGz);
                 
-                AlignRecord cecp = Aligning.align(queryStructure, structure, AlignCriteria.CECP);
-                AlignRecord fatcat = Aligning.align(queryStructure, structure, AlignCriteria.FATCAT_FLEXIBLE);
+                AlignRecord ce = Aligning.align(queryStructure, targetStructure, AlignCriteria.CE);
 
-                updt.setDouble(1,cecp.afps.getTotalRmsdOpt());
-                updt.setDouble(2,cecp.afps.getTMScore());
-                updt.setDouble(3,fatcat.afps.getTotalRmsdOpt());
-                updt.setDouble(4,fatcat.afps.getTMScore());
-                updt.setString(5,cathId1);
-                updt.setString(6,cathId2);
+                PreparedStatement updt = conn.prepareStatement(
+                        "UPDATE mtm_dom_result_matched SET ce_rmsd = ?, ce_tm_score = ? " +
+                        "WHERE version = 'dom_v08_03_2018' AND db_id_1 = ? AND db_id_2 = ?;");
+
+                updt.setDouble(1,ce.afps.getTotalRmsdOpt());
+                updt.setDouble(2,ce.afps.getTMScore());
+                updt.setString(3,dbId);
+                updt.setString(4,dbId2);
 
                 updt.execute();
             }
@@ -150,6 +159,10 @@ public class AlignResults
             stmt.close();
             conn.close();
 
+            int count = counter.incrementAndGet();
+
+            System.out.println("Processed Count: " + count);
+
         } catch (SQLException e) {
             Logger.getLogger(Aligning.class.getName()).log(Level.SEVERE, null, e);
         } catch (IOException e) {
@@ -158,5 +171,4 @@ public class AlignResults
             Logger.getLogger(Aligning.class.getName()).log(Level.SEVERE, null, e);
         } 
     }
-    */
 }
