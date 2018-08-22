@@ -25,14 +25,13 @@ BEGIN
     ),
     valid_results As
     (
-        -- first result matches query 
         -- at least limit number of results
         SELECT
             r.db_id_1 AS db_id
         FROM
             results r
         WHERE
-            r.n = 1 AND r.db_id_1 = r.db_id_2 AND r.tot >= p_limit
+            r.n = 1 AND r.tot >= p_limit
     ),
     filtered_results AS
     (

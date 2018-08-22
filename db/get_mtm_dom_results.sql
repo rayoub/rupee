@@ -1,9 +1,11 @@
 
-CREATE OR REPLACE FUNCTION get_rupee_results (p_benchmark VARCHAR, p_version VARCHAR, p_limit INTEGER)
+CREATE OR REPLACE FUNCTION get_mtm_dom_results (p_benchmark VARCHAR, p_version VARCHAR, p_limit INTEGER)
 RETURNS TABLE (
     n INTEGER, 
     db_id_1 VARCHAR,
     db_id_2 VARCHAR,
+    mtm_rmsd NUMERIC,
+    mtm_tm_score NUMERIC,
     ce_rmsd NUMERIC,
     ce_tm_score NUMERIC
 )
@@ -18,10 +20,12 @@ BEGIN
             r.n,
             r.db_id_1,
             r.db_id_2,
+            r.mtm_rmsd,
+            r.mtm_tm_score,
             r.ce_rmsd,
             r.ce_tm_score
         FROM
-            rupee_result r
+            mtm_dom_result_matched r
             INNER JOIN benchmark b
                 ON b.db_id = r.db_id_1
                 AND b.name = p_benchmark
@@ -44,6 +48,8 @@ BEGIN
             r.n, 
             r.db_id_1,
             r.db_id_2,
+            r.mtm_rmsd,
+            r.mtm_tm_score,
             r.ce_rmsd,
             r.ce_tm_score
         FROM 
@@ -57,6 +63,8 @@ BEGIN
         r.n,
         r.db_id_1,
         r.db_id_2,
+        r.mtm_rmsd,
+        r.mtm_tm_score,
         r.ce_rmsd,
         r.ce_tm_score
     FROM 
