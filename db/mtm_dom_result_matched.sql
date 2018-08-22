@@ -1,5 +1,5 @@
 
-CREATE TABLE mtm_result
+CREATE TABLE mtm_dom_result_matched
 (
     version VARCHAR NOT NULL,
     n INTEGER NOT NULL,
@@ -11,4 +11,4 @@ CREATE TABLE mtm_result
     ce_tm_score NUMERIC NULL DEFAULT -1
 ); 
 
-CREATE UNIQUE INDEX idx_mtm_result_unique ON mtm_result (version, n, db_id_1);
+CREATE UNIQUE INDEX idx_mtm_dom_result_matched_unique ON mtm_dom_result_matched (version, n, db_id_1);
