@@ -40,7 +40,8 @@ results/ssm/temp/
 # result import files
 results/rupee/rupee_results.txt
 results/cathedral/cathedral_results.txt
-results/mtm/mtm_results.txt
+results/mtm/mtm_dom_results.txt
+results/mtm/mtm_pdbc_results.txt
 results/ssm/ssm_results.txt
 
 # data version files
