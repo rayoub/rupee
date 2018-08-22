@@ -85,7 +85,7 @@ public class mTMSearchDriver extends DriverBase {
     
     public void doSearchBatch() {
 
-        List<String> d500 = Benchmarks.getD(500);
+        List<String> d500 = Benchmarks.get("scop_d500");
 
         for (int i = 0; i < d500.size(); i++) {
             

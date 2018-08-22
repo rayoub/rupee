@@ -61,7 +61,7 @@ public class SSMSearchDriver extends DriverBase {
 
     public void doSearchBatch() {
 
-        List<String> d193 = Benchmarks.getD(193);
+        List<String> d193 = Benchmarks.get("scop_d193");
 
         for (int i = 0; i < d193.size(); i++) {
             

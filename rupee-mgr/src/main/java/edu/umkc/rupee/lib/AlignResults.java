@@ -28,7 +28,7 @@ public class AlignResults
 
     public static void alignMtmDomResults() {
 
-        List<String> d499 = Benchmarks.getD(499);
+        List<String> d499 = Benchmarks.get("scop_d499");
 
         counter.set(0);
         d499.parallelStream().forEach(scopId -> alignMtmDomResults(scopId));

@@ -26,9 +26,9 @@ public class Benchmarks {
         return ds;
     }
 
-    public static List<String> getD(int count) {
+    public static List<String> get(String name) {
 
-        List<String> d = new ArrayList<>();
+        List<String> dbIds = new ArrayList<>();
 
         PGSimpleDataSource ds = Db.getDataSource();
 
@@ -37,13 +37,13 @@ public class Benchmarks {
             Connection conn = ds.getConnection();
             conn.setAutoCommit(false);
        
-            PreparedStatement stmt = conn.prepareCall("SELECT scop_id AS scop_id FROM benchmark_d" + count + " ORDER BY scop_id;");
+            PreparedStatement stmt = conn.prepareCall("SELECT db_id FROM benchmark WHERE name = '" + name + "' ORDER BY db_id;");
             
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
 
-                String scopId = rs.getString("scop_id");
-                d.add(scopId);
+                String dbId = rs.getString("db_id");
+                dbIds.add(dbId);
             }
 
             rs.close();
@@ -54,7 +54,7 @@ public class Benchmarks {
             Logger.getLogger(Db.class.getName()).log(Level.SEVERE, null, e);
         }
 
-        return d;
+        return dbIds;
     }
 }
 
