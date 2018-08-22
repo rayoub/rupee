@@ -732,7 +732,7 @@ public class Main {
 
     private static void option_t(CommandLine line) throws Exception {
 
-        AlignResults.alignMtmResults();
+        AlignResults.alignMtmDomResults();
 
         /* 
         // set locaton of chromedriver

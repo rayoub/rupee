@@ -13,6 +13,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.support.ui.Select;
 
+import edu.umkc.rupee.lib.Benchmarks;
 import edu.umkc.rupee.lib.Constants;
 
 public class SSMSearchDriver extends DriverBase {
@@ -60,7 +61,7 @@ public class SSMSearchDriver extends DriverBase {
 
     public void doSearchBatch() {
 
-        List<String> d193 = Benchmarks.getD193();
+        List<String> d193 = Benchmarks.getD(193);
 
         for (int i = 0; i < d193.size(); i++) {
             

@@ -1,4 +1,4 @@
-package edu.umkc.rupee.auto;
+package edu.umkc.rupee.lib;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -26,9 +26,9 @@ public class Benchmarks {
         return ds;
     }
 
-    public static List<String> getD193() {
+    public static List<String> getD(int count) {
 
-        List<String> d193 = new ArrayList<>();
+        List<String> d = new ArrayList<>();
 
         PGSimpleDataSource ds = Db.getDataSource();
 
@@ -37,13 +37,13 @@ public class Benchmarks {
             Connection conn = ds.getConnection();
             conn.setAutoCommit(false);
        
-            PreparedStatement stmt = conn.prepareCall("SELECT scop_id AS scop_id FROM benchmark_d193 ORDER BY scop_id;");
+            PreparedStatement stmt = conn.prepareCall("SELECT scop_id AS scop_id FROM benchmark_d" + count + " ORDER BY scop_id;");
             
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
 
                 String scopId = rs.getString("scop_id");
-                d193.add(scopId);
+                d.add(scopId);
             }
 
             rs.close();
@@ -54,38 +54,7 @@ public class Benchmarks {
             Logger.getLogger(Db.class.getName()).log(Level.SEVERE, null, e);
         }
 
-        return d193;
-    }
-    
-    public static List<String> getD500() {
-
-        List<String> d500 = new ArrayList<>();
-
-        PGSimpleDataSource ds = Db.getDataSource();
-
-        try {
-
-            Connection conn = ds.getConnection();
-            conn.setAutoCommit(false);
-       
-            PreparedStatement stmt = conn.prepareCall("SELECT scop_id AS scop_id FROM benchmark_d500 ORDER BY scop_id;");
-            
-            ResultSet rs = stmt.executeQuery();
-            while (rs.next()) {
-
-                String scopId = rs.getString("scop_id");
-                d500.add(scopId);
-            }
-
-            rs.close();
-            stmt.close();
-            conn.close();
-
-        } catch (SQLException e) {
-            Logger.getLogger(Db.class.getName()).log(Level.SEVERE, null, e);
-        }
-
-        return d500;
+        return d;
     }
 }
 

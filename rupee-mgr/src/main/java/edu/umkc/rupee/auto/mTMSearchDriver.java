@@ -11,6 +11,7 @@ import java.util.logging.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import edu.umkc.rupee.lib.Benchmarks;
 import edu.umkc.rupee.lib.Constants;
 
 public class mTMSearchDriver extends DriverBase {
@@ -84,7 +85,7 @@ public class mTMSearchDriver extends DriverBase {
     
     public void doSearchBatch() {
 
-        List<String> d500 = Benchmarks.getD500();
+        List<String> d500 = Benchmarks.getD(500);
 
         for (int i = 0; i < d500.size(); i++) {
             
