@@ -425,7 +425,7 @@ public class Main {
         //***  OUTPUT
         //*************************************************************
 
-        boolean verbose = true; 
+        boolean verbose = false; 
 
         if (dbType == DbTypeCriteria.SCOP) { 
 
@@ -460,7 +460,7 @@ public class Main {
                 if (verbose) {
 
                     // verbose 
-                    System.out.printf("%-10d %-10s %-24s %-24s %-24s %-16s %-10d %-10.2f %-10.2f %-10.2f %-10s\n", 
+                    System.out.printf("%-10d %-10s %-24s %-24s %-24s %-16s %-10d %-10.2f %-10.2f %-10.2f\n", 
                         record.getN(),
                         record.getDbId2(),
                         record.getCfDescription().substring(0,Math.min(record.getCfDescription().length(),23)),
@@ -470,8 +470,7 @@ public class Main {
                         record.getSimilarityRank(),
                         record.getSimilarity(),
                         record.getRmsd(),
-                        record.getTmScore(),
-                        record.getEqualsPrevious()
+                        record.getTmScore()
                     );
                 }
                 else {
