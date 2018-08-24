@@ -283,6 +283,9 @@ public class Main {
 
         if (hashes1 != null && hashes2 != null) {
 
+            // band matches
+            String bandMatches = Similarity.getBandMatches(hashes1.bandHashes, hashes2.bandHashes);
+
             // estimated and exact based on overlapping grams
             double estimated = Similarity.getEstimatedSimilarity(hashes1.minHashes, hashes2.minHashes);
             double exact = Similarity.getExactSimilarity(grams1, grams2);
@@ -298,6 +301,8 @@ public class Main {
             System.out.println(""); 
             System.out.println("Structure 1 Length:     " + grams1.size());
             System.out.println("Structure 2 Length:     " + grams2.size());
+            System.out.println(""); 
+            System.out.println("Band matches:           " + bandMatches);
             System.out.println(""); 
             System.out.println("Estimated Similarity:   " + estimated);
             System.out.println("Exact Similarity:       " + exact);

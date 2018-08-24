@@ -1,11 +1,13 @@
 package edu.umkc.rupee.lib;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class Similarity {
 
@@ -169,5 +171,25 @@ public class Similarity {
         union.addAll(set2);
         
         return ((double) results.matchCount) / ((double) union.size());
+    }
+    
+    public static String getBandMatches(Integer[] bandHashes1, Integer[] bandHashes2) {
+
+        // assuming array lengths are equal
+     
+        List<Integer> matches = new ArrayList<>(); 
+        for (int i = 0; i < bandHashes1.length; i++) {
+
+            if (bandHashes1[i].equals(bandHashes2[i])) {
+                matches.add(i+1);
+            }
+        }
+
+        if (matches.size() == 0) {
+            return "None";
+        }
+        else {
+            return matches.stream().map(n -> n.toString()).collect(Collectors.joining(","));
+        }
     }
 }
