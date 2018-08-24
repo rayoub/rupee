@@ -11,6 +11,7 @@ CREATE OR REPLACE FUNCTION get_scop_band_matches (
 RETURNS TABLE (
     db_id VARCHAR,
     pdb_id VARCHAR,
+    sort_key VARCHAR,
     min_hashes INTEGER ARRAY,
     band_hashes INTEGER ARRAY
 )
@@ -98,7 +99,8 @@ BEGIN
         RETURN QUERY
         SELECT 
             h.scop_id AS db_id,
-            d.pdb_id AS pdb_id,
+            d.pdb_id,
+            d.sort_key,
             h.min_hashes,
             h.band_hashes
         FROM
@@ -120,7 +122,8 @@ BEGIN
         RETURN QUERY
         SELECT 
             h.scop_id AS db_id,
-            d.pdb_id AS pdb_id,
+            d.pdb_id,
+            d.sort_key,
             h.min_hashes,
             h.band_hashes
         FROM

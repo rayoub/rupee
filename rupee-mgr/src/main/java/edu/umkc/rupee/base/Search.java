@@ -52,7 +52,7 @@ public abstract class Search {
 
     public abstract void augment(SearchRecord record, ResultSet rs) throws SQLException;
 
-    public abstract SearchRecord getSearchRecord(String dbId, String pdbId, double similarity);
+    public abstract SearchRecord getSearchRecord(String dbId, String pdbId, String sortKey, double similarity);
 
     // *********************************************************************
     // Instance Methods
@@ -85,7 +85,7 @@ public abstract class Search {
                 // parallel band match searches to gather candidates
                 records = IntStream.range(0, Constants.BAND_CHECK_COUNT).boxed().parallel()
                     .flatMap(bandIndex -> searchBand(bandIndex, criteria, hashes1).stream())
-                    .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getDbId2))
+                    .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
                     .limit(Constants.SIMILARITY_FILTER) 
                     .collect(Collectors.toList());
 
@@ -106,7 +106,7 @@ public abstract class Search {
 
                 // sort with adjusted similarity and filter 
                 records = records.stream()
-                    .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getDbId2))
+                    .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
                     .limit(criteria.limit)
                     .collect(Collectors.toList());
 
@@ -189,7 +189,7 @@ public abstract class Search {
                 if (criteria.sort.isDescending()) {
                     comparator = comparator.reversed();
                 }
-                comparator = comparator.thenComparing(SearchRecord::getDbId2);
+                comparator = comparator.thenComparing(SearchRecord::getSortKey);
 
                 // sort using comparator from above
                 records = records.stream()
@@ -228,6 +228,7 @@ public abstract class Search {
 
                 String dbId = rs.getString("db_id");
                 String pdbId = rs.getString("pdb_id");
+                String sortKey = rs.getString("sort_key");
                 Integer[] minHashes = (Integer[])rs.getArray("min_hashes").getArray();
                 Integer[] bandHashes = (Integer[])rs.getArray("band_hashes").getArray();
                 
@@ -235,7 +236,7 @@ public abstract class Search {
                    
                     double similarity = Similarity.getEstimatedSimilarity(hashes.minHashes, minHashes); 
                     if (similarity >= Constants.SIMILARITY_THRESHOLD) {
-                        records.add(getSearchRecord(dbId, pdbId, similarity));
+                        records.add(getSearchRecord(dbId, pdbId, sortKey, similarity));
                     }
                 }
             }

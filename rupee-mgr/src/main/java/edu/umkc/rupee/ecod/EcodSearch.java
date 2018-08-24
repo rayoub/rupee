@@ -50,8 +50,8 @@ public class EcodSearch extends Search {
         ecodRecord.setFDescription(rs.getString("f_description"));
     }
 
-    public SearchRecord getSearchRecord(String dbId, String pdbId, double similarity) {
+    public SearchRecord getSearchRecord(String dbId, String pdbId, String sortKey, double similarity) {
 
-        return new EcodSearchRecord(dbId, pdbId, similarity);
+        return new EcodSearchRecord(dbId, pdbId, sortKey, similarity);
     }
 }

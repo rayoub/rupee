@@ -11,7 +11,8 @@ CREATE TABLE scop_domain
     fa INTEGER NOT NULL,
     cl_cf VARCHAR NOT NULL DEFAULT '',
     cl_cf_sf VARCHAR NOT NULL DEFAULT '',
-    cl_cf_sf_fa VARCHAR NOT NULL DEFAULT ''
+    cl_cf_sf_fa VARCHAR NOT NULL DEFAULT '',
+    sort_key VARCHAR NOT NULL DEFAULT ''
 );
 
 CREATE UNIQUE INDEX idx_scop_domain_unique ON scop_domain (scop_sid);

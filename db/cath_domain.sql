@@ -21,7 +21,8 @@ CREATE TABLE cath_domain
     superfamily_rep BOOLEAN NOT NULL DEFAULT FALSE,
     s35_rep BOOLEAN NOT NULL DEFAULT FALSE,
     residue_count INTEGER NOT NULL,
-    resolution NUMERIC NOT NULL
+    resolution NUMERIC NOT NULL,
+    sort_key VARCHAR NOT NULL DEFAULT ''
 );
 
 CREATE UNIQUE INDEX idx_cath_domain_unique ON cath_domain (cath_sid);

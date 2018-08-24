@@ -13,8 +13,8 @@ public class ScopSearchRecord extends SearchRecord {
     private String sfDescription;
     private String faDescription;
 
-    public ScopSearchRecord(String scopId, String pdbId, double similarity) {
-        super(scopId, pdbId, similarity);
+    public ScopSearchRecord(String scopId, String pdbId, String sortKey, double similarity) {
+        super(scopId, pdbId, sortKey, similarity);
     }
 
     public int getSunid() {

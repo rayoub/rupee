@@ -4,7 +4,7 @@ import edu.umkc.rupee.base.SearchRecord;
 
 public class ChainSearchRecord extends SearchRecord {
 
-    public ChainSearchRecord(String chainId, String pdbId, double similarity) {
-        super(chainId, pdbId, similarity);
+    public ChainSearchRecord(String chainId, String pdbId, String sortKey, double similarity) {
+        super(chainId, pdbId, sortKey, similarity);
     }
 }

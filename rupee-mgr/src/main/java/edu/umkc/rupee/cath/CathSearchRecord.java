@@ -17,8 +17,8 @@ public class CathSearchRecord extends SearchRecord {
     private String tDescription;
     private String hDescription;
 
-    public CathSearchRecord(String cathId, String pdbId, double similarity) {
-        super(cathId, pdbId, similarity);
+    public CathSearchRecord(String cathId, String pdbId, String sortKey, double similarity) {
+        super(cathId, pdbId, sortKey, similarity);
     }
 
     public String getC() {

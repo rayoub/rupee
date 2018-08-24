@@ -12,7 +12,8 @@ CREATE TABLE ecod_domain
     x_description VARCHAR NOT NULL,
     h_description VARCHAR NOT NULL,
     t_description VARCHAR NOT NULL,
-    f_description VARCHAR NOT NULL
+    f_description VARCHAR NOT NULL,
+    sort_key VARCHAR NOT NULL DEFAULT ''
 );
 
 CREATE UNIQUE INDEX idx_ecod_domain_unique ON ecod_domain (ecod_sid);

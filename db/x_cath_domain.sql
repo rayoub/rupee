@@ -27,6 +27,7 @@ SET
 FROM
     cath_name WHERE cath_name.cath_name = cath_domain.cath AND cath_name.cath_id = cath_domain.cath_id;
 
-
+-- assign sort key
+UPDATE cath_domain SET sort_key = cath || s || '.' || o || '.' || l || '.' || i || '.' || cath_id;
 
 

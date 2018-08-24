@@ -10,7 +10,8 @@ SET
     cl_cf_sf = cl || '.' || cf || '.' || sf,
     cl_cf_sf_fa = cl || '.' || cf || '.' || sf || '.' || fa;
 
-
+-- assign sort key
+UPDATE scop_domain SET sort_key = cl_cf_sf_fa || '.' || scop_id;
 
 
 

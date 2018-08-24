@@ -8,6 +8,7 @@ CREATE OR REPLACE FUNCTION get_chain_band_matches (
 RETURNS TABLE (
     db_id VARCHAR,
     pdb_id VARCHAR, 
+    sort_key VARCHAR,
     min_hashes INTEGER ARRAY,
     band_hashes INTEGER ARRAY
 )
@@ -80,7 +81,8 @@ BEGIN
     RETURN QUERY
     SELECT 
         h.chain_id AS db_id,
-        c.pdb_id AS pdb_id,
+        c.pdb_id,
+        c.sort_key,
         h.min_hashes,
         h.band_hashes
     FROM

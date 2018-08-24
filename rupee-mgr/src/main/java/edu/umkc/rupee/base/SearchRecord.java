@@ -7,15 +7,17 @@ public class SearchRecord {
     private String dbId1;
     private String dbId2;
     private String pdbId;
+    private String sortKey;
     private int similarityRank;
     private double similarity;
     private double rmsd;
     private double tmScore;
 
-    public SearchRecord(String dbId, String pdbId, double similarity) {
+    public SearchRecord(String dbId, String pdbId, String sortKey, double similarity) {
 
         this.dbId2 = dbId;
         this.pdbId = pdbId;
+        this.sortKey = sortKey;
         this.similarity = similarity;
     }
     
@@ -57,6 +59,14 @@ public class SearchRecord {
 
     public void setPdbId(String pdbId) {
         this.pdbId = pdbId;
+    }
+
+    public String getSortKey() {
+        return sortKey;
+    }
+
+    public void setSortKey(String sortKey) {
+        this.sortKey = sortKey;
     }
 
     public int getSimilarityRank() {
