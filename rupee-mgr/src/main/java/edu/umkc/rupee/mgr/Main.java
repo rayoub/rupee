@@ -425,9 +425,69 @@ public class Main {
         //***  OUTPUT
         //*************************************************************
 
-        boolean verbose = false; 
+        boolean verbose = true; 
 
-        if (dbType == DbTypeCriteria.CATH) {
+        if (dbType == DbTypeCriteria.SCOP) { 
+
+            ScopSearchCriteria criteria = new ScopSearchCriteria();
+            
+            criteria.searchBy = searchType;
+            criteria.dbIdType = dbIdType;
+            criteria.dbType = dbType;
+            if (criteria.searchBy == SearchByCriteria.DB_ID) {
+                criteria.dbId = id;
+            }
+            else {
+                criteria.uploadId = Integer.parseInt(id);
+            }
+
+            criteria.page = 1;
+            criteria.pageSize = limit;
+            criteria.limit = limit;
+            criteria.align = align;
+            criteria.sort = sort;
+            criteria.differentFold = diff1;
+            criteria.differentSuperfamily = diff2;
+            criteria.differentFamily = diff3;
+
+            ScopSearch scopSearch = new ScopSearch();
+            List<SearchRecord> records = scopSearch.search(criteria);
+        
+            for (SearchRecord baseRecord : records) {
+           
+                ScopSearchRecord record = (ScopSearchRecord) baseRecord;
+
+                if (verbose) {
+
+                    // verbose 
+                    System.out.printf("%-10d %-10s %-24s %-24s %-24s %-16s %-10d %-10.2f %-10.2f %-10.2f %-10s\n", 
+                        record.getN(),
+                        record.getDbId2(),
+                        record.getCfDescription().substring(0,Math.min(record.getCfDescription().length(),23)),
+                        record.getSfDescription().substring(0,Math.min(record.getSfDescription().length(),23)),
+                        record.getFaDescription().substring(0,Math.min(record.getFaDescription().length(),23)),
+                        record.getCl() + "." + record.getCf() + "." + record.getSf() + "." + record.getFa(), 
+                        record.getSimilarityRank(),
+                        record.getSimilarity(),
+                        record.getRmsd(),
+                        record.getTmScore(),
+                        record.getEqualsPrevious()
+                    );
+                }
+                else {
+           
+                    // gathering results
+                    System.out.printf("%d,%s,%s,%.4f,%.4f\n",
+                        record.getN(),
+                        record.getDbId1(),
+                        record.getDbId2(),
+                        record.getRmsd(),
+                        record.getTmScore()
+                    );
+                }
+            }
+        }
+        else if (dbType == DbTypeCriteria.CATH) {
         
             CathSearchCriteria criteria = new CathSearchCriteria();
 
@@ -472,65 +532,6 @@ public class Main {
                         record.getHDescription().substring(0,Math.min(record.getHDescription().length(),23)),
                         record.getC() + "." + record.getA() + "." + record.getT() + "." + record.getH(), 
                         record.getS() + "." + record.getO() + "." + record.getL() + "." + record.getI() + "." + record.getD(),
-                        record.getSimilarityRank(),
-                        record.getSimilarity(),
-                        record.getRmsd(),
-                        record.getTmScore()
-                    );
-                }
-                else {
-           
-                    // gathering results
-                    System.out.printf("%d,%s,%s,%.4f,%.4f\n",
-                        record.getN(),
-                        record.getDbId1(),
-                        record.getDbId2(),
-                        record.getRmsd(),
-                        record.getTmScore()
-                    );
-                }
-            }
-        }
-        else if (dbType == DbTypeCriteria.SCOP) { 
-
-            ScopSearchCriteria criteria = new ScopSearchCriteria();
-            
-            criteria.searchBy = searchType;
-            criteria.dbIdType = dbIdType;
-            criteria.dbType = dbType;
-            if (criteria.searchBy == SearchByCriteria.DB_ID) {
-                criteria.dbId = id;
-            }
-            else {
-                criteria.uploadId = Integer.parseInt(id);
-            }
-
-            criteria.page = 1;
-            criteria.pageSize = limit;
-            criteria.limit = limit;
-            criteria.align = align;
-            criteria.sort = sort;
-            criteria.differentFold = diff1;
-            criteria.differentSuperfamily = diff2;
-            criteria.differentFamily = diff3;
-
-            ScopSearch scopSearch = new ScopSearch();
-            List<SearchRecord> records = scopSearch.search(criteria);
-        
-            for (SearchRecord baseRecord : records) {
-           
-                ScopSearchRecord record = (ScopSearchRecord) baseRecord;
-
-                if (verbose) {
-
-                    // verbose 
-                    System.out.printf("%-10d %-10s %-24s %-24s %-24s %-16s %-10d %-10.2f %-10.2f %-10.2f\n", 
-                        record.getN(),
-                        record.getDbId2(),
-                        record.getCfDescription().substring(0,Math.min(record.getCfDescription().length(),23)),
-                        record.getSfDescription().substring(0,Math.min(record.getSfDescription().length(),23)),
-                        record.getFaDescription().substring(0,Math.min(record.getFaDescription().length(),23)),
-                        record.getCl() + "." + record.getCf() + "." + record.getSf() + "." + record.getFa(), 
                         record.getSimilarityRank(),
                         record.getSimilarity(),
                         record.getRmsd(),
