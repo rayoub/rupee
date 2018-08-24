@@ -28,6 +28,17 @@ FROM
     cath_name WHERE cath_name.cath_name = cath_domain.cath AND cath_name.cath_id = cath_domain.cath_id;
 
 -- assign sort key
-UPDATE cath_domain SET sort_key = cath || s || '.' || o || '.' || l || '.' || i || '.' || cath_id;
+UPDATE cath_domain 
+SET 
+    sort_key = 
+        LPAD(c || '', 1, '0') || '.' || 
+        LPAD(a || '', 3, '0') || '.' || 
+        LPAD(t || '', 4, '0') || '.' || 
+        LPAD(h || '', 5, '0') || '.' || 
+        LPAD(s || '', 3, '0') || '.' || 
+        LPAD(o || '', 2, '0') || '.' || 
+        LPAD(l || '', 2, '0') || '.' || 
+        LPAD(i || '', 3, '0') || '.' || 
+        cath_id;
 
 

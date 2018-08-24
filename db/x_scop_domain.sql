@@ -11,7 +11,14 @@ SET
     cl_cf_sf_fa = cl || '.' || cf || '.' || sf || '.' || fa;
 
 -- assign sort key
-UPDATE scop_domain SET sort_key = cl_cf_sf_fa || '.' || scop_id;
+UPDATE scop_domain 
+SET 
+    sort_key = 
+        LPAD(cl, 1, '0') || '.' || 
+        LPAD(cf || '', 3, '0') || '.' || 
+        LPAD(sf || '', 2, '0') || '.' || 
+        LPAD(fa || '', 2, '0') || '.' || 
+        scop_id; 
 
 
 
