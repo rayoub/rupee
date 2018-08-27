@@ -9,4 +9,4 @@ ver=$2
 # create output directory
 mkdir ./${bm}_${ver}
 
-xargs -a ../benchmarks/${bm}.txt -L1 ./rupee.sh ${bm} ${ver}
+cut -d, -f2 ../benchmarks/${bm}.txt | xargs -L1 ./rupee.sh ${bm} ${ver}
