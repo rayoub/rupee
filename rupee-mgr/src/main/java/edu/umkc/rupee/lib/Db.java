@@ -26,7 +26,7 @@ public class Db {
     }
 
     // *********************************************************************
-    // Getting
+    // Getting Grams
     // *********************************************************************
 
     public static List<Integer> getGrams(String dbId, DbTypeCriteria dbType) throws SQLException {
@@ -105,9 +105,27 @@ public class Db {
         return grams;
     }
     
+    // *********************************************************************
+    // Getting Hashes
+    // *********************************************************************
+
     public static Hashes getHashes(String dbId, DbTypeCriteria dbType) throws SQLException {
 
         Hashes hashes = null;
+
+        List<String> dbIds = new ArrayList<>();
+        dbIds.add(dbId);
+        Map<String, Hashes> map = getHashes(dbIds, dbType);
+        if (map.containsKey(dbId)) {
+            hashes = map.get(dbId);
+        }
+
+        return hashes;
+    }
+    
+    public static Map<String,Hashes> getHashes(List<String> dbIds, DbTypeCriteria dbType) throws SQLException {
+
+        Map<String, Hashes> map = new HashMap<>();
 
         PGSimpleDataSource ds = Db.getDataSource();
 
@@ -115,23 +133,27 @@ public class Db {
         conn.setAutoCommit(false);
 
         PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_" + dbType.getDescription().toLowerCase() + "_hashes(?);");
-
-        stmt.setString(1, dbId);
+        
+        Object[] objDbIds = dbIds.toArray();
+        String[] stringDbIds = Arrays.copyOf(objDbIds, objDbIds.length, String[].class);
+        stmt.setArray(1, conn.createArrayOf("VARCHAR", stringDbIds));
 
         ResultSet rs = stmt.executeQuery();
-        
-        if (rs.next()) {
-            hashes = new Hashes();
+        while (rs.next()) {
+
+            Hashes hashes = new Hashes();
             hashes.dbId = rs.getString("db_id");
             hashes.minHashes = (Integer[])rs.getArray("min_hashes").getArray();
             hashes.bandHashes = (Integer[])rs.getArray("band_hashes").getArray();
+
+            map.put(hashes.getDbId(), hashes);
         }
 
         rs.close();
         stmt.close();
         conn.close();
 
-        return hashes;
+        return map;
     }
     
     public static Hashes getUploadHashes(int uploadId) throws SQLException {

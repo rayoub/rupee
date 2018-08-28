@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE FUNCTION get_chain_hashes (p_chain_id VARCHAR)
+CREATE OR REPLACE FUNCTION get_chain_hashes (p_chain_ids VARCHAR ARRAY)
 RETURNS TABLE (
     db_id VARCHAR,
     min_hashes INTEGER ARRAY,
@@ -15,8 +15,8 @@ BEGIN
         h.band_hashes
     FROM
         chain_hashes h
-    WHERE  
-        h.chain_id = p_chain_id;
+        INNER JOIN UNNEST(p_chain_ids) AS ids (chain_id)
+            ON ids.chain_id = h.chain_id;
 
 END;
 $$LANGUAGE plpgsql;

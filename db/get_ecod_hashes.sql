@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE FUNCTION get_ecod_hashes (p_ecod_id VARCHAR)
+CREATE OR REPLACE FUNCTION get_ecod_hashes (p_ecod_ids VARCHAR ARRAY)
 RETURNS TABLE (
     db_id VARCHAR,
     min_hashes INTEGER ARRAY,
@@ -15,8 +15,8 @@ BEGIN
         h.band_hashes
     FROM
         ecod_hashes h
-    WHERE  
-        h.ecod_id = p_ecod_id;
+        INNER JOIN UNNEST(p_ecod_ids) AS ids (ecod_id)
+            ON ids.ecod_id = h.ecod_id;
 
 END;
 $$LANGUAGE plpgsql;

@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE FUNCTION get_cath_hashes (p_cath_id VARCHAR)
+CREATE OR REPLACE FUNCTION get_cath_hashes (p_cath_ids VARCHAR ARRAY)
 RETURNS TABLE (
     db_id VARCHAR,
     min_hashes INTEGER ARRAY,
@@ -15,8 +15,8 @@ BEGIN
         h.band_hashes
     FROM
         cath_hashes h
-    WHERE  
-        h.cath_id = p_cath_id;
+        INNER JOIN UNNEST(p_cath_ids) AS ids (cath_id)
+            ON ids.cath_id = h.cath_id;
 
 END;
 $$LANGUAGE plpgsql;
