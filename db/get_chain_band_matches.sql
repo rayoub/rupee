@@ -28,7 +28,7 @@ BEGIN
             FROM
                 scop_hashes h
             WHERE
-                h.scop_id = p_db_id;
+                h.db_id = p_db_id;
 
         ELSIF p_search_type = 2 THEN
             
@@ -39,7 +39,7 @@ BEGIN
             FROM
                 cath_hashes h
             WHERE
-                h.cath_id = p_db_id;
+                h.db_id = p_db_id;
         
         ELSIF p_search_type = 3 THEN
 
@@ -50,7 +50,7 @@ BEGIN
             FROM
                 ecod_hashes h
             WHERE
-                h.ecod_id = p_db_id;
+                h.db_id = p_db_id;
 
         ELSIF p_search_type = 4 THEN
 
@@ -61,7 +61,7 @@ BEGIN
             FROM
                 chain_hashes h
             WHERE
-                h.chain_id = p_db_id;
+                h.db_id = p_db_id;
 
         END IF;
 
@@ -80,7 +80,7 @@ BEGIN
 
     RETURN QUERY
     SELECT 
-        h.chain_id AS db_id,
+        h.db_id,
         c.pdb_id,
         c.sort_key,
         h.min_hashes,
@@ -88,7 +88,7 @@ BEGIN
     FROM
         chain c
         INNER JOIN chain_hashes h
-            ON h.chain_id = c.chain_id
+            ON h.db_id = c.chain_id
     WHERE  
         h.band_hashes[p_band_index] = band_value;
 

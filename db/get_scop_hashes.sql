@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE FUNCTION get_scop_hashes (p_scop_ids VARCHAR ARRAY)
+CREATE OR REPLACE FUNCTION get_scop_hashes (p_db_ids VARCHAR ARRAY)
 RETURNS TABLE (
     db_id VARCHAR,
     min_hashes INTEGER ARRAY,
@@ -10,13 +10,13 @@ BEGIN
 
     RETURN QUERY
     SELECT 
-        h.scop_id AS db_id,
+        h.db_id,
         h.min_hashes,
         h.band_hashes
     FROM
         scop_hashes h
-        INNER JOIN UNNEST(p_scop_ids) AS ids (scop_id)
-            ON ids.scop_id = h.scop_id;
+        INNER JOIN UNNEST(p_db_ids) AS ids (db_id)
+            ON ids.db_id = h.db_id;
 
 END;
 $$LANGUAGE plpgsql;

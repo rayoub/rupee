@@ -39,7 +39,7 @@ BEGIN
             FROM
                 scop_hashes h
             WHERE
-                h.scop_id = p_db_id;
+                h.db_id = p_db_id;
 
         ELSIF p_search_type = 2 THEN
             
@@ -50,7 +50,7 @@ BEGIN
             FROM
                 cath_hashes h
             WHERE
-                h.cath_id = p_db_id;
+                h.db_id = p_db_id;
         
         ELSIF p_search_type = 3 THEN
 
@@ -61,7 +61,7 @@ BEGIN
             FROM
                 ecod_hashes h
             WHERE
-                h.ecod_id = p_db_id;
+                h.db_id = p_db_id;
 
         ELSIF p_search_type = 4 THEN
 
@@ -72,7 +72,7 @@ BEGIN
             FROM
                 chain_hashes h
             WHERE
-                h.chain_id = p_db_id;
+                h.db_id = p_db_id;
         
         END IF;
 
@@ -95,7 +95,7 @@ BEGIN
 
         RETURN QUERY
         SELECT 
-            h.cath_id AS db_id,
+            h.db_id,
             d.pdb_id,
             d.sort_key,
             h.min_hashes,
@@ -103,9 +103,9 @@ BEGIN
         FROM
             cath_domain d
             INNER JOIN cath_hashes h
-                ON h.cath_id = d.cath_id
+                ON h.db_id = d.cath_id
         WHERE  
-            h.cath_id = p_db_id
+            h.db_id = p_db_id
             OR
             (
                 h.band_hashes[p_band_index] = band_value
@@ -128,7 +128,7 @@ BEGIN
 
         RETURN QUERY
         SELECT 
-            h.cath_id AS db_id,
+            h.db_id,
             d.pdb_id,
             d.sort_key,
             h.min_hashes,
@@ -136,9 +136,9 @@ BEGIN
         FROM
             cath_domain d
             INNER JOIN cath_hashes h
-                ON h.cath_id = d.cath_id
+                ON h.db_id = d.cath_id
         WHERE  
-            h.cath_id = p_db_id
+            h.db_id = p_db_id
             OR
             (
                 h.band_hashes[p_band_index] = band_value
@@ -151,7 +151,7 @@ BEGIN
 
         RETURN QUERY
         SELECT 
-            h.cath_id AS db_id,
+            h.db_id,
             d.pdb_id,
             d.sort_key,
             h.min_hashes,
@@ -159,9 +159,9 @@ BEGIN
         FROM
             cath_domain d
             INNER JOIN cath_hashes h
-                ON h.cath_id = d.cath_id
+                ON h.db_id = d.cath_id
         WHERE  
-            h.cath_id = p_db_id
+            h.db_id = p_db_id
             OR h.band_hashes[p_band_index] = band_value;
               
     END IF;
