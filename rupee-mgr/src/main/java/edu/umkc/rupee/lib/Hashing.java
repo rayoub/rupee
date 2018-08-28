@@ -1,5 +1,6 @@
 package edu.umkc.rupee.lib;
 
+import java.nio.ByteBuffer;
 import java.util.Map;
 
 public class Hashing {
@@ -41,6 +42,7 @@ public class Hashing {
 
         // iterate grams and update min-hashes
         for (Integer key : gramMap.keySet()) {
+
             // gramMap.get(key) is the count for that rpe hash
             for (int i = 0; i < gramMap.get(key); i++) {
                 updateMinHashes(minHashes, key + (i * Constants.DEC_POW_6)); 
@@ -76,5 +78,19 @@ public class Hashing {
         }
 
         return bandHashes;
+    }
+
+    // sufficiently exact :-) 
+    public static long getExactHash(Integer[] minHashes) {
+
+        ByteBuffer buffer = ByteBuffer.allocate(minHashes.length * 4);
+
+        for (int i = 0; i < minHashes.length; i++) {
+            buffer.putInt(minHashes[i]);
+        }
+
+        byte[] bytes = buffer.array();
+
+        return MurmurHash.hash64(bytes, bytes.length);
     }
 }

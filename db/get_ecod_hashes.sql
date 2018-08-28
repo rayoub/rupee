@@ -3,7 +3,8 @@ CREATE OR REPLACE FUNCTION get_ecod_hashes (p_db_ids VARCHAR ARRAY)
 RETURNS TABLE (
     db_id VARCHAR,
     min_hashes INTEGER ARRAY,
-    band_hashes INTEGER ARRAY
+    band_hashes INTEGER ARRAY,
+    exact_hash BIGINT
 )
 AS $$
 BEGIN
@@ -12,7 +13,8 @@ BEGIN
     SELECT 
         h.db_id,
         h.min_hashes,
-        h.band_hashes
+        h.band_hashes,
+        h.exact_hash
     FROM
         ecod_hashes h
         INNER JOIN UNNEST(p_db_ids) AS ids (db_id)

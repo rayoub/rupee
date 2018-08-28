@@ -74,10 +74,11 @@ public abstract class Hash {
 
                     Hashes hashes = getHashes(grams);
 
-                    PreparedStatement updt = conn.prepareStatement("SELECT insert_" + getDbType().getDescription().toLowerCase() + "_hashes(?, ?, ?);");
+                    PreparedStatement updt = conn.prepareStatement("SELECT insert_" + getDbType().getDescription().toLowerCase() + "_hashes(?, ?, ?, ?);");
                     updt.setString(1, dbId);
                     updt.setArray(2, conn.createArrayOf("INTEGER", hashes.getMinHashes()));
                     updt.setArray(3, conn.createArrayOf("INTEGER", hashes.getBandHashes()));
+                    updt.setLong(4, hashes.getExactHash());
 
                     updt.execute();
                     updt.close();
@@ -123,8 +124,12 @@ public abstract class Hash {
 
         Integer minHashes[] = Hashing.getMinHashes(gramMap);
         Integer bandHashes[] = Hashing.getBandHashes(minHashes);
+        long exactHash = Hashing.getExactHash(minHashes);
 
-        Hashes hashes = new Hashes(minHashes, bandHashes);
+        Hashes hashes = new Hashes();
+        hashes.setMinHashes(minHashes);
+        hashes.setBandHashes(bandHashes);
+        hashes.setExactHash(exactHash);
 
         return hashes;
     }

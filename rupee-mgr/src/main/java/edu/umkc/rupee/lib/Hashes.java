@@ -3,22 +3,10 @@ package edu.umkc.rupee.lib;
 public class Hashes {
 
     public String dbId;
+    public String setId;
     public Integer[] minHashes;
     public Integer[] bandHashes;
-
-    public Hashes() {}
-
-    public Hashes(Integer[] minHashes, Integer[] bandHashes) {
-        this.dbId = "";
-        this.minHashes = minHashes;
-        this.bandHashes = bandHashes;
-    }
-
-    public Hashes(String dbId, Integer[] minHashes, Integer[] bandHashes) {
-        this.dbId = dbId;
-        this.minHashes = minHashes;
-        this.bandHashes = bandHashes;
-    }
+    public long exactHash;
 
     public String getDbId() {
         return dbId;
@@ -26,6 +14,14 @@ public class Hashes {
 
     public void setDbId(String dbId) {
         this.dbId = dbId;
+    }
+
+    public String getSetId() {
+        return setId;
+    }
+
+    public void setSetId(String setId) {
+        this.setId = setId;
     }
 
     public Integer[] getMinHashes() {
@@ -42,6 +38,14 @@ public class Hashes {
 
     public void setBandHashes(Integer[] bandHashes) {
         this.bandHashes = bandHashes;
+    }
+
+    public long getExactHash() {
+        return exactHash;
+    }
+
+    public void setExactHash(long exactHash) {
+        this.exactHash = exactHash;
     }
 }
 
