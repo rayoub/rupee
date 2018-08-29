@@ -32,8 +32,8 @@ public class SearchRecord {
         return dbId;
     }
 
-    public void setDbId(String dbId2) {
-        this.dbId = dbId2;
+    public void setDbId(String dbId) {
+        this.dbId = dbId;
     }
 
     public String getPdbId() {
