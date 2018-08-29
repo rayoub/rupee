@@ -22,8 +22,6 @@ import org.apache.commons.cli.OptionGroup;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 
-import edu.umkc.rupee.base.Search;
-import edu.umkc.rupee.base.SearchCriteria;
 import edu.umkc.rupee.base.SearchRecord;
 import edu.umkc.rupee.cath.CathHash;
 import edu.umkc.rupee.cath.CathImport;
@@ -43,7 +41,6 @@ import edu.umkc.rupee.ecod.EcodSearchRecord;
 import edu.umkc.rupee.lib.AlignCriteria;
 import edu.umkc.rupee.lib.AlignRecord;
 import edu.umkc.rupee.lib.Aligning;
-import edu.umkc.rupee.lib.Cache;
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
 import edu.umkc.rupee.lib.DbTypeCriteria;
@@ -102,12 +99,6 @@ public class Main {
                 .numberOfArgs(1)
                 .argName("FILE_PATH")
                 .build());
-        group.addOption(Option.builder("c")
-                .longOpt("cache")
-                .numberOfArgs(2)
-                .argName("DB_TYPE>,<DB_ID")
-                .valueSeparator(',')
-                .build());
         group.addOption(Option.builder("t")
                 .longOpt("test")
                 .numberOfArgs(1)
@@ -144,8 +135,6 @@ public class Main {
                 option_s(line);
             } else if (line.hasOption("u")) {
                 option_u(line);
-            } else if (line.hasOption("c")) {
-                option_c(line);
             } else if (line.hasOption("t")) {
                 option_t(line);
             } else if (line.hasOption("?")) {
@@ -675,60 +664,6 @@ public class Main {
         int uploadId = Uploading.upload(content);
 
         System.out.println("Upload Successful. Upload Id: " + uploadId);
-    }
-    
-    private static void option_c(CommandLine line) {
-        
-        Set<String> dbTypeNames = new HashSet<>(Arrays.stream(DbTypeCriteria.values()).map(v -> v.name()).collect(Collectors.toList()));
-        
-        String[] args = line.getOptionValues("c");
-        
-        String dbId = args[1];
-        
-        if (!dbTypeNames.contains(args[0])) {
-            System.err.println("The <DB_TYPE> argument must be one of " + dbTypeNames.toString());
-            return;
-        }
-        
-        DbTypeCriteria dbType = DbTypeCriteria.valueOf(args[0]);
-
-        SearchCriteria criteria;
-        Search search;
-
-        if (dbType == DbTypeCriteria.CATH) {
-            CathSearchCriteria cathCriteria = new CathSearchCriteria();
-            cathCriteria.dbId = dbId;
-            cathCriteria.limit = 400;
-
-            criteria = cathCriteria;
-            search = new CathSearch();
-        }
-        else if (dbType == DbTypeCriteria.SCOP) { 
-            ScopSearchCriteria scopCriteria = new ScopSearchCriteria();
-            scopCriteria.dbId = dbId;
-            scopCriteria.limit = 400;
-
-            criteria = scopCriteria;
-            search = new ScopSearch();
-        }
-        else if (dbType == DbTypeCriteria.ECOD) {
-            EcodSearchCriteria ecodCriteria = new EcodSearchCriteria();
-            ecodCriteria.dbId = dbId;
-            ecodCriteria.limit = 400;
-
-            criteria = ecodCriteria;
-            search = new ScopSearch();
-        }
-        else { // CHAIN
-            ChainSearchCriteria chainCriteria = new ChainSearchCriteria();
-            chainCriteria.dbId = dbId;
-            chainCriteria.limit = 400;
-
-            criteria = chainCriteria;
-            search = new ChainSearch();
-        }
-
-        Cache.cacheAlignmentScores(dbId, criteria, search);
     }
 
     private static void option_t(CommandLine line) throws Exception {
