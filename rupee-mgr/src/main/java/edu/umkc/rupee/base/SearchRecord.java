@@ -12,14 +12,6 @@ public class SearchRecord {
     private double similarity;
     private double rmsd;
     private double tmScore;
-
-    public SearchRecord(String dbId, String pdbId, String sortKey, double similarity) {
-
-        this.dbId2 = dbId;
-        this.pdbId = pdbId;
-        this.sortKey = sortKey;
-        this.similarity = similarity;
-    }
     
     public int getN() {
         return n;

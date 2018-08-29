@@ -37,8 +37,8 @@ public class ChainSearch extends Search {
         // do nothing
     }
 
-    public SearchRecord getSearchRecord(String dbId, String pdbId, String sortKey, double similarity) {
+    public SearchRecord getSearchRecord() {
 
-        return new ChainSearchRecord(dbId, pdbId, sortKey, similarity);
+        return new ChainSearchRecord();
     }
 }

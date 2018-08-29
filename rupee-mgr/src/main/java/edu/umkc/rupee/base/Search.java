@@ -52,7 +52,7 @@ public abstract class Search {
 
     public abstract void augment(SearchRecord record, ResultSet rs) throws SQLException;
 
-    public abstract SearchRecord getSearchRecord(String dbId, String pdbId, String sortKey, double similarity);
+    public abstract SearchRecord getSearchRecord();
 
     // *********************************************************************
     // Instance Methods
@@ -236,7 +236,13 @@ public abstract class Search {
                    
                     double similarity = Similarity.getEstimatedSimilarity(hashes.minHashes, minHashes); 
                     if (similarity >= Constants.SIMILARITY_THRESHOLD) {
-                        records.add(getSearchRecord(dbId, pdbId, sortKey, similarity));
+
+                        SearchRecord record = getSearchRecord();
+                        record.setDbId2(dbId);
+                        record.setPdbId(pdbId);
+                        record.setSortKey(sortKey);
+                        record.setSimilarity(similarity);
+                        records.add(record);
                     }
                 }
             }

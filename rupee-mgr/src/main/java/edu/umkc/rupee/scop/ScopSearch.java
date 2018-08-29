@@ -49,8 +49,8 @@ public class ScopSearch extends Search {
         scopRecord.setFaDescription(rs.getString("fa_description"));
     }
 
-    public SearchRecord getSearchRecord(String dbId, String pdbId, String sortKey, double similarity) {
+    public SearchRecord getSearchRecord() {
 
-        return new ScopSearchRecord(dbId, pdbId, sortKey, similarity);
+        return new ScopSearchRecord();
     }
 }

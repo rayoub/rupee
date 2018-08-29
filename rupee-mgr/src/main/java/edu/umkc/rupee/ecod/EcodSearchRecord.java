@@ -14,10 +14,6 @@ public class EcodSearchRecord extends SearchRecord {
     private String tDescription;
     private String fDescription;
 
-    public EcodSearchRecord(String ecodId, String pdbId, String sortKey, double similarity) {
-        super(ecodId, pdbId, sortKey, similarity);
-    }
-
     public String getX() {
         return x;
     }

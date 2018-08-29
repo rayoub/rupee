@@ -56,8 +56,8 @@ public class CathSearch extends Search {
         cathRecord.setHDescription(rs.getString("h_description"));
     }
 
-    public SearchRecord getSearchRecord(String dbId, String pdbId, String sortKey, double similarity) {
+    public SearchRecord getSearchRecord() {
 
-        return new CathSearchRecord(dbId, pdbId, sortKey, similarity);
+        return new CathSearchRecord();
     }
 }
