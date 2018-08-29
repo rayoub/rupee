@@ -460,14 +460,13 @@ public class Main {
                 if (verbose) {
 
                     // verbose 
-                    System.out.printf("%-10d %-10s %-24s %-24s %-24s %-16s %-10d %-10.2f %-10.2f %-10.2f\n", 
+                    System.out.printf("%-10d %-10s %-24s %-24s %-24s %-16s %-10.2f %-10.2f %-10.2f\n", 
                         record.getN(),
                         record.getDbId(),
                         record.getCfDescription().substring(0,Math.min(record.getCfDescription().length(),23)),
                         record.getSfDescription().substring(0,Math.min(record.getSfDescription().length(),23)),
                         record.getFaDescription().substring(0,Math.min(record.getFaDescription().length(),23)),
                         record.getCl() + "." + record.getCf() + "." + record.getSf() + "." + record.getFa(), 
-                        record.getSimilarityRank(),
                         record.getSimilarity(),
                         record.getRmsd(),
                         record.getTmScore()
@@ -523,7 +522,7 @@ public class Main {
 
 
                     // verbose 
-                    System.out.printf("%-10d %-10s %-24s %-24s %-24s %-16s %-16s %-10d %-10.2f %-10.2f %-10.2f\n", 
+                    System.out.printf("%-10d %-10s %-24s %-24s %-24s %-16s %-16s %-10.2f %-10.2f %-10.2f\n", 
                         record.getN(),
                         record.getDbId(),
                         record.getADescription().substring(0,Math.min(record.getADescription().length(),23)),
@@ -531,7 +530,6 @@ public class Main {
                         record.getHDescription().substring(0,Math.min(record.getHDescription().length(),23)),
                         record.getC() + "." + record.getA() + "." + record.getT() + "." + record.getH(), 
                         record.getS() + "." + record.getO() + "." + record.getL() + "." + record.getI() + "." + record.getD(),
-                        record.getSimilarityRank(),
                         record.getSimilarity(),
                         record.getRmsd(),
                         record.getTmScore()
@@ -583,14 +581,13 @@ public class Main {
                 if (verbose) {
 
                     // verbose 
-                    System.out.printf("%-10d %-10s %-24s %-24s %-24s %-16s %-10d %-10.2f %-10.2f %-10.2f\n", 
+                    System.out.printf("%-10d %-10s %-24s %-24s %-24s %-16s %-10.2f %-10.2f %-10.2f\n", 
                         record.getN(),
                         record.getDbId(),
                         record.getHDescription().substring(0,Math.min(record.getHDescription().length(),23)),
                         record.getTDescription().substring(0,Math.min(record.getTDescription().length(),23)),
                         record.getFDescription().substring(0,Math.min(record.getFDescription().length(),23)),
                         record.getX() + "." + record.getH() + "." + record.getT() + (record.getF().isEmpty()?"":".") + record.getF(), 
-                        record.getSimilarityRank(),
                         record.getSimilarity(),
                         record.getRmsd(),
                         record.getTmScore()
@@ -639,10 +636,9 @@ public class Main {
                 if (verbose) {
 
                     // verbose 
-                    System.out.printf("%-10d %-10s %-10d %-10.2f %-10.2f %-10.2f\n", 
+                    System.out.printf("%-10d %-10s %-10.2f %-10.2f %-10.2f\n", 
                         record.getN(),
                         record.getDbId(),
-                        record.getSimilarityRank(),
                         record.getSimilarity(),
                         record.getRmsd(),
                         record.getTmScore()

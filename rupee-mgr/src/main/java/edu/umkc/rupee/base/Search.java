@@ -110,11 +110,6 @@ public abstract class Search {
                     .limit(criteria.limit)
                     .collect(Collectors.toList());
 
-                // assign similarity ranks for reference
-                for (int i = 0; i < records.size(); i++) {
-                    records.get(i).setSimilarityRank(i+1);
-                }
-
                 // if an external alignment algorithm is requested
                 if (criteria.align != AlignCriteria.NONE) {
 
