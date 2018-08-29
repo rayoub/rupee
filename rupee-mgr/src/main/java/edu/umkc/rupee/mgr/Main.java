@@ -42,7 +42,6 @@ import edu.umkc.rupee.ecod.EcodSearchCriteria;
 import edu.umkc.rupee.ecod.EcodSearchRecord;
 import edu.umkc.rupee.lib.AlignCriteria;
 import edu.umkc.rupee.lib.AlignRecord;
-import edu.umkc.rupee.lib.AlignResults;
 import edu.umkc.rupee.lib.Aligning;
 import edu.umkc.rupee.lib.Cache;
 import edu.umkc.rupee.lib.Constants;
@@ -55,6 +54,7 @@ import edu.umkc.rupee.lib.SearchByCriteria;
 import edu.umkc.rupee.lib.Similarity;
 import edu.umkc.rupee.lib.SortCriteria;
 import edu.umkc.rupee.lib.Uploading;
+import edu.umkc.rupee.ndd.UnionFind;
 import edu.umkc.rupee.scop.ScopHash;
 import edu.umkc.rupee.scop.ScopImport;
 import edu.umkc.rupee.scop.ScopSearch;
@@ -462,7 +462,7 @@ public class Main {
                     // verbose 
                     System.out.printf("%-10d %-10s %-24s %-24s %-24s %-16s %-10d %-10.2f %-10.2f %-10.2f\n", 
                         record.getN(),
-                        record.getDbId2(),
+                        record.getDbId(),
                         record.getCfDescription().substring(0,Math.min(record.getCfDescription().length(),23)),
                         record.getSfDescription().substring(0,Math.min(record.getSfDescription().length(),23)),
                         record.getFaDescription().substring(0,Math.min(record.getFaDescription().length(),23)),
@@ -478,8 +478,8 @@ public class Main {
                     // gathering results
                     System.out.printf("%d,%s,%s,%.4f,%.4f\n",
                         record.getN(),
-                        record.getDbId1(),
-                        record.getDbId2(),
+                        criteria.dbId,
+                        record.getDbId(),
                         record.getRmsd(),
                         record.getTmScore()
                     );
@@ -525,7 +525,7 @@ public class Main {
                     // verbose 
                     System.out.printf("%-10d %-10s %-24s %-24s %-24s %-16s %-16s %-10d %-10.2f %-10.2f %-10.2f\n", 
                         record.getN(),
-                        record.getDbId2(),
+                        record.getDbId(),
                         record.getADescription().substring(0,Math.min(record.getADescription().length(),23)),
                         record.getTDescription().substring(0,Math.min(record.getTDescription().length(),23)),
                         record.getHDescription().substring(0,Math.min(record.getHDescription().length(),23)),
@@ -542,8 +542,8 @@ public class Main {
                     // gathering results
                     System.out.printf("%d,%s,%s,%.4f,%.4f\n",
                         record.getN(),
-                        record.getDbId1(),
-                        record.getDbId2(),
+                        criteria.dbId,
+                        record.getDbId(),
                         record.getRmsd(),
                         record.getTmScore()
                     );
@@ -585,7 +585,7 @@ public class Main {
                     // verbose 
                     System.out.printf("%-10d %-10s %-24s %-24s %-24s %-16s %-10d %-10.2f %-10.2f %-10.2f\n", 
                         record.getN(),
-                        record.getDbId2(),
+                        record.getDbId(),
                         record.getHDescription().substring(0,Math.min(record.getHDescription().length(),23)),
                         record.getTDescription().substring(0,Math.min(record.getTDescription().length(),23)),
                         record.getFDescription().substring(0,Math.min(record.getFDescription().length(),23)),
@@ -601,8 +601,8 @@ public class Main {
                     // gathering results
                     System.out.printf("%d,%s,%s,%.4f,%.4f\n",
                         record.getN(),
-                        record.getDbId1(),
-                        record.getDbId2(),
+                        criteria.dbId,
+                        record.getDbId(),
                         record.getRmsd(),
                         record.getTmScore()
                     );
@@ -641,7 +641,7 @@ public class Main {
                     // verbose 
                     System.out.printf("%-10d %-10s %-10d %-10.2f %-10.2f %-10.2f\n", 
                         record.getN(),
-                        record.getDbId2(),
+                        record.getDbId(),
                         record.getSimilarityRank(),
                         record.getSimilarity(),
                         record.getRmsd(),
@@ -653,8 +653,8 @@ public class Main {
                     // gathering results
                     System.out.printf("%d,%s,%s,%.4f,%.4f\n",
                         record.getN(),
-                        record.getDbId1(),
-                        record.getDbId2(),
+                        criteria.dbId,
+                        record.getDbId(),
                         record.getRmsd(),
                         record.getTmScore()
                     );
@@ -737,7 +737,16 @@ public class Main {
 
     private static void option_t(CommandLine line) throws Exception {
 
+        //Pairing.pair(5);
+        UnionFind uf = new UnionFind();
+        uf.go();
+        uf.saveSets();
+
+        //Pairing.pair(5);
+
+        /*
         AlignResults.alignMtmDomResults();
+        */
 
         /* 
         // set locaton of chromedriver

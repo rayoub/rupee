@@ -4,8 +4,7 @@ public class SearchRecord {
 
     private int n;
     private int recordCount;
-    private String dbId1;
-    private String dbId2;
+    private String dbId;
     private String pdbId;
     private String sortKey;
     private int similarityRank;
@@ -29,20 +28,12 @@ public class SearchRecord {
         this.recordCount = recordCount;
     }
 
-    public String getDbId1() {
-        return dbId1;
+    public String getDbId() {
+        return dbId;
     }
 
-    public void setDbId1(String dbId1) {
-        this.dbId1 = dbId1;
-    }
-
-    public String getDbId2() {
-        return dbId2;
-    }
-
-    public void setDbId2(String dbId2) {
-        this.dbId2 = dbId2;
+    public void setDbId(String dbId2) {
+        this.dbId = dbId2;
     }
 
     public String getPdbId() {

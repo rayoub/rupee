@@ -53,20 +53,20 @@ public class Cache {
                 // parallel band match searches to gather candidates
                 List<SearchRecord> records = IntStream.range(0, Constants.BAND_CHECK_COUNT).boxed().parallel()
                     .flatMap(bandIndex -> search.searchBand(bandIndex, criteria, hashes).stream())
-                    .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getDbId2))
+                    .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getDbId))
                     .limit(Constants.SIMILARITY_FILTER)
                     .collect(Collectors.toList());
 
                 // cache map of residue grams
-                List<String> dbIds = records.stream().map(SearchRecord::getDbId2).collect(Collectors.toList());
+                List<String> dbIds = records.stream().map(SearchRecord::getDbId).collect(Collectors.toList());
                 Map<String, List<Integer>> map = Db.getGrams(dbIds, search.getDbType());
 
                 // parallel adjusted similarity
                 records.parallelStream()
                     .forEach(record -> {
 
-                        if (map.containsKey(record.getDbId2())) {
-                            List<Integer> grams2 = map.get(record.getDbId2());
+                        if (map.containsKey(record.getDbId())) {
+                            List<Integer> grams2 = map.get(record.getDbId());
                             LCSResults results = LCS.getSemiGlobalLCS(grams1, grams2);
                             record.setSimilarity(Similarity.getAdjustedSimilarity(grams1, grams2, results));
                         }
@@ -74,7 +74,7 @@ public class Cache {
 
                 // sort with adjusted similarity and filter 
                 records = records.stream()
-                    .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getDbId2))
+                    .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getDbId))
                     .limit(criteria.limit)
                     .collect(Collectors.toList());
 
@@ -90,15 +90,15 @@ public class Cache {
 
                 // perform parallel alignments with candidates
                 List<AlignmentScores> cache = records.stream().parallel()
-                    .filter(record -> !cached.containsKey(record.getDbId2()))
+                    .filter(record -> !cached.containsKey(record.getDbId()))
                     .map(record -> {
                    
-                        AlignmentScores scores = new AlignmentScores(criteria.dbId, record.getDbId2());
+                        AlignmentScores scores = new AlignmentScores(criteria.dbId, record.getDbId());
                         scores.setSimilarity(record.getSimilarity());
 
                         try {
 
-                            FileInputStream targetFile = new FileInputStream(search.getDbType().getImportPath() + record.getDbId2() + ".pdb.gz");
+                            FileInputStream targetFile = new FileInputStream(search.getDbType().getImportPath() + record.getDbId() + ".pdb.gz");
                             GZIPInputStream targetFileGz = new GZIPInputStream(targetFile);
 
                             Structure targetStructure = reader.getStructure(targetFileGz);

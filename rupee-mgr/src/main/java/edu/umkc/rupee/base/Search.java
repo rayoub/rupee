@@ -90,15 +90,15 @@ public abstract class Search {
                     .collect(Collectors.toList());
 
                 // cache map of residue grams
-                List<String> dbIds = records.stream().map(SearchRecord::getDbId2).collect(Collectors.toList());
+                List<String> dbIds = records.stream().map(SearchRecord::getDbId).collect(Collectors.toList());
                 Map<String, List<Integer>> map = Db.getGrams(dbIds, criteria.dbType);
 
                 // parallel adjusted similarity
                 records.parallelStream()
                     .forEach(record -> {
 
-                        if (map.containsKey(record.getDbId2())) {
-                            List<Integer> grams2 = map.get(record.getDbId2());
+                        if (map.containsKey(record.getDbId())) {
+                            List<Integer> grams2 = map.get(record.getDbId());
                             LCSResults results = LCS.getSemiGlobalLCS(grams1, grams2);
                             record.setSimilarity(Similarity.getAdjustedSimilarity(grams1, grams2, results));
                         }
@@ -151,7 +151,7 @@ public abstract class Search {
                          
                             StructureAlignment alg = StructureAlignmentFactory.getAlgorithm(criteria.align.getAlgorithmName());
 
-                            FileInputStream targetFile = new FileInputStream(getDbType().getImportPath() + record.getDbId2() + ".pdb.gz");
+                            FileInputStream targetFile = new FileInputStream(getDbType().getImportPath() + record.getDbId() + ".pdb.gz");
                             GZIPInputStream targetFileGz = new GZIPInputStream(targetFile);
 
                             Structure targetStructure = reader.getStructure(targetFileGz);
@@ -199,7 +199,7 @@ public abstract class Search {
                         .collect(Collectors.toList());
 
                 // augment data set for output
-                augment(records, criteria.dbId, recordCount);
+                augment(records, recordCount);
             }
 
         } catch (Exception e) {
@@ -238,7 +238,7 @@ public abstract class Search {
                     if (similarity >= Constants.SIMILARITY_THRESHOLD) {
 
                         SearchRecord record = getSearchRecord();
-                        record.setDbId2(dbId);
+                        record.setDbId(dbId);
                         record.setPdbId(pdbId);
                         record.setSortKey(sortKey);
                         record.setSimilarity(similarity);
@@ -258,7 +258,7 @@ public abstract class Search {
         return records;
     }
 
-    public void augment(List<SearchRecord> bandRecords, String dbId, int recordCount) {
+    public void augment(List<SearchRecord> bandRecords, int recordCount) {
 
         try {
 
@@ -267,7 +267,7 @@ public abstract class Search {
             Connection conn = ds.getConnection();
             conn.setAutoCommit(true);
        
-            Object[] objDbIds = bandRecords.stream().map(record -> record.getDbId2()).toArray();
+            Object[] objDbIds = bandRecords.stream().map(record -> record.getDbId()).toArray();
 
             String[] dbIds = Arrays.copyOf(objDbIds, objDbIds.length, String[].class);
 
@@ -286,7 +286,6 @@ public abstract class Search {
 
                 record.setN(n++);
                 record.setRecordCount(recordCount);
-                record.setDbId1(dbId);
 
                 augment(record, rs);
             }
