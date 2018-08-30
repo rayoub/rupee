@@ -8,21 +8,25 @@ import java.util.stream.Collectors;
 
 public class LCS {
 
+    public static enum Direction { NONE, UP, LEFT, DIAGONAL };
+
     // *********************************************************************
     // LCS
     // *********************************************************************
 
-    public static int[][] getLCSCostMatrix(List<Integer> grams1, List<Integer> grams2) {
+    public static int getLCSLength(List<Integer> grams1, List<Integer> grams2) {
 
         int[][] c = new int[grams1.size() + 1][grams2.size() + 1];
+
+        c[0][0] = 0;
   
         // initialize first column 
-        for (int i = 0; i <= grams1.size(); i++) {
+        for (int i = 1; i <= grams1.size(); i++) {
             c[i][0] = 0;
         }
 
         // initialize first row
-        for (int j = 0; j <= grams2.size(); j++) {
+        for (int j = 1; j <= grams2.size(); j++) {
             c[0][j] = 0;
         }
 
@@ -46,31 +50,27 @@ public class LCS {
             }
         }
 
-        return c;
-    }
-
-    public static int getLCSLength(List<Integer> grams1, List<Integer> grams2) {
-
-        int[][] costMatrix = getLCSCostMatrix(grams1, grams2);
-
-        return costMatrix[grams1.size()][grams2.size()];
+        return c[grams1.size()][grams2.size()];
     }
 
     public static void printLCS(List<Integer> grams1, List<Integer> grams2, Map<Integer, String> codeMap) {
 
         int[][] c = new int[grams1.size() + 1][grams2.size() + 1];
-        int[][] b = new int[grams1.size() + 1][grams2.size() + 1];
+        Direction[][] b = new Direction[grams1.size() + 1][grams2.size() + 1];
+
+        c[0][0] = 0;
+        b[0][0] = Direction.NONE;
   
         // initialize first column 
-        for (int i = 0; i <= grams1.size(); i++) {
+        for (int i = 1; i <= grams1.size(); i++) {
             c[i][0] = 0;
-            b[i][0] = 1;
+            b[i][0] = Direction.UP;
         }
 
         // initialize first row
-        for (int j = 0; j <= grams2.size(); j++) {
+        for (int j = 1; j <= grams2.size(); j++) {
             c[0][j] = 0;
-            b[0][j] = -1;
+            b[0][j] = Direction.LEFT;
         }
 
         // build cost and pointer matrices
@@ -80,25 +80,19 @@ public class LCS {
 
                     // diagonal match
                     c[i][j] = c[i-1][j-1] + 1;
-                    b[i][j] = 0;
-                }
-                else if (c[i-1][j-1] >= c[i-1][j] && c[i-1][j-1] >= c[i][j-1]) {
-
-                    // diagonal mismatch
-                    c[i][j] = c[i-1][j-1];
-                    b[i][j] = -2;
+                    b[i][j] = Direction.DIAGONAL;
                 }
                 else if (c[i-1][j] >= c[i][j-1]) {
 
                     // up gap
                     c[i][j] = c[i-1][j];
-                    b[i][j] = 1;
+                    b[i][j] = Direction.UP;
                 }
                 else {
 
                     // left gap
                     c[i][j] = c[i][j-1];
-                    b[i][j] = -1;
+                    b[i][j] = Direction.LEFT;
                 }
             }
         }
@@ -110,7 +104,7 @@ public class LCS {
         int j = grams2.size();
         while (i != 0 || j != 0) {
 
-            if (b[i][j] == 0) {
+            if (b[i][j] == Direction.DIAGONAL) {
 
                 //diagonal match
                 seq1.append(codeMap.get(grams1.get(i-1)));
@@ -118,22 +112,14 @@ public class LCS {
                 i = i - 1;
                 j = j - 1;
             }
-            else if (b[i][j] == -2) {
-
-                //diagonal mismatch
-                seq1.append("** ");
-                seq2.append("** ");
-                i = i - 1;
-                j = j - 1;
-            }
-            else if (b[i][j] == 1) {
+            else if (b[i][j] == Direction.UP) {
 
                 // up gap
                 seq1.append(codeMap.get(grams1.get(i-1)));
                 seq2.append("-- ");
                 i = i - 1;
             }
-            else { // b[i][j] == -1
+            else { // b[i][j] == Direction.LEFT
 
                 // left gap
                 seq1.append("-- ");
@@ -155,18 +141,21 @@ public class LCS {
     public static LCSResults getSemiGlobalLCS(List<Integer> grams1, List<Integer> grams2) {
 
         int[][] c = new int[grams1.size() + 1][grams2.size() + 1];
-        int[][] b = new int[grams1.size() + 1][grams2.size() + 1];
+        Direction[][] b = new Direction[grams1.size() + 1][grams2.size() + 1];
+
+        c[0][0] = 0;
+        b[0][0] = Direction.NONE;
   
         // initialize first column 
-        for (int i = 0; i <= grams1.size(); i++) {
+        for (int i = 1; i <= grams1.size(); i++) {
             c[i][0] = 0;
-            b[i][0] = 1;
+            b[i][0] = Direction.UP;
         }
 
         // initialize first row
-        for (int j = 0; j <= grams2.size(); j++) {
+        for (int j = 1; j <= grams2.size(); j++) {
             c[0][j] = 0;
-            b[0][j] = -1;
+            b[0][j] = Direction.LEFT;
         }
 
         // build cost and pointer matrices
@@ -176,25 +165,19 @@ public class LCS {
 
                     // diagonal match
                     c[i][j] = c[i-1][j-1] + 1;
-                    b[i][j] = 0;
-                }
-                else if (c[i-1][j-1] >= c[i-1][j] && c[i-1][j-1] >= c[i][j-1]) {
-
-                    // diagonal mismatch
-                    c[i][j] = c[i-1][j-1];
-                    b[i][j] = -2;
+                    b[i][j] = Direction.DIAGONAL;
                 }
                 else if (c[i-1][j] >= c[i][j-1]) {
 
                     // up gap
                     c[i][j] = c[i-1][j];
-                    b[i][j] = 1;
+                    b[i][j] = Direction.UP;
                 }
                 else {
 
                     // left gap
                     c[i][j] = c[i][j-1];
-                    b[i][j] = -1;
+                    b[i][j] = Direction.LEFT;
                 }
             }
         }
@@ -208,7 +191,7 @@ public class LCS {
         int l = grams2.size();
         while (k != 0 || l != 0) {
 
-            if (b[k][l] == 0) {
+            if (b[k][l] == Direction.DIAGONAL) {
 
                 //diagonal match
                 iMin = Math.min(k, iMin);
@@ -218,18 +201,12 @@ public class LCS {
                 k = k - 1;
                 l = l - 1;
             }
-            else if (b[k][l] == -2) {
-
-                //diagonal mismatch
-                k = k - 1;
-                l = l - 1;
-            }
-            else if (b[k][l] == 1) {
+            else if (b[k][l] == Direction.UP) {
 
                 // up gap
                 k = k - 1;
             }
-            else { // b[k][l] == -1
+            else { // b[k][l] == Direction.LEFT
 
                 // left gap
                 l = l - 1;
@@ -249,18 +226,21 @@ public class LCS {
     public static void printSemiGlobalLCS(List<Integer> grams1, List<Integer> grams2, Map<Integer, String> codeMap) {
 
         int[][] c = new int[grams1.size() + 1][grams2.size() + 1];
-        int[][] b = new int[grams1.size() + 1][grams2.size() + 1];
-  
+        Direction[][] b = new Direction[grams1.size() + 1][grams2.size() + 1];
+ 
+        c[0][0] = 0;
+        b[0][0] = Direction.NONE;
+
         // initialize first column 
-        for (int i = 0; i <= grams1.size(); i++) {
+        for (int i = 1; i <= grams1.size(); i++) {
             c[i][0] = 0;
-            b[i][0] = 1;
+            b[i][0] = Direction.UP;
         }
 
         // initialize first row
-        for (int j = 0; j <= grams2.size(); j++) {
+        for (int j = 1; j <= grams2.size(); j++) {
             c[0][j] = 0;
-            b[0][j] = -1;
+            b[0][j] = Direction.LEFT;
         }
 
         // build cost and pointer matrices
@@ -270,25 +250,19 @@ public class LCS {
 
                     // diagonal match
                     c[i][j] = c[i-1][j-1] + 1;
-                    b[i][j] = 0;
-                }
-                else if (c[i-1][j-1] >= c[i-1][j] && c[i-1][j-1] >= c[i][j-1]) {
-
-                    // diagonal mismatch
-                    c[i][j] = c[i-1][j-1];
-                    b[i][j] = -2;
+                    b[i][j] = Direction.DIAGONAL;
                 }
                 else if (c[i-1][j] >= c[i][j-1]) {
 
                     // up gap
                     c[i][j] = c[i-1][j];
-                    b[i][j] = 1;
+                    b[i][j] = Direction.UP;
                 }
                 else {
 
                     // left gap
                     c[i][j] = c[i][j-1];
-                    b[i][j] = -1;
+                    b[i][j] = Direction.LEFT;
                 }
             }
         }
@@ -302,7 +276,7 @@ public class LCS {
         int l = grams2.size();
         while (k != 0 || l != 0) {
 
-            if (b[k][l] == 0) {
+            if (b[k][l] == Direction.DIAGONAL) {
 
                 //diagonal match
                 iMin = Math.min(k, iMin);
@@ -312,18 +286,12 @@ public class LCS {
                 k = k - 1;
                 l = l - 1;
             }
-            else if (b[k][l] == -2) {
-
-                //diagonal mismatch
-                k = k - 1;
-                l = l - 1;
-            }
-            else if (b[k][l] == 1) {
+            else if (b[k][l] == Direction.UP) {
 
                 // up gap
                 k = k - 1;
             }
-            else { // b[k][l] == -1
+            else { // b[k][l] == Direction.LEFT
 
                 // left gap
                 l = l - 1;
@@ -337,7 +305,7 @@ public class LCS {
         int j = jMax; 
         while (i >= iMin || j >= jMin) {
 
-            if (b[i][j] == 0) {
+            if (b[i][j] == Direction.DIAGONAL) {
 
                 //diagonal match
                 seq1.append(codeMap.get(grams1.get(i-1)));
@@ -345,22 +313,14 @@ public class LCS {
                 i = i - 1;
                 j = j - 1;
             }
-            else if (b[i][j] == -2) {
-
-                //diagonal mismatch
-                seq1.append("** ");
-                seq2.append("** ");
-                i = i - 1;
-                j = j - 1;
-            }
-            else if (b[i][j] == 1) {
+            else if (b[i][j] == Direction.UP) {
 
                 // up gap
                 seq1.append(codeMap.get(grams1.get(i-1)));
                 seq2.append("-- ");
                 i = i - 1;
             }
-            else { // b[i][j] == -1
+            else { // b[i][j] == Direction.LEFT
 
                 // left gap
                 seq1.append("-- ");
