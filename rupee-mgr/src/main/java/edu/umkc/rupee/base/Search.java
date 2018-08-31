@@ -35,7 +35,6 @@ import edu.umkc.rupee.lib.Db;
 import edu.umkc.rupee.lib.DbTypeCriteria;
 import edu.umkc.rupee.lib.Hashes;
 import edu.umkc.rupee.lib.LCS;
-import edu.umkc.rupee.lib.LCSResults;
 import edu.umkc.rupee.lib.SearchByCriteria;
 import edu.umkc.rupee.lib.Similarity;
 import edu.umkc.rupee.lib.SortCriteria;
@@ -84,30 +83,9 @@ public abstract class Search {
 
                 // parallel band match searches to gather candidates
                 records = IntStream.range(0, Constants.BAND_CHECK_COUNT).boxed().parallel()
-                    .flatMap(bandIndex -> searchBand(bandIndex, criteria, hashes1).stream())
+                    .flatMap(bandIndex -> searchBand(bandIndex, criteria, grams1, hashes1).stream())
                     .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
-                    .limit(Constants.SIMILARITY_FILTER) 
-                    .collect(Collectors.toList());
-
-                // cache map of residue grams
-                List<String> dbIds = records.stream().map(SearchRecord::getDbId).collect(Collectors.toList());
-                Map<String, List<Integer>> map = Db.getGrams(dbIds, criteria.dbType);
-
-                // parallel adjusted similarity
-                records.parallelStream()
-                    .forEach(record -> {
-
-                        if (map.containsKey(record.getDbId())) {
-                            List<Integer> grams2 = map.get(record.getDbId());
-                            LCSResults results = LCS.getSemiGlobalLCS(grams1, grams2);
-                            record.setSimilarity(Similarity.getAdjustedSimilarity(grams1, grams2, results));
-                        }
-                    });
-
-                // sort with adjusted similarity and filter 
-                records = records.stream()
-                    .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
-                    .limit(criteria.limit)
+                    .limit(criteria.limit) 
                     .collect(Collectors.toList());
 
                 // if an external alignment algorithm is requested
@@ -205,12 +183,14 @@ public abstract class Search {
         return records;
     }
 
-    public List<SearchRecord> searchBand(int bandIndex, SearchCriteria criteria, Hashes hashes) {
+    public List<SearchRecord> searchBand(int bandIndex, SearchCriteria criteria, List<Integer> grams, Hashes hashes) {
 
         List<SearchRecord> records = new ArrayList<>();
 
         try {
    
+            // *** LSH band matches
+            
             PGSimpleDataSource ds = Db.getDataSource();
 
             Connection conn = ds.getConnection();
@@ -245,6 +225,23 @@ public abstract class Search {
             rs.close();
             stmt.close();
             conn.close();
+
+            // *** adjust similarity
+            
+            // cache map of residue grams
+            List<String> dbIds = records.stream().map(SearchRecord::getDbId).collect(Collectors.toList());
+            Map<String, List<Integer>> map = Db.getGrams(dbIds, criteria.dbType);
+
+            // parallel adjusted similarity
+            records.stream()
+                .forEach(record -> {
+
+                    if (map.containsKey(record.getDbId())) {
+                        List<Integer> grams2 = map.get(record.getDbId());
+                        int lcsLength = LCS.getLCSLength(grams, grams2); 
+                        record.setSimilarity(Similarity.getAdjustedSimilarity(grams, grams2, lcsLength));
+                    }
+                });
 
         } catch (SQLException e) {
             Logger.getLogger(Search.class.getName()).log(Level.SEVERE, null, e);

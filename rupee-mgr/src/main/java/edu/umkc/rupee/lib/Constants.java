@@ -36,7 +36,6 @@ public class Constants {
     public final static int BAND_CHECK_COUNT = 20;
     
     public final static double SIMILARITY_THRESHOLD = 0.10;
-    public final static int SIMILARITY_FILTER = 2000;
 
     public final static int PRIME_POW_1 = 13;
     public final static int PRIME_POW_2 = PRIME_POW_1 * PRIME_POW_1;

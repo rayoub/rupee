@@ -46,7 +46,6 @@ import edu.umkc.rupee.lib.Db;
 import edu.umkc.rupee.lib.DbTypeCriteria;
 import edu.umkc.rupee.lib.Hashes;
 import edu.umkc.rupee.lib.LCS;
-import edu.umkc.rupee.lib.LCSResults;
 import edu.umkc.rupee.lib.SearchByCriteria;
 import edu.umkc.rupee.lib.Similarity;
 import edu.umkc.rupee.lib.SortCriteria;
@@ -280,12 +279,8 @@ public class Main {
             double exact = Similarity.getExactSimilarity(grams1, grams2);
 
             // lcs validated matching grams
-            int lcsLength = LCS.getLCSLength(grams1, grams2); 
-            double lcsSimilarity = Similarity.getAdjustedSimilarity(grams1, grams2, lcsLength);
-           
-            // semi-global adjustment
-            LCSResults results = LCS.getSemiGlobalLCS(grams1,grams2);
-            double semiGlobal = Similarity.getAdjustedSimilarity(grams1, grams2, results);
+            int length = LCS.getLCSLength(grams1, grams2); 
+            double similarity = Similarity.getAdjustedSimilarity(grams1, grams2, length);
           
             System.out.println(""); 
             System.out.println("Structure 1 Length:     " + grams1.size());
@@ -296,18 +291,13 @@ public class Main {
             System.out.println("Estimated Similarity:   " + estimated);
             System.out.println("Exact Similarity:       " + exact);
             System.out.println(""); 
-            System.out.println("LCS Length:             " + lcsLength);
-            System.out.println("LCS Similarity:         " + lcsSimilarity);
-            System.out.println("SemiGlobal Similarity:  " + semiGlobal + "\n");
+            System.out.println("LCS Length:             " + length);
+            System.out.println("LCS Similarity:         " + similarity);
 
             Map<Integer, String> codeMap = LCS.getCodeMap(grams1, grams2);
 
             System.out.println("LCS Alignment: \n");
             LCS.printLCS(grams1, grams2, codeMap);
-            System.out.println("");
-
-            System.out.println("Semi-Global LCS Alignment: \n");
-            LCS.printSemiGlobalLCS(grams1, grams2, codeMap);
             System.out.println("");
         }
         else {
