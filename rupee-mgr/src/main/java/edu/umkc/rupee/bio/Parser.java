@@ -27,9 +27,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
 
 import org.biojava.nbio.structure.AminoAcidImpl;
 import org.biojava.nbio.structure.Atom;
@@ -45,88 +43,39 @@ import org.biojava.nbio.structure.ResidueNumber;
 import org.biojava.nbio.structure.Structure;
 import org.biojava.nbio.structure.StructureImpl;
 import org.biojava.nbio.structure.StructureTools;
-import org.biojava.nbio.structure.io.CAConverter;
 import org.biojava.nbio.structure.io.EntityFinder;
-import org.biojava.nbio.structure.io.FileParsingParameters;
 import org.biojava.nbio.structure.io.mmcif.ChemCompGroupFactory;
 import org.biojava.nbio.structure.io.mmcif.model.ChemCompAtom;
 
 public class Parser {
 
-    // for printing
+    // constants
     private static final String NEWLINE = System.getProperty("line.separator");
+    private static final int MAX_ATOMS = Integer.MAX_VALUE;
 
-    // required for parsing:
     private Structure structure;
-    private List<List<Chain>> allModels; // a temp data structure to keep all
-                                            // models
-    private List<Chain> currentModel; // contains the ATOM records for each
-                                        // model
+    private List<List<Chain>> allModels; 
+    private List<Chain> currentModel; 
     private Chain currentChain;
     private Group currentGroup;
 
-    private List<EntityInfo> entities = new ArrayList<EntityInfo>();
-    private HashMap<Integer, List<String>> compoundMolIds2chainIds = new HashMap<Integer, List<String>>();
-    private Map<String, List<ResidueNumber>> siteToResidueMap = new LinkedHashMap<String, List<ResidueNumber>>();
-
     private int atomCount;
-
-    // parsing options:
-    private int atomCAThreshold;
-    private int loadMaxAtoms;
-    private boolean parseCAonly;
-    private FileParsingParameters params;
-
     private boolean startOfMolecule;
     private boolean startOfModel;
+    
+    private List<EntityInfo> entities = new ArrayList<EntityInfo>();
+    private HashMap<Integer, List<String>> compoundMolIds2chainIds = new HashMap<Integer, List<String>>();
 
     public Parser() {
-        params = new FileParsingParameters();
 
-        allModels = new ArrayList<>();
         structure = null;
+        allModels = new ArrayList<>();
         currentModel = null;
         currentChain = null;
         currentGroup = null;
-        // we initialise to true since at the beginning of the file we are
-        // always starting a new molecule
+        atomCount = 0;
         startOfMolecule = true;
         startOfModel = true;
-
-        atomCount = 0;
-        parseCAonly = false;
-
-        // this SHOULD not be done
-        // DONOT:setFileParsingParameters(params);
-        // set the correct max values for parsing...
-        loadMaxAtoms = params.getMaxAtoms();
-        atomCAThreshold = params.getAtomCaThreshold();
-    }
-
-    /** initiate new resNum, either Hetatom, Nucleotide, or AminoAcid */
-    private Group getNewGroup(String recordName, Character aminoCode1, String aminoCode3) {
-
-        Group g = ChemCompGroupFactory.getGroupFromChemCompDictionary(aminoCode3);
-        if (g != null && !g.getChemComp().isEmpty())
-            return g;
-
-        Group group;
-        if (aminoCode1 == null || StructureTools.UNKNOWN_GROUP_LABEL == aminoCode1) {
-            group = new HetatomImpl();
-
-        } else if (StructureTools.isNucleotide(aminoCode3)) {
-            // it is a nucleotide
-            NucleotideImpl nu = new NucleotideImpl();
-            group = nu;
-
-        } else {
-            AminoAcidImpl aa = new AminoAcidImpl();
-            aa.setAminoType(aminoCode1);
-            group = aa;
-        }
-
-        // System.out.println("new resNum type: "+ resNum.getType() );
-        return group;
     }
 
     /**
@@ -156,9 +105,6 @@ public class Parser {
      * </pre>
      */
     private void pdb_ATOM_Handler(String line) {
-
-        if (params.isHeaderOnly())
-            return;
 
         // let's first get the chain name which will serve to identify if we are
         // starting a new molecule
@@ -273,14 +219,7 @@ public class Parser {
 
         atomCount++;
 
-        if (atomCount == atomCAThreshold) {
-            switchCAOnly();
-        }
-
-        if (atomCount == loadMaxAtoms) {
-            return;
-        }
-        if (atomCount > loadMaxAtoms) {
+        if (atomCount >= MAX_ATOMS) {
             return;
         }
 
@@ -292,36 +231,12 @@ public class Parser {
         // ATOM 112 CA ASP 112 37.613 26.621 33.571 0 0
 
         String fullname = line.substring(12, 16);
-
-        // check for CA only if requested
-        if (parseCAonly) {
-            // yes , user wants to get CA only
-            // only parse CA atoms...
-            if (!fullname.equals(" CA ")) {
-                // System.out.println("ignoring " + line);
-                atomCount--;
-                return;
-            }
+        if (!fullname.equals(" CA ")) {
+            atomCount--;
+            return;
         }
 
-        if (params.getAcceptedAtomNames() != null) {
-
-            boolean found = false;
-            for (String ok : params.getAcceptedAtomNames()) {
-                // System.out.println(ok + "< >" + fullname +"<");
-
-                if (ok.equals(fullname.trim())) {
-                    found = true;
-                    break;
-                }
-            }
-            if (!found) {
-                atomCount--;
-                return;
-            }
-        }
         // create new atom
-
         int pdbnumber = Integer.parseInt(line.substring(6, 11).trim());
         AtomImpl atom = new AtomImpl();
         atom.setPDBserial(pdbnumber);
@@ -471,20 +386,28 @@ public class Parser {
         return altLocG;
     }
 
-    private void switchCAOnly() {
-        parseCAonly = true;
+    private Group getNewGroup(String recordName, Character aminoCode1, String aminoCode3) {
 
-        currentModel = CAConverter.getRepresentativeAtomsOnly(currentModel);
+        Group g = ChemCompGroupFactory.getGroupFromChemCompDictionary(aminoCode3);
+        if (g != null && !g.getChemComp().isEmpty())
+            return g;
 
-        for (int i = 0; i < structure.nrModels(); i++) {
-            // iterate over all known models ...
-            List<Chain> model = structure.getModel(i);
-            model = CAConverter.getRepresentativeAtomsOnly(model);
-            structure.setModel(i, model);
+        Group group;
+        if (aminoCode1 == null || StructureTools.UNKNOWN_GROUP_LABEL == aminoCode1) {
+            group = new HetatomImpl();
+
+        } else if (StructureTools.isNucleotide(aminoCode3)) {
+            // it is a nucleotide
+            NucleotideImpl nu = new NucleotideImpl();
+            group = nu;
+
+        } else {
+            AminoAcidImpl aa = new AminoAcidImpl();
+            aa.setAminoType(aminoCode1);
+            group = aa;
         }
 
-        currentChain = CAConverter.getRepresentativeAtomsOnly(currentChain);
-
+        return group;
     }
 
     /**
@@ -496,50 +419,23 @@ public class Parser {
         startOfMolecule = true;
     }
 
+    public Structure parsePDBFile(InputStream inStream) throws IOException {
+
+        BufferedReader buf = getBufferedReader(inStream);
+        return parsePDBFile(buf);
+    }
+
     private BufferedReader getBufferedReader(InputStream inStream) throws IOException {
 
         BufferedReader buf;
         if (inStream == null) {
             throw new IOException("input stream is null!");
         }
-
         buf = new BufferedReader(new InputStreamReader(inStream));
         return buf;
-
     }
 
-    /**
-     * Parse a PDB file and return a datastructure implementing PDBStructure
-     * interface.
-     *
-     * @param inStream
-     *            an InputStream object
-     * @return a Structure object
-     * @throws IOException
-     */
-    public Structure parsePDBFile(InputStream inStream) throws IOException {
-
-        BufferedReader buf = getBufferedReader(inStream);
-
-        return parsePDBFile(buf);
-
-    }
-
-    /**
-     * Parse a PDB file and return a datastructure implementing PDBStructure
-     * interface.
-     *
-     * @param buf
-     *            a BufferedReader object
-     * @return the Structure object
-     * @throws IOException
-     *             ...
-     */
     public Structure parsePDBFile(BufferedReader buf) throws IOException {
-
-        // set the correct max values for parsing...
-        loadMaxAtoms = params.getMaxAtoms();
-        atomCAThreshold = params.getAtomCaThreshold();
 
         // (re)set structure
         allModels = new ArrayList<>();
@@ -547,20 +443,13 @@ public class Parser {
         currentModel = null;
         currentChain = null;
         currentGroup = null;
-
-        // we initialise to true since at the beginning of the file we are
-        // always starting a new molecule
         startOfMolecule = true;
         startOfModel = true;
+        atomCount = 0;
 
         entities.clear();
-        atomCount = 0;
-        siteToResidueMap.clear();
-
-        parseCAonly = params.isParseCAOnly();
 
         String line = null;
-
         while ((line = buf.readLine()) != null) {
 
             // ignore empty lines
@@ -596,7 +485,7 @@ public class Parser {
 
         triggerEndFileChecks();
 
-        // Now correct the alternate location group
+        // now correct the alternate location group
         StructureTools.cleanUpAltLocs(structure);
 
         return structure;
@@ -891,18 +780,5 @@ public class Parser {
             structure.addModel(model);
         }
 
-    }
-
-    public void setFileParsingParameters(FileParsingParameters params) {
-        this.params = params;
-
-        // set the correct max values for parsing...
-        loadMaxAtoms = params.getMaxAtoms();
-        atomCAThreshold = params.getAtomCaThreshold();
-
-    }
-
-    public FileParsingParameters getFileParsingParameters() {
-        return params;
     }
 }
