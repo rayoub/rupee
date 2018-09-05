@@ -59,19 +59,19 @@ public class Parser {
     private int atomCount;
     private boolean startOfMolecule;
     private boolean startOfModel;
-    
-    private List<EntityInfo> entities = new ArrayList<EntityInfo>();
+    private List<EntityInfo> entities;
 
     public Parser() {
 
         structure = null;
-        allModels = new ArrayList<>();
+        allModels = null;
         currentModel = null;
         currentChain = null;
         currentGroup = null;
         atomCount = 0;
         startOfMolecule = true;
         startOfModel = true;
+        entities = null;
     }
 
     /**
@@ -379,16 +379,15 @@ public class Parser {
     public Structure parsePDBFile(BufferedReader buf) throws IOException {
 
         // reset
-        allModels = new ArrayList<>();
         structure = new StructureImpl();
+        allModels = new ArrayList<>();
         currentModel = null;
         currentChain = null;
         currentGroup = null;
+        atomCount = 0;
         startOfMolecule = true;
         startOfModel = true;
-        atomCount = 0;
-
-        entities.clear();
+        entities = new ArrayList<EntityInfo>();
 
         String line = null;
         while ((line = buf.readLine()) != null) {
@@ -430,7 +429,6 @@ public class Parser {
         StructureTools.cleanUpAltLocs(structure);
 
         return structure;
-
     }
 
     private void triggerEndFileChecks() {
