@@ -16,7 +16,7 @@ public class Variables {
                                                             //in general, ya is regarded as native structure --> superpose xa onto ya
     public static double xtm[][], ytm[][];                  //for TMscore search engine
     public static double xt[][];                            //for saving the superposed version of r_1 or xtm
-    public static int    secx[], secy[];                    //for the secondary structure 
+    public static int secx[], secy[];                       //for the secondary structure 
     public static double r1[][], r2[][];                    //for Kabsch rotation 
     public static double t[];                               //Kabsch translation vector and rotation matrix
     public static double u[][];

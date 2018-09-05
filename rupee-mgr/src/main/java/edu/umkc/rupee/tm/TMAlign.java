@@ -3,10 +3,13 @@ package edu.umkc.rupee.tm;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.apache.commons.lang3.mutable.MutableDouble;
 import org.biojava.nbio.structure.Atom;
 import org.biojava.nbio.structure.Chain;
 import org.biojava.nbio.structure.Group;
 import org.biojava.nbio.structure.Structure;
+
+import sun.java2d.xr.MutableInteger;
 
 public class TMAlign {
 
@@ -34,13 +37,18 @@ public class TMAlign {
         Variables.minlen = Math.min(Variables.xlen, Variables.ylen);
        
         // allocate  storage 
+        Variables.score = new double[Variables.xlen + 1][Variables.ylen + 1];
+        Variables.path = new boolean[Variables.xlen + 1][Variables.ylen + 1];
+        Variables.val = new double[Variables.xlen + 1][Variables.ylen + 1];
         Variables.xtm = new double[Variables.minlen][3];
         Variables.ytm = new double[Variables.minlen][3];
         Variables.xt = new double[Variables.xlen][3];
-        Variables.t = new double[3];
-        Variables.u = new double[3][3];
+        Variables.secx = new int[Variables.xlen];
+        Variables.secy = new int[Variables.ylen];
         Variables.r1 = new double[Variables.minlen][3];
         Variables.r2 = new double[Variables.minlen][3];
+        Variables.t = new double[3];
+        Variables.u = new double[3][3];
 
         // get x atom coordinates
         Variables.xa = new double[Variables.xlen][3];
@@ -60,7 +68,6 @@ public class TMAlign {
             Variables.ya[i][2] = atom.getZ();
         }
 
-
         //**********************************************************************************/
         //*                                 parameter set                                  */ 
         //**********************************************************************************/
@@ -73,7 +80,8 @@ public class TMAlign {
                                     // pairs with dis<score_d8
         int invmap0[] = new int[Variables.ylen + 1];
         int invmap[] = new int[Variables.ylen + 1];
-        double TM, TMmax = -1;
+        double TM = 0;
+        double TMmax = -1;
         for (int i = 0; i < Variables.ylen; i++) {
             invmap0[i] = -1;
         }
@@ -184,7 +192,7 @@ public class TMAlign {
         //*         get initial alignment based on fragment gapless threading              */
         //**********************************************************************************/
         //=initial4 in original TM-align
-        //get_initial_fgt(Variables.xa, Variables.ya, Variables.xlen, Variables.ylen, xresno, yresno, invmap);
+        get_initial_fgt(Variables.xa, Variables.ya, Variables.xlen, Variables.ylen, invmap);
         TM = detailed_search(Variables.xa, Variables.ya, Variables.xlen, Variables.ylen, invmap, Variables.t,
                 Variables.u, simplify_step, score_sum_method, local_d0_search);
         if (TM > TMmax) {
@@ -269,15 +277,15 @@ public class TMAlign {
         }
         n_ali8 = k;
 
-        Double rmsd0 = 0.0;
+        MutableDouble rmsd0 = new MutableDouble(0.0);
         Kabsch.execute(Variables.r1, Variables.r2, n_ali8, 0, rmsd0, Variables.t, Variables.u);
-        rmsd0 = Math.sqrt(rmsd0 / n_ali8);
+        rmsd0.setValue(Math.sqrt(rmsd0.getValue() / n_ali8));
 
         //*********************************************************************************//
         //                               Final TMscore                                     //
         //                     Please set parameters for output                            //
         //*********************************************************************************//
-        Double rmsd = 0.0;
+        MutableDouble rmsd = new MutableDouble(0.0);
         double t0[] = new double[3];
         double u0[][] = new double[3][3];
         double TM1, TM2;
@@ -295,7 +303,8 @@ public class TMAlign {
         parameter_set4final(Variables.xlen+0.0);
         local_d0_search = Variables.d0_search;
         TM2 = TMscore8_search(Variables.xtm, Variables.ytm, n_ali8, Variables.t, Variables.u, simplify_step, score_sum_method, rmsd, local_d0_search);
-        
+
+        System.out.println(rmsd);        
         System.out.println(TM1 + " " + TM2);
 
     }
@@ -347,7 +356,7 @@ public class TMAlign {
 
     // 1, collect those residues with dis<d;
     // 2, calculate TMscore
-    public static int score_fun8(double xa[][], double ya[][], int n_ali, double d, int i_ali[], Double score1,
+    public static int score_fun8(double xa[][], double ya[][], int n_ali, double d, int i_ali[], MutableDouble score1,
             int score_sum_method) {
         double score_sum = 0, di;
         double d_tmp = d * d;
@@ -384,12 +393,12 @@ public class TMAlign {
 
         }
 
-        score1 = score_sum / Variables.Lnorm;
+        score1.setValue(score_sum / Variables.Lnorm);
 
         return n_cut;
     }
 
-    public static int score_fun8_standard(double xa[][], double ya[][], int n_ali, double d, int i_ali[], Double score1,
+    public static int score_fun8_standard(double xa[][], double ya[][], int n_ali, double d, int i_ali[], MutableDouble score1,
             int score_sum_method) {
         double score_sum = 0, di;
         double d_tmp = d * d;
@@ -425,16 +434,16 @@ public class TMAlign {
 
         }
 
-        score1 = score_sum / n_ali;
+        score1.setValue(score_sum / n_ali);
         return n_cut;
     }
 
     public static double TMscore8_search(double xtm[][], double ytm[][], int Lali, double t0[], double u0[][],
-            int simplify_step, int score_sum_method, Double Rcomm, double local_d0_search) {
+            int simplify_step, int score_sum_method, MutableDouble Rcomm, double local_d0_search) {
         int i, m;
         double score_max;
-        Double score = 0.0;
-        Double rmsd = 0.0;
+        MutableDouble score = new MutableDouble(0.0);
+        MutableDouble rmsd = new MutableDouble(0.0);
         int kmax = Lali;
         int k_ali[] = new int[kmax];
         int ka, k;
@@ -496,14 +505,14 @@ public class TMAlign {
                 // extract rotation matrix based on the fragment
                 Kabsch.execute(Variables.r1, Variables.r2, L_frag, 1, rmsd, t, u);
                 if (simplify_step != 1)
-                    Rcomm = 0.0;
+                    Rcomm.setValue(0.0);
                 Functions.do_rotation(xtm, Variables.xt, Lali, t, u);
 
                 // get subsegment of this fragment
                 d = local_d0_search - 1;
                 n_cut = score_fun8(Variables.xt, ytm, Lali, d, i_ali, score, score_sum_method);
-                if (score > score_max) {
-                    score_max = score;
+                if (score.getValue() > score_max) {
+                    score_max = score.getValue();
 
                     // save the rotation matrix
                     for (k = 0; k < 3; k++) {
@@ -535,8 +544,8 @@ public class TMAlign {
                     Kabsch.execute(Variables.r1, Variables.r2, n_cut, 1, rmsd, t, u);
                     Functions.do_rotation(xtm, Variables.xt, Lali, t, u);
                     n_cut = score_fun8(Variables.xt, ytm, Lali, d, i_ali, score, score_sum_method);
-                    if (score > score_max) {
-                        score_max = score;
+                    if (score.getValue() > score_max) {
+                        score_max = score.getValue();
 
                         // save the rotation matrix
                         for (k = 0; k < 3; k++) {
@@ -574,11 +583,11 @@ public class TMAlign {
     }
 
     public static double TMscore8_search_standard(double xtm[][], double ytm[][], int Lali, double t0[], double u0[][],
-            int simplify_step, int score_sum_method, Double Rcomm, double local_d0_search) {
+            int simplify_step, int score_sum_method, MutableDouble Rcomm, double local_d0_search) {
         int i, m;
         double score_max;
-        Double score = 0.0;
-        Double rmsd = 0.0;
+        MutableDouble score = new MutableDouble(0.0);
+        MutableDouble rmsd = new MutableDouble(0.0);
         int kmax = Lali;
         int k_ali[] = new int[kmax];
         int ka, k;
@@ -639,15 +648,15 @@ public class TMAlign {
                 // extract rotation matrix based on the fragment
                 Kabsch.execute(Variables.r1, Variables.r2, L_frag, 1, rmsd, t, u);
                 if (simplify_step != 1)
-                    Rcomm = 0.0;
+                    Rcomm.setValue(0.0);
                 Functions.do_rotation(xtm, Variables.xt, Lali, t, u);
 
                 // get subsegment of this fragment
                 d = local_d0_search - 1;
                 n_cut = score_fun8_standard(Variables.xt, ytm, Lali, d, i_ali, score, score_sum_method);
 
-                if (score > score_max) {
-                    score_max = score;
+                if (score.getValue() > score_max) {
+                    score_max = score.getValue();
 
                     // save the rotation matrix
                     for (k = 0; k < 3; k++) {
@@ -679,8 +688,8 @@ public class TMAlign {
                     Kabsch.execute(Variables.r1, Variables.r2, n_cut, 1, rmsd, t, u);
                     Functions.do_rotation(xtm, Variables.xt, Lali, t, u);
                     n_cut = score_fun8_standard(Variables.xt, ytm, Lali, d, i_ali, score, score_sum_method);
-                    if (score > score_max) {
-                        score_max = score;
+                    if (score.getValue() > score_max) {
+                        score_max = score.getValue();
 
                         // save the rotation matrix
                         for (k = 0; k < 3; k++) {
@@ -729,7 +738,7 @@ public class TMAlign {
         // x is model, y is template, try to superpose onto y
         int i, j, k;
         double tmscore;
-        Double rmsd = 0.0;
+        MutableDouble rmsd = new MutableDouble(0.0);
 
         k = 0;
         for (i = 0; i < y_len; i++) {
@@ -759,7 +768,7 @@ public class TMAlign {
         // x is model, y is template, try to superpose onto y
         int i, j, k;
         double tmscore;
-        Double rmsd = 0.0;
+        MutableDouble rmsd = new MutableDouble(0.0);
 
         k = 0;
         for (i = 0; i < y_len; i++) {
@@ -789,7 +798,7 @@ public class TMAlign {
 
     // compute the score quickly in three iterations
     public static double get_score_fast(double x[][], double y[][], int x_len, int y_len, int invmap[]) {
-        Double rms = 0.0;
+        MutableDouble rms = new MutableDouble(0.0);
         double tmscore, tmscore1, tmscore2;
         int i, j, k;
 
@@ -1142,7 +1151,7 @@ public class TMAlign {
     // the jth element in y is aligned to a gap in x if i==-1
     public static boolean get_initial5(double x[][], double y[][], int x_len, int y_len, int y2x[]) {
         double GL;
-        Double rmsd = 0.0;
+        MutableDouble rmsd = new MutableDouble(0.0);
         double t[] = new double[3];
         double u[][] = new double[3][3];
 
@@ -1238,7 +1247,7 @@ public class TMAlign {
     public static void score_matrix_rmsd(double x[][], double y[][], int x_len, int y_len, int y2x[]) {
         double t[] = new double[3];
         double u[][] = new double[3][3];
-        Double rmsd = 0.0;
+        MutableDouble rmsd = new MutableDouble(0.0);
         double dij;
         double d01 = Variables.d0 + 1.5;
         if (d01 < Variables.D0_MIN)
@@ -1279,7 +1288,7 @@ public class TMAlign {
     public static void score_matrix_rmsd_sec(double x[][], double y[][], int x_len, int y_len, int y2x[]) {
         double t[] = new double[3];
         double u[][] = new double[3][3];
-        Double rmsd = 0.0;
+        MutableDouble rmsd = new MutableDouble(0.0);
         double dij;
         double d01 = Variables.d0 + 1.5;
         if (d01 < Variables.D0_MIN)
@@ -1332,7 +1341,7 @@ public class TMAlign {
         NW.NWDP_TM(x_len, y_len, gap_open, y2x);
     }
 
-    public static void find_max_frag(double x[][], int resno[], int len, Integer start_max, Integer end_max) {
+    public static void find_max_frag(double x[][], int len, MutableInteger start_max, MutableInteger end_max) {
         int r_min, fra_min = 4; // minimum fragment for search
         double d;
         int start;
@@ -1359,7 +1368,7 @@ public class TMAlign {
                     if (d < dcu_cut) {
                         flag = 1;
                     }
-                } else if (resno[i] == (resno[i - 1] + 1)) // necessary??
+                } else //if (resno[i] == (resno[i - 1] + 1)) // necessary??
                 {
                     if (d < dcu_cut) {
                         flag = 1;
@@ -1372,16 +1381,16 @@ public class TMAlign {
                     if (i == (len - 1)) {
                         if (j > Lfr_max) {
                             Lfr_max = j;
-                            start_max = start;
-                            end_max = i;
+                            start_max.setValue(start);
+                            end_max.setValue(i);
                         }
                         j = 1;
                     }
                 } else {
                     if (j > Lfr_max) {
                         Lfr_max = j;
-                        start_max = start;
-                        end_max = i - 1;
+                        start_max.setValue(start);
+                        end_max.setValue(i - 1);
                     }
 
                     j = 1;
@@ -1403,21 +1412,20 @@ public class TMAlign {
     // y2x0[j]=i means:
     // the jth element in y is aligned to the ith element in x if i>=0
     // the jth element in y is aligned to a gap in x if i==-1
-    public static double get_initial_fgt(double x[][], double y[][], int x_len, int y_len, int xresno[], int yresno[],
-            int y2x[]) {
+    public static double get_initial_fgt(double x[][], double y[][], int x_len, int y_len, int y2x[]) {
         int fra_min = 4; // minimum fragment for search
         int fra_min1 = fra_min - 1; // cutoff for shift, save time
 
-        Integer xstart = 0;
-        Integer ystart = 0;
-        Integer xend = 0;
-        Integer yend = 0;
+        MutableInteger xstart = new MutableInteger(0);
+        MutableInteger ystart = new MutableInteger(0);
+        MutableInteger xend = new MutableInteger(0);
+        MutableInteger yend = new MutableInteger(0);
 
-        find_max_frag(x, xresno, x_len, xstart, xend);
-        find_max_frag(y, yresno, y_len, ystart, yend);
+        find_max_frag(x, x_len, xstart, xend);
+        find_max_frag(y, y_len, ystart, yend);
 
-        int Lx = xend - xstart + 1;
-        int Ly = yend - ystart + 1;
+        int Lx = xend.getValue() - xstart.getValue() + 1;
+        int Ly = yend.getValue() - ystart.getValue() + 1;
         int ifr[], y2x_[];
         int L_fr = Math.min(Lx, Ly);
         ifr = new int[L_fr];
@@ -1430,11 +1438,11 @@ public class TMAlign {
 
         if (Lx < Ly || (Lx == Ly && x_len <= y_len)) {
             for (int i = 0; i < L_fr; i++) {
-                ifr[i] = xstart + i;
+                ifr[i] = xstart.getValue() + i;
             }
         } else if (Lx > Ly || (Lx == Ly && x_len > y_len)) {
             for (int i = 0; i < L_fr; i++) {
-                ifr[i] = ystart + i;
+                ifr[i] = ystart.getValue() + i;
             }
         }
 
@@ -1536,7 +1544,7 @@ public class TMAlign {
     public static double DP_iter(double x[][], double y[][], int x_len, int y_len, double t[], double u[][],
             int invmap0[], int g1, int g2, int iteration_max, double local_d0_search) {
         double gap_open[] = { -0.6, 0 };
-        Double rmsd = 0.0;
+        MutableDouble rmsd = new MutableDouble(0.0);
         int invmap[] = new int[y_len + 1];
 
         int iteration, i, j, k;
@@ -1592,517 +1600,8 @@ public class TMAlign {
         return tmscore_max;
     }
 
-
-    /*
-void output_superpose(char *xname,
-                      char *yname,
-                      int x_len,
-                      int y_len,
-                      double t[3],
-                      double u[3][3],
-                      double rmsd,
-                      double d0_out,
-                      int m1[], 
-                      int m2[],
-                      int n_ali8,
-                      double seq_id,
-                      double TM_0,
-                      double Lnorm_0,
-                      double d0_0
-                     )
-{
-    int i, j, j1;
-    double dis2;
-
-    int max=5000;
-
-
-    //aligned region
-    FILE *fp = fopen(out_reg, "w");
-    fprintf(fp, "load inline\n");
-    fprintf(fp, "select *A\n");
-    fprintf(fp, "wireframe .45\n");
-    fprintf(fp, "select *B\n");
-    fprintf(fp, "wireframe .20\n");
-    fprintf(fp, "select all\n");
-    fprintf(fp, "color white\n");
-
-
-    do_rotation(xa, xt, x_len, t, u);
-    for(i=0; i<n_ali8; i++)
-    {
-        j=m1[i];
-        j1=m2[i];
-        dis2=Math.sqrt(dist(&xt[j][0], &ya[j1][0])) ;
-        if(dis2<=d0_out)
-        {
-            fprintf(fp, "select %4d:A,%4d:B\n", xresno[j], yresno[j1]);
-            fprintf(fp, "color red\n");
-        }
-    }
-
-    fprintf(fp, "select all\n");
-    fprintf(fp, "exit\n");
-    fprintf(fp, "REMARK TM-align Version %s\n", version);
-    string basename(xname);
-    int idx = basename.find_last_of("\\");
-    string xtempbase = basename.substr(idx + 1, basename.length());
-    fprintf(fp, "REMARK Structure A:%s   Size=%4d\n", xtempbase.c_str(), x_len);
-    basename = string(yname);
-    idx = basename.find_last_of("\\");
-    string ytempbase = basename.substr(idx + 1, basename.length());
-    fprintf(fp, "REMARK Structure B:%s   Size=%4d\n", ytempbase.c_str(), y_len);
-    fprintf(fp, "(TM-score is normalized by %4d, d0=%6.2f)\n", int(Lnorm_0), d0_0);
-    fprintf(fp, "REMARK Aligned length=%4d, RMSD=%6.2f, TM-score=%7.5f, ID=%5.3f\n", n_ali8, rmsd, TM_0, seq_id);
-
-
-    char AA[4];
-    //superposed structure B
-    for(i=0; i<n_ali8; i++)
-    {
-        j=m1[i];
-        AAmap3(seqx[j], AA);
-        fprintf(fp, "ATOM  %5d  CA  %3s A%4d%c   %8.3f%8.3f%8.3f\n", j + 1, AA, xresno[j], ins1[j], xt[j][0], xt[j][1], xt[j][2]);
-    }
-    fprintf(fp, "TER\n");
-
-    for(i=1; i<n_ali8; i++)
-    {
-        j=m1[i-1]+1;
-        j1=m1[i]+1;
-        fprintf(fp, "CONECT%5d%5d\n", j, j1);
-    }
-    //structure A
-    for(i=0; i<n_ali8; i++)
-    {
-        j=m2[i];
-        AAmap3(seqy[j], AA);
-        fprintf(fp, "ATOM  %5d  CA  %3s B%4d%c   %8.3f%8.3f%8.3f\n", j + max+ 1, AA, yresno[j], ins2[j], ya[j][0], ya[j][1], ya[j][2]);
-    }
-    fprintf(fp, "TER\n");
-    for(i=1; i<n_ali8; i++)
-    {
-        j=max+m2[i-1]+1;
-        j1=max+m2[i]+1;
-        fprintf(fp, "CONECT%5d%5d\n", j, j1);
-    }
-
-    fclose(fp);
-
-
-
-
-
-
-
-    //  output CA - trace of whole chain in 'TM.sup_all' -------->
-    //all regions
-    char str[3000];
-    sprintf(str, "%s_all", out_reg);
-    fp=fopen(str, "w");
-    fprintf(fp, "load inline\n");
-    fprintf(fp, "select *A\n");
-    fprintf(fp, "wireframe .45\n");
-    fprintf(fp, "select none\n");
-    fprintf(fp, "select *B\n");
-    fprintf(fp, "wireframe .20\n");
-    fprintf(fp, "color white\n");
-
-    for(i=0; i<n_ali8; i++)
-    {
-        j=m1[i];
-        j1=m2[i];
-        dis2=Math.sqrt(dist(&xt[j][0], &ya[j1][0])) ;
-        if(dis2<=d0_out)
-        {
-            fprintf(fp, "select %4d:A,%4d:B\n", xresno[j], yresno[j1]);
-            fprintf(fp, "color red\n");
-        }
-    }
-
-
-    fprintf(fp, "select all\n");
-    fprintf(fp, "exit\n");
-    fprintf(fp, "REMARK TM-align Version %s\n", version);
-    fprintf(fp, "REMARK Structure A:%s   Size=%4d\n", xtempbase.c_str(), x_len);
-    fprintf(fp, "REMARK Structure B:%s   Size=%4d ", ytempbase.c_str(), y_len);
-    fprintf(fp, "(TM-score is normalized by %4d, d0=%6.2f)\n", int(Lnorm_0), d0_0);
-    fprintf(fp, "REMARK Aligned length=%4d, RMSD=%6.2f, TM-score=%7.5f, ID=%5.3f\n", n_ali8, rmsd, TM_0, seq_id);
-
-
-
-    //superposed structure B
-    for(i=0; i<x_len; i++)
-    {
-        j=i;
-        AAmap3(seqx[j], AA);
-        fprintf(fp, "ATOM  %5d  CA  %3s A%4d%c   %8.3f%8.3f%8.3f\n", j + 1, AA, xresno[j], ins1[j], xt[j][0], xt[j][1], xt[j][2]);
-    }
-    fprintf(fp, "TER\n");
-
-    for(i=1; i<x_len; i++)
-    {
-        fprintf(fp, "CONECT%5d%5d\n", i, i+1);
-    }
-    //structure A
-    for(i=0; i<y_len; i++)
-    {
-        j=i;
-        AAmap3(seqy[j], AA);
-        fprintf(fp, "ATOM  %5d  CA  %3s B%4d%c   %8.3f%8.3f%8.3f\n", j + max + 1, AA, yresno[j], ins2[j], ya[j][0], ya[j][1], ya[j][2]);
-    }
-    fprintf(fp, "TER\n");
-    for(i=1; i<y_len; i++)
-    {
-        fprintf(fp, "CONECT%5d%5d\n", max+i, max+i+1);
-    }
-    fclose(fp);
-
-
-    ///////  output full - atomic structure of whole chain in 'TM.sup_atm' -------->
-    sprintf(str, "%s_atm", out_reg);
-    fp = fopen(str, "w");
-    fprintf(fp, "load inline\n");
-    fprintf(fp, "select *A\n");
-    fprintf(fp, "color blue\n");
-    fprintf(fp, "select *B\n");
-    fprintf(fp, "color red\n");
-    fprintf(fp, "select all\n");
-    fprintf(fp, "cartoon\n");
-    fprintf(fp, "exit\n");
-
-    fprintf(fp, "REMARK TM-align Version %s\n", version);
-    fprintf(fp, "REMARK Structure A:%s   Size=%4d\n", xtempbase.c_str(), x_len);
-    fprintf(fp, "REMARK Structure B:%s   Size=%4d ", ytempbase.c_str(), y_len);
-    fprintf(fp, "(TM-score is normalized by %4d, d0=%6.2f)\n", int(Lnorm_0), d0_0);
-    fprintf(fp, "REMARK Aligned length=%4d, RMSD=%6.2f, TM-score=%7.5f, ID=%5.3f\n", n_ali8, rmsd, TM_0, seq_id);
-
-    // chain_1: structure A
-    double **coord;
-    NewArray(&coord, atomxlen, 3);
-    do_rotation(xyza1, coord, atomxlen, t, u);
-    for (i = 0; i < atomxlen; i++)
-    {
-        for (j = 0; j < n_ali8; j++)
-        {
-            if (ir1[i] == xresno[m1[j]])
-            {
-                if (ains1[i] == ins1[m1[j]])
-                    fprintf(fp, "ATOM  %5d  %-4s%3s A%4d%c   %8.3f%8.3f%8.3f\n", ia1[i], aa1[i], ra1[i], ir1[i], ains1[i], coord[i][0], coord[i][1], coord[i][2]);
-            }
-        }
-    }
-    fprintf(fp, "TER\n");
-
-    // chain_2: structure B, coordinates don't change at all
-    for (i = 0; i < atomylen; i++)
-    {
-        for (j = 0; j < n_ali8; j++)
-        {
-            if (ir2[i] == yresno[m2[j]])
-            {
-                if (ains2[i] == ins2[m2[j]])
-                    fprintf(fp, "ATOM  %5d  %-4s%3s B%4d%c   %8.3f%8.3f%8.3f\n", ia2[i], aa2[i], ra2[i], ir2[i], ains2[i], xyza2[i][0], xyza2[i][1], xyza2[i][2]);
-            }
-        }
-    }
-    fprintf(fp, "TER\n");
-
-    fclose(fp);
-
-
-    ///////  output full - atomic structure of whole chain in 'TM.sup_all_atm' -------->
-    sprintf(str, "%s_all_atm", out_reg);
-    fp = fopen(str, "w");
-    fprintf(fp, "load inline\n");
-    fprintf(fp, "select *A\n");
-    fprintf(fp, "color blue\n");
-    fprintf(fp, "select *B\n");
-    fprintf(fp, "color red\n");
-    fprintf(fp, "select all\n");
-    fprintf(fp, "cartoon\n");
-    fprintf(fp, "exit\n");
-
-    fprintf(fp, "REMARK TM-align Version %s\n", version);
-    fprintf(fp, "REMARK Structure A:%s   Size=%4d\n", xtempbase.c_str(), x_len);
-    fprintf(fp, "REMARK Structure B:%s   Size=%4d ", ytempbase.c_str(), y_len);
-    fprintf(fp, "(TM-score is normalized by %4d, d0=%.2f)\n", int(Lnorm_0), d0_0);
-    fprintf(fp, "REMARK Aligned length=%4d, RMSD=%6.2f, TM-score=%7.5f, ID=%5.3f\n", n_ali8, rmsd, TM_0, seq_id);
-
-    // chain_1: structure A
-    for (i = 0; i < atomxlen; i++)
-        fprintf(fp, "ATOM  %5d  %-4s%3s A%4d%c   %8.3f%8.3f%8.3f\n", ia1[i], aa1[i], ra1[i], ir1[i], ains1[i], coord[i][0], coord[i][1], coord[i][2]);
-    fprintf(fp, "TER\n");
-    DeleteArray(&coord, atomxlen);
-
-    // chain_2: structure B, coordinates don't change at all
-    for (i = 0; i < atomylen; i++)
-        fprintf(fp, "ATOM  %5d  %-4s%3s B%4d%c   %8.3f%8.3f%8.3f\n", ia2[i], aa2[i], ra2[i], ir2[i], ains2[i], xyza2[i][0], xyza2[i][1], xyza2[i][2]);
-    fprintf(fp, "TER\n");
-    fclose(fp);
-
-
-    ///////  output full - atomic structure of whole chain in 'TM.sup_all_atm_lig' -------->
-    sprintf(str, "%s_all_atm_lig", out_reg);
-    fp = fopen(str, "w");
-    fprintf(fp, "load inline\n");
-    fprintf(fp, "select all\n");
-    fprintf(fp, "cartoon\n");
-    fprintf(fp, "select *A\n");
-    fprintf(fp, "color blue\n");
-    fprintf(fp, "select *B\n");
-    fprintf(fp, "color red\n");
-    fprintf(fp, "select ligand\n");
-    fprintf(fp, "wireframe 0.25\n");
-    fprintf(fp, "select solvent\n");
-    fprintf(fp, "spacefill 0.25\n");
-    fprintf(fp, "select all\n");
-    fprintf(fp, "exit\n");
-
-    fprintf(fp, "REMARK TM-align Version %s\n", version);
-    fprintf(fp, "REMARK Structure A:%s   Size=%4d\n", xtempbase.c_str(), x_len);
-    fprintf(fp, "REMARK Structure B:%s   Size=%4d ", ytempbase.c_str(), y_len);
-    fprintf(fp, "(TM-score is normalized by %4d, d0=%.2f)\n", int(Lnorm_0), d0_0);
-    fprintf(fp, "REMARK Aligned length=%4d, RMSD=%6.2f, TM-score=%7.5f, ID=%5.3f\n", n_ali8, rmsd, TM_0, seq_id);
-
-    // chain_1: structure A
-    int ligLen = get_ligand_len(xname);
-    NewArray(&coord, ligLen, 3);
-    string* strSeq = new string[ligLen];
-    double** coord2;
-    NewArray(&coord2, ligLen, 3);
-    read_ligand(xname, coord, strSeq);
-    do_rotation(coord, coord2, ligLen, t, u);
-    for (i = 0; i < ligLen; i++)
-    {
-        fprintf(fp, "%21sA%8s%8.3f%8.3f%8.3f\n", strSeq[i].substr(0, 21).c_str(), strSeq[i].substr(22, 8).c_str(), coord2[i][0], coord2[i][1], coord2[i][2]);
-    }
-    fprintf(fp, "TER\n");
-    DeleteArray(&coord, ligLen);
-    DeleteArray(&coord2, ligLen);
-    delete []strSeq;
-
-    // chain_2: structure B, coordinates don't change at all
-    ligLen = get_ligand_len(yname);
-    NewArray(&coord, ligLen, 3);
-    strSeq = new string[ligLen];
-    read_ligand(yname, coord, strSeq);
-    for (i = 0; i < ligLen; i++)
-    {
-        fprintf(fp, "%21sB%8s%8.3f%8.3f%8.3f\n", strSeq[i].substr(0, 21).c_str(), strSeq[i].substr(22, 8).c_str(), coord[i][0], coord[i][1], coord[i][2]);
-    }
-    fprintf(fp, "TER\n");
-    DeleteArray(&coord, ligLen);
-    delete []strSeq;
-
-    fclose(fp);
-}
-
-
-//output the final results
-void output_results(char *xname,
-                     char *yname,
-                     int x_len,
-                     int y_len,
-                     double t[3],
-                     double u[3][3],
-                     double TM1,
-                     double TM2,
-                     double rmsd,
-                     double d0_out,
-                     int m1[], 
-                     int m2[],
-                     int n_ali8,
-                     int n_ali,
-                     double TM_0,
-                     double Lnorm_0,
-                     double d0_0,
-                     char* matrix_name
-                     )
-{
-    double seq_id;          
-    int i, j, k;
-    double d;
-    int ali_len=x_len+y_len; //maximum length of alignment
-    char *seqM, *seqxA, *seqyA;
-    seqM=new char[ali_len];
-    seqxA=new char[ali_len];
-    seqyA=new char[ali_len];
-    
-
-    do_rotation(xa, xt, x_len, t, u);
-
-    seq_id=0;
-    int kk=0, i_old=0, j_old=0;
-    for(k=0; k<n_ali8; k++)
-    {
-        for(i=i_old; i<m1[k]; i++)
-        {
-            //align x to gap
-            seqxA[kk]=seqx[i];
-            seqyA[kk]='-';
-            seqM[kk]=' ';                   
-            kk++;
-        }
-
-        for(j=j_old; j<m2[k]; j++)
-        {
-            //align y to gap
-            seqxA[kk]='-';
-            seqyA[kk]=seqy[j];
-            seqM[kk]=' ';
-            kk++;
-        }
-
-        seqxA[kk]=seqx[m1[k]];
-        seqyA[kk]=seqy[m2[k]];
-        if(seqxA[kk]==seqyA[kk])
-        {
-            seq_id++;
-        }
-        d=Math.sqrt(dist(&xt[m1[k]][0], &ya[m2[k]][0]));
-        if(d<d0_out)
-        {
-            seqM[kk]=':';
-        }
-        else
-        {
-            seqM[kk]='.';
-        } 
-        kk++;  
-        i_old=m1[k]+1;
-        j_old=m2[k]+1;
-    }
-
-    //tail
-    for(i=i_old; i<x_len; i++)
-    {
-        //align x to gap
-        seqxA[kk]=seqx[i];
-        seqyA[kk]='-';
-        seqM[kk]=' ';                   
-        kk++;
-    }    
-    for(j=j_old; j<y_len; j++)
-    {
-        //align y to gap
-        seqxA[kk]='-';
-        seqyA[kk]=seqy[j];
-        seqM[kk]=' ';
-        kk++;
-    }
- 
-    seqxA[kk]='\0';
-    seqyA[kk]='\0';
-    seqM[kk]='\0';
-    
-
-    seq_id=seq_id/( n_ali8+0.00000001); //what did by TMalign, but not reasonable, it should be n_ali8    
-
-
-
-
- 
-
-
-
-    
-    cout <<endl;    
-    cout << " *****************************************************************************" << endl
-         << " * TM-align (Version "<< version <<"): A protein structural alignment algorithm     *" << endl
-         << " * Reference: Y Zhang and J Skolnick, Nucl Acids Res 33, 2302-9 (2005)       *" << endl
-         << " * Please email your comments and suggestions to Yang Zhang (zhng@umich.edu) *" << endl
-         << " *****************************************************************************" << endl;   
-
-
-    
-    printf("\nName of Chain_1: %s (to be superimposed onto Chain_2)\n", xname); 
-    printf("Name of Chain_2: %s\n", yname);
-    printf("Length of Chain_1: %d residues\n", x_len);
-    printf("Length of Chain_2: %d residues\n\n", y_len);
-
-    if (i_opt || I_opt)
-    {
-        printf("User-specified initial alignment: TM/Lali/rmsd = %7.5lf, %4d, %6.3lf\n", TM_ali, L_ali, rmsd_ali);
-    }
-
-    printf("Aligned length= %d, RMSD= %6.2f, Seq_ID=n_identical/n_aligned= %4.3f\n", n_ali8, rmsd, seq_id); 
-    printf("TM-score= %6.5f (if normalized by length of Chain_1, i.e., LN=%d, d0=%.2f)\n", TM2, x_len, d0B);
-    printf("TM-score= %6.5f (if normalized by length of Chain_2, i.e., LN=%d, d0=%.2f)\n", TM1, y_len, d0A);
-    if(a_opt)
-    {
-      double L_ave=(x_len+y_len)*0.5;
-      printf("TM-score= %6.5f (if normalized by average length of two structures, i.e., LN= %.2f, d0= %.2f)\n", TM3, L_ave, d0a);
-    }
-    if(u_opt)
-    {       
-      printf("TM-score= %6.5f (if normalized by user-specified LN=%.2f and d0=%.2f)\n", TM4, Lnorm_ass, d0u);
-    }
-    if(d_opt)
-      {     
-        printf("TM-score= %6.5f (if scaled by user-specified d0= %.2f, and LN= %.2f)\n", TM5, d0_scale, Lnorm_0);
-    }
-    printf("(You should use TM-score normalized by length of the reference protein)\n");
-    
-    // ********* extract rotation matrix based on TMscore8 ------------>
-    if (m_opt)
-    {
-        fstream fout;
-        fout.open(matrix_name, ios::out | ios::trunc);
-        if (fout)// succeed
-        {
-            fout << "\n----- The rotation matrix to rotate Chain_1(Structure A) to Chain_2(Structure B) -----\n";
-            char dest[1000];
-            sprintf(dest, "i\t%18s %15s %15s %15s\n", "t[i]", "u[i][0]", "u[i][1]", "u[i][2]");
-            fout << string(dest);
-            for (k = 0; k < 3; k++)
-            {
-                sprintf(dest, "%d\t%18.10f %15.10f %15.10f %15.10f\n", k, t[k], u[k][0], u[k][1], u[k][2]);
-                fout << string(dest);
-            }
-            fout << "\nCode for rotating Structure A from (x,y,z) to (X,Y,Z):\n";
-            fout << "for(k=0; k<L; k++)\n";
-            fout << "{\n";
-            fout << "   X[k] = t[0] + u[0][0]*x[k] + u[0][1]*y[k] + u[0][2]*z[k]\n";
-            fout << "   Y[k] = t[1] + u[1][0]*x[k] + u[1][1]*y[k] + u[1][2]*z[k]\n";
-            fout << "   Z[k] = t[2] + u[2][0]*x[k] + u[2][1]*y[k] + u[2][2]*z[k]\n";
-            fout << "}\n";
-
-            fout.close();
-        }
-        else
-            cout << "Open file to output rotation matrix fail.\n";
-    }
-
-    
-    //output structure alignment
-    printf("\n(\":\" denotes residue pairs of d < %4.1f Angstrom, ", d0_out);
-    printf("\".\" denotes other aligned residues)\n");
-    printf("%s\n", seqxA);
-    printf("%s\n", seqM);
-    printf("%s\n", seqyA);
-
-    cout << endl;
-
-
-
-
-    if(o_opt)
-    {
-        output_superpose(xname, yname, x_len, y_len, t, u, rmsd, d0_out, m1, m2, n_ali8, seq_id, TM_0, Lnorm_0, d0_0);
-    }
-
-
-    delete [] seqM;
-    delete [] seqxA;
-    delete [] seqyA;
-    
-}
-
-*/
-
-    public static double standard_TMscore(double x[][], double y[][], int x_len, int y_len, int invmap[], Integer L_ali,
-            Double RMSD) {
+    public static double standard_TMscore(double x[][], double y[][], int x_len, int y_len, int invmap[], MutableInteger L_ali,
+            MutableDouble RMSD) {
         Variables.D0_MIN = 0.5;
         Variables.Lnorm = y_len;
         if (Variables.Lnorm > 21)
@@ -2140,15 +1639,15 @@ void output_results(char *xname,
                 Functions.PrintErrorAndQuit("Wrong map!\n");
             }
         }
-        L_ali = n_al;
+        L_ali.setValue(n_al);
 
         Kabsch.execute(Variables.r1, Variables.r2, n_al, 0, RMSD, Variables.t, Variables.u);
-        RMSD = Math.sqrt(RMSD / (1.0 * n_al));
+        RMSD.setValue(Math.sqrt(RMSD.getValue() / (1.0 * n_al)));
 
         int temp_simplify_step = 1;
         int temp_score_sum_method = 0;
         Variables.d0_search = d0_input;
-        Double rms = 0.0;
+        MutableDouble rms = new MutableDouble(0.0);
         tmscore = TMscore8_search_standard(Variables.xtm, Variables.ytm, n_al, Variables.t, Variables.u,
                 temp_simplify_step, temp_score_sum_method, rms, d0_input);
         tmscore = tmscore * n_al / (1.0 * Variables.Lnorm);
