@@ -25,8 +25,8 @@ import org.biojava.nbio.structure.align.StructureAlignment;
 import org.biojava.nbio.structure.align.StructureAlignmentFactory;
 import org.biojava.nbio.structure.align.model.AFPChain;
 import org.biojava.nbio.structure.align.util.AFPChainScorer;
-import org.biojava.nbio.structure.io.LocalPDBDirectory.FetchBehavior;
-import org.biojava.nbio.structure.io.PDBFileReader;
+import org.biojava.nbio.structure.io.FileParsingParameters;
+import org.biojava.nbio.structure.io.PDBFileParser;
 import org.postgresql.ds.PGSimpleDataSource;
 
 import edu.umkc.rupee.lib.AlignCriteria;
@@ -92,8 +92,10 @@ public abstract class Search {
                 if (criteria.align != AlignCriteria.NONE) {
 
                     // cache common objects for use by multiple threads 
-                    final PDBFileReader reader = new PDBFileReader();
-                    reader.setFetchBehavior(FetchBehavior.LOCAL_ONLY);
+                    PDBFileParser parser = new PDBFileParser();
+                    FileParsingParameters params = new FileParsingParameters();
+                    params.setParseCAOnly(true);
+                    parser.setFileParsingParameters(params);
 
                     String fileName = "";
                     Structure structure = null;
@@ -104,14 +106,14 @@ public abstract class Search {
                         FileInputStream queryFile = new FileInputStream(fileName);
                         GZIPInputStream queryFileGz = new GZIPInputStream(queryFile);
 
-                        structure = reader.getStructure(queryFileGz);
+                        structure = parser.parsePDBFile(queryFileGz);
                     }
                     else { // UPLOAD
                         
                         fileName = Constants.UPLOAD_PATH + criteria.uploadId + ".pdb";
                         FileInputStream queryFile = new FileInputStream(fileName);
 
-                        structure = reader.getStructure(queryFile);
+                        structure = parser.parsePDBFile(queryFile);
                     }
 
                     final Structure queryStructure = structure;
@@ -126,8 +128,13 @@ public abstract class Search {
 
                             FileInputStream targetFile = new FileInputStream(getDbType().getImportPath() + record.getDbId() + ".pdb.gz");
                             GZIPInputStream targetFileGz = new GZIPInputStream(targetFile);
+                    
+                            PDBFileParser parser2 = new PDBFileParser();
+                            FileParsingParameters params2 = new FileParsingParameters();
+                            params2.setParseCAOnly(true);
+                            parser2.setFileParsingParameters(params2);
 
-                            Structure targetStructure = reader.getStructure(targetFileGz);
+                            Structure targetStructure = parser2.parsePDBFile(targetFileGz);
                             Atom[] targetAtoms = StructureTools.getAtomCAArray(targetStructure);
                        
                             AFPChain afps = alg.align(queryAtoms, targetAtoms, criteria.align.getParams());
