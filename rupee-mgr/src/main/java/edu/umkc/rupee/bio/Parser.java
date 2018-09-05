@@ -26,7 +26,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import org.biojava.nbio.structure.AminoAcidImpl;
@@ -45,7 +44,6 @@ import org.biojava.nbio.structure.StructureImpl;
 import org.biojava.nbio.structure.StructureTools;
 import org.biojava.nbio.structure.io.EntityFinder;
 import org.biojava.nbio.structure.io.mmcif.ChemCompGroupFactory;
-import org.biojava.nbio.structure.io.mmcif.model.ChemCompAtom;
 
 public class Parser {
 
@@ -58,13 +56,11 @@ public class Parser {
     private List<Chain> currentModel; 
     private Chain currentChain;
     private Group currentGroup;
-
     private int atomCount;
     private boolean startOfMolecule;
     private boolean startOfModel;
     
     private List<EntityInfo> entities = new ArrayList<EntityInfo>();
-    private HashMap<Integer, List<String>> compoundMolIds2chainIds = new HashMap<Integer, List<String>>();
 
     public Parser() {
 
@@ -237,8 +233,9 @@ public class Parser {
         }
 
         // create new atom
-        int pdbnumber = Integer.parseInt(line.substring(6, 11).trim());
         AtomImpl atom = new AtomImpl();
+
+        int pdbnumber = Integer.parseInt(line.substring(6, 11).trim());
         atom.setPDBserial(pdbnumber);
 
         atom.setAltLoc(altLoc);
@@ -254,64 +251,13 @@ public class Parser {
         coords[2] = z;
         atom.setCoords(coords);
 
-        float occu = 1.0f;
-        if (line.length() > 59) {
-            try {
-                // occu and tempf are sometimes not used :-/
-                occu = Float.parseFloat(line.substring(54, 60).trim());
-            } catch (NumberFormatException e) {
-            }
-        }
-
-        float tempf = 0.0f;
-        if (line.length() > 65) {
-            try {
-                tempf = Float.parseFloat(line.substring(60, 66).trim());
-            } catch (NumberFormatException e) {
-            }
-        }
-
-        atom.setOccupancy(occu);
-        atom.setTempFactor(tempf);
-
-        // Parse element from the element field. If this field is
-        // missing (i.e. misformatted PDB file), then parse the
-        // element from the chemical component.
-        Element element = Element.R;
-        boolean guessElement = true;
-        if (line.length() > 77) {
-            // parse element from element field
-            String elementSymbol = line.substring(76, 78).trim();
-            if (!elementSymbol.isEmpty()) {
-
-                try {
-                    element = Element.valueOfIgnoreCase(elementSymbol);
-                    guessElement = false;
-                } catch (IllegalArgumentException e) {
-                }
-            }
-        }
-
-        if (guessElement) {
-            String elementSymbol = null;
-            if (currentGroup.getChemComp() != null) {
-                for (ChemCompAtom a : currentGroup.getChemComp().getAtoms()) {
-                    if (a.getAtom_id().equals(fullname.trim())) {
-                        elementSymbol = a.getType_symbol();
-                        break;
-                    }
-                }
-                if (elementSymbol != null) {
-
-                    try {
-                        element = Element.valueOfIgnoreCase(elementSymbol);
-                    } catch (IllegalArgumentException e) {
-                    }
-                }
-            }
-        }
+        atom.setOccupancy(1.0f);
+        atom.setTempFactor(0.0f);
+       
+        // since we are only considering carbons 
+        Element element = Element.C;
         atom.setElement(element);
-
+        
         // see if chain_id is one of the previous chains ...
         if (altGroup != null) {
             altGroup.addAtom(atom);
@@ -410,11 +356,6 @@ public class Parser {
         return group;
     }
 
-    /**
-     * Handler for TER record. The record is used in deposited PDB files and
-     * many others, but it's often forgotten by some softwares. In any case it
-     * helps identifying the start of ligand molecules so we use it for that.
-     */
     private void pdb_TER_Handler() {
         startOfMolecule = true;
     }
@@ -437,7 +378,7 @@ public class Parser {
 
     public Structure parsePDBFile(BufferedReader buf) throws IOException {
 
-        // (re)set structure
+        // reset
         allModels = new ArrayList<>();
         structure = new StructureImpl();
         currentModel = null;
@@ -509,28 +450,6 @@ public class Parser {
         // reordering chains following the mmcif model and assigning entities
         assignChainsAndEntities();
         structure.setEntityInfos(entities);
-    }
-
-    /**
-     * Gets all chains with given chainName from given models list
-     *
-     * @param chainName
-     * @param polyModels
-     * @return
-     */
-    private static List<List<Chain>> findChains(String chainName, List<List<Chain>> polyModels) {
-        List<List<Chain>> models = new ArrayList<>();
-
-        for (List<Chain> chains : polyModels) {
-            List<Chain> matchingChains = new ArrayList<>();
-            models.add(matchingChains);
-            for (Chain c : chains) {
-                if (c.getName().equals(chainName)) {
-                    matchingChains.add(c);
-                }
-            }
-        }
-        return models;
     }
 
     /**
@@ -733,33 +652,8 @@ public class Parser {
         // mmcif rules
         assignAsymIds(polyModels, splitNonPolyModels, waterModels);
 
-        if (!entities.isEmpty()) {
-            // if the file contained COMPOUND records then we can assign
-            // entities to the poly chains
-            for (EntityInfo comp : entities) {
-                List<String> chainIds = compoundMolIds2chainIds.get(comp.getMolId());
-                if (chainIds == null)
-                    continue;
-                for (String chainId : chainIds) {
-
-                    List<List<Chain>> models = findChains(chainId, polyModels);
-
-                    for (List<Chain> matchingChains : models) {
-                        for (Chain chain : matchingChains) {
-                            comp.addChain(chain);
-                            chain.setEntityInfo(comp);
-                        }
-                    }
-                }
-            }
-
-        } else {
-
-            // if no entity information was present in file we then go and find
-            // the entities heuristically with EntityFinder
-            entities = EntityFinder.findPolyEntities(polyModels);
-
-        }
+        // find entities heuristically with EntityFinder
+        entities = EntityFinder.findPolyEntities(polyModels);
 
         // now we assign entities to the nonpoly and water chains
         EntityFinder.createPurelyNonPolyEntities(splitNonPolyModels, waterModels, entities);
@@ -779,6 +673,5 @@ public class Parser {
             model.addAll(waterModels.get(i));
             structure.addModel(model);
         }
-
     }
 }
