@@ -9,7 +9,6 @@ import org.biojava.nbio.structure.Chain;
 import org.biojava.nbio.structure.Group;
 import org.biojava.nbio.structure.Structure;
 
-import sun.java2d.xr.MutableInteger;
 
 public class TMAlign {
 
@@ -1341,7 +1340,7 @@ public class TMAlign {
         NW.NWDP_TM(x_len, y_len, gap_open, y2x);
     }
 
-    public static void find_max_frag(double x[][], int len, MutableInteger start_max, MutableInteger end_max) {
+    public static void find_max_frag(double x[][], int len, Integer start_max, Integer end_max) {
         int r_min, fra_min = 4; // minimum fragment for search
         double d;
         int start;
@@ -1381,16 +1380,16 @@ public class TMAlign {
                     if (i == (len - 1)) {
                         if (j > Lfr_max) {
                             Lfr_max = j;
-                            start_max.setValue(start);
-                            end_max.setValue(i);
+                            start_max= start;
+                            end_max = i;
                         }
                         j = 1;
                     }
                 } else {
                     if (j > Lfr_max) {
                         Lfr_max = j;
-                        start_max.setValue(start);
-                        end_max.setValue(i - 1);
+                        start_max = start;
+                        end_max = i - 1;
                     }
 
                     j = 1;
@@ -1416,16 +1415,16 @@ public class TMAlign {
         int fra_min = 4; // minimum fragment for search
         int fra_min1 = fra_min - 1; // cutoff for shift, save time
 
-        MutableInteger xstart = new MutableInteger(0);
-        MutableInteger ystart = new MutableInteger(0);
-        MutableInteger xend = new MutableInteger(0);
-        MutableInteger yend = new MutableInteger(0);
+        Integer xstart = 0;
+        Integer ystart = 0;
+        Integer xend = 0;
+        Integer yend = 0;
 
         find_max_frag(x, x_len, xstart, xend);
         find_max_frag(y, y_len, ystart, yend);
 
-        int Lx = xend.getValue() - xstart.getValue() + 1;
-        int Ly = yend.getValue() - ystart.getValue() + 1;
+        int Lx = xend - xstart + 1;
+        int Ly = yend - ystart + 1;
         int ifr[], y2x_[];
         int L_fr = Math.min(Lx, Ly);
         ifr = new int[L_fr];
@@ -1438,11 +1437,11 @@ public class TMAlign {
 
         if (Lx < Ly || (Lx == Ly && x_len <= y_len)) {
             for (int i = 0; i < L_fr; i++) {
-                ifr[i] = xstart.getValue() + i;
+                ifr[i] = xstart + i;
             }
         } else if (Lx > Ly || (Lx == Ly && x_len > y_len)) {
             for (int i = 0; i < L_fr; i++) {
-                ifr[i] = ystart.getValue() + i;
+                ifr[i] = ystart + i;
             }
         }
 
@@ -1600,7 +1599,7 @@ public class TMAlign {
         return tmscore_max;
     }
 
-    public static double standard_TMscore(double x[][], double y[][], int x_len, int y_len, int invmap[], MutableInteger L_ali,
+    public static double standard_TMscore(double x[][], double y[][], int x_len, int y_len, int invmap[], Integer L_ali,
             MutableDouble RMSD) {
         Variables.D0_MIN = 0.5;
         Variables.Lnorm = y_len;
@@ -1639,7 +1638,7 @@ public class TMAlign {
                 Functions.PrintErrorAndQuit("Wrong map!\n");
             }
         }
-        L_ali.setValue(n_al);
+        L_ali = n_al;
 
         Kabsch.execute(Variables.r1, Variables.r2, n_al, 0, RMSD, Variables.t, Variables.u);
         RMSD.setValue(Math.sqrt(RMSD.getValue() / (1.0 * n_al)));
