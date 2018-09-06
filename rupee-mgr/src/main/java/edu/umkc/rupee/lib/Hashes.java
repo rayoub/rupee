@@ -6,7 +6,6 @@ public class Hashes {
     public String setId;
     public Integer[] minHashes;
     public Integer[] bandHashes;
-    public long exactHash;
 
     public String getDbId() {
         return dbId;
@@ -38,14 +37,6 @@ public class Hashes {
 
     public void setBandHashes(Integer[] bandHashes) {
         this.bandHashes = bandHashes;
-    }
-
-    public long getExactHash() {
-        return exactHash;
-    }
-
-    public void setExactHash(long exactHash) {
-        this.exactHash = exactHash;
     }
 }
 

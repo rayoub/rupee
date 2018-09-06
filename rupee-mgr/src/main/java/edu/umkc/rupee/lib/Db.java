@@ -145,7 +145,6 @@ public class Db {
             hashes.dbId = rs.getString("db_id");
             hashes.minHashes = (Integer[])rs.getArray("min_hashes").getArray();
             hashes.bandHashes = (Integer[])rs.getArray("band_hashes").getArray();
-            hashes.exactHash = rs.getLong("exact_hash");
 
             map.put(hashes.getDbId(), hashes);
         }

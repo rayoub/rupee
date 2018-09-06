@@ -1,6 +1,5 @@
 package edu.umkc.rupee.lib;
 
-import java.nio.ByteBuffer;
 import java.util.Map;
 
 public class Hashing {
@@ -78,19 +77,5 @@ public class Hashing {
         }
 
         return bandHashes;
-    }
-
-    // sufficiently exact :-) 
-    public static long getExactHash(Integer[] minHashes) {
-
-        ByteBuffer buffer = ByteBuffer.allocate(minHashes.length * 4);
-
-        for (int i = 0; i < minHashes.length; i++) {
-            buffer.putInt(minHashes[i]);
-        }
-
-        byte[] bytes = buffer.array();
-
-        return MurmurHash.hash64(bytes, bytes.length);
     }
 }
