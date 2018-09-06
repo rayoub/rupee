@@ -1074,7 +1074,7 @@ public class TMAlign {
         make_sec(y, y_len, Variables.secy);
 
         double gap_open = -1.0;
-        NW.NWDP_TM(Variables.secx, Variables.secy, x_len, y_len, gap_open, y2x);
+        NW.NWDP_TM(Variables.path, Variables.val, Variables.secx, Variables.secy, x_len, y_len, gap_open, y2x);
     }
 
     // get_initial5 in TMalign
@@ -1162,7 +1162,7 @@ public class TMAlign {
                     Kabsch.execute(Variables.r1, Variables.r2, n_frag[i_frag], 1, rmsd, t, u);
 
                     double gap_open = 0.0;
-                    NW.NWDP_TM(x, y, x_len, y_len, t, u, d02, gap_open, invmap);
+                    NW.NWDP_TM(Variables.path, Variables.val, x, y, x_len, y_len, t, u, d02, gap_open, invmap);
                     GL = get_score_fast(x, y, x_len, y_len, invmap);
                     if (GL > GLmax) {
                         GLmax = GL;
@@ -1231,7 +1231,7 @@ public class TMAlign {
         score_matrix_rmsd_sec(x, y, x_len, y_len, y2x0);
 
         double gap_open = -1.0;
-        NW.NWDP_TM(x_len, y_len, gap_open, y2x);
+        NW.NWDP_TM(Variables.score, Variables.path, Variables.val, x_len, y_len, gap_open, y2x);
     }
 
     public static void find_max_frag(double x[][], int len, MutableInt start_max, MutableInt end_max) {
@@ -1449,7 +1449,7 @@ public class TMAlign {
         double d02 = Variables.d0 * Variables.d0;
         for (int g = g1; g < g2; g++) {
             for (iteration = 0; iteration < iteration_max; iteration++) {
-                NW.NWDP_TM(x, y, x_len, y_len, t, u, d02, gap_open[g], invmap);
+                NW.NWDP_TM(Variables.path, Variables.val, x, y, x_len, y_len, t, u, d02, gap_open[g], invmap);
 
                 k = 0;
                 for (j = 0; j < y_len; j++) {
