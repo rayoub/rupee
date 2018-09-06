@@ -21,14 +21,13 @@ import org.biojava.nbio.structure.Atom;
 import org.biojava.nbio.structure.Structure;
 import org.biojava.nbio.structure.StructureException;
 import org.biojava.nbio.structure.StructureTools;
-import org.biojava.nbio.structure.align.StructureAlignment;
-import org.biojava.nbio.structure.align.StructureAlignmentFactory;
+import org.biojava.nbio.structure.align.ce.CeMain;
+import org.biojava.nbio.structure.align.ce.CeParameters;
 import org.biojava.nbio.structure.align.model.AFPChain;
 import org.biojava.nbio.structure.align.util.AFPChainScorer;
-import org.biojava.nbio.structure.io.FileParsingParameters;
-import org.biojava.nbio.structure.io.PDBFileParser;
 import org.postgresql.ds.PGSimpleDataSource;
 
+import edu.umkc.rupee.bio.Parser;
 import edu.umkc.rupee.lib.AlignCriteria;
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
@@ -85,6 +84,27 @@ public abstract class Search {
                 records = IntStream.range(0, Constants.BAND_CHECK_COUNT).boxed().parallel()
                     .flatMap(bandIndex -> searchBand(bandIndex, criteria, grams1, hashes1).stream())
                     .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
+                    .limit(Constants.MAX_CANDIDATE_COUNT) 
+                    .collect(Collectors.toList());
+
+                // cache map of residue grams
+                List<String> dbIds = records.stream().map(SearchRecord::getDbId).collect(Collectors.toList());
+                Map<String, List<Integer>> map = Db.getGrams(dbIds, criteria.dbType);
+
+                // parallel adjusted similarity
+                records.stream()
+                    .forEach(record -> {
+
+                        if (map.containsKey(record.getDbId())) {
+                            List<Integer> grams2 = map.get(record.getDbId());
+                            int lcsLength = LCS.getLCSLength(grams1, grams2); 
+                            record.setSimilarity(Similarity.getAdjustedSimilarity(grams1, grams2, lcsLength));
+                        }
+                    });
+                
+                // sort and filter again based on criteria limit
+                records = records.stream()
+                    .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
                     .limit(criteria.limit) 
                     .collect(Collectors.toList());
 
@@ -92,10 +112,7 @@ public abstract class Search {
                 if (criteria.align != AlignCriteria.NONE) {
 
                     // cache common objects for use by multiple threads 
-                    PDBFileParser parser = new PDBFileParser();
-                    FileParsingParameters params = new FileParsingParameters();
-                    params.setParseCAOnly(true);
-                    parser.setFileParsingParameters(params);
+                    Parser parser = new Parser(Integer.MAX_VALUE);
 
                     String fileName = "";
                     Structure structure = null;
@@ -123,21 +140,19 @@ public abstract class Search {
                     records.stream().parallel().forEach(record -> {
                         
                         try {
-                         
-                            StructureAlignment alg = StructureAlignmentFactory.getAlgorithm(criteria.align.getAlgorithmName());
+                       
+                            CeMain alg = new CeMain(); 
+                            CeParameters params = new CeParameters();
+                            params.setOptimizeAlignment(false);
 
                             FileInputStream targetFile = new FileInputStream(getDbType().getImportPath() + record.getDbId() + ".pdb.gz");
                             GZIPInputStream targetFileGz = new GZIPInputStream(targetFile);
-                    
-                            PDBFileParser parser2 = new PDBFileParser();
-                            FileParsingParameters params2 = new FileParsingParameters();
-                            params2.setParseCAOnly(true);
-                            parser2.setFileParsingParameters(params2);
 
+                            Parser parser2 = new Parser(queryStructure.getChains().get(0).getAtomLength() * 5);
                             Structure targetStructure = parser2.parsePDBFile(targetFileGz);
                             Atom[] targetAtoms = StructureTools.getAtomCAArray(targetStructure);
-                       
-                            AFPChain afps = alg.align(queryAtoms, targetAtoms, criteria.align.getParams());
+                      
+                            AFPChain afps = alg.align(queryAtoms, targetAtoms, params);
                             afps.setTMScore(AFPChainScorer.getTMScore(afps, queryAtoms, targetAtoms));
 
                             record.setRmsd(afps.getTotalRmsdOpt());
@@ -232,23 +247,6 @@ public abstract class Search {
             rs.close();
             stmt.close();
             conn.close();
-
-            // *** adjust similarity
-            
-            // cache map of residue grams
-            List<String> dbIds = records.stream().map(SearchRecord::getDbId).collect(Collectors.toList());
-            Map<String, List<Integer>> map = Db.getGrams(dbIds, criteria.dbType);
-
-            // parallel adjusted similarity
-            records.stream()
-                .forEach(record -> {
-
-                    if (map.containsKey(record.getDbId())) {
-                        List<Integer> grams2 = map.get(record.getDbId());
-                        int lcsLength = LCS.getLCSLength(grams, grams2); 
-                        record.setSimilarity(Similarity.getAdjustedSimilarity(grams, grams2, lcsLength));
-                    }
-                });
 
         } catch (SQLException e) {
             Logger.getLogger(Search.class.getName()).log(Level.SEVERE, null, e);

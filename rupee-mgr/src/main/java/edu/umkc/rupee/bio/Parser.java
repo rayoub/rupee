@@ -43,13 +43,13 @@ import org.biojava.nbio.structure.Structure;
 import org.biojava.nbio.structure.StructureImpl;
 import org.biojava.nbio.structure.StructureTools;
 import org.biojava.nbio.structure.io.EntityFinder;
-import org.biojava.nbio.structure.io.mmcif.ChemCompGroupFactory;
 
 public class Parser {
 
     // constants
     private static final String NEWLINE = System.getProperty("line.separator");
-    private static final int MAX_ATOMS = Integer.MAX_VALUE;
+
+    private int maxAtoms;
 
     private Structure structure;
     private List<List<Chain>> allModels; 
@@ -61,7 +61,9 @@ public class Parser {
     private boolean startOfModel;
     private List<EntityInfo> entities;
 
-    public Parser() {
+    public Parser(int maxAtoms) {
+
+        this.maxAtoms = maxAtoms;
 
         structure = null;
         allModels = null;
@@ -215,7 +217,7 @@ public class Parser {
 
         atomCount++;
 
-        if (atomCount >= MAX_ATOMS) {
+        if (atomCount >= maxAtoms) {
             return;
         }
 
@@ -333,10 +335,6 @@ public class Parser {
     }
 
     private Group getNewGroup(String recordName, Character aminoCode1, String aminoCode3) {
-
-        Group g = ChemCompGroupFactory.getGroupFromChemCompDictionary(aminoCode3);
-        if (g != null && !g.getChemComp().isEmpty())
-            return g;
 
         Group group;
         if (aminoCode1 == null || StructureTools.UNKNOWN_GROUP_LABEL == aminoCode1) {
