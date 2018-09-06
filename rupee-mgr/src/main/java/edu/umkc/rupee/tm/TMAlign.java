@@ -31,8 +31,8 @@ public class TMAlign {
         List<Atom> yatoms = ygroups.stream().map(g -> g.getAtom("CA")).collect(Collectors.toList());
 
         // get number of residues
-        Variables.xlen = xgroups.size();
-        Variables.ylen = ygroups.size();
+        Variables.xlen = xatoms.size();
+        Variables.ylen = yatoms.size();
         Variables.minlen = Math.min(Variables.xlen, Variables.ylen);
        
         // allocate  storage 
@@ -98,6 +98,7 @@ public class TMAlign {
         //find the max TMscore for this initial alignment with the simplified search_engin
         TM = detailed_search(Variables.xa, Variables.ya, Variables.xlen, Variables.ylen, invmap0, Variables.t,
                 Variables.u, simplify_step, score_sum_method, local_d0_search);
+
         if (TM > TMmax) {
             TMmax = TM;
         }
@@ -223,7 +224,8 @@ public class TMAlign {
             }
         }
         if (!flag) {
-
+            
+            System.out.println("No results");
             // no alignment bad results exit 1
         }
 
@@ -236,6 +238,8 @@ public class TMAlign {
         score_sum_method = 8;
         TM = detailed_search_standard(Variables.xa, Variables.ya, Variables.xlen, Variables.ylen, invmap0, Variables.t,
                 Variables.u, simplify_step, score_sum_method, local_d0_search, false);
+
+        // by the time this is called the damage is done
 
         // select pairs with dis<d8 for final TMscore computation and output
         // alignment
@@ -251,7 +255,7 @@ public class TMAlign {
             if (i >= 0)// aligned
             {
                 d = Math.sqrt(Functions.dist(Variables.xt[i], Variables.ya[j]));
-                if (d <= Variables.score_d8) {
+                if (d <= Variables.score_d8){
                     m1[k] = i;
                     m2[k] = j;
 
@@ -295,17 +299,22 @@ public class TMAlign {
         
         //normalized by length of structure A
         parameter_set4final(Lnorm_0);
+        double d0A = Variables.d0;
         local_d0_search = Variables.d0_search;
         TM1 = TMscore8_search(Variables.xtm, Variables.ytm, n_ali8, t0, u0, simplify_step, score_sum_method, rmsd, local_d0_search);
 
         //normalized by length of structure B
-        parameter_set4final(Variables.xlen+0.0);
+        parameter_set4final(Variables.xlen);
+        double d0B = Variables.d0;
         local_d0_search = Variables.d0_search;
         TM2 = TMscore8_search(Variables.xtm, Variables.ytm, n_ali8, Variables.t, Variables.u, simplify_step, score_sum_method, rmsd, local_d0_search);
 
-        System.out.println(rmsd);        
-        System.out.println(TM1 + " " + TM2);
-
+        System.out.println("Length of chain 1: " + Variables.xlen + " residues");
+        System.out.println("Length of chain 2: " + Variables.ylen + " residues");
+        System.out.println("Aligned Length: " + n_ali8);
+        System.out.println("TM-score normalized by chain 1: " + TM2 + ", d0 = " + d0B);
+        System.out.println("TM-score normalized by chain 2: " + TM1 + ", d0 = " + d0A);
+        System.out.println("RMSD: " + rmsd0);        
     }
 
     public static void parameter_set4search(int xlen, int ylen) {
@@ -320,7 +329,7 @@ public class TMAlign {
         {
             Variables.d0 = 0.168; // update 0.5-->0.168
         } else {
-            Variables.d0 = (1.24 * Math.pow((Variables.Lnorm * 1.0 - 15), 1.0 / 3) - 1.8);
+            Variables.d0 = (1.24 * Math.pow((Variables.Lnorm * 1.0 - 15), 1.0 / 3.0) - 1.8);
         }
         Variables.D0_MIN = Variables.d0 + 0.8; // this should be moved to above
         Variables.d0 = Variables.D0_MIN; // update: best for search
@@ -434,6 +443,7 @@ public class TMAlign {
         }
 
         score1.setValue(score_sum / n_ali);
+        
         return n_cut;
     }
 
@@ -986,80 +996,6 @@ public class TMAlign {
         return tmscore_max;
     }
 
-    public static void smooth(int sec[], int len) {
-        int i, j;
-        // smooth single --x-- => -----
-        for (i = 2; i < len - 2; i++) {
-            if (sec[i] == 2 || sec[i] == 4) {
-                j = sec[i];
-                if (sec[i - 2] != j) {
-                    if (sec[i - 1] != j) {
-                        if (sec[i + 1] != j) {
-                            if (sec[i + 2] != j) {
-                                sec[i] = 1;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        // smooth double
-        // --xx-- => ------
-
-        for (i = 0; i < len - 5; i++) {
-            // helix
-            if (sec[i] != 2) {
-                if (sec[i + 1] != 2) {
-                    if (sec[i + 2] == 2) {
-                        if (sec[i + 3] == 2) {
-                            if (sec[i + 4] != 2) {
-                                if (sec[i + 5] != 2) {
-                                    sec[i + 2] = 1;
-                                    sec[i + 3] = 1;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-            // beta
-            if (sec[i] != 4) {
-                if (sec[i + 1] != 4) {
-                    if (sec[i + 2] == 4) {
-                        if (sec[i + 3] == 4) {
-                            if (sec[i + 4] != 4) {
-                                if (sec[i + 5] != 4) {
-                                    sec[i + 2] = 1;
-                                    sec[i + 3] = 1;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        // smooth connect
-        for (i = 0; i < len - 2; i++) {
-            if (sec[i] == 2) {
-                if (sec[i + 1] != 2) {
-                    if (sec[i + 2] == 2) {
-                        sec[i + 1] = 2;
-                    }
-                }
-            } else if (sec[i] == 4) {
-                if (sec[i + 1] != 4) {
-                    if (sec[i + 2] == 4) {
-                        sec[i + 1] = 4;
-                    }
-                }
-            }
-        }
-
-    }
-
     public static int sec_str(double dis13, double dis14, double dis15, double dis24, double dis25, double dis35) {
         int s = 1;
 
@@ -1240,48 +1176,6 @@ public class TMAlign {
         }
 
         return flag;
-    }
-
-    // with invmap(i) calculate score(i,j) using RMSD rotation
-    public static void score_matrix_rmsd(double x[][], double y[][], int x_len, int y_len, int y2x[]) {
-        double t[] = new double[3];
-        double u[][] = new double[3][3];
-        MutableDouble rmsd = new MutableDouble(0.0);
-        double dij;
-        double d01 = Variables.d0 + 1.5;
-        if (d01 < Variables.D0_MIN)
-            d01 = Variables.D0_MIN;
-        double d02 = d01 * d01;
-
-        double xx[] = new double[3];
-        int i, k = 0;
-        for (int j = 0; j < y_len; j++) {
-            i = y2x[j];
-            if (i >= 0) {
-                Variables.r1[k][0] = x[i][0];
-                Variables.r1[k][1] = x[i][1];
-                Variables.r1[k][2] = x[i][2];
-
-                Variables.r2[k][0] = y[j][0];
-                Variables.r2[k][1] = y[j][1];
-                Variables.r2[k][2] = y[j][2];
-
-                k++;
-            }
-        }
-        Kabsch.execute(Variables.r1, Variables.r2, k, 1, rmsd, t, u);
-        // do_rotation(x, xt, x_len, t, u);
-
-        for (int ii = 0; ii < x_len; ii++) {
-            Functions.transform(t, u, x[ii], xx);
-            for (int jj = 0; jj < y_len; jj++) {
-                // dij=dist(&xt[ii][0], &y[jj][0]);
-                dij = Functions.dist(xx, y[jj]);
-                Variables.score[ii + 1][jj + 1] = 1.0 / (1 + dij / d02);
-                // cout << ii+1 << " " << jj+1 << " " << score[ii+1][jj+1]<<
-                // endl;
-            }
-        }
     }
 
     public static void score_matrix_rmsd_sec(double x[][], double y[][], int x_len, int y_len, int y2x[]) {
@@ -1597,60 +1491,5 @@ public class TMAlign {
         } // for gapopen
 
         return tmscore_max;
-    }
-
-    public static double standard_TMscore(double x[][], double y[][], int x_len, int y_len, int invmap[], MutableInt L_ali,
-            MutableDouble RMSD) {
-        Variables.D0_MIN = 0.5;
-        Variables.Lnorm = y_len;
-        if (Variables.Lnorm > 21)
-            Variables.d0 = (1.24 * Math.pow((Variables.Lnorm * 1.0 - 15), 1.0 / 3) - 1.8);
-        else
-            Variables.d0 = Variables.D0_MIN;
-        if (Variables.d0 < Variables.D0_MIN)
-            Variables.d0 = Variables.D0_MIN;
-        double d0_input = Variables.d0;// Scaled by seq_min
-
-        double tmscore;// collected alined residues from invmap
-        int n_al = 0;
-        int i;
-        for (int j = 0; j < y_len; j++) {
-            i = invmap[j];
-            if (i >= 0) {
-                Variables.xtm[n_al][0] = x[i][0];
-                Variables.xtm[n_al][1] = x[i][1];
-                Variables.xtm[n_al][2] = x[i][2];
-
-                Variables.ytm[n_al][0] = y[j][0];
-                Variables.ytm[n_al][1] = y[j][1];
-                Variables.ytm[n_al][2] = y[j][2];
-
-                Variables.r1[n_al][0] = x[i][0];
-                Variables.r1[n_al][1] = x[i][1];
-                Variables.r1[n_al][2] = x[i][2];
-
-                Variables.r2[n_al][0] = y[j][0];
-                Variables.r2[n_al][1] = y[j][1];
-                Variables.r2[n_al][2] = y[j][2];
-
-                n_al++;
-            } else if (i != -1) {
-                Functions.PrintErrorAndQuit("Wrong map!\n");
-            }
-        }
-        L_ali.setValue(n_al);
-
-        Kabsch.execute(Variables.r1, Variables.r2, n_al, 0, RMSD, Variables.t, Variables.u);
-        RMSD.setValue(Math.sqrt(RMSD.getValue() / (1.0 * n_al)));
-
-        int temp_simplify_step = 1;
-        int temp_score_sum_method = 0;
-        Variables.d0_search = d0_input;
-        MutableDouble rms = new MutableDouble(0.0);
-        tmscore = TMscore8_search_standard(Variables.xtm, Variables.ytm, n_al, Variables.t, Variables.u,
-                temp_simplify_step, temp_score_sum_method, rms, d0_input);
-        tmscore = tmscore * n_al / (1.0 * Variables.Lnorm);
-
-        return tmscore;
     }
 }
