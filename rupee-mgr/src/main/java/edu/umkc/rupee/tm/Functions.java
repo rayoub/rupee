@@ -2,11 +2,6 @@ package edu.umkc.rupee.tm;
 
 public class Functions {
 
-    public static void PrintErrorAndQuit(String sErrorString) {
-        System.err.println(sErrorString);
-        System.exit(1);
-    }
-
     public static double dist(double x[], double y[]) {
         double d1 = x[0] - y[0];
         double d2 = x[1] - y[1];
