@@ -20,10 +20,86 @@ import org.postgresql.ds.PGSimpleDataSource;
 
 public class AlignResults
 {
+    private static final int MAX_N = 50;
+
     private static AtomicInteger counter;
 
     static {
         counter = new AtomicInteger();
+    }
+
+    public static void alignRupeeResults() {
+
+        List<String> dbIds = Benchmarks.get("scop_d50");
+
+        counter.set(0);
+        dbIds.parallelStream().forEach(dbId -> alignRupeeResults("scop_v2_07", DbTypeCriteria.SCOP, dbId));
+    }
+
+    public static void alignRupeeResults(String version, DbTypeCriteria dbType, String dbId) {
+
+        try {
+
+            PGSimpleDataSource ds = Db.getDataSource();
+
+            Connection conn = ds.getConnection();
+            conn.setAutoCommit(false);
+
+            PreparedStatement stmt = conn
+                    .prepareCall("SELECT * FROM rupee_result WHERE version = ? AND db_id_1 = ? AND n <= ? ORDER BY n;");
+
+            stmt.setString(1, version);
+            stmt.setString(2, dbId);
+            stmt.setInt(3, MAX_N);
+
+            ResultSet rs = stmt.executeQuery();
+
+            PDBFileReader reader = new PDBFileReader();
+            reader.setFetchBehavior(FetchBehavior.LOCAL_ONLY);
+
+            FileInputStream queryFile = new FileInputStream(dbType.getImportPath() + dbId + ".pdb.gz");
+            GZIPInputStream queryFileGz = new GZIPInputStream(queryFile);
+            Structure queryStructure = reader.getStructure(queryFileGz);
+
+            while (rs.next()) {
+
+                String dbId2 = rs.getString("db_id_2");
+
+                FileInputStream targetFile = new FileInputStream(dbType.getImportPath() + dbId2 + ".pdb.gz");
+                GZIPInputStream targetFileGz = new GZIPInputStream(targetFile);
+                Structure targetStructure = reader.getStructure(targetFileGz);
+
+                AlignRecord ce = Aligning.align(queryStructure, targetStructure, AlignCriteria.CE);
+
+                PreparedStatement updt = conn.prepareStatement("UPDATE rupee_result SET ce_rmsd = ?, ce_tm_score = ? "
+                        + "WHERE version = ? AND db_id_1 = ? AND db_id_2 = ?;");
+
+                updt.setDouble(1, ce.afps.getTotalRmsdOpt());
+                updt.setDouble(2, ce.afps.getTMScore());
+                updt.setString(3, version);
+                updt.setString(4, dbId);
+                updt.setString(5, dbId2);
+
+                updt.execute();
+            }
+
+            conn.commit();
+
+            rs.close();
+            stmt.close();
+            conn.close();
+
+            int count = counter.incrementAndGet();
+
+            System.out.println("Processed Count: " + count);
+
+        } catch (SQLException e) {
+            Logger.getLogger(Aligning.class.getName()).log(Level.SEVERE, null, e);
+        } catch (IOException e) {
+            Logger.getLogger(Aligning.class.getName()).log(Level.SEVERE, null, e);
+        } catch (StructureException e) {
+            Logger.getLogger(Aligning.class.getName()).log(Level.SEVERE, null, e);
+        }
     }
 
     public static void alignMtmDomResults() {
@@ -42,18 +118,18 @@ public class AlignResults
 
             Connection conn = ds.getConnection();
             conn.setAutoCommit(false);
-            
+
             PreparedStatement stmt = conn.prepareCall(
                     "SELECT * FROM mtm_dom_result_matched WHERE version = 'dom_v08_03_2018' AND db_id_1 = ? AND n <= ? ORDER BY n;");
-           
-            stmt.setString(1, dbId); 
-            stmt.setInt(2, 50); // TODO: low for testing
+
+            stmt.setString(1, dbId);
+            stmt.setInt(2, MAX_N);
 
             ResultSet rs = stmt.executeQuery();
 
             PDBFileReader reader = new PDBFileReader();
             reader.setFetchBehavior(FetchBehavior.LOCAL_ONLY);
-                
+
             FileInputStream queryFile = new FileInputStream(DbTypeCriteria.SCOP.getImportPath() + dbId + ".pdb.gz");
             GZIPInputStream queryFileGz = new GZIPInputStream(queryFile);
             Structure queryStructure = reader.getStructure(queryFileGz);
@@ -61,27 +137,28 @@ public class AlignResults
             while (rs.next()) {
 
                 String dbId2 = rs.getString("db_id_2");
-                
-                FileInputStream targetFile = new FileInputStream(DbTypeCriteria.SCOP.getImportPath() + dbId2 + ".pdb.gz");
+
+                FileInputStream targetFile = new FileInputStream(
+                        DbTypeCriteria.SCOP.getImportPath() + dbId2 + ".pdb.gz");
                 GZIPInputStream targetFileGz = new GZIPInputStream(targetFile);
                 Structure targetStructure = reader.getStructure(targetFileGz);
-                
+
                 AlignRecord ce = Aligning.align(queryStructure, targetStructure, AlignCriteria.CE);
 
-                PreparedStatement updt = conn.prepareStatement(
-                        "UPDATE mtm_dom_result_matched SET ce_rmsd = ?, ce_tm_score = ? " +
-                        "WHERE version = 'dom_v08_03_2018' AND db_id_1 = ? AND db_id_2 = ?;");
+                PreparedStatement updt = conn
+                        .prepareStatement("UPDATE mtm_dom_result_matched SET ce_rmsd = ?, ce_tm_score = ? "
+                                + "WHERE version = 'dom_v08_03_2018' AND db_id_1 = ? AND db_id_2 = ?;");
 
-                updt.setDouble(1,ce.afps.getTotalRmsdOpt());
-                updt.setDouble(2,ce.afps.getTMScore());
-                updt.setString(3,dbId);
-                updt.setString(4,dbId2);
+                updt.setDouble(1, ce.afps.getTotalRmsdOpt());
+                updt.setDouble(2, ce.afps.getTMScore());
+                updt.setString(3, dbId);
+                updt.setString(4, dbId2);
 
                 updt.execute();
             }
 
             conn.commit();
-            
+
             rs.close();
             stmt.close();
             conn.close();
@@ -96,7 +173,7 @@ public class AlignResults
             Logger.getLogger(Aligning.class.getName()).log(Level.SEVERE, null, e);
         } catch (StructureException e) {
             Logger.getLogger(Aligning.class.getName()).log(Level.SEVERE, null, e);
-        } 
+        }
     }
 
     public static void alignCathedralResults() {
@@ -115,18 +192,18 @@ public class AlignResults
 
             Connection conn = ds.getConnection();
             conn.setAutoCommit(false);
-            
+
             PreparedStatement stmt = conn.prepareCall(
                     "SELECT * FROM mtm_dom_result_matched WHERE version = 'dom_v08_03_2018' AND db_id_1 = ? AND n <= ? ORDER BY n;");
-           
-            stmt.setString(1, dbId); 
-            stmt.setInt(2, 50); 
+
+            stmt.setString(1, dbId);
+            stmt.setInt(2, MAX_N);
 
             ResultSet rs = stmt.executeQuery();
 
             PDBFileReader reader = new PDBFileReader();
             reader.setFetchBehavior(FetchBehavior.LOCAL_ONLY);
-                
+
             FileInputStream queryFile = new FileInputStream(DbTypeCriteria.SCOP.getImportPath() + dbId + ".pdb.gz");
             GZIPInputStream queryFileGz = new GZIPInputStream(queryFile);
             Structure queryStructure = reader.getStructure(queryFileGz);
@@ -134,27 +211,28 @@ public class AlignResults
             while (rs.next()) {
 
                 String dbId2 = rs.getString("db_id_2");
-                
-                FileInputStream targetFile = new FileInputStream(DbTypeCriteria.SCOP.getImportPath() + dbId2 + ".pdb.gz");
+
+                FileInputStream targetFile = new FileInputStream(
+                        DbTypeCriteria.SCOP.getImportPath() + dbId2 + ".pdb.gz");
                 GZIPInputStream targetFileGz = new GZIPInputStream(targetFile);
                 Structure targetStructure = reader.getStructure(targetFileGz);
-                
+
                 AlignRecord ce = Aligning.align(queryStructure, targetStructure, AlignCriteria.CE);
 
-                PreparedStatement updt = conn.prepareStatement(
-                        "UPDATE mtm_dom_result_matched SET ce_rmsd = ?, ce_tm_score = ? " +
-                        "WHERE version = 'dom_v08_03_2018' AND db_id_1 = ? AND db_id_2 = ?;");
+                PreparedStatement updt = conn
+                        .prepareStatement("UPDATE mtm_dom_result_matched SET ce_rmsd = ?, ce_tm_score = ? "
+                                + "WHERE version = 'dom_v08_03_2018' AND db_id_1 = ? AND db_id_2 = ?;");
 
-                updt.setDouble(1,ce.afps.getTotalRmsdOpt());
-                updt.setDouble(2,ce.afps.getTMScore());
-                updt.setString(3,dbId);
-                updt.setString(4,dbId2);
+                updt.setDouble(1, ce.afps.getTotalRmsdOpt());
+                updt.setDouble(2, ce.afps.getTMScore());
+                updt.setString(3, dbId);
+                updt.setString(4, dbId2);
 
                 updt.execute();
             }
 
             conn.commit();
-            
+
             rs.close();
             stmt.close();
             conn.close();
@@ -169,6 +247,6 @@ public class AlignResults
             Logger.getLogger(Aligning.class.getName()).log(Level.SEVERE, null, e);
         } catch (StructureException e) {
             Logger.getLogger(Aligning.class.getName()).log(Level.SEVERE, null, e);
-        } 
+        }
     }
 }

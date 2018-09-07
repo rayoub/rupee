@@ -4,6 +4,8 @@ RETURNS TABLE (
     n INTEGER, 
     db_id_1 VARCHAR,
     db_id_2 VARCHAR,
+    rupee_rmsd NUMERIC,
+    rupee_tm_score NUMERIC,
     ce_rmsd NUMERIC,
     ce_tm_score NUMERIC
 )
@@ -18,6 +20,8 @@ BEGIN
             r.n,
             r.db_id_1,
             r.db_id_2,
+            r.rupee_rmsd,
+            r.rupee_tm_score,
             r.ce_rmsd,
             r.ce_tm_score
         FROM
@@ -44,6 +48,8 @@ BEGIN
             r.n, 
             r.db_id_1,
             r.db_id_2,
+            r.rupee_rmsd,
+            r.rupee_tm_score,
             r.ce_rmsd,
             r.ce_tm_score
         FROM 
@@ -57,6 +63,8 @@ BEGIN
         r.n,
         r.db_id_1,
         r.db_id_2,
+        r.rupee_rmsd,
+        r.rupee_tm_score,
         r.ce_rmsd,
         r.ce_tm_score
     FROM 

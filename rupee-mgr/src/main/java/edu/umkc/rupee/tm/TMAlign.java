@@ -12,6 +12,12 @@ import org.biojava.nbio.structure.Structure;
 
 public class TMAlign {
 
+    public class Result {
+
+        public double RMSD;
+        public double TMScore;
+    }
+
     private double D0_MIN; // for d0
     private double Lnorm; // normalization length
     private double score_d8, d0, d0_search, dcu0; // for TMscore search
@@ -30,7 +36,7 @@ public class TMAlign {
     private double t[]; // Kabsch translation vector and rotation matrix
     private double u[][];
 
-    public void align(Structure xstruct, Structure ystruct) {
+    public Result align(Structure xstruct, Structure ystruct) {
 
         // **********************************************************************************/
         // * load data */
@@ -311,7 +317,7 @@ public class TMAlign {
         MutableDouble rmsd = new MutableDouble(0.0);
         double t0[] = new double[3];
         double u0[][] = new double[3][3];
-        double TM1, TM2;
+        double TM2;
         simplify_step = 1;
         score_sum_method = 0;
 
@@ -319,24 +325,29 @@ public class TMAlign {
 
         // normalized by length of structure A
         parameter_set4final(Lnorm_0);
-        double d0A = d0;
         local_d0_search = d0_search;
-        TM1 = TMscore8_search(xtm, ytm, n_ali8, t0, u0, simplify_step, score_sum_method, rmsd,
+        TMscore8_search(xtm, ytm, n_ali8, t0, u0, simplify_step, score_sum_method, rmsd,
                 local_d0_search);
 
         // normalized by length of structure B
         parameter_set4final(xlen);
-        double d0B = d0;
         local_d0_search = d0_search;
         TM2 = TMscore8_search(xtm, ytm, n_ali8, t, u, simplify_step,
                 score_sum_method, rmsd, local_d0_search);
 
+        Result result = new Result();
+        result.RMSD = rmsd0.getValue();
+        result.TMScore = TM2;
+        /*
         System.out.println("Length of chain 1: " + xlen + " residues");
         System.out.println("Length of chain 2: " + ylen + " residues");
         System.out.println("Aligned Length: " + n_ali8);
         System.out.println("TM-score normalized by chain 1: " + TM2 + ", d0 = " + d0B);
         System.out.println("TM-score normalized by chain 2: " + TM1 + ", d0 = " + d0A);
         System.out.println("RMSD: " + rmsd0);
+        */
+
+        return result;
     }
 
     public void parameter_set4search(int xlen, int ylen) {
