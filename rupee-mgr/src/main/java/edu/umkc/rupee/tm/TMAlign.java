@@ -47,8 +47,8 @@ public class TMAlign {
         Chain ychain = ystruct.getChains().get(0);
 
         // get groups of atoms per residue
-        List<Group> xgroups = xchain.getAtomGroups().stream().filter(g -> g.hasAtom("CA")).collect(Collectors.toList());
-        List<Group> ygroups = ychain.getAtomGroups().stream().filter(g -> g.hasAtom("CA")).collect(Collectors.toList());
+        List<Group> xgroups = xchain.getAtomGroups().stream().filter(g -> !g.isHetAtomInFile() && g.hasAtom("CA")).collect(Collectors.toList());
+        List<Group> ygroups = ychain.getAtomGroups().stream().filter(g -> !g.isHetAtomInFile() && g.hasAtom("CA")).collect(Collectors.toList());
 
         // get carbon alpha atoms per residue
         List<Atom> xatoms = xgroups.stream().map(g -> g.getAtom("CA")).collect(Collectors.toList());
@@ -338,14 +338,12 @@ public class TMAlign {
         Result result = new Result();
         result.RMSD = rmsd0.getValue();
         result.TMScore = TM2;
-        /*
+        
         System.out.println("Length of chain 1: " + xlen + " residues");
         System.out.println("Length of chain 2: " + ylen + " residues");
         System.out.println("Aligned Length: " + n_ali8);
-        System.out.println("TM-score normalized by chain 1: " + TM2 + ", d0 = " + d0B);
-        System.out.println("TM-score normalized by chain 2: " + TM1 + ", d0 = " + d0A);
+        System.out.println("TM-score normalized by chain 1: " + TM2);
         System.out.println("RMSD: " + rmsd0);
-        */
 
         return result;
     }
