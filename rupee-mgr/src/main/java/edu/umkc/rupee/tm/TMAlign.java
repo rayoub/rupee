@@ -317,19 +317,19 @@ public class TMAlign {
         MutableDouble rmsd = new MutableDouble(0.0);
         double t0[] = new double[3];
         double u0[][] = new double[3][3];
-        double TM2;
+        double TM1, TM2;
         simplify_step = 1;
         score_sum_method = 0;
 
         double Lnorm_0 = ylen;
 
-        // normalized by length of structure A
+        // normalized by length of chain 2
         parameter_set4final(Lnorm_0);
         local_d0_search = d0_search;
-        TMscore8_search(xtm, ytm, n_ali8, t0, u0, simplify_step, score_sum_method, rmsd,
+        TM1 = TMscore8_search(xtm, ytm, n_ali8, t0, u0, simplify_step, score_sum_method, rmsd,
                 local_d0_search);
 
-        // normalized by length of structure B
+        // normalized by length of chain 1
         parameter_set4final(xlen);
         local_d0_search = d0_search;
         TM2 = TMscore8_search(xtm, ytm, n_ali8, t, u, simplify_step,
@@ -338,11 +338,12 @@ public class TMAlign {
         Result result = new Result();
         result.RMSD = rmsd0.getValue();
         result.TMScore = TM2;
-        
+
         System.out.println("Length of chain 1: " + xlen + " residues");
         System.out.println("Length of chain 2: " + ylen + " residues");
         System.out.println("Aligned Length: " + n_ali8);
         System.out.println("TM-score normalized by chain 1: " + TM2);
+        System.out.println("TM-score normalized by chain 2: " + TM1);
         System.out.println("RMSD: " + rmsd0);
 
         return result;
