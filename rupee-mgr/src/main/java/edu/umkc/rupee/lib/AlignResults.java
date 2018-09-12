@@ -120,7 +120,7 @@ public class AlignResults
             conn.setAutoCommit(false);
 
             PreparedStatement stmt = conn.prepareCall(
-                    "SELECT * FROM mtm_dom_result_matched WHERE version = ? AND db_id_1 = ? AND n <= ? ORDER BY n;");
+                    "SELECT * FROM mtm_dom_result_matched WHERE version = ? AND db_id_1 = ? AND n <= ? AND ce_tm_score = -1 ORDER BY n;");
 
             stmt.setString(1, version);
             stmt.setString(2, dbId);
