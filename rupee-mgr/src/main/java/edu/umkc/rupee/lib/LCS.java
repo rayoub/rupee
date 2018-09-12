@@ -7,23 +7,23 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class LCS {
-
+    
     public static enum Direction { NONE, UP, LEFT, DIAGONAL };
 
     public static int getLCSLength(List<Integer> grams1, List<Integer> grams2) {
 
-        int[][] c = new int[grams1.size() + 1][grams2.size() + 1];
+        int[][] s = new int[grams1.size() + 1][grams2.size() + 1];
 
-        c[0][0] = 0;
+        s[0][0] = 0;
   
         // initialize first column 
         for (int i = 1; i <= grams1.size(); i++) {
-            c[i][0] = 0;
+            s[i][0] = -1 * i;
         }
 
         // initialize first row
         for (int j = 1; j <= grams2.size(); j++) {
-            c[0][j] = 0;
+            s[0][j] = -1 * j;
         }
 
         for (int i = 1; i <= grams1.size(); i++) {
@@ -31,22 +31,22 @@ public class LCS {
                 if (grams1.get(i-1).equals(grams2.get(j-1))) {
 
                     // diagonal
-                    c[i][j] = c[i-1][j-1] + 1;
+                    s[i][j] = s[i-1][j-1] + 1;
                 }
-                else if (c[i-1][j] >= c[i][j-1]) {
+                else if (s[i-1][j] >= s[i][j-1]) {
 
                     // up
-                    c[i][j] = c[i-1][j];
+                    s[i][j] = s[i-1][j] - 1;
                 }
                 else {
 
                     // left
-                    c[i][j] = c[i][j-1];
+                    s[i][j] = s[i][j-1] - 1;
                 }
             }
         }
 
-        return c[grams1.size()][grams2.size()];
+        return s[grams1.size()][grams2.size()];
     }
 
     public static void printLCS(List<Integer> grams1, List<Integer> grams2, Map<Integer, String> codeMap) {
