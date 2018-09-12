@@ -121,7 +121,6 @@ public class NW {
             for (j = 1; j <= len2; j++) {
                 // d=val[i-1][j-1]+score[i][j]; //diagonal
                 dij = Functions.dist(xx, y[j - 1]);
-                dij = 0;
                 d = val[i - 1][j - 1] + 1.0 / (1 + dij / d02);
 
                 // symbol insertion in horizontal (= a gap in vertical)
