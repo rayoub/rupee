@@ -268,7 +268,7 @@ public abstract class Import {
 
                 residues.add(residue);
             }
-
+/*
             // *** extend helices and strands
 
             int helixExtRegion;
@@ -335,7 +335,7 @@ public abstract class Import {
                     strandExtRegion = residue.getDescriptor();
                 }
             }
-
+*/
             // *** run position encoding by region
 
             List<Residue> run = new ArrayList<>();
@@ -375,7 +375,7 @@ public abstract class Import {
                         residue1.getBreakAfter() || residue2.getBreakAfter() || 
                         residue2.getBreakBefore() || residue3.getBreakBefore()
                     )) {
-
+/*
                     int regCount = 0;
                     int turnAndBridgeCount = 0;
                     if (residue1.isHelix() || residue1.isStrand()) {
@@ -398,7 +398,7 @@ public abstract class Import {
                     }
 
                     if (regCount >= 1 || turnAndBridgeCount >= 2) {
-
+*/
                         // abcd
                         int gram = 
                             residue1.getDescriptor() * Constants.PRIME_POW_2 + 
@@ -413,7 +413,7 @@ public abstract class Import {
                         residue1.setGram(gram);
                     }
                 }
-            }
+ //           }
 
             grams.addAll(residues.stream().filter(r -> r.getGram() > 0).map(r -> r.getGram()).collect(Collectors.toList()));
             
