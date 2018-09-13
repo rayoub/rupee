@@ -14,10 +14,10 @@ public class OptionComparator implements Comparator<Option> {
         _map.put("i",1);
         _map.put("h",2);
         _map.put("a",3);
-        _map.put("l",4);
-        _map.put("s",5);
-        _map.put("u",6);
-        _map.put("t",7);
+        _map.put("t",4);
+        _map.put("l",5);
+        _map.put("s",6);
+        _map.put("u",7);
         _map.put("?",8);
     }
 

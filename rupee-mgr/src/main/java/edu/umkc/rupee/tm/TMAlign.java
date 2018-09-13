@@ -12,10 +12,62 @@ import org.biojava.nbio.structure.Structure;
 
 public class TMAlign {
 
-    public class Result {
+    public class Results {
 
-        public double RMSD;
-        public double TMScore;
+        public int chainLength1;
+        public int chainLength2;
+        public int alignedLength;
+        public double tmScore1;
+        public double tmScore2;
+        public double rmsd;
+
+        public int getChainLength1() {
+            return chainLength1;
+        }
+
+        public void setChainLength1(int chainLength1) {
+            this.chainLength1 = chainLength1;
+        }
+
+        public int getChainLength2() {
+            return chainLength2;
+        }
+
+        public void setChainLength2(int chainLength2) {
+            this.chainLength2 = chainLength2;
+        }
+
+        public int getAlignedLength() {
+            return alignedLength;
+        }
+
+        public void setAlignedLength(int alignedLength) {
+            this.alignedLength = alignedLength;
+        }
+
+        public double getTmScore1() {
+            return tmScore1;
+        }
+
+        public void setTmScore1(double tmScore1) {
+            this.tmScore1 = tmScore1;
+        }
+
+        public double getTmScore2() {
+            return tmScore2;
+        }
+
+        public void setTmScore2(double tmScore2) {
+            this.tmScore2 = tmScore2;
+        }
+
+        public double getRmsd() {
+            return rmsd;
+        }
+
+        public void setRmsd(double rmsd) {
+            this.rmsd = rmsd;
+        }
     }
 
     private double D0_MIN; // for d0
@@ -36,7 +88,7 @@ public class TMAlign {
     private double t[]; // Kabsch translation vector and rotation matrix
     private double u[][];
 
-    public Result align(Structure xstruct, Structure ystruct) {
+    public Results align(Structure xstruct, Structure ystruct) {
 
         // **********************************************************************************/
         // * load data */
@@ -335,18 +387,16 @@ public class TMAlign {
         TM2 = TMscore8_search(xtm, ytm, n_ali8, t, u, simplify_step,
                 score_sum_method, rmsd, local_d0_search);
 
-        Result result = new Result();
-        result.RMSD = rmsd0.getValue();
-        result.TMScore = TM2;
+        Results results = new Results();
 
-        System.out.println("Length of chain 1: " + xlen + " residues");
-        System.out.println("Length of chain 2: " + ylen + " residues");
-        System.out.println("Aligned Length: " + n_ali8);
-        System.out.println("TM-score normalized by chain 1: " + TM2);
-        System.out.println("TM-score normalized by chain 2: " + TM1);
-        System.out.println("RMSD: " + rmsd0);
+        results.setChainLength1(xlen);
+        results.setChainLength2(ylen);
+        results.setAlignedLength(n_ali8);
+        results.setTmScore1(TM2);
+        results.setTmScore2(TM1);
+        results.setRmsd(rmsd0.getValue());
 
-        return result;
+        return results;
     }
 
     public void parameter_set4search(int xlen, int ylen) {

@@ -1,5 +1,6 @@
 package edu.umkc.rupee.mgr;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -12,6 +13,7 @@ import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
+import java.util.zip.GZIPInputStream;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
@@ -21,8 +23,10 @@ import org.apache.commons.cli.Option;
 import org.apache.commons.cli.OptionGroup;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
+import org.biojava.nbio.structure.Structure;
 
 import edu.umkc.rupee.base.SearchRecord;
+import edu.umkc.rupee.bio.Parser;
 import edu.umkc.rupee.cath.CathHash;
 import edu.umkc.rupee.cath.CathImport;
 import edu.umkc.rupee.cath.CathSearch;
@@ -40,7 +44,6 @@ import edu.umkc.rupee.ecod.EcodSearchCriteria;
 import edu.umkc.rupee.ecod.EcodSearchRecord;
 import edu.umkc.rupee.lib.AlignCriteria;
 import edu.umkc.rupee.lib.AlignRecord;
-import edu.umkc.rupee.lib.AlignResults;
 import edu.umkc.rupee.lib.Aligning;
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
@@ -56,6 +59,7 @@ import edu.umkc.rupee.scop.ScopImport;
 import edu.umkc.rupee.scop.ScopSearch;
 import edu.umkc.rupee.scop.ScopSearchCriteria;
 import edu.umkc.rupee.scop.ScopSearchRecord;
+import edu.umkc.rupee.tm.TMAlign;
 
 public class Main {
 
@@ -81,6 +85,11 @@ public class Main {
                 .argName("ID_TYPE><DB_ID_1>,<DB_ID_2><ALIGN")
                 .valueSeparator(',')
                 .build());
+        group.addOption(Option.builder("t")
+                .longOpt("tm align")
+                .numberOfArgs(1)
+                .argName("TEST_ARG")
+                .build());
         group.addOption(Option.builder("l")
                 .longOpt("lcs")
                 .numberOfArgs(3)
@@ -97,11 +106,6 @@ public class Main {
                 .longOpt("upload")
                 .numberOfArgs(1)
                 .argName("FILE_PATH")
-                .build());
-        group.addOption(Option.builder("t")
-                .longOpt("test")
-                .numberOfArgs(1)
-                .argName("TEST_ARG")
                 .build());
         group.addOption(Option.builder("?")
                 .longOpt("help")
@@ -131,14 +135,14 @@ public class Main {
                 option_h(line);
             } else if (line.hasOption("a")) {
                 option_a(line);
+            } else if (line.hasOption("t")) {
+                option_t(line);
             } else if (line.hasOption("l")) {
                 option_l(line);
             } else if (line.hasOption("s")) {
                 option_s(line);
             } else if (line.hasOption("u")) {
                 option_u(line);
-            } else if (line.hasOption("t")) {
-                option_t(line);
             } else if (line.hasOption("?")) {
                 option_help(options);
             }
@@ -248,6 +252,41 @@ public class Main {
         }
         else {
             System.out.println(record.afps.toFatcat(record.atoms1, record.atoms2));
+        }
+    }
+
+    private static void option_t(CommandLine line) throws Exception {
+
+        try {
+            
+            String dbId1 = "d1euda1";
+            String dbId2 = "d1c3va1";
+
+            FileInputStream queryFile = new FileInputStream(DbTypeCriteria.SCOP.getImportPath() + dbId1 + ".pdb.gz");
+            GZIPInputStream queryFileGz = new GZIPInputStream(queryFile);
+            FileInputStream targetFile = new FileInputStream(DbTypeCriteria.SCOP.getImportPath() + dbId2 + ".pdb.gz");
+            GZIPInputStream targetFileGz = new GZIPInputStream(targetFile);
+            
+            Parser parser = new Parser(Integer.MAX_VALUE);
+            Structure queryStructure = parser.parsePDBFile(queryFileGz);
+            Structure targetStructure = parser.parsePDBFile(targetFileGz);
+
+            TMAlign tmalign = new TMAlign();
+            TMAlign.Results results = tmalign.align(queryStructure, targetStructure);
+
+            System.out.println("");
+            System.out.println("Name of chain 1: " + dbId1);
+            System.out.println("Name of chain 2: " + dbId2);
+            System.out.println("Length of chain 1: " + results.getChainLength1() + " residues");
+            System.out.println("Length of chain 2: " + results.getChainLength2() + " residues");
+            System.out.println("Aligned Length: " + results.getAlignedLength());
+            System.out.println("TM-score normalized by chain 1: " + results.getTmScore1());
+            System.out.println("TM-score normalized by chain 2: " + results.getTmScore2());
+            System.out.println("RMSD: " + results.getRmsd());
+            System.out.println("");
+
+        } catch (IOException e) {
+            Logger.getLogger(Aligning.class.getName()).log(Level.SEVERE, null, e);
         }
     }
 
@@ -656,49 +695,6 @@ public class Main {
         int uploadId = Uploading.upload(content);
 
         System.out.println("Upload Successful. Upload Id: " + uploadId);
-    }
-
-    private static void option_t(CommandLine line) throws Exception {
-
-    //    AlignResults.alignMtmDomResults("scop_d100", "dom_v08_03_2018", DbTypeCriteria.SCOP);
-       AlignResults.alignRupeeResults("scop_d50", "scop_v2_07", DbTypeCriteria.SCOP);
-
-        //System.out.println(Math.atan2(10,-10) * 180 / Math.PI);
-        /*
-        try {
-
-                    Parser parser = new Parser(Integer.MAX_VALUE);
-            String dbId1 = "d1euda1";
-           // String dbId1 = "d1kkmb_";
-          String dbId2 = "d1c3va1";
-          //  String dbId2 = "d1jb1a_";
-
-           // PDBFileReader reader = new PDBFileReader();
-           // reader.setFetchBehavior(FetchBehavior.LOCAL_ONLY);
-
-            FileInputStream queryFile = new FileInputStream(DbTypeCriteria.SCOP.getImportPath() + dbId1 + ".pdb.gz");
-            GZIPInputStream queryFileGz = new GZIPInputStream(queryFile);
-            FileInputStream targetFile = new FileInputStream(DbTypeCriteria.SCOP.getImportPath() + dbId2 + ".pdb.gz");
-            GZIPInputStream targetFileGz = new GZIPInputStream(targetFile);
-            
-            Structure queryStructure = parser.parsePDBFile(queryFileGz);
-            Structure targetStructure = parser.parsePDBFile(targetFileGz);
-
-            long start = System.currentTimeMillis();
-            TMAlign tmalign = new TMAlign();
-            tmalign.align(queryStructure, targetStructure);
-            long stop = System.currentTimeMillis();
-            System.out.println(stop - start);
-            start = System.currentTimeMillis();
-            tmalign = new TMAlign();
-            tmalign.align(queryStructure, targetStructure);
-            stop = System.currentTimeMillis();
-            System.out.println(stop - start);
-
-        } catch (IOException e) {
-            Logger.getLogger(Aligning.class.getName()).log(Level.SEVERE, null, e);
-        }
-        */
     }
 
     private static void option_help(Options options) {
