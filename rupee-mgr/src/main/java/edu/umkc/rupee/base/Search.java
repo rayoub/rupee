@@ -91,14 +91,14 @@ public abstract class Search {
                 List<String> dbIds = records.stream().map(SearchRecord::getDbId).collect(Collectors.toList());
                 Map<String, List<Integer>> map = Db.getGrams(dbIds, criteria.dbType);
 
-                // parallel adjusted similarity
+                // parallel similarity score
                 records.stream()
                     .forEach(record -> {
 
                         if (map.containsKey(record.getDbId())) {
                             List<Integer> grams2 = map.get(record.getDbId());
-                            int lcsLength = LCS.getLCSLength(grams1, grams2); 
-                            record.setSimilarity(Similarity.getAdjustedSimilarity(grams1, grams2, lcsLength));
+                            int score = LCS.getLCSScore(grams1, grams2); 
+                            record.setSimilarity(score);
                         }
                     });
                 

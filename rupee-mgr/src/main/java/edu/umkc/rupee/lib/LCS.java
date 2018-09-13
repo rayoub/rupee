@@ -10,7 +10,7 @@ public class LCS {
     
     public static enum Direction { NONE, UP, LEFT, DIAGONAL };
 
-    public static int getLCSLength(List<Integer> grams1, List<Integer> grams2) {
+    public static int getLCSScore(List<Integer> grams1, List<Integer> grams2) {
 
         int[][] s = new int[grams1.size() + 1][grams2.size() + 1];
 
