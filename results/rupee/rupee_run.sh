@@ -10,3 +10,4 @@ ver=$2
 mkdir ./${bm}_${ver}
 
 cut -d, -f2 ../benchmarks/${bm}.txt | xargs -L1 ./rupee.sh ${bm} ${ver}
+
