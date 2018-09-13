@@ -55,14 +55,14 @@ public class Similarity {
         Set<Integer> set1 = new HashSet<Integer>(); 
         for (Entry<Integer,Integer> entry : map1.entrySet()) {
             for (int i = 0; i < entry.getValue(); i++) {
-                set1.add(entry.getKey() + (i * Constants.DEC_POW_7));
+                set1.add(entry.getKey() + (i * Constants.DEC_POW_6));
             }    
         }
         
         Set<Integer> set2 = new HashSet<Integer>(); 
         for (Entry<Integer,Integer> entry : map2.entrySet()) {
             for (int i = 0; i < entry.getValue(); i++) {
-                set2.add(entry.getKey() + (i * Constants.DEC_POW_7));
+                set2.add(entry.getKey() + (i * Constants.DEC_POW_6));
             }    
         }
 
@@ -106,14 +106,14 @@ public class Similarity {
         Set<Integer> set1 = new HashSet<Integer>(); 
         for (Entry<Integer,Integer> entry : map1.entrySet()) {
             for (int i = 0; i < entry.getValue(); i++) {
-                set1.add(entry.getKey() + (i * Constants.DEC_POW_7));
+                set1.add(entry.getKey() + (i * Constants.DEC_POW_6));
             }    
         }
         
         Set<Integer> set2 = new HashSet<Integer>(); 
         for (Entry<Integer,Integer> entry : map2.entrySet()) {
             for (int i = 0; i < entry.getValue(); i++) {
-                set2.add(entry.getKey() + (i * Constants.DEC_POW_7));
+                set2.add(entry.getKey() + (i * Constants.DEC_POW_6));
             }    
         }
 

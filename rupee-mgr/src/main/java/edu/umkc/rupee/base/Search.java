@@ -28,7 +28,6 @@ import org.biojava.nbio.structure.align.util.AFPChainScorer;
 import org.postgresql.ds.PGSimpleDataSource;
 
 import edu.umkc.rupee.bio.Parser;
-import edu.umkc.rupee.lib.AlignCriteria;
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
 import edu.umkc.rupee.lib.DbTypeCriteria;
@@ -108,8 +107,8 @@ public abstract class Search {
                     .limit(criteria.limit) 
                     .collect(Collectors.toList());
 
-                // if an external alignment algorithm is requested
-                if (criteria.align != AlignCriteria.NONE) {
+                // if alignment is requested
+                if (criteria.align) {
 
                     // cache common objects for use by multiple threads 
                     Parser parser = new Parser(Integer.MAX_VALUE);

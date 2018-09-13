@@ -9,6 +9,45 @@ import java.util.stream.Collectors;
 public class LCS {
     
     public static enum Direction { NONE, UP, LEFT, DIAGONAL };
+    
+    public static int getLCSLength(List<Integer> grams1, List<Integer> grams2) {
+
+        int[][] c = new int[grams1.size() + 1][grams2.size() + 1];
+
+        c[0][0] = 0;
+  
+        // initialize first column 
+        for (int i = 1; i <= grams1.size(); i++) {
+            c[i][0] = 0;
+        }
+
+        // initialize first row
+        for (int j = 1; j <= grams2.size(); j++) {
+            c[0][j] = 0;
+        }
+
+        for (int i = 1; i <= grams1.size(); i++) {
+            for (int j = 1; j <= grams2.size(); j++) {
+                if (grams1.get(i-1).equals(grams2.get(j-1))) {
+
+                    // diagonal
+                    c[i][j] = c[i-1][j-1] + 1;
+                }
+                else if (c[i-1][j] >= c[i][j-1]) {
+
+                    // up
+                    c[i][j] = c[i-1][j];
+                }
+                else {
+
+                    // left
+                    c[i][j] = c[i][j-1];
+                }
+            }
+        }
+
+        return c[grams1.size()][grams2.size()];
+    }
 
     public static int getLCSScore(List<Integer> grams1, List<Integer> grams2) {
 

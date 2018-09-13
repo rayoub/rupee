@@ -11,7 +11,6 @@ import org.biojava.nbio.structure.align.fatcat.calc.FatCatParameters;
 
 public enum AlignCriteria {
 
-    NONE("", null),
     CE(CeMain.algorithmName, new CeParameters()),
     CECP(CeCPMain.algorithmName, new CECPParameters()),
     FATCAT_FLEXIBLE(FatCatFlexible.algorithmName, new FatCatParameters()),
@@ -31,5 +30,9 @@ public enum AlignCriteria {
 
     public ConfigStrucAligParams getParams() {
         return params;
+    }
+
+    public void setParams(ConfigStrucAligParams params) {
+        this.params = params;
     }
 }

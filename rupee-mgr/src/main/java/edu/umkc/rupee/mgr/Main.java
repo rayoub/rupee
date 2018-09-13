@@ -40,6 +40,7 @@ import edu.umkc.rupee.ecod.EcodSearchCriteria;
 import edu.umkc.rupee.ecod.EcodSearchRecord;
 import edu.umkc.rupee.lib.AlignCriteria;
 import edu.umkc.rupee.lib.AlignRecord;
+import edu.umkc.rupee.lib.AlignResults;
 import edu.umkc.rupee.lib.Aligning;
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
@@ -50,7 +51,6 @@ import edu.umkc.rupee.lib.SearchByCriteria;
 import edu.umkc.rupee.lib.Similarity;
 import edu.umkc.rupee.lib.SortCriteria;
 import edu.umkc.rupee.lib.Uploading;
-import edu.umkc.rupee.ndd.UnionFind;
 import edu.umkc.rupee.scop.ScopHash;
 import edu.umkc.rupee.scop.ScopImport;
 import edu.umkc.rupee.scop.ScopSearch;
@@ -120,7 +120,10 @@ public class Main {
             option_help(options);
             return;
         }
-
+       
+        // allow for debug 
+        // System.console().readLine("Press Enter Before Continuing> ");
+        
         try {
             if (line.hasOption("i")) {
                 option_i(line);
@@ -230,9 +233,10 @@ public class Main {
             System.err.println("The <ALIGN> argument must be one of " + alignNames.toString());
             return;
         }
-        
+
         DbTypeCriteria searchIdType = DbTypeCriteria.valueOf(args[0]);
         AlignCriteria align = AlignCriteria.valueOf(args[3]);
+
         AlignRecord record = Aligning.align(dbId1, dbId2, align, searchIdType);
 
         System.out.println("\nAlgorithm:      " + record.algorithmName);
@@ -279,8 +283,8 @@ public class Main {
             double exact = Similarity.getExactSimilarity(grams1, grams2);
 
             // lcs validated matching grams
-            int length = LCS.getLCSLength(grams1, grams2); 
-            double similarity = Similarity.getAdjustedSimilarity(grams1, grams2, length);
+            int length = LCS.getLCSLength(grams1, grams2);
+            int score = LCS.getLCSScore(grams1, grams2); 
           
             System.out.println(""); 
             System.out.println("Structure 1 Length:     " + grams1.size());
@@ -292,7 +296,7 @@ public class Main {
             System.out.println("Exact Similarity:       " + exact);
             System.out.println(""); 
             System.out.println("LCS Length:             " + length);
-            System.out.println("LCS Similarity:         " + similarity);
+            System.out.println("LCS Score:              " + score);
 
             Map<Integer, String> codeMap = LCS.getCodeMap(grams1, grams2);
 
@@ -315,7 +319,6 @@ public class Main {
 
         Set<String> searchTypeNames = new HashSet<>(Arrays.stream(SearchByCriteria.values()).map(v -> v.name()).collect(Collectors.toList()));
         Set<String> dbTypeNames = new HashSet<>(Arrays.stream(DbTypeCriteria.values()).map(v -> v.name()).collect(Collectors.toList()));
-        Set<String> alignNames = new HashSet<>(Arrays.stream(AlignCriteria.values()).map(v -> v.name()).collect(Collectors.toList()));
         Set<String> sortNames = new HashSet<>(Arrays.stream(SortCriteria.values()).map(v -> v.name()).collect(Collectors.toList()));
 
         String[] args = line.getOptionValues("s");
@@ -343,7 +346,6 @@ public class Main {
 
         // limit
         int limit = tryParseInt(args[4]);
-
         if (limit == -1) {
             System.err.println("The <LIMIT> argument must be a positive integer.");
             return;
@@ -374,6 +376,10 @@ public class Main {
             System.err.println("The <DIFF3> argument must be TRUE or FALSE");
             return;
         }
+        if (!args[11].equals("TRUE") && !args[11].equals("FALSE")) {
+            System.err.println("The <ALIGN> argument must be TRUE or FALSE");
+            return;
+        }
 
         boolean rep1 = Boolean.parseBoolean(args[5]);
         boolean rep2 = Boolean.parseBoolean(args[6]);
@@ -381,22 +387,18 @@ public class Main {
         boolean diff1 = Boolean.parseBoolean(args[8]);
         boolean diff2 = Boolean.parseBoolean(args[9]);
         boolean diff3 = Boolean.parseBoolean(args[10]);
+        boolean align = Boolean.parseBoolean(args[11]);
        
-        // alignment and sorting 
-        if (!alignNames.contains(args[11])) {
-            System.err.println("The <ALIGN> argument must be one of " + alignNames.toString());
-            return;
-        }
+        // sorting 
         if (!sortNames.contains(args[12])) {
             System.err.println("The <SORT> argument must be one of " + sortNames.toString());
             return;
         }
 
-        AlignCriteria align = AlignCriteria.valueOf(args[11]);
         SortCriteria sort = SortCriteria.valueOf(args[12]);
 
         // consistency rule
-        if (align == AlignCriteria.NONE) {
+        if (!align) {
             sort = SortCriteria.SIMILARITY;
         }
               
@@ -481,14 +483,14 @@ public class Main {
             criteria.page = 1;
             criteria.pageSize = limit;
             criteria.limit = limit;
+            criteria.align = align;
+            criteria.sort = sort;
             criteria.topologyReps = rep1;
             criteria.superfamilyReps = rep2;
             criteria.s35Reps = rep3;
             criteria.differentTopology = diff1;
             criteria.differentSuperfamily = diff2;
             criteria.differentS35 = diff3;
-            criteria.align = align;
-            criteria.sort = sort;
 
             CathSearch cathSearch = new CathSearch();
             List<SearchRecord> records = cathSearch.search(criteria);
@@ -658,29 +660,49 @@ public class Main {
 
     private static void option_t(CommandLine line) throws Exception {
 
-        //Pairing.pair(5);
-        UnionFind uf = new UnionFind();
-        uf.go();
-        uf.saveSets();
+    //    AlignResults.alignMtmDomResults("scop_d100", "dom_v08_03_2018", DbTypeCriteria.SCOP);
+       AlignResults.alignRupeeResults("scop_d50", "scop_v2_07", DbTypeCriteria.SCOP);
 
-        //Pairing.pair(5);
-
+        //System.out.println(Math.atan2(10,-10) * 180 / Math.PI);
         /*
-        AlignResults.alignMtmDomResults();
-        */
+        try {
 
-        /* 
-        // set locaton of chromedriver
-        System.setProperty("webdriver.chrome.driver", "/home/ayoub/selenium/chromedriver");
+                    Parser parser = new Parser(Integer.MAX_VALUE);
+            String dbId1 = "d1euda1";
+           // String dbId1 = "d1kkmb_";
+          String dbId2 = "d1c3va1";
+          //  String dbId2 = "d1jb1a_";
 
-        mTMSearchDriver driver = new mTMSearchDriver();
-        driver.setUp();
-        driver.doSearchBatch();
-        driver.tearDown();
+           // PDBFileReader reader = new PDBFileReader();
+           // reader.setFetchBehavior(FetchBehavior.LOCAL_ONLY);
+
+            FileInputStream queryFile = new FileInputStream(DbTypeCriteria.SCOP.getImportPath() + dbId1 + ".pdb.gz");
+            GZIPInputStream queryFileGz = new GZIPInputStream(queryFile);
+            FileInputStream targetFile = new FileInputStream(DbTypeCriteria.SCOP.getImportPath() + dbId2 + ".pdb.gz");
+            GZIPInputStream targetFileGz = new GZIPInputStream(targetFile);
+            
+            Structure queryStructure = parser.parsePDBFile(queryFileGz);
+            Structure targetStructure = parser.parsePDBFile(targetFileGz);
+
+            long start = System.currentTimeMillis();
+            TMAlign tmalign = new TMAlign();
+            tmalign.align(queryStructure, targetStructure);
+            long stop = System.currentTimeMillis();
+            System.out.println(stop - start);
+            start = System.currentTimeMillis();
+            tmalign = new TMAlign();
+            tmalign.align(queryStructure, targetStructure);
+            stop = System.currentTimeMillis();
+            System.out.println(stop - start);
+
+        } catch (IOException e) {
+            Logger.getLogger(Aligning.class.getName()).log(Level.SEVERE, null, e);
+        }
         */
     }
 
     private static void option_help(Options options) {
+
         HelpFormatter formatter = getHelpFormatter("Usage: ");
         formatter.printHelp(Constants.APP_NAME, options);
     }

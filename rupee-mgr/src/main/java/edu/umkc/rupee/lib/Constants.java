@@ -33,7 +33,7 @@ public class Constants {
     public final static int MIN_GRAM_COUNT = 10;
     public final static int MIN_HASH_COUNT = 99;
     public final static int BAND_HASH_COUNT = 33;
-    public final static int BAND_CHECK_COUNT = 20;
+    public final static int BAND_CHECK_COUNT = BAND_HASH_COUNT;
     
     public final static double SIMILARITY_THRESHOLD = 0.10;
     public final static int MAX_CANDIDATE_COUNT = 8000;
@@ -48,7 +48,6 @@ public class Constants {
     public final static int DEC_POW_4 = DEC_POW_1 * DEC_POW_3;
     public final static int DEC_POW_5 = DEC_POW_1 * DEC_POW_4;
     public final static int DEC_POW_6 = DEC_POW_1 * DEC_POW_5;
-    public final static int DEC_POW_7 = DEC_POW_1 * DEC_POW_6; 
 
     public final static int SPLIT_COUNT = 8;
     public final static int PROCESSED_INCREMENT = 500;
