@@ -87,8 +87,9 @@ public class Main {
                 .build());
         group.addOption(Option.builder("t")
                 .longOpt("tm align")
-                .numberOfArgs(1)
-                .argName("TEST_ARG")
+                .numberOfArgs(3)
+                .argName("ID_TYPE>,<DB_ID_1>,<DB_ID_2")
+                .valueSeparator(',')
                 .build());
         group.addOption(Option.builder("l")
                 .longOpt("lcs")
@@ -106,6 +107,9 @@ public class Main {
                 .longOpt("upload")
                 .numberOfArgs(1)
                 .argName("FILE_PATH")
+                .build());
+        group.addOption(Option.builder("d")
+                .longOpt("debug")
                 .build());
         group.addOption(Option.builder("?")
                 .longOpt("help")
@@ -143,6 +147,8 @@ public class Main {
                 option_s(line);
             } else if (line.hasOption("u")) {
                 option_u(line);
+            } else if (line.hasOption("d")) {
+                option_d(line);
             } else if (line.hasOption("?")) {
                 option_help(options);
             }
@@ -254,17 +260,28 @@ public class Main {
             System.out.println(record.afps.toFatcat(record.atoms1, record.atoms2));
         }
     }
-
+    
     private static void option_t(CommandLine line) throws Exception {
+            
+        Set<String> searchIdTypeNames = new HashSet<>(Arrays.stream(DbTypeCriteria.values()).map(v -> v.name()).collect(Collectors.toList()));
+
+        String[] args = line.getOptionValues("t");
+        
+        String dbId1 = args[1];
+        String dbId2 = args[2];
+        
+        if (!searchIdTypeNames.contains(args[0])) {
+            System.err.println("The <ID_TYPE> argument must be one of " + searchIdTypeNames.toString());
+            return;
+        }
+
+        DbTypeCriteria dbType = DbTypeCriteria.valueOf(args[0]);
 
         try {
-            
-            String dbId1 = "d1euda1";
-            String dbId2 = "d1c3va1";
 
-            FileInputStream queryFile = new FileInputStream(DbTypeCriteria.SCOP.getImportPath() + dbId1 + ".pdb.gz");
+            FileInputStream queryFile = new FileInputStream(dbType.getImportPath() + dbId1 + ".pdb.gz");
             GZIPInputStream queryFileGz = new GZIPInputStream(queryFile);
-            FileInputStream targetFile = new FileInputStream(DbTypeCriteria.SCOP.getImportPath() + dbId2 + ".pdb.gz");
+            FileInputStream targetFile = new FileInputStream(dbType.getImportPath() + dbId2 + ".pdb.gz");
             GZIPInputStream targetFileGz = new GZIPInputStream(targetFile);
             
             Parser parser = new Parser(Integer.MAX_VALUE);
@@ -695,6 +712,10 @@ public class Main {
         int uploadId = Uploading.upload(content);
 
         System.out.println("Upload Successful. Upload Id: " + uploadId);
+    }
+
+    private static void option_d(CommandLine line) {
+
     }
 
     private static void option_help(Options options) {

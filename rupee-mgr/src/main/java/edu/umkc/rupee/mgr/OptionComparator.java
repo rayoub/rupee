@@ -18,7 +18,8 @@ public class OptionComparator implements Comparator<Option> {
         _map.put("l",5);
         _map.put("s",6);
         _map.put("u",7);
-        _map.put("?",8);
+        _map.put("d",8);
+        _map.put("?",9);
     }
 
     public int compare(Option x, Option y) {
