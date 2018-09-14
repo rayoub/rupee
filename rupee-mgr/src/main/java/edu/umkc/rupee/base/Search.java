@@ -147,7 +147,7 @@ public abstract class Search {
                             FileInputStream targetFile = new FileInputStream(getDbType().getImportPath() + record.getDbId() + ".pdb.gz");
                             GZIPInputStream targetFileGz = new GZIPInputStream(targetFile);
 
-                            Parser parser2 = new Parser(queryStructure.getChains().get(0).getAtomLength() * 5);
+                            Parser parser2 = new Parser(Integer.MAX_VALUE);
                             Structure targetStructure = parser2.parsePDBFile(targetFileGz);
                             Atom[] targetAtoms = StructureTools.getAtomCAArray(targetStructure);
                       
