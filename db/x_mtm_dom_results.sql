@@ -25,9 +25,7 @@ filtered AS
         r.db_id_1,
         r.db_id_2,
         r.mtm_rmsd,
-        r.mtm_tm_score,
-        r.ce_rmsd,
-        r.ce_tm_score
+        r.mtm_tm_score
     FROM 
         mtm_dom_result r
         INNER JOIN structures s
@@ -40,9 +38,7 @@ SELECT
     db_id_1,
     db_id_2,
     mtm_rmsd,
-    mtm_tm_score,
-    ce_rmsd,
-    ce_tm_score
+    mtm_tm_score
 FROM
     filtered;
 
