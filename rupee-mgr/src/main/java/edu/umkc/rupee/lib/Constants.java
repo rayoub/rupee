@@ -36,7 +36,7 @@ public class Constants {
     public final static int BAND_CHECK_COUNT = BAND_HASH_COUNT;
     
     public final static double SIMILARITY_THRESHOLD = 0.10;
-    public final static int MAX_CANDIDATE_COUNT = 8000;
+    public final static int MAX_CANDIDATE_COUNT = 40000;
 
     public final static int PRIME_POW_1 = 13;
     public final static int PRIME_POW_2 = PRIME_POW_1 * PRIME_POW_1;
