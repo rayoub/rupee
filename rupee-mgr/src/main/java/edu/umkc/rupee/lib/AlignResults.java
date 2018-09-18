@@ -20,23 +20,21 @@ import org.postgresql.ds.PGSimpleDataSource;
 
 public class AlignResults
 {
-    private static final int MAX_N = 100;
-
     private static AtomicInteger counter;
 
     static {
         counter = new AtomicInteger();
     }
 
-    public static void alignRupeeResults(String benchmark, String version, DbTypeCriteria dbType) {
+    public static void alignRupeeResults(String benchmark, String version, DbTypeCriteria dbType, int maxN) {
 
         List<String> dbIds = Benchmarks.get(benchmark);
 
         counter.set(0);
-        dbIds.parallelStream().forEach(dbId -> alignRupeeResults(version, dbType, dbId));
+        dbIds.parallelStream().forEach(dbId -> alignRupeeResults(version, dbType, dbId, maxN));
     }
 
-    public static void alignRupeeResults(String version, DbTypeCriteria dbType, String dbId) {
+    public static void alignRupeeResults(String version, DbTypeCriteria dbType, String dbId, int maxN) {
 
         try {
 
@@ -50,7 +48,7 @@ public class AlignResults
 
             stmt.setString(1, version);
             stmt.setString(2, dbId);
-            stmt.setInt(3, MAX_N);
+            stmt.setInt(3, maxN);
 
             ResultSet rs = stmt.executeQuery();
 
@@ -102,15 +100,15 @@ public class AlignResults
         }
     }
 
-    public static void alignMtmDomResults(String benchmark, String version, DbTypeCriteria dbType) {
+    public static void alignMtmDomResults(String benchmark, String version, DbTypeCriteria dbType, int maxN) {
 
         List<String> dbIds = Benchmarks.get(benchmark);
 
         counter.set(0);
-        dbIds.parallelStream().forEach(dbId -> alignMtmDomResults(version, dbType, dbId));
+        dbIds.parallelStream().forEach(dbId -> alignMtmDomResults(version, dbType, dbId, maxN));
     }
 
-    public static void alignMtmDomResults(String version, DbTypeCriteria dbType, String dbId) {
+    public static void alignMtmDomResults(String version, DbTypeCriteria dbType, String dbId, int maxN) {
 
         try {
 
@@ -124,7 +122,7 @@ public class AlignResults
 
             stmt.setString(1, version);
             stmt.setString(2, dbId);
-            stmt.setInt(3, MAX_N);
+            stmt.setInt(3, maxN);
 
             ResultSet rs = stmt.executeQuery();
 
