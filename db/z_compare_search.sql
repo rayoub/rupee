@@ -21,7 +21,7 @@ mtm_results AS
         ce_rmsd,
         ce_tm_score
     FROM
-        get_mtm_dom_results('scop_d3','dom_v08_03_2018', 50)
+        get_mtm_dom_results('scop_d3','scop_v2_07', 50)
     WHERE
         db_id_1 = 'd1d8la1'
 ),
