@@ -5,8 +5,8 @@ ver=$1
 awk -f domains.awk ecod.develop210.domains.txt > domains.txt
 awk -f segments.awk ecod.develop210.domains.txt > segments.txt
 
-# parse pdb files
-xargs -a segments.txt -L1 ./chopper.sh
+# parse pdb files (takes forever, I've been storing the zips)
+#xargs -a segments.txt -L1 ./chopper.sh
 
 # move to db directory
 cd ../../db

@@ -6,8 +6,8 @@ awk -f domains.awk cath-domain-list-${ver}.txt > domains.txt
 awk -f segments.awk cath-domain-boundaries-${ver}.txt > segments.txt
 awk -f names.awk cath-names-${ver}.txt > names.txt
 
-# parse pdb files
-xargs -a segments.txt -L1 ./chopper.sh
+# parse pdb files (takes forever, I've been storing the zips)
+#xargs -a segments.txt -L1 ./chopper.sh
 
 # move to db directory
 cd ../../db
