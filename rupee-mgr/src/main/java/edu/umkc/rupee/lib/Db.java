@@ -190,7 +190,7 @@ public class Db {
     // Getting 
     // *********************************************************************
     
-    public static Map<String, AlignmentScores> getAlignmentScores(String dbId) {
+    public static Map<String, AlignmentScores> getAlignmentScores(String version, String dbId) {
 
         Map<String, AlignmentScores> map = new HashMap<>();
 
@@ -199,8 +199,9 @@ public class Db {
             PGSimpleDataSource ds = Db.getDataSource();
             Connection conn = ds.getConnection();
 
-            PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_alignment_scores(?);");
-            stmt.setString(1, dbId);
+            PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_alignment_scores(?, ?);");
+            stmt.setString(1, version);
+            stmt.setString(2, dbId);
 
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
@@ -239,7 +240,7 @@ public class Db {
         updt.close();
     }
     
-    public static void saveAlignmentScores(String dbId, List<AlignmentScores> scores) {
+    public static void saveAlignmentScores(String version, String dbId, List<AlignmentScores> scores) {
 
         try {
 
@@ -249,13 +250,14 @@ public class Db {
 
             ((PGConnection) conn).addDataType("alignment_scores", AlignmentScores.class);
 
-            PreparedStatement updt = conn.prepareStatement("SELECT insert_alignment_scores(?, ?);");
+            PreparedStatement updt = conn.prepareStatement("SELECT insert_alignment_scores(?, ?, ?);");
 
-            updt.setString(1, dbId);
+            updt.setString(1, version);
+            updt.setString(2, dbId);
 
             AlignmentScores a[] = new AlignmentScores[scores.size()];
             scores.toArray(a);
-            updt.setArray(2, conn.createArrayOf("alignment_scores", a));
+            updt.setArray(3, conn.createArrayOf("alignment_scores", a));
 
             updt.execute();
             updt.close();

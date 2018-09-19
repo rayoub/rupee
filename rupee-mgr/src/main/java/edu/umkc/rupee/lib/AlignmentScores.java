@@ -7,6 +7,7 @@ import org.postgresql.util.PGobject;
 
 public class AlignmentScores extends PGobject {
 
+    private String version;
     private String dbId1;
     private String dbId2;
     private double ceRmsd;
@@ -17,13 +18,22 @@ public class AlignmentScores extends PGobject {
     public AlignmentScores() { }
 
     public AlignmentScores(ResultSet rs) throws SQLException {
-   
+  
+        this.version = rs.getString("version"); 
         this.dbId1 = rs.getString("db_id_1");
         this.dbId2 = rs.getString("db_id_2");
         this.ceRmsd = rs.getDouble("ce_rmsd");
         this.ceTmScore = rs.getDouble("ce_tm_score");
         this.fatCatRmsd = rs.getDouble("fatcat_rmsd");
         this.fatCatTmScore = rs.getDouble("fatcat_tm_score");
+    }
+
+    public String getVersion() {
+        return version;
+    }
+
+    public void setVersion(String version) {
+        this.version = version;
     }
 
     public String getDbId1() {
@@ -115,6 +125,7 @@ public class AlignmentScores extends PGobject {
     @Override
     public String getValue() {
         String row = "(" 
+            + version + ","
             + dbId1 + "," + dbId2 + ","
             + ceRmsd + "," + ceTmScore + ","
             + fatCatRmsd + "," + fatCatTmScore

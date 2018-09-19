@@ -1,6 +1,7 @@
 
 CREATE TABLE alignment_scores
 (
+    version VARCHAR NOT NULL,
     db_id_1 VARCHAR NOT NULL,
     db_id_2 VARCHAR NOT NULL,
     ce_rmsd NUMERIC NULL DEFAULT 0,

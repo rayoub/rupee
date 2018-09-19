@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE FUNCTION insert_alignment_scores(p_db_id VARCHAR, p_tab alignment_scores ARRAY)
+CREATE OR REPLACE FUNCTION insert_alignment_scores(p_version VARCHAR, p_db_id VARCHAR, p_tab alignment_scores ARRAY)
 RETURNS VOID
 AS $$
 BEGIN
@@ -18,10 +18,12 @@ BEGIN
     FROM
         alignment_scores
     WHERE
-        db_id_1 = p_db_id;
+        version = p_version
+        AND db_id_1 = p_db_id;
     
 	INSERT INTO alignment_scores
     (
+        version,
         db_id_1,
         db_id_2,
         ce_rmsd,
@@ -30,6 +32,7 @@ BEGIN
         fatcat_tm_score
     )
     SELECT
+        version,
         db_id_1,
         db_id_2,
         ce_rmsd,

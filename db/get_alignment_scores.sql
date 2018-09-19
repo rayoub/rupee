@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE FUNCTION get_alignment_scores (p_db_id VARCHAR) 
+CREATE OR REPLACE FUNCTION get_alignment_scores (p_version VARCHAR, p_db_id VARCHAR) 
 RETURNS SETOF alignment_scores
 AS $$
 BEGIN
@@ -10,7 +10,8 @@ BEGIN
     FROM
         alignment_scores 
     WHERE
-        db_id_1 = p_db_id; 
+        version = p_version
+        AND db_id_1 = p_db_id; 
 
 END;
 $$LANGUAGE plpgsql;
