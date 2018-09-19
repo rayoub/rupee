@@ -24,28 +24,18 @@ BEGIN
     (
         db_id_1,
         db_id_2,
-        similarity,
         ce_rmsd,
         ce_tm_score,
-        cecp_rmsd,
-        cecp_tm_score,
-        fatcat_flexible_rmsd,
-        fatcat_flexible_tm_score,
-        fatcat_rigid_rmsd,
-        fatcat_rigid_tm_score
+        fatcat_rmsd,
+        fatcat_tm_score
     )
     SELECT
         db_id_1,
         db_id_2,
-        similarity,
         ce_rmsd,
         ce_tm_score,
-        cecp_rmsd,
-        cecp_tm_score,
-        fatcat_flexible_rmsd,
-        fatcat_flexible_tm_score,
-        fatcat_rigid_rmsd,
-        fatcat_rigid_tm_score
+        fatcat_rmsd,
+        fatcat_tm_score
     FROM
         UNNEST(p_tab) s
         LEFT JOIN ids
