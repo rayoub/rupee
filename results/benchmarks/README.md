@@ -3,6 +3,14 @@
 
 Following is a list of the benchmarks used to evaluate the performance of RUPEE.
 
+### Against mTM
+
+Currently, mTM appears to be working with a combined set of domains from SCOP 2.06 and SCOP 2.07. 
+It is for this reason care has been taken to filter out domains defined in SCOP 2.06, but not in SCOP 2.07.
+For instance, a search for *d4pwvb_* will return both *d4pwvb_* from SCOP 2.06 and *d4pwvb1* from SCOP 2.07. 
+This only occurs for a few domains that have been modified from SCOP 2.06 to SCOP 2.07. 
+Nevertheless, this has to be accounted for to achieve a fair comparison. 
+
 #### scop_d500
 
 Identical to d500 used in the mTM paper.
@@ -20,18 +28,11 @@ Subset of d499 that includes all domains for which mTM returns greater than or e
 
 Subset of d437 that includes all domains for which mTM returns greater than or equal to 100 SCOP 2.07 domain results. 
 
-
-#### scop_d100
-
-Subset of d360 including the first 100 domains. Used for development testing. 
-
-#### scop_d50
-
-Subset of d360 including the first 50 domains. Used for development testing. 
+### Against CATHEDRAL
 
 #### cath_d100
 
-CATH superfamily representatives of the 100 most diverse CATH superfamilies in CATH v4.1
+CATH superfamily representatives of the 100 most diverse CATH superfamilies in CATH v4.1.
 
 #### cath_d99
 
@@ -40,3 +41,20 @@ Subset of d100 that includes all domains for which CATHEDRAL returns greater tha
 #### cath_d94
 
 Subset of d99 that includes all domains for which CATHEDRAL returns the query domain as the first domain. This helps ensure we are not evaluating RUPEE against possible CATHEDRAL bugs.   
+
+### Against SSM
+
+#### scop_d204
+
+Subset of d500 that is defined in SCOP 1.73. 
+
+#### scop_d193
+
+Subset of d204 that includes all domains for which SSM returns results.
+In some cases, a domain may not have enough secondary structures for SSM to work with. 
+
+#### scop_d62
+
+Subset of d193 that includes all domains for which SSM returns greater than or equal to 50 results.
+
+
