@@ -5,7 +5,9 @@ RETURNS TABLE (
     db_id_1 VARCHAR,
     db_id_2 VARCHAR,
     ce_rmsd NUMERIC,
-    ce_tm_score NUMERIC
+    ce_tm_score NUMERIC,
+    fatcat_rmsd NUMERIC,
+    fatcat_tm_score NUMERIC
 )
 AS $$
 BEGIN
@@ -18,10 +20,19 @@ BEGIN
             r.n,
             r.db_id_1,
             r.db_id_2,
-            r.ce_rmsd,
-            r.ce_tm_score
+            s.ce_rmsd,
+            s.ce_tm_score,
+            s.fatcat_rmsd,
+            s.fatcat_tm_score
         FROM
             cathedral_result r
+            INNER JOIN benchmark b
+                ON b.db_id = r.db_id_1
+                AND b.name = p_benchmark
+            INNER JOIN alignment_scores s
+                ON s.db_id_1 = r.db_id_1
+                AND s.db_id_2 = r.db_id_2
+                AND s.version = p_version
     ),
     valid_results As
     (
@@ -40,7 +51,9 @@ BEGIN
             r.db_id_1,
             r.db_id_2,
             r.ce_rmsd,
-            r.ce_tm_score
+            r.ce_tm_score,
+            r.fatcat_rmsd,
+            r.fatcat_tm_score
         FROM
             results r
             INNER JOIN valid_results v
@@ -53,7 +66,9 @@ BEGIN
         r.db_id_1,
         r.db_id_2,
         r.ce_rmsd,
-        r.ce_tm_score
+        r.ce_tm_score,
+        r.fatcat_rmsd,
+        r.fatcat_tm_score
     FROM 
         filtered_results r
     ORDER BY
