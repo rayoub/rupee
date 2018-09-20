@@ -51,11 +51,11 @@ data/scop/version.txt
 # build ignores
 rupee-mgr/target/
 
-# any vim swap files
+# file types
 **/*.swp
-
-# any tar files
 **/*.tar
+**/*.pdf
+**/*.eps
 
 # eclim
 **/workbench.xmi
