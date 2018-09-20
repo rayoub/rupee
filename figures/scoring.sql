@@ -1,113 +1,170 @@
+
 WITH all_rupee AS
 (
-    SELECT * FROM get_rupee_results(50)
+    SELECT * FROM get_rupee_results('cath_d94', 'cath_v4_1_0', 50)
 ),
-all_cath AS
+all_rupee_fast AS
+(
+    SELECT * FROM get_rupee_results('cath_d94', 'cath_v4_1_0_fast', 50)
+),
+all_other AS
 (   
-    SELECT * FROM get_cath_results(50)
+    SELECT * FROM get_cathedral_results('cath_d94', 'cath_v4_1_0', 50)
 ),
 valid_rupee_id AS
 (
-    SELECT DISTINCT pdb_id_1 AS pdb_id FROM all_rupee
+    SELECT DISTINCT db_id_1 AS db_id FROM all_rupee
 ),
-valid_cath_id AS
+valid_rupee_fast_id AS
 (
-    SELECT DISTINCT pdb_id_1 AS pdb_id FROM all_cath
+    SELECT DISTINCT db_id_1 AS db_id FROM all_rupee_fast
 ),
-valid_both_id AS
+valid_other_id AS
 (
-    SELECT b.pdb_id FROM valid_rupee_id b INNER JOIN valid_cath_id c ON b.pdb_id = c.pdb_id
+    SELECT DISTINCT db_id_1 AS db_id FROM all_other
+),
+valid_all_id AS
+(
+    SELECT r.db_id FROM valid_rupee_id r INNER JOIN valid_rupee_fast_id f ON r.db_id = f.db_id INNER JOIN valid_other_id o ON r.db_id = o.db_id
 ),
 valid_rupee AS
 (
-    SELECT * FROM all_rupee b INNER JOIN valid_both_id v ON v.pdb_id = b.pdb_id_1 
+    SELECT * FROM all_rupee r INNER JOIN valid_all_id v ON v.db_id = r.db_id_1 
 ),
-valid_cath AS
+valid_rupee_fast AS
 (
-    SELECT * FROM all_cath c INNER JOIN valid_both_id v ON v.pdb_id = c.pdb_id_1 
+    SELECT * FROM all_rupee_fast f INNER JOIN valid_all_id v ON v.db_id = f.db_id_1 
+),
+valid_other AS
+(
+    SELECT * FROM all_other o INNER JOIN valid_all_id v ON v.db_id = o.db_id_1 
 ),
 ranked AS
 (
+    -- tm score
+
     SELECT 
-        -- the secondary sort must not be an rmsd or tm-score since those are assumed not available for search in general
-        ROW_NUMBER() OVER (PARTITION BY pdb_id_1 ORDER BY rupee_score DESC, pdb_id_2) AS n,
+        n,
         'RUPEE' AS app,
-        'CE-CP' AS alg,
+        'CE' AS alg,
         'TM-Score' AS score_type,
-        pdb_id_1,
-        cecp_tm_score AS score
+        db_id_1,
+        ce_tm_score AS score
     FROM
         valid_rupee
     UNION ALL
     SELECT 
-        ROW_NUMBER() OVER (PARTITION BY pdb_id_1 ORDER BY rupee_score DESC, pdb_id_2) AS n,
+        n,
         'RUPEE' AS app,
         'FATCAT' AS alg,
         'TM-Score' AS score_type,
-        pdb_id_1,
+        db_id_1,
         fatcat_tm_score AS score
     FROM
         valid_rupee
     UNION ALL
     SELECT 
-        ROW_NUMBER() OVER (PARTITION BY pdb_id_1 ORDER BY ssap_score DESC) AS n,
-        'CATHEDRAL' AS app,
-        'CE-CP' AS alg,
+        n,
+        'RUPEE Fast' AS app,
+        'CE' AS alg,
         'TM-Score' AS score_type,
-        pdb_id_1,
-        cecp_tm_score AS score
+        db_id_1,
+        ce_tm_score AS score
     FROM
-        valid_cath
+        valid_rupee_fast
     UNION ALL
     SELECT 
-        ROW_NUMBER() OVER (PARTITION BY pdb_id_1 ORDER BY ssap_score DESC) AS n,
-        'CATHEDRAL' AS app,
+        n,
+        'RUPEE Fast' AS app,
         'FATCAT' AS alg,
         'TM-Score' AS score_type,
-        pdb_id_1,
+        db_id_1,
         fatcat_tm_score AS score
     FROM
-        valid_cath
+        valid_rupee_fast
+    UNION ALL
+    SELECT 
+        n,
+        'OTHER' AS app,
+        'CE' AS alg,
+        'TM-Score' AS score_type,
+        db_id_1,
+        ce_tm_score AS score
+    FROM
+        valid_other
+    UNION ALL
+    SELECT 
+        n,
+        'OTHER' AS app,
+        'FATCAT' AS alg,
+        'TM-Score' AS score_type,
+        db_id_1,
+        fatcat_tm_score AS score
+    FROM
+        valid_other
+
+    -- rmsd
+    
     UNION ALL 
     SELECT 
-        ROW_NUMBER() OVER (PARTITION BY pdb_id_1 ORDER BY rupee_score DESC, pdb_id_2) AS n,
+        n, 
         'RUPEE' AS app,
-        'CE-CP' AS alg,
+        'CE' AS alg,
         'RMSD' AS score_type,
-        pdb_id_1,
-        cecp_rmsd AS score
+        db_id_1,
+        ce_rmsd AS score
     FROM
         valid_rupee
     UNION ALL
     SELECT 
-        ROW_NUMBER() OVER (PARTITION BY pdb_id_1 ORDER BY rupee_score DESC, pdb_id_2) AS n,
+        n,
         'RUPEE' AS app,
         'FATCAT' AS alg,
         'RMSD' AS score_type,
-        pdb_id_1,
+        db_id_1,
         fatcat_rmsd AS score
     FROM
         valid_rupee
-    UNION ALL
+    UNION ALL 
     SELECT 
-        ROW_NUMBER() OVER (PARTITION BY pdb_id_1 ORDER BY ssap_score DESC) AS n,
-        'CATHEDRAL' AS app,
-        'CE-CP' AS alg,
+        n, 
+        'RUPEE Fast' AS app,
+        'CE' AS alg,
         'RMSD' AS score_type,
-        pdb_id_1,
-        cecp_rmsd AS score
+        db_id_1,
+        ce_rmsd AS score
     FROM
-        valid_cath
+        valid_rupee_fast
     UNION ALL
     SELECT 
-        ROW_NUMBER() OVER (PARTITION BY pdb_id_1 ORDER BY ssap_score DESC) AS n,
-        'CATHEDRAL' AS app,
+        n,
+        'RUPEE Fast' AS app,
         'FATCAT' AS alg,
         'RMSD' AS score_type,
-        pdb_id_1,
+        db_id_1,
         fatcat_rmsd AS score
     FROM
-        valid_cath
+        valid_rupee_fast
+    UNION ALL
+    SELECT 
+        n,
+        'OTHER' AS app,
+        'CE' AS alg,
+        'RMSD' AS score_type,
+        db_id_1,
+        ce_rmsd AS score
+    FROM
+        valid_other
+    UNION ALL
+    SELECT 
+        n,
+        'OTHER' AS app,
+        'FATCAT' AS alg,
+        'RMSD' AS score_type,
+        db_id_1,
+        fatcat_rmsd AS score
+    FROM
+        valid_other
 ),
 accumulated AS
 (
@@ -116,7 +173,7 @@ accumulated AS
         app,
         alg,
         score_type,
-        AVG(score) OVER (PARTITION BY app, alg, score_type, pdb_id_1 ORDER BY n ROWS UNBOUNDED PRECEDING) AS cume_score
+        AVG(score) OVER (PARTITION BY app, alg, score_type, db_id_1 ORDER BY n ROWS UNBOUNDED PRECEDING) AS cume_score
     FROM
         ranked
 ),
@@ -145,4 +202,3 @@ ORDER BY
     app,
     alg,
     n;
-
