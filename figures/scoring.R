@@ -9,10 +9,10 @@ rm(list = ls())
 df <- read.csv('scoring.txt')
 refs <- read.csv('scoring_refs.txt')
 
-# reorder factor levels
-df$app <- factor(df$app, levels = c('RUPEE', 'CATHEDRAL'))
+# reorder factor levels 
+df$app <- factor(df$app, levels = c('RUPEE', 'RUPEE Fast', 'CATHEDRAL'))
 
-ggplot(df, aes(n, avg_cume_score, group = interaction(app, alg, score_type), color = app, linetype = alg)) +
+ggplot(df, aes(n, avg_cume_score, group = interaction(app, score_type), color = app)) +
     
     # geoms
     geom_hline(
@@ -39,7 +39,7 @@ ggplot(df, aes(n, avg_cume_score, group = interaction(app, alg, score_type), col
     facet_wrap(~score_type, ncol = 1, scales = 'free_y') + 
     
     # guides
-    guides(color = guide_legend(override.aes = list(size = rel(0.5))), linetype = guide_legend(override.aes = list(size = rel(0.5)))) + 
+    guides(color = guide_legend(override.aes = list(size = rel(0.5)))) + 
 
     # axis labels
     labs(
@@ -66,12 +66,12 @@ ggplot(df, aes(n, avg_cume_score, group = interaction(app, alg, score_type), col
         legend.position = 'bottom',
         legend.margin = unit(0,'mm'),
         legend.box = 'horizontal',
-        legend.direction = 'vertical',
+        legend.direction = 'horizontal',
 
         strip.background = element_blank(),
         strip.text.x = element_text(color = 'black')
     ) 
 
-ggsave('scoring.eps', width = 3, height = 4.25)
+ggsave('scoring.pdf', width = 3, height = 4.25)
 
 
