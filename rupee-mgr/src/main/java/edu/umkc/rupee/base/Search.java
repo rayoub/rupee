@@ -192,6 +192,23 @@ public abstract class Search {
                         .limit(criteria.pageSize)
                         .collect(Collectors.toList());
 
+                // query db id should be first
+                if (criteria.searchBy == SearchByCriteria.DB_ID) {
+                   
+                    int i; 
+                    for (i = 0; i < records.size(); i++) {
+                        if (records.get(i).getDbId().equals(criteria.dbId)) {
+                            break;
+                        }
+                    }
+                    
+                    if (i != 0) {
+                        SearchRecord record = records.get(i);
+                        records.remove(i);
+                        records.add(0, record);
+                    }
+                }
+
                 // augment data set for output
                 augment(records, recordCount);
             }
