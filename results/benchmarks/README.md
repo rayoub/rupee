@@ -57,4 +57,12 @@ In some cases, a domain may not have enough secondary structures for SSM to work
 
 Subset of d193 that includes all domains for which SSM returns greater than or equal to 50 results.
 
+### Response Times
 
+#### scop_t10
+
+SCOP domains used for testing mTM and SSM response times.
+
+#### cath_t10
+
+CATH domains used for testing CATHEDRAL response times. 
