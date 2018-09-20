@@ -207,6 +207,9 @@ public abstract class Search {
                         records.remove(i);
                         records.add(0, record);
                     }
+
+                    records.get(0).setRmsd(0.0);
+                    records.get(0).setTmScore(-1.0);
                 }
 
                 // augment data set for output
