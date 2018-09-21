@@ -1,11 +1,11 @@
 
 DO $$
 
-    DECLARE p_benchmark VARCHAR := 'cath_d94';
-    DECLARE p_version VARCHAR := 'cath_v4_1_0';
-    DECLARE p_limit INTEGER := 50;
-    DECLARE p_other VARCHAR := 'CATHEDRAL';
-    DECLARE p_alg VARCHAR = 'FATCAT'; -- CE or FATCAT
+    DECLARE p_benchmark VARCHAR := 'scop_d360';
+    DECLARE p_version VARCHAR := 'scop_v2_07';
+    DECLARE p_limit INTEGER := 100;
+    DECLARE p_other VARCHAR := 'mTM';
+    DECLARE p_alg VARCHAR = 'CE'; -- CE or FATCAT
 
 BEGIN
 
@@ -22,7 +22,7 @@ BEGIN
         ),
         all_other AS
         (   
-            SELECT * FROM get_cathedral_results(p_benchmark, p_version, p_limit)
+            SELECT * FROM get_mtm_dom_results(p_benchmark, p_version, p_limit)
         ),
         valid_rupee_id AS
         (
@@ -54,8 +54,6 @@ BEGIN
         ),
         ranked AS
         (
-            -- tm score
-
             SELECT 
                 n,
                 'RUPEE' AS app,
@@ -115,63 +113,6 @@ BEGIN
                 CASE WHEN p_alg = 'CE' THEN ce_rmsd ELSE fatcat_rmsd END AS score
             FROM
                 valid_other
-
-
-
-                -- rmsd
-           /* 
-            UNION ALL 
-            UNION ALL
-            SELECT 
-                n,
-                'RUPEE' AS app,
-                'FATCAT' AS alg,
-                'RMSD' AS score_type,
-                db_id_1,
-                fatcat_rmsd AS score
-            FROM
-                valid_rupee
-            UNION ALL 
-            SELECT 
-                n, 
-                'RUPEE Fast' AS app,
-                'CE' AS alg,
-                'RMSD' AS score_type,
-                db_id_1,
-                ce_rmsd AS score
-            FROM
-                valid_rupee_fast
-            UNION ALL
-            SELECT 
-                n,
-                'RUPEE Fast' AS app,
-                'FATCAT' AS alg,
-                'RMSD' AS score_type,
-                db_id_1,
-                fatcat_rmsd AS score
-            FROM
-                valid_rupee_fast
-            UNION ALL
-            SELECT 
-                n,
-                'OTHER' AS app,
-                'CE' AS alg,
-                'RMSD' AS score_type,
-                db_id_1,
-                ce_rmsd AS score
-            FROM
-                valid_other
-            UNION ALL
-            SELECT 
-                n,
-                'OTHER' AS app,
-                'FATCAT' AS alg,
-                'RMSD' AS score_type,
-                db_id_1,
-                fatcat_rmsd AS score
-            FROM
-                valid_other
-            */
         ),
         accumulated AS
         (

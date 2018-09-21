@@ -9,7 +9,7 @@ rm(list = ls())
 df <- read.csv('precision.txt')
 
 # reorder factor levels
-df$app <- factor(df$app, levels = c('RUPEE', 'CATHEDRAL'))
+df$app <- factor(df$app, levels = c('RUPEE', 'RUPEE Fast', 'CATHEDRAL'))
 
 ggplot(df, aes(n, level_precision, group = interaction(app, hierarchy_level, lex.order = TRUE), color = app, linetype = hierarchy_level)) +
     
@@ -58,6 +58,6 @@ ggplot(df, aes(n, level_precision, group = interaction(app, hierarchy_level, lex
         legend.direction = 'vertical'
     ) 
 
-ggsave('precision.eps', width = 3, height = 2.5)
+ggsave('precision.pdf', width = 3, height = 2.5)
 
 

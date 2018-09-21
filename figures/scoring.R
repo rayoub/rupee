@@ -10,7 +10,7 @@ df <- read.csv('scoring.txt')
 refs <- read.csv('scoring_refs.txt')
 
 # reorder factor levels 
-df$app <- factor(df$app, levels = c('RUPEE', 'RUPEE Fast', 'CATHEDRAL'))
+df$app <- factor(df$app, levels = c('RUPEE', 'RUPEE Fast', 'mTM'))
 
 ggplot(df, aes(n, avg_cume_score, group = interaction(app, score_type), color = app)) +
     
