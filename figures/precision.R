@@ -1,4 +1,9 @@
 
+# variable
+# 1. factor levels
+# 2. x scale 
+# 3. title
+
 library(ggplot2)
 library(plyr)
 
@@ -9,10 +14,10 @@ rm(list = ls())
 df <- read.csv('precision.txt')
 
 # reorder factor levels
-df$app <- factor(df$app, levels = c('RUPEE', 'RUPEE Fast', 'CATHEDRAL'))
-
-ggplot(df, aes(n, level_precision, group = interaction(app, hierarchy_level, lex.order = TRUE), color = app, linetype = hierarchy_level)) +
+df$app <- factor(df$app, levels = c('RUPEE', 'RUPEE Fast', 'SSM'))
     
+ggplot(df, aes(n, level_precision, group = app, color = app)) +
+
     # geoms
     geom_line(
         size = rel(0.5)
@@ -24,12 +29,17 @@ ggplot(df, aes(n, level_precision, group = interaction(app, hierarchy_level, lex
         end = 0.6
     ) + 
     scale_x_continuous(
+        #limits = c(1, 100),
+        #breaks = c(1, seq(10, 100, by = 10))
         limits = c(1, 50),
         breaks = c(1, seq(5, 50, by = 5))
     ) + 
     
     # guides
-    guides(color = guide_legend(override.aes = list(size = rel(0.5))), linetype = guide_legend(override.aes = list(size = rel(0.5)))) + 
+    guides(color = guide_legend(override.aes = list(size = rel(0.5)))) + 
+
+    # plot title
+    ggtitle('fold precision') + 
 
     # axis labels
     labs(
@@ -42,7 +52,7 @@ ggplot(df, aes(n, level_precision, group = interaction(app, hierarchy_level, lex
 
     # default override
     theme(
-        plot.title = element_blank(), 
+        plot.title = element_text(size = 8),
         plot.margin = margin(0,15,0,0), 
 
         panel.grid = element_blank(),
@@ -55,7 +65,7 @@ ggplot(df, aes(n, level_precision, group = interaction(app, hierarchy_level, lex
         legend.position = 'bottom',
         legend.margin = unit(0,'mm'),
         legend.box = 'horizontal',
-        legend.direction = 'vertical'
+        legend.direction = 'horizontal'
     ) 
 
 ggsave('precision.pdf', width = 3, height = 2.5)

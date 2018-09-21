@@ -59,11 +59,7 @@ BEGIN
                 CASE 
                     WHEN d1.c = d2.c AND d1.a = d2.a AND d1.t = d2.t THEN 1
                     ELSE 0
-                END AS same_topology,
-                CASE 
-                    WHEN d1.c = d2.c AND d1.a = d2.a AND d1.t = d2.t AND d1.h = d2.h THEN 1
-                    ELSE 0
-                END AS same_family
+                END AS same_topology
             FROM
                 valid_rupee r
                 INNER JOIN cath_domain d1
@@ -75,8 +71,7 @@ BEGIN
         (
             SELECT
                 n,
-                SUM(same_topology) OVER (PARTITION BY db_id_1 ORDER BY n ROWS UNBOUNDED PRECEDING) AS sum_same_topology,
-                SUM(same_family) OVER (PARTITION BY db_id_1 ORDER BY n ROWS UNBOUNDED PRECEDING) AS sum_same_family
+                SUM(same_topology) OVER (PARTITION BY db_id_1 ORDER BY n ROWS UNBOUNDED PRECEDING) AS sum_same_topology
             FROM
                 ranked_rupee
         ),
@@ -85,8 +80,7 @@ BEGIN
             SELECT
                 n,
                 COUNT(*) * n AS total_n, 
-                SUM(sum_same_topology) AS total_same_topology,
-                SUM(sum_same_family) AS total_same_family
+                SUM(sum_same_topology) AS total_same_topology
             FROM
                 summed_rupee
             GROUP BY
@@ -102,15 +96,6 @@ BEGIN
                 total_same_topology::REAL / total_n AS level_precision
             FROM
                 totaled_rupee
-            UNION ALL
-            SELECT
-                n,
-                total_n,
-                'RUPEE'::TEXT AS app,
-                'Superfamily'::TEXT AS hierarchy_level,
-                total_same_family::REAL / total_n AS level_precision
-            FROM
-                totaled_rupee
         ),
         ranked_rupee_fast AS
         (
@@ -120,11 +105,7 @@ BEGIN
                 CASE 
                     WHEN d1.c = d2.c AND d1.a = d2.a AND d1.t = d2.t THEN 1
                     ELSE 0
-                END AS same_topology,
-                CASE 
-                    WHEN d1.c = d2.c AND d1.a = d2.a AND d1.t = d2.t AND d1.h = d2.h THEN 1
-                    ELSE 0
-                END AS same_family
+                END AS same_topology
             FROM
                 valid_rupee_fast r
                 INNER JOIN cath_domain d1
@@ -136,8 +117,7 @@ BEGIN
         (
             SELECT
                 n,
-                SUM(same_topology) OVER (PARTITION BY db_id_1 ORDER BY n ROWS UNBOUNDED PRECEDING) AS sum_same_topology,
-                SUM(same_family) OVER (PARTITION BY db_id_1 ORDER BY n ROWS UNBOUNDED PRECEDING) AS sum_same_family
+                SUM(same_topology) OVER (PARTITION BY db_id_1 ORDER BY n ROWS UNBOUNDED PRECEDING) AS sum_same_topology
             FROM
                 ranked_rupee_fast
         ),
@@ -146,8 +126,7 @@ BEGIN
             SELECT
                 n,
                 COUNT(*) * n AS total_n, 
-                SUM(sum_same_topology) AS total_same_topology,
-                SUM(sum_same_family) AS total_same_family
+                SUM(sum_same_topology) AS total_same_topology
             FROM
                 summed_rupee_fast
             GROUP BY
@@ -163,15 +142,6 @@ BEGIN
                 total_same_topology::REAL / total_n AS level_precision
             FROM
                 totaled_rupee_fast
-            UNION ALL
-            SELECT
-                n,
-                total_n,
-                'RUPEE Fast'::TEXT AS app,
-                'Superfamily'::TEXT AS hierarchy_level,
-                total_same_family::REAL / total_n AS level_precision
-            FROM
-                totaled_rupee_fast
         ),
         ranked_other AS
         (
@@ -181,11 +151,7 @@ BEGIN
                 CASE 
                     WHEN d1.c = d2.c AND d1.a = d2.a AND d1.t = d2.t THEN 1
                     ELSE 0
-                END AS same_topology,
-                CASE 
-                    WHEN d1.c = d2.c AND d1.a = d2.a AND d1.t = d2.t AND d1.h = d2.h THEN 1
-                    ELSE 0
-                END AS same_family
+                END AS same_topology
             FROM
                 valid_other r
                 INNER JOIN cath_domain d1
@@ -197,8 +163,7 @@ BEGIN
         (
             SELECT
                 n,
-                SUM(same_topology) OVER (PARTITION BY db_id_1 ORDER BY n ROWS UNBOUNDED PRECEDING) AS sum_same_topology,
-                SUM(same_family) OVER (PARTITION BY db_id_1 ORDER BY n ROWS UNBOUNDED PRECEDING) AS sum_same_family
+                SUM(same_topology) OVER (PARTITION BY db_id_1 ORDER BY n ROWS UNBOUNDED PRECEDING) AS sum_same_topology
             FROM
                 ranked_other
         ),
@@ -207,8 +172,7 @@ BEGIN
             SELECT
                 n,
                 COUNT(*) * n AS total_n, 
-                SUM(sum_same_topology) AS total_same_topology,
-                SUM(sum_same_family) AS total_same_family
+                SUM(sum_same_topology) AS total_same_topology
             FROM
                 summed_other
             GROUP BY
@@ -222,15 +186,6 @@ BEGIN
                 p_other::TEXT AS app,
                 'Topology'::TEXT AS hierarchy_level,
                 total_same_topology::REAL / total_n AS level_precision
-            FROM
-                totaled_other
-            UNION ALL
-            SELECT
-                n,
-                total_n,
-                p_other::TEXT AS app,
-                'Superfamily'::TEXT AS hierarchy_level,
-                total_same_family::REAL / total_n AS level_precision
             FROM
                 totaled_other
         ),
