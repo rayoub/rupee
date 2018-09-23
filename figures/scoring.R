@@ -1,4 +1,9 @@
 
+# variable
+# 1. factor levels
+# 2. x scale 
+# 3. title
+
 library(ggplot2)
 library(plyr)
 
@@ -10,9 +15,9 @@ df <- read.csv('scoring.txt')
 refs <- read.csv('scoring_refs.txt')
 
 # reorder factor levels 
-df$app <- factor(df$app, levels = c('RUPEE', 'RUPEE Fast', 'mTM'))
+df$app <- factor(df$app, levels = c('RUPEE', 'RUPEE Fast', 'CATHEDRAL'))
 
-ggplot(df, aes(n, avg_cume_score, group = interaction(app, score_type), color = app)) +
+ggplot(df, aes(n, avg_cume_score, group = interaction(app, score_type), linetype = app)) +
     
     # geoms
     geom_hline(
@@ -33,13 +38,18 @@ ggplot(df, aes(n, avg_cume_score, group = interaction(app, score_type), color = 
     scale_x_continuous(
         limits = c(1, 50),
         breaks = c(1, seq(5, 50, by = 5))
+        #limits = c(1, 100),
+        #breaks = c(1, seq(10, 100, by = 10))
     ) + 
 
     # faceting
     facet_wrap(~score_type, ncol = 1, scales = 'free_y') + 
     
     # guides
-    guides(color = guide_legend(override.aes = list(size = rel(0.5)))) + 
+    guides(linetype = guide_legend(override.aes = list(size = rel(0.5)))) + 
+
+    # plot title
+    ggtitle('FATCAT alignments') + 
 
     # axis labels
     labs(
@@ -52,7 +62,7 @@ ggplot(df, aes(n, avg_cume_score, group = interaction(app, score_type), color = 
 
     # default override
     theme(
-        plot.title = element_blank(), 
+        plot.title = element_text(size = 8),
         plot.margin = margin(0,15,0,0), 
 
         panel.grid = element_blank(),

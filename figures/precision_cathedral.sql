@@ -92,7 +92,6 @@ BEGIN
                 n,
                 total_n,
                 'RUPEE'::TEXT AS app,
-                'Topology'::TEXT AS hierarchy_level,
                 total_same_topology::REAL / total_n AS level_precision
             FROM
                 totaled_rupee
@@ -138,7 +137,6 @@ BEGIN
                 n,
                 total_n,
                 'RUPEE Fast'::TEXT AS app,
-                'Topology'::TEXT AS hierarchy_level,
                 total_same_topology::REAL / total_n AS level_precision
             FROM
                 totaled_rupee_fast
@@ -184,7 +182,6 @@ BEGIN
                 n,
                 total_n,
                 p_other::TEXT AS app,
-                'Topology'::TEXT AS hierarchy_level,
                 total_same_topology::REAL / total_n AS level_precision
             FROM
                 totaled_other
@@ -194,7 +191,6 @@ BEGIN
             SELECT
                 n,
                 app,
-                hierarchy_level,
                 level_precision
             FROM
                 average_rupee
@@ -202,7 +198,6 @@ BEGIN
             SELECT
                 n,
                 app,
-                hierarchy_level,
                 level_precision
             FROM
                 average_rupee_fast
@@ -210,7 +205,6 @@ BEGIN
             SELECT
                 n,
                 app,
-                hierarchy_level,
                 level_precision
             FROM
                 average_other
@@ -221,7 +215,6 @@ BEGIN
             average
         ORDER BY
             app,
-            hierarchy_level,
             n;
 
 END $$;

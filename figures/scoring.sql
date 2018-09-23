@@ -1,11 +1,13 @@
 
 DO $$
 
-    DECLARE p_benchmark VARCHAR := 'scop_d360';
-    DECLARE p_version VARCHAR := 'scop_v2_07';
-    DECLARE p_limit INTEGER := 100;
-    DECLARE p_other VARCHAR := 'mTM';
-    DECLARE p_alg VARCHAR = 'CE'; -- CE or FATCAT
+    DECLARE p_benchmark VARCHAR := 'cath_d94';
+    DECLARE p_version VARCHAR := 'cath_v4_1_0';
+    DECLARE p_limit INTEGER := 50;
+    DECLARE p_other VARCHAR := 'CATHEDRAL';
+    DECLARE p_alg VARCHAR = 'FATCAT'; -- CE or FATCAT
+
+    -- don't forget to change get_*_results as needed
 
 BEGIN
 
@@ -22,7 +24,7 @@ BEGIN
         ),
         all_other AS
         (   
-            SELECT * FROM get_mtm_dom_results(p_benchmark, p_version, p_limit)
+            SELECT * FROM get_cathedral_results(p_benchmark, p_version, p_limit)
         ),
         valid_rupee_id AS
         (
