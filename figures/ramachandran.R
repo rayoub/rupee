@@ -2,6 +2,8 @@
 library(ggplot2)
 library(plyr)
 
+get_ramachandran_plot <- function() {
+
 # clear environment
 rm(list = ls())
 
@@ -17,7 +19,7 @@ df$sse <- factor(df$sse, levels = c('Helix', 'Strand', 'Coil'))
 # color scale
 color_scale <- c('Helix' = 'red', 'Strand' = 'green', 'Coil' = 'black')
 
-ggplot(df, aes(phi, psi, color = sse)) +
+ramachandran_plot <- ggplot(df, aes(phi, psi, color = sse)) +
     
     # geoms
     geom_point(
@@ -40,7 +42,7 @@ ggplot(df, aes(phi, psi, color = sse)) +
     scale_color_manual(NULL, values = color_scale) + 
     
     # guides
-    guides(color = guide_legend(override.aes = list(size = rel(0.75)))) + 
+    guides(color = guide_legend(override.aes = list(size = rel(1)))) + 
 
     # coordinates
     coord_fixed(
@@ -73,7 +75,5 @@ ggplot(df, aes(phi, psi, color = sse)) +
         legend.margin = margin(0,0,0,0),
         legend.direction = 'horizontal'
     )
-
-ggsave('ramachandran.eps', device = 'eps', width = 3, height = 3)
-
+}
 

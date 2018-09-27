@@ -2,6 +2,8 @@
 library(ggplot2)
 library(plyr)
 
+get_torsion_plot <- function () {
+
 # clear environment
 rm(list = ls())
 
@@ -21,7 +23,7 @@ color_scale <- c('Helix' = 'red', 'Strand' = 'green', 'Coil' = 'black')
 df$phi <- ifelse(df$phi < 0, df$phi + 360, df$phi)
 df$phi <- df$phi + 200
 
-ggplot(df, aes(phi, psi, color = sse)) +
+torsion_plot <- ggplot(df, aes(phi, psi, color = sse)) +
     
     # geoms
     geom_point(
@@ -54,7 +56,7 @@ ggplot(df, aes(phi, psi, color = sse)) +
     scale_color_manual(NULL, values = color_scale) + 
     
     # guides
-    guides(color = guide_legend(override.aes = list(size = rel(0.75)))) + 
+    guides(color = guide_legend(override.aes = list(size = rel(1)))) + 
 
     # coordinates 
     coord_polar(
@@ -89,6 +91,5 @@ ggplot(df, aes(phi, psi, color = sse)) +
         legend.margin = margin(0,0,0,0),
         legend.direction = 'horizontal'
     )
-
-ggsave('torsion.eps', width = 3, height = 3)
+}
 

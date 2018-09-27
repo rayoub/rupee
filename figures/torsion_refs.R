@@ -30,8 +30,7 @@ ggplot(df, aes(phi, psi, color = sse)) +
     
     # geoms
     geom_point(
-        size = rel(0.01),
-        show.legend = FALSE
+        size = rel(0.01)
     ) + 
     geom_vline(
         xintercept = seq(200, 560, by = 90), 
@@ -73,7 +72,7 @@ ggplot(df, aes(phi, psi, color = sse)) +
     scale_color_manual(NULL, values = color_scale) + 
     
     # guides
-    guides(color = guide_legend(override.aes = list(size = rel(0.75)))) + 
+    guides(color = guide_legend(override.aes = list(size = rel(1)))) + 
 
     # ceordinates 
     coord_polar(
@@ -103,9 +102,14 @@ ggplot(df, aes(phi, psi, color = sse)) +
         axis.line = element_blank(),
 
         strip.background = element_blank(),
-        strip.text = element_text(size = 12)
+        strip.text = element_blank(),
         
+        legend.title = element_blank(), 
+        legend.text = element_text(size = 7),
+        legend.position = 'bottom',
+        legend.margin = margin(0,0,0,0),
+        legend.direction = 'horizontal'
     )
 
-ggsave('torsion_refs.eps', width = 7, height = 3)
+ggsave('torsion_refs.eps', width = 7, height = 2.5)
 
