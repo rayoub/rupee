@@ -8,14 +8,20 @@ rm(list = ls())
 # read in data files
 df <- read.csv('torsion.txt')
 
+# map values
+df$sse <- mapvalues(df$sse, from = c('Turn', 'Bridge', 'Bend'), to = c('Helix', 'Strand', 'Coil'))
+
+# reorder factor levels
+df$sse <- factor(df$sse, levels = c('Helix', 'Strand', 'Coil'))
+
+# color scale
+color_scale <- c('Helix' = 'red', 'Strand' = 'green', 'Coil' = 'black')
+
 # wrap and translate torsion angles
 df$phi <- ifelse(df$phi < 0, df$phi + 360, df$phi)
 df$phi <- df$phi + 200
 
-# reorder factor levels
-df$sse <- factor(df$sse, levels = c('Helix', 'Turn', 'Strand', 'Bridge', 'Bend', 'Coil'))
-
-ggplot(df, aes(phi, psi)) +
+ggplot(df, aes(phi, psi, color = sse)) +
     
     # geoms
     geom_point(
@@ -31,12 +37,6 @@ ggplot(df, aes(phi, psi)) +
         colour = 'grey50', 
         size = rel(0.2)
     ) +
-
-    # coordinates 
-    coord_polar(
-       theta = 'y',
-       direction = -1
-    ) +
     
     # scales
     scale_x_continuous(
@@ -51,6 +51,16 @@ ggplot(df, aes(phi, psi)) +
         breaks = c(-150,-120,-90,-60,-30,0,30,60,90,120,150,180),
         labels = c('-150\u00B0','-120\u00B0','-90\u00B0','-60\u00B0','-30\u00B0','0\u00B0','30\u00B0','60\u00B0','90\u00B0','120\u00B0','150\u00B0','\u00B1180\u00B0')
     ) + 
+    scale_color_manual(NULL, values = color_scale) + 
+    
+    # guides
+    guides(color = guide_legend(override.aes = list(size = rel(0.75)))) + 
+
+    # coordinates 
+    coord_polar(
+       theta = 'y',
+       direction = -1
+    ) +
 
     # axis labels
     labs(
@@ -69,9 +79,15 @@ ggplot(df, aes(phi, psi)) +
         panel.border = element_blank(),
         panel.grid = element_blank(),
         
-        axis.text = element_text(size = 6), 
-        axis.title = element_text(size = 7), 
-        axis.line = element_blank()
+        axis.text = element_text(size = 7), 
+        axis.title = element_text(size = 8), 
+        axis.line = element_blank(),
+        
+        legend.title = element_blank(), 
+        legend.text = element_text(size = 7),
+        legend.position = 'bottom',
+        legend.margin = margin(0,0,0,0),
+        legend.direction = 'horizontal'
     )
 
 ggsave('torsion.eps', width = 3, height = 3)

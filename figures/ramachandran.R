@@ -8,20 +8,21 @@ rm(list = ls())
 # read in data file
 df <- read.csv('torsion.txt')
 
-# reorder factor levels
-df$sse <- factor(df$sse, levels = c('Helix', 'Turn', 'Strand', 'Bridge', 'Bend', 'Coil'))
+# map values
+df$sse <- mapvalues(df$sse, from = c('Turn', 'Bridge', 'Bend'), to = c('Helix', 'Strand', 'Coil'))
 
-ggplot(df, aes(phi, psi)) +
+# reorder factor levels
+df$sse <- factor(df$sse, levels = c('Helix', 'Strand', 'Coil'))
+
+# color scale
+color_scale <- c('Helix' = 'red', 'Strand' = 'green', 'Coil' = 'black')
+
+ggplot(df, aes(phi, psi, color = sse)) +
     
     # geoms
     geom_point(
         size = rel(0.01)
     ) + 
-
-    # coordinates
-    coord_fixed(
-       ratio = 1
-    ) +
     
     # scales
     scale_x_continuous(
@@ -36,6 +37,15 @@ ggplot(df, aes(phi, psi)) +
         breaks = c(-180,-90,0,90,180),
         labels = c('-180\u00B0','-90\u00B0','0\u00B0','90\u00B0','180\u00B0')
     ) + 
+    scale_color_manual(NULL, values = color_scale) + 
+    
+    # guides
+    guides(color = guide_legend(override.aes = list(size = rel(0.75)))) + 
+
+    # coordinates
+    coord_fixed(
+       ratio = 1
+    ) +
 
     # axis labels
     labs(
@@ -55,9 +65,15 @@ ggplot(df, aes(phi, psi)) +
         panel.grid.major = element_line(size = rel(0.2), color = 'grey50'),
 
         axis.text = element_text(size = 7), 
-        axis.title = element_text(size = 7)
+        axis.title = element_text(size = 8),
+        
+        legend.title = element_blank(), 
+        legend.text = element_text(size = 7),
+        legend.position = 'bottom',
+        legend.margin = margin(0,0,0,0),
+        legend.direction = 'horizontal'
     )
 
-ggsave('ramachandran.eps', width = 3, height = 3)
+ggsave('ramachandran.eps', device = 'eps', width = 3, height = 3)
 
 

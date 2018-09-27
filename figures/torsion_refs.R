@@ -10,22 +10,28 @@ df <- read.csv('torsion.txt')
 refs <- read.csv('torsion_refs.txt')
 annotes <- read.csv('torsion_annotes.txt')
 
+# map values
+df$sse <- mapvalues(df$sse, from = c('Bend'), to = c('Coil'))
+
 # subset data
-df <- subset(df, df$sse == 'Helix' | df$sse == 'Strand' | df$sse == 'Bend' | df$sse == 'Coil')
+df <- subset(df, df$sse == 'Helix' | df$sse == 'Strand' | df$sse == 'Coil')
+
+# reorder factor levels
+df$sse <- factor(df$sse, levels = c('Helix', 'Strand', 'Coil'))
 
 # wrap and translate torsion angles
 df$phi <- ifelse(df$phi < 0, df$phi + 360, df$phi)
 df$phi <- df$phi + 200
 
-# reorder factor levels
-df$sse <- factor(df$sse, levels = c('Helix', 'Strand', 'Bend', 'Coil'))
-df$plot <- factor(df$plot, levels = c('Helix', 'Strand', 'Bend/Coil'))
+# color scale
+color_scale <- c('Helix' = 'red', 'Strand' = 'green', 'Coil' = 'black')
 
-ggplot(df, aes(phi, psi)) +
+ggplot(df, aes(phi, psi, color = sse)) +
     
     # geoms
     geom_point(
-        size = rel(0.01)
+        size = rel(0.01),
+        show.legend = FALSE
     ) + 
     geom_vline(
         xintercept = seq(200, 560, by = 90), 
@@ -50,12 +56,6 @@ ggplot(df, aes(phi, psi)) +
         color = 'black',
         aes(x = phi, y = psi, label = label)
     ) +
-
-    # ceordinates 
-    coord_polar(
-       theta = 'y',
-       direction = -1
-    ) +
     
     # scales
     scale_x_continuous(
@@ -70,15 +70,19 @@ ggplot(df, aes(phi, psi)) +
         breaks = c(-150,-120,-90,-60,-30,0,30,60,90,120,150,180),
         labels = c('-150\u00B0','-120\u00B0','-90\u00B0','-60\u00B0','-30\u00B0','0\u00B0','30\u00B0','60\u00B0','90\u00B0','120\u00B0','150\u00B0','\u00B1180\u00B0')
     ) + 
+    scale_color_manual(NULL, values = color_scale) + 
+    
+    # guides
+    guides(color = guide_legend(override.aes = list(size = rel(0.75)))) + 
+
+    # ceordinates 
+    coord_polar(
+       theta = 'y',
+       direction = -1
+    ) +
 
     # faceting
-    facet_wrap(~plot, ncol = 1, scales = 'fixed') + 
-
-    # axis labels
-    labs(
-         x = expression(phi), 
-         y = expression(psi)
-    ) + 
+    facet_wrap(~sse, nrow = 1, scales = 'fixed') + 
 
     # default theme 
     theme_bw() +
@@ -90,7 +94,7 @@ ggplot(df, aes(phi, psi)) +
 
         panel.border = element_blank(),
         panel.grid = element_blank(),
-        panel.margin.x = unit(0,'mm'),
+        panel.spacing.x = unit(0,'pt'),
         
         axis.text = element_blank(), 
         axis.text.y = element_blank(),
@@ -98,8 +102,10 @@ ggplot(df, aes(phi, psi)) +
         axis.title = element_blank(),
         axis.line = element_blank(),
 
-        strip.background = element_blank()
+        strip.background = element_blank(),
+        strip.text = element_text(size = 12)
+        
     )
 
-ggsave('torsion_refs.eps', width = 3.3, height = 6)
+ggsave('torsion_refs.eps', width = 7, height = 3)
 
