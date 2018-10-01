@@ -109,7 +109,7 @@ For this reason, pairwise alignments can focus on accuracy.
 On the other hand, a protein structure search can involve thousands of comparisons and accuracy is often balanced against speed. 
 In this case, pairwise alignment is still useful for evaluating the results of a search, and this is the approach we take. 
 
-For pairwise alignment, Combinatorial Extensions (CE) \citep{Shindyalov1998} and FATCAT \citep{Ye2003} are among the most popular tools, representing rigid and flexible protein alignments, respectively. 
+For pairwise alignment, Combinatorial Extensions (CE) \cite{Shindyalov1998} and FATCAT \cite{Ye2003} are among the most popular tools, representing rigid and flexible protein alignments, respectively. 
 CE performs a rigid alignment in order to minimize RMSD and FATCAT allows for a constrained number of twists in the protein chain in order to find a more flexible alignment before minimizing RMSD.
 
 Whereas pairwise structure alignments only depend on the sequence of \ca coordinates, protein structure searches often introduce a further dependence on the sequence order of amino acids.
@@ -119,19 +119,19 @@ The exact formula for combining the use of representatives and pre-calculated re
 However, all systems using this approach share the same disadvantage, an indirect dependence on amino acid sequences. 
 In the absence of a reliance on sequence representatives and pre-calculated results, and without sacrificing accuracy, response times suffer greatly, often taking upwards of an hour for queries to complete. 
 
-For protein structure searches, VAST \citep{Gilbrat1996} and the FATCAT server \citep{Ye2004} are among the most popular. 
+For protein structure searches, VAST \cite{Gilbrat1996} and the FATCAT server \cite{Ye2004} are among the most popular. 
 Nonetheless, these searches are slow in comparison to mTM, SSM, and CATHEDRAL when pre-calculated results are not used. 
 If given a known protein domain, VAST can return structural neighbors in seconds using pre-calculated results. 
 However, if uploading a PDB file where pre-calculated results are not used, response times for VAST can exceed 30 minutes. 
-Similarly, the FATCAT server, that does not use pre-calculated results, can take over an hour to send results for a search against PDB-90 representatives \citep{Prlic2010}. 
+Similarly, the FATCAT server, that does not use pre-calculated results, can take over an hour to send results for a search against PDB-90 representatives \cite{Prlic2010}. 
 
-The PhyreStorm server \citep{Mezulis2016} provides another notable protein structure search.
-Here too, it depends on PDB pre-calculated pairwise comparisons among PDB-40 cluster representatives \citep{Prlic2010}. 
+The PhyreStorm server \cite{Mezulis2016} provides another notable protein structure search.
+Here too, it depends on PDB pre-calculated pairwise comparisons among PDB-40 cluster representatives \cite{Prlic2010}. 
 Notably, PhyreStorm returns good results within minutes based on an uploaded PDB file. 
 
 Given the above, there remains a need for a purely geometric protein structure search.
 For the serendipitous exploration of relations between protein structures performed in the trenches, this search should be fast. 
-Moreover, with a $~10\%$ yearly growth rate of solved structures deposited in the PDB \citep{gkw1000}, this search should be scalable. 
+Moreover, with a $~10\%$ yearly growth rate of solved structures deposited in the PDB \cite{gkw1000}, this search should be scalable. 
 At a minimum, RUPEE takes a significant step in this direction as will be shown below. 
 
 \section{METHODS}
@@ -215,21 +215,6 @@ As an example of our linear encoding, the following sequence of descriptors repr
     [\, 5, 5, 5, 5, 5, 11, 11, 5, 5, 5, 5, 5, 8, 8, 10, 9 \,]
 \end{gather}
 
-Secondary structure assignments for termini are not always consistent among the variety of secondary structure assignment tools \cite{Martin2005}. 
-We also observed this to be the case for DSSP assignments across homologous domains. 
-Here, we introduce a heuristic we call \emph{secondary structure extension} (SSE) to address this variance. 
-
-SSE iterates a sequence of descriptors once in both the forward and backward directions. 
-Whenever a helix or strand descriptor is encountered, the next descriptor receives the same assignment as the preceding residue if its torsion angles match the region of the preceding residue, regardless of its own secondary structure assignment. 
-
-SSE performed on the sequence found in (\ref{E:descrseq}) gives the sequence in (\ref{E:extdescrseq}).
-Notice, the subsequence $[\, 8, 8 \,]$ in (\ref{E:descrseq}), corresponding to bends with torsion angles falling in the densest region of $\beta$-strand residues, becomes $[\, 5, 5 \,]$ in (\ref{E:extdescrseq}). 
-\begin{gather}\label{E:extdescrseq} 
-    [\, 5, 5, 5, 5, 5, 11, 11, 5, 5, 5, 5, 5, 5, 5, 10, 9 \,]
-\end{gather}
-
-Though \cite{Martin2005} lends some support to this heuristic, we use it primarily based on its performance. 
-
 \subsection{Bag representation of protein structure}
 
 Once a linear encoding for a protein structure is obtained, it needs to be further transformed into a representation suitable for fast and scalable similarity comparisons to other structures.
@@ -241,13 +226,13 @@ We transform a linear sequence of descriptors into a multiset of shingles consis
 The overlap between shingles ensures some of the order information within the original sequence is preserved in the bag. 
 
 By shingling, we obtain a multiset of ordered lists from an ordered list of numbers. 
-As an example, the sequence in (\ref{E:extdescrseq}) is transformed into the following bag of shingles. 
+As an example, the sequence in (\ref{E:descrseq}) is transformed into the following bag of shingles. 
 \begin{align}\label{E:shinglebag}
     \begin{split}
     \{\,&[5, 5, 5, 5], [5, 5, 5, 5], [5, 5, 5, 11], [5, 5, 11, 11], \\
         & [5, 11, 11, 5], [11, 11, 5, 5], [11, 5, 5, 5], [5, 5, 5, 5], \\
-        & [5, 5, 5, 5], [5, 5, 5, 5], [5, 5, 5, 5], [5, 5, 5, 10], \\
-        & [5, 5, 10, 9] \,\}
+        & [5, 5, 5, 5], [5, 5, 5, 8], [5, 5, 8, 8], [5, 8, 8, 10], \\
+        & [8, 8, 10, 9] \,\}
     \end{split}
 \end{align}
 
@@ -261,14 +246,14 @@ Subsequently, the multiset in (\ref{E:shinglebag}) becomes the following bag of 
 \begin{align}\label{E:hashbag}
     \begin{split}
     \{\,&11900, 11900, 11906, 11984, 12992, \\
-        &26096, 25082, 11900, 11900, 11900, \\
-        &11900, 11905, 11969 \,\}
+        &26096, 25082, 11900, 11900, 11903, \\
+        &11942, 12451, 19067 \,\}
     \end{split}
 \end{align}
 
 This final step completes the transformation of an ordered list of descriptors to a multiset of integers that still retains some of the order information present in the original list. 
 
-Notice in (\ref{E:hashbag}) the value 11900, corresponding to the shingle $[ 5, 5, 5, 5 ]$, occurs frequently indicating the presence of a $\beta$-strand. 
+Notice in (\ref{E:hashbag}) the value 11900, corresponding to the shingle $[ 5, 5, 5, 5 ]$, occurs frequently indicating the presence of $\beta$-strands. 
 Since most proteins are dominated by regular secondary structure, the abundance of shingles for $\beta$-strands as well as the three types of helices, end up dominating comparisons. 
 Moreover, since shingles are limited in length, this situation allows for structures with many short $\beta$-strands to match structures with fewer long $\beta$-strands.
 The same situation applies to helices. 
@@ -286,16 +271,16 @@ where $i$ is zero-based and $l$ is the length of the run.
 Multiplying by $10^5$ places the run factor as the left-most digit in the hash to avoid interference with the digits provided by the hash in (\ref{E:hashdef}).
 This placement is also convenient for visual inspection, since the run factor is isolated as the left-most digit. 
 
-The run factors for the sequence in (\ref{E:extdescrseq}) are
+The run factors for the sequence in (\ref{E:descrseq}) are
 \begin{align}
-    [\, 0, 1, 2, 1, 0, 0, 0, 0, 1, 2, 3, 2, 1, 0, 0, 0 \,].
+    [\, 0, 1, 2, 1, 0, 0, 0, 0, 1, 2, 1, 0, 0, 0, 0, 0 \,].
 \end{align}
 Applied to the bag of integers in (\ref{E:hashbag}) gives
 \begin{align}\label{E:rpebag}
     \begin{split}
     \{\,&011900, 111900, 211906, 111984, 012992, \\
-        &026096, 025082, 011900, 111900, 211900, \\
-        &311900, 211905, 111969 \,\},
+        &026096, 025082, 011900, 111900, 211903, \\
+        &111942, 012451, 019067 \,\}
     \end{split}
 \end{align}
 where the leading zero run factors are shown for clarity. 
@@ -311,7 +296,7 @@ To see why RPE run factors are calculated at the descriptor level and factored i
     &\qquad[\, 0, 1, 2, 2, 1, 0 \,] \text{ becomes} \\
     &\qquad\{\, [0, 1, 2, 2], [1, 2, 2, 1], [2, 2, 1, 0] \,\}
 \end{align*}
-Notice above, there is not a single shingle match for this one-off difference in run length.
+Notice above, there is not a single match for this one-off difference in run length.
 Now consider shingling a list of RPE factors, but this time all elements in the shingle are set equal to the first element in the shingle, which mirrors applying them at the shingle level. 
 \begin{align*}
     &\text{The sequence of RPE factors} \\
@@ -344,14 +329,12 @@ Min-hashing is used to randomly select items from a set of items by repeatedly r
 If the same random permutation of items is performed on each set of items in a collection, the key result is that the probability of matching min-hashes is equal to the Jaccard similarity \cite{Broder1998}.
 In order to approximate the Jaccard similarity for a given pair of sets, a sufficient number of min-hashes must be obtained. 
 
-In our case, the items are bags of shingle hashes for protein structures from which we obtain 60 min-hashes as described in \cite{Rajaraman2012}. 
+In our case, the items are bags of shingle hashes for protein structures from which we obtain 99 min-hashes as described in \cite{Rajaraman2012}. 
 Given the key result above, the Jaccard similarity can now be approximated by the proportion of matching min-hashes. 
-
-Weighted min-hashing \cite{Chum2008} with integral weights is an extension to min-hashing that can be applied to multisets where the frequency of a hash within a multiset is used as its weight. 
 
 Next, we use the LSH banding technique as described in \cite{Rajaraman2012}.
 The key result of the banding technique is that if \emph{any} band positions are a match for a given pair of structures, the probability that a specific similarity threshold has been met can be calculated. 
-We use 20 bands of 3-min-hashes where the probability of a Jaccard similarity of 60\% or greater is approximately 99\%. 
+We use 33 bands of 3-min-hashes where the probability of a Jaccard similarity of 60\% or greater is approximately 99\%. 
 Banding allows the problem of finding similar items to be parallelized across bands since all that is needed for a match is a single band match. 
 
 Together, min-hashing and LSH allow for a fast and scalable protein structure search using run position encoded shingles of residue descriptors.  
