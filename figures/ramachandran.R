@@ -11,13 +11,13 @@ rm(list = ls())
 df <- read.csv('torsion.txt')
 
 # map values
-df$sse <- mapvalues(df$sse, from = c('Turn', 'Bridge', 'Bend'), to = c('Helix', 'Strand', 'Coil'))
+df$sse <- mapvalues(df$sse, from = c('Turn', 'Bridge', 'Bend', 'Coil'), to = c('Helix', 'Strand', 'Bend/Coil', 'Bend/Coil'))
 
 # reorder factor levels
-df$sse <- factor(df$sse, levels = c('Helix', 'Strand', 'Coil'))
+df$sse <- factor(df$sse, levels = c('Helix', 'Strand', 'Bend/Coil'))
 
 # color scale
-color_scale <- c('Helix' = 'red', 'Strand' = 'green', 'Coil' = 'black')
+color_scale <- c('Helix' = 'red', 'Strand' = 'green', 'Bend/Coil' = 'black')
 
 ramachandran_plot <- ggplot(df, aes(phi, psi, color = sse)) +
     

@@ -6,6 +6,6 @@ Helix,140,180,4
 Strand,140,180,5
 Strand,140,0,6
 Strand,480,-80,7
-Coil,140,180,8
-Coil,140,0,9
-Coil,480,-80,10
+Bend/Coil,140,180,8
+Bend/Coil,140,0,9
+Bend/Coil,480,-80,10

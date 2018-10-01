@@ -11,20 +11,20 @@ refs <- read.csv('torsion_refs.txt')
 annotes <- read.csv('torsion_annotes.txt')
 
 # map values
-df$sse <- mapvalues(df$sse, from = c('Bend'), to = c('Coil'))
+df$sse <- mapvalues(df$sse, from = c('Turn', 'Bridge', 'Bend', 'Coil'), to = c('Helix', 'Strand', 'Bend/Coil', 'Bend/Coil'))
 
 # subset data
-df <- subset(df, df$sse == 'Helix' | df$sse == 'Strand' | df$sse == 'Coil')
+df <- subset(df, df$sse == 'Helix' | df$sse == 'Strand' | df$sse == 'Bend/Coil')
 
 # reorder factor levels
-df$sse <- factor(df$sse, levels = c('Helix', 'Strand', 'Coil'))
+df$sse <- factor(df$sse, levels = c('Helix', 'Strand', 'Bend/Coil'))
 
 # wrap and translate torsion angles
 df$phi <- ifelse(df$phi < 0, df$phi + 360, df$phi)
 df$phi <- df$phi + 200
 
 # color scale
-color_scale <- c('Helix' = 'red', 'Strand' = 'green', 'Coil' = 'black')
+color_scale <- c('Helix' = 'red', 'Strand' = 'green', 'Bend/Coil' = 'black')
 
 ggplot(df, aes(phi, psi, color = sse)) +
     
