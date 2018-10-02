@@ -139,7 +139,9 @@ At a minimum, RUPEE takes a significant step in this direction as will be shown 
 
 \section{METHODS}
 
-Broadly, we define a linear encoding of protein structure and convert this linear encoding into a bag of features amenable to big data processing.
+Broadly, we define a linear encoding of protein structure and convert this linear encoding into a bag of features. 
+Min-hashing and locality sensitive hashing (LSH), techniques drawn from big-data, are then applied to implement a protein structure indexing method that serves as the foundation for both RUPEE operating modes, fast and slow. 
+
 Protein structure searches that use linear encodings are not unique \cite{Carpentier2005,Daniluk2011,Ritchie2012}.
 The novelty of our approach lies in its remarkable performance given its simplicity. 
 Additionally, elements of our approach can be isolated and found to be useful in their own right. 
@@ -181,9 +183,6 @@ Polar plots for each group of DSSP assignment codes along with defined regions a
 For each polar plot, there are well-defined continuous regions of torsion angles that remain continuous in the plots. 
 The only exception is found in the bends and coil plot at $\psi = 60\degree$ between $\phi = -180\degree$ and $\phi = 0\degree$.
 
-\tablename~\ref{tab:codes} summarizes the mapping between region and secondary structure assignment combinations and ranges of integer valued descriptors.  
-The specific mapping was arrived at primarily based on an evaluation of results. 
-
 \begin{figure*}[tb]
 \begin{center}
 \includegraphics{torsion_refs}
@@ -191,23 +190,6 @@ The specific mapping was arrived at primarily based on an evaluation of results.
 \caption{Polar plots of randomly sampled torsion angles with designated descriptors for region and DSSP code combinations}
 \label{fig:torsion_refs}
 \end{figure*}
-
-\begin{table}[t]
-    \caption{DSSP Code/Descriptor Map}
-    \label{tab:codes}
-\centering
-\begin{tabular}{lll}
-\toprule
-    \head{DSSP Codes} & \head{SS} & \head{Descriptors}\\
-\midrule
-    G, H, I & helix & 1-4\\
-    E & strand & 5-7\\
-    S, C & bend, coil & 8-10\\
-    T & turn & 11\\
-    B & bridge & 12\\
-\bottomrule
-\end{tabular}
-\end{table}
 
 Our initial use of Ramachandran plots to identify regions resulted in the frequent case of highly similar domains from the same CATH s95 clusters being considered significantly different. 
 Alignment of these domains in PyMOL \cite{PyMOL} and the development of a script to label residues with their descriptors showed that slight differences in structure often resulted in distinct descriptors being assigned to aligned residues. 
