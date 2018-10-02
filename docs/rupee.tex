@@ -1,5 +1,9 @@
 \documentclass[a4,center,fleqn]{NAR}
 
+%TODO
+% 1. Subsection 'fast and scalable structure search' is not the final section. 
+% 2. In the intro to methods we should indicate the general outline better. 
+
 \usepackage{textcomp}
 \usepackage{lmodern}
 \usepackage{gensymb}
@@ -81,11 +85,10 @@ As such, understanding protein structure is a central goal within structural bio
 Protein structure determination, prediction, alignment, and search all serve to advance this understanding. 
 Below, we present our new approach to a fast, scalable, and purely geometric protein structure search we refer to with the acronym of \emph{RUn Position Encoded Encodings} of residue descriptors (RUPEE).
 
-%For comparisons, we examine results from the mTM-align structure search \cite{Dong2018}, the CATHEDRAL structural scan \cite{Redfern2007} available at the CATH website \cite{Sillitoe2015}, and the secondary structure matching (SSM) search \cite{Krissinel2004}.
-%To evaluate RUPEE, we have made comparisons to the output of the above tools along two dimensions, quality of results and response times. 
-%In the case CATHEDRAL and SSM, RUPEE performs better on average for the domains we evaluated. 
-
-%Restricting our initial approach to protein domains, we have indexed CATH v4.1 domains, consisting of 308,999 structures, and developed a feature similar to CATHEDRAL that performs a protein structure search based on a PDB file, returning results in seconds rather than minutes.
+RUPEE has two modes of operation, fast and regular. 
+Fast mode is significantly faster than all other protein structure searches discussed below but at the expensive of accuracy.
+Despite this, we will show that the accuracy of RUPEE in fast mode is not far below that of the best available structure searches. 
+On the other hand, the accuracy and response times of RUPEE in regular mode are comparable to currently available protein structure searches that are commonly considered fast. 
 
 Besides our approach to protein structure search, we introduce a polar plot for torsion angles that may have wider applicability in the study of protein structure. 
 Further, the \emph{run position encoding} heuristic introduced below may have wider applicability to algorithms for character sequences containing long runs of repeats. 
@@ -178,6 +181,9 @@ Polar plots for each group of DSSP assignment codes along with defined regions a
 For each polar plot, there are well-defined continuous regions of torsion angles that remain continuous in the plots. 
 The only exception is found in the bends and coil plot at $\psi = 60\degree$ between $\phi = -180\degree$ and $\phi = 0\degree$.
 
+\tablename~\ref{tab:codes} summarizes the mapping between region and secondary structure assignment combinations and ranges of integer valued descriptors.  
+The specific mapping was arrived at primarily based on an evaluation of results. 
+
 \begin{figure*}[tb]
 \begin{center}
 \includegraphics{torsion_refs}
@@ -185,9 +191,6 @@ The only exception is found in the bends and coil plot at $\psi = 60\degree$ bet
 \caption{Polar plots of randomly sampled torsion angles with designated descriptors for region and DSSP code combinations}
 \label{fig:torsion_refs}
 \end{figure*}
-
-\tablename~\ref{tab:codes} summarizes the mapping between region and secondary structure assignment combinations and ranges of integer valued descriptors.  
-The specific mapping was arrived at primarily based on quality of results. 
 
 \begin{table}[t]
     \caption{DSSP Code/Descriptor Map}
