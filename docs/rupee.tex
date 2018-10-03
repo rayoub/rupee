@@ -1,9 +1,5 @@
 \documentclass[a4,center,fleqn]{NAR}
 
-%TODO
-% 1. Subsection 'fast and scalable structure search' is not the final section. 
-% 2. In the intro to methods we should indicate the general outline better. 
-
 \usepackage{textcomp}
 \usepackage{lmodern}
 \usepackage{gensymb}
@@ -30,16 +26,18 @@
 \title{Article title}
 
 \author{%
-Corresponding Author\,$^{1,*}$,
-First Co-Author\,$^{2}$
-and Second Co-Author\,$^2$%
+Ronald Ayoub\,$^{1,}$%
 \footnote{To whom correspondence should be addressed.
-Tel: +44 000 0000000; Fax: +44 000 0000000; Email: xxx@yyyy.ac.zz}}
+Email: ronaldayoub@mail.umkc.edu},
+Yugyung Lee\,$^{1}$}
 
 \address{%
-$^{1}$Affiliation of Corresponding Author
-and
-$^{2}$Affiliation of Both Co-Authors}
+$^{1}$
+School of Computing and Engineering, 
+University of Missouri at Kansas City,
+5110 Rockhill Road,
+Kansas City, MO 64110, USA}
+
 % Affiliation must include:
 % Department name, institution name, full road and district address,
 % state, Zip or postal code, country
@@ -299,7 +297,7 @@ Now that we have a representation of a protein structure as a bag of integers, s
 \end{align}
 where $i$ ranges over all possible shingle hashes $s_i$ and $a_i$ and $b_i$ give the counts of shingle hash $s_i$ in structures $a$ and $b$, respectively. 
 
-\subsection{Fast and scalable structure search}
+\subsection{Min-hashing and LSH}
 
 In IR, the bag of shingles representation of documents is used in the near dupe clustering of documents \cite{Broder1997b}.
 One application of near dupe clustering is in the review stage of Electronic-Discovery \cite{Joshi2008}, which is the most expensive stage in a discovery process. 
@@ -322,7 +320,22 @@ The key result of the banding technique is that if \emph{any} band positions are
 We use 33 bands of 3-min-hashes where the probability of a Jaccard similarity of 60\% or greater is approximately 99\%. 
 Banding allows the problem of finding similar items to be parallelized across bands since all that is needed for a match is a single band match. 
 
-Together, min-hashing and LSH allow for a fast and scalable protein structure search using run position encoded shingles of residue descriptors.  
+Together, min-hashing and LSH provide the foundation for both operating modes of RUPEE, fast and regular.
+
+\subsection{Operating modes}
+
+Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
+Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
+Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
+Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
+Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
+Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
+Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
+Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
+Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
+Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
+Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
+Text. Text. Text. Text. Text. Text. Text. Text. Text.
 
 \section{RESULTS}
 
