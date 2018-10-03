@@ -81,7 +81,11 @@ Text. Text.
 Proteins represent the functional end-product within the central dogma of molecular biology \cite{Crick1970}.
 As such, understanding protein structure is a central goal within structural bioinformatics. 
 Protein structure determination, prediction, alignment, and search all serve to advance this understanding. 
-Below, we present our new approach to a fast, scalable, and purely geometric protein structure search we refer to with the acronym of \emph{RUn Position Encoded Encodings} of residue descriptors (RUPEE).
+Below, we present our approach to a fast, scalable, and purely geometric protein structure search we refer to with the acronym of \emph{RUn Position Encoded Encodings} of residue descriptors (RUPEE).
+
+Given a protein domain identifier, whole chain identifier or an uploaded file, RUPEE can search for matches among domains defined in SCOPe 2.07 \cite{Fox2013}, CATH v4.2 \cite{Orengo1997}, ECOD develop210 \cite{Cheng2014}, or else among whole chains defined in the PDB.
+In contrast to currently available protein structure searches, RUPEE is able to search either of these databases using any identifier. 
+For instance, you can search SCOPe using a CATH domain identifier. 
 
 RUPEE has two modes of operation, fast and regular. 
 Fast mode is significantly faster than all other protein structure searches discussed below but at the expensive of accuracy.
@@ -92,7 +96,7 @@ Besides our approach to protein structure search, we introduce a polar plot for 
 Further, the \emph{run position encoding} heuristic introduced below may have wider applicability to algorithms for character sequences containing long runs of repeats. 
 
 We first discuss some related work to provide a context for our approach followed by a description of our method. 
-We end with a comparison of results against the mTM-align structure search \cite{Dong2018}, the secondary structure matching (SSM) search \cite{Krissinel2004}, and the CATHEDRAL structural scan \cite{Redfern2007} available at the CATH website \cite{Sillitoe2015}.
+We end with a comparison of results against the mTM-align structure search \cite{Dong2018}, the secondary structure matching (SSM) search \cite{Krissinel2004}, and the CATHEDRAL structural scan \cite{Redfern2007} available at the CATH website.
 
 % **************************************************************
 % Keep this command to avoid text of first page running into the
