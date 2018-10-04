@@ -7,7 +7,8 @@ At this stage, the initial RUPEE paper serves only to describe the common basis 
 
 RUPEE itself is available for use at <http://www.ayoubresearch.com>.
 
-Below, I will attempt to describe how to find your way around the RUPEE repo, directory by directory, in the order required for setting up RUPEE in your own environment. 
+Below, I will attempt to describe how to find your way around the RUPEE repo, directory by directory, in the order required for setting up RUPEE in your own environment. It is assumed that you are familiar with RUPEE and have at least read and understood the paper. 
+
 Some hard-coded variables are present in RUPEE. 
 These hard-coded variables will be mentioned in the order they arise and summarized in a section following the directory descriptions. 
 As far as software dependencies go, Java 8 and an installation of postgreSQL 9.4 or above are required.
@@ -32,6 +33,8 @@ The x\_ files contain hard-coded references to file locations that should be cha
 Unfortunately, the postgres COPY command does not except relative directories. 
 
 Once you have a database for RUPEE set up, run the y_create_all.sql script. 
+This script will only create SQL objects. 
+It will not populate any tables.
 Within the __psql__ command line tool provided by postgres, this can be done with the following command:
 
 ```
@@ -43,11 +46,12 @@ These typically contain queries I have found useful during development.
 
 ### rupee-mgr/
 
-This directory contain the Java project for administering RUPEE. 
+This directory contains the Java project for administering RUPEE. 
 The project also serves as a library used by the RUPEE web site. 
 The root directory contains a Maven pom file used for building the project into the rupee-mgr/target/ subdirectory. 
+Before building, you should update the hard-coded values in the Constants.java file in the lib namespace. 
 
-Running the jar with the command line parameter ```-?```, gives the following output: 
+Once successfully built, running the jar with the command line parameter ```-?```, gives the following output: 
 
 ```
 ~/git/rupee/rupee-mgr/target$ java -jar rupee-mgr-0.0.1-SNAPSHOT-jar-with-dependencies.jar -?
@@ -57,11 +61,46 @@ Usage: RUPEE
      -a,--align <ID_TYPE><DB_ID_1>,<DB_ID_2><ALIGN>
      -t,--tm align <ID_TYPE>,<DB_ID_1>,<DB_ID_2>
      -l,--lcs <ID_TYPE>,<DB_ID_1>,<DB_ID_2>
-     -s,--search <SEARCH_BY><ID_TYPE>,<DB_TYPE>,<DB_ID>,<LIMIT>,<REP1>,<REP2>,<REP3>,<DIFF1>,<DIFF2><DIFF3><ALIGN>,<SORT>
+     -s,--search <SEARCH_BY><ID_TYPE>,<DB_TYPE>,<DB_ID>,<LIMIT>,<REP1>,<REP2>,<REP3>,<DIFF1>,<DIFF2><DIFF3><MODE>,<SORT>
      -u,--upload <FILE_PATH>
      -d,--debug
      -?,--help
 ```
+
+Where 
+
+```
+<SEARCH_BY> = DB_ID | UPLOAD_ID
+<ID_TYPE>   = SCOP | CATH | ECOD | CHAIN
+<DB_TYPE>   = SCOP | CATH | ECOD | CHAIN
+<ALIGN>     = CE | CECP | FATCAT_RIGID | FATCAT_FLEXIBLE
+<MODE>      = FAST | REGULAR
+<SORT>      = RMSD | TM_SCORE | SIMILARITY
+<REP#>      = TRUE | FALSE
+<DIFF#>     = TRUE | FALSE
+```
+
+The ID_TYPE and DB_TYPE parameters take the same values. 
+This allows searching one kind of database with a different kind of id. 
+For instance, you can search the CATH database using a SCOP id. 
+
+The following table briefly describes each command line option.
+
+Option | Description
+------ | -----------
+-i  | parse pdb files in the data directories and populate \_grams tables
+-h  | min-hash grams in the \_grams tables and populate the \_hashes tables
+-a  | align structures using a specific alignment
+-t  | use Java rewrite of TM-align to align structures (currently, not used by RUPEE)
+-l  | align structures using the LCS algorithm
+-s  | search for similar structures 
+-u  | upload a pdb file and obtain an internal identifier
+-d  | random code for miscellaneous task
+-?  | prints the available options
+
+In the case of searching for structures similar to an uploaded structure, the ```-s``` option ignores the ID_TYPE parameter and expects an internal upload id for the DB_ID parameter.
+
+At this stage, you only need to build the rupee-mgr project to proceed. 
 
 ### data/
 

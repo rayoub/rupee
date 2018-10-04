@@ -3,10 +3,10 @@
 data/pdb/pdb/
 data/pdb/obsolete/
 data/pdb/index/
-data/cath/pdb/
 data/scop/pdb/
-data/chain/pdb/
+data/cath/pdb/
 data/ecod/pdb/
+data/chain/pdb/
 data/upload/
 
 # big data files
