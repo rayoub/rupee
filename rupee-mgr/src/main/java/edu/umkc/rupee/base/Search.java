@@ -33,6 +33,7 @@ import edu.umkc.rupee.lib.Db;
 import edu.umkc.rupee.lib.DbTypeCriteria;
 import edu.umkc.rupee.lib.Hashes;
 import edu.umkc.rupee.lib.LCS;
+import edu.umkc.rupee.lib.ModeCriteria;
 import edu.umkc.rupee.lib.SearchByCriteria;
 import edu.umkc.rupee.lib.Similarity;
 import edu.umkc.rupee.lib.SortCriteria;
@@ -107,8 +108,8 @@ public abstract class Search {
                     .limit(criteria.limit) 
                     .collect(Collectors.toList());
 
-                // if alignment is requested
-                if (criteria.align) {
+                // if mode is regular
+                if (criteria.mode == ModeCriteria.REGULAR) {
 
                     // cache common objects for use by multiple threads 
                     Parser parser = new Parser(Integer.MAX_VALUE);

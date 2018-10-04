@@ -44,12 +44,14 @@ import edu.umkc.rupee.ecod.EcodSearchCriteria;
 import edu.umkc.rupee.ecod.EcodSearchRecord;
 import edu.umkc.rupee.lib.AlignCriteria;
 import edu.umkc.rupee.lib.AlignRecord;
+import edu.umkc.rupee.lib.AlignResults;
 import edu.umkc.rupee.lib.Aligning;
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
 import edu.umkc.rupee.lib.DbTypeCriteria;
 import edu.umkc.rupee.lib.Hashes;
 import edu.umkc.rupee.lib.LCS;
+import edu.umkc.rupee.lib.ModeCriteria;
 import edu.umkc.rupee.lib.SearchByCriteria;
 import edu.umkc.rupee.lib.Similarity;
 import edu.umkc.rupee.lib.SortCriteria;
@@ -100,7 +102,7 @@ public class Main {
         group.addOption(Option.builder("s")
                 .longOpt("search")
                 .numberOfArgs(13)
-                .argName("SEARCH_BY><ID_TYPE>,<DB_TYPE>,<DB_ID>,<LIMIT>,<REP1>,<REP2>,<REP3>,<DIFF1>,<DIFF2><DIFF3><ALIGN>,<SORT")
+                .argName("SEARCH_BY><ID_TYPE>,<DB_TYPE>,<DB_ID>,<LIMIT>,<REP1>,<REP2>,<REP3>,<DIFF1>,<DIFF2><DIFF3><MODE>,<SORT")
                 .valueSeparator(',')
                 .build());
         group.addOption(Option.builder("u")
@@ -337,6 +339,7 @@ public class Main {
             // estimated and exact based on overlapping grams
             double estimated = Similarity.getEstimatedSimilarity(hashes1.minHashes, hashes2.minHashes);
             double exact = Similarity.getExactSimilarity(grams1, grams2);
+            double weighted = Similarity.getWeightedSimilarity(grams1, grams2);
 
             // lcs validated matching grams
             int length = LCS.getLCSLength(grams1, grams2);
@@ -350,6 +353,7 @@ public class Main {
             System.out.println(""); 
             System.out.println("Estimated Similarity:   " + estimated);
             System.out.println("Exact Similarity:       " + exact);
+            System.out.println("Weighted Similarity:    " + weighted);
             System.out.println(""); 
             System.out.println("LCS Length:             " + length);
             System.out.println("LCS Score:              " + score);
@@ -375,6 +379,7 @@ public class Main {
 
         Set<String> searchTypeNames = new HashSet<>(Arrays.stream(SearchByCriteria.values()).map(v -> v.name()).collect(Collectors.toList()));
         Set<String> dbTypeNames = new HashSet<>(Arrays.stream(DbTypeCriteria.values()).map(v -> v.name()).collect(Collectors.toList()));
+        Set<String> modeNames = new HashSet<>(Arrays.stream(ModeCriteria.values()).map(v -> v.name()).collect(Collectors.toList()));
         Set<String> sortNames = new HashSet<>(Arrays.stream(SortCriteria.values()).map(v -> v.name()).collect(Collectors.toList()));
 
         String[] args = line.getOptionValues("s");
@@ -432,10 +437,6 @@ public class Main {
             System.err.println("The <DIFF3> argument must be TRUE or FALSE");
             return;
         }
-        if (!args[11].equals("TRUE") && !args[11].equals("FALSE")) {
-            System.err.println("The <ALIGN> argument must be TRUE or FALSE");
-            return;
-        }
 
         boolean rep1 = Boolean.parseBoolean(args[5]);
         boolean rep2 = Boolean.parseBoolean(args[6]);
@@ -443,7 +444,14 @@ public class Main {
         boolean diff1 = Boolean.parseBoolean(args[8]);
         boolean diff2 = Boolean.parseBoolean(args[9]);
         boolean diff3 = Boolean.parseBoolean(args[10]);
-        boolean align = Boolean.parseBoolean(args[11]);
+
+        // mode
+        if (!modeNames.contains(args[11])) {
+            System.err.println("The <MODE> argument must be one of " + modeNames.toString());
+            return;
+        }
+
+        ModeCriteria mode = ModeCriteria.valueOf(args[11]);
        
         // sorting 
         if (!sortNames.contains(args[12])) {
@@ -454,7 +462,7 @@ public class Main {
         SortCriteria sort = SortCriteria.valueOf(args[12]);
 
         // consistency rule
-        if (!align) {
+        if (mode == ModeCriteria.FAST) {
             sort = SortCriteria.SIMILARITY;
         }
               
@@ -481,7 +489,7 @@ public class Main {
             criteria.page = 1;
             criteria.pageSize = limit;
             criteria.limit = limit;
-            criteria.align = align;
+            criteria.mode = mode;
             criteria.sort = sort;
             criteria.differentFold = diff1;
             criteria.differentSuperfamily = diff2;
@@ -539,7 +547,7 @@ public class Main {
             criteria.page = 1;
             criteria.pageSize = limit;
             criteria.limit = limit;
-            criteria.align = align;
+            criteria.mode = mode;
             criteria.sort = sort;
             criteria.topologyReps = rep1;
             criteria.superfamilyReps = rep2;
@@ -602,7 +610,7 @@ public class Main {
             criteria.page = 1;
             criteria.pageSize = limit;
             criteria.limit = limit;
-            criteria.align = align;
+            criteria.mode = mode;
             criteria.sort = sort;
             criteria.differentH = diff1;
             criteria.differentT = diff2;
@@ -660,7 +668,7 @@ public class Main {
             criteria.page = 1;
             criteria.pageSize = limit;
             criteria.limit = limit;
-            criteria.align = align;
+            criteria.mode = mode;
             criteria.sort = sort;
 
             ChainSearch chainSearch = new ChainSearch();
@@ -716,6 +724,10 @@ public class Main {
 
     private static void option_d(CommandLine line) {
 
+        //AlignResults.alignMtmDomResults("scop_d360", "dom_v08_03_2018", DbTypeCriteria.SCOP, 100);
+        //AlignResults.alignCathedralResults("cath_d94", "cath_v4_1_0", DbTypeCriteria.CATH, 50);
+        //AlignResults.alignSsmResults("scop_d62","scop_v1_73", DbTypeCriteria.SCOP, 50);
+        AlignResults.alignRupeeResults("scop_d62", "scop_v1_73", DbTypeCriteria.SCOP, 50, true);
     }
 
     private static void option_help(Options options) {

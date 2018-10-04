@@ -1,6 +1,7 @@
 package edu.umkc.rupee.base;
 
 import edu.umkc.rupee.lib.DbTypeCriteria;
+import edu.umkc.rupee.lib.ModeCriteria;
 import edu.umkc.rupee.lib.SearchByCriteria;
 import edu.umkc.rupee.lib.SortCriteria;
 
@@ -14,7 +15,7 @@ public class SearchCriteria {
     public int page;
     public int pageSize;
     public int limit;
-    public boolean align;
+    public ModeCriteria mode;
     public SortCriteria sort;
 }
 
