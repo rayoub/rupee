@@ -1,19 +1,17 @@
 
 ### Introduction
 
-This project contains code and data initially based on the paper [RUPEE: Scalable protein structure search using run position encoded residue descriptors](http://ieeexplore.ieee.org/document/8217627/) published in the IEEE International Conference on Bioinformatics and Biomedicine of 2017. 
+This project contains code and data initially associated with the paper [RUPEE: Scalable protein structure search using run position encoded residue descriptors](http://ieeexplore.ieee.org/document/8217627/) published in the IEEE International Conference on Bioinformatics and Biomedicine of 2017. 
 RUPEE is under continual development.
 At this stage, the initial RUPEE paper serves only to describe the common basis for the current RUPEE operating modes, fast and regular, which are described in a paper currently being prepared for submission. 
 
 RUPEE itself is available for use at <http://www.ayoubresearch.com>.
 
-Below, I will attempt to describe how to find your way around the RUPEE repo, directory by directory, in the order required for setting up RUPEE in your own environment. It is assumed that you are familiar with RUPEE and have at least read and understood the paper. 
+Below, I will attempt to describe how to find your way around the RUPEE repo, directory by directory, in the order required for setting up RUPEE in your own environment. It is assumed that you are familiar with RUPEE and have at least read the paper. 
 
-Some hard-coded variables are present in RUPEE. 
-These hard-coded variables will be mentioned in the order they arise and summarized in a section following the directory descriptions. 
 As far as software dependencies go, Java 8 and an installation of postgreSQL 9.4 or above are required.
-Additionally, the instructions below assume you are operating within a bash shell. 
-More commonly, this will be under Linux. 
+The instructions below assume you are operating within a bash shell. 
+Typically, this will be under Linux. 
 However, Windows 10 does contain a bash shell as well if you take actions to enable it or else you can use an install of Cygwin on earlier versions of Windows. 
 
 If you need additional info or have questions not addressed below, contact me at ronaldayoub@mail.umkc.edu.
@@ -21,7 +19,7 @@ If you need additional info or have questions not addressed below, contact me at
 ### ./
 
 Some files, especially data files, are too numerous or too large to include in the github repo. 
-The .gitignore file provides an indicators of the files and directories that have been explicitly excluded from the repo. 
+The .gitignore file list the files and directories that have been explicitly excluded from the repo. 
 
 ### db/
 
@@ -32,7 +30,7 @@ x\_ files are used for populating tables and should only be run when parsed data
 The x\_ files contain hard-coded references to file locations that should be changed to match your Linux home directory.
 Unfortunately, the postgres COPY command does not except relative directories. 
 
-Once you have a database for RUPEE set up, run the y_create_all.sql script. 
+Once you have created a database with the case-sensitive name 'rupee', run the y_create_all.sql script,
 This script will only create SQL objects. 
 It will not populate any tables.
 Within the __psql__ command line tool provided by postgres, this can be done with the following command:
@@ -90,7 +88,7 @@ Option | Description
 ------ | -----------
 -i  | parse pdb files in the data directories and populate \_grams tables
 -h  | min-hash grams in the \_grams tables and populate the \_hashes tables
--a  | align structures using a specific alignment
+-a  | align structures using a specific alignment algorithm
 -t  | use Java rewrite of TM-align to align structures (currently, not used by RUPEE)
 -l  | align structures using the LCS algorithm
 -s  | search for similar structures 
@@ -106,7 +104,7 @@ At this stage, you only need to build the rupee-mgr project to proceed.
 
 This directory contains all data files and scripts used in parsing the files. 
 
-The following directories along with brief descriptions are excluded from the repo. 
+The following directories, along with brief descriptions, are excluded from the repo. 
 
 Excluded Directory | Description
 ------------------ | -----------
@@ -119,8 +117,20 @@ data/ecod/pdb/     | parsed pdb files based on ecod definitions
 data/chain/pdb/    | parsed pdb files containing whole chains
 data/upload/       | directory used for temporary storage of uploaded pdb files
 
-### results/ 
+First, the data/pdb/ directory has to be populated with files downloaded from the wwpdb FTP site. 
+Then, the files can be parsed based on structure definitions to populate the data/scop/, data/cath/, data/ecod/ and data/chain/ directories. 
+Each of these directories can be parsed and processed independently. 
+Since this can take a significant amount of time, consider picking one initially, for instance data/scop/. 
 
-### figures/
+Each of the directories, data/scop/, data/cath/, data/ecod/ and data/chain/ follow a similar pattern with some redundant code to keep things simple. 
+There is a do_all.sh bash script that can be used to parse structure definitions and subsequently parse pdb files based on the structure definitions.
+Look at the do_all.sh bash script for exact details. 
+Sometimes a modified script is checked in with some lines commented out. 
+Before an initial run make sure all lines are uncommented. 
 
-### hard-coded variables
+The do_all.sh bash script will also execute the above rupee-mgr application in order to import and hash structures once parsing is complete. 
+
+To execute the do_all.sh script, check the parameters required for each script and pass in the parameters based on the structure definitions files you want to process. In the .gitignore file you will find references to these files downloaded from the source sites, i.e. SCOP, CATH, and ECOD.  
+
+As long as you have successfully parsed and processed one of these directories, you can now execute searches with the rupee-mgr application.  
+
