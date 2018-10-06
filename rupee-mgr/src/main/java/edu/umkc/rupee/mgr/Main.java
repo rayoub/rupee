@@ -339,7 +339,6 @@ public class Main {
             // estimated and exact based on overlapping grams
             double estimated = Similarity.getEstimatedSimilarity(hashes1.minHashes, hashes2.minHashes);
             double exact = Similarity.getExactSimilarity(grams1, grams2);
-            double weighted = Similarity.getWeightedSimilarity(grams1, grams2);
 
             // lcs validated matching grams
             int length = LCS.getLCSLength(grams1, grams2);
@@ -353,7 +352,6 @@ public class Main {
             System.out.println(""); 
             System.out.println("Estimated Similarity:   " + estimated);
             System.out.println("Exact Similarity:       " + exact);
-            System.out.println("Weighted Similarity:    " + weighted);
             System.out.println(""); 
             System.out.println("LCS Length:             " + length);
             System.out.println("LCS Score:              " + score);
@@ -727,7 +725,7 @@ public class Main {
         //AlignResults.alignMtmDomResults("scop_d360", "dom_v08_03_2018", DbTypeCriteria.SCOP, 100);
         //AlignResults.alignCathedralResults("cath_d94", "cath_v4_1_0", DbTypeCriteria.CATH, 50);
         //AlignResults.alignSsmResults("scop_d62","scop_v1_73", DbTypeCriteria.SCOP, 50);
-        AlignResults.alignRupeeResults("scop_d62", "scop_v1_73", DbTypeCriteria.SCOP, 50, true);
+        AlignResults.alignRupeeResults("scop_d62", "scop_v2_07", DbTypeCriteria.SCOP, 50, false);
     }
 
     private static void option_help(Options options) {
