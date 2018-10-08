@@ -7,7 +7,8 @@ At this stage, the initial RUPEE paper serves only to describe the common basis 
 
 RUPEE itself is available for use at <http://www.ayoubresearch.com>.
 
-Below, I will attempt to describe how to find your way around the RUPEE repo, directory by directory, in the order required for setting up RUPEE in your own environment. It is assumed that you are familiar with RUPEE and have at least read the paper. 
+Below, I will attempt to describe how to find your way around the RUPEE repo, directory by directory, in the order required for setting up RUPEE in your own environment. 
+It is assumed that you are familiar with RUPEE and have read the paper. 
 
 As far as software dependencies go, Java 8 and an installation of postgreSQL 9.4 or above are required.
 The instructions below assume you are operating within a bash shell. 
@@ -80,7 +81,7 @@ Where
 
 The ID_TYPE and DB_TYPE parameters take the same values. 
 This allows searching one kind of database with a different kind of id. 
-For instance, you can search the CATH database using a SCOP id. 
+For instance, you can search the SCOP database using a CATH id. 
 
 The following table briefly describes each command line option.
 
@@ -123,8 +124,8 @@ Each of these directories can be parsed and processed independently.
 Since this can take a significant amount of time, consider picking one initially, for instance data/scop/. 
 
 Each of the directories, data/scop/, data/cath/, data/ecod/ and data/chain/ follow a similar pattern with some redundant code to keep things simple. 
-There is a do_all.sh bash script that can be used to parse structure definitions and subsequently parse pdb files based on the structure definitions.
-Look at the do_all.sh bash script for exact details. 
+The do_all.sh bash scripts can be used to parse structure definitions and subsequently parse pdb files based on the structure definitions.
+Look at the do_all.sh bash scripts for exact details. 
 Sometimes a modified script is checked in with some lines commented out. 
 Before an initial run make sure all lines are uncommented. 
 
