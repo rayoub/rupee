@@ -84,7 +84,7 @@ public abstract class Search {
                 records = IntStream.range(0, Constants.BAND_CHECK_COUNT).boxed().parallel()
                     .flatMap(bandIndex -> searchBand(bandIndex, criteria, grams1, hashes1).stream())
                     .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
-                    .limit(Constants.MAX_CANDIDATE_COUNT) 
+                    .limit(criteria.mode.getMaxCandidateCount()) 
                     .collect(Collectors.toList());
 
                 // cache map of residue grams
