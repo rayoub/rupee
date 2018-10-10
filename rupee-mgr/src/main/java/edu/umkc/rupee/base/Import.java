@@ -375,45 +375,21 @@ public abstract class Import {
                         residue1.getBreakAfter() || residue2.getBreakAfter() || 
                         residue2.getBreakBefore() || residue3.getBreakBefore()
                     )) {
-/*
-                    int regCount = 0;
-                    int turnAndBridgeCount = 0;
-                    if (residue1.isHelix() || residue1.isStrand()) {
-                        regCount++;
-                    }
-                    else if (residue1.isTurn() || residue1.isBridge()) {
-                        turnAndBridgeCount++;
-                    }
-                    if (residue2.isHelix() || residue2.isStrand()) {
-                        regCount++;
-                    }
-                    else if (residue2.isTurn() || residue2.isBridge()) {
-                        turnAndBridgeCount++;
-                    }
-                    if (residue3.isHelix() || residue3.isStrand()) {
-                        regCount++;
-                    }
-                    else if (residue3.isTurn() || residue3.isBridge()) {
-                        turnAndBridgeCount++;
-                    }
 
-                    if (regCount >= 1 || turnAndBridgeCount >= 2) {
-*/
-                        // abcd
-                        int gram = 
-                            residue1.getDescriptor() * Constants.PRIME_POW_2 + 
-                            residue2.getDescriptor() * Constants.PRIME_POW_1 +
-                            residue3.getDescriptor();
-                       
-                        // rr abcd
-                        int runFactor = residue1.getRunFactor() % 100;
-                        gram = gram + runFactor * Constants.DEC_POW_4; 
+                    // abcd
+                    int gram = 
+                        residue1.getDescriptor() * Constants.PRIME_POW_2 + 
+                        residue2.getDescriptor() * Constants.PRIME_POW_1 +
+                        residue3.getDescriptor();
+                   
+                    // rr abcd
+                    int runFactor = residue1.getRunFactor() % 100;
+                    gram = gram + runFactor * Constants.DEC_POW_4; 
 
-                        // set hashes
-                        residue1.setGram(gram);
-                    }
+                    // set hashes
+                    residue1.setGram(gram);
                 }
- //           }
+            }
 
             grams.addAll(residues.stream().filter(r -> r.getGram() > 0).map(r -> r.getGram()).collect(Collectors.toList()));
             
