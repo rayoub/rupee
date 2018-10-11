@@ -528,9 +528,6 @@ public class CECalculator {
 
 		convertAfpChain(afpChain, ca1, ca2);
 
-        // OPT ???
-		AFPAlignmentDisplay.getAlign(afpChain, ca1, ca2);
-
 		double tmScore = AFPChainScorer.getTMScore(afpChain, ca1, ca2,false);
 		afpChain.setTMScore(tmScore);
 	}
