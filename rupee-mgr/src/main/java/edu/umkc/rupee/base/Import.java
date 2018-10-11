@@ -268,74 +268,7 @@ public abstract class Import {
 
                 residues.add(residue);
             }
-/*
-            // *** extend helices and strands
-
-            int helixExtRegion;
-            int strandExtRegion;
-
-            // forward
-            helixExtRegion = -1;
-            strandExtRegion = -1;
-            for (int i = 0; i < residues.size(); i++) {
-
-                Residue residue = residues.get(i);
-
-                int helixRegion = calculateHelixRegion(residue.getPhi(), residue.getPsi());
-                int strandRegion = calculateStrandRegion(residue.getPhi(), residue.getPsi());
-
-                // reassign
-                if (helixRegion == helixExtRegion && helixRegion != -1) {
-                    residue.setDescriptor(helixExtRegion);
-                    residue.setSSE("Helix");  
-                }
-                if (strandRegion == strandExtRegion && strandRegion != -1) {
-                    residue.setDescriptor(strandExtRegion);
-                    residue.setSSE("Strand");  
-                }
-
-                // set flags
-                helixExtRegion = -1;
-                strandExtRegion = -1;
-                if (residue.getSSE().equals("Helix")) {
-                    helixExtRegion = residue.getDescriptor();
-                }
-                if (residue.getSSE().equals("Strand")) {
-                    strandExtRegion = residue.getDescriptor();
-                }
-            }
             
-            // backward
-            helixExtRegion = -1;
-            strandExtRegion = -1;
-            for (int i = residues.size() - 1; i >= 0; i--) {
-
-                Residue residue = residues.get(i);
-
-                int helixRegion = calculateHelixRegion(residue.getPhi(), residue.getPsi());
-                int strandRegion = calculateStrandRegion(residue.getPhi(), residue.getPsi());
-
-                // reassign
-                if (helixRegion == helixExtRegion && helixRegion != -1) {
-                    residue.setDescriptor(helixExtRegion);
-                    residue.setSSE("Helix");  
-                }
-                if (strandRegion == strandExtRegion && strandRegion != -1) {
-                    residue.setDescriptor(strandExtRegion);
-                    residue.setSSE("Strand");  
-                }
-
-                // set flags
-                helixExtRegion = -1;
-                strandExtRegion = -1;
-                if (residue.getSSE().equals("Helix")) {
-                    helixExtRegion = residue.getDescriptor();
-                }
-                if (residue.getSSE().equals("Strand")) {
-                    strandExtRegion = residue.getDescriptor();
-                }
-            }
-*/
             // *** run position encoding by region
 
             List<Residue> run = new ArrayList<>();
