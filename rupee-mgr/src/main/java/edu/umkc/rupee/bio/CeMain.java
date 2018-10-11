@@ -69,18 +69,6 @@ public class CeMain extends AbstractStructureAlignment implements StructureAlign
 		calculator = new CECalculator(params);
 	}
 
-
-	/**
-	 * Example Parameters:
-	 *
-	 * -pdbFilePath /tmp -autoFetch -printCE -pdb1 1cnv -pdb2 3cna
-	 *
-	 */
-	public static void main(String[] args) throws Exception {
-		CeUserArgumentProcessor processor = new CeUserArgumentProcessor(); //Responsible for creating a CeMain instance
-		processor.process(args);
-	}
-
 	/**
 	 * Align ca2 onto ca1.
 	 */
@@ -125,20 +113,8 @@ public class CeMain extends AbstractStructureAlignment implements StructureAlign
 		if ( afpChain.getNrEQR() == 0)
 		   return afpChain;
 
-		// Set the distance matrix
-
-        // tis looks like unnecessary code for my purposes
-		int winSize = params.getWinSize();
-		int winSizeComb1 = (winSize-1)*(winSize-2)/2;
-		double[][] m = calculator.initSumOfDistances(ca1.length, ca2.length, winSize, winSizeComb1, ca1, ca2clone);
-		afpChain.setDistanceMatrix(new Matrix(m));
-		afpChain.setSequentialAlignment(true);
-
 		return afpChain;
 	}
-
-
-
 
 	@Override
 	public AFPChain align(Atom[] ca1, Atom[] ca2) throws StructureException {
