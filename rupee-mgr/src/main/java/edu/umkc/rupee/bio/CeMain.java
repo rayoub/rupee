@@ -29,10 +29,8 @@ import org.biojava.nbio.structure.StructureException;
 import org.biojava.nbio.structure.align.AbstractStructureAlignment;
 import org.biojava.nbio.structure.align.StructureAlignment;
 import org.biojava.nbio.structure.align.ce.CeParameters;
-import org.biojava.nbio.structure.align.ce.CeUserArgumentProcessor;
 import org.biojava.nbio.structure.align.ce.ConfigStrucAligParams;
 import org.biojava.nbio.structure.align.model.AFPChain;
-import org.biojava.nbio.structure.jama.Matrix;
 
 /** 
  * The main class of the Java implementation of the Combinatorial Extension Algorithm (CE),
