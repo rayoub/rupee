@@ -4,12 +4,11 @@ RETURNS VOID
 AS $$
 BEGIN
 
-    INSERT INTO scop_pair(db_id_1, db_id_2, similarity, tm_score)
+    INSERT INTO scop_pair(db_id_1, db_id_2, similarity)
     SELECT
         db_id_1,
         db_id_2,
-        similarity,
-        tm_score
+        similarity
     FROM
         UNNEST(p_tab);
 

@@ -5,11 +5,11 @@ BEGIN
 
     TRUNCATE TABLE scop_set;
 
-    INSERT INTO scop_set (pivot_db_id, member_db_id, tm_score)
+    INSERT INTO scop_set (pivot_db_id, member_db_id, similarity)
     SELECT
         pivot_db_id,
         member_db_id,
-        tm_score
+        similarity
     FROM
         UNNEST(p_tab);
 

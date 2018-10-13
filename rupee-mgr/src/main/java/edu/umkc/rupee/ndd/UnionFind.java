@@ -28,11 +28,18 @@ public class UnionFind {
     private final List<NddSet> _setRecords = new ArrayList<>();
     private final Map<String, Double> _pairSims = new HashMap<>();
 
-    private double tmScoreThreshold;
+    private final static double DEFAULT_SIMILARITY_THRESHOLD = 0.75;
+    
+    private double similarityThreshold;
 
-    public UnionFind(double tmScoreThreshold) {
+    public UnionFind () {
 
-        this.tmScoreThreshold = tmScoreThreshold;
+        this.similarityThreshold = DEFAULT_SIMILARITY_THRESHOLD;
+    }
+   
+    public UnionFind (double similarityThreshold) {
+
+        this.similarityThreshold = similarityThreshold;
     }
 
     public void go() throws SQLException {
@@ -45,8 +52,8 @@ public class UnionFind {
         conn = ds.getConnection();
         conn.setAutoCommit(false);
 
-        stmt = conn.prepareStatement("SELECT db_id_1, db_id_2, tm_score FROM scop_pair WHERE tm_score >= ?;");
-        stmt.setDouble(1, tmScoreThreshold);
+        stmt = conn.prepareStatement("SELECT db_id_1, db_id_2, similarity FROM scop_pair WHERE similarity >= ?;");
+        stmt.setDouble(1, similarityThreshold);
         
         // first pass - make set operations
         
@@ -57,10 +64,10 @@ public class UnionFind {
 
             String dbId1 = rs.getString("db_id_1");
             String dbId2 = rs.getString("db_id_2");
-            double tmScore = rs.getDouble("tm_score");
+            double similarity = rs.getDouble("similarity");
 
             // store for future use
-            _pairSims.put(dbId1 + "_" + dbId2, tmScore);
+            _pairSims.put(dbId1 + "_" + dbId2, similarity);
             
             // make set ops
             if (!_setMembers.containsKey(dbId1)) {
@@ -133,9 +140,9 @@ public class UnionFind {
         stmt.close();
         conn.close();        
 
-        System.out.println("Assigning Scores");
+        System.out.println("Assigning Similarities");
        
-        // assign known scores
+        // assign known similarities
         Set<String> dbIdSet = new HashSet<>();
         for (Entry<String, Member> entry : _setMembers.entrySet()) {
 
@@ -147,16 +154,16 @@ public class UnionFind {
             record.setMemberDbId(dbId);
             
             if(dbId.equals(pivotDbId)){
-                record.setTmScore(1.0);
+                record.setSimilaritiy(1.0);
             }
             else if(_pairSims.containsKey(dbId + "_" + pivotDbId)){
-                record.setTmScore(_pairSims.get(dbId + "_" + pivotDbId));
+                record.setSimilaritiy(_pairSims.get(dbId + "_" + pivotDbId));
             }
             else if(_pairSims.containsKey(pivotDbId + "_" + dbId)){
-                record.setTmScore(_pairSims.get(pivotDbId + "_" + dbId));
+                record.setSimilaritiy(_pairSims.get(pivotDbId + "_" + dbId));
             }
             else {
-                record.setTmScore(-1.0);
+                record.setSimilaritiy(-1.0);
                 dbIdSet.add(record.getPivotDbId());
                 dbIdSet.add(record.getMemberDbId());
             }

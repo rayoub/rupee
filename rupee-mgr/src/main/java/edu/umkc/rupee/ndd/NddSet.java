@@ -7,7 +7,7 @@ public class NddSet extends PGobject {
 
     private String pivotDbId;
     private String memberDbId;
-    private double tmScore;
+    private double similaritiy;
 
     public String getPivotDbId() {
         return pivotDbId;
@@ -25,12 +25,12 @@ public class NddSet extends PGobject {
         this.memberDbId = memberDbId;
     }
 
-    public double getTmScore() {
-        return tmScore;
+    public double getSimilaritiy() {
+        return similaritiy;
     }
 
-    public void setTmScore(double similarity) {
-        this.tmScore = similarity;
+    public void setSimilaritiy(double similarity) {
+        this.similaritiy = similarity;
     }
     
     @Override
@@ -41,11 +41,11 @@ public class NddSet extends PGobject {
 
         pivotDbId = t.getToken(0);
         memberDbId = t.getToken(1);
-        tmScore = Double.parseDouble(t.getToken(2));
+        similaritiy = Double.parseDouble(t.getToken(2));
     }
 
     @Override
     public String getValue() {
-        return "(" + pivotDbId + "," + memberDbId + "," + tmScore + ")";
+        return "(" + pivotDbId + "," + memberDbId + "," + similaritiy + ")";
     }
 }

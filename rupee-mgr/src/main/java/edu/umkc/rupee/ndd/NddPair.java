@@ -9,7 +9,6 @@ public class NddPair extends PGobject {
     private String dbId1;
     private String dbId2;
     private double similarity;
-    private double tmScore = -1.0;
 
     public int getSid() {
         return sid;
@@ -42,14 +41,6 @@ public class NddPair extends PGobject {
     public void setSimilarity(double similarity) {
         this.similarity = similarity;
     }
-    
-    public double getTmScore() {
-        return tmScore;
-    }
-
-    public void setTmScore(double tmScore) {
-        this.tmScore = tmScore;
-    }
 
     @Override
     public void setValue(String s) {
@@ -61,11 +52,10 @@ public class NddPair extends PGobject {
         dbId1 = t.getToken(2); 
         dbId2 = t.getToken(3);
         similarity = Double.parseDouble(t.getToken(4));
-        tmScore = Double.parseDouble(t.getToken(5));
     }
 
     @Override
     public String getValue() {
-        return "(" + sid + "," + dbId1 + "," + dbId2 + "," + similarity + "," + tmScore + ")";
+        return "(" + sid + "," + dbId1 + "," + dbId2 + "," + similarity + ")";
     }
 }
