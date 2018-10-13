@@ -116,6 +116,9 @@ public abstract class Import {
 
                     saveGrams(dbId, grams, conn);
 
+                    inputStream.close();
+                    gzipInputStream.close();
+
                 } catch (Exception e) {
                     logs.add(new Log(Level.SEVERE, e.getClass().getName(), String.format(message, pdbId)));
                     Logger.getLogger(Import.class.getName()).log(Level.SEVERE, pdbId, e);
