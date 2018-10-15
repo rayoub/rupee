@@ -3,7 +3,6 @@ package edu.umkc.rupee.lib;
 public class Hashes {
 
     public String dbId;
-    public String setId;
     public Integer[] minHashes;
     public Integer[] bandHashes;
 
@@ -13,14 +12,6 @@ public class Hashes {
 
     public void setDbId(String dbId) {
         this.dbId = dbId;
-    }
-
-    public String getSetId() {
-        return setId;
-    }
-
-    public void setSetId(String setId) {
-        this.setId = setId;
     }
 
     public Integer[] getMinHashes() {
