@@ -24,9 +24,9 @@ public class UnionFind {
         public int Rank;
     }
 
-    private final Map<String, Member> _setMembers = new HashMap<>();
-    private final List<NddSet> _setRecords = new ArrayList<>();
-    private final Map<String, Double> _pairSims = new HashMap<>();
+    private Map<String, Member> _setMembers = new HashMap<>();
+    private List<NddSet> _setRecords = new ArrayList<>();
+    private Map<String, Double> _pairSims = new HashMap<>();
 
     private final static double DEFAULT_SIMILARITY_THRESHOLD = 0.75;
     
@@ -42,7 +42,26 @@ public class UnionFind {
         this.similarityThreshold = similarityThreshold;
     }
 
-    public void go() throws SQLException {
+    public void iterate() throws SQLException {
+
+        int i = 0;
+        boolean more = true;
+        while (i < 10 && more) {
+            more = iteration();
+            if (more) {
+                saveSets();
+            }
+            i++;
+        }
+    }
+
+    private boolean iteration() throws SQLException {
+        
+        _setMembers = new HashMap<>();
+        _setRecords = new ArrayList<>();
+        _pairSims = new HashMap<>();
+
+        boolean start;
 
         PGSimpleDataSource ds = Db.getDataSource();
 
@@ -52,15 +71,28 @@ public class UnionFind {
         conn = ds.getConnection();
         conn.setAutoCommit(false);
 
-        stmt = conn.prepareStatement("SELECT db_id_1, db_id_2, similarity FROM scop_pair WHERE similarity >= ?;");
+        stmt = conn.prepareStatement(
+                "SELECT p.db_id_1, p.db_id_2, p.similarity " + 
+                "FROM scop_pair p " + 
+                "LEFT JOIN scop_set s1 ON p.db_id_1 = s1.member_db_id " + 
+                "LEFT JOIN scop_set s2 ON p.db_id_2 = s2.member_db_id " + 
+                "WHERE p.similarity >= ? " +
+                "AND COALESCE(s1.similarity,-1.0) = -1.0 " + 
+                "AND COALESCE(s2.similarity,-1.0) = -1.0;"
+            );
         stmt.setDouble(1, similarityThreshold);
         
         // first pass - make set operations
         
-        System.out.println("Performing Make-Set Operations");
-           
+          
+        start = true; 
         ResultSet rs = stmt.executeQuery();
         while (rs.next()) {
+
+            if (start) {
+                System.out.println("Performing Make-Set Operations");
+                start = false;
+            }
 
             String dbId1 = rs.getString("db_id_1");
             String dbId2 = rs.getString("db_id_2");
@@ -92,6 +124,11 @@ public class UnionFind {
             }
         }
         rs.close();
+
+        if (start) {
+            System.out.println("No Pairs Meet the Criterion");
+            return false;
+        }
         
         System.out.println("Done with Make-Set Operations");
         
@@ -100,12 +137,16 @@ public class UnionFind {
             Rank is used to implement the union by rank heuristic. 
         */
         
-        System.out.println("Performing Union Operations");
-
         // second pass - union operations
+        start = true;
         rs = stmt.executeQuery();
         while (rs.next()) {
 
+            if (start) {
+                System.out.println("Performing Union Operations");
+                start = false;
+            }
+            
             String dbId1 = rs.getString("db_id_1");
             String dbId2 = rs.getString("db_id_2");
 
@@ -172,9 +213,11 @@ public class UnionFind {
         }      
         
         System.out.println("Done Assigning Scores");
+
+        return true;
     }
     
-    public void saveSets() throws SQLException{
+    private void saveSets() throws SQLException{
 
         PGSimpleDataSource ds = Db.getDataSource();
 
