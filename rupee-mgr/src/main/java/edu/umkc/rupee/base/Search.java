@@ -39,7 +39,7 @@ import edu.umkc.rupee.lib.Similarity;
 import edu.umkc.rupee.lib.SortCriteria;
 
 public abstract class Search {
-    
+
     // *********************************************************************
     // Abstract Methods 
     // *********************************************************************
@@ -61,6 +61,7 @@ public abstract class Search {
         List<SearchRecord> records = new ArrayList<>();
 
         try {
+
             List<Integer> grams = null;
             Hashes hashes = null;
 
@@ -80,18 +81,18 @@ public abstract class Search {
 
             if (hashes1 != null) {
 
-                // parallel band match searches to gather candidates
+                // parallel band match searches to gather lsh candidates
                 records = IntStream.range(0, Constants.BAND_CHECK_COUNT).boxed().parallel()
                     .flatMap(bandIndex -> searchBand(bandIndex, criteria, grams1, hashes1).stream())
                     .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
-                    .limit(criteria.mode.getMaxCandidateCount()) 
+                    .limit(criteria.mode.getLshCandidateCount()) 
                     .collect(Collectors.toList());
 
                 // cache map of residue grams
                 List<String> dbIds = records.stream().map(SearchRecord::getDbId).collect(Collectors.toList());
                 Map<String, List<Integer>> map = Db.getGrams(dbIds, criteria.dbType);
 
-                // parallel similarity score
+                // parallel lcs algorithm
                 records.stream()
                     .forEach(record -> {
 
@@ -101,17 +102,18 @@ public abstract class Search {
                             record.setSimilarity(score);
                         }
                     });
-                
-                // sort and filter again based on criteria limit
+
+                // sort and filter lcs candidates
                 records = records.stream()
                     .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
-                    .limit(criteria.limit) 
+                    .limit(criteria.mode.getLcsCandidateCount()) 
                     .collect(Collectors.toList());
 
                 // if mode is regular
                 if (criteria.mode == ModeCriteria.REGULAR) {
 
-                    // cache common objects for use by multiple threads 
+                    // *** cache common objects 
+            
                     Parser parser = new Parser(Integer.MAX_VALUE);
 
                     String fileName = "";
@@ -133,39 +135,26 @@ public abstract class Search {
                         structure = parser.parsePDBFile(queryFile);
                     }
 
-                    final Structure queryStructure = structure;
+                    Structure queryStructure = structure;
+                   
+                    // all we need 
                     final Atom[] queryAtoms = StructureTools.getAtomCAArray(queryStructure);
 
-                    // perform parallel alignments with candidates
-                    records.stream().parallel().forEach(record -> {
-                        
-                        try {
-                       
-                            CeMain alg = new CeMain(); 
-                            CeParameters params = new CeParameters();
-                            params.setOptimizeAlignment(false);
+                    // *** perform alignments
+                    
+                    // unoptimized alignments
+                    records.stream().parallel().forEach(record -> align(record, queryAtoms, false));
 
-                            FileInputStream targetFile = new FileInputStream(getDbType().getImportPath() + record.getDbId() + ".pdb.gz");
-                            GZIPInputStream targetFileGz = new GZIPInputStream(targetFile);
+                    // sort and filter for optimized alignments
+                    records = records.stream()
+                        .sorted(Comparator.comparingDouble(SearchRecord::getTmScore).reversed().thenComparing(SearchRecord::getSortKey))
+                        .limit(criteria.mode.getAlgCandidateCount()) 
+                        .collect(Collectors.toList());
 
-                            Parser parser2 = new Parser(Integer.MAX_VALUE);
-                            Structure targetStructure = parser2.parsePDBFile(targetFileGz);
-                            Atom[] targetAtoms = StructureTools.getAtomCAArray(targetStructure);
-                      
-                            AFPChain afps = alg.align(queryAtoms, targetAtoms, params);
-                            afps.setTMScore(AFPChainScorer.getTMScore(afps, queryAtoms, targetAtoms));
+                    // optimized alignments
+                    records.stream().parallel().forEach(record -> align(record, queryAtoms, true));
 
-                            record.setRmsd(afps.getTotalRmsdOpt());
-                            record.setTmScore(afps.getTMScore());
-                        }
-                        catch (IOException e) {
-                            Logger.getLogger(Search.class.getName()).log(Level.INFO, null, e);
-                        }
-                        catch (StructureException e) {
-                            Logger.getLogger(Search.class.getName()).log(Level.INFO, null, e);
-                        }
-                    });
-                }
+                } // end mode == REGULAR
 
                 // get the total record count
                 int recordCount = records.size();
@@ -203,14 +192,14 @@ public abstract class Search {
                         }
                     }
                     
-                    if (i != 0) {
+                    if (i != 0 && i < records.size()) {
+                        
                         SearchRecord record = records.get(i);
                         records.remove(i);
                         records.add(0, record);
+                        records.get(0).setRmsd(0.0);
+                        records.get(0).setTmScore(1.0);
                     }
-
-                    records.get(0).setRmsd(0.0);
-                    records.get(0).setTmScore(1.0);
                 }
 
                 // augment data set for output
@@ -225,7 +214,36 @@ public abstract class Search {
         return records;
     }
 
-    public List<SearchRecord> searchBand(int bandIndex, SearchCriteria criteria, List<Integer> grams, Hashes hashes) {
+    private void align(SearchRecord record, Atom[] queryAtoms, boolean optimize) {
+
+        try {
+       
+            CeMain alg = new CeMain(); 
+            CeParameters params = new CeParameters();
+            params.setOptimizeAlignment(optimize);
+
+            FileInputStream targetFile = new FileInputStream(getDbType().getImportPath() + record.getDbId() + ".pdb.gz");
+            GZIPInputStream targetFileGz = new GZIPInputStream(targetFile);
+
+            Parser parser2 = new Parser(Integer.MAX_VALUE);
+            Structure targetStructure = parser2.parsePDBFile(targetFileGz);
+            Atom[] targetAtoms = StructureTools.getAtomCAArray(targetStructure);
+      
+            AFPChain afps = alg.align(queryAtoms, targetAtoms, params);
+            afps.setTMScore(AFPChainScorer.getTMScore(afps, queryAtoms, targetAtoms));
+
+            record.setRmsd(afps.getTotalRmsdOpt());
+            record.setTmScore(afps.getTMScore());
+        }
+        catch (IOException e) {
+            Logger.getLogger(Search.class.getName()).log(Level.INFO, null, e);
+        }
+        catch (StructureException e) {
+            Logger.getLogger(Search.class.getName()).log(Level.INFO, null, e);
+        }
+    }
+
+    private List<SearchRecord> searchBand(int bandIndex, SearchCriteria criteria, List<Integer> grams, Hashes hashes) {
 
         List<SearchRecord> records = new ArrayList<>();
 
@@ -275,7 +293,7 @@ public abstract class Search {
         return records;
     }
 
-    public void augment(List<SearchRecord> bandRecords, int recordCount) {
+    private void augment(List<SearchRecord> bandRecords, int recordCount) {
 
         try {
 
@@ -320,7 +338,7 @@ public abstract class Search {
     // Static Methods
     // *********************************************************************
 
-    public static boolean lowerBandMatch(Integer[] bands1, Integer[] bands2, int bandIndex) {
+    private static boolean lowerBandMatch(Integer[] bands1, Integer[] bands2, int bandIndex) {
 
         // use this function in case of distributed system to eliminate intermediate results up front
 
