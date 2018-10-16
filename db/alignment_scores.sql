@@ -10,4 +10,4 @@ CREATE TABLE alignment_scores
     fatcat_tm_score NUMERIC NULL DEFAULT -1
 );
 
-CREATE UNIQUE INDEX idx_alignment_scores_unique ON alignment_scores (db_id_1, db_id_2);
+CREATE UNIQUE INDEX idx_alignment_scores_unique ON alignment_scores (version, db_id_1, db_id_2);
