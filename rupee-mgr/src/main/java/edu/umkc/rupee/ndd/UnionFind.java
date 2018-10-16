@@ -10,7 +10,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 import org.postgresql.ds.PGSimpleDataSource;
 
@@ -24,74 +26,78 @@ public class UnionFind {
         public int Rank;
     }
 
-    private final Map<String, Member> _setMembers = new HashMap<>();
-    private final List<NddSet> _setRecords = new ArrayList<>();
-    private final Map<String, Double> _pairSims = new HashMap<>();
+    private List<NddSet> _setRecords = new ArrayList<>();
 
-    private final static double DEFAULT_SIMILARITY_THRESHOLD = 0.75;
-    
-    private double similarityThreshold;
+    private final static double MIN_SIMILARITY_THRESHOLD = 0.70;
 
-    public UnionFind () {
+    public void iterate() {
 
-        this.similarityThreshold = DEFAULT_SIMILARITY_THRESHOLD;
+        List<NddPair> pairs = getPairs();
+     
+        for (double threshold = 0.95; threshold >= MIN_SIMILARITY_THRESHOLD; threshold = threshold - 0.01) {
+
+            double efThreshold = threshold;
+           
+            List<NddPair> filteredPairs = pairs.stream()
+                .filter(p -> p.getSimilarity() >= efThreshold)
+                .collect(Collectors.toList());
+
+            while (filteredPairs.size() > 0) {
+
+                System.out.println("Filtered Pair Count = " + filteredPairs.size() + " at Threshold = " + threshold); 
+
+                pairs = iteration(pairs, filteredPairs);
+
+                filteredPairs = pairs.stream()
+                    .filter(p -> p.getSimilarity() >= efThreshold)
+                    .collect(Collectors.toList());
+            } 
+        }
+
+        saveSets();
     }
-   
-    public UnionFind (double similarityThreshold) {
 
-        this.similarityThreshold = similarityThreshold;
-    }
+    private List<NddPair> iteration(List<NddPair> pairs, List<NddPair> filteredPairs) {
+       
+        Map<String, Member> setMembers = new HashMap<>();
+        Map<String, Double> pairSims = new HashMap<>();
 
-    public void go() throws SQLException {
-
-        PGSimpleDataSource ds = Db.getDataSource();
-
-        Connection conn;
-        PreparedStatement stmt;
-
-        conn = ds.getConnection();
-        conn.setAutoCommit(false);
-
-        stmt = conn.prepareStatement("SELECT db_id_1, db_id_2, similarity FROM scop_pair WHERE similarity >= ?;");
-        stmt.setDouble(1, similarityThreshold);
+        boolean start;
         
         // first pass - make set operations
-        
-        System.out.println("Performing Make-Set Operations");
-           
-        ResultSet rs = stmt.executeQuery();
-        while (rs.next()) {
+        start = true; 
+        for (NddPair pair : filteredPairs) {
 
-            String dbId1 = rs.getString("db_id_1");
-            String dbId2 = rs.getString("db_id_2");
-            double similarity = rs.getDouble("similarity");
+            if (start) {
+                System.out.println("Performing Make-Set Operations");
+                start = false;
+            }
 
             // store for future use
-            _pairSims.put(dbId1 + "_" + dbId2, similarity);
+            pairSims.put(pair.getDbId1() + "_" + pair.getDbId2(), pair.getSimilarity());
             
             // make set ops
-            if (!_setMembers.containsKey(dbId1)) {
+            if (!setMembers.containsKey(pair.getDbId1())) {
                 Member member = new Member() {
                     {
-                        DbId = dbId1;
-                        ParentDbId = dbId1;
+                        DbId = pair.getDbId1();
+                        ParentDbId = pair.getDbId1();
                         Rank = 0;
                     }
                 };
-                _setMembers.put(dbId1, member);
+                setMembers.put(pair.getDbId1(), member);
             }
-            if (!_setMembers.containsKey(dbId2)) {
+            if (!setMembers.containsKey(pair.getDbId2())) {
                 Member member = new Member() {
                     {
-                        DbId = dbId2;
-                        ParentDbId = dbId2;
+                        DbId = pair.getDbId2();
+                        ParentDbId = pair.getDbId2();
                         Rank = 0;
                     }
                 };
-                _setMembers.put(dbId2, member);
+                setMembers.put(pair.getDbId2(), member);
             }
         }
-        rs.close();
         
         System.out.println("Done with Make-Set Operations");
         
@@ -100,25 +106,25 @@ public class UnionFind {
             Rank is used to implement the union by rank heuristic. 
         */
         
-        System.out.println("Performing Union Operations");
-
         // second pass - union operations
-        rs = stmt.executeQuery();
-        while (rs.next()) {
+        start = true;
+        for (NddPair pair : filteredPairs) {
 
-            String dbId1 = rs.getString("db_id_1");
-            String dbId2 = rs.getString("db_id_2");
-
-            String pivotDbId1 = findSet(dbId1);
-            String pivotDbId2 = findSet(dbId2);
+            if (start) {
+                System.out.println("Performing Union Operations");
+                start = false;
+            }
+            
+            String pivotDbId1 = findSet(pair.getDbId1(), setMembers);
+            String pivotDbId2 = findSet(pair.getDbId2(), setMembers);
 
             //this would imply they are already members of the same set         
             if (pivotDbId1.equals(pivotDbId2)) {
                 continue;
             }
 
-            Member pivotMember1 = _setMembers.get(pivotDbId1);
-            Member pivotMember2 = _setMembers.get(pivotDbId2);
+            Member pivotMember1 = setMembers.get(pivotDbId1);
+            Member pivotMember2 = setMembers.get(pivotDbId2);
 
             //union by rank
             if (pivotMember1.Rank > pivotMember2.Rank) {
@@ -132,22 +138,16 @@ public class UnionFind {
                 }
             }
         }
-        rs.close();
        
         System.out.println("Done with Union Operations");
 
-        // close connection 
-        stmt.close();
-        conn.close();        
-
-        System.out.println("Assigning Similarities");
+        System.out.println("Getting Set Records");
        
-        // assign known similarities
-        Set<String> dbIdSet = new HashSet<>();
-        for (Entry<String, Member> entry : _setMembers.entrySet()) {
+        // extract set records
+        for (Entry<String, Member> entry : setMembers.entrySet()) {
 
             String dbId = entry.getKey();
-            String pivotDbId = findSet(dbId);
+            String pivotDbId = findSet(dbId, setMembers);
             
             NddSet record = new NddSet();
             record.setPivotDbId(pivotDbId);
@@ -156,54 +156,106 @@ public class UnionFind {
             if(dbId.equals(pivotDbId)){
                 record.setSimilaritiy(1.0);
             }
-            else if(_pairSims.containsKey(dbId + "_" + pivotDbId)){
-                record.setSimilaritiy(_pairSims.get(dbId + "_" + pivotDbId));
+            else if(pairSims.containsKey(dbId + "_" + pivotDbId)){
+                record.setSimilaritiy(pairSims.get(dbId + "_" + pivotDbId));
             }
-            else if(_pairSims.containsKey(pivotDbId + "_" + dbId)){
-                record.setSimilaritiy(_pairSims.get(pivotDbId + "_" + dbId));
+            else if(pairSims.containsKey(pivotDbId + "_" + dbId)){
+                record.setSimilaritiy(pairSims.get(pivotDbId + "_" + dbId));
             }
             else {
-                record.setSimilaritiy(-1.0);
-                dbIdSet.add(record.getPivotDbId());
-                dbIdSet.add(record.getMemberDbId());
+                continue;
             }
             
             _setRecords.add(record);
         }      
+
+        System.out.println("Done Getting Set Records");
         
-        System.out.println("Done Assigning Scores");
-    }
-    
-    public void saveSets() throws SQLException{
-
-        PGSimpleDataSource ds = Db.getDataSource();
-
-        Connection conn;
-        PreparedStatement updt;
-
-        conn = ds.getConnection();
-        conn.setAutoCommit(true);        
+        System.out.println("Set Member Count = " + _setRecords.size());
         
-        updt = conn.prepareStatement("SELECT insert_scop_sets(?);"); 
-
-        NddSet a[] = new NddSet[_setRecords.size()];
-        _setRecords.toArray(a);
-        updt.setArray(1, conn.createArrayOf("scop_set", a));
-        updt.execute();
-
-        updt.close();
-        conn.close();        
+        // filter pairs and return
+        HashSet<String> dbIds = _setRecords.stream().map(s -> s.getMemberDbId()).collect(Collectors.toCollection(HashSet::new)); 
+        return pairs.stream()
+            .filter(p -> !dbIds.contains(p.getDbId1()) && !dbIds.contains(p.getDbId2()))
+            .collect(Collectors.toList());
     }
 
-    private String findSet(String dbId) {
+    private List<NddPair> getPairs() {
 
-        String parentDbId = _setMembers.get(dbId).ParentDbId;
+        List<NddPair> pairs = new ArrayList<>();
+
+        try {
+
+            PGSimpleDataSource ds = Db.getDataSource();
+
+            Connection conn;
+            PreparedStatement stmt;
+
+            conn = ds.getConnection();
+            conn.setAutoCommit(false);
+
+            stmt = conn.prepareStatement(
+                    "SELECT p.db_id_1, p.db_id_2, p.similarity " + 
+                    "FROM scop_pair p " + 
+                    "WHERE p.similarity >= ?; " 
+                );
+            stmt.setDouble(1, MIN_SIMILARITY_THRESHOLD);
+
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                
+                NddPair pair = new NddPair();
+
+                pair.setDbId1(rs.getString("db_id_1"));
+                pair.setDbId2(rs.getString("db_id_2"));
+                pair.setSimilarity(rs.getDouble("similarity"));
+
+                pairs.add(pair);
+            }
+                    
+        } catch (SQLException e) {
+            Logger.getLogger(UnionFind.class.getName()).log(Level.SEVERE, null, e);
+        }
+        
+        return pairs;    
+    }
+   
+    private void saveSets() {
+
+        try {
+
+            PGSimpleDataSource ds = Db.getDataSource();
+
+            Connection conn;
+            PreparedStatement updt;
+
+            conn = ds.getConnection();
+            conn.setAutoCommit(true);        
+            
+            updt = conn.prepareStatement("SELECT insert_scop_sets(?);"); 
+
+            NddSet a[] = new NddSet[_setRecords.size()];
+            _setRecords.toArray(a);
+            updt.setArray(1, conn.createArrayOf("scop_set", a));
+            updt.execute();
+
+            updt.close();
+            conn.close();        
+                    
+        } catch (SQLException e) {
+            Logger.getLogger(UnionFind.class.getName()).log(Level.SEVERE, null, e);
+        }
+    }
+
+    private String findSet(String dbId, Map<String, Member> setMembers) {
+
+        String parentDbId = setMembers.get(dbId).ParentDbId;
 
         // path compression
         if (!dbId.equals(parentDbId)) {
-            _setMembers.get(dbId).ParentDbId = findSet(parentDbId);
+            setMembers.get(dbId).ParentDbId = findSet(parentDbId, setMembers);
         }
 
-        return _setMembers.get(dbId).ParentDbId;
+        return setMembers.get(dbId).ParentDbId;
     }
 }

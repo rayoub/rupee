@@ -2,20 +2,40 @@ package edu.umkc.rupee.lib;
 
 public enum ModeCriteria {
 
-    REGULAR(40000),
-    FAST(8000);
+    REGULAR(40000, 2000, 400),
+    FAST(8000, 8000, 0);
 
-    private int maxCandidateCount;
+    private int lshCandidateCount;
+    private int lcsCandidateCount;
+    private int algCandidateCount;
 
-    ModeCriteria(int maxCandidateCount) {
-        this.maxCandidateCount = maxCandidateCount;
+    ModeCriteria(int lshCandidateCount, int lcsCandidateCount, int algCandidateCount) {
+        this.lshCandidateCount = lshCandidateCount;
+        this.lcsCandidateCount = lcsCandidateCount;
+        this.algCandidateCount = algCandidateCount;
     }
 
-    public int getMaxCandidateCount() {
-        return maxCandidateCount;
+    public int getLshCandidateCount() {
+        return lshCandidateCount;
     }
 
-    public void setMaxCandidateCount(int maxCandidateCount) {
-        this.maxCandidateCount = maxCandidateCount;
+    public void setLshCandidateCount(int maxCandidateCount) {
+        this.lshCandidateCount = maxCandidateCount;
+    }
+
+    public int getLcsCandidateCount() {
+        return lcsCandidateCount;
+    }
+
+    public void setLcsCandidateCount(int lcsCandidateCount) {
+        this.lcsCandidateCount = lcsCandidateCount;
+    }
+
+    public int getAlgCandidateCount() {
+        return algCandidateCount;
+    }
+
+    public void setAlgCandidateCount(int algCandidateCount) {
+        this.algCandidateCount = algCandidateCount;
     }
 }

@@ -20,33 +20,14 @@ import edu.umkc.rupee.lib.Similarity;
 
 public class Pairing {
 
-    private final static double DEFAULT_SIMILARITY_THRESHOLD = 0.75;
-    private final static int DEFAULT_MAX_BAND_INDEX = 20;
-    private final static int MAX_CACHED_PAIRS = 500;
-
-    private double similarityThreshold;
-    private int maxBandIndex;
+    private final static double SIMILARITY_THRESHOLD = 0.70;
+    private final static int MAX_BAND_INDEX = 20;
+    private final static int MAX_CACHED_PAIRS = 1000;
     
-    // *********************************************************************
-    // Pairing Methods 
-    // *********************************************************************
-    
-    public Pairing () {
-
-        this.similarityThreshold = DEFAULT_SIMILARITY_THRESHOLD;
-        this.maxBandIndex = DEFAULT_MAX_BAND_INDEX;
-    }
-   
-    public Pairing (double similarityThreshold, int maxBandIndex) {
-
-        this.similarityThreshold = similarityThreshold;
-        this.maxBandIndex = maxBandIndex;
-    }
-
     public void pair() {
 
         IntStream
-            .range(0, maxBandIndex)
+            .range(0, MAX_BAND_INDEX)
             .boxed()
             .parallel()
             .forEach(bandIndex -> pairOnBand(bandIndex));
@@ -119,7 +100,7 @@ public class Pairing {
                 for (int j = i + 1; j < tile.size(); j++) {
                     if (!lowerBandMatch(tile.get(i).getBandHashes(), tile.get(j).getBandHashes(), band)) {
                         double similarity = Similarity.getEstimatedSimilarity(tile.get(i).getMinHashes(), tile.get(j).getMinHashes());
-                        if(similarity >= similarityThreshold){
+                        if(similarity >= SIMILARITY_THRESHOLD){
                             NddPair pair = new NddPair();
                             pair.setDbId1(tile.get(i).getDbId());
                             pair.setDbId2(tile.get(j).getDbId());
