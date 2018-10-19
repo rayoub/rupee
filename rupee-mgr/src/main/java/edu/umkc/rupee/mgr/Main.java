@@ -341,7 +341,6 @@ public class Main {
             double exact = Similarity.getExactSimilarity(grams1, grams2);
 
             // lcs validated matching grams
-            int length = LCS.getLCSLength(grams1, grams2);
             int score = LCS.getLCSScore(grams1, grams2); 
           
             System.out.println(""); 
@@ -353,7 +352,6 @@ public class Main {
             System.out.println("Estimated Similarity:   " + estimated);
             System.out.println("Exact Similarity:       " + exact);
             System.out.println(""); 
-            System.out.println("LCS Length:             " + length);
             System.out.println("LCS Score:              " + score);
 
             Map<Integer, String> codeMap = LCS.getCodeMap(grams1, grams2);
