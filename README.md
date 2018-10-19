@@ -10,10 +10,10 @@ RUPEE itself is available for use at <http://www.ayoubresearch.com>.
 Below, I will attempt to describe how to find your way around the RUPEE repo, directory by directory, in the order required for setting up RUPEE in your own environment. 
 It is assumed that you are familiar with RUPEE and have read the paper. 
 
-As far as software dependencies go, Java 8 and an installation of postgreSQL 9.4 or above are required.
+With respect to software dependencies, Java 8 and an installation of postgreSQL 9.4 or above are required.
 The instructions below assume you are operating within a bash shell. 
 Typically, this will be under Linux. 
-However, Windows 10 does contain a bash shell as well if you take actions to enable it or else you can use an install of Cygwin on earlier versions of Windows. 
+However, Windows 10 does contain a bash shell if you take actions to enable it or you can install Cygwin on earlier versions of Windows. 
 
 If you need additional info or have questions not addressed below, contact me at ronaldayoub@mail.umkc.edu.
 
@@ -29,7 +29,7 @@ All files except files prefixed with x\_, y\_, or z\_ contain SQL definitions.
 
 x\_ files are used for populating tables and should only be run when parsed data files are present.
 The x\_ files contain hard-coded references to file locations that should be changed to match your Linux home directory.
-Unfortunately, the postgres COPY command does not except relative directories. 
+Unfortunately, the postgres COPY command does not accept relative directories. 
 
 Once you have created a database with the case-sensitive name 'rupee', run the y_create_all.sql script,
 This script will only create SQL objects. 
@@ -121,7 +121,7 @@ data/upload/       | directory used for temporary storage of uploaded pdb files
 First, the data/pdb/ directory has to be populated with files downloaded from the wwpdb FTP site. 
 Then, the files can be parsed based on structure definitions to populate the data/scop/, data/cath/, data/ecod/ and data/chain/ directories. 
 Each of these directories can be parsed and processed independently. 
-Since this can take a significant amount of time, consider picking one initially, for instance data/scop/. 
+Since this can take a significant amount of time, consider starting with one initially, for instance data/scop/. 
 
 Each of the directories, data/scop/, data/cath/, data/ecod/ and data/chain/ follow a similar pattern with some redundant code to keep things simple. 
 The do_all.sh bash scripts can be used to parse structure definitions and subsequently parse pdb files based on the structure definitions.
