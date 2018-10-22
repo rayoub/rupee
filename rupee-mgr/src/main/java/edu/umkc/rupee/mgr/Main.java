@@ -516,12 +516,13 @@ public class Main {
                 else {
            
                     // gathering results
-                    System.out.printf("%d,%s,%s,%.4f,%.4f\n",
+                    System.out.printf("%d,%s,%s,%.4f,%.4f,%s\n",
                         record.getN(),
                         criteria.dbId,
                         record.getDbId(),
                         record.getRmsd(),
-                        record.getTmScore()
+                        record.getTmScore(),
+                        criteria.sort.name().toLowerCase()
                     );
                 }
             }
@@ -579,12 +580,13 @@ public class Main {
                 else {
            
                     // gathering results
-                    System.out.printf("%d,%s,%s,%.4f,%.4f\n",
+                    System.out.printf("%d,%s,%s,%.4f,%.4f,%s\n",
                         record.getN(),
                         criteria.dbId,
                         record.getDbId(),
                         record.getRmsd(),
-                        record.getTmScore()
+                        record.getTmScore(),
+                        criteria.sort.name().toLowerCase()
                     );
                 }
             }
@@ -637,12 +639,13 @@ public class Main {
                 else {
            
                     // gathering results
-                    System.out.printf("%d,%s,%s,%.4f,%.4f\n",
+                    System.out.printf("%d,%s,%s,%.4f,%.4f,%s\n",
                         record.getN(),
                         criteria.dbId,
                         record.getDbId(),
                         record.getRmsd(),
-                        record.getTmScore()
+                        record.getTmScore(),
+                        criteria.sort.name().toLowerCase()
                     );
                 }
             }
@@ -688,12 +691,13 @@ public class Main {
                 else {
            
                     // gathering results
-                    System.out.printf("%d,%s,%s,%.4f,%.4f\n",
+                    System.out.printf("%d,%s,%s,%.4f,%.4f,%s\n",
                         record.getN(),
                         criteria.dbId,
                         record.getDbId(),
                         record.getRmsd(),
-                        record.getTmScore()
+                        record.getTmScore(),
+                        criteria.sort.name().toLowerCase()
                     );
                 }
             }
@@ -720,10 +724,7 @@ public class Main {
 
     private static void option_d(CommandLine line) {
 
-        //AlignResults.alignMtmDomResults("scop_d360", "dom_v08_03_2018", DbTypeCriteria.SCOP, 100);
-        //AlignResults.alignCathedralResults("cath_d94", "cath_v4_1_0", DbTypeCriteria.CATH, 50);
-        //AlignResults.alignSsmResults("scop_d62","scop_v1_73", DbTypeCriteria.SCOP, 50);
-        AlignResults.alignRupeeResults("scop_d62", "scop_v2_07", DbTypeCriteria.SCOP, 50, false);
+        AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", DbTypeCriteria.SCOP, 100, false);
     }
 
     private static void option_help(Options options) {

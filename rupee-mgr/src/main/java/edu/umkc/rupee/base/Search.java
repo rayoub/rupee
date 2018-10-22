@@ -109,6 +109,9 @@ public abstract class Search {
                     .limit(criteria.mode.getLcsCandidateCount()) 
                     .collect(Collectors.toList());
 
+                // build comparator for final sorts
+                Comparator<SearchRecord> comparator = getComparator(criteria);
+
                 // if mode is regular
                 if (criteria.mode == ModeCriteria.REGULAR) {
 
@@ -147,7 +150,7 @@ public abstract class Search {
 
                     // sort and filter for optimized alignments
                     records = records.stream()
-                        .sorted(Comparator.comparingDouble(SearchRecord::getTmScore).reversed().thenComparing(SearchRecord::getSortKey))
+                        .sorted(comparator)
                         .limit(criteria.mode.getAlgCandidateCount()) 
                         .collect(Collectors.toList());
 
@@ -158,22 +161,6 @@ public abstract class Search {
 
                 // get the total record count
                 int recordCount = records.size();
-
-                // build comparator based on sort criteria
-                Comparator<SearchRecord> comparator;
-                if (criteria.sort == SortCriteria.SIMILARITY) {
-                    comparator = Comparator.comparingDouble(SearchRecord::getSimilarity);
-                } 
-                else if (criteria.sort == SortCriteria.RMSD) {
-                    comparator = Comparator.comparingDouble(SearchRecord::getRmsd);
-                }
-                else {
-                    comparator = Comparator.comparingDouble(SearchRecord::getTmScore);
-                }
-                if (criteria.sort.isDescending()) {
-                    comparator = comparator.reversed();
-                }
-                comparator = comparator.thenComparing(SearchRecord::getSortKey);
 
                 // sort using comparator from above
                 records = records.stream()
@@ -197,8 +184,10 @@ public abstract class Search {
                         SearchRecord record = records.get(i);
                         records.remove(i);
                         records.add(0, record);
-                        records.get(0).setRmsd(0.0);
-                        records.get(0).setTmScore(1.0);
+                        if (criteria.mode == ModeCriteria.REGULAR) {
+                            records.get(0).setRmsd(0.0);
+                            records.get(0).setTmScore(1.0);
+                        }
                     }
                 }
 
@@ -212,6 +201,27 @@ public abstract class Search {
         }
 
         return records;
+    }
+
+    private Comparator<SearchRecord> getComparator(SearchCriteria criteria) {
+
+        Comparator<SearchRecord> comparator;
+
+        if (criteria.sort == SortCriteria.SIMILARITY) {
+            comparator = Comparator.comparingDouble(SearchRecord::getSimilarity);
+        } 
+        else if (criteria.sort == SortCriteria.RMSD) {
+            comparator = Comparator.comparingDouble(SearchRecord::getRmsd);
+        }
+        else {
+            comparator = Comparator.comparingDouble(SearchRecord::getTmScore);
+        }
+        if (criteria.sort.isDescending()) {
+            comparator = comparator.reversed();
+        }
+        comparator = comparator.thenComparing(SearchRecord::getSortKey);
+
+        return comparator;
     }
 
     private void align(SearchRecord record, Atom[] queryAtoms, boolean optimize) {
