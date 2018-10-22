@@ -14,7 +14,7 @@ rm(list = ls())
 df <- read.csv('precision.txt')
 
 # reorder factor levels
-df$app <- factor(df$app, levels = c('RUPEE', 'RUPEE Fast', 'SSM'))
+df$app <- factor(df$app, levels = c('RUPEE TM-Score', 'RUPEE RMSD', 'RUPEE Fast', 'mTM'))
     
 ggplot(df, aes(n, level_precision, group = app, color = app)) +
 

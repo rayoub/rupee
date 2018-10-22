@@ -15,7 +15,7 @@ df <- read.csv('scoring.txt')
 refs <- read.csv('scoring_refs.txt')
 
 # reorder factor levels 
-df$app <- factor(df$app, levels = c('RUPEE', 'RUPEE Fast', 'CATHEDRAL'))
+df$app <- factor(df$app, levels = c('RUPEE', 'RUPEE Fast', 'mTM'))
 
 ggplot(df, aes(n, avg_cume_score, group = interaction(app, score_type), linetype = app)) +
     
@@ -36,10 +36,10 @@ ggplot(df, aes(n, avg_cume_score, group = interaction(app, score_type), linetype
         end = 0.6
     ) + 
     scale_x_continuous(
-        limits = c(1, 50),
-        breaks = c(1, seq(5, 50, by = 5))
-        #limits = c(1, 100),
-        #breaks = c(1, seq(10, 100, by = 10))
+        #limits = c(1, 50),
+        #breaks = c(1, seq(5, 50, by = 5))
+        limits = c(1, 100),
+        breaks = c(1, seq(10, 100, by = 10))
     ) + 
 
     # faceting
