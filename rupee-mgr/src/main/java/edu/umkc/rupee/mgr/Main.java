@@ -724,7 +724,9 @@ public class Main {
 
     private static void option_d(CommandLine line) {
 
-        AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", DbTypeCriteria.SCOP, 100, false);
+        AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "tm_score", DbTypeCriteria.SCOP, 100);
+        AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "rmsd", DbTypeCriteria.SCOP, 100);
+        AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "similarity", DbTypeCriteria.SCOP, 100);
     }
 
     private static void option_help(Options options) {

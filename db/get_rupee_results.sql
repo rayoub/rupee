@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE FUNCTION get_rupee_results (p_benchmark VARCHAR, p_version VARCHAR, p_limit INTEGER)
+CREATE OR REPLACE FUNCTION get_rupee_results (p_benchmark VARCHAR, p_version VARCHAR, p_sort VARCHAR, p_limit INTEGER)
 RETURNS TABLE (
     n INTEGER, 
     db_id_1 VARCHAR,
@@ -12,7 +12,6 @@ RETURNS TABLE (
     fatcat_tm_score NUMERIC
 )
 AS $$
-    DECLARE s_version VARCHAR := TRIM(TRAILING '_fast' FROM p_version);
 BEGIN
 
     RETURN QUERY
@@ -37,9 +36,10 @@ BEGIN
             INNER JOIN alignment_scores s
                 ON s.db_id_1 = r.db_id_1
                 AND s.db_id_2 = r.db_id_2
-                AND s.version = s_version
+                AND s.version = p_version
         WHERE
             r.version = p_version 
+            AND r.sort = p_sort
     ),
     valid_results As
     (
