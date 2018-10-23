@@ -18,6 +18,7 @@ import edu.umkc.rupee.lib.Constants;
 
 public class SSMSearchDriver extends DriverBase {
 
+    private final boolean TIMING = true;
     private final int SUBMIT_TIMEOUT = 60;
 
     public String doSearch(String scopId) throws Exception {
@@ -33,8 +34,14 @@ public class SSMSearchDriver extends DriverBase {
         driver.findElement(By.name("sel_struct2")).click();
         driver.findElement(By.name("edt_scopcode1")).clear();
         driver.findElement(By.name("edt_scopcode1")).sendKeys(scopId);
-        driver.findElement(By.name("btn_submit_query")).click();
 
+        long start = 0, stop = 0;
+        if (TIMING) {
+            start = System.currentTimeMillis();
+        }
+        
+        driver.findElement(By.name("btn_submit_query")).click();
+        
         // wait for submit response
         for (int second = 0;; second++) {
             
@@ -50,18 +57,28 @@ public class SSMSearchDriver extends DriverBase {
             Thread.sleep(1000);
         }
 
-        // download the data
-        driver.findElement(By.name("download_rlist")).click();
+        if (TIMING) {
 
-        // give it some time to load
-        Thread.sleep(2000);
-  
-        return driver.getPageSource(); 
+            stop = System.currentTimeMillis();
+            System.out.println(scopId + "," + (stop -start));
+
+            return "";
+        }
+        else {
+
+            // download the data
+            driver.findElement(By.name("download_rlist")).click();
+
+            // give it some time to load
+            Thread.sleep(2000);
+      
+            return driver.getPageSource(); 
+        }
     }
 
     public void doSearchBatch() {
 
-        List<String> d193 = Benchmarks.get("scop_d193");
+        List<String> d193 = Benchmarks.get("scop_d62");
 
         for (int i = 0; i < d193.size(); i++) {
             
@@ -73,14 +90,17 @@ public class SSMSearchDriver extends DriverBase {
                     
                     String source = doSearch(scopId);
 
-                    FileOutputStream outputStream = new FileOutputStream(fileName);
-                    OutputStreamWriter outputWriter = new OutputStreamWriter(outputStream);
+                    if (!TIMING) {
 
-                    try (BufferedWriter bufferedWriter = new BufferedWriter(outputWriter);) {
-                           bufferedWriter.write(source);
+                        FileOutputStream outputStream = new FileOutputStream(fileName);
+                        OutputStreamWriter outputWriter = new OutputStreamWriter(outputStream);
+
+                        try (BufferedWriter bufferedWriter = new BufferedWriter(outputWriter);) {
+                               bufferedWriter.write(source);
+                        }
+
+                        System.out.println((i+1) + ": Processed " + scopId);
                     }
-
-                    System.out.println((i+1) + ": Processed " + scopId);
 
                 } catch (Exception e) {
                     Logger.getLogger(SSMSearchDriver.class.getName()).log(Level.SEVERE, scopId, e);

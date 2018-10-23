@@ -16,6 +16,7 @@ import edu.umkc.rupee.lib.Constants;
 
 public class mTMSearchDriver extends DriverBase {
 
+    private final boolean TIMING = true;
     private final int SUBMIT_TIMEOUT = 60;
     private final int SEARCH_TIMEOUT = 840;
 
@@ -30,8 +31,14 @@ public class mTMSearchDriver extends DriverBase {
 
         // commented: search pdbc
         // uncommented: search dom
-        //driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Select database (version 2018-08-03)'])[1]/following::input[2]")).click();
-        
+        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Select database (version 2018-10-12)'])[1]/following::input[2]")).click();
+       
+
+        long start = 0, stop = 0;
+        if (TIMING) {
+            start = System.currentTimeMillis();
+        }
+
         driver.findElement(By.id("submit")).click();
 
         // wait for submit response
@@ -71,21 +78,29 @@ public class mTMSearchDriver extends DriverBase {
             Thread.sleep(1000);
         }
 
-        // click it
-        driver.findElement(By.cssSelector("a[href='query.csv']")).click();
+        if (TIMING) {
 
-        // give it sometime to download
-        Thread.sleep(5000);
+            stop = System.currentTimeMillis();
+            System.out.println(scopId + "," + (stop -start));
+        }
+        else {
+            
+            // click it
+            driver.findElement(By.cssSelector("a[href='query.csv']")).click();
 
-        // give it a good name
-        Path from = Paths.get(Constants.DOWNLOAD_PATH + "query.csv");
-        Path to = Paths.get(Constants.MTM_PATH + scopId + ".txt");
-        Files.move(from, to, StandardCopyOption.REPLACE_EXISTING);
+            // give it sometime to download
+            Thread.sleep(5000);
+
+            // give it a good name
+            Path from = Paths.get(Constants.DOWNLOAD_PATH + "query.csv");
+            Path to = Paths.get(Constants.MTM_PATH + scopId + ".txt");
+            Files.move(from, to, StandardCopyOption.REPLACE_EXISTING);
+        }
     }
     
     public void doSearchBatch() {
 
-        List<String> d500 = Benchmarks.get("scop_d500");
+        List<String> d500 = Benchmarks.get("scop_d62");
 
         for (int i = 0; i < d500.size(); i++) {
             

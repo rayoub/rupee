@@ -17,6 +17,8 @@ public class DriverBase {
 
     public void setUp() throws Exception {
 
+        System.setProperty("webdriver.chrome.driver", "/home/ayoub/selenium/chromedriver");
+
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(IMPLICIT_TIMEOUT, TimeUnit.SECONDS);
     }
