@@ -467,6 +467,7 @@ public class Main {
         //*************************************************************
 
         boolean verbose = false; 
+        boolean timing = false;
 
         if (dbType == DbTypeCriteria.SCOP) { 
 
@@ -492,7 +493,17 @@ public class Main {
             criteria.differentFamily = diff3;
 
             ScopSearch scopSearch = new ScopSearch();
+
+            long start = 0, stop = 0;
+            if (timing) {
+                start = System.currentTimeMillis(); 
+            }
             List<SearchRecord> records = scopSearch.search(criteria);
+            if (timing) {
+                stop = System.currentTimeMillis();
+                System.out.println(criteria.dbId + "," + (stop - start));
+                return;
+            }
         
             for (SearchRecord baseRecord : records) {
            
@@ -554,7 +565,17 @@ public class Main {
             criteria.differentS35 = diff3;
 
             CathSearch cathSearch = new CathSearch();
+
+            long start = 0, stop = 0;
+            if (timing) {
+                start = System.currentTimeMillis(); 
+            }
             List<SearchRecord> records = cathSearch.search(criteria);
+            if (timing) {
+                stop = System.currentTimeMillis();
+                System.out.println(criteria.dbId + "," + (stop - start));
+                return;
+            }
 
             for (SearchRecord baseRecord : records) {
              
