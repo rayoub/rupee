@@ -3,7 +3,7 @@
 
 This project contains code and data initially associated with the paper [RUPEE: Scalable protein structure search using run position encoded residue descriptors](http://ieeexplore.ieee.org/document/8217627/) published in the IEEE International Conference on Bioinformatics and Biomedicine of 2017. 
 RUPEE is under continual development.
-At this stage, the initial RUPEE paper serves only to describe the common basis for the current RUPEE operating modes, fast and regular, which are described in a paper currently being prepared for submission. 
+At this stage, the initial RUPEE paper serves only to describe the common basis for the current RUPEE operating modes, fast and top-aligned, which are described in a paper currently being prepared for submission. 
 
 RUPEE itself is available for use at <http://www.ayoubresearch.com>.
 
@@ -13,7 +13,7 @@ It is assumed that you are familiar with RUPEE and have read the paper.
 With respect to software dependencies, Java 8 and an installation of postgreSQL 9.4 or above are required.
 The instructions below assume you are operating within a bash shell. 
 Typically, this will be under Linux. 
-However, Windows 10 does contain a bash shell if you take actions to enable it or you can install Cygwin on earlier versions of Windows. 
+However, Windows 10 does contain a bash shell if you follow some steps to enable it or else you can install Cygwin on earlier versions of Windows. 
 
 If you need additional info or have questions not addressed below, contact me at ronaldayoub@mail.umkc.edu.
 
@@ -47,7 +47,7 @@ These typically contain queries I have found useful during development.
 
 This directory contains the Java project for administering RUPEE. 
 The project also serves as a library used by the RUPEE web site. 
-The root directory contains a Maven pom file used for building the project into the rupee-mgr/target/ subdirectory. 
+The root directory contains a Maven pom file used for building the project into the rupee-mgr/target/ directory. 
 Before building, you should update the hard-coded values in the Constants.java file in the lib namespace. 
 
 Once successfully built, running the jar with the command line parameter ```-?```, gives the following output: 
@@ -73,7 +73,7 @@ Where
 <ID_TYPE>   = SCOP | CATH | ECOD | CHAIN
 <DB_TYPE>   = SCOP | CATH | ECOD | CHAIN
 <ALIGN>     = CE | CECP | FATCAT_RIGID | FATCAT_FLEXIBLE
-<MODE>      = FAST | REGULAR
+<MODE>      = FAST | TOP_ALIGNED
 <SORT>      = RMSD | TM_SCORE | SIMILARITY
 <REP#>      = TRUE | FALSE
 <DIFF#>     = TRUE | FALSE
