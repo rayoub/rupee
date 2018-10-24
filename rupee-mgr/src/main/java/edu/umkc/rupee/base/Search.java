@@ -113,7 +113,7 @@ public abstract class Search {
                 Comparator<SearchRecord> comparator = getComparator(criteria);
 
                 // if mode is regular
-                if (criteria.mode == ModeCriteria.REGULAR) {
+                if (criteria.mode == ModeCriteria.TOP_ALIGNED) {
 
                     // *** cache common objects 
             
@@ -184,7 +184,7 @@ public abstract class Search {
                         SearchRecord record = records.get(i);
                         records.remove(i);
                         records.add(0, record);
-                        if (criteria.mode == ModeCriteria.REGULAR) {
+                        if (criteria.mode == ModeCriteria.TOP_ALIGNED) {
                             records.get(0).setRmsd(0.0);
                             records.get(0).setTmScore(1.0);
                         }

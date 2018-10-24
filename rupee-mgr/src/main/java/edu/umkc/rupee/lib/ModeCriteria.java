@@ -2,7 +2,7 @@ package edu.umkc.rupee.lib;
 
 public enum ModeCriteria {
 
-    REGULAR(40000, 2000, 400),
+    TOP_ALIGNED(40000, 2000, 400),
     FAST(8000, 8000, 0);
 
     private int lshCandidateCount;
