@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import edu.umkc.rupee.base.Search;
 import edu.umkc.rupee.base.SearchCriteria;
 import edu.umkc.rupee.base.SearchRecord;
-import edu.umkc.rupee.lib.DbTypeCriteria;
+import edu.umkc.rupee.defs.DbTypeCriteria;
 
 public class ChainSearch extends Search {
 

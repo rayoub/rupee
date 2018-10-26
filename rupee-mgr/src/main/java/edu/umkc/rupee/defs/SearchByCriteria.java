@@ -1,4 +1,4 @@
-package edu.umkc.rupee.lib;
+package edu.umkc.rupee.defs;
 
 public enum SearchByCriteria {
     

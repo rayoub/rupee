@@ -15,6 +15,8 @@ import java.util.logging.Logger;
 import org.postgresql.PGConnection;
 import org.postgresql.ds.PGSimpleDataSource;
 
+import edu.umkc.rupee.defs.DbTypeCriteria;
+
 public class Db {
 
     public static PGSimpleDataSource getDataSource() {

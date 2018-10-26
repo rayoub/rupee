@@ -28,9 +28,9 @@ import org.biojava.nbio.structure.secstruc.SecStrucCalc;
 import org.biojava.nbio.structure.secstruc.SecStrucInfo;
 import org.postgresql.ds.PGSimpleDataSource;
 
+import edu.umkc.rupee.defs.DbTypeCriteria;
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
-import edu.umkc.rupee.lib.DbTypeCriteria;
 import edu.umkc.rupee.lib.Log;
 import edu.umkc.rupee.lib.Residue;
 
@@ -256,7 +256,7 @@ public abstract class Import {
                 Residue residue = new Residue();
 
                 residue.setPdbId(structure.getPDBCode());
-                residue.setChainId(chain.getChainID());
+                residue.setChainId(chain.getId());
                 residue.setAtomNumber(g2.getAtom("CA").getPDBserial());
                 residue.setResidueNumber(g2.getResidueNumber().getSeqNum());
                 residue.setResidueCode(String.valueOf(g2.getResidueNumber().getInsCode()));

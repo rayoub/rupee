@@ -1,4 +1,4 @@
-package edu.umkc.rupee.lib;
+package edu.umkc.rupee.defs;
 
 import org.biojava.nbio.structure.align.ce.CECPParameters;
 import org.biojava.nbio.structure.align.ce.CeCPMain;

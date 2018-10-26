@@ -1,4 +1,6 @@
-package edu.umkc.rupee.lib;
+package edu.umkc.rupee.defs;
+
+import edu.umkc.rupee.lib.Constants;
 
 public enum DbTypeCriteria {
     

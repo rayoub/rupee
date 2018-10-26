@@ -1,7 +1,7 @@
 package edu.umkc.rupee.ecod;
 
 import edu.umkc.rupee.base.Hash;
-import edu.umkc.rupee.lib.DbTypeCriteria;
+import edu.umkc.rupee.defs.DbTypeCriteria;
 
 public class EcodHash extends Hash {
 

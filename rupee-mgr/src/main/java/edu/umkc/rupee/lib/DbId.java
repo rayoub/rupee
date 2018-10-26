@@ -3,6 +3,8 @@ package edu.umkc.rupee.lib;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import edu.umkc.rupee.defs.DbTypeCriteria;
+
 public class DbId {
 
     private static Pattern SCOP_PATTERN = Pattern.compile("d[a-z0-9]{4}[a-z][_1-9]", Pattern.CASE_INSENSITIVE);

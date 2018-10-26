@@ -28,15 +28,15 @@ import org.biojava.nbio.structure.align.util.AFPChainScorer;
 import org.postgresql.ds.PGSimpleDataSource;
 
 import edu.umkc.rupee.bio.Parser;
+import edu.umkc.rupee.defs.DbTypeCriteria;
+import edu.umkc.rupee.defs.ModeCriteria;
+import edu.umkc.rupee.defs.SearchByCriteria;
+import edu.umkc.rupee.defs.SortCriteria;
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
-import edu.umkc.rupee.lib.DbTypeCriteria;
 import edu.umkc.rupee.lib.Hashes;
 import edu.umkc.rupee.lib.LCS;
-import edu.umkc.rupee.lib.ModeCriteria;
-import edu.umkc.rupee.lib.SearchByCriteria;
 import edu.umkc.rupee.lib.Similarity;
-import edu.umkc.rupee.lib.SortCriteria;
 
 public abstract class Search {
 
