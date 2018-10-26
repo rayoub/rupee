@@ -10,7 +10,7 @@ public class SearchCriteria {
     public DbTypeCriteria dbType;
     public SearchByCriteria searchBy;
     public DbTypeCriteria dbIdType;
-    public String dbId = "UPLOAD";
+    public String dbId;
     public int uploadId = -1;
     public int page;
     public int pageSize;
