@@ -44,13 +44,14 @@ public class mTMSearchDriver extends DriverBase {
         // wait for submit response
         for (int second = 0;; second++) {
             
-            if (second >= SUBMIT_TIMEOUT) fail("submit timed out for " + scopId);
-
-                try {
-                    if (isElementPresent(By.cssSelector("a[href*='output']")))
-                        break;
-                } catch (Exception e) {
+            if (second >= SUBMIT_TIMEOUT) {
+                fail("submit timed out for " + scopId);
             }
+
+            try {
+                if (isElementPresent(By.cssSelector("a[href*='output']")))
+                    break;
+            } catch (Exception e) { }
             Thread.sleep(1000);
         }
        
@@ -100,11 +101,11 @@ public class mTMSearchDriver extends DriverBase {
     
     public void doSearchBatch() {
 
-        List<String> d500 = Benchmarks.get("scop_d62");
+        List<String> dbIds = Benchmarks.get("scop_d62");
 
-        for (int i = 0; i < d500.size(); i++) {
+        for (int i = 0; i < dbIds.size(); i++) {
             
-            String scopId = d500.get(i);
+            String scopId = dbIds.get(i);
             String fileName = Constants.MTM_PATH + scopId + ".txt";
 
             if (Files.notExists(Paths.get(fileName))) {

@@ -29,6 +29,7 @@ public class Constants {
     public final static String DOWNLOAD_PATH = "/home/ayoub/Downloads/";
     public final static String SSM_PATH = "/home/ayoub/git/rupee/results/ssm/temp/";
     public final static String MTM_PATH = "/home/ayoub/git/rupee/results/mtm/temp/";
+    public final static String CATHEDRAL_PATH = "/home/ayoub/git/rupee/results/cathedral/temp/";
     
     public final static int MIN_GRAM_COUNT = 10;
     public final static int MIN_HASH_COUNT = 99;

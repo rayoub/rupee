@@ -45,7 +45,9 @@ public class SSMSearchDriver extends DriverBase {
         // wait for submit response
         for (int second = 0;; second++) {
             
-            if (second >= SUBMIT_TIMEOUT) fail("search timed out for " + scopId);
+            if (second >= SUBMIT_TIMEOUT) {
+                fail("search timed out for " + scopId);
+            } 
 
             if (isElementPresent(By.name("download_rlist"))) {
                 break;
@@ -78,11 +80,11 @@ public class SSMSearchDriver extends DriverBase {
 
     public void doSearchBatch() {
 
-        List<String> d193 = Benchmarks.get("scop_d62");
+        List<String> dbIds = Benchmarks.get("scop_d62");
 
-        for (int i = 0; i < d193.size(); i++) {
+        for (int i = 0; i < dbIds.size(); i++) {
             
-            String scopId = d193.get(i);
+            String scopId = dbIds.get(i);
             String fileName = Constants.SSM_PATH + scopId + ".txt";
 
             if (Files.notExists(Paths.get(fileName))) {

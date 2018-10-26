@@ -5,6 +5,7 @@ data/pdb/obsolete/
 data/pdb/index/
 data/scop/pdb/
 data/cath/pdb/
+data/cath/pdb_diverse/
 data/ecod/pdb/
 data/chain/pdb/
 data/upload/
