@@ -56,148 +56,148 @@ public abstract class Search {
     // Instance Methods
     // *********************************************************************
     
-    public List<SearchRecord> search(SearchCriteria criteria) {
+    public List<SearchRecord> search(SearchCriteria criteria, boolean fromWeb) throws Exception {
 
         List<SearchRecord> records = new ArrayList<>();
+        
+        List<Integer> grams = null;
+        Hashes hashes = null;
 
-        try {
-
-            List<Integer> grams = null;
-            Hashes hashes = null;
-
-            if (criteria.searchBy == SearchByCriteria.DB_ID) {
-                
-                grams = Db.getGrams(criteria.dbId, criteria.dbIdType);
-                hashes = Db.getHashes(criteria.dbId, criteria.dbIdType);
-            }
-            else { // UPLOAD
-
-                grams = Db.getUploadGrams(criteria.uploadId);
-                hashes = Db.getUploadHashes(criteria.uploadId);
-            }
-
-            final List<Integer> grams1 = grams;
-            final Hashes hashes1 = hashes;
-
-            if (hashes1 != null) {
-
-                // parallel band match searches to gather lsh candidates
-                records = IntStream.range(0, Constants.BAND_CHECK_COUNT).boxed().parallel()
-                    .flatMap(bandIndex -> searchBand(bandIndex, criteria, grams1, hashes1).stream())
-                    .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
-                    .limit(criteria.mode.getLshCandidateCount()) 
-                    .collect(Collectors.toList());
-
-                // cache map of residue grams
-                List<String> dbIds = records.stream().map(SearchRecord::getDbId).collect(Collectors.toList());
-                Map<String, List<Integer>> map = Db.getGrams(dbIds, criteria.dbType);
-
-                // parallel lcs algorithm
-                records.stream()
-                    .forEach(record -> {
-
-                        if (map.containsKey(record.getDbId())) {
-                            List<Integer> grams2 = map.get(record.getDbId());
-                            int score = LCS.getLCSScore(grams1, grams2); 
-                            record.setSimilarity(score);
-                        }
-                    });
-
-                // sort and filter lcs candidates
-                records = records.stream()
-                    .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
-                    .limit(criteria.mode.getLcsCandidateCount()) 
-                    .collect(Collectors.toList());
-
-                // build comparator for final sorts
-                Comparator<SearchRecord> comparator = getComparator(criteria);
-
-                // if mode is regular
-                if (criteria.mode == ModeCriteria.TOP_ALIGNED) {
-
-                    // *** cache common objects 
+        if (criteria.searchBy == SearchByCriteria.DB_ID) {
             
-                    Parser parser = new Parser(Integer.MAX_VALUE);
+            grams = Db.getGrams(criteria.dbId, criteria.dbIdType);
+            hashes = Db.getHashes(criteria.dbId, criteria.dbIdType);
+        }
+        else { // UPLOAD
 
-                    String fileName = "";
-                    Structure structure = null;
-                    if (criteria.searchBy == SearchByCriteria.DB_ID) {
+            grams = Db.getUploadGrams(criteria.uploadId);
+            hashes = Db.getUploadHashes(criteria.uploadId);
+        }
 
-                        fileName = criteria.dbIdType.getImportPath() + criteria.dbId + ".pdb.gz";
-                        
-                        FileInputStream queryFile = new FileInputStream(fileName);
-                        GZIPInputStream queryFileGz = new GZIPInputStream(queryFile);
+        // size limit for top-aligned searches
+        if (fromWeb && criteria.mode == ModeCriteria.TOP_ALIGNED && grams.size() > 200) {
+            
+            Thread.sleep(2000); // sleeping corresponds to an event throttle on web page - looks nicer
+            throw new UnsupportedOperationException("Query structures for immediate Top-Aligned searches must have fewer than 200 residues.");
+        }
 
-                        structure = parser.parsePDBFile(queryFileGz);
+        final List<Integer> grams1 = grams;
+        final Hashes hashes1 = hashes;
+
+        if (hashes1 != null) {
+
+            // parallel band match searches to gather lsh candidates
+            records = IntStream.range(0, Constants.BAND_CHECK_COUNT).boxed().parallel()
+                .flatMap(bandIndex -> searchBand(bandIndex, criteria, grams1, hashes1).stream())
+                .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
+                .limit(criteria.mode.getLshCandidateCount()) 
+                .collect(Collectors.toList());
+
+            // cache map of residue grams
+            List<String> dbIds = records.stream().map(SearchRecord::getDbId).collect(Collectors.toList());
+            Map<String, List<Integer>> map = Db.getGrams(dbIds, criteria.dbType);
+
+            // parallel lcs algorithm
+            records.stream()
+                .forEach(record -> {
+
+                    if (map.containsKey(record.getDbId())) {
+                        List<Integer> grams2 = map.get(record.getDbId());
+                        int score = LCS.getLCSScore(grams1, grams2); 
+                        record.setSimilarity(score);
                     }
-                    else { // UPLOAD
-                        
-                        fileName = Constants.UPLOAD_PATH + criteria.uploadId + ".pdb";
-                        FileInputStream queryFile = new FileInputStream(fileName);
+                });
 
-                        structure = parser.parsePDBFile(queryFile);
-                    }
+            // sort and filter lcs candidates
+            records = records.stream()
+                .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
+                .limit(criteria.mode.getLcsCandidateCount()) 
+                .collect(Collectors.toList());
 
-                    Structure queryStructure = structure;
-                   
-                    // all we need 
-                    final Atom[] queryAtoms = StructureTools.getAtomCAArray(queryStructure);
+            // build comparator for final sorts
+            Comparator<SearchRecord> comparator = getComparator(criteria);
 
-                    // *** perform alignments
-                    
-                    // unoptimized alignments
-                    records.stream().parallel().forEach(record -> align(record, queryAtoms, false));
+            // if mode is regular
+            if (criteria.mode == ModeCriteria.TOP_ALIGNED) {
 
-                    // sort and filter for optimized alignments
-                    records = records.stream()
-                        .sorted(comparator)
-                        .limit(criteria.mode.getAlgCandidateCount()) 
-                        .collect(Collectors.toList());
+                // *** cache common objects 
+        
+                Parser parser = new Parser(Integer.MAX_VALUE);
 
-                    // optimized alignments
-                    records.stream().parallel().forEach(record -> align(record, queryAtoms, true));
-
-                } // end mode == REGULAR
-
-                // get the total record count
-                int recordCount = records.size();
-
-                // sort using comparator from above
-                records = records.stream()
-                        .sorted(comparator)
-                        .skip((criteria.page - 1) * criteria.pageSize)
-                        .limit(criteria.pageSize)
-                        .collect(Collectors.toList());
-
-                // query db id should be first
+                String fileName = "";
+                Structure structure = null;
                 if (criteria.searchBy == SearchByCriteria.DB_ID) {
-                   
-                    int i; 
-                    for (i = 0; i < records.size(); i++) {
-                        if (records.get(i).getDbId().equals(criteria.dbId)) {
-                            break;
-                        }
-                    }
+
+                    fileName = criteria.dbIdType.getImportPath() + criteria.dbId + ".pdb.gz";
                     
-                    if (i != 0 && i < records.size()) {
-                        
-                        SearchRecord record = records.get(i);
-                        records.remove(i);
-                        records.add(0, record);
-                        if (criteria.mode == ModeCriteria.TOP_ALIGNED) {
-                            records.get(0).setRmsd(0.0);
-                            records.get(0).setTmScore(1.0);
-                        }
-                    }
+                    FileInputStream queryFile = new FileInputStream(fileName);
+                    GZIPInputStream queryFileGz = new GZIPInputStream(queryFile);
+
+                    structure = parser.parsePDBFile(queryFileGz);
+                }
+                else { // UPLOAD
+                    
+                    fileName = Constants.UPLOAD_PATH + criteria.uploadId + ".pdb";
+                    FileInputStream queryFile = new FileInputStream(fileName);
+
+                    structure = parser.parsePDBFile(queryFile);
                 }
 
-                // augment data set for output
-                augment(records, recordCount);
+                Structure queryStructure = structure;
+               
+                // all we need 
+                final Atom[] queryAtoms = StructureTools.getAtomCAArray(queryStructure);
+
+                // *** perform alignments
+                
+                // unoptimized alignments
+                records.stream().parallel().forEach(record -> align(record, queryAtoms, false));
+
+                // sort and filter for optimized alignments
+                records = records.stream()
+                    .sorted(comparator)
+                    .limit(criteria.mode.getAlgCandidateCount()) 
+                    .collect(Collectors.toList());
+
+                // optimized alignments
+                records.stream().parallel().forEach(record -> align(record, queryAtoms, true));
+
+            } // end mode == REGULAR
+
+            // get the total record count
+            int recordCount = records.size();
+
+            // sort using comparator from above
+            records = records.stream()
+                    .sorted(comparator)
+                    .skip((criteria.page - 1) * criteria.pageSize)
+                    .limit(criteria.pageSize)
+                    .collect(Collectors.toList());
+
+            // query db id should be first
+            if (criteria.searchBy == SearchByCriteria.DB_ID) {
+               
+                int i; 
+                for (i = 0; i < records.size(); i++) {
+                    if (records.get(i).getDbId().equals(criteria.dbId)) {
+                        break;
+                    }
+                }
+                
+                if (i != 0 && i < records.size()) {
+                    
+                    SearchRecord record = records.get(i);
+                    records.remove(i);
+                    records.add(0, record);
+                    if (criteria.mode == ModeCriteria.TOP_ALIGNED) {
+                        records.get(0).setRmsd(0.0);
+                        records.get(0).setTmScore(1.0);
+                    }
+                }
             }
 
-        } catch (Exception e) {
-            e.printStackTrace();
-            Logger.getLogger(Search.class.getName()).log(Level.SEVERE, null, e);
+            // augment data set for output
+            augment(records, recordCount);
         }
 
         return records;

@@ -371,7 +371,7 @@ public class Main {
         }
     }
     
-    private static void option_s(CommandLine line) {
+    private static void option_s(CommandLine line) throws Exception {
 
         Set<String> searchTypeNames = new HashSet<>(Arrays.stream(SearchByCriteria.values()).map(v -> v.name()).collect(Collectors.toList()));
         Set<String> dbTypeNames = new HashSet<>(Arrays.stream(DbTypeCriteria.values()).map(v -> v.name()).collect(Collectors.toList()));
@@ -498,7 +498,7 @@ public class Main {
             if (timing) {
                 start = System.currentTimeMillis(); 
             }
-            List<SearchRecord> records = scopSearch.search(criteria);
+            List<SearchRecord> records = scopSearch.search(criteria, false);
             if (timing) {
                 stop = System.currentTimeMillis();
                 System.out.println(criteria.dbId + "," + (stop - start));
@@ -570,7 +570,7 @@ public class Main {
             if (timing) {
                 start = System.currentTimeMillis(); 
             }
-            List<SearchRecord> records = cathSearch.search(criteria);
+            List<SearchRecord> records = cathSearch.search(criteria, false);
             if (timing) {
                 stop = System.currentTimeMillis();
                 System.out.println(criteria.dbId + "," + (stop - start));
@@ -636,7 +636,7 @@ public class Main {
             criteria.differentF = diff3;
 
             EcodSearch ecodSearch = new EcodSearch();
-            List<SearchRecord> records = ecodSearch.search(criteria);
+            List<SearchRecord> records = ecodSearch.search(criteria, false);
         
             for (SearchRecord baseRecord : records) {
            
@@ -692,7 +692,7 @@ public class Main {
             criteria.sort = sort;
 
             ChainSearch chainSearch = new ChainSearch();
-            List<SearchRecord> records = chainSearch.search(criteria);
+            List<SearchRecord> records = chainSearch.search(criteria, false);
         
             for (SearchRecord baseRecord : records) {
            
