@@ -31,6 +31,7 @@ import edu.umkc.rupee.bio.Parser;
 import edu.umkc.rupee.defs.DbTypeCriteria;
 import edu.umkc.rupee.defs.ModeCriteria;
 import edu.umkc.rupee.defs.SearchByCriteria;
+import edu.umkc.rupee.defs.SearchFrom;
 import edu.umkc.rupee.defs.SortCriteria;
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
@@ -56,7 +57,7 @@ public abstract class Search {
     // Instance Methods
     // *********************************************************************
     
-    public List<SearchRecord> search(SearchCriteria criteria, boolean fromWeb) throws Exception {
+    public List<SearchRecord> search(SearchCriteria criteria, SearchFrom searchFrom) throws Exception {
 
         List<SearchRecord> records = new ArrayList<>();
         
@@ -75,7 +76,7 @@ public abstract class Search {
         }
 
         // size limit for top-aligned searches
-        if (fromWeb && criteria.mode == ModeCriteria.TOP_ALIGNED && grams.size() > 200) {
+        if (searchFrom == SearchFrom.WEB && criteria.mode == ModeCriteria.TOP_ALIGNED && grams.size() > 200) {
             
             Thread.sleep(2000); // sleeping corresponds to an event throttle on web page - looks nicer
             throw new UnsupportedOperationException("Query structures for immediate Top-Aligned searches must have fewer than 200 residues.");
@@ -151,7 +152,12 @@ public abstract class Search {
                 // *** perform alignments
                 
                 // unoptimized alignments
-                records.stream().parallel().forEach(record -> align(record, queryAtoms, false));
+                if (searchFrom == SearchFrom.SERVER) {
+                    records.stream().forEach(record -> align(record, queryAtoms, false));
+                }
+                else {
+                    records.stream().parallel().forEach(record -> align(record, queryAtoms, false));
+                }
 
                 // sort and filter for optimized alignments
                 records = records.stream()
@@ -160,7 +166,12 @@ public abstract class Search {
                     .collect(Collectors.toList());
 
                 // optimized alignments
-                records.stream().parallel().forEach(record -> align(record, queryAtoms, true));
+                if (searchFrom == SearchFrom.SERVER) {
+                    records.stream().forEach(record -> align(record, queryAtoms, true));
+                }
+                else {
+                    records.stream().parallel().forEach(record -> align(record, queryAtoms, true));
+                }
 
             } // end mode == REGULAR
 

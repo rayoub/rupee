@@ -41,6 +41,7 @@ import edu.umkc.rupee.defs.AlignCriteria;
 import edu.umkc.rupee.defs.DbTypeCriteria;
 import edu.umkc.rupee.defs.ModeCriteria;
 import edu.umkc.rupee.defs.SearchByCriteria;
+import edu.umkc.rupee.defs.SearchFrom;
 import edu.umkc.rupee.defs.SortCriteria;
 import edu.umkc.rupee.ecod.EcodHash;
 import edu.umkc.rupee.ecod.EcodImport;
@@ -498,7 +499,7 @@ public class Main {
             if (timing) {
                 start = System.currentTimeMillis(); 
             }
-            List<SearchRecord> records = scopSearch.search(criteria, false);
+            List<SearchRecord> records = scopSearch.search(criteria, SearchFrom.CLI);
             if (timing) {
                 stop = System.currentTimeMillis();
                 System.out.println(criteria.dbId + "," + (stop - start));
@@ -570,7 +571,7 @@ public class Main {
             if (timing) {
                 start = System.currentTimeMillis(); 
             }
-            List<SearchRecord> records = cathSearch.search(criteria, false);
+            List<SearchRecord> records = cathSearch.search(criteria, SearchFrom.CLI);
             if (timing) {
                 stop = System.currentTimeMillis();
                 System.out.println(criteria.dbId + "," + (stop - start));
@@ -636,7 +637,7 @@ public class Main {
             criteria.differentF = diff3;
 
             EcodSearch ecodSearch = new EcodSearch();
-            List<SearchRecord> records = ecodSearch.search(criteria, false);
+            List<SearchRecord> records = ecodSearch.search(criteria, SearchFrom.CLI);
         
             for (SearchRecord baseRecord : records) {
            
@@ -692,7 +693,7 @@ public class Main {
             criteria.sort = sort;
 
             ChainSearch chainSearch = new ChainSearch();
-            List<SearchRecord> records = chainSearch.search(criteria, false);
+            List<SearchRecord> records = chainSearch.search(criteria, SearchFrom.CLI);
         
             for (SearchRecord baseRecord : records) {
            
