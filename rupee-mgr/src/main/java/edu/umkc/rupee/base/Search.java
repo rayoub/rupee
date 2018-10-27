@@ -175,14 +175,10 @@ public abstract class Search {
 
             } // end mode == REGULAR
 
-            // get the total record count
-            int recordCount = records.size();
-
             // sort using comparator from above
             records = records.stream()
                     .sorted(comparator)
-                    .skip((criteria.page - 1) * criteria.pageSize)
-                    .limit(criteria.pageSize)
+                    .limit(criteria.limit)
                     .collect(Collectors.toList());
 
             // query db id should be first
@@ -208,7 +204,7 @@ public abstract class Search {
             }
 
             // augment data set for output
-            augment(records, recordCount);
+            augment(records);
         }
 
         return records;
@@ -314,7 +310,7 @@ public abstract class Search {
         return records;
     }
 
-    private void augment(List<SearchRecord> bandRecords, int recordCount) {
+    private void augment(List<SearchRecord> bandRecords) {
 
         try {
 
@@ -341,7 +337,6 @@ public abstract class Search {
                 SearchRecord record = bandRecords.get(n-1);
 
                 record.setN(n++);
-                record.setRecordCount(recordCount);
 
                 augment(record, rs);
             }

@@ -484,8 +484,6 @@ public class Main {
                 criteria.uploadId = Integer.parseInt(id);
             }
 
-            criteria.page = 1;
-            criteria.pageSize = limit;
             criteria.limit = limit;
             criteria.mode = mode;
             criteria.sort = sort;
@@ -553,8 +551,6 @@ public class Main {
                 criteria.uploadId = Integer.parseInt(id);
             }
 
-            criteria.page = 1;
-            criteria.pageSize = limit;
             criteria.limit = limit;
             criteria.mode = mode;
             criteria.sort = sort;
@@ -627,8 +623,6 @@ public class Main {
                 criteria.uploadId = Integer.parseInt(id);
             }
 
-            criteria.page = 1;
-            criteria.pageSize = limit;
             criteria.limit = limit;
             criteria.mode = mode;
             criteria.sort = sort;
@@ -686,8 +680,6 @@ public class Main {
                 criteria.uploadId = Integer.parseInt(id);
             }
 
-            criteria.page = 1;
-            criteria.pageSize = limit;
             criteria.limit = limit;
             criteria.mode = mode;
             criteria.sort = sort;

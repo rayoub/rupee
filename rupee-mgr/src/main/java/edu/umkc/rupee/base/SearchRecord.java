@@ -3,7 +3,6 @@ package edu.umkc.rupee.base;
 public class SearchRecord {
 
     private int n;
-    private int recordCount;
     private String dbId;
     private String pdbId;
     private String sortKey;
@@ -17,14 +16,6 @@ public class SearchRecord {
 
     public void setN(int n) {
         this.n = n;
-    }
-
-    public int getRecordCount() {
-        return recordCount;
-    }
-
-    public void setRecordCount(int recordCount) {
-        this.recordCount = recordCount;
     }
 
     public String getDbId() {
