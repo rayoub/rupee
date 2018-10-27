@@ -2,16 +2,18 @@ package edu.umkc.rupee.defs;
 
 public enum ModeCriteria {
 
-    FAST(1,8000, 8000, 0),
-    TOP_ALIGNED(2,40000, 2000, 400);
+    FAST(1, "Fast", 8000, 8000, 0),
+    TOP_ALIGNED(2, "Top-Aligned", 40000, 2000, 400);
 
     private int id;
+    private String name;
     private int lshCandidateCount;
     private int lcsCandidateCount;
     private int algCandidateCount;
 
-    ModeCriteria(int id, int lshCandidateCount, int lcsCandidateCount, int algCandidateCount) {
+    ModeCriteria(int id, String name, int lshCandidateCount, int lcsCandidateCount, int algCandidateCount) {
         this.id = id;
+        this.name = name;
         this.lshCandidateCount = lshCandidateCount;
         this.lcsCandidateCount = lcsCandidateCount;
         this.algCandidateCount = algCandidateCount;
@@ -21,32 +23,20 @@ public enum ModeCriteria {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public String getName() {
+        return name;
     }
 
     public int getLshCandidateCount() {
         return lshCandidateCount;
     }
 
-    public void setLshCandidateCount(int maxCandidateCount) {
-        this.lshCandidateCount = maxCandidateCount;
-    }
-
     public int getLcsCandidateCount() {
         return lcsCandidateCount;
     }
 
-    public void setLcsCandidateCount(int lcsCandidateCount) {
-        this.lcsCandidateCount = lcsCandidateCount;
-    }
-
     public int getAlgCandidateCount() {
         return algCandidateCount;
-    }
-
-    public void setAlgCandidateCount(int algCandidateCount) {
-        this.algCandidateCount = algCandidateCount;
     }
 
     public static ModeCriteria fromId(int id) {

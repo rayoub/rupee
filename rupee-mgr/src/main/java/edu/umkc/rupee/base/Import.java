@@ -71,15 +71,15 @@ public abstract class Import {
 
             DbTypeCriteria dbType = getDbType();
 
-            System.out.println("Split: " + splitIndex + ", Getting " + dbType.getDescription() + " Ids to Import.");
+            System.out.println("Split: " + splitIndex + ", Getting " + dbType.getName() + " Ids to Import.");
                 
-            PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_" + dbType.getDescription().toLowerCase() + "_split(?,?);");
+            PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_" + dbType.getTableName() + "_split(?,?);");
             stmt.setInt(1, splitIndex);
             stmt.setInt(2, Constants.SPLIT_COUNT);
             
             ResultSet rs = stmt.executeQuery();
 
-            System.out.println("Split: " + splitIndex + ", Got " + dbType.getDescription() + " Ids.");
+            System.out.println("Split: " + splitIndex + ", Got " + dbType.getName() + " Ids.");
 
             // *** iterate split
             
@@ -147,7 +147,7 @@ public abstract class Import {
 
     public void saveGrams(String dbId, Integer[] grams, Connection conn) throws SQLException {
         
-        PreparedStatement updt = conn.prepareStatement("SELECT insert_" + getDbType().getDescription().toLowerCase() + "_grams(?, ?);");
+        PreparedStatement updt = conn.prepareStatement("SELECT insert_" + getDbType().getTableName() + "_grams(?, ?);");
         updt.setString(1, dbId);
         updt.setArray(2, conn.createArrayOf("INTEGER", grams));
         updt.execute();

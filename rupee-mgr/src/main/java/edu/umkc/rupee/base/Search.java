@@ -316,7 +316,7 @@ public abstract class Search {
 
             String[] dbIds = Arrays.copyOf(objDbIds, objDbIds.length, String[].class);
 
-            PreparedStatement stmt = conn.prepareStatement("SELECT * FROM get_" + getDbType().getDescription().toLowerCase() + "_augmented_results(?);");
+            PreparedStatement stmt = conn.prepareStatement("SELECT * FROM get_" + getDbType().getTableName() + "_augmented_results(?);");
             stmt.setArray(1, conn.createArrayOf("VARCHAR", dbIds));
 
             ResultSet rs = stmt.executeQuery();

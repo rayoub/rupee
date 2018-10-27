@@ -2,20 +2,26 @@ package edu.umkc.rupee.defs;
 
 public enum SortCriteria {
 
-    RMSD(1, false),
-    TM_SCORE(2, true),
-    SIMILARITY(3, true);
+    RMSD(1, "RMSD", false),
+    TM_SCORE(2, "TM-Score", true),
+    SIMILARITY(3, "Similarity", true);
 
     private int id;
+    private String name;
     private boolean descending;
 
-    SortCriteria(int id, boolean descending) {
+    SortCriteria(int id, String name, boolean descending) {
         this.id = id;
+        this.name = name;
         this.descending = descending;
     }
     
     public int getId() {
         return id;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public boolean isDescending() {
