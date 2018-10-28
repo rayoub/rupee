@@ -1,5 +1,8 @@
 package edu.umkc.rupee.base;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 public class SearchRecord {
 
     private int n;
@@ -9,6 +12,17 @@ public class SearchRecord {
     private double similarity;
     private double rmsd;
     private double tmScore;
+
+    public void set(ResultSet rs) throws SQLException {
+
+        this.n = rs.getInt("n");
+        this.dbId = rs.getString("db_id");
+        this.pdbId = rs.getString("pdb_id");
+        this.sortKey = rs.getString("sort_key");
+        this.similarity = rs.getDouble("similarity");
+        this.rmsd = rs.getDouble("rmsd");
+        this.tmScore = rs.getDouble("tm_score");
+    }
     
     public int getN() {
         return n;

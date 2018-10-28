@@ -5,12 +5,19 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.postgresql.ds.PGSimpleDataSource;
 
+import edu.umkc.rupee.base.Search;
 import edu.umkc.rupee.base.SearchRecord;
+import edu.umkc.rupee.cath.CathSearch;
+import edu.umkc.rupee.chain.ChainSearch;
+import edu.umkc.rupee.defs.DbTypeCriteria;
+import edu.umkc.rupee.ecod.EcodSearch;
 import edu.umkc.rupee.lib.Db;
+import edu.umkc.rupee.scop.ScopSearch;
 
 public class SearchQueue {
 
@@ -47,43 +54,100 @@ public class SearchQueue {
 
         List<QueueItem> items = new ArrayList<QueueItem>();
 
-        //try {
+        PGSimpleDataSource ds = Db.getDataSource();
 
-            PGSimpleDataSource ds = Db.getDataSource();
+        Connection conn = ds.getConnection();
+        conn.setAutoCommit(false);
 
-            Connection conn = ds.getConnection();
-            conn.setAutoCommit(false);
+        PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_search_queue(?);");
+        stmt.setString(1, userId);
 
-            PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_search_queue(?);");
-            stmt.setString(1, userId);
+        ResultSet rs = stmt.executeQuery();
+        while(rs.next()) {
 
-            ResultSet rs = stmt.executeQuery();
-            while(rs.next()) {
+            QueueItem item = new QueueItem(rs);
+            items.add(item);
+        }
 
-                QueueItem item = new QueueItem(rs);
-                item.setUserId(userId);
-                items.add(item);
-            }
-
-            rs.close();
-            stmt.close();
-            conn.close();
-        //}
-        //catch(SQLException e) {
-        //    Logger.getLogger(SearchQueue.class.getName()).log(Level.SEVERE, null, e);
-        //}
+        rs.close();
+        stmt.close();
+        conn.close();
 
         return items;
     }
    
     // /api/queue/search 
-    public static List<SearchRecord> getSearch(String hash) {
+    public static List<SearchRecord> getSearch(String searchHash, DbTypeCriteria dbType) throws SQLException {
+        
+        Search search;
+        if (dbType == DbTypeCriteria.SCOP) {
+            search = new ScopSearch();
+        }
+        else if (dbType == DbTypeCriteria.CATH) {
+            search = new CathSearch();
+        }
+        else if (dbType == DbTypeCriteria.ECOD) {
+            search = new EcodSearch();
+        }
+        else {
+            search = new ChainSearch();
+        }
 
+        List<SearchRecord> records = new ArrayList<SearchRecord>();
 
-        // get the search corresponding to the hash
-        // augment results as needed 
-        // and provide results to client in the same manner as base search functionality
+        PGSimpleDataSource ds = Db.getDataSource();
 
-        return null;
+        Connection conn = ds.getConnection();
+        conn.setAutoCommit(false);
+
+        PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_search_result(?);");
+        stmt.setString(1, searchHash);
+
+        ResultSet rs = stmt.executeQuery();
+        while(rs.next()) {
+
+            SearchRecord record = search.getSearchRecord();
+            record.set(rs);
+            records.add(record);
+        }
+
+        rs.close();
+        stmt.close();
+        conn.close();
+
+        augment(records, dbType, search);
+
+        return records;
+    }
+    
+    private static void augment(List<SearchRecord> records, DbTypeCriteria dbType, Search search) throws SQLException {
+
+        PGSimpleDataSource ds = Db.getDataSource();
+
+        Connection conn = ds.getConnection();
+        conn.setAutoCommit(true);
+   
+        Object[] objDbIds = records.stream().map(record -> record.getDbId()).toArray();
+
+        String[] dbIds = Arrays.copyOf(objDbIds, objDbIds.length, String[].class);
+
+        PreparedStatement stmt = conn.prepareStatement("SELECT * FROM get_" + dbType.getTableName() + "_augmented_results(?);");
+        stmt.setArray(1, conn.createArrayOf("VARCHAR", dbIds));
+
+        ResultSet rs = stmt.executeQuery();
+        
+        int n = 1;
+
+        while (rs.next()) {
+
+            // WITH ORDINALITY clause will ensure they are ordered correctly
+
+            SearchRecord record = records.get(n-1);
+            search.augment(record, rs);
+        }
+        
+        rs.close();
+        stmt.close();
+        conn.close();
     }
 }

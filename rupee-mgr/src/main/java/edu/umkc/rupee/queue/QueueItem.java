@@ -22,6 +22,7 @@ public class QueueItem {
 
     public QueueItem(ResultSet rs) throws SQLException {
 
+        this.userId = rs.getString("user_id");
         this.searchHash = rs.getString("search_hash");
         this.dbType = rs.getInt("db_type");
         this.searchFilter = rs.getInt("search_filter");
