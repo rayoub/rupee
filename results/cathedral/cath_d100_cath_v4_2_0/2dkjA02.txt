@@ -1,4 +1,4 @@
-Time = 3301693
+Time = 1540324
 Domain Length
 (AA residues)
 Superfamily RMSD
@@ -1898,10 +1898,10 @@ Show related domains
 200
 252
 Show related domains
-5ktmA01
-99
-3.40.50.10800
-11.8 66.8
+2fukA00
+218
+3.40.50.1820
+14.9 66.8
 0
 50
 100
@@ -1909,10 +1909,10 @@ Show related domains
 200
 252
 Show related domains
-2fukA00
-218
-3.40.50.1820
-14.9 66.8
+5ktmA01
+99
+3.40.50.10800
+11.8 66.8
 0
 50
 100
