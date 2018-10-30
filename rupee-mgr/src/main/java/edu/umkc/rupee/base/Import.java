@@ -28,9 +28,9 @@ import org.biojava.nbio.structure.secstruc.SecStrucCalc;
 import org.biojava.nbio.structure.secstruc.SecStrucInfo;
 import org.postgresql.ds.PGSimpleDataSource;
 
+import edu.umkc.rupee.defs.DbTypeCriteria;
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
-import edu.umkc.rupee.lib.DbTypeCriteria;
 import edu.umkc.rupee.lib.Log;
 import edu.umkc.rupee.lib.Residue;
 
@@ -71,15 +71,15 @@ public abstract class Import {
 
             DbTypeCriteria dbType = getDbType();
 
-            System.out.println("Split: " + splitIndex + ", Getting " + dbType.getDescription() + " Ids to Import.");
+            System.out.println("Split: " + splitIndex + ", Getting " + dbType.getName() + " Ids to Import.");
                 
-            PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_" + dbType.getDescription().toLowerCase() + "_split(?,?);");
+            PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_" + dbType.getTableName() + "_split(?,?);");
             stmt.setInt(1, splitIndex);
             stmt.setInt(2, Constants.SPLIT_COUNT);
             
             ResultSet rs = stmt.executeQuery();
 
-            System.out.println("Split: " + splitIndex + ", Got " + dbType.getDescription() + " Ids.");
+            System.out.println("Split: " + splitIndex + ", Got " + dbType.getName() + " Ids.");
 
             // *** iterate split
             
@@ -147,7 +147,7 @@ public abstract class Import {
 
     public void saveGrams(String dbId, Integer[] grams, Connection conn) throws SQLException {
         
-        PreparedStatement updt = conn.prepareStatement("SELECT insert_" + getDbType().getDescription().toLowerCase() + "_grams(?, ?);");
+        PreparedStatement updt = conn.prepareStatement("SELECT insert_" + getDbType().getTableName() + "_grams(?, ?);");
         updt.setString(1, dbId);
         updt.setArray(2, conn.createArrayOf("INTEGER", grams));
         updt.execute();
@@ -256,7 +256,7 @@ public abstract class Import {
                 Residue residue = new Residue();
 
                 residue.setPdbId(structure.getPDBCode());
-                residue.setChainId(chain.getChainID());
+                residue.setChainId(chain.getId());
                 residue.setAtomNumber(g2.getAtom("CA").getPDBserial());
                 residue.setResidueNumber(g2.getResidueNumber().getSeqNum());
                 residue.setResidueCode(String.valueOf(g2.getResidueNumber().getInsCode()));

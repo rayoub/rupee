@@ -5,6 +5,8 @@ import java.sql.SQLException;
 
 import org.postgresql.util.PGobject;
 
+import edu.umkc.rupee.defs.AlignCriteria;
+
 public class AlignmentScores extends PGobject {
 
     private String version;

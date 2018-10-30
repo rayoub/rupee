@@ -15,6 +15,8 @@ import java.util.logging.Logger;
 import org.postgresql.PGConnection;
 import org.postgresql.ds.PGSimpleDataSource;
 
+import edu.umkc.rupee.defs.DbTypeCriteria;
+
 public class Db {
 
     public static PGSimpleDataSource getDataSource() {
@@ -54,7 +56,7 @@ public class Db {
         Connection conn = ds.getConnection();
         conn.setAutoCommit(false);
    
-        PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_" + dbType.getDescription().toLowerCase() + "_grams(?);");
+        PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_" + dbType.getTableName() + "_grams(?);");
         
         Object[] objDbIds = dbIds.toArray();
         String[] stringDbIds = Arrays.copyOf(objDbIds, objDbIds.length, String[].class);
@@ -134,7 +136,7 @@ public class Db {
         Connection conn = ds.getConnection();
         conn.setAutoCommit(false);
 
-        PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_" + dbType.getDescription().toLowerCase() + "_hashes(?);");
+        PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_" + dbType.getTableName() + "_hashes(?);");
         
         Object[] objDbIds = dbIds.toArray();
         String[] stringDbIds = Arrays.copyOf(objDbIds, objDbIds.length, String[].class);

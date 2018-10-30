@@ -12,9 +12,9 @@ import java.util.stream.IntStream;
 
 import org.postgresql.ds.PGSimpleDataSource;
 
+import edu.umkc.rupee.defs.DbTypeCriteria;
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
-import edu.umkc.rupee.lib.DbTypeCriteria;
 import edu.umkc.rupee.lib.Hashes;
 import edu.umkc.rupee.lib.Hashing;
 
@@ -53,15 +53,15 @@ public abstract class Hash {
             
             DbTypeCriteria dbType = getDbType();
 
-            System.out.println("Split: " + splitIndex + ", Getting " + dbType.getDescription() + " Ids to Import.");
+            System.out.println("Split: " + splitIndex + ", Getting " + dbType.getName() + " Ids to Import.");
                 
-            PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_" + dbType.getDescription().toLowerCase() + "_grams_split(?,?);");
+            PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_" + dbType.getTableName() + "_grams_split(?,?);");
             stmt.setInt(1, splitIndex);
             stmt.setInt(2, Constants.SPLIT_COUNT);
             
             ResultSet rs = stmt.executeQuery();
 
-            System.out.println("Split: " + splitIndex + ", Got " + dbType.getDescription() + " Ids.");
+            System.out.println("Split: " + splitIndex + ", Got " + dbType.getName() + " Ids.");
 
             // *** iterate split
     
@@ -74,7 +74,7 @@ public abstract class Hash {
 
                     Hashes hashes = getHashes(grams);
 
-                    PreparedStatement updt = conn.prepareStatement("SELECT insert_" + getDbType().getDescription().toLowerCase() + "_hashes(?, ?, ?);");
+                    PreparedStatement updt = conn.prepareStatement("SELECT insert_" + getDbType().getTableName() + "_hashes(?, ?, ?);");
                     updt.setString(1, dbId);
                     updt.setArray(2, conn.createArrayOf("INTEGER", hashes.getMinHashes()));
                     updt.setArray(3, conn.createArrayOf("INTEGER", hashes.getBandHashes()));

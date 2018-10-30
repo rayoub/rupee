@@ -20,6 +20,9 @@ import org.biojava.nbio.structure.io.LocalPDBDirectory.FetchBehavior;
 import org.biojava.nbio.structure.io.PDBFileReader;
 import org.postgresql.ds.PGSimpleDataSource;
 
+import edu.umkc.rupee.defs.AlignCriteria;
+import edu.umkc.rupee.defs.DbTypeCriteria;
+
 public class AlignResults
 {
     private static AtomicInteger counter;

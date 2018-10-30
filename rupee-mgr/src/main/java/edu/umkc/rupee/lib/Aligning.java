@@ -17,6 +17,9 @@ import org.biojava.nbio.structure.align.util.AFPChainScorer;
 import org.biojava.nbio.structure.io.LocalPDBDirectory.FetchBehavior;
 import org.biojava.nbio.structure.io.PDBFileReader;
 
+import edu.umkc.rupee.defs.AlignCriteria;
+import edu.umkc.rupee.defs.DbTypeCriteria;
+
 public class Aligning
 {
     public static AlignRecord align(String dbId1, String dbId2, AlignCriteria align, DbTypeCriteria dbType) {

@@ -37,24 +37,25 @@ import edu.umkc.rupee.chain.ChainImport;
 import edu.umkc.rupee.chain.ChainSearch;
 import edu.umkc.rupee.chain.ChainSearchCriteria;
 import edu.umkc.rupee.chain.ChainSearchRecord;
+import edu.umkc.rupee.defs.AlignCriteria;
+import edu.umkc.rupee.defs.DbTypeCriteria;
+import edu.umkc.rupee.defs.ModeCriteria;
+import edu.umkc.rupee.defs.SearchByCriteria;
+import edu.umkc.rupee.defs.SearchFrom;
+import edu.umkc.rupee.defs.SortCriteria;
 import edu.umkc.rupee.ecod.EcodHash;
 import edu.umkc.rupee.ecod.EcodImport;
 import edu.umkc.rupee.ecod.EcodSearch;
 import edu.umkc.rupee.ecod.EcodSearchCriteria;
 import edu.umkc.rupee.ecod.EcodSearchRecord;
-import edu.umkc.rupee.lib.AlignCriteria;
 import edu.umkc.rupee.lib.AlignRecord;
 import edu.umkc.rupee.lib.AlignResults;
 import edu.umkc.rupee.lib.Aligning;
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
-import edu.umkc.rupee.lib.DbTypeCriteria;
 import edu.umkc.rupee.lib.Hashes;
 import edu.umkc.rupee.lib.LCS;
-import edu.umkc.rupee.lib.ModeCriteria;
-import edu.umkc.rupee.lib.SearchByCriteria;
 import edu.umkc.rupee.lib.Similarity;
-import edu.umkc.rupee.lib.SortCriteria;
 import edu.umkc.rupee.lib.Uploading;
 import edu.umkc.rupee.scop.ScopHash;
 import edu.umkc.rupee.scop.ScopImport;
@@ -371,7 +372,7 @@ public class Main {
         }
     }
     
-    private static void option_s(CommandLine line) {
+    private static void option_s(CommandLine line) throws Exception {
 
         Set<String> searchTypeNames = new HashSet<>(Arrays.stream(SearchByCriteria.values()).map(v -> v.name()).collect(Collectors.toList()));
         Set<String> dbTypeNames = new HashSet<>(Arrays.stream(DbTypeCriteria.values()).map(v -> v.name()).collect(Collectors.toList()));
@@ -483,8 +484,6 @@ public class Main {
                 criteria.uploadId = Integer.parseInt(id);
             }
 
-            criteria.page = 1;
-            criteria.pageSize = limit;
             criteria.limit = limit;
             criteria.mode = mode;
             criteria.sort = sort;
@@ -498,7 +497,7 @@ public class Main {
             if (timing) {
                 start = System.currentTimeMillis(); 
             }
-            List<SearchRecord> records = scopSearch.search(criteria);
+            List<SearchRecord> records = scopSearch.search(criteria, SearchFrom.CLI);
             if (timing) {
                 stop = System.currentTimeMillis();
                 System.out.println(criteria.dbId + "," + (stop - start));
@@ -552,8 +551,6 @@ public class Main {
                 criteria.uploadId = Integer.parseInt(id);
             }
 
-            criteria.page = 1;
-            criteria.pageSize = limit;
             criteria.limit = limit;
             criteria.mode = mode;
             criteria.sort = sort;
@@ -570,7 +567,7 @@ public class Main {
             if (timing) {
                 start = System.currentTimeMillis(); 
             }
-            List<SearchRecord> records = cathSearch.search(criteria);
+            List<SearchRecord> records = cathSearch.search(criteria, SearchFrom.CLI);
             if (timing) {
                 stop = System.currentTimeMillis();
                 System.out.println(criteria.dbId + "," + (stop - start));
@@ -626,8 +623,6 @@ public class Main {
                 criteria.uploadId = Integer.parseInt(id);
             }
 
-            criteria.page = 1;
-            criteria.pageSize = limit;
             criteria.limit = limit;
             criteria.mode = mode;
             criteria.sort = sort;
@@ -636,7 +631,7 @@ public class Main {
             criteria.differentF = diff3;
 
             EcodSearch ecodSearch = new EcodSearch();
-            List<SearchRecord> records = ecodSearch.search(criteria);
+            List<SearchRecord> records = ecodSearch.search(criteria, SearchFrom.CLI);
         
             for (SearchRecord baseRecord : records) {
            
@@ -685,14 +680,12 @@ public class Main {
                 criteria.uploadId = Integer.parseInt(id);
             }
 
-            criteria.page = 1;
-            criteria.pageSize = limit;
             criteria.limit = limit;
             criteria.mode = mode;
             criteria.sort = sort;
 
             ChainSearch chainSearch = new ChainSearch();
-            List<SearchRecord> records = chainSearch.search(criteria);
+            List<SearchRecord> records = chainSearch.search(criteria, SearchFrom.CLI);
         
             for (SearchRecord baseRecord : records) {
            
