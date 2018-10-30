@@ -3,8 +3,12 @@ package edu.umkc.rupee.base;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class SearchRecord {
+import org.postgresql.util.PGobject;
+import org.postgresql.util.PGtokenizer;
 
+public class SearchRecord extends PGobject {
+
+    private String searchHash;
     private int n;
     private String dbId;
     private String pdbId;
@@ -15,6 +19,7 @@ public class SearchRecord {
 
     public void set(ResultSet rs) throws SQLException {
 
+        this.searchHash = rs.getString("search_hash");
         this.n = rs.getInt("n");
         this.dbId = rs.getString("db_id");
         this.pdbId = rs.getString("pdb_id");
@@ -24,6 +29,14 @@ public class SearchRecord {
         this.tmScore = rs.getDouble("tm_score");
     }
     
+    public String getSearchHash() {
+        return searchHash;
+    }
+
+    public void setSearchHash(String searchHash) {
+        this.searchHash = searchHash;
+    }
+
     public int getN() {
         return n;
     }
@@ -78,5 +91,10 @@ public class SearchRecord {
 
     public void setTmScore(double tmScore) {
         this.tmScore = tmScore;
+    }
+
+    @Override
+    public String getValue() {
+        return "(" + searchHash + "," + n + "," + dbId + "," + pdbId + "," + sortKey + "," + similarity + "," + rmsd + "," + tmScore + ")";
     }
 }
