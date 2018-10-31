@@ -64,12 +64,11 @@ public class Aligning
 
             DbTypeCriteria dbType = DbId.getDbIdType(dbId);
 
-            FileInputStream queryFile = new FileInputStream(Constants.UPLOAD_PATH + uploadId + ".pdb.gz");
-            GZIPInputStream queryFileGz = new GZIPInputStream(queryFile);
+            FileInputStream queryFile = new FileInputStream(Constants.UPLOAD_PATH + uploadId + ".pdb");
             FileInputStream targetFile = new FileInputStream(dbType.getImportPath() + dbId + ".pdb.gz");
             GZIPInputStream targetFileGz = new GZIPInputStream(targetFile);
 
-            Structure queryStructure = reader.getStructure(queryFileGz);
+            Structure queryStructure = reader.getStructure(queryFile);
             Structure targetStructure = reader.getStructure(targetFileGz);
 
             record = align(queryStructure, targetStructure, align);
