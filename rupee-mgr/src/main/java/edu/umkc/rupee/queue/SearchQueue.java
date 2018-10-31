@@ -88,8 +88,32 @@ public class SearchQueue {
     }
    
     // /api/queue/search 
-    public static List<SearchRecord> getSearch(String searchHash, DbTypeCriteria dbType) throws SQLException {
+    public static SearchQueueResult getSearch(String searchHash, DbTypeCriteria dbType) throws SQLException {
         
+        // *** open connection
+
+        PGSimpleDataSource ds = Db.getDataSource();
+
+        Connection conn = ds.getConnection();
+        conn.setAutoCommit(true);
+
+        // *** get the queue item corresponding to search hash
+
+        PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_search_queue_by_hash(?);");
+        stmt.setString(1, searchHash);
+
+        QueueItem item = null;
+        ResultSet rs = stmt.executeQuery();
+        if (rs.next()) {
+
+            item = new QueueItem(rs);
+        }
+
+        rs.close();
+        stmt.close();
+
+        // *** get search results corresponding to search hash
+
         Search search;
         if (dbType == DbTypeCriteria.SCOP) {
             search = new ScopSearch();
@@ -106,29 +130,27 @@ public class SearchQueue {
 
         List<SearchRecord> records = new ArrayList<SearchRecord>();
 
-        PGSimpleDataSource ds = Db.getDataSource();
+        PreparedStatement stmt2 = conn.prepareCall("SELECT * FROM get_search_result(?);");
+        stmt2.setString(1, searchHash);
 
-        Connection conn = ds.getConnection();
-        conn.setAutoCommit(false);
-
-        PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_search_result(?);");
-        stmt.setString(1, searchHash);
-
-        ResultSet rs = stmt.executeQuery();
-        while(rs.next()) {
+        ResultSet rs2 = stmt2.executeQuery();
+        while(rs2.next()) {
 
             SearchRecord record = search.getSearchRecord();
-            record.set(rs);
+            record.set(rs2);
             records.add(record);
         }
 
-        rs.close();
-        stmt.close();
+        rs2.close();
+        stmt2.close();
+        
+        augment(records, dbType, search);
+        
+        // *** close connection
+
         conn.close();
 
-        augment(records, dbType, search);
-
-        return records;
+        return new SearchQueueResult(item, records);
     }
     
     private static void augment(List<SearchRecord> records, DbTypeCriteria dbType, Search search) throws SQLException {
