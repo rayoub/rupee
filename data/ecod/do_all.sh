@@ -2,8 +2,8 @@
 ver=$1
 
 # parse definition files
-awk -f domains.awk ecod.develop210.domains.txt > domains.txt
-awk -f segments.awk ecod.develop210.domains.txt > segments.txt
+awk -f domains.awk ecod.${ver}.domains.txt > domains.txt
+awk -f segments.awk ecod.${ver}.domains.txt > segments.txt
 
 # parse pdb files (takes forever, I've been storing the zips)
 #xargs -a segments.txt -L1 ./chopper.sh
