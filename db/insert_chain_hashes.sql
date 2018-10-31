@@ -5,7 +5,7 @@ AS $$
 BEGIN
 
 	INSERT INTO chain_hashes (db_id, min_hashes, band_hashes)
-	VALUES (p_db_id, p_min_hashes, p_band_hashes, p_exact_hash);
+	VALUES (p_db_id, p_min_hashes, p_band_hashes);
 
 END;
 $$ LANGUAGE plpgsql;
