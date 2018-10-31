@@ -49,10 +49,10 @@ import edu.umkc.rupee.ecod.EcodSearch;
 import edu.umkc.rupee.ecod.EcodSearchCriteria;
 import edu.umkc.rupee.ecod.EcodSearchRecord;
 import edu.umkc.rupee.lib.AlignRecord;
-import edu.umkc.rupee.lib.AlignResults;
 import edu.umkc.rupee.lib.Aligning;
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
+import edu.umkc.rupee.lib.DbId;
 import edu.umkc.rupee.lib.Hashes;
 import edu.umkc.rupee.lib.LCS;
 import edu.umkc.rupee.lib.Similarity;
@@ -84,26 +84,26 @@ public class Main {
                 .build());
         group.addOption(Option.builder("a")
                 .longOpt("align")
-                .numberOfArgs(4)
-                .argName("ID_TYPE><DB_ID_1>,<DB_ID_2><ALIGN")
+                .numberOfArgs(3)
+                .argName("DB_ID_1>,<DB_ID_2><ALIGN")
                 .valueSeparator(',')
                 .build());
         group.addOption(Option.builder("t")
                 .longOpt("tm align")
-                .numberOfArgs(3)
-                .argName("ID_TYPE>,<DB_ID_1>,<DB_ID_2")
+                .numberOfArgs(2)
+                .argName("DB_ID_1>,<DB_ID_2")
                 .valueSeparator(',')
                 .build());
         group.addOption(Option.builder("l")
                 .longOpt("lcs")
-                .numberOfArgs(3)
-                .argName("ID_TYPE>,<DB_ID_1>,<DB_ID_2")
+                .numberOfArgs(2)
+                .argName("DB_ID_1>,<DB_ID_2")
                 .valueSeparator(',')
                 .build());
         group.addOption(Option.builder("s")
                 .longOpt("search")
-                .numberOfArgs(13)
-                .argName("SEARCH_BY><ID_TYPE>,<DB_TYPE>,<DB_ID>,<LIMIT>,<REP1>,<REP2>,<REP3>,<DIFF1>,<DIFF2><DIFF3><MODE>,<SORT")
+                .numberOfArgs(12)
+                .argName("SEARCH_BY>,<DB_TYPE>,<DB_ID>,<LIMIT>,<REP1>,<REP2>,<REP3>,<DIFF1>,<DIFF2><DIFF3><MODE>,<SORT")
                 .valueSeparator(',')
                 .build());
         group.addOption(Option.builder("u")
@@ -229,28 +229,21 @@ public class Main {
 
     private static void option_a(CommandLine line) throws SQLException {
 
-        Set<String> searchIdTypeNames = new HashSet<>(Arrays.stream(DbTypeCriteria.values()).map(v -> v.name()).collect(Collectors.toList()));
         Set<String> alignNames = new HashSet<>(Arrays.stream(AlignCriteria.values()).map(v -> v.name()).collect(Collectors.toList()));
         
         String[] args = line.getOptionValues("a");
         
-        String dbId1 = args[1];
-        String dbId2 = args[2];
-        
-        if (!searchIdTypeNames.contains(args[0])) {
-            System.err.println("The <ID_TYPE> argument must be one of " + searchIdTypeNames.toString());
-            return;
-        }
+        String dbId1 = args[0];
+        String dbId2 = args[1];
 
-        if (!alignNames.contains(args[3])) {
+        if (!alignNames.contains(args[2])) {
             System.err.println("The <ALIGN> argument must be one of " + alignNames.toString());
             return;
         }
 
-        DbTypeCriteria searchIdType = DbTypeCriteria.valueOf(args[0]);
-        AlignCriteria align = AlignCriteria.valueOf(args[3]);
+        AlignCriteria align = AlignCriteria.valueOf(args[2]);
 
-        AlignRecord record = Aligning.align(dbId1, dbId2, align, searchIdType);
+        AlignRecord record = Aligning.align(dbId1, dbId2, align);
 
         System.out.println("\nAlgorithm:      " + record.algorithmName);
         System.out.println("RMSD:           " + record.afps.getTotalRmsdOpt());
@@ -266,25 +259,19 @@ public class Main {
     
     private static void option_t(CommandLine line) throws Exception {
             
-        Set<String> searchIdTypeNames = new HashSet<>(Arrays.stream(DbTypeCriteria.values()).map(v -> v.name()).collect(Collectors.toList()));
-
         String[] args = line.getOptionValues("t");
         
-        String dbId1 = args[1];
-        String dbId2 = args[2];
-        
-        if (!searchIdTypeNames.contains(args[0])) {
-            System.err.println("The <ID_TYPE> argument must be one of " + searchIdTypeNames.toString());
-            return;
-        }
+        String dbId1 = args[0];
+        String dbId2 = args[1];
 
-        DbTypeCriteria dbType = DbTypeCriteria.valueOf(args[0]);
+        DbTypeCriteria dbType1 = DbId.getDbIdType(dbId1);
+        DbTypeCriteria dbType2 = DbId.getDbIdType(dbId2);
 
         try {
 
-            FileInputStream queryFile = new FileInputStream(dbType.getImportPath() + dbId1 + ".pdb.gz");
+            FileInputStream queryFile = new FileInputStream(dbType1.getImportPath() + dbId1 + ".pdb.gz");
             GZIPInputStream queryFileGz = new GZIPInputStream(queryFile);
-            FileInputStream targetFile = new FileInputStream(dbType.getImportPath() + dbId2 + ".pdb.gz");
+            FileInputStream targetFile = new FileInputStream(dbType2.getImportPath() + dbId2 + ".pdb.gz");
             GZIPInputStream targetFileGz = new GZIPInputStream(targetFile);
             
             Parser parser = new Parser(Integer.MAX_VALUE);
@@ -312,25 +299,19 @@ public class Main {
 
     private static void option_l(CommandLine line) throws SQLException {
         
-        Set<String> searchIdTypeNames = new HashSet<>(Arrays.stream(DbTypeCriteria.values()).map(v -> v.name()).collect(Collectors.toList()));
-
         String[] args = line.getOptionValues("l");
         
-        String dbId1 = args[1];
-        String dbId2 = args[2];
-        
-        if (!searchIdTypeNames.contains(args[0])) {
-            System.err.println("The <ID_TYPE> argument must be one of " + searchIdTypeNames.toString());
-            return;
-        }
+        String dbId1 = args[0];
+        String dbId2 = args[1];
 
-        DbTypeCriteria dbType = DbTypeCriteria.valueOf(args[0]);
+        DbTypeCriteria dbType1 = DbId.getDbIdType(dbId1);
+        DbTypeCriteria dbType2 = DbId.getDbIdType(dbId2);
 
-        Hashes hashes1 = Db.getHashes(dbId1, dbType);
-        Hashes hashes2 = Db.getHashes(dbId2, dbType);
+        Hashes hashes1 = Db.getHashes(dbId1, dbType1);
+        Hashes hashes2 = Db.getHashes(dbId2, dbType2);
 
-        List<Integer> grams1 = Db.getGrams(dbId1, dbType);
-        List<Integer> grams2 = Db.getGrams(dbId2, dbType);
+        List<Integer> grams1 = Db.getGrams(dbId1, dbType1);
+        List<Integer> grams2 = Db.getGrams(dbId2, dbType2);
 
         if (hashes1 != null && hashes2 != null) {
 
@@ -387,76 +368,72 @@ public class Main {
             return;
         }
         if (!dbTypeNames.contains(args[1])) {
-            System.err.println("The <ID_TYPE> argument must be one of " + dbTypeNames.toString());
-            return;
-        }
-        if (!dbTypeNames.contains(args[2])) {
             System.err.println("The <DB_TYPE> argument must be one of " + dbTypeNames.toString());
             return;
         }
        
         SearchByCriteria searchType = SearchByCriteria.valueOf(args[0]); 
-        DbTypeCriteria dbIdType = DbTypeCriteria.valueOf(args[1]);
-        DbTypeCriteria dbType = DbTypeCriteria.valueOf(args[2]);
+        DbTypeCriteria dbType = DbTypeCriteria.valueOf(args[1]);
 
         // id
-        String id = args[3];
+        String id = args[2];
+        DbTypeCriteria dbIdType = DbId.getDbIdType(id);
 
         // limit
-        int limit = tryParseInt(args[4]);
+        int limit = tryParseInt(args[3]);
         if (limit == -1) {
             System.err.println("The <LIMIT> argument must be a positive integer.");
             return;
         }
 
         // booleans
-        if (!args[5].equals("TRUE") && !args[5].equals("FALSE")) {
+        if (!args[4].equals("TRUE") && !args[4].equals("FALSE")) {
             System.err.println("The <REP1> argument must be TRUE or FALSE");
             return;
         }
-        if (!args[6].equals("TRUE") && !args[6].equals("FALSE")) {
+        if (!args[5].equals("TRUE") && !args[5].equals("FALSE")) {
             System.err.println("The <REP2> argument must be TRUE or FALSE");
             return;
         }
-        if (!args[7].equals("TRUE") && !args[7].equals("FALSE")) {
+        if (!args[6].equals("TRUE") && !args[6].equals("FALSE")) {
             System.err.println("The <REP3> argument must be TRUE or FALSE");
             return;
         }
-        if (!args[8].equals("TRUE") && !args[8].equals("FALSE")) {
+        if (!args[7].equals("TRUE") && !args[7].equals("FALSE")) {
             System.err.println("The <DIFF1> argument must be TRUE or FALSE");
             return;
         }
-        if (!args[9].equals("TRUE") && !args[9].equals("FALSE")) {
+        if (!args[8].equals("TRUE") && !args[8].equals("FALSE")) {
             System.err.println("The <DIFF2> argument must be TRUE or FALSE");
             return;
         }
-        if (!args[10].equals("TRUE") && !args[10].equals("FALSE")) {
+        if (!args[9].equals("TRUE") && !args[9].equals("FALSE")) {
             System.err.println("The <DIFF3> argument must be TRUE or FALSE");
             return;
         }
 
-        boolean rep1 = Boolean.parseBoolean(args[5]);
-        boolean rep2 = Boolean.parseBoolean(args[6]);
-        boolean rep3 = Boolean.parseBoolean(args[7]);
-        boolean diff1 = Boolean.parseBoolean(args[8]);
-        boolean diff2 = Boolean.parseBoolean(args[9]);
-        boolean diff3 = Boolean.parseBoolean(args[10]);
+        boolean rep1 = Boolean.parseBoolean(args[4]);
+        boolean rep2 = Boolean.parseBoolean(args[5]);
+        boolean rep3 = Boolean.parseBoolean(args[6]);
+        boolean diff1 = Boolean.parseBoolean(args[7]);
+        boolean diff2 = Boolean.parseBoolean(args[8]);
+        boolean diff3 = Boolean.parseBoolean(args[9]);
 
         // mode
-        if (!modeNames.contains(args[11])) {
+        if (!modeNames.contains(args[10])) {
             System.err.println("The <MODE> argument must be one of " + modeNames.toString());
             return;
         }
 
-        ModeCriteria mode = ModeCriteria.valueOf(args[11]);
+        ModeCriteria mode = ModeCriteria.valueOf(args[10]);
        
         // sorting 
-        if (!sortNames.contains(args[12])) {
+        if (!sortNames.contains(args[11])) {
             System.err.println("The <SORT> argument must be one of " + sortNames.toString());
             return;
         }
 
-        SortCriteria sort = SortCriteria.valueOf(args[12]);
+        SortCriteria sort = SortCriteria.valueOf(args[11]);
 
         // consistency rule
         if (mode == ModeCriteria.FAST) {
@@ -467,7 +444,7 @@ public class Main {
         //***  OUTPUT
         //*************************************************************
 
-        boolean verbose = false; 
+        boolean verbose = true; 
         boolean timing = false;
 
         if (dbType == DbTypeCriteria.SCOP) { 
@@ -736,11 +713,11 @@ public class Main {
         System.out.println("Upload Successful. Upload Id: " + uploadId);
     }
 
-    private static void option_d(CommandLine line) {
+    private static void option_d(CommandLine line) throws Exception {
 
-        AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "tm_score", DbTypeCriteria.SCOP, 100);
-        AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "rmsd", DbTypeCriteria.SCOP, 100);
-        AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "similarity", DbTypeCriteria.SCOP, 100);
+        //AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "tm_score", DbTypeCriteria.SCOP, 100);
+        //AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "rmsd", DbTypeCriteria.SCOP, 100);
+        //AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "similarity", DbTypeCriteria.SCOP, 100);
     }
 
     private static void option_help(Options options) {
