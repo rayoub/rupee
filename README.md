@@ -57,10 +57,10 @@ Once successfully built, running the jar with the command line parameter ```-?``
 Usage: RUPEE
      -i,--import <DB_TYPE>
      -h,--hash <DB_TYPE>
-     -a,--align <ID_TYPE><DB_ID_1>,<DB_ID_2><ALIGN>
-     -t,--tm align <ID_TYPE>,<DB_ID_1>,<DB_ID_2>
-     -l,--lcs <ID_TYPE>,<DB_ID_1>,<DB_ID_2>
-     -s,--search <SEARCH_BY><ID_TYPE>,<DB_TYPE>,<DB_ID>,<LIMIT>,<REP1>,<REP2>,<REP3>,<DIFF1>,<DIFF2><DIFF3><MODE>,<SORT>
+     -a,--align <DB_ID_1>,<DB_ID_2>,<ALIGN>
+     -t,--tm align <DB_ID_1>,<DB_ID_2>
+     -l,--lcs <DB_ID_1>,<DB_ID_2>
+     -s,--search <SEARCH_BY><DB_TYPE>,<DB_ID>,<LIMIT>,<REP1>,<REP2>,<REP3>,<DIFF1>,<DIFF2><DIFF3><MODE>,<SORT>
      -u,--upload <FILE_PATH>
      -d,--debug
      -?,--help
@@ -70,7 +70,6 @@ Where
 
 ```
 <SEARCH_BY> = DB_ID | UPLOAD_ID
-<ID_TYPE>   = SCOP | CATH | ECOD | CHAIN
 <DB_TYPE>   = SCOP | CATH | ECOD | CHAIN
 <ALIGN>     = CE | CECP | FATCAT_RIGID | FATCAT_FLEXIBLE
 <MODE>      = FAST | TOP_ALIGNED
@@ -78,10 +77,6 @@ Where
 <REP#>      = TRUE | FALSE
 <DIFF#>     = TRUE | FALSE
 ```
-
-The ID_TYPE and DB_TYPE parameters take the same values. 
-This allows searching one kind of database with a different kind of id. 
-For instance, you can search the SCOP database using a CATH id. 
 
 The following table briefly describes each command line option.
 
@@ -97,7 +92,7 @@ Option | Description
 -d  | random code for miscellaneous task
 -?  | prints the available options
 
-In the case of searching for structures similar to an uploaded structure, the ```-s``` option ignores the ID_TYPE parameter and expects an internal upload id for the DB_ID parameter.
+In the case of searching for structures similar to an uploaded structure, the ```-s``` option expects an internal upload id for the DB_ID parameter.
 
 At this stage, you only need to build the rupee-mgr project to proceed. 
 
