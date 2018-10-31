@@ -32,15 +32,11 @@ Subset of d437 that includes all domains for which mTM returns greater than or e
 
 #### cath_d100
 
-CATH superfamily representatives of the 100 most diverse CATH superfamilies in CATH v4.1.
+CATH superfamily representatives of the 100 most diverse CATH superfamilies in CATH v4.2.
 
 #### cath_d99
 
-Subset of d100 that includes all domains for which CATHEDRAL returns greater than or equal to 50 results. 
-
-#### cath_d94
-
-Subset of d99 that includes all domains for which CATHEDRAL returns the query domain as the first domain. This helps ensure we are not evaluating RUPEE against possible CATHEDRAL bugs.   
+Subset of d100 that includes all domains for which CATHEDRAL returns a response within 12 hours.
 
 ### Against SSM
 
@@ -56,13 +52,3 @@ In some cases, a domain may not have enough secondary structures for SSM to work
 #### scop_d62
 
 Subset of d193 that includes all domains for which SSM returns greater than or equal to 50 results.
-
-### Response Times
-
-#### scop_t10
-
-SCOP domains used for testing mTM and SSM response times.
-
-#### cath_t10
-
-CATH domains used for testing CATHEDRAL response times. 
