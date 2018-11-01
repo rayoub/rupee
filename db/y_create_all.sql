@@ -26,7 +26,6 @@
 \i residue.sql
 \i rupee_eval.sql
 \i rupee_result.sql
-\i scop_background.sql
 \i scop_domain.sql
 \i scop_grams.sql
 \i scop_hashes.sql
