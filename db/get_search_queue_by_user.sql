@@ -1,6 +1,6 @@
 
-CREATE OR REPLACE FUNCTION get_search_queue (
-    p_search_id INTEGER
+CREATE OR REPLACE FUNCTION get_search_queue_by_user (
+    p_user_id VARCHAR
 )
 RETURNS TABLE (
     search_id INTEGER,
@@ -34,7 +34,7 @@ BEGIN
     FROM
         search_queue q
     WHERE  
-        q.search_id = p_search_id
+        q.user_id = p_user_id
     ORDER BY
         q.inserted_on DESC;
 

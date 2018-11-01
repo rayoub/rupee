@@ -1,7 +1,6 @@
 
 CREATE OR REPLACE FUNCTION insert_search_queue(
     p_user_id VARCHAR, 
-    p_search_hash VARCHAR,
     p_db_type INTEGER,
     p_search_filter INTEGER,
     p_search_by INTEGER,
@@ -17,7 +16,6 @@ BEGIN
 
     INSERT INTO search_queue (
         user_id, 
-        search_hash,
         db_type,
         search_filter,
         search_by,
@@ -29,7 +27,6 @@ BEGIN
     )
     VALUES (
         p_user_id, 
-        p_search_hash,
         p_db_type,
         p_search_filter,
         p_search_by,

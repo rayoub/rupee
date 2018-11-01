@@ -1,8 +1,8 @@
 
 CREATE TABLE search_queue
 (
+    search_id SERIAL,
     user_id VARCHAR NOT NULL,
-    search_hash VARCHAR NOT NULL,
     db_type INTEGER NOT NULL,
     search_filter INTEGER NOT NULL,
     search_by INTEGER NOT NULL,
@@ -13,4 +13,6 @@ CREATE TABLE search_queue
     status VARCHAR NOT NULL DEFAULT ('pending'),
     inserted_on TIMESTAMP(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0)
 );
+
+CREATE UNIQUE INDEX idx_search_queue_unique ON search_queue (search_id);
 

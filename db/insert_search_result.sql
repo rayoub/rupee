@@ -4,9 +4,9 @@ RETURNS VOID
 AS $$
 BEGIN
 
-    INSERT INTO search_result(search_hash, n, db_id, pdb_id, sort_key, similarity, rmsd, tm_score) 
+    INSERT INTO search_result(search_id, n, db_id, pdb_id, sort_key, similarity, rmsd, tm_score) 
     SELECT
-        search_hash,
+        search_id,
         n,
         db_id,
         pdb_id,

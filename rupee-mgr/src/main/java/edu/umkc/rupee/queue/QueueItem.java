@@ -6,8 +6,8 @@ import java.sql.Timestamp;
 
 public class QueueItem {
 
+    private int searchId;
     private String userId;
-    private String searchHash;
     private int dbType;
     private int searchFilter;
     private int searchBy;
@@ -22,8 +22,8 @@ public class QueueItem {
 
     public QueueItem(ResultSet rs) throws SQLException {
 
+        this.searchId = rs.getInt("search_id");
         this.userId = rs.getString("user_id");
-        this.searchHash = rs.getString("search_hash");
         this.dbType = rs.getInt("db_type");
         this.searchFilter = rs.getInt("search_filter");
         this.searchBy = rs.getInt("search_by");
@@ -35,20 +35,20 @@ public class QueueItem {
         this.insertedOn = (Timestamp)rs.getObject("inserted_on");
     }
 
+    public int getSearchId() {
+        return searchId;
+    }
+
+    public void setSearchId(int searchId) {
+        this.searchId = searchId;
+    }
+
     public String getUserId() {
         return userId;
     }
 
     public void setUserId(String userId) {
         this.userId = userId;
-    }
-
-    public String getSearchHash() {
-        return searchHash;
-    }
-
-    public void setSearchHash(String searchHash) {
-        this.searchHash = searchHash;
     }
 
     public int getDbType() {

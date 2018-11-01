@@ -1,9 +1,9 @@
 
 CREATE OR REPLACE FUNCTION get_search_result (
-    p_search_hash VARCHAR
+    p_search_id INTEGER
 )
 RETURNS TABLE (
-    search_hash VARCHAR,
+    search_id INTEGER,
     n INTEGER,
     db_id VARCHAR,
     pdb_id VARCHAR,
@@ -17,7 +17,7 @@ BEGIN
 
     RETURN QUERY
     SELECT 
-        r.search_hash,
+        r.search_id,
         r.n,
         r.db_id,
         r.pdb_id,
@@ -28,7 +28,7 @@ BEGIN
     FROM
         search_result r
     WHERE  
-        r.search_hash = p_search_hash
+        r.search_id = p_search_id
     ORDER BY
         r.n;
 

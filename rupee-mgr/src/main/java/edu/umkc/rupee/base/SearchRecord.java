@@ -4,11 +4,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.postgresql.util.PGobject;
-import org.postgresql.util.PGtokenizer;
 
 public class SearchRecord extends PGobject {
 
-    private String searchHash;
+    private int searchId;
     private int n;
     private String dbId;
     private String pdbId;
@@ -19,7 +18,7 @@ public class SearchRecord extends PGobject {
 
     public void set(ResultSet rs) throws SQLException {
 
-        this.searchHash = rs.getString("search_hash");
+        this.searchId = rs.getInt("search_id");
         this.n = rs.getInt("n");
         this.dbId = rs.getString("db_id");
         this.pdbId = rs.getString("pdb_id");
@@ -29,12 +28,12 @@ public class SearchRecord extends PGobject {
         this.tmScore = rs.getDouble("tm_score");
     }
     
-    public String getSearchHash() {
-        return searchHash;
+    public int getSearchId() {
+        return searchId;
     }
 
-    public void setSearchHash(String searchHash) {
-        this.searchHash = searchHash;
+    public void setSearchId(int searchId) {
+        this.searchId = searchId;
     }
 
     public int getN() {
@@ -95,6 +94,6 @@ public class SearchRecord extends PGobject {
 
     @Override
     public String getValue() {
-        return "(" + searchHash + "," + n + "," + dbId + "," + pdbId + "," + sortKey + "," + similarity + "," + rmsd + "," + tmScore + ")";
+        return "(" + searchId + "," + n + "," + dbId + "," + pdbId + "," + sortKey + "," + similarity + "," + rmsd + "," + tmScore + ")";
     }
 }

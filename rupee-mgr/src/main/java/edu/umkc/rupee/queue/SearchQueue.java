@@ -40,18 +40,17 @@ public class SearchQueue {
         Connection conn = ds.getConnection();
         conn.setAutoCommit(true);
 
-        PreparedStatement updt = conn.prepareStatement("SELECT insert_search_queue(?,?,?,?,?,?,?,?,?,?);");
+        PreparedStatement updt = conn.prepareStatement("SELECT insert_search_queue(?,?,?,?,?,?,?,?,?);");
 
         updt.setString(1, item.getUserId());
-        updt.setString(2, item.getSearchHash());
-        updt.setInt(3, item.getDbType());
-        updt.setInt(4, item.getSearchFilter());
-        updt.setInt(5, item.getSearchBy());
-        updt.setString(6, item.getDbId());
-        updt.setInt(7, item.getUploadId());
-        updt.setInt(8, item.getSortBy());
-        updt.setInt(9, item.getMaxRecords());
-        updt.setString(10, item.getStatus());
+        updt.setInt(2, item.getDbType());
+        updt.setInt(3, item.getSearchFilter());
+        updt.setInt(4, item.getSearchBy());
+        updt.setString(5, item.getDbId());
+        updt.setInt(6, item.getUploadId());
+        updt.setInt(7, item.getSortBy());
+        updt.setInt(8, item.getMaxRecords());
+        updt.setString(9, item.getStatus());
 
         updt.execute();
         updt.close();
@@ -70,7 +69,7 @@ public class SearchQueue {
         Connection conn = ds.getConnection();
         conn.setAutoCommit(false);
 
-        PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_search_queue(?);");
+        PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_search_queue_by_user(?);");
         stmt.setString(1, userId);
 
         ResultSet rs = stmt.executeQuery();
@@ -88,7 +87,7 @@ public class SearchQueue {
     }
    
     // /api/queue/search 
-    public static SearchQueueResult getSearch(String searchHash, DbTypeCriteria dbType) throws SQLException {
+    public static SearchQueueResult getSearch(int searchId, DbTypeCriteria dbType) throws SQLException {
         
         // *** open connection
 
@@ -99,8 +98,8 @@ public class SearchQueue {
 
         // *** get the queue item corresponding to search hash
 
-        PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_search_queue_by_hash(?);");
-        stmt.setString(1, searchHash);
+        PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_search_queue(?);");
+        stmt.setInt(1, searchId);
 
         QueueItem item = null;
         ResultSet rs = stmt.executeQuery();
@@ -131,7 +130,7 @@ public class SearchQueue {
         List<SearchRecord> records = new ArrayList<SearchRecord>();
 
         PreparedStatement stmt2 = conn.prepareCall("SELECT * FROM get_search_result(?);");
-        stmt2.setString(1, searchHash);
+        stmt2.setInt(1, searchId);
 
         ResultSet rs2 = stmt2.executeQuery();
         while(rs2.next()) {
@@ -184,7 +183,7 @@ public class SearchQueue {
         conn.close();
     }
 
-    public static void search(String searchHash) throws Exception {
+    public static void search(QueueItem item) throws Exception {
         
         // *** open connection
 
@@ -192,21 +191,6 @@ public class SearchQueue {
 
         Connection conn = ds.getConnection();
         conn.setAutoCommit(true);
-
-        // *** get the queue item corresponding to search hash
-
-        PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_search_queue_by_hash(?);");
-        stmt.setString(1, searchHash);
-
-        QueueItem item = null;
-        ResultSet rs = stmt.executeQuery();
-        if (rs.next()) {
-
-            item = new QueueItem(rs);
-        }
-
-        rs.close();
-        stmt.close();
 
         // *** build criteria - some duplicate code from SearchResource.java
 
@@ -305,7 +289,7 @@ public class SearchQueue {
         List<SearchRecord> records = search.search(criteria, SearchFrom.SERVER);
        
         // set search hash 
-        records.stream().forEach(record -> record.setSearchHash(searchHash));
+        records.stream().forEach(record -> record.setSearchId(item.getSearchId()));
             
         // save records
         PreparedStatement updt;
