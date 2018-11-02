@@ -18,9 +18,9 @@ RETURNS TABLE (
 AS $$
     DECLARE band_value INTEGER;
     DECLARE q_x VARCHAR;
-    DECLARE q_h INTEGER;
-    DECLARE q_t INTEGER;
-    DECLARE q_f INTEGER;
+    DECLARE q_h VARCHAR;
+    DECLARE q_t VARCHAR;
+    DECLARE q_f VARCHAR;
 BEGIN
 
     -- get band value of query
