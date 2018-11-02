@@ -14,5 +14,4 @@ CREATE TABLE search_queue
     inserted_on TIMESTAMP(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0)
 );
 
-CREATE UNIQUE INDEX idx_search_queue_unique ON search_queue (search_id);
 
