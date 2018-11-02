@@ -26,12 +26,19 @@ public class SearchTask implements Runnable {
                 QueueItem item = requestQueue.take();
             
                 SearchStatus.updateStatus(item.getSearchId(), "processing");
+                try {
 
-                SearchQueue.search(item);    
+                    SearchQueue.search(item);    
+                    SearchStatus.updateStatus(item.getSearchId(), "complete");
 
-                SearchStatus.updateStatus(item.getSearchId(), "complete");
+                } catch (Exception e) {
 
-            } catch (Exception e) {
+                    Logger.getLogger(SearchTask.class.getName()).log(Level.SEVERE, null, e);
+                    SearchStatus.updateStatus(item.getSearchId(), "error");
+
+                }
+            
+            } catch (InterruptedException e) {
                 Logger.getLogger(SearchTask.class.getName()).log(Level.SEVERE, null, e);
             }
         }           

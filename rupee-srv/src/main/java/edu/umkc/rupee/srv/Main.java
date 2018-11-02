@@ -58,6 +58,8 @@ public class Main {
 
                 exp.execute();
 
+                exp.close();
+
                 // service queue
 
                 PreparedStatement stmt = conn.prepareCall("SELECT * from search_queue WHERE status = 'pending' ORDER BY inserted_on DESC;");
@@ -71,6 +73,11 @@ public class Main {
 
                     SearchStatus.updateStatus(item.getSearchId(), "queued");
                 }
+
+                rs.close();
+                stmt.close();
+
+                conn.close();
       
                 Thread.sleep(SLEEP_TIME);
             }
