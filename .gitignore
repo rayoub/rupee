@@ -13,8 +13,6 @@ data/upload/
 # big data files
 data/scop/dir.cla.scop.1.73.txt
 data/scop/dir.des.scop.1.73.txt
-data/scop/dir.cla.scope.2.06-stable.txt
-data/scop/dir.des.scope.2.06-stable.txt
 data/scop/dir.cla.scope.2.07-stable.txt
 data/scop/dir.des.scope.2.07-stable.txt
 data/scop/domains.txt
@@ -23,9 +21,6 @@ data/scop/segments.txt
 data/cath/cath-domain-boundaries-v4_2_0.txt
 data/cath/cath-domain-list-v4_2_0.txt
 data/cath/cath-names-v4_2_0.txt
-data/cath/cath-domain-boundaries-v4_1_0.txt
-data/cath/cath-domain-list-v4_1_0.txt
-data/cath/cath-names-v4_1_0.txt
 data/cath/domains.txt
 data/cath/names.txt
 data/cath/segments.txt
@@ -37,13 +32,10 @@ data/ecod/segments.txt
 # temp directories
 results/mtm/temp/
 results/ssm/temp/
+results/cathedral/temp/
 
 # result import files
 results/rupee/rupee_results.txt
-results/cathedral/cathedral_results.txt
-results/mtm/mtm_dom_results.txt
-results/mtm/mtm_pdbc_results.txt
-results/ssm/ssm_results.txt
 
 # data version files
 data/cath/version.txt
