@@ -5,7 +5,6 @@
 \i benchmark.sql
 \i cath_domain.sql
 \i cathedral_result.sql
-\i cath_eval.sql
 \i cath_grams.sql
 \i cath_hashes.sql
 \i cath_name.sql
