@@ -7,8 +7,8 @@ rm(list = ls())
 
 # read in data files
 df <- read.csv('torsion.txt')
-refs <- read.csv('torsion_refs.txt')
-annotes <- read.csv('torsion_annotes.txt')
+lines <- read.csv('region_lines.txt')
+annotes <- read.csv('region_annotes.txt')
 
 # map values
 df$sse <- mapvalues(df$sse, from = c('Turn', 'Bridge', 'Bend', 'Coil'), to = c('Helix', 'Strand', 'Bend/Coil', 'Bend/Coil'))
@@ -43,7 +43,7 @@ ggplot(df, aes(phi, psi, color = sse)) +
         size = rel(0.2)
     ) +
     geom_segment(
-        data = refs,
+        data = lines,
         size = rel(0.4),
         lineend = 'square',
         aes(x, y, xend = xend, yend = yend),
@@ -111,5 +111,5 @@ ggplot(df, aes(phi, psi, color = sse)) +
         legend.direction = 'horizontal'
     )
 
-ggsave('torsion_refs.eps', width = 7, height = 2.5)
+ggsave('regions.eps', width = 7, height = 2.5)
 
