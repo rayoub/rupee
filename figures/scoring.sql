@@ -1,8 +1,8 @@
 
 DO $$
 
-    DECLARE p_benchmark VARCHAR := 'scop_d360';
-    DECLARE p_version VARCHAR := 'scop_v2_07';
+    DECLARE p_benchmark VARCHAR := 'scop_d360'; -- scop_d360, scop_d62, or cath_d99
+    DECLARE p_version VARCHAR := 'scop_v2_07'; -- scop_v2_07, scop_v1_73, or cath_v4_2_0
     DECLARE p_limit INTEGER := 100;
     DECLARE p_other VARCHAR := 'mTM'; -- mTM, SSM, or CATHEDRAL
     DECLARE p_alg VARCHAR = 'CE'; -- CE or FATCAT

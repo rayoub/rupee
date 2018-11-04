@@ -2,7 +2,6 @@
 # variable
 # 1. factor levels
 # 2. x scale 
-# 3. title
 
 library(ggplot2)
 library(plyr)
@@ -17,7 +16,7 @@ refs <- read.csv('scoring_refs.txt')
 # reorder factor levels 
 df$app <- factor(df$app, levels = c('RUPEE', 'RUPEE Fast', 'mTM'))
 
-ggplot(df, aes(n, avg_cume_score, group = interaction(app, score_type), linetype = app)) +
+ggplot(df, aes(n, avg_cume_score, group = interaction(app, score_type), color = app, linetype = app)) +
     
     # geoms
     geom_hline(
@@ -31,9 +30,8 @@ ggplot(df, aes(n, avg_cume_score, group = interaction(app, score_type), linetype
     ) + 
 
     # scales
-    scale_color_grey(
-        start = 0,
-        end = 0.6
+    scale_linetype_manual(
+        values = c("solid","dashed","dotted")
     ) + 
     scale_x_continuous(
         #limits = c(1, 50),
@@ -47,9 +45,6 @@ ggplot(df, aes(n, avg_cume_score, group = interaction(app, score_type), linetype
     
     # guides
     guides(linetype = guide_legend(override.aes = list(size = rel(0.5)))) + 
-
-    # plot title
-    ggtitle('FATCAT alignments') + 
 
     # axis labels
     labs(
@@ -82,6 +77,6 @@ ggplot(df, aes(n, avg_cume_score, group = interaction(app, score_type), linetype
         strip.text.x = element_text(color = 'black')
     ) 
 
-ggsave('scoring.pdf', width = 3, height = 4.25)
+ggsave('scoring.eps', width = 3, height = 4.25)
 
 
