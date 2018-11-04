@@ -29,7 +29,10 @@ ggplot(df, aes(n, avg_cume_score, group = interaction(app, score_type), color = 
         size = rel(0.5)
     ) + 
 
-    # scales
+    # scales        
+    scale_color_manual(
+        values = c("#e41a1c", "#377eb8", "#4daf4a")
+    ) + 
     scale_linetype_manual(
         values = c("solid","dashed","dotted")
     ) + 
@@ -69,9 +72,8 @@ ggplot(df, aes(n, avg_cume_score, group = interaction(app, score_type), color = 
         legend.text = element_text(size = 7),
         legend.title = element_blank(), 
         legend.position = 'bottom',
-        legend.margin = unit(0,'mm'),
-        legend.box = 'horizontal',
         legend.direction = 'horizontal',
+        legend.margin = unit(0,'mm'),
 
         strip.background = element_blank(),
         strip.text.x = element_text(color = 'black')

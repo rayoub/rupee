@@ -2,7 +2,6 @@
 # variable
 # 1. factor levels
 # 2. x scale 
-# 3. title
 
 library(ggplot2)
 library(plyr)
@@ -14,9 +13,9 @@ rm(list = ls())
 df <- read.csv('precision.txt')
 
 # reorder factor levels
-df$app <- factor(df$app, levels = c('RUPEE TM-Score', 'RUPEE RMSD', 'RUPEE Fast', 'mTM'))
+df$app <- factor(df$app, levels = c('RUPEE', 'RUPEE Fast', 'mTM'))
     
-ggplot(df, aes(n, level_precision, group = app, color = app)) +
+ggplot(df, aes(n, level_precision, group = app, color = app, linetype = app)) +
 
     # geoms
     geom_line(
@@ -24,22 +23,21 @@ ggplot(df, aes(n, level_precision, group = app, color = app)) +
     ) + 
 
     # scales
-    scale_color_grey(
-        start = 0,
-        end = 0.6
+    scale_color_manual(
+        values = c("#e41a1c", "#377eb8", "#4daf4a")
+    ) + 
+    scale_linetype_manual(
+        values = c("solid","dashed","dotted")
     ) + 
     scale_x_continuous(
-        #limits = c(1, 100),
-        #breaks = c(1, seq(10, 100, by = 10))
-        limits = c(1, 50),
-        breaks = c(1, seq(5, 50, by = 5))
+        limits = c(1, 100),
+        breaks = c(1, seq(10, 100, by = 10))
+        #limits = c(1, 50),
+        #breaks = c(1, seq(5, 50, by = 5))
     ) + 
     
     # guides
     guides(color = guide_legend(override.aes = list(size = rel(0.5)))) + 
-
-    # plot title
-    ggtitle('fold precision') + 
 
     # axis labels
     labs(
@@ -63,11 +61,10 @@ ggplot(df, aes(n, level_precision, group = app, color = app)) +
         legend.text = element_text(size = 7),
         legend.title = element_blank(), 
         legend.position = 'bottom',
-        legend.margin = unit(0,'mm'),
-        legend.box = 'horizontal',
-        legend.direction = 'horizontal'
+        legend.direction = 'horizontal',
+        legend.margin = unit(0,'mm')
     ) 
 
-ggsave('precision.pdf', width = 3, height = 2.5)
+ggsave('precision.eps', width = 3, height = 2.5)
 
 
