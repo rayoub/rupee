@@ -49,6 +49,7 @@ import edu.umkc.rupee.ecod.EcodSearch;
 import edu.umkc.rupee.ecod.EcodSearchCriteria;
 import edu.umkc.rupee.ecod.EcodSearchRecord;
 import edu.umkc.rupee.lib.AlignRecord;
+import edu.umkc.rupee.lib.AlignResults;
 import edu.umkc.rupee.lib.Aligning;
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
@@ -715,9 +716,21 @@ public class Main {
 
     private static void option_d(CommandLine line) throws Exception {
 
-        //AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "tm_score", DbTypeCriteria.SCOP, 100);
-        //AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "rmsd", DbTypeCriteria.SCOP, 100);
-        //AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "similarity", DbTypeCriteria.SCOP, 100);
+        /*
+        AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "tm_score", DbTypeCriteria.SCOP, 100);
+        AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "rmsd", DbTypeCriteria.SCOP, 100);
+        AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "similarity", DbTypeCriteria.SCOP, 100);
+        AlignResults.alignRupeeResults("cath_d99", "cath_v4_2_0", "tm_score", DbTypeCriteria.CATH, 100);
+        AlignResults.alignRupeeResults("cath_d99", "cath_v4_2_0", "rmsd", DbTypeCriteria.CATH, 100);
+        AlignResults.alignRupeeResults("cath_d99", "cath_v4_2_0", "similarity", DbTypeCriteria.CATH, 100);
+        AlignResults.alignMtmDomResults("scop_d360", "scop_v2_07", DbTypeCriteria.SCOP, 100);
+        AlignResults.alignCathedralResults("cath_d99", "cath_v4_2_0", DbTypeCriteria.CATH, 100);
+        */
+
+        AlignResults.alignRupeeResults("scop_d62", "scop_v1_73", "tm_score", DbTypeCriteria.SCOP, 50);
+        AlignResults.alignRupeeResults("scop_d62", "scop_v1_73", "rmsd", DbTypeCriteria.SCOP, 50);
+        AlignResults.alignRupeeResults("scop_d62", "scop_v1_73", "similarity", DbTypeCriteria.SCOP, 50);
+        AlignResults.alignSsmResults("scop_d62", "scop_v1_73", DbTypeCriteria.SCOP, 50);
     }
 
     private static void option_help(Options options) {
