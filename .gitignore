@@ -49,7 +49,6 @@ rupee-srv/target/
 **/*.swp
 **/*.tar
 **/*.pdf
-**/*.eps
 **/*.aux
 **/*.bbl
 **/*.blg
