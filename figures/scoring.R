@@ -54,7 +54,7 @@ get_scoring_plot <- function(p_title, p_file, p_levels, p_limits, p_breaks, p_y_
         # axis labels
         labs(
              x = 'rank', 
-             y = 'average cumulative value'
+             y = 'value'
         ) +
 
         # title
@@ -73,7 +73,7 @@ get_scoring_plot <- function(p_title, p_file, p_levels, p_limits, p_breaks, p_y_
             plot.margin = margin(5,15,0,0), 
 
             panel.grid = element_blank(),
-            panel.margin.x = unit(4,'mm'),
+            panel.spacing = unit(4,'mm'),
             
             axis.text = element_text(size = 7), 
             axis.title = element_text(size = 8), 
@@ -83,11 +83,10 @@ get_scoring_plot <- function(p_title, p_file, p_levels, p_limits, p_breaks, p_y_
             legend.title = element_blank(), 
             legend.position = 'bottom',
             legend.direction = 'horizontal',
-            legend.margin = unit(0,'mm'),
+            legend.spacing = unit(0,'mm'),
 
             strip.background = element_blank(),
-            strip.placement = 'outside',
-            strip.text = element_blank() #element_text(size = 8)
+            strip.placement = 'outside'
         ) 
 
     if (p_y_axis) {
