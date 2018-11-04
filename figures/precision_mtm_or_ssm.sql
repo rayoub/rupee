@@ -1,10 +1,10 @@
 
 DO $$
 
-    DECLARE p_benchmark VARCHAR := 'scop_d360'; -- scop_d360 or scop_d62
-    DECLARE p_version VARCHAR := 'scop_v2_07'; -- scop_v2_07 or scop_v1_73
-    DECLARE p_limit INTEGER := 100; -- 100 or 50
-    DECLARE p_other VARCHAR := 'mTM'; -- mTM or SSM
+    DECLARE p_benchmark VARCHAR := 'scop_d62'; -- scop_d360 or scop_d62
+    DECLARE p_version VARCHAR := 'scop_v1_73'; -- scop_v2_07 or scop_v1_73
+    DECLARE p_limit INTEGER := 50; -- 100 or 50
+    DECLARE p_other VARCHAR := 'SSM'; -- mTM or SSM
 
     -- don't forget to change get_*_results as needed
 
@@ -23,7 +23,7 @@ BEGIN
         ),
         all_other AS
         (   
-            SELECT * FROM get_mtm_dom_results(p_benchmark, p_version, p_limit)
+            SELECT * FROM get_ssm_results(p_benchmark, p_version, p_limit)
         ),
         valid_rupee_id AS
         (

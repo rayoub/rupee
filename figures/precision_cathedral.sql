@@ -1,9 +1,9 @@
 
 DO $$
 
-    DECLARE p_benchmark VARCHAR := 'cath_d94';
-    DECLARE p_version VARCHAR := 'cath_v4_1_0';
-    DECLARE p_limit INTEGER := 50;
+    DECLARE p_benchmark VARCHAR := 'cath_d99';
+    DECLARE p_version VARCHAR := 'cath_v4_2_0';
+    DECLARE p_limit INTEGER := 100;
     DECLARE p_other VARCHAR := 'CATHEDRAL';
 
 BEGIN
@@ -15,24 +15,18 @@ BEGIN
         (
             SELECT * FROM get_rupee_results(p_benchmark, p_version, 'tm_score', p_limit)
         ),
-        all_rupee_rmsd AS
-        (
-            SELECT * FROM get_rupee_results(p_benchmark, p_version, 'rmsd', p_limit)
-        ),
         all_rupee_fast AS
         (
             SELECT * FROM get_rupee_results(p_benchmark, p_version, 'similarity', p_limit)
         ),
         all_other AS
         (   
-            SELECT * FROM get_cathedral_results(p_benchmark
+            SELECT * FROM get_cathedral_results(p_benchmark, p_version, p_limit)
         ),
         valid_rupee_id AS
         (
             SELECT DISTINCT db_id_1 AS db_id FROM all_rupee_tm_score
             UNION 
-            SELECT DISTINCT db_id_1 AS db_id FROM all_rupee_rmsd
-            UNION
             SELECT DISTINCT db_id_1 AS db_id FROM all_other
         ),
         valid_other_id AS
@@ -46,10 +40,6 @@ BEGIN
         valid_rupee_tm_score AS
         (
             SELECT * FROM all_rupee_tm_score r INNER JOIN valid_all_id v ON v.db_id = r.db_id_1 
-        ),
-        valid_rupee_rmsd AS
-        (
-            SELECT * FROM all_rupee_rmsd r INNER JOIN valid_all_id v ON v.db_id = r.db_id_1 
         ),
         valid_rupee_fast AS
         (
@@ -101,57 +91,10 @@ BEGIN
             SELECT
                 n,
                 total_n,
-                'RUPEE TM-Score'::TEXT AS app,
+                'RUPEE'::TEXT AS app,
                 total_same_topology::REAL / total_n AS level_precision
             FROM
                 totaled_rupee_tm_score
-        ),
-        
-        -- rupee RMSD
-        ranked_rupee_rmsd AS
-        (
-            SELECT
-                r.n,
-                r.db_id_1,
-                CASE 
-                    WHEN d1.c = d2.c AND d1.a = d2.a AND d1.t = d2.t THEN 1
-                    ELSE 0
-                END AS same_topology
-            FROM
-                valid_rupee_rmsd r
-                INNER JOIN cath_domain d1
-                    ON d1.cath_id = r.db_id_1
-                INNER JOIN cath_domain d2
-                    ON d2.cath_id = r.db_id_2
-        ),
-        summed_rupee_rmsd AS
-        (
-            SELECT
-                n,
-                SUM(same_topology) OVER (PARTITION BY db_id_1 ORDER BY n ROWS UNBOUNDED PRECEDING) AS sum_same_topology
-            FROM
-                ranked_rupee_rmsd
-        ),
-        totaled_rupee_rmsd AS
-        (
-            SELECT
-                n,
-                COUNT(*) * n AS total_n, 
-                SUM(sum_same_topology) AS total_same_topology
-            FROM
-                summed_rupee_rmsd
-            GROUP BY
-                n
-        ),
-        average_rupee_rmsd AS
-        (
-            SELECT
-                n,
-                total_n,
-                'RUPEE RMSD'::TEXT AS app,
-                total_same_topology::REAL / total_n AS level_precision
-            FROM
-                totaled_rupee_rmsd
         ),
 
         -- fast
@@ -255,13 +198,6 @@ BEGIN
                 level_precision
             FROM
                 average_rupee_tm_score
-            UNION ALL
-            SELECT
-                n,
-                app,
-                level_precision
-            FROM
-                average_rupee_rmsd
             UNION ALL
             SELECT
                 n,
