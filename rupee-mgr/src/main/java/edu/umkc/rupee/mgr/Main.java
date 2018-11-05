@@ -49,13 +49,13 @@ import edu.umkc.rupee.ecod.EcodSearch;
 import edu.umkc.rupee.ecod.EcodSearchCriteria;
 import edu.umkc.rupee.ecod.EcodSearchRecord;
 import edu.umkc.rupee.lib.AlignRecord;
-import edu.umkc.rupee.lib.AlignResults;
 import edu.umkc.rupee.lib.Aligning;
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
 import edu.umkc.rupee.lib.DbId;
 import edu.umkc.rupee.lib.Hashes;
 import edu.umkc.rupee.lib.LCS;
+import edu.umkc.rupee.lib.Labels;
 import edu.umkc.rupee.lib.Similarity;
 import edu.umkc.rupee.lib.Uploading;
 import edu.umkc.rupee.scop.ScopHash;
@@ -716,6 +716,11 @@ public class Main {
 
     private static void option_d(CommandLine line) throws Exception {
 
+        List<Labels.Label> labels = Labels.getLabels("1nycA00", DbTypeCriteria.CATH);
+        for (Labels.Label label : labels) {
+            System.out.println(label.getResidueNumber() + "," + label.getLabel());
+        }
+
         /*
         AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "tm_score", DbTypeCriteria.SCOP, 100);
         AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "rmsd", DbTypeCriteria.SCOP, 100);
@@ -727,10 +732,12 @@ public class Main {
         AlignResults.alignCathedralResults("cath_d99", "cath_v4_2_0", DbTypeCriteria.CATH, 100);
         */
 
+        /*
         AlignResults.alignRupeeResults("scop_d62", "scop_v1_73", "tm_score", DbTypeCriteria.SCOP, 50);
         AlignResults.alignRupeeResults("scop_d62", "scop_v1_73", "rmsd", DbTypeCriteria.SCOP, 50);
         AlignResults.alignRupeeResults("scop_d62", "scop_v1_73", "similarity", DbTypeCriteria.SCOP, 50);
         AlignResults.alignSsmResults("scop_d62", "scop_v1_73", DbTypeCriteria.SCOP, 50);
+        */
     }
 
     private static void option_help(Options options) {

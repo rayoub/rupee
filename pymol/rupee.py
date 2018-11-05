@@ -3,6 +3,10 @@ import csv
 from pymol import stored
 from pymol import cmd
 
+# to call
+# 1. set label_size 20
+# 2. label_residues 1nycA00, color
+
 def label_residues(entity, color):
 
     with open(entity + '.labels') as label_file:
@@ -12,7 +16,6 @@ def label_residues(entity, color):
     selection_model = '/' + entity + '////ca' 
     selection_atom = '/' + entity + '///{0}/{1}'
 
-    cmd.set('label_size', 20, selection_model)
     cmd.set('label_color', color, selection_model)
 
     model = cmd.get_model(selection_model, 1)
