@@ -298,7 +298,7 @@ public abstract class Import {
                 run.clear();
             }
             
-            // *** calculate descriptor rpe hashes
+            // *** calculate gram hashes
     
             for (int i = 0; i < residues.size() - 2; i++) {
 
