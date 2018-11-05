@@ -5,62 +5,74 @@ library(plyr)
 # clear environment
 rm(list = ls())
 
-# read in data file
-df <- read.csv('response.txt')
+get_timing_plot <- function(p_title, p_file, p_levels, p_colors, p_y_axis) {
 
-# reorder factor levels
-df$app <- factor(df$app, levels = c('RUPEE', 'CATHEDRAL'))
+    # read in data file
+    df <- read.csv(p_file)
 
-ggplot(df, aes(residue_count, response_time, group = app, color = app)) +
-    
-    # geoms
-    geom_line(
-        size = rel(0.5)
-    ) + 
-    geom_point(
-        size = rel(0.75)
-    ) + 
-    geom_vline(
-        xintercept = 162,
-        colour = 'grey50', 
-        size = rel(0.2)
-    ) +
+    # reorder factor levels
+    df$app <- factor(df$app, levels = p_levels)
 
-    # scales
-    scale_color_grey(
-        start = 0,
-        end = 0.6
-    ) + 
-    
-    # guides
-    guides(color = guide_legend(override.aes = list(size = rel(0.5)))) + 
+    # *** plot
 
-    # axis labels
-    labs(
-         x = '# of residues', 
-         y = 'response time'
-    ) + 
-    
-    # default theme 
-    theme_bw() +
+    plot <- 
 
-    # default override
-    theme(
-        plot.title = element_blank(), 
-        plot.margin = margin(0,15,0,0), 
+        ggplot(df, aes(gram_count, timing, group = app, color = app)) +
+            
+        # geoms
+        geom_point(
+            size = rel(0.75)
+        ) + 
 
-        panel.grid = element_blank(),
+        # scales
+        scale_color_manual(
+            values = p_colors,
+            labels = p_levels
+        ) + 
+
+        # guides
+        guides(color = guide_legend(override.aes = list(size = rel(0.5)))) + 
+
+        # axis labels
+        labs(
+             x = 'residue count', 
+             y = 'response time (seconds)'
+        ) + 
         
-        axis.text = element_text(size = 7), 
-        axis.title = element_text(size = 8), 
-        
-        legend.text = element_text(size = 7),
-        legend.title = element_blank(), 
-        legend.position = 'bottom',
-        legend.margin = unit(0,'mm'),
-        legend.direction = 'horizontal'
-    ) 
+        # title
+        ggtitle(p_title)
 
-ggsave('response.eps', width = 3, height = 2.0)
+    # *** theme
+    
+    theme <-  
 
+        # default theme 
+        theme_bw() +
 
+        # default override
+        theme(
+            plot.title = element_text(size = 8, hjust = 0.5),
+            plot.margin = margin(5,15,0,5), 
+
+            panel.grid = element_blank(),
+            panel.spacing = unit(4,'mm'),
+
+            axis.text = element_text(size = 7), 
+            axis.title = element_text(size = 8), 
+            
+            legend.text = element_text(size = 7),
+            legend.title = element_blank(), 
+            legend.position = 'bottom',
+            legend.direction = 'horizontal',
+            legend.spacing = unit(0,'mm')
+        ) 
+
+    if (p_y_axis) {
+        theme <- theme + theme(axis.title.y = element_text(size = 8))
+    }
+    else {
+        theme <- theme + theme(axis.title.y = element_blank())
+    }
+
+    plot + theme
+}

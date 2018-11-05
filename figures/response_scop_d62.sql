@@ -16,9 +16,14 @@ WITH scop_d62_timing AS
 )
 SELECT
     benchmark,
-    app,
+    CASE 
+        WHEN app = 'rupee' THEN 'RUPEE'
+        WHEN app = 'rupee_fast' THEN 'RUPEE Fast'
+        WHEN app = 'mtm' THEN 'mTM'
+        WHEN app = 'ssm' THEN 'SSM'
+    END AS app,
     db_id,
-    timing,
+    timing / 1000 AS timing,
     n,
     gram_count
 FROM

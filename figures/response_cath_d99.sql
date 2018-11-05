@@ -16,9 +16,13 @@ WITH cath_d99_timing AS
 )
 SELECT
     benchmark,
-    app,
+    CASE 
+        WHEN app = 'rupee' THEN 'RUPEE' 
+        WHEN app = 'rupee_fast' THEN 'RUPEE Fast'
+        WHEN app = 'cathedral' THEN 'CATHEDRAL'
+    END AS app,
     db_id,
-    timing,
+    timing / 1000 AS timing,
     n,
     gram_count
 FROM
