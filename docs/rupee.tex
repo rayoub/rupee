@@ -87,10 +87,10 @@ Given a protein domain identifier, whole chain identifier or an uploaded file, R
 In contrast to currently available protein structure searches, RUPEE is able to search either of these databases using any identifier. 
 For instance, you can search SCOPe using a CATH domain identifier. 
 
-RUPEE has two modes of operation, fast and regular. 
+RUPEE has two modes of operation, fast and top-aligned. 
 Fast mode is significantly faster than all other protein structure searches discussed below but at the expensive of accuracy.
 Despite this, we will show that the accuracy of RUPEE in fast mode is not far below that of the best available structure searches. 
-On the other hand, the accuracy and response times of RUPEE in regular mode are comparable to currently available protein structure searches that are commonly considered fast. 
+On the other hand, the accuracy and response times of RUPEE in top-aligned mode are comparable to currently available protein structure searches that are commonly considered fast. 
 
 Besides our approach to protein structure search, we introduce a polar plot for torsion angles that may have wider applicability in the study of protein structure. 
 Further, the \emph{run position encoding} heuristic introduced below may have wider applicability to algorithms for character sequences containing long runs of repeats. 
@@ -142,7 +142,7 @@ At a minimum, RUPEE takes a significant step in this direction as will be shown 
 \section{METHODS}
 
 Broadly, we define a linear encoding of protein structure and convert this linear encoding into a bag of features. 
-Min-hashing and locality sensitive hashing (LSH), techniques drawn from big-data, are then applied to implement a protein structure indexing method that serves as the foundation for both RUPEE operating modes, fast and slow. 
+Min-hashing and locality sensitive hashing (LSH), techniques drawn from big-data, are then applied to implement a protein structure indexing method that serves as the foundation for both RUPEE operating modes, fast and top-aligned. 
 
 Protein structure searches that use linear encodings are not unique \cite{Carpentier2005,Daniluk2011,Ritchie2012}.
 The novelty of our approach lies in its remarkable performance given its simplicity. 
@@ -153,18 +153,18 @@ Additionally, elements of our approach can be isolated and found to be useful in
 Our first step towards a linear encoding of protein structure is to identify separable regions of permissible torsion angles,
 but first we introduce a new plot of torsion angles better suited to this effort. 
 
-%\begin{figure*}[tb]
-%\centering
-%\includegraphics{torsion_plots}
-%\caption{Ramachandran plot (right) and polar plot (left) of randomly sampled torsion angles}
-%\label{fig:torsion_plots}
-%\end{figure*}
+\begin{figure*}[t]
+\centering
+\includegraphics{combined_torsion}
+\caption{Ramachandran plot (right) and polar plot (left) of randomly sampled torsion angles}
+\label{fig:combined_torsion}
+\end{figure*}
 
 Despite their utility and familiarity, Ramachandran plots \cite{Ramachandran1968} represent angular data using a square plot better suited for scalar data.
 This leads to the unwieldy arrangement where the top part of the plot is continuous with the bottom and the left is continuous with the right. 
 
-To identify regions of torsion angles, we randomly sampled 10,000 residues from high-resolution, CATH s35 representatives to account for precision and redundancy, respectively. 
-A Ramachandran plot of the sampled torsions angles is shown to the left in \figurename~\ref{fig:torsion_plots}. 
+To identify regions of torsion angles, we randomly sampled 10,000 residues from high-resolution CATH s35 representatives to account for precision and redundancy, respectively. 
+A Ramachandran plot of the sampled torsions angles is shown to the left in \figurename~\ref{fig:combined_torsion}. 
 As can be seen, a single cluster of residues, consisting primarily of $\beta$-strands, appears at all 4 corners of the Ramachandran plot.
 
 This continuity problem was partially addressed in \cite{Karplus2010} using \emph{wrapped} and \emph{mirrored} plots. 
@@ -172,7 +172,7 @@ Both wrapped and mirrored plots take advantage of the sparsely populated areas o
 However, with larger samples of torsion angles, the area at $\psi = -120\degree$ becomes less sparse. 
 The use of a polar plot resolves this elegantly by only requiring one break in continuity at $\phi = 0\degree$. 
 
-To the right in \figurename~\ref{fig:torsion_plots}, we plot the same torsion angles appearing in the Ramachandran plot using a polar plot. 
+To the right in \figurename~\ref{fig:combined_torsion}, we plot the same torsion angles appearing in the Ramachandran plot using a polar plot. 
 In this plot, $\phi$ corresponds to the radius $r$ and $\psi$ corresponds to the angle $\theta$ in traditional polar plots. 
 Notice the residues appearing at the 4 corners of the Ramachandran plot now appear in one continuous region of the polar plot centered at $\phi = \pm180\degree$ and $\psi = \pm180\degree$. 
 
@@ -181,25 +181,30 @@ Notice the residues appearing at the 4 corners of the Ramachandran plot now appe
 The polar plot described above is used to define torsion angle regions for each secondary structure assignment. 
 The eight DSSP secondary structure assignment codes defined in \cite{Kabsch1983} divide into three groups in which torsion angle regions are roughly the same: `G',`H',`I', and `T' corresponding to $3_{10}$-helix, $\alpha$-helix, $\pi$-helix, and turn, respectively; `E' and `B' corresponding to $\beta$-strand and $\beta$-bridge, respectively; and `S' and `C' corresponding to bend and coil, respectively.
 
-Polar plots for each group of DSSP assignment codes along with defined regions and descriptor designations are shown in \figurename~\ref{fig:torsion_refs}, with the exception of turns and bridges, which receive descriptors 11 and 12, respectively. 
+\begin{figure*}[tb]
+\begin{center}
+\includegraphics{regions}
+\end{center}
+\caption{Polar plots of randomly sampled torsion angles with designated descriptors for region and DSSP code combinations}
+\label{fig:regions}
+\end{figure*}
+
+Polar plots for each group of DSSP assignment codes along with defined regions and descriptor designations are shown in \figurename~\ref{fig:regions}, with the exception of turns and bridges, which receive descriptors 11 and 12, respectively. 
 For each polar plot, there are well-defined continuous regions of torsion angles that remain continuous in the plots. 
 The only exception is found in the bends and coil plot at $\psi = 60\degree$ between $\phi = -180\degree$ and $\phi = 0\degree$.
 
-%\begin{figure*}[tb]
-%\begin{center}
-%\includegraphics{torsion_refs}
-%\end{center}
-%\caption{Polar plots of randomly sampled torsion angles with designated descriptors for region and DSSP code combinations}
-%\label{fig:torsion_refs}
-%\end{figure*}
+\begin{figure}[tb]
+\begin{center}
+\includegraphics[width=3in,keepaspectratio]{1nycA00}
+\end{center}
+\caption{$\beta$-turn-$\beta$ motif from CATH domain 1nycA00}
+\label{fig:beta_turn}
+\end{figure}
 
-Our initial use of Ramachandran plots to identify regions resulted in the frequent case of highly similar domains from the same CATH s95 clusters being considered significantly different. 
-Alignment of these domains in PyMOL \cite{PyMOL} and the development of a script to label residues with their descriptors showed that slight differences in structure often resulted in distinct descriptors being assigned to aligned residues. 
-Once we defined regions using the less confusing polar plots, this discrepancy was no longer observed. 
-
-As an example of our linear encoding, the following sequence of descriptors represents a $\beta$-turn-$\beta$ motif followed by bends and coil.
+As an example of our linear encoding, we apply our method to the $\beta$-turn-$\beta$ motif shown in \figurename~\ref{fig:beta_turn}.
+The corresponding sequence of residue descriptors is shown below.
 \begin{gather}\label{E:descrseq} 
-    [\, 5, 5, 5, 5, 5, 11, 11, 5, 5, 5, 5, 5, 8, 8, 10, 9 \,]
+    [\, 5, 5, 5, 5, 5, 5, 7, 5, 11, 11, 5, 5, 5, 5, 5, 5 \,]
 \end{gather}
 
 \subsection{Bag representation of protein structure}
@@ -216,10 +221,9 @@ By shingling, we obtain a multiset of ordered lists from an ordered list of numb
 As an example, the sequence in (\ref{E:descrseq}) is transformed into the following bag of shingles. 
 \begin{align}\label{E:shinglebag}
     \begin{split}
-    \{\,&[5, 5, 5, 5], [5, 5, 5, 5], [5, 5, 5, 11], [5, 5, 11, 11], \\
-        & [5, 11, 11, 5], [11, 11, 5, 5], [11, 5, 5, 5], [5, 5, 5, 5], \\
-        & [5, 5, 5, 5], [5, 5, 5, 8], [5, 5, 8, 8], [5, 8, 8, 10], \\
-        & [8, 8, 10, 9] \,\}
+        \{\,&[5, 5, 5], [5, 5, 5], [5, 5, 5], [5, 5, 5], [5, 5, 7] \\
+            & [5, 7, 5], [7, 5, 11], [5, 11, 11], [11, 11, 5], [11, 5, 5] \\
+            & [5, 5, 5], [5, 5, 5], [5, 5, 5], [5, 5, 5] \,\}
     \end{split}
 \end{align}
 
@@ -227,20 +231,19 @@ Next, each shingle $s$ is hashed to an integer as shown in~(\ref{E:hashdef}).
 The hash function used is a simplification of the hash function used in the Rabin-Karp algorithm \cite{Karp1987}.
 The prime number $13$ is used as the base since it is large enough to spread the descriptor values out in hash space without collisions. 
 \begin{gather}\label{E:hashdef}
-    s_{hash} = s_1 \times 13^3 + s_2 \times 13^2 + s_3 \times 13 + s_4
+    s_{hash} = s_1 \times 13^2 + s_2 \times 13 + s_3
 \end{gather}
 Subsequently, the multiset in (\ref{E:shinglebag}) becomes the following bag of integers.
 \begin{align}\label{E:hashbag}
     \begin{split}
-    \{\,&11900, 11900, 11906, 11984, 12992, \\
-        &26096, 25082, 11900, 11900, 11903, \\
-        &11942, 12451, 19067 \,\}
+    \{\,&915, 915, 915, 915, 917, 941, 1259 \\
+        &999, 2007, 1929, 915, 915, 915, 915 \,\}
     \end{split}
 \end{align}
 
 This final step completes the transformation of an ordered list of descriptors to a multiset of integers that still retains some of the order information present in the original list. 
 
-Notice in (\ref{E:hashbag}) the value 11900, corresponding to the shingle $[ 5, 5, 5, 5 ]$, occurs frequently indicating the presence of $\beta$-strands. 
+Notice in (\ref{E:hashbag}) the value 915, corresponding to the shingle $[ 5, 5, 5 ]$, occurs frequently indicating the presence of $\beta$-strands. 
 Since most proteins are dominated by regular secondary structure, the abundance of shingles for $\beta$-strands as well as the three types of helices, end up dominating comparisons. 
 Moreover, since shingles are limited in length, this situation allows for structures with many short $\beta$-strands to match structures with fewer long $\beta$-strands.
 The same situation applies to helices. 
@@ -260,14 +263,13 @@ This placement is also convenient for visual inspection, since the run factor is
 
 The run factors for the sequence in (\ref{E:descrseq}) are
 \begin{align}
-    [\, 0, 1, 2, 1, 0, 0, 0, 0, 1, 2, 1, 0, 0, 0, 0, 0 \,].
+    [\, 0, 1, 2, 2, 1, 0, 0, 0, 0, 0, 0, 1, 2, 2, 1, 0 \,].
 \end{align}
 Applied to the bag of integers in (\ref{E:hashbag}) gives
 \begin{align}\label{E:rpebag}
     \begin{split}
-    \{\,&011900, 111900, 211906, 111984, 012992, \\
-        &026096, 025082, 011900, 111900, 211903, \\
-        &111942, 012451, 019067 \,\}
+    \{\,&00915, 10915, 20915, 20915, 10917, 00941, 01259 \\
+        &00999, 02007, 01929, 00915, 10915, 20915, 20915 \,\}
     \end{split}
 \end{align}
 where the leading zero run factors are shown for clarity. 
@@ -324,22 +326,24 @@ The key result of the banding technique is that if \emph{any} band positions are
 We use 33 bands of 3-min-hashes where the probability of a Jaccard similarity of 60\% or greater is approximately 99\%. 
 Banding allows the problem of finding similar items to be parallelized across bands since all that is needed for a match is a single band match. 
 
-Together, min-hashing and LSH provide the foundation for both operating modes of RUPEE, fast and regular.
+Together, min-hashing and LSH provide the foundation for both operating modes of RUPEE, fast and top-aligned.
 
 \subsection{Operating modes}
 
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text.
+RUPEE provides 2 operating modes, fast and top-aligned. 
+Each operating mode builds on the results provided by the min-hashing and LSH system described above. 
+When a structure search is executed in either mode, a number of concurrent tasks are executed corresponding to the number of bands used for LSH. 
+These concurrent tasks identify candidate matches based on a single band match and then validate the matches based on a comparison of min-hashes. 
+
+In fast mode, the top 8,000 matches are obtained along with the original gram sequences defined for the structures.
+A further validation is done by performing a longest common subsequence (LCS) analysis of the matched gram sequences and adjusting the Jaccard similarity scores accordingly.
+This step accounts for possible gram matches among pairs of structures that are out of order since the min-hashing and LSH techniques themselves do not consider the order of the gram matches.
+The final step of fast mode is to sort the matches based on the adjusted scores and return the results. 
+
+Top-aligned is an additional step following fast mode. 
+First, unoptimized CE alignments are performed on the top 2,000 matches obtained from fast mode. 
+Then optimized CE alignments are performed on the top 400 matches and these are finally returned sorted either by RMSD or TM-Score. 
+Currently, top-aligned is a simple layer following fast mode that establishes RUPEE fast mode as an effective filtering method that contains in its top 2,000 results enough good matches to compete with the best available structure searches. 
 
 \section{RESULTS}
 
