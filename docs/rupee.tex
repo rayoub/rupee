@@ -347,24 +347,94 @@ Currently, top-aligned is a simple layer following fast mode that establishes RU
 
 \section{RESULTS}
 
-\subsection{Results subsection one}
+Protein structure searches can be evaluated using pairwise alignment scores or by comparison of results against the hierarchy of a protein structure classification database.
+The RMSD of aligned residues is widely used in evaluations but is not perfectly suited to full-length comparisons between structures since distances between unaligned residues are not factored into the score.
+On the other hand, the TM-score \cite{Zhang2004} takes all residues into account. 
+Among protein structure classification databases for which corresponding structure searches exist, SCOPe \citep{Fox2013} and CATH \citep{Orengo1997} are the most popular. 
+
+For our results, we have created 3 benchmarks (scop\_d360, scop\_d62, and cath\_d99) for pairwise evaluations to mTM, SSM, and CATHEDRAL, respectively.
+scop\_d360 is derived from the d500 benchmark used in \cite{Dong2018} filtered for domains for which mTM returns 100 or more results defined in SCOPe 2.07. 
+Similarly, scop\_d62 is derived from the d500 benchmark filtered for domains defined in SCOP 1.73 for which SSM returns 50 or more results.  
+In keeping with our description of RUPEE in \cite{Ayoub2017}, the cath\_d99 benchmark contains 99 superfamily representatives from the top 100 most diverse superfamilies defined in CATH v4.2 for which CATHEDRAL returns results in less than 12 hours. 
+
+We perform pairwise evaluations to ensure the fairness of our comparisons. 
+First, For domain searches, SSM is working with the SCOP 1.73 database, so accordingly we operate RUPEE on SCOP 1.73 domains to ensure RUPEE does not have more domains to work with for scoring and precision evaluations. 
+Second, mTM is updated to work with SCOP 2.07 domain definitions but still retains domains from 2.06 that have since been redefined either through mergers or splits in 2.07. 
+On the other hand, CATHEDRAL presents no such challenges but still requires a separate benchmark since it is working with a distinct hierarchy, CATH v4.2. 
+
+All benchmark definitions can be found in the supplementary material. 
+
+\subsection{Scoring}
+
+\figurename~\ref{fig:combined_scoring_ce} shows average cumulative values for each ranked result averaged over all searches.
+Both RMSD and TM-score values are shown, provided as outputs from CE pairwise alignments. 
+References lines are drawn in the TM-score plot in \figurename~\ref{fig:combined_scoring_ce} at TM-scores of 0.5 and 0.17. 
+A TM-score above 0.5 is a good predictor for whether or not two domains are in the same fold \cite{Xu2010}.
+TM-scores greater than 0.17 are considered potentially meaningful whereas TM-scores less than 0.17 are considered to be due to random alignment \cite{Zhang2004}.
+
+\begin{figure*}[tb]
+\begin{center}
+\includegraphics{combined_scoring_ce}
+\end{center}
+\caption{Evaluation of scoring from CE pairwise alignments}
+\label{fig:combined_scoring_ce}
+\end{figure*}
+
+A figure similar to \figurename~\ref{fig:combined_scoring_ce} but using FATCAT for pairwise comparisons can be found in the supplementary material. 
+The same relative relationships hold with only small variations. 
+
+All of RUPEE fast and top-aligned, sorted by RMSD and TM-Score, perform better than SSM and CATHEDRAL.
+The scoring in the cath\_d99 benchmark comparisons are notably lower than for the other two benchmarks. 
+This is expected since CATHEDRAL only returns CATH s35 representatives and for this comparison RUPEE is filtered for s35 representatives to match. 
+Given that the cath\_d99 benchmark is evaluated against representatives, there are fewer highly similar structures returned in the results. 
+
+In our evaluation, mTM faired better than SSM and CATHEDRAL. 
+For TM-Score, RUPEE and mTM are nearly identical. 
+For RMSD, RUPEE does perform better than mTM but this can most likely be attributed to the fact that mTM only sorts by TM-Score. 
+If mTM sorted by RMSD then we feel the results again would be nearly identical.
+Nevertheless, it is worth noting that the initial LSH and min-hashing technique does not explicitly bias results towards one particular measure. 
+
+\subsection{Precision}
+
+\figurename~\ref{fig:combined_precision} shows precision (i.e. positive predictive value or PPV) averaged over all searches, where positive results are defined as domains with the same classification for the indicated hierarchy level as the query domain.
+Here is where things get interesting. 
+We should expect a structure search of a given database to have reasonable precision with respect to the hierarchy levels of the structure database it is searching against. 
+However, it is not clear how to define reasonable. 
+In addition, high precision beyond a certain level to some degree is a measure of the usefulness of the results. 
+If precision is too high then a search ends up not providing results more interesting than the what the hierarchicy already defined, in which case it would be sufficient for a search to return the best match and from their refer to the hierarchy. 
+
+\begin{figure*}[tb]
+\begin{center}
+\includegraphics{combined_precision}
+\end{center}
+\caption{Something Something}
+\label{fig:combined_precision}
+\end{figure*}
+
+\subsection{Response Times}
 
 Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
 Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
 Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
 Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
 Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text.
 
-\subsection{Results subsection two}
+\begin{figure*}[tb]
+\begin{center}
+\includegraphics{combined_response}
+\end{center}
+\caption{Something Something}
+\label{fig:combined_response}
+\end{figure*}
 
 Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
+Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
+Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
+Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
+Text. Text. Text.
+
+\section{DISCUSSION}
+
 Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
 Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
 Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
