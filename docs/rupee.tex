@@ -153,7 +153,7 @@ Additionally, elements of our approach can be isolated and found to be useful in
 Our first step towards a linear encoding of protein structure is to identify separable regions of permissible torsion angles,
 but first we introduce a new plot of torsion angles better suited to this effort. 
 
-\begin{figure*}[t]
+\begin{figure*}[tb]
 \centering
 \includegraphics{combined_torsion}
 \caption{Ramachandran plot (right) and polar plot (left) of randomly sampled torsion angles}
@@ -353,7 +353,7 @@ On the other hand, the TM-score \cite{Zhang2004} takes all residues into account
 Among protein structure classification databases for which corresponding structure searches exist, SCOPe \citep{Fox2013} and CATH \citep{Orengo1997} are the most popular. 
 
 For our results, we have created 3 benchmarks (scop\_d360, scop\_d62, and cath\_d99) for pairwise evaluations to mTM, SSM, and CATHEDRAL, respectively.
-scop\_d360 is derived from the d500 benchmark used in \cite{Dong2018} filtered for domains for which mTM returns 100 or more results defined in SCOPe 2.07. 
+scop\_d360 is derived from the d500 benchmark used in \cite{Dong2018} filtered for domains in SCOPe 2.07 for which mTM returns 100 or more results.
 Similarly, scop\_d62 is derived from the d500 benchmark filtered for domains defined in SCOP 1.73 for which SSM returns 50 or more results.  
 In keeping with our description of RUPEE in \cite{Ayoub2017}, the cath\_d99 benchmark contains 99 superfamily representatives from the top 100 most diverse superfamilies defined in CATH v4.2 for which CATHEDRAL returns results in less than 12 hours. 
 
@@ -368,7 +368,6 @@ All benchmark definitions can be found in the supplementary material.
 
 \figurename~\ref{fig:combined_scoring_ce} shows average cumulative values for each ranked result averaged over all searches.
 Both RMSD and TM-score values are shown, provided as outputs from CE pairwise alignments. 
-References lines are drawn in the TM-score plot in \figurename~\ref{fig:combined_scoring_ce} at TM-scores of 0.5 and 0.17. 
 A TM-score above 0.5 is a good predictor for whether or not two domains are in the same fold \cite{Xu2010}.
 TM-scores greater than 0.17 are considered potentially meaningful whereas TM-scores less than 0.17 are considered to be due to random alignment \cite{Zhang2004}.
 
@@ -383,27 +382,28 @@ TM-scores greater than 0.17 are considered potentially meaningful whereas TM-sco
 A figure similar to \figurename~\ref{fig:combined_scoring_ce} but using FATCAT for pairwise comparisons can be found in the supplementary material. 
 The same relative relationships hold with only small variations. 
 
-All of RUPEE fast and top-aligned, sorted by RMSD and TM-Score, perform better than SSM and CATHEDRAL.
+RUPEE fast and top-aligned, sorted by both RMSD and TM-Score, perform better than SSM and CATHEDRAL.
 The scoring in the cath\_d99 benchmark comparisons are notably lower than for the other two benchmarks. 
-This is expected since CATHEDRAL only returns CATH s35 representatives and for this comparison RUPEE is filtered for s35 representatives to match. 
+This is expected since CATHEDRAL only returns CATH s35 representatives.
+Likewise, for this comparison RUPEE is filtered for s35 representatives to match. 
 Given that the cath\_d99 benchmark is evaluated against representatives, there are fewer highly similar structures returned in the results. 
 
 In our evaluation, mTM faired better than SSM and CATHEDRAL. 
-For TM-Score, RUPEE and mTM are nearly identical. 
+For TM-Score, RUPEE and mTM are nearly identical with RUPEE slightly better for ranks less than 50 and mTM better for ranks greater than 50. 
 For RMSD, RUPEE does perform better than mTM but this can most likely be attributed to the fact that mTM only sorts by TM-Score. 
-If mTM sorted by RMSD then we feel the results again would be nearly identical.
+If mTM sorted by RMSD we feel the results again would be nearly identical.
 Nevertheless, it is worth noting that the initial LSH and min-hashing technique does not explicitly bias results towards one particular measure. 
 
 \subsection{Precision}
 
 \figurename~\ref{fig:combined_precision} shows precision (i.e. positive predictive value or PPV) averaged over all searches, where positive results are defined as domains with the same classification for the indicated hierarchy level as the query domain. 
-Here, RUPEE is 
-A plot of recall is unnecessary since \figurename~\ref{fig:combined_precision} provides precision at specific ranks for identical sets of searches. Hence, recall curves have the same relative relationships as those shown for precision. 
+A plot of recall is unnecessary since \figurename~\ref{fig:combined_precision} provides precision at specific ranks for identical sets of searches. 
+Hence, recall curves have the same relative relationships as those shown for precision. 
 
 We should expect a structure search to have reasonable precision with respect to the hierarchy levels of the structure classification it is searching. 
 However, it is not clear how to define reasonable. 
 On the other hand, if precision is too high, the search provides little value beyond that provided by the structure classification hierarchy it is searching. 
-That is, it would be sufficient for a search to return the best match and from their refer to the hierarchy. 
+Towards the extreme end of high precision, it would be sufficient for a search to return the best match and from there refer to the hierarchy for additional results. 
 
 \begin{figure*}[tb]
 \begin{center}
@@ -413,7 +413,15 @@ That is, it would be sufficient for a search to return the best match and from t
 \label{fig:combined_precision}
 \end{figure*}
 
-Similar to scoring evaluations above, all of RUPEE fast and top-aligned, sorted by RMSD and TM-Score, perform better than SSM and CATHEDRAL.
+Similar to the scoring evaluations above, RUPEE fast and top-aligned, sorted by both RMSD and TM-Score, show higher precision than SSM and CATHEDRAL with the exception of RUPEE top-aligned sorted by RMSD for ranks lower than 10 compared against SSM. 
+
+Again, mTM faired better than SSM and CATHEDRAL. 
+Notably, mTM also shows clearly higher precision than RUPEE top-aligned, sorted by both RMSD and TM-Score. 
+In the absence of \figurename~\ref{fig:combined_scoring_ce}, one may be lead to regard this as a negative result. 
+However, to the contrary, in the presence of \figurename~\ref{fig:combined_scoring_ce}, where it is shown that RUPEE and mTM have almost identical scoring, this result is remarkable. 
+This disparity suggest that RUPEE is better able to find significantly similar matches not necessarily aligned with the SCOP hierarchy. 
+In fact, since the initial min-hashing and LSH technique used by RUPEE check for similarity to all available structures, no structure is able to hide behind a sequence based cluster representative. 
+So this result is in keeping with how RUPEE is intended to work and how it is described above. 
 
 \subsection{Response Times}
 
