@@ -396,12 +396,14 @@ Nevertheless, it is worth noting that the initial LSH and min-hashing technique 
 
 \subsection{Precision}
 
-\figurename~\ref{fig:combined_precision} shows precision (i.e. positive predictive value or PPV) averaged over all searches, where positive results are defined as domains with the same classification for the indicated hierarchy level as the query domain.
-Here is where things get interesting. 
-We should expect a structure search of a given database to have reasonable precision with respect to the hierarchy levels of the structure database it is searching against. 
+\figurename~\ref{fig:combined_precision} shows precision (i.e. positive predictive value or PPV) averaged over all searches, where positive results are defined as domains with the same classification for the indicated hierarchy level as the query domain. 
+Here, RUPEE is 
+A plot of recall is unnecessary since \figurename~\ref{fig:combined_precision} provides precision at specific ranks for identical sets of searches. Hence, recall curves have the same relative relationships as those shown for precision. 
+
+We should expect a structure search to have reasonable precision with respect to the hierarchy levels of the structure classification it is searching. 
 However, it is not clear how to define reasonable. 
-In addition, high precision beyond a certain level to some degree is a measure of the usefulness of the results. 
-If precision is too high then a search ends up not providing results more interesting than the what the hierarchicy already defined, in which case it would be sufficient for a search to return the best match and from their refer to the hierarchy. 
+On the other hand, if precision is too high, the search provides little value beyond that provided by the structure classification hierarchy it is searching. 
+That is, it would be sufficient for a search to return the best match and from their refer to the hierarchy. 
 
 \begin{figure*}[tb]
 \begin{center}
@@ -410,6 +412,8 @@ If precision is too high then a search ends up not providing results more intere
 \caption{Something Something}
 \label{fig:combined_precision}
 \end{figure*}
+
+Similar to scoring evaluations above, all of RUPEE fast and top-aligned, sorted by RMSD and TM-Score, perform better than SSM and CATHEDRAL.
 
 \subsection{Response Times}
 

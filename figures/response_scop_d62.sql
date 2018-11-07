@@ -17,7 +17,7 @@ WITH scop_d62_timing AS
 SELECT
     benchmark,
     CASE 
-        WHEN app = 'rupee' THEN 'RUPEE'
+        WHEN app = 'rupee' THEN 'RUPEE Top-Aligned'
         WHEN app = 'rupee_fast' THEN 'RUPEE Fast'
         WHEN app = 'mtm' THEN 'mTM'
         WHEN app = 'ssm' THEN 'SSM'

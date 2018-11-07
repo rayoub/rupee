@@ -39,22 +39,22 @@ grid_arrange_shared_legend <-
 dummy_plot <- get_timing_plot(
         'dummy timing',
         'response_dummy.txt',
-        c('RUPEE', 'RUPEE Fast', 'mTM', 'SSM','CATHEDRAL'), 
-        c('#e41a1c', '#377eb8', '#4daf4a', '#984ea3','#ff7f00'),
+        c('RUPEE Top-Aligned', 'RUPEE Fast', 'mTM', 'SSM','CATHEDRAL'), 
+        c('#e41a1c', '#4daf4a', '#984ea3', '#ff7f00', '#a65628'),
         TRUE
 )
 scop_plot <- get_timing_plot(
         'scop_d62 timing',
         'response_scop_d62.txt',
-        c('RUPEE', 'RUPEE Fast', 'mTM', 'SSM'), 
-        c('#e41a1c', '#377eb8', '#4daf4a', '#984ea3'),
+        c('RUPEE Top-Aligned', 'RUPEE Fast', 'mTM', 'SSM'), 
+        c('#e41a1c', '#4daf4a', '#984ea3', '#ff7f00'),
         TRUE
 )
 cath_plot <- get_timing_plot(
         'cath_d99 timing',
         'response_cath_d99.txt',
-        c('RUPEE', 'RUPEE Fast', 'CATHEDRAL'), 
-        c('#e41a1c', '#377eb8', '#ff7f00'),
+        c('RUPEE Top-Aligned', 'RUPEE Fast', 'CATHEDRAL'), 
+        c('#e41a1c', '#4daf4a', '#a65628'),
         FALSE
 )
 

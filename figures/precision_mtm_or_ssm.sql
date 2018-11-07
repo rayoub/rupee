@@ -17,6 +17,10 @@ BEGIN
         (
             SELECT * FROM get_rupee_results(p_benchmark, p_version, 'tm_score', p_limit)
         ),
+        all_rupee_rmsd AS
+        (
+            SELECT * FROM get_rupee_results(p_benchmark, p_version, 'rmsd', p_limit)
+        ),
         all_rupee_fast AS
         (
             SELECT * FROM get_rupee_results(p_benchmark, p_version, 'similarity', p_limit)
@@ -28,6 +32,8 @@ BEGIN
         valid_rupee_id AS
         (
             SELECT DISTINCT db_id_1 AS db_id FROM all_rupee_tm_score
+            UNION 
+            SELECT DISTINCT db_id_1 AS db_id FROM all_rupee_rmsd
             UNION 
             SELECT DISTINCT db_id_1 AS db_id FROM all_other
         ),
@@ -42,6 +48,10 @@ BEGIN
         valid_rupee_tm_score AS
         (
             SELECT * FROM all_rupee_tm_score r INNER JOIN valid_all_id v ON v.db_id = r.db_id_1 
+        ),
+        valid_rupee_rmsd AS
+        (
+            SELECT * FROM all_rupee_rmsd r INNER JOIN valid_all_id v ON v.db_id = r.db_id_1 
         ),
         valid_rupee_fast AS
         (
@@ -93,10 +103,57 @@ BEGIN
             SELECT
                 n,
                 total_n,
-                'RUPEE'::TEXT AS app,
+                'RUPEE TM-Score'::TEXT AS app,
                 total_same_fold::REAL / total_n AS level_precision
             FROM
                 totaled_rupee_tm_score
+        ),
+
+        -- rupee RMSD
+        ranked_rupee_rmsd AS
+        (
+            SELECT
+                r.n,
+                r.db_id_1,
+                CASE 
+                    WHEN d1.cl = d2.cl AND d1.cf = d2.cf THEN 1
+                    ELSE 0
+                END AS same_fold
+            FROM
+                valid_rupee_rmsd r
+                INNER JOIN scop_domain d1
+                    ON d1.scop_id = r.db_id_1
+                INNER JOIN scop_domain d2
+                    ON d2.scop_id = r.db_id_2
+        ),
+        summed_rupee_rmsd AS
+        (
+            SELECT
+                n,
+                SUM(same_fold) OVER (PARTITION BY db_id_1 ORDER BY n ROWS UNBOUNDED PRECEDING) AS sum_same_fold
+            FROM
+                ranked_rupee_rmsd
+        ),
+        totaled_rupee_rmsd AS
+        (
+            SELECT
+                n,
+                COUNT(*) * n AS total_n, 
+                SUM(sum_same_fold) AS total_same_fold
+            FROM
+                summed_rupee_rmsd
+            GROUP BY
+                n
+        ),
+        average_rupee_rmsd AS
+        (
+            SELECT
+                n,
+                total_n,
+                'RUPEE RMSD'::TEXT AS app,
+                total_same_fold::REAL / total_n AS level_precision
+            FROM
+                totaled_rupee_rmsd
         ),
 
         -- rupee fast
@@ -200,6 +257,13 @@ BEGIN
                 level_precision
             FROM
                 average_rupee_tm_score
+            UNION ALL
+            SELECT
+                n,
+                app,
+                level_precision
+            FROM
+                average_rupee_rmsd
             UNION ALL
             SELECT
                 n,

@@ -17,7 +17,7 @@ WITH cath_d99_timing AS
 SELECT
     benchmark,
     CASE 
-        WHEN app = 'rupee' THEN 'RUPEE' 
+        WHEN app = 'rupee' THEN 'RUPEE Top-Aligned' 
         WHEN app = 'rupee_fast' THEN 'RUPEE Fast'
         WHEN app = 'cathedral' THEN 'CATHEDRAL'
     END AS app,
