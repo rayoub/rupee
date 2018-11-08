@@ -189,7 +189,7 @@ The eight DSSP secondary structure assignment codes defined in \cite{Kabsch1983}
 \label{fig:regions}
 \end{figure*}
 
-Polar plots for each group of DSSP assignment codes along with defined regions and descriptor designations are shown in \figurename~\ref{fig:regions}, with the exception of turns and bridges, which receive descriptors 11 and 12, respectively. 
+Polar plots for each group of DSSP assignment codes along with defined region and descriptor designations are shown in \figurename~\ref{fig:regions}, with the exception of turns and bridges, which receive descriptors 11 and 12, respectively. 
 For each polar plot, there are well-defined continuous regions of torsion angles that remain continuous in the plots. 
 The only exception is found in the bends and coil plot at $\psi = 60\degree$ between $\phi = -180\degree$ and $\phi = 0\degree$.
 
@@ -214,7 +214,7 @@ The processing of text documents within Information Retrieval~(IR) has long been
 There are two distinct categories of representations for documents, syntactic and semantic, and much of the research applying IR to protein structure search has focused on the latter \cite{Aungand2004,Zhang2010,Budowski2010}. 
 
 We have adapted the syntactic approach to document similarity, often referred to as shingling \cite{Broder1997a}, to our linear encoding of protein structure. 
-We transform a linear sequence of descriptors into a multiset of shingles consisting of 4 consecutive descriptors.
+We transform a linear sequence of descriptors into a multiset of shingles consisting of 3 consecutive descriptors.
 The overlap between shingles ensures some of the order information within the original sequence is preserved in the bag. 
 
 By shingling, we obtain a multiset of ordered lists from an ordered list of numbers. 
@@ -331,14 +331,14 @@ The RMSD of aligned residues is widely used in evaluations but is not perfectly 
 On the other hand, the TM-score \cite{Zhang2004} takes all residues into account. 
 Among protein structure classification databases for which corresponding structure searches exist, SCOPe \citep{Fox2013} and CATH \citep{Orengo1997} are the most popular. 
 
-For our results, we have created 3 benchmarks (scop\_d360, scop\_d62, and cath\_d99) for pairwise evaluations to mTM, SSM, and CATHEDRAL, respectively.
+For our results, we have created 3 benchmarks, scop\_d360, scop\_d62, and cath\_d99, for pairwise evaluations to mTM, SSM, and CATHEDRAL, respectively.
 scop\_d360 is derived from the d500 benchmark used in \cite{Dong2018} filtered for domains in SCOPe 2.07 for which mTM returns 100 or more results.
 Similarly, scop\_d62 is derived from the d500 benchmark filtered for domains defined in SCOP 1.73 for which SSM returns 50 or more results.  
 In keeping with our description of RUPEE in \cite{Ayoub2017}, the cath\_d99 benchmark contains 99 superfamily representatives from the top 100 most diverse superfamilies defined in CATH v4.2 for which CATHEDRAL returns results in less than 12 hours. 
 
 We perform pairwise evaluations to ensure the fairness of our comparisons. 
 First, For domain searches, SSM is working with the SCOP 1.73 database, so accordingly we operate RUPEE on SCOP 1.73 domains to ensure RUPEE does not have more domains to work with for scoring and precision evaluations. 
-Second, mTM is updated to work with SCOP 2.07 domain definitions but still retains domains from 2.06 that have since been redefined either through mergers or splits in 2.07. 
+Second, mTM is updated to work with SCOPe 2.07 domain definitions but still retains domains from 2.06 that have since been redefined either through mergers or splits in 2.07. 
 On the other hand, CATHEDRAL presents no such challenges but still requires a separate benchmark since it is working with a distinct hierarchy, CATH v4.2. 
 
 All benchmark definitions can be found in the supplementary material. 
@@ -346,7 +346,7 @@ All benchmark definitions can be found in the supplementary material.
 \subsection{Scoring}
 
 \figurename~\ref{fig:combined_scoring_ce} shows average cumulative values for each ranked result averaged over all searches.
-Both RMSD and TM-score values are shown, provided as outputs from CE pairwise alignments. 
+Both RMSD and TM-score values are shown, provided as outputs from optimized CE pairwise alignments. 
 A TM-score above 0.5 is a good predictor for whether or not two domains are in the same fold \cite{Xu2010}.
 TM-scores greater than 0.17 are considered potentially meaningful whereas TM-scores less than 0.17 are considered to be due to random alignment \cite{Zhang2004}.
 
@@ -396,9 +396,9 @@ Similar to the scoring evaluations above, RUPEE fast and top-aligned, sorted by 
 
 Again, mTM faired better than SSM and CATHEDRAL. 
 Notably, mTM also shows clearly higher precision than RUPEE top-aligned, sorted by both RMSD and TM-Score. 
-In the absence of \figurename~\ref{fig:combined_scoring_ce}, one may be lead to regard this as a negative result. 
+In the absence of \figurename~\ref{fig:combined_scoring_ce}, one may be led to regard this as a negative result. 
 However, to the contrary, in the presence of \figurename~\ref{fig:combined_scoring_ce}, where it is shown that RUPEE and mTM have almost identical scoring, this result is remarkable. 
-This disparity suggest that RUPEE is better able to find significantly similar matches not necessarily aligned with the SCOP hierarchy. 
+This disparity suggest that RUPEE is better able to find significantly similar matches not necessarily aligned with the SCOPe hierarchy. 
 In fact, since the initial min-hashing and LSH technique used by RUPEE check for similarity to all available structures, no structure is able to hide behind a sequence based cluster representative. 
 So this result is in keeping with how RUPEE is intended to work and how it is described above. 
 
@@ -407,6 +407,7 @@ So this result is in keeping with how RUPEE is intended to work and how it is de
 \figurename~\ref{fig:combined_response} shows response times in seconds for the scop\_d62 and cath\_d99 benchmarks. 
 Here, we are able to show RUPEE, mTM and SSM on the same plot because scop\_d62 is a subset of the scop\_d360 benchmark. 
 Both plots are shown with a logarithmic scale in order to include all outliers while still being able to view the overall trends in response times. 
+Loess regression curves are also provided to further highlight the overall trends. 
 
 \begin{figure*}[tb]
 \begin{center}
@@ -416,14 +417,14 @@ Both plots are shown with a logarithmic scale in order to include all outliers w
 \label{fig:combined_response}
 \end{figure*}
 
-In all cases, RUPEE in fast mode is considerably faster than all other searches. 
-It is also clear that fast mode is not as sensitive to increasing residue counts in contrast to CATHEDRAL and RUPEE in top-aligned mode.
+In all cases, RUPEE fast is considerably faster than all other searches. 
+It is also clear that fast mode is not as sensitive to increasing residue counts in contrast to CATHEDRAL and RUPEE top-aligned.
 Response times for SSM are not affected by residue counts at all and always returns results in less than 100 seconds but this is at the expense of performance as shown in \figurename~\ref{fig:combined_scoring_ce}.
 
-In the left plot of \figurename~\ref{fig:combined_response}, it is shown that RUPEE in top-aligned mode is faster than mTM for residue counts below 200, but then response times for RUPEE increase beyond that of mTM. 
-Down the stretch mTM provides increasingly better response times than RUPEE, while RUPEE is still able to provide reasonable response times. 
+In the left plot of \figurename~\ref{fig:combined_response}, it is shown that RUPEE top-aligned is faster than mTM for residue counts below 200, but then response times for RUPEE increase beyond that of mTM. 
+Down the stretch, mTM provides increasingly better response times than RUPEE, while RUPEE is still able to provide reasonable response times. 
 
-The trend of increasing response times for RUPEE in top-aligned mode is a direct result of the pairwise structure comparisons that are performed on the top 2,000 results provided by RUPEE fast mode.
+The trend of increasing response times for RUPEE top-aligned is a direct result of the pairwise structure comparisons that are performed on the top 2,000 results provided by RUPEE fast mode.
 
 Response times to a large degree are a measure of the amount of resources available to an application. 
 In the case of RUPEE, our response times were gathered from RUPEE running on a fairly old laptop with a 2nd generation Intel\textregistered{} Core\texttrademark{} i7-2720QM Quad-Core CPU and 8 GB of memory. 
@@ -432,22 +433,22 @@ For mTM, SSM, and CATHEDRAL, we gathered response times by automating their resp
 
 \section{DISCUSSION}
 
-Not to understate the significance of what has been shown, that a purely geometric sequence alignment-free big data approach to protein structure search can compete with the current state of the art protein structure searches available, there remains challenges for RUPEE to address in addition to avenues for further investigation. 
+Not to understate the significance of what has been shown, that a purely geometric alignment-free big data approach to protein structure search can compete with the current state of the art protein structure searches available, there remains challenges for RUPEE to address in addition to avenues for further investigation. 
 
 While our min-hashing and LSH scheme does allow for some flexibility in the size of matched protein structures, it is not specifically designed for containment searches. 
-However, the initial min-hashing and LSH search does operate fast enough, within seconds, that it does present the possibility of executing multiple searches. 
-With more resources, we can distribute min-hash and band data across multiple compute units, with each data set representing a subset of chopped domain representations. 
+However, the initial min-hashing and LSH search does operate fast enough, within seconds, that it does present the possibility of executing multiple searches within the context of a single query. 
+With more resources, we can distribute min-hash and band data across multiple compute units, with each data set representing a subset of chopped structure representations. 
 With a 75\% overlap of these subsets, RUPEE searches effectively become containment searches. 
 
 We have tried the overlapping subset idea and have found it to be effective. 
 However, on a single compute unit, the time required is more than we are willing to accept for this first iteration of RUPEE. 
 
 One possible drawback of RUPEE is that in both fast and top-aligned modes, it only returns the top 400 results. 
-Again, with more resources, this number can be increased, but there still remains a need for a cut-off. 
+Again, with more resources, this number can be increased, but there still remains a need for some kind of cut-off. 
 
-In most search domains, having to looking past the first few hundred results usually indicates an ineffective search strategy.
-For instance, RUPEE provides filters that can be used for traversing structure space more efficiently. 
-For SCOPe, CATH, and ECOD you can instruct the search to only return domains that differ from the query domain at a chosen hierarchy level classification. 
+In most search tools, having to looking past the first few hundred results usually indicates an ineffective search strategy.
+To this end, RUPEE provides filters that can be used for traversing structure space more efficiently. 
+For SCOPe, CATH, and ECOD you can instruct the search to only return domains that differ from the query structure at a chosen hierarchy level classification. 
 Additionally, for CATH you can filter results based on hierarchy level representatives. 
 Since RUPEE does not rely on sequence clusters, these kinds of filters are easy to implement, do not reduce the number of returned results, and allow for the discovery of unexpected structural similarities across classification hierarchies.  
 
@@ -457,10 +458,12 @@ A more complex step of validating the sequence of gram matches can take a form s
 In this case, sequences of matches would only be extended when the difference of interresidue distances between gram pairs already in the sequence and a candidate pair to be added to the sequence fall below some threshold.
 
 On the other hand, it would be interesting to see where further analysis of the initial results returned by RUPEE before LCS and any sort of order enforcement beyond that of the grams themselves could lead. 
-Sin
+For instance, topological permutations such as circular permutations, segment-swapping and changing secondary structures within homologous proteins are not uncommon \cite{Andreeva2007}. 
+The initial RUPEE min-hashing and LSH algorithm provides candidate matches along with matched grams. 
+With some thought, an algorithm similar to FATCAT can be developed allowing for permutations in addition to twists. 
 
-As can be observed from Figure 4 and Figure 5, there are good domain matches with the SCOP hierarchy that mTM is able to find that RUPEE does not. 
-Conversely, there are good domain matches outside not aligned with the SCOP hierarchy that RUPEE finds and mTM is not. 
+As can be observed from considering \figurename~\ref{fig:combined_scoring_ce} and \figurename~\ref{fig:combined_precision} together, there are good domain matches aligned with the SCOPe hierarchy that mTM is able to find that RUPEE does not. 
+Conversely, there are good domain matches not aligned with the SCOPe hierarchy that RUPEE finds and mTM does not. 
 A comprehensive listing of these difference may find interesting similarities not previously known. 
 
 \section{CONCLUSION}
