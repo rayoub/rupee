@@ -50,30 +50,16 @@ Accepted ?????? ??, ????}
 \maketitle
 
 \begin{abstract}
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text.
+Given the close relationship between protein structure and function, protein structure searches have long played an established role in bioinformatics. 
+Despite their maturity, existing protein structure searches either compromise between fast response times and quality of results or use simplifying assumptions. 
+These limitations can prevent the easy and efficient exploration of relationships between protein structures, which is the norm in other areas of inquiry.\\
+We have developed a fast, scalable, and purely geometric structure search combining techniques from information retrieval and big data with a novel approach to encoding sequences of torsion angles. 
+Along the way, we introduce a new torsion angle plot to assist in identifying separable regions of torsion angles. 
+Subsequently, we introduce a new heuristic we call \emph{run position encoding}, for handling the lack of specificity of items within character sequences containing runs of repeats. 
+Comparing our results to the output of the CATH structural scan, response times are measured in seconds as opposed to minutes and average RMSDs and TM-scores are better. 
+Our approach is a step towards a comprehensive indexing of protein structures scalable to millions of entries.\\
+The RUPEE protein structure search is available at \url{http://www.ayoubresearch.com}. 
+Code and data are available at \url{https://github.com/rayoub/rupee}.\\
 \end{abstract}
 
 \section{INTRODUCTION}
@@ -91,6 +77,12 @@ RUPEE has two modes of operation, fast and top-aligned.
 Fast mode is significantly faster than all other protein structure searches discussed below but at the expensive of accuracy.
 Despite this, we will show that the accuracy of RUPEE in fast mode is not far below that of the best available structure searches. 
 On the other hand, the accuracy and response times of RUPEE in top-aligned mode are comparable to currently available protein structure searches that are commonly considered fast. 
+
+RUPEE stands out as not just another protein structure search, of which there are many. 
+RUPEE is the first, to our knowledge, purely geometric protein structure search to achieve results as good as the current state of the art protein structure searches. 
+Additionally, it can be argued that the kinds of matches RUPEE returns have more added value than the current state of the art in that with equal scores it is able to return results not biased toward a structure classification hierarchy such as SCOPe or sequence clusters such as PDB-90. 
+In this regard, RUPEE makes a fundamental contribution to protein structure research that lends itself to being leveraged in existing systems. 
+It also provided a path for further research activity in the direction of big data represenations of protein structures. 
 
 Besides our approach to protein structure search, we introduce a polar plot for torsion angles that may have wider applicability in the study of protein structure. 
 Further, the \emph{run position encoding} heuristic introduced below may have wider applicability to algorithms for character sequences containing long runs of repeats. 
@@ -468,16 +460,17 @@ A comprehensive listing of these difference may find interesting similarities no
 
 \section{CONCLUSION}
 
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text.
+With the growth rate of solved structures deposited in the PDB, the need for a fast and scalable structure search is growing. 
+Using run position encoded shingles of residue descriptors combined with min-hashing and LSH, we have shown that RUPEE is able to provide good results in seconds running on an 8-core laptop against the RUPEE index in a PostgreSQL database, serviced by a single thread.
+RUPEE response times may be further improved by the structural near dupe clustering of domains for use in a filtering step not dependent on clusters derived from sequence data. 
+
+Aside from response times and scalability, there is room for improvement in RUPEE, especially with respect to encoding the unstructured regions of proteins.
+For short loops containing simple motifs such as the $\beta$-turn-$\beta$ motif, shingle matches correctly factor into RUPEE similarity comparisons. 
+However, with the longer and more complex loop and tail regions, random matching and mismatching takes a toll further down in the list of ranked results. 
+
+In addition to RUPEE, we have introduced two items that may find wider applicability. 
+The first item is the introduction of a new polar torsion angle plot that maintains the continuity of permissible torsion angle regions while maintaining the familiar torsion angle ranges used in Ramachandran plots. 
+The next item is the \emph{run position encoding} heuristic, which may find wider applicability due to it simplicity and generality. 
 
 \subsubsection{Conflict of interest statement.} None declared.
 \newpage
