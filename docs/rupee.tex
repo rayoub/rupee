@@ -409,7 +409,7 @@ Towards the extreme end of high precision, it would be sufficient for a search t
 \begin{center}
 \includegraphics{combined_precision}
 \end{center}
-\caption{Something Something}
+\caption{Precision plots for scop\_d360, scop\_d62, and cath\_d99 benchmarks}
 \label{fig:combined_precision}
 \end{figure*}
 
@@ -425,25 +425,31 @@ So this result is in keeping with how RUPEE is intended to work and how it is de
 
 \subsection{Response Times}
 
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
+\figurename~\ref{fig:combined_response} shows response times in seconds for the scop\_d62 and cath\_d99 benchmarks. 
+Here, we are able to show RUPEE, mTM and SSM on the same plot because scop\_d62 is a subset of the scop\_d360 benchmark. 
+Both plots are shown with a logarithmic scale in order to include all outliers while still being able to view the overall trends in response times. 
 
 \begin{figure*}[tb]
 \begin{center}
 \includegraphics{combined_response}
 \end{center}
-\caption{Something Something}
+\caption{Response time plots for scop\_d62 and cath\_d99 benchmarks}
 \label{fig:combined_response}
 \end{figure*}
 
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-Text. Text. Text.
+In all cases, RUPEE in fast mode is considerably faster than all other searches. 
+It is also clear that fast mode is not as sensitive to increasing residue counts in contrast to CATHEDRAL and RUPEE in top-aligned mode.
+Response times for SSM are not affected by residue counts at all and always returns results in less than 100 seconds but this is at the expense of performance as shown in \figurename~\ref{fig:combined_scoring_ce}.
+
+In the left plot of \figurename~\ref{fig:combined_response}, it is shown that RUPEE in top-aligned mode is faster than mTM for residue counts below 200, but then response times for RUPEE increase beyond that of mTM. 
+Down the stretch mTM provides increasingly better response times than RUPEE, while RUPEE is still able to provide reasonable response times. 
+
+The trend of increasing response times for RUPEE in top-aligned mode is a direct result of the pairwise structure comparisons that are performed on the top 2,000 results provided by RUPEE fast mode.
+
+Response times to a large degree are a measure of the amount of resources available to an application. 
+In the case of RUPEE, our response times were gathered from RUPEE running on a fairly old laptop with a 2nd generation Intel\textregistered{} Core\texttrademark{} i7-2720QM Quad-Core CPU and 8 GB of memory. 
+With more resources the response times of RUPEE can be further improved since pairwise alignments can be run in parallel. 
+For mTM, SSM, and CATHEDRAL, we gathered response times by automating their respective web sites using the Selenium WebDriver API. 
 
 \section{DISCUSSION}
 
