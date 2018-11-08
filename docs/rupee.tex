@@ -52,14 +52,11 @@ Accepted ?????? ??, ????}
 \begin{abstract}
 Given the close relationship between protein structure and function, protein structure searches have long played an established role in bioinformatics. 
 Despite their maturity, existing protein structure searches either compromise between fast response times and quality of results or use simplifying assumptions. 
-These limitations can prevent the easy and efficient exploration of relationships between protein structures, which is the norm in other areas of inquiry.\\
+These limitations can prevent the easy and efficient exploration of relationships between protein structures, which is the norm in other areas of inquiry.
 We have developed a fast, scalable, and purely geometric structure search combining techniques from information retrieval and big data with a novel approach to encoding sequences of torsion angles. 
-Along the way, we introduce a new torsion angle plot to assist in identifying separable regions of torsion angles. 
-Subsequently, we introduce a new heuristic we call \emph{run position encoding}, for handling the lack of specificity of items within character sequences containing runs of repeats. 
-Comparing our results to the output of the CATH structural scan, response times are measured in seconds as opposed to minutes and average RMSDs and TM-scores are better. 
-Our approach is a step towards a comprehensive indexing of protein structures scalable to millions of entries.\\
-The RUPEE protein structure search is available at \url{http://www.ayoubresearch.com}. 
-Code and data are available at \url{https://github.com/rayoub/rupee}.\\
+Comparing our results to the output of mTM, SSM, and the CATHEDRAL structural scan, it is clear that RUPEE has set a new bar for alignment-free big data approaches to protein structure searches, producing equal or better results than the current state of the art in protein search.
+
+The RUPEE protein structure search is available at \url{http://www.ayoubresearch.com}. Code and data are available at \url{https://github.com/rayoub/rupee}.
 \end{abstract}
 
 \section{INTRODUCTION}
