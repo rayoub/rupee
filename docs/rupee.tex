@@ -24,7 +24,7 @@
 
 \begin{document}
 
-\title{Article title}
+\title{RUPEE: A fast and accurate purely geometric protein structure search}
 
 \author{%
 Ronald Ayoub\,$^{1,}$%
@@ -52,10 +52,10 @@ Accepted ?????? ??, ????}
 
 \begin{abstract}
 Given the close relationship between protein structure and function, protein structure searches have long played an established role in bioinformatics. 
-Despite their maturity, existing protein structure searches either compromise between fast response times and quality of results or use simplifying assumptions. 
+Despite their maturity, existing protein structure searches either use simplifying assumptions or compromise between fast response times and quality of results. 
 These limitations can prevent the easy and efficient exploration of relationships between protein structures, which is the norm in other areas of inquiry.
-We have developed a fast, scalable, and purely geometric structure search combining techniques from information retrieval and big data with a novel approach to encoding sequences of torsion angles. 
-Comparing our results to the output of mTM, SSM, and the CATHEDRAL structural scan, it is clear that RUPEE has set a new bar for alignment-free big data approaches to protein structure searches, producing equal or better results than the current state of the art in protein search.
+We have developed RUPEE, a fast, scalable, and purely geometric structure search combining techniques from information retrieval and big data with a novel approach to encoding sequences of torsion angles. 
+Comparing our results to the output of mTM, SSM, and the CATHEDRAL structural scan, it is clear that RUPEE has set a new bar for purely geometric big data approaches to protein structure searches, producing equal or better results than the current state of the art in protein structure search.
 
 The RUPEE protein structure search is available at \url{http://www.ayoubresearch.com}. Code and data are available at \url{https://github.com/rayoub/rupee}.
 \end{abstract}
@@ -67,7 +67,7 @@ As such, understanding protein structure is a central goal within structural bio
 Protein structure determination, prediction, alignment, and search all serve to advance this understanding. 
 Below, we present our approach to a fast, scalable, and purely geometric protein structure search we refer to with the acronym of \emph{RUn Position Encoded Encodings} of residue descriptors (RUPEE).
 
-Given a protein domain identifier, whole chain identifier or an uploaded file, RUPEE can search for matches among domains defined in SCOPe 2.07 \cite{Fox2013}, CATH v4.2 \cite{Orengo1997}, ECOD develop210 \cite{Cheng2014}, or else among whole chains defined in the PDB.
+Given a protein domain identifier, whole chain identifier or an uploaded PDB file, RUPEE can search for matches among domains defined in SCOPe 2.07 \cite{Fox2013}, CATH v4.2 \cite{Orengo1997}, ECOD develop210 \cite{Cheng2014}, or among whole chains defined in the PDB.
 In contrast to currently available protein structure searches, RUPEE is able to search either of these databases using any identifier. 
 For instance, you can search SCOPe using a CATH domain identifier. 
 
@@ -154,7 +154,7 @@ Despite their utility and familiarity, Ramachandran plots \cite{Ramachandran1968
 This leads to the unwieldy arrangement where the top part of the plot is continuous with the bottom and the left is continuous with the right. 
 
 To identify regions of torsion angles, we randomly sampled 10,000 residues from high-resolution CATH s35 representatives to account for precision and redundancy, respectively. 
-A Ramachandran plot of the sampled torsions angles is shown to the left in \figurename~\ref{fig:combined_torsion}. 
+A Ramachandran plot of the sampled torsions angles is shown in the left plot of \figurename~\ref{fig:combined_torsion}. 
 As can be seen, a single cluster of residues, consisting primarily of $\beta$-strands, appears at all 4 corners of the Ramachandran plot.
 
 \begin{figure*}[tb]
@@ -170,7 +170,7 @@ Both wrapped and mirrored plots take advantage of the sparsely populated areas o
 However, with larger samples of torsion angles, the area at $\psi = -120\degree$ becomes less sparse. 
 The use of a polar plot resolves this elegantly by only requiring one break in continuity at $\phi = 0\degree$. 
 
-To the right in \figurename~\ref{fig:combined_torsion}, we plot the same torsion angles appearing in the Ramachandran plot using a polar plot. 
+In the right plot of \figurename~\ref{fig:combined_torsion}, we show the same torsion angles appearing in the Ramachandran plot using a polar plot. 
 In this plot, $\phi$ corresponds to the radius $r$ and $\psi$ corresponds to the angle $\theta$ in traditional polar plots. 
 Notice the residues appearing at the 4 corners of the Ramachandran plot now appear in one continuous region of the polar plot centered at $\phi = \pm180\degree$ and $\psi = \pm180\degree$. 
 
@@ -299,7 +299,7 @@ Together, min-hashing and LSH provide the foundation for both operating modes of
 
 \subsection{Operating modes}
 
-RUPEE provides 2 operating modes, fast and top-aligned. 
+RUPEE provides two modes, fast and top-aligned. 
 Each operating mode builds on the results provided by the min-hashing and LSH system described above. 
 When a structure search is executed in either mode, a number of concurrent tasks are executed corresponding to the number of bands used for LSH. 
 These concurrent tasks identify candidate matches based on a single band match and then validate the matches based on a comparison of min-hashes. 
@@ -312,7 +312,7 @@ The final step of fast mode is to sort the matches based on the adjusted scores 
 Top-aligned is an additional step following fast mode. 
 First, unoptimized CE alignments are performed on the top 2,000 matches obtained from fast mode. 
 Then optimized CE alignments are performed on the top 400 matches and these are finally returned sorted either by RMSD or TM-Score. 
-Currently, top-aligned is a simple layer following fast mode that establishes RUPEE fast mode as an effective filtering method that contains in its top 2,000 results enough good matches to compete with the best available structure searches. 
+Top-aligned is a simple layer following fast mode that establishes RUPEE fast mode as an effective filtering method that contains in its top 2,000 results enough good matches to compete with the best available structure searches. 
 
 \section{RESULTS}
 
@@ -327,7 +327,7 @@ Similarly, scop\_d62 is derived from the d500 benchmark filtered for domains def
 In keeping with our description of RUPEE in \cite{Ayoub2017}, the cath\_d99 benchmark contains 99 superfamily representatives from the top 100 most diverse superfamilies defined in CATH v4.2 for which CATHEDRAL returns results in less than 12 hours. 
 
 We perform pairwise evaluations to ensure the fairness of our comparisons. 
-First, For domain searches, SSM is working with the SCOP 1.73 database, so accordingly we operate RUPEE on SCOP 1.73 domains to ensure RUPEE does not have more domains to work with for scoring and precision evaluations. 
+First, for domain searches, SSM is working with the SCOP 1.73 database, so accordingly we operate RUPEE on SCOP 1.73 domains to ensure RUPEE does not have more domains to work with for scoring and precision evaluations. 
 Second, mTM is updated to work with SCOPe 2.07 domain definitions but still retains domains from 2.06 that have since been redefined either through mergers or splits in 2.07. 
 On the other hand, CATHEDRAL presents no such challenges but still requires a separate benchmark since it is working with a distinct hierarchy, CATH v4.2. 
 
@@ -344,23 +344,25 @@ TM-scores greater than 0.17 are considered potentially meaningful whereas TM-sco
 \begin{center}
 \includegraphics{combined_scoring_ce}
 \end{center}
-\caption{Evaluation of scoring from CE pairwise alignments}
+\caption{Scoring from CE pairwise alignments for RUPEE fast, RUPEE top-aligned sorted by TM-Score, and RUPEE top-aligned sorted by RMSD}
 \label{fig:combined_scoring_ce}
 \end{figure*}
 
 A figure similar to \figurename~\ref{fig:combined_scoring_ce} but using FATCAT for pairwise comparisons can be found in the supplementary material. 
 The same relative relationships hold with only small variations. 
 
-RUPEE fast and top-aligned, sorted by both RMSD and TM-Score, perform better than SSM and CATHEDRAL.
+RUPEE fast, top-aligned sorted by RMSD, and top-aligned sorted by TM-Score, perform better than SSM and CATHEDRAL.
 The scoring in the cath\_d99 benchmark comparisons are notably lower than for the other two benchmarks. 
 This is expected since CATHEDRAL only returns CATH s35 representatives.
 Likewise, for this comparison RUPEE is filtered for s35 representatives to match. 
 Given that the cath\_d99 benchmark is evaluated against representatives, there are fewer highly similar structures returned in the results. 
 
 In our evaluation, mTM faired better than SSM and CATHEDRAL. 
-For TM-Score, RUPEE and mTM are nearly identical with RUPEE slightly better for ranks less than 50 and mTM better for ranks greater than 50. 
-For RMSD, RUPEE does perform better than mTM but this can most likely be attributed to the fact that mTM only sorts by TM-Score. 
-If mTM sorted by RMSD we feel the results again would be nearly identical.
+mTM also performed better than RUPEE fast, although RUPEE fast is still within 0.08 TM-Score points of mTM at the 100$^{th}$ result, which is notable considering its speed.
+
+For TM-Score, RUPEE top-aligned and mTM are nearly identical with RUPEE slightly better for ranks less than 50 and mTM better for ranks greater than 50. 
+For RMSD, RUPEE top-aligned does perform better than mTM but this can most likely be attributed to the fact that mTM only sorts by TM-Score. 
+If mTM sorted by RMSD we suspect the results again would be nearly identical.
 Nevertheless, it is worth noting that the initial LSH and min-hashing technique does not explicitly bias results towards one particular measure. 
 
 \subsection{Precision}
@@ -378,7 +380,7 @@ Towards the extreme end of high precision, it would be sufficient for a search t
 \begin{center}
 \includegraphics{combined_precision}
 \end{center}
-\caption{Precision plots for scop\_d360, scop\_d62, and cath\_d99 benchmarks}
+\caption{Precision for RUPEE fast, RUPEE top-aligned sorted by TM-Score, and RUPEE top-aligned sorted by RMSD}
 \label{fig:combined_precision}
 \end{figure*}
 
@@ -395,7 +397,7 @@ So this result is in keeping with how RUPEE is intended to work and how it is de
 \subsection{Response Times}
 
 \figurename~\ref{fig:combined_response} shows response times in seconds for the scop\_d62 and cath\_d99 benchmarks. 
-Here, we are able to show RUPEE, mTM and SSM on the same plot because scop\_d62 is a subset of the scop\_d360 benchmark. 
+Here, we are able to show RUPEE fast and top-aligned, mTM and SSM on the same plot because scop\_d62 is a subset of the scop\_d360 benchmark. 
 Both plots are shown with a logarithmic scale in order to include all outliers while still being able to view the overall trends in response times. 
 Loess regression curves are also provided to further highlight the overall trends. 
 
@@ -403,7 +405,7 @@ Loess regression curves are also provided to further highlight the overall trend
 \begin{center}
 \includegraphics{combined_response}
 \end{center}
-\caption{Response time plots for scop\_d62 and cath\_d99 benchmarks}
+\caption{Response times for RUPEE fast and RUPEE top-aligned. The response times for RUPEE top-aligned are dominated by pairwise structure alignments and do not depend on the sort order.}
 \label{fig:combined_response}
 \end{figure*}
 
@@ -413,6 +415,7 @@ Response times for SSM are not affected by residue counts at all and always retu
 
 In the left plot of \figurename~\ref{fig:combined_response}, it is shown that RUPEE top-aligned is faster than mTM for residue counts below 200, but then response times for RUPEE increase beyond that of mTM. 
 Down the stretch, mTM provides increasingly better response times than RUPEE, while RUPEE is still able to provide reasonable response times. 
+The right plot of \figurename~\ref{fig:combined_response} shows RUPEE top-aligned is significantly faster than CATHEDRAL for all residue counts. 
 
 The trend of increasing response times for RUPEE top-aligned is a direct result of the pairwise structure comparisons that are performed on the top 2,000 results provided by RUPEE fast mode.
 
@@ -423,7 +426,8 @@ For mTM, SSM, and CATHEDRAL, we gathered response times by automating their resp
 
 \section{DISCUSSION}
 
-Not to understate the significance of what has been shown, that a purely geometric alignment-free big data approach to protein structure search can compete with the current state of the art protein structure searches available, there remains challenges for RUPEE to address in addition to avenues for further investigation. 
+As shown above, a purely geometric big data approach to protein structure search can compete with the current state of the art protein structure searches available.
+Nonetheless, there remain avenues for further improvement and investigation. 
 
 While our min-hashing and LSH scheme does allow for some flexibility in the size of matched protein structures, it is not specifically designed for containment searches. 
 However, the initial min-hashing and LSH search does operate fast enough, within seconds, that it does present the possibility of executing multiple searches within the context of a single query. 
@@ -435,8 +439,7 @@ However, on a single compute unit, the time required is more than we are willing
 
 One possible drawback of RUPEE is that in both fast and top-aligned modes, it only returns the top 400 results. 
 Again, with more resources, this number can be increased, but there still remains a need for some kind of cut-off. 
-
-In most search tools, having to looking past the first few hundred results usually indicates an ineffective search strategy.
+Nonetheless, in most search tools, having to looking past the first few hundred results usually indicates an ineffective search strategy.
 To this end, RUPEE provides filters that can be used for traversing structure space more efficiently. 
 For SCOPe, CATH, and ECOD you can instruct the search to only return domains that differ from the query structure at a chosen hierarchy level classification. 
 Additionally, for CATH you can filter results based on hierarchy level representatives. 
@@ -459,16 +462,11 @@ A comprehensive listing of these difference may find interesting similarities no
 \section{CONCLUSION}
 
 With the growth rate of solved structures deposited in the PDB, the need for a fast and scalable structure search is growing. 
-Using run position encoded shingles of residue descriptors combined with min-hashing and LSH, we have shown that RUPEE is able to provide good results in seconds running on an 8-core laptop against the RUPEE index in a PostgreSQL database, serviced by a single thread.
-RUPEE response times may be further improved by the structural near dupe clustering of domains for use in a filtering step not dependent on clusters derived from sequence data. 
-
-Aside from response times and scalability, there is room for improvement in RUPEE, especially with respect to encoding the unstructured regions of proteins.
-For short loops containing simple motifs such as the $\beta$-turn-$\beta$ motif, shingle matches correctly factor into RUPEE similarity comparisons. 
-However, with the longer and more complex loop and tail regions, random matching and mismatching takes a toll further down in the list of ranked results. 
-
-In addition to RUPEE, we have introduced two items that may find wider applicability. 
-The first item is the introduction of a new polar torsion angle plot that maintains the continuity of permissible torsion angle regions while maintaining the familiar torsion angle ranges used in Ramachandran plots. 
-The next item is the \emph{run position encoding} heuristic, which may find wider applicability due to it simplicity and generality. 
+Using run position encoded shingles of residue descriptors combined with min-hashing and LSH, we have shown that RUPEE fast is able to provide good results in seconds running on an Quad-Core laptop.
+Currently, RUPEE fast is the fastest available protein structure search providing the demonstrated level of accuracy. 
+For RUPEE top-aligned, we have shown that a purely geometric big data approach to protein structure search is able to produce results equal to or better than the current state of the art protein structure searches that variously depend on clustered sequences or protein structure classification hierarchies. 
+Moreover, we have shown evidence that suggests the results from RUPEE top-aligned provide more added value by discovering high scoring protein structure matches not necessarily aligned with a particular protein structure classification hierarchy or hiding behind a cluster representative. 
+The ability for RUPEE to quickly examine all structures among hundreds of thousands sets it apart as a tool that can be used for discovering previously undetected structural similarity relations between proteins rather than just aligning with an already known fold hierarchy. 
 
 \subsubsection{Conflict of interest statement.} None declared.
 \newpage
