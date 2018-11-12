@@ -21,7 +21,11 @@ get_timing_plot <- function(p_title, p_file, p_levels, p_colors, p_y_axis) {
             
         # geoms
         geom_point(
-            size = rel(0.75)
+            size = rel(0.5)
+        ) + 
+        geom_smooth(     
+            size = rel(0.5),
+            show.legend = FALSE
         ) + 
 
         # scales
@@ -29,9 +33,13 @@ get_timing_plot <- function(p_title, p_file, p_levels, p_colors, p_y_axis) {
             values = p_colors,
             labels = p_levels
         ) + 
-
+        scale_y_continuous(
+            trans = "log10",
+            limits = c(1,10000)
+        ) + 
+    
         # guides
-        guides(color = guide_legend(override.aes = list(size = rel(0.5)))) + 
+        guides(color = guide_legend(override.aes = list(size = rel(1)))) + 
 
         # axis labels
         labs(

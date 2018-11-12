@@ -26,16 +26,12 @@ get_precision_plot <- function(p_title, p_file, p_levels, p_limits, p_breaks, p_
 
         # scales
         scale_color_manual(
-            values = c("#e41a1c", "#377eb8", "#4daf4a"),
-            labels = c("RUPEE","RUPEE Fast","Compared To")
+            values = c("#e41a1c", "#377eb8", "#4daf4a", "#984ea3"),
+            labels = c("RUPEE TM-Score", "RUPEE RMSD", "RUPEE Fast","Compared To")
         ) + 
         scale_linetype_manual(
-            values = c("solid","dashed","dotted"),
-            labels = c("RUPEE","RUPEE Fast","Compared To")
-        ) + 
-        scale_y_continuous(
-            limits = c(0.28, 1.0),
-            breaks = c(0.4, 0.6, 0.8, 1.0)
+            values = c("solid","dashed","dotted", "dotdash"),
+            labels = c("RUPEE TM-Score", "RUPEE RMSD", "RUPEE Fast","Compared To")
         ) + 
         scale_x_continuous(
             limits = p_limits,

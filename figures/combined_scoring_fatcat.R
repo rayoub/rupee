@@ -39,7 +39,7 @@ grid_arrange_shared_legend <-
 mtm_plot <- get_scoring_plot(
         'vs. mTM (scop_d360)',
         'scoring_mtm_fatcat.txt',
-        c('RUPEE', 'RUPEE Fast', 'mTM'), 
+        c('RUPEE TM-Score', 'RUPEE RMSD', 'RUPEE Fast', 'mTM'), 
         c(1, 100),
         c(1, seq(10, 100, by = 10)),
         TRUE
@@ -47,7 +47,7 @@ mtm_plot <- get_scoring_plot(
 ssm_plot <- get_scoring_plot(
         'vs. SSM (scop_d62)',
         'scoring_ssm_fatcat.txt',
-        c('RUPEE', 'RUPEE Fast', 'SSM'), 
+        c('RUPEE TM-Score', 'RUPEE RMSD', 'RUPEE Fast', 'SSM'), 
         c(1, 50),
         c(1, seq(5, 50, by = 5)),
         FALSE
@@ -55,7 +55,7 @@ ssm_plot <- get_scoring_plot(
 cathedral_plot <- get_scoring_plot(
         'vs. CATHEDRAL (cath_d99)',
         'scoring_cathedral_fatcat.txt',
-        c('RUPEE', 'RUPEE Fast', 'CATHEDRAL'), 
+        c('RUPEE TM-Score', 'RUPEE RMSD', 'RUPEE Fast', 'CATHEDRAL'), 
         c(1, 100),
         c(1, seq(10, 100, by = 10)),
         FALSE

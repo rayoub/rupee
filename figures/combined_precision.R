@@ -39,7 +39,7 @@ grid_arrange_shared_legend <-
 mtm_plot <- get_precision_plot(
         'vs. mTM (scop_d360)',
         'precision_mtm.txt',
-        c('RUPEE', 'RUPEE Fast', 'mTM'), 
+        c('RUPEE TM-Score', 'RUPEE RMSD', 'RUPEE Fast', 'mTM'), 
         c(1, 100),
         c(1, seq(10, 100, by = 10)),
         'fold precision'
@@ -47,7 +47,7 @@ mtm_plot <- get_precision_plot(
 ssm_plot <- get_precision_plot(
         'vs. SSM (scop_d62)',
         'precision_ssm.txt',
-        c('RUPEE', 'RUPEE Fast', 'SSM'), 
+        c('RUPEE TM-Score', 'RUPEE RMSD', 'RUPEE Fast', 'SSM'), 
         c(1, 50),
         c(1, seq(5, 50, by = 5)),
         'fold precision'
@@ -55,7 +55,7 @@ ssm_plot <- get_precision_plot(
 cathedral_plot <- get_precision_plot(
         'vs. CATHEDRAL (cath_d99)',
         'precision_cathedral.txt',
-        c('RUPEE', 'RUPEE Fast', 'CATHEDRAL'), 
+        c('RUPEE TM-Score', 'RUPEE RMSD', 'RUPEE Fast', 'CATHEDRAL'), 
         c(1, 100),
         c(1, seq(10, 100, by = 10)),
         'topology precision'

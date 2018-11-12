@@ -55,6 +55,7 @@ rupee-srv/target/
 **/*.dvi
 **/*.idx
 **/*.log
+**/nohup.out
 
 # eclim
 **/workbench.xmi

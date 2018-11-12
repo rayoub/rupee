@@ -21,24 +21,18 @@ get_scoring_plot <- function(p_title, p_file, p_levels, p_limits, p_breaks, p_y_
         ggplot(df, aes(n, avg_cume_score, group = interaction(app, score_type), color = app, linetype = app)) +
         
         # geoms
-        geom_hline(
-            data = refs,
-            colour = 'grey50', 
-            size = rel(0.2),
-            aes(yintercept = yintercept)
-        ) +
         geom_line(
             size = rel(0.5)
         ) + 
 
         # scales        
         scale_color_manual(
-            values = c("#e41a1c", "#377eb8", "#4daf4a"),
-            labels = c("RUPEE","RUPEE Fast","Compared To")
+            values = c("#e41a1c", "#377eb8", "#4daf4a", "#984ea3"),
+            labels = c("RUPEE TM-Score","RUPEE RMSD","RUPEE Fast","Compared To")
         ) + 
         scale_linetype_manual(
-            values = c("solid", "dashed", "dotted"),
-            labels = c("RUPEE","RUPEE Fast","Compared To")
+            values = c("solid", "dashed", "dotted", "dotdash"),
+            labels = c("RUPEE TM-Score","RUPEE RMSD","RUPEE Fast","Compared To")
         ) + 
         scale_x_continuous(
             limits = p_limits,

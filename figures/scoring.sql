@@ -66,7 +66,7 @@ BEGIN
         (
             SELECT 
                 n,
-                'RUPEE' AS app,
+                'RUPEE TM-Score' AS app,
                 p_alg AS alg,
                 'TM-Score' AS score_type,
                 db_id_1,
@@ -96,7 +96,7 @@ BEGIN
             UNION ALL 
             SELECT 
                 n, 
-                'RUPEE' AS app,
+                'RUPEE RMSD' AS app,
                 p_alg AS alg,
                 'RMSD' AS score_type,
                 db_id_1,
