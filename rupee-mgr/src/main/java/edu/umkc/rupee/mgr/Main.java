@@ -55,7 +55,6 @@ import edu.umkc.rupee.lib.Db;
 import edu.umkc.rupee.lib.DbId;
 import edu.umkc.rupee.lib.Hashes;
 import edu.umkc.rupee.lib.LCS;
-import edu.umkc.rupee.lib.Labels;
 import edu.umkc.rupee.lib.Similarity;
 import edu.umkc.rupee.lib.Uploading;
 import edu.umkc.rupee.scop.ScopHash;
@@ -716,10 +715,25 @@ public class Main {
 
     private static void option_d(CommandLine line) throws Exception {
 
+        
+        List<String> dbIds = Db.getBenchmark("cath_d99");
+        for (int i = 0; i < dbIds.size(); i++) {
+
+            if (i % 10 == 0) {
+                System.out.print("\n" + dbIds.get(i) + ",");
+            }
+            else {
+                System.out.print(dbIds.get(i) + ",");
+            }
+        }
+        System.out.println("");
+
+        /*
         List<Labels.Label> labels = Labels.getLabels("1nycA00", DbTypeCriteria.CATH);
         for (Labels.Label label : labels) {
             System.out.println(label.getResidueNumber() + "," + label.getLabel());
         }
+        */
 
         /*
         AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "tm_score", DbTypeCriteria.SCOP, 100);

@@ -192,6 +192,31 @@ public class Db {
     // Getting 
     // *********************************************************************
     
+    public static List<String> getBenchmark(String name) throws SQLException {
+
+        List<String> dbIds = new ArrayList<>();
+
+        PGSimpleDataSource ds = Db.getDataSource();
+
+        Connection conn = ds.getConnection();
+        conn.setAutoCommit(false);
+
+        PreparedStatement stmt = conn.prepareCall("SELECT db_id FROM benchmark WHERE name = ? ORDER BY db_id;");
+        stmt.setString(1, name); 
+
+        ResultSet rs = stmt.executeQuery();
+        while (rs.next()) {
+
+            dbIds.add(rs.getString("db_id"));
+        }
+
+        rs.close();
+        stmt.close();
+        conn.close();
+
+        return dbIds;
+    }
+    
     public static Map<String, AlignmentScores> getAlignmentScores(String version, String dbId) {
 
         Map<String, AlignmentScores> map = new HashMap<>();
