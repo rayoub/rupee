@@ -68,7 +68,7 @@ Protein structure determination, prediction, alignment, and search all serve to 
 Below, we present our approach to a fast, scalable, and purely geometric protein structure search we refer to with the acronym of \emph{RUn Position Encoded Encodings} of residue descriptors (RUPEE).
 
 Given a protein domain identifier, whole chain identifier or an uploaded PDB file, RUPEE can search for matches among domains defined in SCOPe 2.07 \cite{Fox2013}, CATH v4.2 \cite{Orengo1997}, ECOD develop210 \cite{Cheng2014}, or among whole chains defined in the PDB.
-In contrast to currently available protein structure searches, RUPEE is able to search either of these databases using any identifier. 
+RUPEE is able to search either of these databases using any identifier. 
 For instance, you can search SCOPe using a CATH domain identifier. 
 
 RUPEE has two modes of operation, fast and top-aligned. 
@@ -77,8 +77,8 @@ Despite this, we will show that the accuracy of RUPEE in fast mode is not far be
 On the other hand, the accuracy and response times of RUPEE in top-aligned mode are comparable to currently available protein structure searches that are commonly considered fast. 
 
 RUPEE stands out as not just another protein structure search, of which there are many. 
-RUPEE is the first, to our knowledge, purely geometric protein structure search to achieve results as good as the current state of the art protein structure searches. 
-Additionally, it can be argued that the kinds of matches RUPEE returns have more added value than the current state of the art in that with equal scores it is able to return results not biased toward a structure classification hierarchy such as SCOPe or sequence clusters such as PDB-90. 
+RUPEE is the first, to our knowledge, purely geometric protein structure search to achieve results as good as the best available protein structure searches. 
+Additionally, it can be argued that the kinds of matches that RUPEE does return have more added value than the current state of the art in that with equal scores it is able to return results not biased toward a structure classification hierarchy such as SCOPe or sequence clusters such as the PDB-90. 
 In this regard, RUPEE makes a fundamental contribution to protein structure research that lends itself to being leveraged in existing systems. 
 It also provided a path for further research activity in the direction of big data represenations of protein structures. 
 
@@ -139,7 +139,7 @@ At a minimum, RUPEE takes a significant step in this direction as will be shown 
 \section{METHODS}
 
 Broadly, we define a linear encoding of protein structure and convert this linear encoding into a bag of features. 
-Min-hashing and locality sensitive hashing (LSH), techniques drawn from big-data, are then applied to implement a protein structure indexing method that serves as the foundation for both RUPEE operating modes, fast and top-aligned. 
+Min-hashing and locality sensitive hashing (LSH), techniques drawn from big data, are then applied to implement a protein structure indexing method that serves as the foundation for both RUPEE operating modes, fast and top-aligned. 
 
 Protein structure searches that use linear encodings are not unique \cite{Carpentier2005,Daniluk2011,Ritchie2012}.
 The novelty of our approach lies in its remarkable performance given its simplicity. 
@@ -426,7 +426,7 @@ For mTM, SSM, and CATHEDRAL, we gathered response times by automating their resp
 
 \section{DISCUSSION}
 
-As shown above, a purely geometric big data approach to protein structure search can compete with the current state of the art protein structure searches available.
+As shown above, a purely geometric big data approach to protein structure search can compete with the best available protein structure searches.
 Nonetheless, there remain avenues for further improvement and investigation. 
 
 While our min-hashing and LSH scheme does allow for some flexibility in the size of matched protein structures, it is not specifically designed for containment searches. 
@@ -465,8 +465,8 @@ With the growth rate of solved structures deposited in the PDB, the need for a f
 Using run position encoded shingles of residue descriptors combined with min-hashing and LSH, we have shown that RUPEE fast is able to provide good results in seconds running on an Quad-Core laptop.
 Currently, RUPEE fast is the fastest available protein structure search providing the demonstrated level of accuracy. 
 For RUPEE top-aligned, we have shown that a purely geometric big data approach to protein structure search is able to produce results equal to or better than the current state of the art protein structure searches that variously depend on clustered sequences or protein structure classification hierarchies. 
-Moreover, we have shown evidence that suggests the results from RUPEE top-aligned provide more added value by discovering high scoring protein structure matches not necessarily aligned with a particular protein structure classification hierarchy or hiding behind a cluster representative. 
-The ability for RUPEE to quickly examine all structures among hundreds of thousands sets it apart as a tool that can be used for discovering previously undetected structural similarity relations between proteins rather than just aligning with an already known fold hierarchy. 
+Moreover, we have shown evidence that suggests the results from RUPEE top-aligned provide more added value by discovering high scoring protein structure matches not necessarily aligned with a particular protein structure classification hierarchy or hiding behind cluster representatives. 
+The ability for RUPEE to quickly examine all structures among hundreds of thousands sets it apart as a tool that can be used for discovering previously undetected structural similarities.
 
 \subsubsection{Conflict of interest statement.} None declared.
 \newpage
