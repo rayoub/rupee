@@ -209,6 +209,10 @@ We have adapted the syntactic approach to document similarity, often referred to
 We transform a linear sequence of descriptors into a multiset of shingles consisting of 3 consecutive descriptors.
 The overlap between shingles ensures some of the order information within the original sequence is preserved in the bag. 
 
+The length of a shingle is chosen to balance false positives, in the case of shorter shingles, against false negatives, in the case of longer shingles. 
+In \cite{Ayoub2017}, we used 4 consecutive descriptors for our shingles. 
+With the additions discussed in the \emph{Operating modes} section below, we have found RUPEE is more tolerant of false positives and so accordingly we have cast a wider net by decreasing the shingle length to 3. 
+
 By shingling, we obtain a multiset of ordered lists from an ordered list of numbers. 
 As an example, the sequence in (\ref{E:descrseq}) is transformed into the following bag of shingles. 
 \begin{align}\label{E:shinglebag}
