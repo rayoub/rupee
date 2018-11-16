@@ -50,6 +50,7 @@ rupee-srv/target/
 **/*.tar
 **/*.pdf
 **/*.aux
+**/*.out
 **/*.bbl
 **/*.blg
 **/*.dvi
