@@ -5,7 +5,7 @@ This project contains code and data initially associated with the paper [RUPEE: 
 RUPEE is under continual development.
 At this stage, the initial RUPEE paper serves only to describe the common basis for the current RUPEE operating modes, fast and top-aligned, which are described in a paper currently being prepared for submission. 
 
-RUPEE itself is available for use at <http://www.ayoubresearch.com>.
+RUPEE itself is available for use at <https://ayoubresearch.com>.
 
 Below, I will attempt to describe how to find your way around the RUPEE repo, directory by directory, in the order required for setting up RUPEE in your own environment. 
 It is assumed that you are familiar with RUPEE and have read the paper. 
