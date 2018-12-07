@@ -63,8 +63,11 @@ public class DbId {
         else if (isEcodId(id)) {
             return id.substring(0,4).toLowerCase() + id.substring(5,id.length() -1).toUpperCase();
         }
-        else {
+        else if (isChainId(id)) {
             return id.substring(0,3).toLowerCase() + id.substring(4,id.length() -1).toUpperCase();
+        }
+        else {
+            return id;
         }
     }
 }
