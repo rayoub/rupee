@@ -51,4 +51,20 @@ public class DbId {
             return DbTypeCriteria.CHAIN;
         }
     }
+    
+    public static String getNormalizedId(String id) {
+
+        if (isScopId(id)) {
+            return id.toLowerCase();
+        }
+        else if (isCathId(id)) {
+            return id.substring(0,3).toLowerCase() + id.substring(4,id.length() -1).toUpperCase();
+        }
+        else if (isEcodId(id)) {
+            return id.substring(0,4).toLowerCase() + id.substring(5,id.length() -1).toUpperCase();
+        }
+        else {
+            return id.substring(0,3).toLowerCase() + id.substring(4,id.length() -1).toUpperCase();
+        }
+    }
 }
