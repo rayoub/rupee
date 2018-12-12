@@ -7,7 +7,7 @@ import edu.umkc.rupee.defs.DbTypeCriteria;
 
 public class DbId {
 
-    private static Pattern SCOP_PATTERN = Pattern.compile("d[1-9][a-z0-9]{3}[a-z1-9][_1-9]", Pattern.CASE_INSENSITIVE);     // maxlen = 7
+    private static Pattern SCOP_PATTERN = Pattern.compile("d[1-9][a-z0-9]{3}[a-z1-9\\.][_1-9]", Pattern.CASE_INSENSITIVE);     // maxlen = 7
     private static Pattern CATH_PATTERN = Pattern.compile("[1-9][a-z0-9]{3}[a-z1-9][0-9]{2}", Pattern.CASE_INSENSITIVE);    // maxlen = 7
     private static Pattern ECOD_PATTERN = Pattern.compile("e[1-9][a-z0-9]{3}[a-z1-9]+[0-9]+", Pattern.CASE_INSENSITIVE);    // maxlen = 12 (fudge)
     private static Pattern CHAIN_PATTERN = Pattern.compile("[1-9][a-z0-9]{3}[a-z1-9]", Pattern.CASE_INSENSITIVE);           // maxlen = 5
@@ -58,13 +58,13 @@ public class DbId {
             return id.toLowerCase();
         }
         else if (isCathId(id)) {
-            return id.substring(0,3).toLowerCase() + id.substring(4,id.length() -1).toUpperCase();
+            return id.substring(0,4).toLowerCase() + id.substring(4,id.length()).toUpperCase();
         }
         else if (isEcodId(id)) {
-            return id.substring(0,4).toLowerCase() + id.substring(5,id.length() -1).toUpperCase();
+            return id.substring(0,5).toLowerCase() + id.substring(5,id.length()).toUpperCase();
         }
         else if (isChainId(id)) {
-            return id.substring(0,3).toLowerCase() + id.substring(4,id.length() -1).toUpperCase();
+            return id.substring(0,4).toLowerCase() + id.substring(4,id.length()).toUpperCase();
         }
         else {
             return id;
