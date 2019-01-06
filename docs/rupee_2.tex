@@ -375,10 +375,6 @@ We have adapted the syntactic approach to document similarity, often referred to
 We transform a linear sequence of descriptors into a multiset of shingles consisting of 3 consecutive descriptors.
 The overlap between shingles ensures some of the order information within the original sequence is preserved in the bag. 
 
-The length of a shingle is chosen to balance false positives, in the case of shorter shingles, against false negatives, in the case of longer shingles. 
-In \cite{Ayoub2017}, we used 4 consecutive descriptors for our shingles. 
-With the additions discussed in the \emph{Operating modes} section below, we have found RUPEE is more tolerant of false positives and so accordingly we have cast a wider net by decreasing the shingle length to 3. 
-
 By shingling, we obtain a multiset of ordered lists from an ordered list of numbers. 
 As an example, the sequence in (\ref{E:descrseq}) is transformed into the following bag of shingles. 
 \begin{align}\label{E:shinglebag}
@@ -437,11 +433,15 @@ where the leading zero run factors are shown for clarity.
 
 This pyramidal approach preserves matches at the boundaries between secondary structure runs and loops that would not otherwise be preserved in the presence of differences in run lengths of one or more. 
 
-Now that we have a representation of a protein structure as a bag of integers, similarity between any two structures $a$ and $b$ is defined as the Jaccard similarity \cite{Levan1971} for multisets,
+Now that we have a representation of a protein structure as a bag of integers, similarity for a candidate pair of structures $a$ and $b$ is defined as the Jaccard similarity \cite{Levan1971} for multisets,
 \begin{align}
     J(a,b) = \frac{\sum_i min(a_i, b_i)}{\sum_i max(a_i,b_i)}\text{,}
 \end{align}
 where $i$ ranges over all possible shingle hashes $s_i$ and $a_i$ and $b_i$ give the counts of shingle hash $s_i$ in structures $a$ and $b$, respectively. 
+
+In applying the Jaccard similarity to sets of shingles, the length of a shingle is chosen to balance false positives, in the case of shorter shingles, against false negatives, in the case of longer shingles.
+In \cite{Ayoub2017}, we used 4 consecutive descriptors for our shingles. 
+The additional requirements for structural similarity we introduce in the \emph{Operating modes} section below has the ultimate effect of reducing false positives, so this allowed us to decrease the shingle length to 3 to control better for false negatives. 
 
 \subsection*{Min-hashing and LSH}
 
