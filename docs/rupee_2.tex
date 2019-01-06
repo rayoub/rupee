@@ -342,12 +342,13 @@ Notice the residues appearing at the 4 corners of the Ramachandran plot now appe
 
 \subsection*{Linear Encoding of Protein Structure}
 
-The polar plot described above is used to define torsion angle regions for each secondary structure assignment. 
-The eight DSSP secondary structure assignment codes defined in \cite{Kabsch1983} divide into three groups in which torsion angle regions are roughly the same: `G',`H',`I', and `T' corresponding to $3_{10}$-helix, $\alpha$-helix, $\pi$-helix, and turn, respectively; `E' and `B' corresponding to $\beta$-strand and $\beta$-bridge, respectively; and `S' and `C' corresponding to bend and coil, respectively.
-
-Polar plots for each group of DSSP assignment codes along with defined region and descriptor designations are shown in \figurename~\ref{fig:regions}, with the exception of turns and bridges, which receive descriptors 11 and 12, respectively. 
+The polar plot described above is used to define torsion angle regions for DSSP secondary structure assignments.
+We divide six of the eight DSSP secondary structure assignment codes defined in \cite{Kabsch1983} into three groups: helices (`G',`H',`I'), strands (`E'), and bends and coils (`S',`C').
+For each of the three groups, we plotted the torsion angles and identified regions into which they clustered as shown in \figurename~\ref{fig:regions}.
+The regions for helices are assigned descriptors 1 to 4, for strands 5 to 7, and for bends and coils 8 to 10. 
+The other two DSSP secondary structure assignments codes for turns (`T') and bridges~(`B'), are assigned descriptors 11 and 12, respectively.
 For each polar plot, there are well-defined continuous regions of torsion angles that remain continuous in the plots. 
-The only exception is found in the bends and coil plot at $\psi = 60\degree$ between $\phi = -180\degree$ and $\phi = 0\degree$.
+The only exception is found in the bends and coils plot at $\psi = 60\degree$ between $\phi = -180\degree$ and $\phi = 0\degree$.
 
 \begin{figure*}[!h]
 \caption{Polar plots of randomly sampled torsion angles with designated descriptors for region and DSSP code combinations}
