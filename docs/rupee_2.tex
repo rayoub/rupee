@@ -1,0 +1,669 @@
+% Template for PLoS
+% Version 3.5 March 2018
+%
+% % % % % % % % % % % % % % % % % % % % % %
+%
+% -- IMPORTANT NOTE
+%
+% This template contains comments intended 
+% to minimize problems and delays during our production 
+% process. Please follow the template instructions
+% whenever possible.
+%
+% % % % % % % % % % % % % % % % % % % % % % % 
+%
+% Once your paper is accepted for publication, 
+% PLEASE REMOVE ALL TRACKED CHANGES in this file 
+% and leave only the final text of your manuscript. 
+% PLOS recommends the use of latexdiff to track changes during review, as this will help to maintain a clean tex file.
+% Visit https://www.ctan.org/pkg/latexdiff?lang=en for info or contact us at latex@plos.org.
+%
+%
+% There are no restrictions on package use within the LaTeX files except that 
+% no packages listed in the template may be deleted.
+%
+% Please do not include colors or graphics in the text.
+%
+% The manuscript LaTeX source should be contained within a single file (do not use \input, \externaldocument, or similar commands).
+%
+% % % % % % % % % % % % % % % % % % % % % % %
+%
+% -- FIGURES AND TABLES
+%
+% Please include tables/figure captions directly after the paragraph where they are first cited in the text.
+%
+% DO NOT INCLUDE GRAPHICS IN YOUR MANUSCRIPT
+% - Figures should be uploaded separately from your manuscript file. 
+% - Figures generated using LaTeX should be extracted and removed from the PDF before submission. 
+% - Figures containing multiple panels/subfigures must be combined into one image file before submission.
+% For figure citations, please use "Fig" instead of "Figure".
+% See http://journals.plos.org/plosone/s/figures for PLOS figure guidelines.
+%
+% Tables should be cell-based and may not contain:
+% - spacing/line breaks within cells to alter layout or alignment
+% - do not nest tabular environments (no tabular environments within tabular environments)
+% - no graphics or colored text (cell background color/shading OK)
+% See http://journals.plos.org/plosone/s/tables for table guidelines.
+%
+% For tables that exceed the width of the text column, use the adjustwidth environment as illustrated in the example table in text below.
+%
+% % % % % % % % % % % % % % % % % % % % % % % %
+%
+% -- EQUATIONS, MATH SYMBOLS, SUBSCRIPTS, AND SUPERSCRIPTS
+%
+% IMPORTANT
+% Below are a few tips to help format your equations and other special characters according to our specifications. For more tips to help reduce the possibility of formatting errors during conversion, please see our LaTeX guidelines at http://journals.plos.org/plosone/s/latex
+%
+% For inline equations, please be sure to include all portions of an equation in the math environment.  For example, x$^2$ is incorrect; this should be formatted as $x^2$ (or $\mathrm{x}^2$ if the romanized font is desired).
+%
+% Do not include text that is not math in the math environment. For example, CO2 should be written as CO\textsubscript{2} instead of CO$_2$.
+%
+% Please add line breaks to long display equations when possible in order to fit size of the column. 
+%
+% For inline equations, please do not include punctuation (commas, etc) within the math environment unless this is part of the equation.
+%
+% When adding superscript or subscripts outside of brackets/braces, please group using {}.  For example, change "[U(D,E,\gamma)]^2" to "{[U(D,E,\gamma)]}^2". 
+%
+% Do not use \cal for caligraphic font.  Instead, use \mathcal{}
+%
+% % % % % % % % % % % % % % % % % % % % % % % % 
+%
+% Please contact latex@plos.org with any questions.
+%
+% % % % % % % % % % % % % % % % % % % % % % % %
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[top=0.85in,left=2.75in,footskip=0.75in]{geometry}
+
+% amsmath and amssymb packages, useful for mathematical formulas and symbols
+\usepackage{amsmath,amssymb}
+
+% Use adjustwidth environment to exceed column width (see example table in text)
+\usepackage{changepage}
+
+% Use Unicode characters when possible
+\usepackage[utf8x]{inputenc}
+
+% textcomp package and marvosym package for additional characters
+\usepackage{textcomp,marvosym}
+
+% cite package, to clean up citations in the main text. Do not remove.
+\usepackage{cite}
+
+% Use nameref to cite supporting information files (see Supporting Information section for more info)
+\usepackage{nameref,hyperref}
+
+% line numbers
+\usepackage[right]{lineno}
+
+% ligatures disabled
+\usepackage{microtype}
+\DisableLigatures[f]{encoding = *, family = * }
+
+% color can be used to apply background shading to table cells only
+\usepackage[table]{xcolor}
+
+% array package and thick rules for tables
+\usepackage{array}
+
+% create "+" rule type for thick vertical lines
+\newcolumntype{+}{!{\vrule width 2pt}}
+
+% create \thickcline for thick horizontal lines of variable length
+\newlength\savedwidth
+\newcommand\thickcline[1]{%
+  \noalign{\global\savedwidth\arrayrulewidth\global\arrayrulewidth 2pt}%
+  \cline{#1}%
+  \noalign{\vskip\arrayrulewidth}%
+  \noalign{\global\arrayrulewidth\savedwidth}%
+}
+
+% \thickhline command for thick horizontal lines that span the table
+\newcommand\thickhline{\noalign{\global\savedwidth\arrayrulewidth\global\arrayrulewidth 2pt}%
+\hline
+\noalign{\global\arrayrulewidth\savedwidth}}
+
+
+% Remove comment for double spacing
+%\usepackage{setspace} 
+%\doublespacing
+
+% Text layout
+\raggedright
+\setlength{\parindent}{0.5cm}
+\textwidth 5.25in 
+\textheight 8.75in
+
+% Bold the 'Figure #' in the caption and separate it from the title/caption with a period
+% Captions will be left justified
+\usepackage[aboveskip=1pt,labelfont=bf,labelsep=period,justification=raggedright,singlelinecheck=off]{caption}
+\renewcommand{\figurename}{Fig}
+
+% Use the PLoS provided BiBTeX style
+\bibliographystyle{plos2015}
+
+% Remove brackets from numbering in List of References
+\makeatletter
+\renewcommand{\@biblabel}[1]{\quad#1.}
+\makeatother
+
+
+
+% Header and Footer with logo
+\usepackage{lastpage,fancyhdr,graphicx}
+\usepackage{epstopdf}
+%\pagestyle{myheadings}
+\pagestyle{fancy}
+\fancyhf{}
+%\setlength{\headheight}{27.023pt}
+%\lhead{\includegraphics[width=2.0in]{PLOS-submission.eps}}
+\rfoot{\thepage/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrule}{\hrule height 2pt \vspace{2mm}}
+\fancyheadoffset[L]{2.25in}
+\fancyfootoffset[L]{2.25in}
+\lfoot{\today}
+
+%% Include all macros below
+
+\newcommand{\lorem}{{\bf LOREM}}
+\newcommand{\ipsum}{{\bf IPSUM}}
+
+%% END MACROS SECTION
+
+% -- my additions --
+
+\usepackage{gensymb}
+\usepackage{xspace}
+
+\newcommand{\ca}{$\alpha$-carbon\xspace}
+\newcommand{\cas}{$\alpha$-carbons\xspace}
+
+\begin{document}
+\vspace*{0.2in}
+
+% Title must be 250 characters or less.
+\begin{flushleft}
+{\Large
+\textbf\newline{RUPEE: A fast and accurate purely geometric protein structure search} % Please use "sentence case" for title and headings (capitalize only the first word in a title (or heading), the first word in a subtitle (or subheading), and any proper nouns).
+}
+\newline
+% Insert author names, affiliations and corresponding author email (do not include titles, positions, or degrees).
+\\
+Ronald Ayoub\textsuperscript{1*},
+Yugyung Lee\textsuperscript{1}
+\\
+\bigskip
+\textbf{1} School of Computing and Engineering, University of Missouri at Kansas City, USA
+\\
+\bigskip
+
+% Insert additional author notes using the symbols described below. Insert symbol callouts after author names as necessary.
+% 
+% Remove or comment out the author notes below if they aren't used.
+%
+% Primary Equal Contribution Note
+%\Yinyang These authors contributed equally to this work.
+
+% Additional Equal Contribution Note
+% Also use this double-dagger symbol for special authorship notes, such as senior authorship.
+%\ddag These authors also contributed equally to this work.
+
+% Current address notes
+%\textcurrency Current Address: Dept/Program/Center, Institution Name, City, State, Country % change symbol to "\textcurrency a" if more than one current address note
+% \textcurrency b Insert second current address 
+% \textcurrency c Insert third current address
+
+% Deceased author note
+%\dag Deceased
+
+% Group/Consortium Author Note
+%\textpilcrow Membership list can be found in the Acknowledgments section.
+
+% Use the asterisk to denote corresponding authorship and provide email address in note below.
+* ronaldayoub@mail.umkc.edu
+
+\end{flushleft}
+% Please keep the abstract below 300 words
+\section*{Abstract}
+Given the close relationship between protein structure and function, protein structure searches have long played an established role in bioinformatics. 
+Despite their maturity, existing protein structure searches either use simplifying assumptions or compromise between fast response times and quality of results. 
+These limitations can prevent the easy and efficient exploration of relationships between protein structures, which is the norm in other areas of inquiry.
+We have developed RUPEE, a fast, scalable, and purely geometric structure search combining techniques from information retrieval and big data with a novel approach to encoding sequences of torsion angles.
+    
+Comparing our results to the output of mTM, SSM, and the CATHEDRAL structural scan, it is clear that RUPEE has set a new bar for purely geometric big data approaches to protein structure searches.
+RUPEE in top-aligned mode produces equal or better results than the best available protein structure searches, and RUPEE in fast mode demonstrates the fastest response times coupled with high quality results. 
+
+The RUPEE protein structure search is available at \url{https://ayoubresearch.com}. 
+Code and data are available at \url{https://github.com/rayoub/rupee}.
+
+% Please keep the Author Summary between 150 and 200 words
+% Use first person. PLOS ONE authors please skip this step. 
+% Author Summary not valid for PLOS ONE submissions.   
+\section*{Author summary}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget porta erat. Morbi consectetur est vel gravida pretium. Suspendisse ut dui eu ante cursus gravida non sed sem. Nullam sapien tellus, commodo id velit id, eleifend volutpat quam. Phasellus mauris velit, dapibus finibus elementum vel, pulvinar non tellus. Nunc pellentesque pretium diam, quis maximus dolor faucibus id. Nunc convallis sodales ante, ut ullamcorper est egestas vitae. Nam sit amet enim ultrices, ultrices elit pulvinar, volutpat risus.
+
+\linenumbers
+
+% Use "Eq" instead of "Equation" for equation citations.
+\section*{Introduction}
+
+Proteins represent the functional end-product within the central dogma of molecular biology \cite{Crick1970}.
+As such, understanding protein structure is a central goal within structural bioinformatics. 
+Protein structure determination, prediction, alignment, and search all serve to advance this understanding. 
+Below, we present our approach to a fast, scalable, and purely geometric protein structure search we refer to with the acronym of \emph{RUn Position Encoded Encodings} of residue descriptors (RUPEE).
+
+Given a protein domain identifier, whole chain identifier or an uploaded PDB file, RUPEE can search for matches among domains defined in SCOPe 2.07 \cite{Fox2013}, CATH v4.2 \cite{Orengo1997}, ECOD develop210 \cite{Cheng2014}, or among whole chains defined in the PDB.
+RUPEE is able to search either of these databases using any identifier. 
+For instance, you can search SCOPe using a CATH domain identifier. 
+
+RUPEE has two modes of operation, fast and top-aligned. 
+Fast mode is significantly faster than all other protein structure searches discussed below but at the expensive of accuracy.
+Despite this, we will show that the accuracy of RUPEE in fast mode is not far below that of the best available structure searches. 
+On the other hand, the accuracy and response times of RUPEE in top-aligned mode are comparable to currently available protein structure searches that are commonly considered fast. 
+
+RUPEE stands out as not just another protein structure search, of which there are many. 
+RUPEE is the first, to our knowledge, purely geometric protein structure search to achieve results as good as the best available protein structure searches. 
+Additionally, it can be argued that the kinds of matches that RUPEE does return have more added value than the current state of the art in that with equal scores it is able to return results not biased toward a structure classification hierarchy such as SCOPe or sequence clusters such as the PDB-90. 
+In this regard, RUPEE makes a fundamental contribution to protein structure research that lends itself to being leveraged in existing systems. 
+It also provided a path for further research activity in the direction of big data representations of protein structures. 
+
+Besides our approach to protein structure search, we introduce a polar plot for torsion angles that may have wider applicability in the study of protein structure. 
+Further, the \emph{run position encoding} heuristic introduced below may have wider applicability to algorithms for character sequences containing long runs of repeats. 
+
+We first discuss some related work to provide a context for our approach followed by a description of our method. 
+We end with a comparison of results against the mTM-align structure search \cite{Dong2018}, the secondary structure matching (SSM) search \cite{Krissinel2004}, and the CATHEDRAL structural scan \cite{Redfern2007} available at the CATH website.
+
+\section*{Related work}
+
+Pairwise alignment involves finding a set of spatial rotations and translations for two protein structures that minimizes a distance metric. 
+Most commonly, the root mean squared deviation (RMSD) between \cas of aligned residues is minimized.
+
+The typical use case of aligning one protein structure to another does not impose tight response time requirements. 
+For this reason, pairwise alignments can focus on accuracy. 
+On the other hand, a protein structure search can involve thousands of comparisons and accuracy is often balanced against speed. 
+In this case, pairwise alignment is still useful for evaluating the results of a search, and this is the approach we take. 
+
+For pairwise alignment, Combinatorial Extensions (CE) \cite{Shindyalov1998} and FATCAT \cite{Ye2003} are among the most popular tools, representing rigid and flexible protein alignments, respectively. 
+CE performs a rigid alignment in order to minimize RMSD and FATCAT allows for a constrained number of twists in the protein chain in order to find a more flexible alignment before minimizing RMSD.
+
+Whereas pairwise structure alignments only depend on the sequence of \ca coordinates, protein structure searches often introduce a further dependence on the sequence order of amino acids.
+This approach often takes the form of clustering proteins based on sequences and pre-calculating results for pairwise alignments among cluster representatives. 
+Then, these pre-calculated results are used for filtering the number of structures used for comparisons against a query protein.
+The exact formula for combining the use of representatives and pre-calculated results varies from system to system.
+However, all systems using this approach share the same disadvantage, an indirect dependence on amino acid sequences. 
+In the absence of a reliance on sequence representatives and pre-calculated results, and without sacrificing accuracy, response times suffer greatly, often taking upwards of an hour for queries to complete. 
+
+For protein structure searches, VAST \cite{Gilbrat1996} and the FATCAT server \cite{Ye2004} are among the most popular. 
+Nonetheless, these searches are slow in comparison to mTM, SSM, and CATHEDRAL when pre-calculated results are not used. 
+If given a known protein domain, VAST can return structural neighbors in seconds using pre-calculated results. 
+However, if uploading a PDB file where pre-calculated results are not used, response times for VAST can exceed 30 minutes. 
+Similarly, the FATCAT server, that does not use pre-calculated results, can take over an hour to send results for a search against PDB-90 representatives \cite{Prlic2010}. 
+
+Given the above, there remains a need for a purely geometric protein structure search.
+For the serendipitous exploration of relations between protein structures performed in the trenches, this search should be fast. 
+Moreover, with a $~10\%$ yearly growth rate of solved structures deposited in the PDB \cite{gkw1000}, this search should be scalable. 
+At a minimum, RUPEE takes a significant step in this direction as will be shown below. 
+
+\section*{Methods}
+
+Broadly, we define a linear encoding of protein structure and convert this linear encoding into a bag of features. 
+Min-hashing and locality sensitive hashing (LSH), techniques drawn from big data, are then applied to implement a protein structure indexing method that serves as the foundation for both RUPEE operating modes, fast and top-aligned. 
+
+Protein structure searches that use linear encodings are not unique \cite{Carpentier2005,Daniluk2011,Ritchie2012}.
+The novelty of our approach lies in its remarkable performance given its simplicity. 
+Additionally, elements of our approach can be isolated and found to be useful in their own right. 
+
+\subsection*{Regions of Torsion Angles}
+
+Our first step towards a linear encoding of protein structure is to identify separable regions of permissible torsion angles,
+but first we introduce a new plot of torsion angles better suited to this effort. 
+
+Despite their utility and familiarity, Ramachandran plots \cite{Ramachandran1968} represent angular data using a square plot better suited for scalar data.
+This leads to the unwieldy arrangement where the top part of the plot is continuous with the bottom and the left is continuous with the right. 
+
+To identify regions of torsion angles, we randomly sampled 10,000 residues from high-resolution CATH s35 representatives to account for precision and redundancy, respectively. 
+A Ramachandran plot of the sampled torsions angles is shown in the left plot of \figurename~\ref{fig:combined_torsion}. 
+As can be seen, a single cluster of residues, consisting primarily of $\beta$-strands, appears at all 4 corners of the Ramachandran plot.
+
+\begin{figure*}[!h]
+\caption{Ramachandran plot (right) and polar plot (left) of randomly sampled torsion angles}
+\label{fig:combined_torsion}
+\end{figure*}
+
+This continuity problem was partially addressed in \cite{Karplus2010} using \emph{wrapped} and \emph{mirrored} plots. 
+Both wrapped and mirrored plots take advantage of the sparsely populated areas of the Ramachandran plot at $\phi = 0\degree$ and $\psi = -120\degree$.
+However, with larger samples of torsion angles, the area at $\psi = -120\degree$ becomes less sparse. 
+The use of a polar plot resolves this elegantly by only requiring one break in continuity at $\phi = 0\degree$. 
+
+In the right plot of \figurename~\ref{fig:combined_torsion}, we show the same torsion angles appearing in the Ramachandran plot using a polar plot. 
+In this plot, $\phi$ corresponds to the radius $r$ and $\psi$ corresponds to the angle $\theta$ in traditional polar plots. 
+Notice the residues appearing at the 4 corners of the Ramachandran plot now appear in one continuous region of the polar plot centered at $\phi = \pm180\degree$ and $\psi = \pm180\degree$. 
+
+\subsection*{Linear Encoding of Protein Structure}
+
+The polar plot described above is used to define torsion angle regions for each secondary structure assignment. 
+The eight DSSP secondary structure assignment codes defined in \cite{Kabsch1983} divide into three groups in which torsion angle regions are roughly the same: `G',`H',`I', and `T' corresponding to $3_{10}$-helix, $\alpha$-helix, $\pi$-helix, and turn, respectively; `E' and `B' corresponding to $\beta$-strand and $\beta$-bridge, respectively; and `S' and `C' corresponding to bend and coil, respectively.
+
+Polar plots for each group of DSSP assignment codes along with defined region and descriptor designations are shown in \figurename~\ref{fig:regions}, with the exception of turns and bridges, which receive descriptors 11 and 12, respectively. 
+For each polar plot, there are well-defined continuous regions of torsion angles that remain continuous in the plots. 
+The only exception is found in the bends and coil plot at $\psi = 60\degree$ between $\phi = -180\degree$ and $\phi = 0\degree$.
+
+\begin{figure*}[!h]
+\caption{Polar plots of randomly sampled torsion angles with designated descriptors for region and DSSP code combinations}
+\label{fig:regions}
+\end{figure*}
+
+As an example of our linear encoding, we apply our method to the $\beta$-turn-$\beta$ motif shown in \figurename~\ref{fig:beta_turn}.
+The corresponding sequence of residue descriptors is shown below.
+\begin{gather}\label{E:descrseq} 
+    [\, 5, 5, 5, 5, 5, 5, 7, 5, 11, 11, 5, 5, 5, 5, 5, 5 \,]
+\end{gather}
+
+\begin{figure}[!h]
+\caption{$\beta$-turn-$\beta$ motif from CATH domain 1nycA00}
+\label{fig:beta_turn}
+\end{figure}
+
+\subsection*{Bag representation of protein structure}
+
+Once a linear encoding for a protein structure is obtained, it needs to be further transformed into a representation suitable for fast and scalable similarity comparisons to other structures.
+The processing of text documents within Information Retrieval~(IR) has long been used to satisfy these requirements using bag representations.
+There are two distinct categories of representations for documents, syntactic and semantic, and much of the research applying IR to protein structure search has focused on the latter \cite{Aungand2004,Zhang2010,Budowski2010}. 
+
+We have adapted the syntactic approach to document similarity, often referred to as shingling \cite{Broder1997a}, to our linear encoding of protein structure. 
+We transform a linear sequence of descriptors into a multiset of shingles consisting of 3 consecutive descriptors.
+The overlap between shingles ensures some of the order information within the original sequence is preserved in the bag. 
+
+The length of a shingle is chosen to balance false positives, in the case of shorter shingles, against false negatives, in the case of longer shingles. 
+In \cite{Ayoub2017}, we used 4 consecutive descriptors for our shingles. 
+With the additions discussed in the \emph{Operating modes} section below, we have found RUPEE is more tolerant of false positives and so accordingly we have cast a wider net by decreasing the shingle length to 3. 
+
+By shingling, we obtain a multiset of ordered lists from an ordered list of numbers. 
+As an example, the sequence in (\ref{E:descrseq}) is transformed into the following bag of shingles. 
+\begin{align}\label{E:shinglebag}
+    \begin{split}
+        \{\,&[5, 5, 5], [5, 5, 5], [5, 5, 5], [5, 5, 5], [5, 5, 7] \\
+            & [5, 7, 5], [7, 5, 11], [5, 11, 11], [11, 11, 5], [11, 5, 5] \\
+            & [5, 5, 5], [5, 5, 5], [5, 5, 5], [5, 5, 5] \,\}
+    \end{split}
+\end{align}
+
+Next, each shingle $s$ is hashed to an integer as shown in~(\ref{E:hashdef}). 
+The hash function used is a simplification of the hash function used in the Rabin-Karp algorithm \cite{Karp1987}.
+The prime number $13$ is used as the base since it is large enough to spread the descriptor values out in hash space without collisions. 
+\begin{gather}\label{E:hashdef}
+    s_{hash} = s_1 \times 13^2 + s_2 \times 13 + s_3
+\end{gather}
+Subsequently, the multiset in (\ref{E:shinglebag}) becomes the following bag of integers.
+\begin{align}\label{E:hashbag}
+    \begin{split}
+    \{\,&915, 915, 915, 915, 917, 941, 1259 \\
+        &999, 2007, 1929, 915, 915, 915, 915 \,\}
+    \end{split}
+\end{align}
+This final step completes the transformation of an ordered list of descriptors to a multiset of integers that still retains some of the order information present in the original list. 
+
+Notice in (\ref{E:hashbag}) the value 915, corresponding to the shingle $[ 5, 5, 5 ]$, occurs frequently indicating the presence of $\beta$-strands. 
+Since most proteins are dominated by regular secondary structure, the abundance of shingles for $\beta$-strands as well as the three types of helices, end up dominating comparisons. 
+Moreover, since shingles are limited in length, this situation allows for structures with many short $\beta$-strands to match structures with fewer long $\beta$-strands.
+The same situation applies to helices. 
+
+To address this lack of specificity, we introduce a heuristic we call \emph{run position encoding} (RPE). 
+To distinguish between short and long runs, thereby increasing the specificity of the shingles, we add a factor of $10^5$ to each shingle hash as a function of the first residue's position in a run $i$. 
+\begin{gather}
+    runfactor(i) = 
+    \begin{cases}
+        i               &\text{if $i < \lfloor l/2 \rfloor$}\\
+        l - i - 1       &\text{otherwise} 
+    \end{cases}
+\end{gather}
+where $i$ is zero-based and $l$ is the length of the run. 
+Multiplying by $10^5$ places the run factor as the left-most digit in the hash to avoid interference with the digits provided by the hash in (\ref{E:hashdef}).
+This placement is also convenient for visual inspection, since the run factor is isolated as the left-most digit. 
+
+The run factors for the sequence in (\ref{E:descrseq}) are
+\begin{align}
+    [\, 0, 1, 2, 2, 1, 0, 0, 0, 0, 0, 0, 1, 2, 2, 1, 0 \,].
+\end{align}
+Applied to the bag of integers in (\ref{E:hashbag}) gives
+\begin{align}\label{E:rpebag}
+    \begin{split}
+    \{\,&00915, 10915, 20915, 20915, 10917, 00941, 01259 \\
+        &00999, 02007, 01929, 00915, 10915, 20915, 20915 \,\}
+    \end{split}
+\end{align}
+where the leading zero run factors are shown for clarity. 
+
+This pyramidal approach preserves matches at the boundaries between secondary structure runs and loops that would not otherwise be preserved in the presence of differences in run lengths of one or more. 
+
+Now that we have a representation of a protein structure as a bag of integers, similarity between any two structures $a$ and $b$ is defined as the Jaccard similarity \cite{Levan1971} for multisets,
+\begin{align}
+    J(a,b) = \frac{\sum_i min(a_i, b_i)}{\sum_i max(a_i,b_i)}\text{,}
+\end{align}
+where $i$ ranges over all possible shingle hashes $s_i$ and $a_i$ and $b_i$ give the counts of shingle hash $s_i$ in structures $a$ and $b$, respectively. 
+
+\subsection*{Min-hashing and LSH}
+
+In IR, the bag of shingles representation of documents is used in the near dupe clustering of documents \cite{Broder1997b}.
+One application of near dupe clustering is in the review stage of Electronic-Discovery \cite{Joshi2008}, which is the most expensive stage in a discovery process. 
+Often millions of documents must be examined by a staff of attorneys to make a reasonable effort at providing all documents relevant to the discovery request. 
+Grouping documents into near dupe clusters and assigning all documents within a cluster to a single reviewer reduces duplication of effort. 
+
+In the case of near dupe clustering, each document must be compared to every other document in the collection, taking quadratic time.
+For this task, min-hashing \cite{Broder1998} and locality sensitive hashing (LSH) \cite{Indyk1998} can be combined to reduce this to subquadratic time. 
+Although we do not near dupe cluster domains, we can still leverage the techniques of min-hashing and LSH to speed up protein structure search by a large constant factor.
+
+Min-hashing is used to randomly select items from a set of items by repeatedly randomly hashing the items, sorting the hashes into a list, and then selecting the minimum item in each permuted list.
+If the same random permutation of items is performed on each set of items in a collection, the key result is that the probability of matching min-hashes is equal to the Jaccard similarity \cite{Broder1998}.
+In order to approximate the Jaccard similarity for a given pair of sets, a sufficient number of min-hashes must be obtained. 
+
+In our case, the items are bags of shingle hashes for protein structures from which we obtain 99 min-hashes as described in \cite{Rajaraman2012}. 
+Given the key result above, the Jaccard similarity can now be approximated by the proportion of matching min-hashes. 
+
+Next, we use the LSH banding technique as described in \cite{Rajaraman2012}.
+The key result of the banding technique is that if \emph{any} band positions are a match for a given pair of structures, the probability that a specific similarity threshold has been met can be calculated. 
+We use 33 bands of 3-min-hashes where the probability of a Jaccard similarity of 60\% or greater is approximately 99\%. 
+Banding allows the problem of finding similar items to be parallelized across bands since all that is needed for a match is a single band match. 
+
+Together, min-hashing and LSH provide the foundation for both operating modes of RUPEE, fast and top-aligned.
+
+\subsection*{Operating modes}
+
+RUPEE provides two modes, fast and top-aligned. 
+Each operating mode builds on the results provided by the min-hashing and LSH system described above. 
+When a structure search is executed in either mode, a number of concurrent tasks are executed corresponding to the number of bands used for LSH. 
+These concurrent tasks identify candidate matches based on a single band match and then validate the matches based on a comparison of min-hashes. 
+
+In fast mode, the top 8,000 matches are obtained along with the original gram sequences defined for the structures.
+A further validation is done by performing a longest common subsequence (LCS) analysis of the matched gram sequences and adjusting the Jaccard similarity scores accordingly.
+This step accounts for possible gram matches among pairs of structures that are out of order since the min-hashing and LSH techniques themselves do not consider the order of the gram matches.
+The final step of fast mode is to sort the matches based on the adjusted scores and return the results. 
+
+Top-aligned is an additional step following fast mode. 
+First, unoptimized CE alignments are performed on the top 2,000 matches obtained from fast mode. 
+Then optimized CE alignments are performed on the top 400 matches and these are finally returned sorted either by RMSD or TM-Score. 
+Top-aligned is a simple layer following fast mode that establishes RUPEE fast mode as an effective filtering method that contains in its top 2,000 results enough good matches to compete with the best available structure searches. 
+
+\section*{Results}
+
+Protein structure searches can be evaluated using pairwise alignment scores or by comparison of results against the hierarchy of a protein structure classification database.
+The RMSD of aligned residues is widely used in evaluations but is not perfectly suited to full-length comparisons between structures since distances between unaligned residues are not factored into the score.
+On the other hand, the TM-score \cite{Zhang2004} takes all residues into account. 
+Among protein structure classification databases for which corresponding structure searches exist, SCOPe \cite{Fox2013} and CATH \cite{Orengo1997} are the most popular. 
+
+For our results, we have created 3 benchmarks, scop\_d360, scop\_d62, and cath\_d99, for pairwise evaluations to mTM, SSM, and CATHEDRAL, respectively.
+scop\_d360 is derived from the d500 benchmark used in \cite{Dong2018} filtered for domains in SCOPe 2.07 for which mTM returns 100 or more results.
+Similarly, scop\_d62 is derived from the d500 benchmark filtered for domains defined in SCOP 1.73 for which SSM returns 50 or more results.  
+In keeping with our description of RUPEE in \cite{Ayoub2017}, the cath\_d99 benchmark contains 99 superfamily representatives from the top 100 most diverse superfamilies defined in CATH v4.2 for which CATHEDRAL returns results in less than 12 hours. 
+
+We perform pairwise evaluations to ensure the fairness of our comparisons. 
+First, for domain searches, SSM is working with the SCOP 1.73 database, so accordingly we operate RUPEE on SCOP 1.73 domains to ensure RUPEE does not have more domains to work with for scoring and precision evaluations. 
+Second, mTM is updated to work with SCOPe 2.07 domain definitions but still retains domains from 2.06 that have since been redefined either through mergers or splits in 2.07. 
+On the other hand, CATHEDRAL presents no such challenges but still requires a separate benchmark since it is working with a distinct hierarchy, CATH v4.2. 
+
+All benchmark definitions can be found in \nameref{S1_Benchmarks}. 
+
+\subsection*{Scoring}
+
+\figurename~\ref{fig:combined_scoring_ce} shows average cumulative values for each ranked result averaged over all searches.
+Both RMSD and TM-score values are shown, provided as outputs from optimized CE pairwise alignments. 
+A TM-score above 0.5 is a good predictor for whether or not two domains are in the same fold \cite{Xu2010}.
+TM-scores greater than 0.17 are considered potentially meaningful whereas TM-scores less than 0.17 are considered to be due to random alignment \cite{Zhang2004}.
+
+\begin{figure*}[!h]
+\caption{Scoring from CE pairwise alignments for RUPEE fast, RUPEE top-aligned sorted by TM-Score, and RUPEE top-aligned sorted by RMSD}
+\label{fig:combined_scoring_ce}
+\end{figure*}
+
+A figure similar to \figurename~\ref{fig:combined_scoring_ce} but using FATCAT for pairwise comparisons can be found in \nameref{S2_Fig}. 
+The same relative relationships hold with only small variations. 
+
+RUPEE fast, top-aligned sorted by RMSD, and top-aligned sorted by TM-Score, perform better than SSM and CATHEDRAL.
+The scoring in the cath\_d99 benchmark comparisons are notably lower than for the other two benchmarks. 
+This is expected since CATHEDRAL only returns CATH s35 representatives.
+Likewise, for this comparison RUPEE is filtered for s35 representatives to match. 
+Given that the cath\_d99 benchmark is evaluated against representatives, there are fewer highly similar structures returned in the results. 
+
+In our evaluation, mTM faired better than SSM and CATHEDRAL. 
+mTM also performed better than RUPEE fast, although RUPEE fast is still within 0.08 TM-Score points of mTM at the 100\textsuperscript{th} result, which is notable considering its speed.
+
+For TM-Score, RUPEE top-aligned and mTM are nearly identical with RUPEE slightly better for ranks less than 50 and mTM better for ranks greater than 50. 
+For RMSD, RUPEE top-aligned does perform better than mTM but this can most likely be attributed to the fact that mTM only sorts by TM-Score. 
+If mTM sorted by RMSD we suspect the results again would be nearly identical.
+Nevertheless, it is worth noting that the initial LSH and min-hashing technique does not explicitly bias results towards one particular measure. 
+
+\subsection*{Precision}
+
+\figurename~\ref{fig:combined_precision} shows precision (i.e. positive predictive value or PPV) averaged over all searches, where positive results are defined as domains with the same classification for the indicated hierarchy level as the query domain. 
+A plot of recall is unnecessary since \figurename~\ref{fig:combined_precision} provides precision at specific ranks for identical sets of searches. 
+Hence, recall curves have the same relative relationships as those shown for precision. 
+
+\begin{figure*}[!h]
+\caption{Precision for RUPEE fast, RUPEE top-aligned sorted by TM-Score, and RUPEE top-aligned sorted by RMSD}
+\label{fig:combined_precision}
+\end{figure*}
+
+We should expect a structure search to have reasonable precision with respect to the hierarchy levels of the structure classification it is searching. 
+However, it is not clear how to define reasonable. 
+On the other hand, if precision is too high, the search provides little value beyond that provided by the structure classification hierarchy it is searching. 
+Towards the extreme end of high precision, it would be sufficient for a search to return the best match and from there refer to the hierarchy for additional results. 
+
+Similar to the scoring evaluations above, RUPEE fast and top-aligned, sorted by both RMSD and TM-Score, show higher precision than SSM and CATHEDRAL with the exception of RUPEE top-aligned sorted by RMSD for ranks lower than 10 compared against SSM. 
+
+Again, mTM faired better than SSM and CATHEDRAL. 
+Notably, mTM also shows clearly higher precision than RUPEE top-aligned, sorted by both RMSD and TM-Score. 
+In the absence of \figurename~\ref{fig:combined_scoring_ce}, one may be led to regard this as a negative result. 
+However, to the contrary, in the presence of \figurename~\ref{fig:combined_scoring_ce}, where it is shown that RUPEE and mTM have almost identical scoring, this result is remarkable. 
+This disparity suggest that RUPEE is better able to find significantly similar matches not necessarily aligned with the SCOPe hierarchy. 
+In fact, since the initial min-hashing and LSH technique used by RUPEE check for similarity to all available structures, no structure is able to hide behind a sequence based cluster representative. 
+So this result is in keeping with how RUPEE is intended to work and how it is described above. 
+
+\subsection*{Response Times}
+
+\figurename~\ref{fig:combined_response} shows response times in seconds for the scop\_d62 and cath\_d99 benchmarks. 
+Here, we are able to show RUPEE fast and top-aligned, mTM and SSM on the same plot because scop\_d62 is a subset of the scop\_d360 benchmark. 
+Both plots are shown with a logarithmic scale in order to include all outliers while still being able to view the overall trends in response times. 
+Loess regression curves are also provided to further highlight the overall trends. 
+
+\begin{figure*}[h!]
+\caption{Response times for RUPEE fast and RUPEE top-aligned. The response times for RUPEE top-aligned are dominated by pairwise structure alignments and do not depend on the sort order.}
+\label{fig:combined_response}
+\end{figure*}
+
+In all cases, RUPEE fast is considerably faster than all other searches. 
+It is also clear that fast mode is not as sensitive to increasing residue counts in contrast to CATHEDRAL and RUPEE top-aligned.
+Response times for SSM are not affected by residue counts at all and always returns results in less than 100 seconds but this is at the expense of performance as shown in \figurename~\ref{fig:combined_scoring_ce}.
+
+In the left plot of \figurename~\ref{fig:combined_response}, it is shown that RUPEE top-aligned is faster than mTM for residue counts below 200, but then response times for RUPEE increase beyond that of mTM. 
+Down the stretch, mTM provides increasingly better response times than RUPEE, while RUPEE is still able to provide reasonable response times. 
+The right plot of \figurename~\ref{fig:combined_response} shows RUPEE top-aligned is significantly faster than CATHEDRAL for all residue counts. 
+
+The trend of increasing response times for RUPEE top-aligned is a direct result of the pairwise structure comparisons that are performed on the top 2,000 results provided by RUPEE fast mode.
+
+Response times to a large degree are a measure of the amount of resources available to an application. 
+In the case of RUPEE, our response times were gathered from RUPEE running on a fairly old laptop with a 2nd generation Intel\textregistered{} Core\texttrademark{} i7-2720QM Quad-Core CPU and 8 GB of memory. 
+With more resources the response times of RUPEE can be further improved since pairwise alignments can be run in parallel. 
+For mTM, SSM, and CATHEDRAL, we gathered response times by automating their respective web sites using the Selenium WebDriver API. 
+
+\section*{Discussion}
+
+As shown above, a purely geometric big data approach to protein structure search can compete with the best available protein structure searches.
+Nonetheless, there remain avenues for further improvement and investigation. 
+
+While our min-hashing and LSH scheme does allow for some flexibility in the size of matched protein structures, it is not specifically designed for containment searches. 
+However, the initial min-hashing and LSH search does operate fast enough, within seconds, that it does present the possibility of executing multiple searches within the context of a single query. 
+With more resources, we can distribute min-hash and band data across multiple compute units, with each data set representing a subset of chopped structure representations. 
+With a 75\% overlap of these subsets, RUPEE searches effectively become containment searches. 
+
+We have tried the overlapping subset idea and have found it to be effective. 
+However, on a single compute unit, the time required is more than we are willing to accept for this first iteration of RUPEE. 
+
+One possible drawback of RUPEE is that in both fast and top-aligned modes, it only returns the top 400 results. 
+Again, with more resources, this number can be increased, but there still remains a need for some kind of cut-off. 
+Nonetheless, in most search tools, having to looking past the first few hundred results usually indicates an ineffective search strategy.
+To this end, RUPEE provides filters that can be used for traversing structure space more efficiently. 
+For SCOPe, CATH, and ECOD you can instruct the search to only return domains that differ from the query structure at a chosen hierarchy level classification. 
+Additionally, for CATH you can filter results based on hierarchy level representatives. 
+Since RUPEE does not rely on sequence clusters, these kinds of filters are easy to implement, do not reduce the number of returned results, and allow for the discovery of unexpected structural similarities across classification hierarchies.  
+
+One area that stands out for possible improvement is our longest common subsequence (LCS) scoring adjustment to the results initially returned by RUPEE. 
+While the LCS step has been shown to be effective, it is notable for its simplicity. 
+A more complex step of validating the sequence of gram matches can take a form similar to the path extension algorithm used by CE. 
+In this case, sequences of matches would only be extended when the difference of interresidue distances between gram pairs already in the sequence and a candidate pair to be added to the sequence fall below some threshold.
+
+On the other hand, it would be interesting to see where further analysis of the initial results returned by RUPEE before LCS and any sort of order enforcement beyond that of the grams themselves could lead. 
+For instance, topological permutations such as circular permutations, segment-swapping and changing secondary structures within homologous proteins are not uncommon \cite{Andreeva2007}. 
+The initial RUPEE min-hashing and LSH algorithm provides candidate matches along with matched grams. 
+With some thought, an algorithm similar to FATCAT can be developed allowing for permutations in addition to twists. 
+
+As can be observed from considering \figurename~\ref{fig:combined_scoring_ce} and \figurename~\ref{fig:combined_precision} together, there are good domain matches aligned with the SCOPe hierarchy that mTM is able to find that RUPEE does not. 
+Conversely, there are good domain matches not aligned with the SCOPe hierarchy that RUPEE finds and mTM does not. 
+A comprehensive listing of these difference may find interesting similarities not previously known. 
+
+\section*{Conclusion}
+
+With the growth rate of solved structures deposited in the PDB, the need for a fast and scalable structure search is growing. 
+Using run position encoded shingles of residue descriptors combined with min-hashing and LSH, we have shown that RUPEE fast is able to provide good results in seconds running on an Quad-Core laptop.
+Currently, RUPEE fast is the fastest available protein structure search providing the demonstrated level of accuracy. 
+For RUPEE top-aligned, we have shown that a purely geometric big data approach to protein structure search is able to produce results equal to or better than the current state of the art protein structure searches that variously depend on clustered sequences or protein structure classification hierarchies. 
+Moreover, we have shown evidence that suggests the results from RUPEE top-aligned provide more added value by discovering high scoring protein structure matches not necessarily aligned with a particular protein structure classification hierarchy or hiding behind cluster representatives. 
+The ability for RUPEE to quickly examine all structures among hundreds of thousands sets it apart as a tool that can be used for discovering previously undetected structural similarities.
+
+\section*{Supporting information}
+
+\paragraph*{S1 Benchmarks.}
+\label{S1_Benchmarks}
+{\bf Domains included in benchmarks used for evaluation.} 
+
+\paragraph*{S2 Fig.}
+\label{S2_Fig}
+{\bf Scoring from FATCAT pairwise alignments.} 
+
+\paragraph*{S3 Methods Addendum.}
+\label{S3_Methods}
+{\bf Run factors for shingles instead of descriptors.} 
+
+
+\nolinenumbers
+
+% Either type in your references using
+% \begin{thebibliography}{}
+% \bibitem{}
+% Text
+% \end{thebibliography}
+%
+% or
+%
+% Compile your BiBTeX database using our plos2015.bst
+% style file and paste the contents of your .bbl file
+% here. See http://journals.plos.org/plosone/s/latex for 
+% step-by-step instructions.
+% 
+
+\nocite{Ayoub2017}
+\nocite{BioJava2012}
+\bibliography{rupee_2}
+
+\end{document}
+
