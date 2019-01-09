@@ -407,7 +407,7 @@ Since most proteins are dominated by regular secondary structure, the abundance 
 Moreover, since shingles are limited in length, this situation allows for structures with many short $\beta$-strands to match structures with fewer long $\beta$-strands.
 The same situation applies to helices. 
 
-To address this lack of specificity, we introduce a heuristic we call \emph{run position encoding} (RPE). 
+To address this lack of specificity, we introduce a heuristic we call \emph{run position encoding} (RPE), where a run is a consecutive sequence of identical descriptors. 
 To distinguish between short and long runs, thereby increasing the specificity of the shingles, we add a factor of $10^5$ to each shingle hash as a function of the first residue's position in a run $i$. 
 \begin{gather}
     runfactor(i) = 
@@ -416,7 +416,7 @@ To distinguish between short and long runs, thereby increasing the specificity o
         l - i - 1       &\text{otherwise} 
     \end{cases}
 \end{gather}
-where $i$ is zero-based and $l$ is the length of the run. 
+where $i$ is zero-based and $l$ is the length of the run.
 Multiplying by $10^5$ places the run factor as the left-most digit in the hash to avoid interference with the digits provided by the hash in (\ref{E:hashdef}).
 This placement is also convenient for visual inspection, since the run factor is isolated as the left-most digit. 
 
@@ -476,8 +476,9 @@ RUPEE provides two modes, fast and top-aligned.
 Each operating mode builds on the results provided by the min-hashing and LSH system described above. 
 When a structure search is executed in either mode, a number of concurrent tasks are executed corresponding to the number of bands used for LSH. 
 These concurrent tasks identify candidate matches based on a single band match and then validate the matches based on a comparison of min-hashes. 
+In this way, RUPEE quickly compares the query structure to every structure in the database. 
 
-In fast mode, the top 8,000 matches are obtained along with the original gram sequences defined for the structures.
+In fast mode, the top 8,000 matches from the min-hashing and LSH initial filtering are obtained along with the original gram sequences defined for the structures.
 A further validation is done by performing a longest common subsequence (LCS) analysis of the matched gram sequences and adjusting the Jaccard similarity scores accordingly.
 This step accounts for possible gram matches among pairs of structures that are out of order since the min-hashing and LSH techniques themselves do not consider the order of the gram matches.
 The final step of fast mode is to sort the matches based on the adjusted scores and return the results. 
