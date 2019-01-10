@@ -76,10 +76,10 @@ public abstract class Search {
         }
 
         // size limit for top-aligned searches
-        if (searchFrom == SearchFrom.WEB && criteria.mode == ModeCriteria.TOP_ALIGNED && grams.size() > 200) {
+        if (searchFrom == SearchFrom.WEB && criteria.mode == ModeCriteria.TOP_ALIGNED && grams.size() > 300) {
             
             Thread.sleep(2000); // sleeping corresponds to an event throttle on web page - looks nicer
-            throw new UnsupportedOperationException("Query structures for immediate Top-Aligned searches must have fewer than 200 residues.");
+            throw new UnsupportedOperationException("Query structures for immediate Top-Aligned searches must have fewer than 300 residues.");
         }
 
         final List<Integer> grams1 = grams;
