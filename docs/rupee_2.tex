@@ -456,17 +456,20 @@ In the case of near dupe clustering, each document must be compared to every oth
 For this task, min-hashing \cite{Broder1998} and locality sensitive hashing (LSH) \cite{Indyk1998} can be combined to reduce this to subquadratic time. 
 Although we do not near dupe cluster domains, we can still leverage the techniques of min-hashing and LSH to speed up protein structure search by a large constant factor.
 
-Min-hashing is used to randomly select items from a set of items by repeatedly randomly hashing the items, sorting the hashes into a list, and then selecting the minimum item in each permuted list.
-If the same random permutation of items is performed on each set of items in a collection, the key result is that the probability of matching min-hashes is equal to the Jaccard similarity \cite{Broder1998}.
+Min-hashing generally is used to create a fixed-length signature for a set of items by repeatedly randomly hashing the items, sorting the hashes into a list, and then selecting the minimum hash in each permuted list.
+If the same process is performed on a pair of sets, the key result is that the probability of matching min-hashes is equal to the Jaccard similarity of the two sets \cite{Broder1998}.
 In order to approximate the Jaccard similarity for a given pair of sets, a sufficient number of min-hashes must be obtained. 
 
-In our case, the items are bags of shingle hashes for protein structures from which we obtain 99 min-hashes as described in \cite{Rajaraman2012}. 
-Given the key result above, the Jaccard similarity can now be approximated by the proportion of matching min-hashes. 
+In our case, the sets contain shingle hashes for a protein structure from which we obtain 99 min-hashes for each set as described in \cite{Rajaraman2012}. 
+At this stage, we have reduced our representation of protein structures from variable-sized sets of shingles to fixed-length signatures.
+Given the key result above, the Jaccard similarity for any pair of protein structures can now be approximated by the proportion of matching min-hashes. 
 
-Next, we use the LSH banding technique as described in \cite{Rajaraman2012}.
-The key result of the banding technique is that if \emph{any} band positions are a match for a given pair of structures, the probability that a specific similarity threshold has been met can be calculated. 
-We use 33 bands of 3-min-hashes where the probability of a Jaccard similarity of 60\% or greater is approximately 99\%. 
-Banding allows the problem of finding similar items to be parallelized across bands since all that is needed for a match is a single band match. 
+We use the LSH banding technique as described in \cite{Rajaraman2012} to first identify candidate matches without having to compare min-hashes for every protein structure. 
+We divide the 99 min-hashes in the signatures into contiguous subsequences (i.e. bands) of 3 min-hashes each, giving a total of 33 bands. 
+For each band, the min-hashes it contains are combined into yet another hash. 
+The key result of the banding technique is that if \emph{any} band hashes are a match for a given pair of structures, we can calculate the probability that a specific Jaccard similarity threshold has been met.
+For 33 bands of 3 min-hashes, the probability of a band match occurring for a pair of structures having a Jaccard similarity of 60\% or greater is approximately 99\%. 
+Banding allows the problem of finding similar structures to be parallelized across bands since all that is needed for a candidate match is a single band match. 
 
 Together, min-hashing and LSH provide the foundation for both operating modes of RUPEE, fast and top-aligned.
 
@@ -474,9 +477,9 @@ Together, min-hashing and LSH provide the foundation for both operating modes of
 
 RUPEE provides two modes, fast and top-aligned. 
 Each operating mode builds on the results provided by the min-hashing and LSH system described above. 
-When a structure search is executed in either mode, a number of concurrent tasks are executed corresponding to the number of bands used for LSH. 
-These concurrent tasks identify candidate matches based on a single band match and then validate the matches based on a comparison of min-hashes. 
-In this way, RUPEE quickly compares the query structure to every structure in the database. 
+When a structure search is executed in either mode, a number of concurrent tasks are executed corresponding to the 33 bands used for LSH. 
+These concurrent tasks identify candidate matches based on a single band match; for each candidate match, we estimate the Jaccard similarity using the min-hashes. 
+In this way, RUPEE quickly compares the query structure to every structure in the database, which in the case of ECOD is greater than 600,000 protein domains.
 
 In fast mode, the top 8,000 matches from the min-hashing and LSH initial filtering are obtained along with the original gram sequences defined for the structures.
 A further validation is done by performing a longest common subsequence (LCS) analysis of the matched gram sequences and adjusting the Jaccard similarity scores accordingly.
