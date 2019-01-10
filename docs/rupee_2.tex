@@ -481,16 +481,23 @@ When a structure search is executed in either mode, a number of concurrent tasks
 These concurrent tasks identify candidate matches based on a single band match; for each candidate match, we estimate the Jaccard similarity using the min-hashes. 
 In this way, RUPEE quickly compares the query structure to every structure in the database, which in the case of ECOD is greater than 600,000 protein domains.
 
-In fast mode, the top 8,000 matches from the min-hashing and LSH initial filtering are obtained.
-For each match, we calculate the exact denominator in the definition of Jaccard similarity from the original shingle sequences of the structures.
+In fast mode, the top 8000 matches from the min-hashing and LSH initial filtering are obtained.
+For each match, we adjust the Jaccard similarity to account for matched shingles that are out of sequence order. 
+For this adjustment, we calculate the exact denominator in the definition of Jaccard similarity from the original shingle sequences of the structures.
 As for the numerator, instead of using the total number of matched shingles, we use the length of the longest common subsequence (LCS) of the shingle sequences for each match. 
 This LCS adjustment to the Jaccard similarity enforces the constraint that all valid shingles matches must appear in order along the length of each structure. 
-The final step of fast mode is to sort the matches based on the adjusted scores and return the results. 
+The final step of fast mode is to sort the matches based on the adjusted Jaccard similarity scores and return the results. 
 
-Top-aligned is an additional step following fast mode. 
-First, unoptimized CE alignments are performed on the top 2,000 matches obtained from fast mode. 
-Then optimized CE alignments are performed on the top 400 matches and these are finally returned sorted either by RMSD or TM-Score. 
-Top-aligned is a simple layer following fast mode that establishes RUPEE fast mode as an effective filtering method that contains in its top 2,000 results enough good matches to compete with the best available structure searches. 
+Top-aligned is an additional step following fast mode that uses CE to identify the best pairwise alignments among the top 2000 alignments from fast mode.
+First, we perform unoptimized CE alignments on the top 2000 matches obtained from fast mode. 
+Then, we perform optimized CE alignments on the top 400 matches based on the unoptimized alignments and these results are finally returned sorted either by RMSD or TM-Score. 
+We limit the optimized CE alignments to the top 400 matches because for CE pairwise alignments, finding an optimized alignment through the use of dynamic programming is an additional time-intensive step.
+The details of the difference between unoptimized and optimized CE alignments can be found in \cite{Shindyalov1998}.
+
+Top-aligned is a simple layer following fast mode that establishes RUPEE fast mode as an effective filtering method that contains in its top 2000 results enough good matches to compete with the best available structure searches.
+The filter sizes of 8000, 2000, and 400 for fast mode, unoptimized CE alignments, and optimized CE alignments, respectively, have been chosen based on quality of results and speed. 
+We have found that increasing the size of each of these filters results in only marginal improvements in the quality of results. 
+Given that performing pairwise alignments is the most time-consuming aspect of the RUPEE structure search, the marginal improvements gained from larger filter sizes have to be balanced against the number of pairwise alignments performed. 
 
 \section*{Results}
 
@@ -586,7 +593,7 @@ In the left plot of \figurename~\ref{fig:combined_response}, it is shown that RU
 Down the stretch, mTM provides increasingly better response times than RUPEE, while RUPEE is still able to provide reasonable response times. 
 The right plot of \figurename~\ref{fig:combined_response} shows RUPEE top-aligned is significantly faster than CATHEDRAL for all residue counts. 
 
-The trend of increasing response times for RUPEE top-aligned is a direct result of the pairwise structure comparisons that are performed on the top 2,000 results provided by RUPEE fast mode.
+The trend of increasing response times for RUPEE top-aligned is a direct result of the pairwise structure comparisons that are performed on the top 2000 results provided by RUPEE fast mode.
 
 Response times to a large degree are a measure of the amount of resources available to an application. 
 In the case of RUPEE, our response times were gathered from RUPEE running on a fairly old laptop with a 2nd generation Intel\textregistered{} Core\texttrademark{} i7-2720QM Quad-Core CPU and 8 GB of memory. 
