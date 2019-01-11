@@ -457,10 +457,10 @@ For this task, min-hashing \cite{Broder1998} and locality sensitive hashing (LSH
 Although we do not near dupe cluster domains, we can still leverage the techniques of min-hashing and LSH to speed up protein structure search by a large constant factor.
 
 Min-hashing generally is used to create a fixed-length signature for a set of items by repeatedly randomly hashing the items, sorting the hashes into a list, and then selecting the minimum hash in each permuted list.
-If the same process is performed on a pair of sets, the key result is that the probability of matching min-hashes is equal to the Jaccard similarity of the two sets \cite{Broder1998}.
+If the same process is performed on a pair of sets, the key result is that the probability of matching min-hashes at the same position is equal to the Jaccard similarity of the two sets \cite{Broder1998}.
 In order to approximate the Jaccard similarity for a given pair of sets, a sufficient number of min-hashes must be obtained. 
 
-In our case, the sets contain shingle hashes for a protein structure from which we obtain 99 min-hashes for each set as described in \cite{Rajaraman2012}. 
+In our case, the sets contain shingles for a protein structure from which we obtain 99 min-hashes for each set as described in \cite{Rajaraman2012}. 
 At this stage, we have reduced our representation of protein structures from variable-sized sets of shingles to fixed-length signatures.
 Given the key result above, the Jaccard similarity for any pair of protein structures can now be approximated by the proportion of matching min-hashes. 
 
@@ -494,10 +494,11 @@ Then, we perform optimized CE alignments on the top 400 matches based on the uno
 We limit the optimized CE alignments to the top 400 matches because for CE pairwise alignments, finding an optimized alignment through the use of dynamic programming is an additional time-intensive step.
 The details of the difference between unoptimized and optimized CE alignments can be found in \cite{Shindyalov1998}.
 
-Top-aligned is a simple layer following fast mode that establishes RUPEE fast mode as an effective filtering method that contains in its top 2000 results enough good matches to compete with the best available structure searches.
 The filter sizes of 8000, 2000, and 400 for fast mode, unoptimized CE alignments, and optimized CE alignments, respectively, have been chosen based on quality of results and speed. 
 We have found that increasing the size of each of these filters results in only marginal improvements in the quality of results. 
 Given that performing pairwise alignments is the most time-consuming aspect of the RUPEE structure search, the marginal improvements gained from larger filter sizes have to be balanced against the number of pairwise alignments performed. 
+
+Top-aligned is a simple step following fast mode that establishes RUPEE fast mode as an effective filtering method that contains in its top 2000 results enough good matches to compete with the best available structure searches.
 
 \section*{Results}
 
