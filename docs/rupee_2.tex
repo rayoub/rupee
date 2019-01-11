@@ -277,7 +277,11 @@ We end with a comparison of results against the mTM-align structure search \cite
 \section*{Related work}
 
 Pairwise alignment involves finding a set of spatial rotations and translations for two protein structures that minimizes a distance metric. 
-Most commonly, the root mean squared deviation (RMSD) between \cas of aligned residues is minimized.
+Traditionally, the root mean squared deviation (RMSD) between \cas of aligned residues is minimized.
+However, the RMSD score does not factor in the distance between unaligned residues nor does it consider the percentage of aligned residues, that is, alignment \emph{coverage}. 
+RMSD scores also have some dependence on the length of the aligned proteins. 
+On the other hand, the TM-score \cite{Zhang2004} takes all residues into account and normalizes for both coverage and length of the aligned proteins. 
+For this reason, TM-score is frequently used in the assessment of protein structure alignments. 
 
 The typical use case of aligning one protein structure to another does not impose tight response time requirements. 
 For this reason, pairwise alignments can focus on accuracy. 
@@ -490,7 +494,7 @@ The final step of fast mode is to sort the matches based on the adjusted Jaccard
 
 Top-aligned is an additional step following fast mode that uses CE to identify the best pairwise alignments among the top 2000 alignments from fast mode.
 First, we perform unoptimized CE alignments on the top 2000 matches obtained from fast mode. 
-Then, we perform optimized CE alignments on the top 400 matches based on the unoptimized alignments and these results are finally returned sorted either by RMSD or TM-Score. 
+Then, we perform optimized CE alignments on the top 400 matches based on the unoptimized alignments and these results are finally returned sorted either by RMSD or TM-score. 
 We limit the optimized CE alignments to the top 400 matches because for CE pairwise alignments, finding an optimized alignment through the use of dynamic programming is an additional time-intensive step.
 The details of the difference between unoptimized and optimized CE alignments can be found in \cite{Shindyalov1998}.
 
@@ -502,9 +506,7 @@ Top-aligned is a simple step following fast mode that establishes RUPEE fast mod
 
 \section*{Results}
 
-Protein structure searches can be evaluated using pairwise alignment scores or by comparison of results against the hierarchy of a protein structure classification database.
-The RMSD of aligned residues is widely used in evaluations but is not perfectly suited to full-length comparisons between structures since distances between unaligned residues are not factored into the score.
-On the other hand, the TM-score \cite{Zhang2004} takes all residues into account. 
+Protein structure searches can be evaluated using pairwise alignment scores (e.g. RMSD and TM-score as described above) or by comparison of results against the hierarchy of a protein structure classification database.
 Among protein structure classification databases for which corresponding structure searches exist, SCOPe \cite{Fox2013} and CATH \cite{Orengo1997} are the most popular. 
 
 For our results, we have created 3 benchmarks, scop\_d360, scop\_d62, and cath\_d99, for pairwise evaluations to mTM, SSM, and CATHEDRAL, respectively.
@@ -527,24 +529,24 @@ A TM-score above 0.5 is a good predictor for whether or not two domains are in t
 TM-scores greater than 0.17 are considered potentially meaningful whereas TM-scores less than 0.17 are considered to be due to random alignment \cite{Zhang2004}.
 
 \begin{figure*}[!h]
-\caption{Scoring from CE pairwise alignments for RUPEE fast, RUPEE top-aligned sorted by TM-Score, and RUPEE top-aligned sorted by RMSD}
+\caption{Scoring from CE pairwise alignments for RUPEE fast, RUPEE top-aligned sorted by TM-score, and RUPEE top-aligned sorted by RMSD}
 \label{fig:combined_scoring_ce}
 \end{figure*}
 
 A figure similar to \figurename~\ref{fig:combined_scoring_ce} but using FATCAT for pairwise comparisons can be found in \nameref{S2_Fig}. 
 The same relative relationships hold with only small variations. 
 
-RUPEE fast, top-aligned sorted by RMSD, and top-aligned sorted by TM-Score, perform better than SSM and CATHEDRAL.
+RUPEE fast, top-aligned sorted by RMSD, and top-aligned sorted by TM-score, perform better than SSM and CATHEDRAL.
 The scoring in the cath\_d99 benchmark comparisons are notably lower than for the other two benchmarks. 
 This is expected since CATHEDRAL only returns CATH s35 representatives.
 Likewise, for this comparison RUPEE is filtered for s35 representatives to match. 
 Given that the cath\_d99 benchmark is evaluated against representatives, there are fewer highly similar structures returned in the results. 
 
 In our evaluation, mTM faired better than SSM and CATHEDRAL. 
-mTM also performed better than RUPEE fast, although RUPEE fast is still within 0.08 TM-Score points of mTM at the 100\textsuperscript{th} result, which is notable considering its speed.
+mTM also performed better than RUPEE fast, although RUPEE fast is still within 0.08 TM-score points of mTM at the 100\textsuperscript{th} result, which is notable considering its speed.
 
-For TM-Score, RUPEE top-aligned and mTM are nearly identical with RUPEE slightly better for ranks less than 50 and mTM better for ranks greater than 50. 
-For RMSD, RUPEE top-aligned does perform better than mTM but this can most likely be attributed to the fact that mTM only sorts by TM-Score. 
+For TM-score, RUPEE top-aligned and mTM are nearly identical with RUPEE slightly better for ranks less than 50 and mTM better for ranks greater than 50. 
+For RMSD, RUPEE top-aligned does perform better than mTM but this can most likely be attributed to the fact that mTM only sorts by TM-score. 
 If mTM sorted by RMSD we suspect the results again would be nearly identical.
 Nevertheless, it is worth noting that the initial LSH and min-hashing technique does not explicitly bias results towards one particular measure. 
 
@@ -555,7 +557,7 @@ A plot of recall is unnecessary since \figurename~\ref{fig:combined_precision} p
 Hence, recall curves have the same relative relationships as those shown for precision. 
 
 \begin{figure*}[!h]
-\caption{Precision for RUPEE fast, RUPEE top-aligned sorted by TM-Score, and RUPEE top-aligned sorted by RMSD}
+\caption{Precision for RUPEE fast, RUPEE top-aligned sorted by TM-score, and RUPEE top-aligned sorted by RMSD}
 \label{fig:combined_precision}
 \end{figure*}
 
@@ -564,10 +566,10 @@ However, it is not clear how to define reasonable.
 On the other hand, if precision is too high, the search provides little value beyond that provided by the structure classification hierarchy it is searching. 
 Towards the extreme end of high precision, it would be sufficient for a search to return the best match and from there refer to the hierarchy for additional results. 
 
-Similar to the scoring evaluations above, RUPEE fast and top-aligned, sorted by both RMSD and TM-Score, show higher precision than SSM and CATHEDRAL with the exception of RUPEE top-aligned sorted by RMSD for ranks lower than 10 compared against SSM. 
+Similar to the scoring evaluations above, RUPEE fast and top-aligned, sorted by both RMSD and TM-score, show higher precision than SSM and CATHEDRAL with the exception of RUPEE top-aligned sorted by RMSD for ranks lower than 10 compared against SSM. 
 
 Again, mTM faired better than SSM and CATHEDRAL. 
-Notably, mTM also shows clearly higher precision than RUPEE top-aligned, sorted by both RMSD and TM-Score. 
+Notably, mTM also shows clearly higher precision than RUPEE top-aligned, sorted by both RMSD and TM-score. 
 In the absence of \figurename~\ref{fig:combined_scoring_ce}, one may be led to regard this as a negative result. 
 However, to the contrary, in the presence of \figurename~\ref{fig:combined_scoring_ce}, where it is shown that RUPEE and mTM have almost identical scoring, this result is remarkable. 
 This disparity suggest that RUPEE is better able to find significantly similar matches not necessarily aligned with the SCOPe hierarchy. 
