@@ -286,7 +286,7 @@ CE performs a rigid alignment in order to minimize RMSD and FATCAT allows for a 
 
 Besides CE and FATCAT, TM-align \cite{Zhang2005} and DALI \cite{Sander1995} are pairwise alignment tools also in wide use, both offering their own distinct approaches to structure alignment. 
 TM-align uses a rotation matrix designed to maximize the TM-score rather than minimizing the RMSD along with dynamic programming to find the best full-length alignment. 
-DALI compares distance matrices between two proteins to find a consistent set of matched submatrices that is used to align the proteins. 
+DALI compares intramolecular distance matrices between two proteins to find a consistent set of matched submatrices that is used to align the proteins. 
 
 Whereas pairwise structure alignments only depend on the sequence of \ca coordinates, protein structure searches often introduce a further dependence on the sequence order of amino acids.
 This approach often takes the form of clustering proteins based on sequences and pre-calculating results for pairwise alignments among cluster representatives. 
@@ -510,10 +510,14 @@ Top-aligned is a simple step following fast mode that establishes RUPEE fast mod
 Protein structure searches can be evaluated using pairwise alignment scores (e.g. RMSD and TM-score as described above) or by comparison of results against the hierarchy of a protein structure classification database.
 Among protein structure classification databases for which corresponding structure searches exist, SCOPe \cite{Fox2013} and CATH \cite{Orengo1997} are the most popular. 
 
-For our results, we have created 3 benchmarks, scop\_d360, scop\_d62, and cath\_d99, for pairwise evaluations to mTM, SSM, and CATHEDRAL, respectively.
+For our results, we have derived 3 benchmarks, scop\_d360, scop\_d62, and cath\_d99, for pairwise evaluations to mTM, SSM, and CATHEDRAL, respectively.
+To avoid introducing our own bias, we were careful to derive each benchmark from an existing benchmark used in a previously published work or an existing list of protein domains provided by an independent third party.  
 scop\_d360 is derived from the d500 benchmark used in \cite{Dong2018} filtered for domains in SCOPe 2.07 for which mTM returns 100 or more results.
 Similarly, scop\_d62 is derived from the d500 benchmark filtered for domains defined in SCOP 1.73 for which SSM returns 50 or more results.  
-In keeping with our description of RUPEE in \cite{Ayoub2017}, the cath\_d99 benchmark contains 99 superfamily representatives from the top 100 most diverse superfamilies defined in CATH v4.2 for which CATHEDRAL returns results in less than 12 hours. 
+In keeping with our description of RUPEE in \cite{Ayoub2017}, the cath\_d99 benchmark contains 99 superfamily representatives from the top 100 most diverse superfamilies defined in CATH v4.2 for which CATHEDRAL returns results in less than 12 hours.
+
+At each point in our comparison to mTM, SSM, and CATHEDRAL, where a decision had to be made that may favor one tool over another, we were careful to make sure RUPEE is not favored. 
+For instance, while filtering the benchmarks based on the number of results returned may eliminate some hard targets, we note that in all cases RUPEE returns more than 100 results. 
 
 We perform pairwise evaluations to ensure the fairness of our comparisons. 
 First, for domain searches, SSM is working with the SCOP 1.73 database, so accordingly we operate RUPEE on SCOP 1.73 domains to ensure RUPEE does not have more domains to work with for scoring and precision evaluations. 
