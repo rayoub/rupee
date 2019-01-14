@@ -583,6 +583,15 @@ So this result is in keeping with how RUPEE is intended to work and how it is de
 
 \subsection*{Response Times}
 
+Response times to a large degree are a measure of the amount of resources available to an application. 
+Response times for RUPEE were gathered from RUPEE running on a fairly old laptop with a 2nd generation Intel\textregistered{} Core\texttrademark{} i7-2720QM Quad-Core CPU and 8 GB of memory. 
+With more resources the response times of RUPEE can be further improved since pairwise alignments can be run in parallel. 
+For mTM, SSM, and CATHEDRAL, we gathered response times by automating their respective web sites using the Selenium WebDriver API. 
+
+Given that our response time comparisons are made against the respective tools running in different environments, we cannot derive solid conclusions about the efficiency of the methods themselves. 
+Nevertheless, these response times do fairly compare the user experience of the respective tools. 
+Moreover, in some cases the response times differ dramatically, by an order of magnitude in the case of RUPEE fast. 
+
 \figurename~\ref{fig:combined_response} shows response times in seconds for the scop\_d62 and cath\_d99 benchmarks. 
 Here, we are able to show RUPEE fast and top-aligned, mTM and SSM on the same plot because scop\_d62 is a subset of the scop\_d360 benchmark. 
 Both plots are shown with a logarithmic scale in order to include all outliers while still being able to view the overall trends in response times. 
@@ -602,11 +611,6 @@ Down the stretch, mTM provides increasingly better response times than RUPEE, wh
 The right plot of \figurename~\ref{fig:combined_response} shows RUPEE top-aligned is significantly faster than CATHEDRAL for all residue counts. 
 
 The trend of increasing response times for RUPEE top-aligned is a direct result of the pairwise structure comparisons that are performed on the top 2000 results provided by RUPEE fast mode.
-
-Response times to a large degree are a measure of the amount of resources available to an application. 
-In the case of RUPEE, our response times were gathered from RUPEE running on a fairly old laptop with a 2nd generation Intel\textregistered{} Core\texttrademark{} i7-2720QM Quad-Core CPU and 8 GB of memory. 
-With more resources the response times of RUPEE can be further improved since pairwise alignments can be run in parallel. 
-For mTM, SSM, and CATHEDRAL, we gathered response times by automating their respective web sites using the Selenium WebDriver API. 
 
 \section*{Discussion}
 
