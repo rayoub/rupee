@@ -268,7 +268,7 @@ Further, the \emph{run position encoding} heuristic introduced below may have wi
 We first discuss some related work to provide a context for our approach followed by a description of our method. 
 We end with a comparison of results against the mTM-align structure search \cite{Dong2018}, the secondary structure matching (SSM) search \cite{Krissinel2004}, and the CATHEDRAL structural scan \cite{Redfern2007} available at the CATH website.
 
-\section*{Related work}
+\section*{Related Work}
 
 Pairwise alignment involves finding a set of spatial rotations and translations for two protein structures that minimizes a distance metric. 
 Traditionally, the root mean squared deviation (RMSD) between \cas of aligned residues is minimized.
@@ -319,7 +319,7 @@ Protein structure searches that use linear encodings are not unique \cite{Carpen
 The novelty of our approach lies in its remarkable performance given its simplicity. 
 Additionally, elements of our approach can be isolated and found to be useful in their own right. 
 
-\subsection*{Regions of Torsion Angles}
+\subsection*{Regions of torsion angles}
 
 Our first step towards a linear encoding of protein structure is to identify separable regions of permissible torsion angles,
 but first we introduce a new plot of torsion angles better suited to this effort. 
@@ -345,7 +345,7 @@ In the right plot of \figurename~\ref{fig:combined_torsion}, we show the same to
 In this plot, $\phi$ corresponds to the radius $r$ and $\psi$ corresponds to the angle $\theta$ in traditional polar plots. 
 Notice the residues appearing at the 4 corners of the Ramachandran plot now appear in one continuous region of the polar plot centered at $\phi = \pm180\degree$ and $\psi = \pm180\degree$. 
 
-\subsection*{Linear Encoding of Protein Structure}
+\subsection*{Linear encoding of protein structure}
 
 The polar plot described above is used to define torsion angle regions for DSSP secondary structure assignments.
 We divide six of the eight DSSP secondary structure assignment codes defined in \cite{Kabsch1983} into three groups: helices (`G',`H',`I'), strands (`E'), and bends and coils (`S',`C').
@@ -581,7 +581,7 @@ This disparity suggest that RUPEE is better able to find significantly similar m
 In fact, since the initial min-hashing and LSH technique used by RUPEE check for similarity to all available structures, no structure is able to hide behind a sequence based cluster representative. 
 So this result is in keeping with how RUPEE is intended to work and how it is described above. 
 
-\subsection*{Response Times}
+\subsection*{Response times}
 
 Response times to a large degree are a measure of the amount of resources available to an application. 
 Response times for RUPEE were gathered from RUPEE running on a fairly old laptop with a 2nd generation Intel\textregistered{} Core\texttrademark{} i7-2720QM Quad-Core CPU and 8 GB of memory. 
@@ -656,7 +656,7 @@ For RUPEE top-aligned, we have shown that a purely geometric big data approach t
 Moreover, we have shown evidence that suggests the results from RUPEE top-aligned provide more added value by discovering high scoring protein structure matches not necessarily aligned with a particular protein structure classification hierarchy or hiding behind cluster representatives. 
 The ability for RUPEE to quickly examine all structures among hundreds of thousands sets it apart as a tool that can be used for discovering previously undetected structural similarities.
 
-\section*{Supporting information}
+\section*{Supporting Information}
 
 \paragraph*{S1 Benchmarks.}
 \label{S1_Benchmarks}
