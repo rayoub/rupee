@@ -8,9 +8,9 @@ WITH rupee_results AS
         ce_rmsd,
         ce_tm_score
     FROM
-        get_rupee_results('scop_d3', 'scop_v2_07', 50)
+        get_rupee_results('scop_d360', 'scop_v2_07', 'tm_score', 50)
     WHERE
-        db_id_1 = 'd1d8la1'
+        db_id_1 = 'd2b66k2'
 ),
 mtm_results AS
 (
@@ -21,9 +21,9 @@ mtm_results AS
         ce_rmsd,
         ce_tm_score
     FROM
-        get_mtm_dom_results('scop_d3','scop_v2_07', 50)
+        get_mtm_dom_results('scop_d360','scop_v2_07', 50)
     WHERE
-        db_id_1 = 'd1d8la1'
+        db_id_1 = 'd2b66k2'
 ),
 mtm_first AS
 (
@@ -57,6 +57,6 @@ rupee_first AS
     ORDER BY
         r.n
 )
-SELECT * FROM rupee_first;
+SELECT * FROM mtm_first;
 
 

@@ -8,7 +8,7 @@ WITH rupee_results AS
         ce_rmsd,
         ce_tm_score
     FROM
-        get_rupee_results('scop_d50', 'scop_v2_07', 50)
+        get_rupee_results('scop_d360', 'scop_v2_07', 'tm_score', 50)
 ),
 mtm_results AS
 (
@@ -19,7 +19,7 @@ mtm_results AS
         ce_rmsd,
         ce_tm_score
     FROM
-        get_mtm_dom_results('scop_d50','scop_v2_07', 50)
+        get_mtm_dom_results('scop_d360','scop_v2_07', 50)
 ),
 rupee_eval AS
 (
