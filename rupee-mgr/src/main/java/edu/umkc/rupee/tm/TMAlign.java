@@ -118,10 +118,10 @@ public class TMAlign {
 
     public Results align(Structure xstruct, Structure ystruct) {
 
-        // **********************************************************************************/
-        // * load data */
-        // **********************************************************************************/
-
+        // ********************************************************************************** //
+        // * load data *
+        // ********************************************************************************** //
+        
         // get first chain in each structure
         Chain xchain = xstruct.getChains().get(0);
         Chain ychain = ystruct.getChains().get(0);
@@ -171,9 +171,9 @@ public class TMAlign {
             ya[i][2] = atom.getZ();
         }
 
-        // **********************************************************************************/
-        // * parameter set */
-        // **********************************************************************************/
+        // ********************************************************************************** //
+        // * parameter set *
+        // ********************************************************************************** //
 
         // set: D0_MIN, Lnorm, d0, d0_search, score_d8
         parameter_set4search(xlen, ylen); 
@@ -199,9 +199,9 @@ public class TMAlign {
             ddcc = 0.1; 
         double local_d0_search = d0_search;
 
-        // **********************************************************************************/
-        // * get initial alignment with gapless threading */
-        // **********************************************************************************/
+        // ********************************************************************************** //
+        // * get initial alignment with gapless threading *
+        // ********************************************************************************** //
 
         get_initial(xa, ya, xlen, ylen, invmap0);
         TM = detailed_search(xa, ya, xlen, ylen, invmap0, t, u, simplify_step, score_sum_method, local_d0_search);
@@ -217,10 +217,10 @@ public class TMAlign {
             }
         }
 
-        // **********************************************************************************/
-        // * get initial alignment based on secondary structure */
-        // **********************************************************************************/
-
+        // ********************************************************************************** //
+        // * get initial alignment based on secondary structure *
+        // ********************************************************************************** //
+        
         get_initial_ss(xa, ya, xlen, ylen, invmap);
         TM = detailed_search(xa, ya, xlen, ylen, invmap, t, u, simplify_step, score_sum_method, local_d0_search);
 
@@ -240,10 +240,10 @@ public class TMAlign {
             }
         }
 
-        // **********************************************************************************/
-        // * get initial alignment based on local superposition */
-        // **********************************************************************************/
-
+        // ********************************************************************************** //
+        // * get initial alignment based on local superposition *
+        // ********************************************************************************** //
+        
         if (get_initial5(xa, ya, xlen, ylen, invmap)) {
 
             TM = detailed_search(xa, ya, xlen, ylen, invmap, t, u, simplify_step, score_sum_method, local_d0_search);
@@ -265,10 +265,10 @@ public class TMAlign {
             }
         }
 
-        // **********************************************************************************/
-        // * get initial alignment based on previous alignment+secondary structure */
-        // **********************************************************************************/
-
+        // ********************************************************************************** //
+        // * get initial alignment based on previous alignment+secondary structure *
+        // ********************************************************************************** //
+        
         get_initial_ssplus(xa, ya, xlen, ylen, invmap0, invmap);
         TM = detailed_search(xa, ya, xlen, ylen, invmap, t, u, simplify_step, score_sum_method, local_d0_search);
 
@@ -288,9 +288,9 @@ public class TMAlign {
             }
         }
 
-        // **********************************************************************************/
-        // * get initial alignment based on fragment gapless threading */
-        // **********************************************************************************/
+        // ********************************************************************************** //
+        // * get initial alignment based on fragment gapless threading *
+        // ********************************************************************************** //
         
         get_initial_fgt(xa, ya, xlen, ylen, invmap);
         TM = detailed_search(xa, ya, xlen, ylen, invmap, t, u, simplify_step, score_sum_method, local_d0_search);
@@ -311,9 +311,9 @@ public class TMAlign {
             }
         }
 
-        // **********************************************************************************//
-        // * validate the final and best initial alignment */
-        // **********************************************************************************//
+        // ********************************************************************************** //
+        // * validate the final and best initial alignment *
+        // ********************************************************************************** //
        
         // make sure at least one pair is aligned 
         boolean flag = false;
@@ -327,9 +327,9 @@ public class TMAlign {
             throw new RuntimeException("no alignment bad result");
         }
 
-        // **********************************************************************************//
-        // * Detailed TMscore search engine --> prepare for final TMscore */
-        // **********************************************************************************//
+        // ********************************************************************************** //
+        // * Detailed TMscore search engine --> prepare for final TMscore *
+        // ********************************************************************************** //
         
         // set scoring method 
         simplify_step = 1;
@@ -379,9 +379,9 @@ public class TMAlign {
         Kabsch.execute(r1, r2, n_ali8, 0, rmsd0, t, u);
         rmsd0.setValue(Math.sqrt(rmsd0.getValue() / n_ali8));
 
-        // *********************************************************************************//
-        // * Final TMscore */
-        // *********************************************************************************//
+        // ********************************************************************************* //
+        // * Final TMscore *
+        // ********************************************************************************* //
         
         MutableDouble rmsd = new MutableDouble(0.0);
         double t0[] = new double[3];
@@ -402,22 +402,21 @@ public class TMAlign {
         parameter_set4final(xlen);
         local_d0_search = d0_search;
         TM2 = TMscore8_search(xtm, ytm, n_ali8, t, u, simplify_step, score_sum_method, rmsd, local_d0_search);
-
+        
         Results results = new Results();
-
         results.setChainLength1(xlen);
         results.setChainLength2(ylen);
         results.setAlignedLength(n_ali8);
         results.setTmScore1(TM2);
         results.setTmScore2(TM1);
         results.setRmsd(rmsd0.getValue());
-
+        
         return results;
     }
 
-    // **********************************************************************************8
+    // **********************************************************************************
     // parameters
-    // **********************************************************************************8
+    // **********************************************************************************
 
     public void parameter_set4search(int xlen, int ylen) {
         // parameter initilization for searching: D0_MIN, Lnorm, d0, d0_search,
@@ -464,9 +463,9 @@ public class TMAlign {
             d0_search = 4.5;
     }
 
-    // **********************************************************************************8
+    // **********************************************************************************
     // initial alignments
-    // **********************************************************************************8
+    // **********************************************************************************
     
     // gapless threading to find initial alignment
     public double get_initial(double x[][], double y[][], int x_len, int y_len, int y2x[]) {
@@ -955,9 +954,9 @@ public class TMAlign {
         } // while <;
     }
     
-    // **********************************************************************************8
+    // **********************************************************************************
     // searching
-    // **********************************************************************************8
+    // **********************************************************************************
 
     public double DP_iter(
             double x[][], double y[][], int x_len, int y_len, 
@@ -1116,9 +1115,9 @@ public class TMAlign {
         return tmscore;
     }
 
-    // **********************************************************************************8
+    // **********************************************************************************
     // scoring
-    // **********************************************************************************8
+    // **********************************************************************************
     
     // compute the score quickly in three iterations
     public double get_score_fast(double x[][], double y[][], int x_len, int y_len, int invmap[]) {
