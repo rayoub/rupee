@@ -103,7 +103,7 @@ public class Main {
         group.addOption(Option.builder("s")
                 .longOpt("search")
                 .numberOfArgs(12)
-                .argName("SEARCH_BY>,<DB_TYPE>,<DB_ID>,<LIMIT>,<REP1>,<REP2>,<REP3>,<DIFF1>,<DIFF2><DIFF3><MODE>,<SORT")
+                .argName("SEARCH_BY>,<DB_TYPE>,<DB_ID>,<LIMIT>,<REP1>,<REP2>,<REP3>,<DIFF1>,<DIFF2>,<DIFF3>,<MODE>,<SORT")
                 .valueSeparator(',')
                 .build());
         group.addOption(Option.builder("u")
@@ -288,7 +288,6 @@ public class Main {
             System.out.println("Length of chain 2: " + results.getChainLength2() + " residues");
             System.out.println("Aligned Length: " + results.getAlignedLength());
             System.out.println("TM-score normalized by chain 1: " + results.getTmScore1());
-            System.out.println("TM-score normalized by chain 2: " + results.getTmScore2());
             System.out.println("RMSD: " + results.getRmsd());
             System.out.println("");
 
