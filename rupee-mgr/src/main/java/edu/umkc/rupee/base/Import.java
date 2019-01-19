@@ -214,13 +214,13 @@ public abstract class Import {
                         sse = "Helix";
                         break;
                     case "T":
-                        sse = "Turn";
+                        sse = "Helix";
                         break;
                     case "E":
                         sse = "Strand";
                         break;
                     case "B":
-                        sse = "Bridge";
+                        sse = "Strand";
                         break;
                     case "S":
                     case "C":
