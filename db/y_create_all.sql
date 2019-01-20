@@ -15,15 +15,10 @@
 \i ecod_grams.sql
 \i ecod_hashes.sql
 \i log.sql
-\i mtm_dom_eval.sql
 \i mtm_dom_result_matched.sql
 \i mtm_dom_result.sql
 \i mtm_dom_result_unmatched.sql
-\i mtm_pdbc_result_matched.sql
-\i mtm_pdbc_result.sql
-\i mtm_pdbc_result_unmatched.sql
 \i residue.sql
-\i rupee_eval.sql
 \i rupee_result.sql
 \i scop_domain.sql
 \i scop_grams.sql
@@ -77,8 +72,6 @@
 \i insert_ecod_grams.sql
 \i insert_ecod_hashes.sql
 \i insert_logs.sql
-\i insert_mtm_dom_eval.sql
-\i insert_rupee_eval.sql
 \i insert_scop_grams.sql
 \i insert_scop_hashes.sql
 \i insert_scop_pairs.sql
