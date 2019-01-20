@@ -211,14 +211,10 @@ public abstract class Import {
                     case "G":
                     case "H":
                     case "I":
-                        sse = "Helix";
-                        break;
                     case "T":
                         sse = "Helix";
                         break;
                     case "E":
-                        sse = "Strand";
-                        break;
                     case "B":
                         sse = "Strand";
                         break;
@@ -364,17 +360,9 @@ public abstract class Import {
             return calculateStrandRegion(phi, psi) + 4;
         }
       
-        // other 8, 9, 10
-        else if (sse.equals("Loop")) {
-            return calculateLoopRegion(phi, psi) + 7;
-        }
-
-        // turns and bridges
-        else if (sse.equals("Turn")) {
-            return 11;
-        }
+        // loop 8, 9, 10
         else {
-            return 12; // Bridge
+            return calculateLoopRegion(phi, psi) + 7;
         }
     }
 
@@ -390,17 +378,9 @@ public abstract class Import {
             return 5;
         }
       
-        // other 8, 9, 10
-        else if (sse.equals("Loop")) {
-            return 8;
-        }
-
-        // turns and bridges
-        else if (sse.equals("Turn")) {
-            return 11;
-        }
+        // loop 8, 9, 10
         else {
-            return 12; // Bridge
+            return 8;
         }
     }
 
