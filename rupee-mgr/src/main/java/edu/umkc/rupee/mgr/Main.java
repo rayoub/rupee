@@ -49,6 +49,7 @@ import edu.umkc.rupee.ecod.EcodSearch;
 import edu.umkc.rupee.ecod.EcodSearchCriteria;
 import edu.umkc.rupee.ecod.EcodSearchRecord;
 import edu.umkc.rupee.lib.AlignRecord;
+import edu.umkc.rupee.lib.AlignResults;
 import edu.umkc.rupee.lib.Aligning;
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
@@ -443,7 +444,7 @@ public class Main {
         //***  OUTPUT
         //*************************************************************
 
-        boolean verbose = true; 
+        boolean verbose = false; 
         boolean timing = false;
 
         if (dbType == DbTypeCriteria.SCOP) { 
@@ -714,21 +715,8 @@ public class Main {
 
     private static void option_d(CommandLine line) throws Exception {
 
-        
-        List<String> dbIds = Db.getBenchmark("cath_d99");
-        for (int i = 0; i < dbIds.size(); i++) {
-
-            if (i % 10 == 0) {
-                System.out.print("\n" + dbIds.get(i) + ",");
-            }
-            else {
-                System.out.print(dbIds.get(i) + ",");
-            }
-        }
-        System.out.println("");
-
         /*
-        List<Labels.Label> labels = Labels.getLabels("1nycA00", DbTypeCriteria.CATH);
+        List<Labels.Label> labels = Labels.getLabels("d1ru4a_", DbTypeCriteria.SCOP);
         for (Labels.Label label : labels) {
             System.out.println(label.getResidueNumber() + "," + label.getLabel());
         }
@@ -738,10 +726,13 @@ public class Main {
         AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "tm_score", DbTypeCriteria.SCOP, 100);
         AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "rmsd", DbTypeCriteria.SCOP, 100);
         AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "similarity", DbTypeCriteria.SCOP, 100);
+        AlignResults.alignMtmDomResults("scop_d360", "scop_v2_07", DbTypeCriteria.SCOP, 100);
+        */
+
+        /*   
         AlignResults.alignRupeeResults("cath_d99", "cath_v4_2_0", "tm_score", DbTypeCriteria.CATH, 100);
         AlignResults.alignRupeeResults("cath_d99", "cath_v4_2_0", "rmsd", DbTypeCriteria.CATH, 100);
         AlignResults.alignRupeeResults("cath_d99", "cath_v4_2_0", "similarity", DbTypeCriteria.CATH, 100);
-        AlignResults.alignMtmDomResults("scop_d360", "scop_v2_07", DbTypeCriteria.SCOP, 100);
         AlignResults.alignCathedralResults("cath_d99", "cath_v4_2_0", DbTypeCriteria.CATH, 100);
         */
 
