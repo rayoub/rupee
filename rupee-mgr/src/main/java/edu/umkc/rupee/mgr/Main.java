@@ -49,7 +49,6 @@ import edu.umkc.rupee.ecod.EcodSearch;
 import edu.umkc.rupee.ecod.EcodSearchCriteria;
 import edu.umkc.rupee.ecod.EcodSearchRecord;
 import edu.umkc.rupee.lib.AlignRecord;
-import edu.umkc.rupee.lib.AlignResults;
 import edu.umkc.rupee.lib.Aligning;
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
