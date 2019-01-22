@@ -9,7 +9,9 @@ RETURNS TABLE (
     ce_rmsd NUMERIC,
     ce_tm_score NUMERIC,
     fatcat_rmsd NUMERIC,
-    fatcat_tm_score NUMERIC
+    fatcat_tm_score NUMERIC,
+    tm_rmsd NUMERIC,
+    tm_tm_score NUMERIC
 )
 AS $$
 BEGIN
@@ -27,7 +29,9 @@ BEGIN
             s.ce_rmsd,
             s.ce_tm_score,
             s.fatcat_rmsd,
-            s.fatcat_tm_score
+            s.fatcat_tm_score,
+            s.tm_rmsd,
+            s.tm_tm_score
         FROM
             rupee_result r
             INNER JOIN benchmark b
@@ -62,7 +66,9 @@ BEGIN
             r.ce_rmsd,
             r.ce_tm_score,
             r.fatcat_rmsd,
-            r.fatcat_tm_score
+            r.fatcat_tm_score,
+            r.tm_rmsd,
+            r.tm_tm_score
         FROM 
             results r
             INNER JOIN valid_results v
@@ -79,7 +85,9 @@ BEGIN
         r.ce_rmsd,
         r.ce_tm_score,
         r.fatcat_rmsd,
-        r.fatcat_tm_score
+        r.fatcat_tm_score,
+        r.tm_rmsd,
+        r.tm_tm_score
     FROM 
         filtered_results r
     ORDER BY

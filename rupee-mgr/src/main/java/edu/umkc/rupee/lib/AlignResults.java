@@ -22,6 +22,7 @@ import org.postgresql.ds.PGSimpleDataSource;
 
 import edu.umkc.rupee.defs.AlignCriteria;
 import edu.umkc.rupee.defs.DbTypeCriteria;
+import edu.umkc.rupee.tm.TMAlign;
 
 public class AlignResults
 {
@@ -111,25 +112,39 @@ public class AlignResults
             while (rs.next()) {
 
                 String dbId2 = rs.getString("db_id_2");
-                
+            
                 if (!map.containsKey(dbId2)) {
 
                     FileInputStream targetFile = new FileInputStream(dbType.getImportPath() + dbId2 + ".pdb.gz");
                     GZIPInputStream targetFileGz = new GZIPInputStream(targetFile);
                     Structure targetStructure = reader.getStructure(targetFileGz);
-
-                    AlignRecord ce = Aligning.align(queryStructure, targetStructure, AlignCriteria.CE);
-                    AlignRecord fatcat = Aligning.align(queryStructure, targetStructure, AlignCriteria.FATCAT_FLEXIBLE);
-
+                    
+                    // gather alignment scores 
                     AlignmentScores score = new AlignmentScores();
-
                     score.setVersion(version);
                     score.setDbId1(dbId);
                     score.setDbId2(dbId2);
+
+                    // perform biojava alignments
+                    AlignRecord ce = Aligning.align(queryStructure, targetStructure, AlignCriteria.CE);
+                    AlignRecord fatcat = Aligning.align(queryStructure, targetStructure, AlignCriteria.FATCAT_FLEXIBLE);
+
                     score.setCeRmsd(ce.afps.getTotalRmsdOpt());
                     score.setCeTmScore(ce.afps.getTMScore());
                     score.setFatCatRmsd(fatcat.afps.getTotalRmsdOpt());
                     score.setFatCatTmScore(fatcat.afps.getTMScore());
+
+                    // perform tm-align alignment
+                    try {
+                        TMAlign tm = new TMAlign();
+                        TMAlign.Results results = tm.align(queryStructure, targetStructure);
+
+                        score.setTmRmsd(results.getRmsd());
+                        score.setTmTmScore(results.getTmScore1());
+                    }
+                    catch (RuntimeException e) {
+                        System.out.println("error comparing: " + dbId + ", " + dbId2);
+                    }
 
                     scores.add(score);
                 }

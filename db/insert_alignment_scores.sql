@@ -29,7 +29,9 @@ BEGIN
         ce_rmsd,
         ce_tm_score,
         fatcat_rmsd,
-        fatcat_tm_score
+        fatcat_tm_score,
+        tm_rmsd,
+        tm_tm_score
     )
     SELECT
         version,
@@ -38,7 +40,9 @@ BEGIN
         ce_rmsd,
         ce_tm_score,
         fatcat_rmsd,
-        fatcat_tm_score
+        fatcat_tm_score,
+        tm_rmsd,
+        tm_tm_score
     FROM
         UNNEST(p_tab) s
         LEFT JOIN ids

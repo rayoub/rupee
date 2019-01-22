@@ -48,7 +48,7 @@ public class TMAlign {
             return tmScore;
         }
 
-        public void setTmScore1(double tmScore) {
+        public void setTmScore(double tmScore) {
             this.tmScore = tmScore;
         }
 
@@ -58,44 +58,6 @@ public class TMAlign {
 
         public void setRmsd(double rmsd) {
             this.rmsd = rmsd;
-        }
-    }
-    
-    public static class Params {
-
-        private int dpIterations;
-        private int scoreIterations;
-        private boolean localSuperposition;
-
-        public Params(int dpIterations, int scoreIterations, boolean localSuperposition) {
-            
-            this.dpIterations = dpIterations;
-            this.scoreIterations = scoreIterations;
-            this.localSuperposition = localSuperposition;
-        }
-
-        public int getDpIterations() {
-            return dpIterations;
-        }
-
-        public void setDpIterations(int dpIterations) {
-            this.dpIterations = dpIterations;
-        }
-
-        public int getScoreIterations() {
-            return scoreIterations;
-        }
-
-        public void setScoreIterations(int scoreIterations) {
-            this.scoreIterations = scoreIterations;
-        }
-
-        public boolean isLocalSuperposition() {
-            return localSuperposition;
-        }
-
-        public void setLocalSuperposition(boolean localSuperposition) {
-            this.localSuperposition = localSuperposition;
         }
     }
 
@@ -127,7 +89,7 @@ public class TMAlign {
      *  score_fun8_standard
      */
 
-    private Params params;                          // optimization parameters
+    private Mode mode;                              // regular, fast, super fast
 
     private double D0_MIN;                          // for d0
     private double Lnorm;                           // normalization length
@@ -149,12 +111,12 @@ public class TMAlign {
 
     public TMAlign() {
 
-        this.params = new Params(30,20,true);
+        this.mode = Mode.REGULAR;
     }
 
-    public TMAlign(Params params) {
+    public TMAlign(Mode mode) {
         
-        this.params = params;
+        this.mode = mode;
     }
 
     public Results align(Structure xstruct, Structure ystruct) { 
@@ -250,7 +212,7 @@ public class TMAlign {
         if (TM > TMmax) {
             TMmax = TM;
         }
-        TM = DP_iter(xa, ya, xlen, ylen, t, u, invmap, 0, 2, params.getDpIterations(), local_d0_search);
+        TM = DP_iter(xa, ya, xlen, ylen, t, u, invmap, 0, 2, mode.getDpIterations(), local_d0_search);
         if (TM > TMmax) {
             TMmax = TM;
             for (int i = 0; i < ylen; i++) {
@@ -272,7 +234,7 @@ public class TMAlign {
             }
         }
         if (TM > TMmax * 0.2) {
-            TM = DP_iter(xa, ya, xlen, ylen, t, u, invmap, 0, 2, params.getDpIterations(), local_d0_search);
+            TM = DP_iter(xa, ya, xlen, ylen, t, u, invmap, 0, 2, mode.getDpIterations(), local_d0_search);
             if (TM > TMmax) {
                 TMmax = TM;
                 for (int i = 0; i < ylen; i++) {
@@ -282,10 +244,26 @@ public class TMAlign {
         }
 
         // ********************************************************************************** //
+        // * early exit in super fast mode
+        // ********************************************************************************** //
+    
+        if (mode == Mode.SUPER_FAST) {
+
+            Results results = new Results();
+            results.setChainLength1(xlen);
+            results.setChainLength2(ylen);
+            results.setAlignedLength(0);
+            results.setTmScore(TMmax);
+            results.setRmsd(0);
+            
+            return results;
+        }
+        
+        // ********************************************************************************** //
         // * get initial alignment based on local superposition *
         // ********************************************************************************** //
 
-        if (params.isLocalSuperposition() && get_initial5(xa, ya, xlen, ylen, invmap)) {
+        if (mode == Mode.REGULAR && get_initial5(xa, ya, xlen, ylen, invmap)) {
 
             TM = detailed_search(xa, ya, xlen, ylen, invmap, t, u, simplify_step, score_sum_method, local_d0_search);
 
@@ -320,7 +298,7 @@ public class TMAlign {
             }
         }
         if (TM > TMmax * ddcc) {
-            TM = DP_iter(xa, ya, xlen, ylen, t, u, invmap, 0, 2, params.getDpIterations(), local_d0_search);
+            TM = DP_iter(xa, ya, xlen, ylen, t, u, invmap, 0, 2, mode.getDpIterations(), local_d0_search);
             if (TM > TMmax) {
                 TMmax = TM;
                 for (int i = 0; i < ylen; i++) {
@@ -440,7 +418,7 @@ public class TMAlign {
         results.setChainLength1(xlen);
         results.setChainLength2(ylen);
         results.setAlignedLength(n_ali8);
-        results.setTmScore1(TMfinal);
+        results.setTmScore(TMfinal);
         results.setRmsd(rmsd0.getValue());
         
         return results;
@@ -1305,7 +1283,7 @@ public class TMAlign {
         double d;
 
         // iterative parameters
-        int n_it = params.getScoreIterations(); // maximum number of iterations
+        int n_it = mode.getScoreIterations(); // maximum number of iterations
         int n_init_max = 6; // maximum number of different fragment length
         int L_ini[] = new int[n_init_max]; // fragment lengths, Lali, Lali/2,
                                             // Lali/4 ... 4
@@ -1450,7 +1428,7 @@ public class TMAlign {
         double d;
 
         // max number of iterations
-        int n_it = params.getScoreIterations(); 
+        int n_it = mode.getScoreIterations(); 
         
         // fragment lengths
         int n_init_max = 6;                 // maximum number of fragments lengths

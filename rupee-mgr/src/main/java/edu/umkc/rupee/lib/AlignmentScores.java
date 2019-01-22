@@ -12,10 +12,12 @@ public class AlignmentScores extends PGobject {
     private String version;
     private String dbId1;
     private String dbId2;
-    private double ceRmsd;
-    private double ceTmScore;
-    private double fatCatRmsd; 
-    private double fatCatTmScore; 
+    private double ceRmsd = 0.0;
+    private double ceTmScore = -1.0;
+    private double fatCatRmsd = 0.0;
+    private double fatCatTmScore = -1.0;
+    private double tmRmsd = 0.0;
+    private double tmTmScore = -1.0;
 
     public AlignmentScores() { }
 
@@ -28,6 +30,8 @@ public class AlignmentScores extends PGobject {
         this.ceTmScore = rs.getDouble("ce_tm_score");
         this.fatCatRmsd = rs.getDouble("fatcat_rmsd");
         this.fatCatTmScore = rs.getDouble("fatcat_tm_score");
+        this.tmRmsd = rs.getDouble("tm_rmsd");
+        this.tmTmScore = rs.getDouble("tm_tm_score");
     }
 
     public String getVersion() {
@@ -86,9 +90,25 @@ public class AlignmentScores extends PGobject {
         this.fatCatTmScore = fatCatTmScore;
     }
 
+    public double getTmRmsd() {
+        return tmRmsd;
+    }
+
+    public void setTmRmsd(double tmRmsd) {
+        this.tmRmsd = tmRmsd;
+    }
+
+    public double getTmTmScore() {
+        return tmTmScore;
+    }
+
+    public void setTmTmScore(double tmTmScore) {
+        this.tmTmScore = tmTmScore;
+    }
+
     public double getRmsd(AlignCriteria align) {
 
-        double rmsd = -1.0;
+        double rmsd = 0.0;
 
         switch (align) {
             
@@ -98,8 +118,11 @@ public class AlignmentScores extends PGobject {
             case FATCAT_FLEXIBLE:
                 rmsd = this.fatCatRmsd;
                 break;
+            case TM_ALIGN:
+                rmsd = this.tmRmsd;
+                break;
             default:
-                rmsd = 0;
+                rmsd = 0.0;
         }
 
         return rmsd;
@@ -117,6 +140,9 @@ public class AlignmentScores extends PGobject {
             case FATCAT_FLEXIBLE:
                 tmScore = this.fatCatTmScore;
                 break;
+            case TM_ALIGN:
+                tmScore = this.tmTmScore;
+                break;
             default:
                 tmScore = -1.0;
         }
@@ -130,7 +156,8 @@ public class AlignmentScores extends PGobject {
             + version + ","
             + dbId1 + "," + dbId2 + ","
             + ceRmsd + "," + ceTmScore + ","
-            + fatCatRmsd + "," + fatCatTmScore
+            + fatCatRmsd + "," + fatCatTmScore + ","
+            + tmRmsd + "," + tmTmScore
             + ")";
         return row;
     }
