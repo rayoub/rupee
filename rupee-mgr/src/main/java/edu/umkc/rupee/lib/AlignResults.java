@@ -139,8 +139,10 @@ public class AlignResults
                         TMAlign tm = new TMAlign();
                         TMAlign.Results results = tm.align(queryStructure, targetStructure);
 
-                        score.setTmRmsd(results.getRmsd());
-                        score.setTmTmScore(results.getTmScore1());
+                        score.setTmQRmsd(results.getRmsd());
+                        score.setTmQTmScore(results.getTmScoreQ());
+                        score.setTmAvgRmsd(results.getRmsd());
+                        score.setTmAvgTmScore(results.getTmScoreAvg());
                     }
                     catch (RuntimeException e) {
                         System.out.println("error comparing: " + dbId + ", " + dbId2);

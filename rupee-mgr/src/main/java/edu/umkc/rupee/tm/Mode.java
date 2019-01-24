@@ -3,8 +3,7 @@ package edu.umkc.rupee.tm;
 public enum Mode {
 
     REGULAR(30,20),
-    FAST(2,2),
-    SUPER_FAST(1,1);
+    FAST(2,2);
 
     private int dpIterations;
     private int scoreIterations;

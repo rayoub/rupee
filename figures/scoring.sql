@@ -5,7 +5,7 @@ DO $$
     DECLARE p_version VARCHAR := 'scop_v2_07'; -- scop_v2_07, scop_v1_73, or cath_v4_2_0
     DECLARE p_limit INTEGER := 100;
     DECLARE p_other VARCHAR := 'mTM'; -- mTM, SSM, or CATHEDRAL
-    DECLARE p_alg VARCHAR = 'FATCAT'; -- CE, FATCAT, or TM
+    DECLARE p_alg VARCHAR = 'TM_Q'; -- CE, FATCAT, TM_Q, or TM_AVG
 
     -- don't forget to change get_*_results as needed
 
@@ -70,7 +70,7 @@ BEGIN
                 p_alg AS alg,
                 'TM-Score' AS score_type,
                 db_id_1,
-                CASE WHEN p_alg = 'CE' THEN ce_tm_score WHEN p_alg = 'TM' THEN tm_tm_score ELSE fatcat_tm_score END AS score
+                CASE WHEN p_alg = 'CE' THEN ce_tm_score WHEN p_alg = 'TM_Q' THEN tm_q_tm_score WHEN p_alg = 'TM_AVG' THEN tm_avg_tm_score ELSE fatcat_tm_score END AS score
             FROM
                 valid_rupee_tm_score
             UNION ALL
@@ -80,7 +80,7 @@ BEGIN
                 p_alg AS alg,
                 'TM-Score' AS score_type,
                 db_id_1,
-                CASE WHEN p_alg = 'CE' THEN ce_tm_score WHEN p_alg = 'TM' THEN tm_tm_score ELSE fatcat_tm_score END AS score
+                CASE WHEN p_alg = 'CE' THEN ce_tm_score WHEN p_alg = 'TM_Q' THEN tm_q_tm_score WHEN p_alg = 'TM_AVG' THEN tm_avg_tm_score ELSE fatcat_tm_score END AS score
             FROM
                 valid_rupee_fast
             UNION ALL
@@ -90,7 +90,7 @@ BEGIN
                 p_alg AS alg,
                 'TM-Score' AS score_type,
                 db_id_1,
-                CASE WHEN p_alg = 'CE' THEN ce_tm_score WHEN p_alg = 'TM' THEN tm_tm_score ELSE fatcat_tm_score END AS score
+                CASE WHEN p_alg = 'CE' THEN ce_tm_score WHEN p_alg = 'TM_Q' THEN tm_q_tm_score WHEN p_alg = 'TM_AVG' THEN tm_avg_tm_score ELSE fatcat_tm_score END AS score
             FROM
                 valid_other
             UNION ALL 
@@ -100,7 +100,7 @@ BEGIN
                 p_alg AS alg,
                 'RMSD' AS score_type,
                 db_id_1,
-                CASE WHEN p_alg = 'CE' THEN ce_rmsd WHEN p_alg = 'TM' THEN tm_rmsd ELSE fatcat_rmsd END AS score
+                CASE WHEN p_alg = 'CE' THEN ce_rmsd WHEN p_alg = 'TM_Q' THEN tm_q_rmsd WHEN p_alg = 'TM_AVG' THEN tm_avg_tm_score ELSE fatcat_rmsd END AS score
             FROM
                 valid_rupee_rmsd
             UNION ALL
@@ -110,7 +110,7 @@ BEGIN
                 p_alg AS alg,
                 'RMSD' AS score_type,
                 db_id_1,
-                CASE WHEN p_alg = 'CE' THEN ce_rmsd WHEN p_alg = 'TM' THEN tm_rmsd ELSE fatcat_rmsd END AS score
+                CASE WHEN p_alg = 'CE' THEN ce_rmsd WHEN p_alg = 'TM_Q' THEN tm_q_rmsd WHEN p_alg = 'TM_AVG' THEN tm_avg_tm_score ELSE fatcat_rmsd END AS score
             FROM
                 valid_rupee_fast
             UNION ALL
@@ -120,7 +120,7 @@ BEGIN
                 p_alg AS alg,
                 'RMSD' AS score_type,
                 db_id_1,
-                CASE WHEN p_alg = 'CE' THEN ce_rmsd WHEN p_alg = 'TM' THEN tm_rmsd ELSE fatcat_rmsd END AS score
+                CASE WHEN p_alg = 'CE' THEN ce_rmsd WHEN p_alg = 'TM_Q' THEN tm_q_rmsd WHEN p_alg = 'TM_AVG' THEN tm_avg_tm_score ELSE fatcat_rmsd END AS score
             FROM
                 valid_other
         ),

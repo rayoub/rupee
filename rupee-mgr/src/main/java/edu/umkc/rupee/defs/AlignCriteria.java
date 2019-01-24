@@ -15,7 +15,8 @@ public enum AlignCriteria {
     CECP(CeCPMain.algorithmName, new CECPParameters()),
     FATCAT_FLEXIBLE(FatCatFlexible.algorithmName, new FatCatParameters()),
     FATCAT_RIGID(FatCatRigid.algorithmName, new FatCatParameters()),
-    TM_ALIGN(null, null);
+    TM_Q_ALIGN(null, null),
+    TM_AVG_ALIGN(null, null);
 
     private String algorithmName;
     private ConfigStrucAligParams params; 

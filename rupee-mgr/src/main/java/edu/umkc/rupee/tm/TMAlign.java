@@ -17,7 +17,8 @@ public class TMAlign {
         private int chainLength1;
         private int chainLength2;
         private int alignedLength;
-        private double tmScore;
+        private double tmScoreQ;
+        private double tmScoreAvg;
         private double rmsd;
 
         public int getChainLength1() {
@@ -44,12 +45,20 @@ public class TMAlign {
             this.alignedLength = alignedLength;
         }
 
-        public double getTmScore1() {
-            return tmScore;
+        public double getTmScoreQ() {
+            return tmScoreQ;
         }
 
-        public void setTmScore(double tmScore) {
-            this.tmScore = tmScore;
+        public void setTmScoreQ(double tmScoreQ) {
+            this.tmScoreQ = tmScoreQ;
+        }
+
+        public double getTmScoreAvg() {
+            return tmScoreAvg;
+        }
+
+        public void setTmScoreAvg(double tmScoreAvg) {
+            this.tmScoreAvg = tmScoreAvg;
         }
 
         public double getRmsd() {
@@ -242,22 +251,6 @@ public class TMAlign {
                 }
             }
         }
-
-        // ********************************************************************************** //
-        // * early exit in super fast mode
-        // ********************************************************************************** //
-    
-        if (mode == Mode.SUPER_FAST) {
-
-            Results results = new Results();
-            results.setChainLength1(xlen);
-            results.setChainLength2(ylen);
-            results.setAlignedLength(0);
-            results.setTmScore(TMmax);
-            results.setRmsd(0);
-            
-            return results;
-        }
         
         // ********************************************************************************** //
         // * get initial alignment based on local superposition *
@@ -404,21 +397,29 @@ public class TMAlign {
         // ********************************************************************************* //
         
         MutableDouble rmsd = new MutableDouble(0.0);
+        double tmQ = 0.0;
+        double tmAvg = 0.0;
        
         // set score method 
         simplify_step = 1;
         score_sum_method = 0;
         
-        // normalized by length of chain 1
+        // normalized by length of query structure
         parameter_set4final(xlen);
         local_d0_search = d0_search;
-        double TMfinal = TMscore8_search(xtm, ytm, n_ali8, t, u, simplify_step, score_sum_method, rmsd, local_d0_search);
+        tmQ = TMscore8_search(xtm, ytm, n_ali8, t, u, simplify_step, score_sum_method, rmsd, local_d0_search);
         
+        // normalized by average length of structures
+        parameter_set4final((xlen+ylen)*0.5);
+        local_d0_search = d0_search;
+        tmAvg = TMscore8_search(xtm, ytm, n_ali8, t, u, simplify_step, score_sum_method, rmsd, local_d0_search);
+
         Results results = new Results();
         results.setChainLength1(xlen);
         results.setChainLength2(ylen);
         results.setAlignedLength(n_ali8);
-        results.setTmScore(TMfinal);
+        results.setTmScoreQ(tmQ);
+        results.setTmScoreAvg(tmAvg);
         results.setRmsd(rmsd0.getValue());
         
         return results;

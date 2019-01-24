@@ -16,8 +16,10 @@ public class AlignmentScores extends PGobject {
     private double ceTmScore = -1.0;
     private double fatCatRmsd = 0.0;
     private double fatCatTmScore = -1.0;
-    private double tmRmsd = 0.0;
-    private double tmTmScore = -1.0;
+    private double tmQRmsd = 0.0;
+    private double tmQTmScore = -1.0;
+    private double tmAvgRmsd = 0.0;
+    private double tmAvgTmScore = -1.0;
 
     public AlignmentScores() { }
 
@@ -30,8 +32,10 @@ public class AlignmentScores extends PGobject {
         this.ceTmScore = rs.getDouble("ce_tm_score");
         this.fatCatRmsd = rs.getDouble("fatcat_rmsd");
         this.fatCatTmScore = rs.getDouble("fatcat_tm_score");
-        this.tmRmsd = rs.getDouble("tm_rmsd");
-        this.tmTmScore = rs.getDouble("tm_tm_score");
+        this.tmQRmsd = rs.getDouble("tm_q_rmsd");
+        this.tmQTmScore = rs.getDouble("tm_q_tm_score");
+        this.tmAvgRmsd = rs.getDouble("tm_avg_rmsd");
+        this.tmAvgTmScore = rs.getDouble("tm_avg_tm_score");
     }
 
     public String getVersion() {
@@ -90,20 +94,36 @@ public class AlignmentScores extends PGobject {
         this.fatCatTmScore = fatCatTmScore;
     }
 
-    public double getTmRmsd() {
-        return tmRmsd;
+    public double getTmQRmsd() {
+        return tmQRmsd;
     }
 
-    public void setTmRmsd(double tmRmsd) {
-        this.tmRmsd = tmRmsd;
+    public void setTmQRmsd(double tmRmsd) {
+        this.tmQRmsd = tmRmsd;
     }
 
-    public double getTmTmScore() {
-        return tmTmScore;
+    public double getTmQTmScore() {
+        return tmQTmScore;
     }
 
-    public void setTmTmScore(double tmTmScore) {
-        this.tmTmScore = tmTmScore;
+    public void setTmQTmScore(double tmTmScore) {
+        this.tmQTmScore = tmTmScore;
+    }
+
+    public double getTmAvgRmsd() {
+        return tmAvgRmsd;
+    }
+
+    public void setTmAvgRmsd(double tmAvgRmsd) {
+        this.tmAvgRmsd = tmAvgRmsd;
+    }
+
+    public double getTmAvgTmScore() {
+        return tmAvgTmScore;
+    }
+
+    public void setTmAvgTmScore(double tmAvgTmScore) {
+        this.tmAvgTmScore = tmAvgTmScore;
     }
 
     public double getRmsd(AlignCriteria align) {
@@ -118,8 +138,11 @@ public class AlignmentScores extends PGobject {
             case FATCAT_FLEXIBLE:
                 rmsd = this.fatCatRmsd;
                 break;
-            case TM_ALIGN:
-                rmsd = this.tmRmsd;
+            case TM_Q_ALIGN:
+                rmsd = this.tmQRmsd;
+                break;
+            case TM_AVG_ALIGN:
+                rmsd = this.tmAvgRmsd;
                 break;
             default:
                 rmsd = 0.0;
@@ -140,8 +163,11 @@ public class AlignmentScores extends PGobject {
             case FATCAT_FLEXIBLE:
                 tmScore = this.fatCatTmScore;
                 break;
-            case TM_ALIGN:
-                tmScore = this.tmTmScore;
+            case TM_Q_ALIGN:
+                tmScore = this.tmQTmScore;
+                break;
+            case TM_AVG_ALIGN:
+                tmScore = this.tmAvgTmScore;
                 break;
             default:
                 tmScore = -1.0;
@@ -157,7 +183,8 @@ public class AlignmentScores extends PGobject {
             + dbId1 + "," + dbId2 + ","
             + ceRmsd + "," + ceTmScore + ","
             + fatCatRmsd + "," + fatCatTmScore + ","
-            + tmRmsd + "," + tmTmScore
+            + tmQRmsd + "," + tmQTmScore + ","
+            + tmAvgRmsd + "," + tmAvgTmScore
             + ")";
         return row;
     }

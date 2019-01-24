@@ -120,12 +120,16 @@ public class Labels {
                     case "G":
                     case "H":
                     case "I":
-                    case "T":
                         sse = "Helix";
                         break;
+                    case "T":
+                        sse = "Turn";
+                        break;
                     case "E":
-                    case "B":
                         sse = "Strand";
+                        break;
+                    case "B":
+                        sse = "Bridge";
                         break;
                     case "S":
                     case "C":

@@ -30,8 +30,10 @@ BEGIN
         ce_tm_score,
         fatcat_rmsd,
         fatcat_tm_score,
-        tm_rmsd,
-        tm_tm_score
+        tm_q_rmsd,
+        tm_q_tm_score,
+        tm_avg_rmsd,
+        tm_avg_tm_score
     )
     SELECT
         version,
@@ -41,8 +43,10 @@ BEGIN
         ce_tm_score,
         fatcat_rmsd,
         fatcat_tm_score,
-        tm_rmsd,
-        tm_tm_score
+        tm_q_rmsd,
+        tm_q_tm_score,
+        tm_avg_rmsd,
+        tm_avg_tm_score
     FROM
         UNNEST(p_tab) s
         LEFT JOIN ids
