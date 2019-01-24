@@ -287,7 +287,8 @@ public class Main {
             System.out.println("Length of chain 1: " + results.getChainLength1() + " residues");
             System.out.println("Length of chain 2: " + results.getChainLength2() + " residues");
             System.out.println("Aligned Length: " + results.getAlignedLength());
-            System.out.println("TM-score normalized by chain 1: " + results.getTmScore1());
+            System.out.println("TM-score normalized by query structure length: " + results.getTmScoreQ());
+            System.out.println("TM-score normalized by average structure length: " + results.getTmScoreAvg());
             System.out.println("RMSD: " + results.getRmsd());
             System.out.println("");
 
@@ -714,8 +715,9 @@ public class Main {
 
     private static void option_d(CommandLine line) throws Exception {
 
+
         /*
-        List<Labels.Label> labels = Labels.getLabels("d1ru4a_", DbTypeCriteria.SCOP);
+        List<Labels.Label> labels = Labels.getLabels("d2pf2a2", DbTypeCriteria.SCOP);
         for (Labels.Label label : labels) {
             System.out.println(label.getResidueNumber() + "," + label.getLabel());
         }
@@ -726,9 +728,7 @@ public class Main {
         AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "rmsd", DbTypeCriteria.SCOP, 100);
         AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "similarity", DbTypeCriteria.SCOP, 100);
         AlignResults.alignMtmDomResults("scop_d360", "scop_v2_07", DbTypeCriteria.SCOP, 100);
-        */
 
-        /*   
         AlignResults.alignRupeeResults("cath_d99", "cath_v4_2_0", "tm_score", DbTypeCriteria.CATH, 100);
         AlignResults.alignRupeeResults("cath_d99", "cath_v4_2_0", "rmsd", DbTypeCriteria.CATH, 100);
         AlignResults.alignRupeeResults("cath_d99", "cath_v4_2_0", "similarity", DbTypeCriteria.CATH, 100);
