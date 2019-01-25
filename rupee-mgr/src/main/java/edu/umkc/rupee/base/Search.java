@@ -17,14 +17,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.zip.GZIPInputStream;
 
-import org.biojava.nbio.structure.Atom;
 import org.biojava.nbio.structure.Structure;
-import org.biojava.nbio.structure.StructureException;
-import org.biojava.nbio.structure.StructureTools;
-import org.biojava.nbio.structure.align.ce.CeMain;
-import org.biojava.nbio.structure.align.ce.CeParameters;
-import org.biojava.nbio.structure.align.model.AFPChain;
-import org.biojava.nbio.structure.align.util.AFPChainScorer;
 import org.postgresql.ds.PGSimpleDataSource;
 
 import edu.umkc.rupee.bio.Parser;
@@ -38,6 +31,8 @@ import edu.umkc.rupee.lib.Db;
 import edu.umkc.rupee.lib.Hashes;
 import edu.umkc.rupee.lib.LCS;
 import edu.umkc.rupee.lib.Similarity;
+import edu.umkc.rupee.tm.Mode;
+import edu.umkc.rupee.tm.TMAlign;
 
 public abstract class Search {
 
@@ -93,7 +88,7 @@ public abstract class Search {
                 .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
                 .limit(criteria.mode.getLshCandidateCount()) 
                 .collect(Collectors.toList());
-
+            
             // cache map of residue grams
             List<String> dbIds = records.stream().map(SearchRecord::getDbId).collect(Collectors.toList());
             Map<String, List<Integer>> map = Db.getGrams(dbIds, criteria.dbType);
@@ -109,19 +104,18 @@ public abstract class Search {
                     }
                 });
 
-            // sort and filter lcs candidates
+            // sort lcs candidates
             records = records.stream()
                 .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
-                .limit(criteria.mode.getLcsCandidateCount()) 
                 .collect(Collectors.toList());
 
             // build comparator for final sorts
             Comparator<SearchRecord> comparator = getComparator(criteria);
 
-            // if mode is regular
+            // if mode is TOP_ALIGNED
             if (criteria.mode == ModeCriteria.TOP_ALIGNED) {
 
-                // *** cache common objects 
+                // *** parse query structure
         
                 Parser parser = new Parser(Integer.MAX_VALUE);
 
@@ -145,35 +139,37 @@ public abstract class Search {
                 }
 
                 Structure queryStructure = structure;
-               
-                // all we need 
-                final Atom[] queryAtoms = StructureTools.getAtomCAArray(queryStructure);
 
                 // *** perform alignments
                 
-                // unoptimized alignments
+                // filter for fast alignments 
+                records = records.stream()
+                    .limit(alignmentFilter(Mode.FAST, grams1.size()))
+                    .collect(Collectors.toList());
+                
+                // fast alignments
                 if (searchFrom == SearchFrom.SERVER) {
-                    records.stream().forEach(record -> align(record, queryAtoms, false));
+                    records.stream().forEach(record -> align(record, queryStructure, Mode.FAST));
                 }
                 else {
-                    records.stream().parallel().forEach(record -> align(record, queryAtoms, false));
+                    records.stream().parallel().forEach(record -> align(record, queryStructure, Mode.FAST));
                 }
 
-                // sort and filter for optimized alignments
+                // sort and filter for regular alignments
                 records = records.stream()
                     .sorted(comparator)
-                    .limit(criteria.mode.getAlgCandidateCount()) 
+                    .limit(alignmentFilter(Mode.REGULAR, grams1.size())) 
                     .collect(Collectors.toList());
-
-                // optimized alignments
+                
+                // regular alignments
                 if (searchFrom == SearchFrom.SERVER) {
-                    records.stream().forEach(record -> align(record, queryAtoms, true));
+                    records.stream().forEach(record -> align(record, queryStructure, Mode.REGULAR));
                 }
                 else {
-                    records.stream().parallel().forEach(record -> align(record, queryAtoms, true));
+                    records.stream().parallel().forEach(record -> align(record, queryStructure, Mode.REGULAR));
                 }
 
-            } // end mode == REGULAR
+            } // end mode == TOP_ALIGNED
 
             // sort using comparator from above
             records = records.stream()
@@ -210,6 +206,32 @@ public abstract class Search {
         return records;
     }
 
+    private int alignmentFilter(Mode mode, int gramCount) {
+
+        if (mode == Mode.FAST) {
+
+            if (gramCount <= 200) {
+                return 8000; 
+            }
+            else if (gramCount <= 300) {
+                return 6000;
+            }
+            else if (gramCount <= 400) {
+                return 4000;
+            }
+            else if (gramCount <= 500) {
+                return 2000;
+            }
+            else {
+                return 1000;
+            }
+        }
+        else { // mode == Mode.REGULAR
+            
+            return 400;
+        }
+    }
+
     private Comparator<SearchRecord> getComparator(SearchCriteria criteria) {
 
         Comparator<SearchRecord> comparator;
@@ -231,32 +253,31 @@ public abstract class Search {
         return comparator;
     }
 
-    private void align(SearchRecord record, Atom[] queryAtoms, boolean optimize) {
+    private void align(SearchRecord record, Structure queryStructure, Mode mode) {
 
         try {
        
-            CeMain alg = new CeMain(); 
-            CeParameters params = new CeParameters();
-            params.setOptimizeAlignment(optimize);
-
             FileInputStream targetFile = new FileInputStream(getDbType().getImportPath() + record.getDbId() + ".pdb.gz");
             GZIPInputStream targetFileGz = new GZIPInputStream(targetFile);
 
-            Parser parser2 = new Parser(Integer.MAX_VALUE);
-            Structure targetStructure = parser2.parsePDBFile(targetFileGz);
-            Atom[] targetAtoms = StructureTools.getAtomCAArray(targetStructure);
-      
-            AFPChain afps = alg.align(queryAtoms, targetAtoms, params);
-            afps.setTMScore(AFPChainScorer.getTMScore(afps, queryAtoms, targetAtoms));
+            Parser parser = new Parser(Integer.MAX_VALUE);
+            Structure targetStructure = parser.parsePDBFile(targetFileGz);
+     
+            TMAlign tm = new TMAlign(mode);
+            TMAlign.Results results = tm.align(queryStructure, targetStructure);
 
-            record.setRmsd(afps.getTotalRmsdOpt());
-            record.setTmScore(afps.getTMScore());
+            record.setRmsd(results.getRmsd());
+            record.setTmScore(results.getTmScoreAvg());
         }
         catch (IOException e) {
-            Logger.getLogger(Search.class.getName()).log(Level.INFO, null, e);
+            
+            record.setRmsd(Double.MAX_VALUE);
+            record.setTmScore(0);
         }
-        catch (StructureException e) {
-            Logger.getLogger(Search.class.getName()).log(Level.INFO, null, e);
+        catch (RuntimeException e) {
+            
+            record.setRmsd(Double.MAX_VALUE);
+            record.setTmScore(0);
         }
     }
 

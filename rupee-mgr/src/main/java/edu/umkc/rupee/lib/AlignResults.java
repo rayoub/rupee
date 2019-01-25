@@ -172,4 +172,82 @@ public class AlignResults
             Logger.getLogger(Aligning.class.getName()).log(Level.SEVERE, null, e);
         }
     }
+
+    public static void fillInResults(String version, DbTypeCriteria dbType) {
+
+        try {
+            
+            PGSimpleDataSource ds = Db.getDataSource();
+
+            Connection conn = ds.getConnection();
+            conn.setAutoCommit(false);
+
+            String command = "SELECT db_id_1, db_id_2 FROM alignment_scores WHERE version = ? AND tm_avg_tm_score = -1;";
+            PreparedStatement stmt = conn.prepareCall(command);
+            stmt.setString(1, version);
+
+            ResultSet rs = stmt.executeQuery();
+
+            PDBFileReader reader = new PDBFileReader();
+            reader.setFetchBehavior(FetchBehavior.LOCAL_ONLY);
+
+            while (rs.next()) {
+
+                String dbId1 = rs.getString("db_id_1");
+                String dbId2 = rs.getString("db_id_2");
+            
+                FileInputStream queryFile = new FileInputStream(dbType.getImportPath() + dbId1 + ".pdb.gz");
+                GZIPInputStream queryFileGz = new GZIPInputStream(queryFile);
+                Structure queryStructure = reader.getStructure(queryFileGz);
+
+                FileInputStream targetFile = new FileInputStream(dbType.getImportPath() + dbId2 + ".pdb.gz");
+                GZIPInputStream targetFileGz = new GZIPInputStream(targetFile);
+                Structure targetStructure = reader.getStructure(targetFileGz);
+                    
+                // perform tm-align alignment
+                try {
+                    TMAlign tm = new TMAlign();
+                    TMAlign.Results results = tm.align(queryStructure, targetStructure);
+
+                    saveAlignmentScores(version, dbId1, dbId2, results);
+                }
+                catch (RuntimeException e) {
+                    System.out.println("error comparing: " + dbId1 + ", " + dbId2);
+                }
+            }
+
+            rs.close();
+            stmt.close();
+            conn.close();
+
+        } catch (SQLException e) {
+            Logger.getLogger(Aligning.class.getName()).log(Level.SEVERE, null, e);
+        } catch (IOException e) {
+            Logger.getLogger(Aligning.class.getName()).log(Level.SEVERE, null, e);
+        }
+    }
+    
+    public static void saveAlignmentScores(String version, String dbId1, String dbId2, TMAlign.Results results) {
+
+        try {
+
+            PGSimpleDataSource ds = Db.getDataSource();
+            Connection conn = ds.getConnection();
+            conn.setAutoCommit(true);
+
+            PreparedStatement updt = conn.prepareStatement("UPDATE alignment_scores SET tm_avg_rmsd = ?, tm_avg_tm_score = ? WHERE version = ? AND db_id_1 = ? AND db_id_2 = ?;");
+
+            updt.setDouble(1, results.getRmsd());
+            updt.setDouble(2, results.getTmScoreAvg());
+            updt.setString(3, version);
+            updt.setString(4, dbId1);
+            updt.setString(5, dbId2);
+
+            updt.execute();
+            updt.close();
+        
+        } catch (SQLException e) {
+            Logger.getLogger(Db.class.getName()).log(Level.WARNING, null, e);
+        }
+    }
 }

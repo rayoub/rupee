@@ -715,7 +715,6 @@ public class Main {
 
     private static void option_d(CommandLine line) throws Exception {
 
-
         /*
         List<Labels.Label> labels = Labels.getLabels("d2pf2a2", DbTypeCriteria.SCOP);
         for (Labels.Label label : labels) {

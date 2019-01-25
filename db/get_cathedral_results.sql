@@ -9,7 +9,9 @@ RETURNS TABLE (
     fatcat_rmsd NUMERIC,
     fatcat_tm_score NUMERIC,
     tm_q_rmsd NUMERIC,
-    tm_q_tm_score NUMERIC
+    tm_q_tm_score NUMERIC,
+    tm_avg_rmsd NUMERIC,
+    tm_avg_tm_score NUMERIC
 )
 AS $$
 BEGIN
