@@ -1,6 +1,5 @@
 package edu.umkc.rupee.mgr;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -13,7 +12,6 @@ import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
-import java.util.zip.GZIPInputStream;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
@@ -23,10 +21,8 @@ import org.apache.commons.cli.Option;
 import org.apache.commons.cli.OptionGroup;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
-import org.biojava.nbio.structure.Structure;
 
 import edu.umkc.rupee.base.SearchRecord;
-import edu.umkc.rupee.bio.Parser;
 import edu.umkc.rupee.cath.CathHash;
 import edu.umkc.rupee.cath.CathImport;
 import edu.umkc.rupee.cath.CathSearch;
@@ -62,7 +58,6 @@ import edu.umkc.rupee.scop.ScopImport;
 import edu.umkc.rupee.scop.ScopSearch;
 import edu.umkc.rupee.scop.ScopSearchCriteria;
 import edu.umkc.rupee.scop.ScopSearchRecord;
-import edu.umkc.rupee.tm.Mode;
 import edu.umkc.rupee.tm.TMAlign;
 
 public class Main {
@@ -265,31 +260,8 @@ public class Main {
         String dbId1 = args[0];
         String dbId2 = args[1];
 
-        DbTypeCriteria dbType1 = DbId.getDbIdType(dbId1);
-        DbTypeCriteria dbType2 = DbId.getDbIdType(dbId2);
-
-        try {
-
-            FileInputStream queryFile = new FileInputStream(dbType1.getImportPath() + dbId1 + ".pdb.gz");
-            GZIPInputStream queryFileGz = new GZIPInputStream(queryFile);
-            FileInputStream targetFile = new FileInputStream(dbType2.getImportPath() + dbId2 + ".pdb.gz");
-            GZIPInputStream targetFileGz = new GZIPInputStream(targetFile);
-            
-            Parser parser = new Parser(Integer.MAX_VALUE);
-            Structure queryStructure = parser.parsePDBFile(queryFileGz);
-            Structure targetStructure = parser.parsePDBFile(targetFileGz);
-
-            queryStructure.setName(dbId1);
-            targetStructure.setName(dbId2);
-
-            TMAlign tmalign = new TMAlign(Mode.OUTPUT);
-            TMAlign.Results results = tmalign.align(queryStructure, targetStructure);
-
-            System.out.print(results.getOutput());
-
-        } catch (IOException e) {
-            Logger.getLogger(Aligning.class.getName()).log(Level.SEVERE, null, e);
-        }
+        TMAlign.Results results = Aligning.tmAlign(dbId1, dbId2);
+        System.out.print(results.getOutput());
     }
 
     private static void option_l(CommandLine line) throws SQLException {

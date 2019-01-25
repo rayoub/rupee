@@ -107,9 +107,9 @@ public class Aligning
         return record;
     }
     
-    public static String tmAlign(String dbId1, String dbId2) {
+    public static TMAlign.Results tmAlign(String dbId1, String dbId2) {
 
-        String output = "";
+        TMAlign.Results results = null;
 
         try {
 
@@ -131,20 +131,18 @@ public class Aligning
             targetStructure.setName(dbId2);
 
             TMAlign tm = new TMAlign(Mode.OUTPUT);
-            TMAlign.Results results = tm.align(queryStructure, targetStructure);
-
-            output = results.getOutput();
+            results = tm.align(queryStructure, targetStructure);
 
         } catch (IOException e) {
             Logger.getLogger(Aligning.class.getName()).log(Level.SEVERE, null, e);
         }
 
-        return output;
+        return results;
     }
 
-    public static String tmAlign(int uploadId, String dbId) {
+    public static TMAlign.Results tmAlign(int uploadId, String dbId) {
 
-        String output = "";
+        TMAlign.Results results = null;
 
         try {
 
@@ -164,14 +162,12 @@ public class Aligning
             targetStructure.setName(dbId);
 
             TMAlign tm = new TMAlign(Mode.OUTPUT);
-            TMAlign.Results results = tm.align(queryStructure, targetStructure);
-
-            output = results.getOutput();
+            results = tm.align(queryStructure, targetStructure);
 
         } catch (IOException e) {
             Logger.getLogger(Aligning.class.getName()).log(Level.SEVERE, null, e);
         }
 
-        return output;
+        return results;
     }
 }

@@ -22,6 +22,7 @@ public class TMAlign {
         private int chainLength2;
         private int alignedLength;
         private double tmScoreQ;
+        private double tmScoreT;
         private double tmScoreAvg;
         private double rmsd;
         private String output;
@@ -56,6 +57,14 @@ public class TMAlign {
 
         public void setTmScoreQ(double tmScoreQ) {
             this.tmScoreQ = tmScoreQ;
+        }
+
+        public double getTmScoreT() {
+            return tmScoreT;
+        }
+
+        public void setTmScoreT(double tmScoreT) {
+            this.tmScoreT = tmScoreT;
         }
 
         public double getTmScoreAvg() {
@@ -474,6 +483,7 @@ public class TMAlign {
         results.setChainLength2(ylen);
         results.setAlignedLength(n_ali8);
         results.setTmScoreQ(TM2);
+        results.setTmScoreT(TM1);
         results.setTmScoreAvg(TM3);
         results.setRmsd(rmsd0.getValue());
 
