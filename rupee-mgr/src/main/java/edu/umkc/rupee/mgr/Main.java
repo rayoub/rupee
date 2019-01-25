@@ -62,6 +62,7 @@ import edu.umkc.rupee.scop.ScopImport;
 import edu.umkc.rupee.scop.ScopSearch;
 import edu.umkc.rupee.scop.ScopSearchCriteria;
 import edu.umkc.rupee.scop.ScopSearchRecord;
+import edu.umkc.rupee.tm.Mode;
 import edu.umkc.rupee.tm.TMAlign;
 
 public class Main {
@@ -278,19 +279,13 @@ public class Main {
             Structure queryStructure = parser.parsePDBFile(queryFileGz);
             Structure targetStructure = parser.parsePDBFile(targetFileGz);
 
-            TMAlign tmalign = new TMAlign();
+            queryStructure.setName(dbId1);
+            targetStructure.setName(dbId2);
+
+            TMAlign tmalign = new TMAlign(Mode.OUTPUT);
             TMAlign.Results results = tmalign.align(queryStructure, targetStructure);
 
-            System.out.println("");
-            System.out.println("Name of chain 1: " + dbId1);
-            System.out.println("Name of chain 2: " + dbId2);
-            System.out.println("Length of chain 1: " + results.getChainLength1() + " residues");
-            System.out.println("Length of chain 2: " + results.getChainLength2() + " residues");
-            System.out.println("Aligned Length: " + results.getAlignedLength());
-            System.out.println("TM-score normalized by query structure length: " + results.getTmScoreQ());
-            System.out.println("TM-score normalized by average structure length: " + results.getTmScoreAvg());
-            System.out.println("RMSD: " + results.getRmsd());
-            System.out.println("");
+            System.out.print(results.getOutput());
 
         } catch (IOException e) {
             Logger.getLogger(Aligning.class.getName()).log(Level.SEVERE, null, e);

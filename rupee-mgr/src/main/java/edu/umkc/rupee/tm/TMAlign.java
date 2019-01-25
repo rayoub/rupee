@@ -1,10 +1,13 @@
 package edu.umkc.rupee.tm;
 
+import java.util.Formatter;
 import java.util.List;
+import java.util.Locale;
 import java.util.stream.Collectors;
 
 import org.apache.commons.lang3.mutable.MutableDouble;
 import org.apache.commons.lang3.mutable.MutableInt;
+import org.biojava.nbio.structure.AminoAcid;
 import org.biojava.nbio.structure.Atom;
 import org.biojava.nbio.structure.Chain;
 import org.biojava.nbio.structure.Group;
@@ -20,6 +23,7 @@ public class TMAlign {
         private double tmScoreQ;
         private double tmScoreAvg;
         private double rmsd;
+        private String output;
 
         public int getChainLength1() {
             return chainLength1;
@@ -68,6 +72,14 @@ public class TMAlign {
         public void setRmsd(double rmsd) {
             this.rmsd = rmsd;
         }
+
+        public String getOutput() {
+            return output;
+        }
+
+        public void setOutput(String output) {
+            this.output = output;
+        }
     }
 
     /*
@@ -113,6 +125,7 @@ public class TMAlign {
                                                     // structure --> superpose xa onto ya
     private double xtm[][], ytm[][];                // for TMscore search engine
     private double xt[][];                          // for saving the superposed version of r_1 or xtm
+    private char seqx[], seqy[];                    // for protein sequence
     private int secx[], secy[];                     // for the secondary structure
     private double r1[][], r2[][];                  // for Kabsch rotation
     private double t[];                             // Kabsch translation vector and rotation matrix
@@ -133,7 +146,11 @@ public class TMAlign {
         // ********************************************************************************** //
         // * load data *
         // ********************************************************************************** //
-        
+       
+        // chain names
+        String xname = xstruct.getName();
+        String yname = ystruct.getName();
+
         // get first chain in each structure
         Chain xchain = xstruct.getChains().get(0);
         Chain ychain = ystruct.getChains().get(0);
@@ -158,6 +175,8 @@ public class TMAlign {
         xtm = new double[minlen][3];
         ytm = new double[minlen][3];
         xt = new double[xlen][3];
+        seqx = new char[xlen];
+        seqy = new char[ylen];
         secx = new int[xlen];
         secy = new int[ylen];
         r1 = new double[minlen][3];
@@ -168,6 +187,16 @@ public class TMAlign {
         // get x atom coordinates
         xa = new double[xlen][3];
         for (int i = 0; i < xatoms.size(); i++) {
+
+            Group g = xatoms.get(i).getGroup();
+            if (g instanceof AminoAcid) {
+                AminoAcid aa = (AminoAcid)g;
+                seqx[i] = aa.getAminoType();
+            }
+            else {
+                seqx[i] = 'X';
+            }
+
             Atom atom = xatoms.get(i);
             xa[i][0] = atom.getX();
             xa[i][1] = atom.getY();
@@ -177,6 +206,16 @@ public class TMAlign {
         // get y atom coordinates
         ya = new double[ylen][3];
         for (int i = 0; i < yatoms.size(); i++) {
+            
+            Group g = yatoms.get(i).getGroup();
+            if (g instanceof AminoAcid) {
+                AminoAcid aa = (AminoAcid)g;
+                seqy[i] = aa.getAminoType();
+            }
+            else {
+                seqy[i] = 'X';
+            }
+
             Atom atom = yatoms.get(i);
             ya[i][0] = atom.getX();
             ya[i][1] = atom.getY();
@@ -323,7 +362,6 @@ public class TMAlign {
             }
         }
 
-
         // ********************************************************************************** //
         // * validate the final and best initial alignment *
         // ********************************************************************************** //
@@ -397,30 +435,170 @@ public class TMAlign {
         // ********************************************************************************* //
         
         MutableDouble rmsd = new MutableDouble(0.0);
-        double tmQ = 0.0;
-        double tmAvg = 0.0;
-       
+        double t0[] = new double[3];
+        double u0[][] = new double[3][3];
+        double TM1, TM2, TM3; // confusing but TM2 is normalized by first structure and TM1 by second
+        double d0_out=5.0;  
+        double Lnorm_0 = ylen;
+
         // set score method 
         simplify_step = 1;
         score_sum_method = 0;
-        
-        // normalized by length of query structure
-        parameter_set4final(xlen);
+    
+        //normalized by length of second structure
+        parameter_set4final(Lnorm_0);
+        double d0A=d0;
         local_d0_search = d0_search;
-        tmQ = TMscore8_search(xtm, ytm, n_ali8, t, u, simplify_step, score_sum_method, rmsd, local_d0_search);
+        TM1 = TMscore8_search(xtm, ytm, n_ali8, t0, u0, simplify_step, score_sum_method, rmsd, local_d0_search);
+        
+        // normalized by length of first structure
+        parameter_set4final(xlen);
+        double d0B=d0;
+        local_d0_search = d0_search;
+        TM2 = TMscore8_search(xtm, ytm, n_ali8, t, u, simplify_step, score_sum_method, rmsd, local_d0_search);
         
         // normalized by average length of structures
-        parameter_set4final((xlen+ylen)*0.5);
+        Lnorm_0=(xlen+ylen)*0.5;
+        parameter_set4final(Lnorm_0);
+        double d0a=d0;
         local_d0_search = d0_search;
-        tmAvg = TMscore8_search(xtm, ytm, n_ali8, t, u, simplify_step, score_sum_method, rmsd, local_d0_search);
+        TM3 = TMscore8_search(xtm, ytm, n_ali8, t, u, simplify_step, score_sum_method, rmsd, local_d0_search);
+        
+        // ********************************************************************************* //
+        // * Output *
+        // ********************************************************************************* //
 
         Results results = new Results();
         results.setChainLength1(xlen);
         results.setChainLength2(ylen);
         results.setAlignedLength(n_ali8);
-        results.setTmScoreQ(tmQ);
-        results.setTmScoreAvg(tmAvg);
+        results.setTmScoreQ(TM2);
+        results.setTmScoreAvg(TM3);
         results.setRmsd(rmsd0.getValue());
+
+        if (this.mode == Mode.OUTPUT) {
+
+            k = 0;
+            d = 0.0;
+
+            double seq_id;          
+            int i, j;
+            int ali_len = xlen + ylen;
+            char[] seqM = new char[ali_len];
+            char[] seqxA = new char[ali_len];
+            char[] seqyA = new char[ali_len];
+            
+            Functions.do_rotation(xa, xt, xlen, t, u);
+
+            seq_id=0;
+            int kk=0, i_old=0, j_old=0;
+            for(k=0; k<n_ali8; k++)
+            {
+                for(i=i_old; i<m1[k]; i++)
+                {
+                    //align x to gap
+                    seqxA[kk]=seqx[i];
+                    seqyA[kk]='-';
+                    seqM[kk]=' ';
+                    kk++;
+                }
+
+                for(j=j_old; j<m2[k]; j++)
+                {
+                    //align y to gap
+                    seqxA[kk]='-';
+                    seqyA[kk]=seqy[j];
+                    seqM[kk]=' ';
+                    kk++;
+                }
+
+                seqxA[kk]=seqx[m1[k]];
+                seqyA[kk]=seqy[m2[k]];
+                if(seqxA[kk]==seqyA[kk])
+                {
+                    seq_id++;
+                }
+                d = Math.sqrt(Functions.dist(xt[m1[k]], ya[m2[k]]));
+                if(d < d0_out)
+                {
+                    seqM[kk]=':';
+                }
+                else
+                {
+                    seqM[kk]='.';
+                }
+                kk++;
+                i_old=m1[k]+1;
+                j_old=m2[k]+1;
+            }
+
+            //tail
+            for(i=i_old; i<xlen; i++)
+            {
+                //align x to gap
+                seqxA[kk]=seqx[i];
+                seqyA[kk]='-';
+                seqM[kk]=' ';                   
+                kk++;
+            }    
+            for(j=j_old; j<ylen; j++)
+            {
+                //align y to gap
+                seqxA[kk]='-';
+                seqyA[kk]=seqy[j];
+                seqM[kk]=' ';
+                kk++;
+            }
+         
+            seq_id = seq_id/( n_ali8+0.00000001); //what did by TMalign, but not reasonable, it should be n_ali8
+        
+            StringBuilder sb = new StringBuilder();
+            Formatter formatter = new Formatter(sb, Locale.US);
+            
+            formatter.format("\nName of Chain_1: %s\n", xname); 
+            formatter.format("Name of Chain_2: %s\n", yname);
+            formatter.format("Length of Chain_1: %d residues\n", xlen);
+            formatter.format("Length of Chain_2: %d residues\n\n", ylen);
+
+            formatter.format("Aligned length= %d, RMSD= %6.2f, Seq_ID=n_identical/n_aligned= %4.3f\n", n_ali8, rmsd0.getValue(), seq_id); 
+            formatter.format("TM-score= %6.5f (if normalized by length of Chain_1)\n", TM2, xlen, d0B);
+            formatter.format("TM-score= %6.5f (if normalized by length of Chain_2)\n", TM1, ylen, d0A);
+            
+            double L_ave = (xlen + ylen) * 0.5;
+            formatter.format("TM-score= %6.5f (if normalized by average length of chains)\n", TM3, L_ave, d0a);
+            
+            //output structure alignment
+            formatter.format("\n(\":\" denotes residue pairs of d < %4.1f Angstrom, ", d0_out);
+            formatter.format("\".\" denotes other aligned residues)\n");
+            formatter.format("%s\n", new String(seqxA));
+            formatter.format("%s\n", new String(seqM));
+            formatter.format("%s\n\n", new String(seqyA));
+
+            formatter.close();
+
+            results.setOutput(sb.toString());
+
+            /*
+            System.out.printf("\nName of Chain_1: %s\n", xname); 
+            System.out.printf("Name of Chain_2: %s\n", yname);
+            System.out.printf("Length of Chain_1: %d residues\n", xlen);
+            System.out.printf("Length of Chain_2: %d residues\n\n", ylen);
+
+            System.out.printf("Aligned length= %d, RMSD= %6.2f, Seq_ID=n_identical/n_aligned= %4.3f\n", n_ali8, rmsd0.getValue(), seq_id); 
+            System.out.printf("TM-score= %6.5f (if normalized by length of Chain_1)\n", TM2, xlen, d0B);
+            System.out.printf("TM-score= %6.5f (if normalized by length of Chain_2)\n", TM1, ylen, d0A);
+            
+            double L_ave = (xlen + ylen) * 0.5;
+            System.out.printf("TM-score= %6.5f (if normalized by average length of chains)\n", TM3, L_ave, d0a);
+            
+            //output structure alignment
+            System.out.printf("\n(\":\" denotes residue pairs of d < %4.1f Angstrom, ", d0_out);
+            System.out.printf("\".\" denotes other aligned residues)\n");
+            System.out.printf("%s\n", new String(seqxA));
+            System.out.printf("%s\n", new String(seqM));
+            System.out.printf("%s\n\n", new String(seqyA));
+            */
+        }
         
         return results;
     }
