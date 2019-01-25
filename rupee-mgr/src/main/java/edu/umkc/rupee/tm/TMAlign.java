@@ -1,5 +1,6 @@
 package edu.umkc.rupee.tm;
 
+import java.util.Arrays;
 import java.util.Formatter;
 import java.util.List;
 import java.util.Locale;
@@ -570,34 +571,20 @@ public class TMAlign {
             //output structure alignment
             formatter.format("\n(\":\" denotes residue pairs of d < %4.1f Angstrom, ", d0_out);
             formatter.format("\".\" denotes other aligned residues)\n");
-            formatter.format("%s\n", new String(seqxA));
-            formatter.format("%s\n", new String(seqM));
-            formatter.format("%s\n\n", new String(seqyA));
+
+            for (i = 0; i < ali_len; i = i + 80) {
+
+                int from = i;
+                int to = Math.min(ali_len, i + 80);
+
+                formatter.format("%s\n", new String(Arrays.copyOfRange(seqxA, from, to)));
+                formatter.format("%s\n", new String(Arrays.copyOfRange(seqM, from, to)));
+                formatter.format("%s\n\n", new String(Arrays.copyOfRange(seqyA, from, to)));
+            }
 
             formatter.close();
 
             results.setOutput(sb.toString());
-
-            /*
-            System.out.printf("\nName of Chain_1: %s\n", xname); 
-            System.out.printf("Name of Chain_2: %s\n", yname);
-            System.out.printf("Length of Chain_1: %d residues\n", xlen);
-            System.out.printf("Length of Chain_2: %d residues\n\n", ylen);
-
-            System.out.printf("Aligned length= %d, RMSD= %6.2f, Seq_ID=n_identical/n_aligned= %4.3f\n", n_ali8, rmsd0.getValue(), seq_id); 
-            System.out.printf("TM-score= %6.5f (if normalized by length of Chain_1)\n", TM2, xlen, d0B);
-            System.out.printf("TM-score= %6.5f (if normalized by length of Chain_2)\n", TM1, ylen, d0A);
-            
-            double L_ave = (xlen + ylen) * 0.5;
-            System.out.printf("TM-score= %6.5f (if normalized by average length of chains)\n", TM3, L_ave, d0a);
-            
-            //output structure alignment
-            System.out.printf("\n(\":\" denotes residue pairs of d < %4.1f Angstrom, ", d0_out);
-            System.out.printf("\".\" denotes other aligned residues)\n");
-            System.out.printf("%s\n", new String(seqxA));
-            System.out.printf("%s\n", new String(seqM));
-            System.out.printf("%s\n\n", new String(seqyA));
-            */
         }
         
         return results;

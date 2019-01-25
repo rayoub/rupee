@@ -19,6 +19,8 @@ import org.biojava.nbio.structure.io.PDBFileReader;
 
 import edu.umkc.rupee.defs.AlignCriteria;
 import edu.umkc.rupee.defs.DbTypeCriteria;
+import edu.umkc.rupee.tm.Mode;
+import edu.umkc.rupee.tm.TMAlign;
 
 public class Aligning
 {
@@ -103,5 +105,73 @@ public class Aligning
         record.atoms2 = atoms2;
 
         return record;
+    }
+    
+    public static String tmAlign(String dbId1, String dbId2) {
+
+        String output = "";
+
+        try {
+
+            PDBFileReader reader = new PDBFileReader();
+            reader.setFetchBehavior(FetchBehavior.LOCAL_ONLY);
+
+            DbTypeCriteria dbType1 = DbId.getDbIdType(dbId1);
+            DbTypeCriteria dbType2 = DbId.getDbIdType(dbId2);
+
+            FileInputStream queryFile = new FileInputStream(dbType1.getImportPath() + dbId1 + ".pdb.gz");
+            GZIPInputStream queryFileGz = new GZIPInputStream(queryFile);
+            FileInputStream targetFile = new FileInputStream(dbType2.getImportPath() + dbId2 + ".pdb.gz");
+            GZIPInputStream targetFileGz = new GZIPInputStream(targetFile);
+
+            Structure queryStructure = reader.getStructure(queryFileGz);
+            Structure targetStructure = reader.getStructure(targetFileGz);
+
+            queryStructure.setName(dbId1);
+            targetStructure.setName(dbId2);
+
+            TMAlign tm = new TMAlign(Mode.OUTPUT);
+            TMAlign.Results results = tm.align(queryStructure, targetStructure);
+
+            output = results.getOutput();
+
+        } catch (IOException e) {
+            Logger.getLogger(Aligning.class.getName()).log(Level.SEVERE, null, e);
+        }
+
+        return output;
+    }
+
+    public static String tmAlign(int uploadId, String dbId) {
+
+        String output = "";
+
+        try {
+
+            PDBFileReader reader = new PDBFileReader();
+            reader.setFetchBehavior(FetchBehavior.LOCAL_ONLY);
+
+            DbTypeCriteria dbType = DbId.getDbIdType(dbId);
+
+            FileInputStream queryFile = new FileInputStream(Constants.UPLOAD_PATH + uploadId + ".pdb");
+            FileInputStream targetFile = new FileInputStream(dbType.getImportPath() + dbId + ".pdb.gz");
+            GZIPInputStream targetFileGz = new GZIPInputStream(targetFile);
+
+            Structure queryStructure = reader.getStructure(queryFile);
+            Structure targetStructure = reader.getStructure(targetFileGz);
+
+            queryStructure.setName("upload");
+            targetStructure.setName(dbId);
+
+            TMAlign tm = new TMAlign(Mode.OUTPUT);
+            TMAlign.Results results = tm.align(queryStructure, targetStructure);
+
+            output = results.getOutput();
+
+        } catch (IOException e) {
+            Logger.getLogger(Aligning.class.getName()).log(Level.SEVERE, null, e);
+        }
+
+        return output;
     }
 }
