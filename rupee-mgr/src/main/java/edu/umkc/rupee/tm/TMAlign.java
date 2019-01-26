@@ -582,10 +582,10 @@ public class TMAlign {
             formatter.format("\n(\":\" denotes residue pairs of d < %4.1f Angstrom, ", d0_out);
             formatter.format("\".\" denotes other aligned residues)\n");
 
-            for (i = 0; i < ali_len; i = i + 80) {
+            for (i = 0; i < ali_len; i = i + 120) {
 
                 int from = i;
-                int to = Math.min(ali_len, i + 80);
+                int to = Math.min(ali_len, i + 120);
 
                 formatter.format("%s\n", new String(Arrays.copyOfRange(seqxA, from, to)));
                 formatter.format("%s\n", new String(Arrays.copyOfRange(seqM, from, to)));
