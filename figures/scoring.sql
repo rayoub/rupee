@@ -36,7 +36,7 @@ BEGIN
             UNION 
             SELECT DISTINCT db_id_1 AS db_id FROM all_rupee_rmsd
             UNION
-            SELECT DISTINCT db_id_1 AS db_id FROM all_other
+            SELECT DISTINCT db_id_1 AS db_id FROM all_rupee_fast
         ),
         valid_other_id AS
         (
