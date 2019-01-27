@@ -5,12 +5,12 @@ WITH rupee_results AS
         n,
         db_id_1,
         db_id_2,
-        tm_rmsd,
-        tm_tm_score
+        tm_q_rmsd AS rupee_rmsd,
+        tm_q_tm_score AS rupee_tm_score
     FROM
-        get_rupee_results('scop_d50', 'scop_v2_07', 'tm_score', 50)
+        get_rupee_results('scop_d360', 'scop_v2_07', 'tm_score', 100)
     WHERE
-        db_id_1 = 'd2plsf2'
+        db_id_1 = 'd1p9ka1'
 ),
 mtm_results AS
 (
@@ -18,12 +18,12 @@ mtm_results AS
         n,
         db_id_1,
         db_id_2,
-        tm_rmsd,
-        tm_tm_score
+        tm_q_rmsd AS mtm_rmsd,
+        tm_q_tm_score AS mtm_tm_score
     FROM
-        get_mtm_dom_results('scop_d50','scop_v2_07', 50)
+        get_mtm_dom_results('scop_d360','scop_v2_07', 100)
     WHERE
-        db_id_1 = 'd2plsf2'
+        db_id_1 = 'd1p9ka1'
 ),
 mtm_first AS
 (
@@ -33,9 +33,9 @@ mtm_first AS
         m.db_id_2,
         CARDINALITY(g2.grams) AS length_2,
         m.n,
-        m.tm_tm_score AS mtm_tm_score,
+        m.mtm_tm_score,
         r.n,
-        r.tm_tm_score AS rupee_tm_score
+        r.rupee_tm_score
     FROM
         mtm_results m
         INNER JOIN scop_grams g1
@@ -55,9 +55,9 @@ rupee_first AS
         r.db_id_2,
         CARDINALITY(g2.grams) AS length_2,
         r.n,
-        r.tm_tm_score AS rupee_tm_score,
+        r.rupee_tm_score,
         m.n,
-        m.tm_tm_score AS mtm_tm_score
+        m.mtm_tm_score
     FROM
         rupee_results r
         INNER JOIN scop_grams g1
@@ -69,6 +69,6 @@ rupee_first AS
     ORDER BY
         r.n
 )
-SELECT * FROM mtm_first;
+SELECT * FROM rupee_first;
 
 

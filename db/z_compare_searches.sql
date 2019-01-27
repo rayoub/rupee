@@ -1,14 +1,13 @@
-
 WITH rupee_results AS
 (
     SELECT
         n,
         db_id_1,
         db_id_2,
-        tm_rmsd,
-        tm_tm_score
+        tm_q_rmsd AS rupee_rmsd,
+        tm_q_tm_score AS rupee_tm_score
     FROM
-        get_rupee_results('scop_d50', 'scop_v2_07', 'tm_score', 50)
+        get_rupee_results('scop_d360', 'scop_v2_07', 'tm_score', 50)
 ),
 mtm_results AS
 (
@@ -16,17 +15,17 @@ mtm_results AS
         n,
         db_id_1,
         db_id_2,
-        tm_rmsd,
-        tm_tm_score
+        tm_q_rmsd AS mtm_rmsd,
+        tm_q_tm_score AS mtm_tm_score
     FROM
-        get_mtm_dom_results('scop_d50','scop_v2_07', 50)
+        get_mtm_dom_results('scop_d360','scop_v2_07', 50)
 ),
 rupee_eval AS
 (
     SELECT
         db_id_1,
-        AVG(tm_rmsd) AS avg_tm_rmsd,
-        AVG(tm_tm_score) AS avg_tm_tm_score
+        AVG(rupee_rmsd) AS avg_rupee_rmsd,
+        AVG(rupee_tm_score) AS avg_rupee_tm_score
     FROM
         rupee_results
     GROUP BY
@@ -36,8 +35,8 @@ mtm_eval AS
 (
     SELECT
         db_id_1,
-        AVG(tm_rmsd) AS avg_tm_rmsd,
-        AVG(tm_tm_score) AS avg_tm_tm_score
+        AVG(mtm_rmsd) AS avg_mtm_rmsd,
+        AVG(mtm_tm_score) AS avg_mtm_tm_score
     FROM
         mtm_results
     GROUP BY
@@ -46,9 +45,9 @@ mtm_eval AS
 SELECT
     r.db_id_1,
     CARDINALITY(g.grams) AS residues,
-    r.avg_tm_tm_score AS rupee,
-    m.avg_tm_tm_score AS mtm,
-    CASE WHEN r.avg_tm_tm_score < m.avg_tm_tm_score - 0.03 THEN 1 END AS examine
+    r.avg_rupee_tm_score AS rupee,
+    m.avg_mtm_tm_score AS mtm,
+    CASE WHEN r.avg_rupee_tm_score + 0.05 < m.avg_mtm_tm_score THEN 1 END AS examine
 FROM
     rupee_eval r
     INNER JOIN mtm_eval m
@@ -57,5 +56,6 @@ FROM
         On g.scop_id = r.db_id_1
 ORDER BY
     r.db_id_1;
+
 
 
