@@ -497,17 +497,16 @@ As for the numerator, instead of using the total number of matched shingles, we 
 This LCS adjustment to the Jaccard similarity enforces the constraint that all valid shingles matches must appear in order along the length of each structure. 
 The final step of fast mode is to sort the matches based on the adjusted Jaccard similarity scores and return the results. 
 
-Top-aligned is an additional step following fast mode that uses CE to identify the best pairwise alignments among the top 2000 alignments from fast mode.
-First, we perform unoptimized CE alignments on the top 2000 matches obtained from fast mode. 
-Then, we perform optimized CE alignments on the top 400 matches based on the unoptimized alignments and these results are finally returned sorted either by RMSD or TM-score. 
-We limit the optimized CE alignments to the top 400 matches because for CE pairwise alignments, finding an optimized alignment through the use of dynamic programming is an additional time-intensive step.
-The details of the difference between unoptimized and optimized CE alignments can be found in \cite{Shindyalov1998}.
+Top-aligned is an additional step following fast mode that uses TM-align to identify the best pairwise alignments among the 8000 matches returned from fast mode.
+First, we execute TM-align on the 8000 matches obtained from fast mode using a reduced number of dynamic programming iterations in the TM-align algorithm. 
+We sort these initial alignments by the sort criterion entered by the user, either RMSD or TM-score, and obtain the top 400 matches.
+Finally, we execute TM-align using the default number of dynamic programming iterations on the top 400 matches and return the sorted results based on the sort criterion.
 
-The filter sizes of 8000, 2000, and 400 for fast mode, unoptimized CE alignments, and optimized CE alignments, respectively, have been chosen based on quality of results and speed. 
-We have found that increasing the size of each of these filters results in only marginal improvements in the quality of results. 
+The filter sizes of 8000 and 400 have been chosen based on quality of results and speed. 
+We have found that increasing the size of either of these filters results in only marginal improvements in the quality of results. 
 Given that performing pairwise alignments is the most time-consuming aspect of the RUPEE structure search, the marginal improvements gained from larger filter sizes have to be balanced against the number of pairwise alignments performed. 
 
-Top-aligned is a simple step following fast mode that establishes RUPEE fast mode as an effective filtering method that contains in its top 2000 results enough good matches to compete with the best available structure searches.
+Top-aligned is a simple step following fast mode that establishes RUPEE fast mode as an effective filtering method that contains in its top 8000 results enough good matches to compete with the best available structure searches.
 
 \section*{Results}
 
