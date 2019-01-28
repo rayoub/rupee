@@ -1,10 +1,10 @@
 
 DO $$
 
-    DECLARE p_benchmark VARCHAR := 'scop_d360'; -- scop_d360, scop_d62, or cath_d99
-    DECLARE p_version VARCHAR := 'scop_v2_07'; -- scop_v2_07, scop_v1_73, or cath_v4_2_0
+    DECLARE p_benchmark VARCHAR := 'cath_d99'; -- scop_d360, scop_d62, or cath_d99
+    DECLARE p_version VARCHAR := 'cath_v4_2_0'; -- scop_v2_07, scop_v1_73, or cath_v4_2_0
     DECLARE p_limit INTEGER := 100; -- 50, 100
-    DECLARE p_other VARCHAR := 'mTM'; -- mTM, SSM, or CATHEDRAL
+    DECLARE p_other VARCHAR := 'CATHEDRAL'; -- mTM, SSM, or CATHEDRAL
     DECLARE p_alg VARCHAR = 'TM_AVG'; -- CE, FATCAT, TM_Q, or TM_AVG
 
     -- don't forget to change get_*_results as needed
@@ -28,7 +28,7 @@ BEGIN
         ),
         all_other AS
         (   
-            SELECT * FROM get_mtm_dom_results(p_benchmark, p_version, p_limit)
+            SELECT * FROM get_cathedral_results(p_benchmark, p_version, p_limit)
         ),
         valid_rupee_id AS
         (
@@ -100,7 +100,7 @@ BEGIN
                 p_alg AS alg,
                 'RMSD' AS score_type,
                 db_id_1,
-                CASE WHEN p_alg = 'CE' THEN ce_rmsd WHEN p_alg = 'TM_Q' THEN tm_q_rmsd WHEN p_alg = 'TM_AVG' THEN tm_avg_tm_score ELSE fatcat_rmsd END AS score
+                CASE WHEN p_alg = 'CE' THEN ce_rmsd WHEN p_alg = 'TM_Q' THEN tm_q_rmsd WHEN p_alg = 'TM_AVG' THEN tm_avg_rmsd ELSE fatcat_rmsd END AS score
             FROM
                 valid_rupee_rmsd
             UNION ALL
@@ -110,7 +110,7 @@ BEGIN
                 p_alg AS alg,
                 'RMSD' AS score_type,
                 db_id_1,
-                CASE WHEN p_alg = 'CE' THEN ce_rmsd WHEN p_alg = 'TM_Q' THEN tm_q_rmsd WHEN p_alg = 'TM_AVG' THEN tm_avg_tm_score ELSE fatcat_rmsd END AS score
+                CASE WHEN p_alg = 'CE' THEN ce_rmsd WHEN p_alg = 'TM_Q' THEN tm_q_rmsd WHEN p_alg = 'TM_AVG' THEN tm_avg_rmsd ELSE fatcat_rmsd END AS score
             FROM
                 valid_rupee_fast
             UNION ALL
@@ -120,7 +120,7 @@ BEGIN
                 p_alg AS alg,
                 'RMSD' AS score_type,
                 db_id_1,
-                CASE WHEN p_alg = 'CE' THEN ce_rmsd WHEN p_alg = 'TM_Q' THEN tm_q_rmsd WHEN p_alg = 'TM_AVG' THEN tm_avg_tm_score ELSE fatcat_rmsd END AS score
+                CASE WHEN p_alg = 'CE' THEN ce_rmsd WHEN p_alg = 'TM_Q' THEN tm_q_rmsd WHEN p_alg = 'TM_AVG' THEN tm_avg_rmsd ELSE fatcat_rmsd END AS score
             FROM
                 valid_other
         ),
