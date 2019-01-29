@@ -609,15 +609,19 @@ However, it is not clear how to define reasonable.
 On the other hand, if precision is too high, the search provides little value beyond that provided by the structure classification hierarchy it is searching. 
 Towards the extreme end of high precision, it would be sufficient for a search to return the best match and from there refer to the hierarchy for additional results. 
 
-Similar to the scoring evaluations above, RUPEE fast and top-aligned, sorted by both RMSD and TM-score, show higher precision than SSM and CATHEDRAL with the exception of RUPEE top-aligned sorted by RMSD for ranks lower than 10 compared against SSM. 
+RUPEE fast and top-aligned sorted by TM-score show higher precision than SSM and CATHEDRAL.
+mTM shows higher precision than RUPEE fast. 
+However, RUPEE top-aligned sorted by TM-score shows equal or higher precision than mTM up to the 50\textsuperscript{th} result and then drops below that of mTM. 
+The lower precision after the 50\textsuperscript{th} result can be attributed, in large part, to the differences in normalization. 
+A good example of this is for the search on domain d1j6va\_ from scop\_d360 having 148 residues.
+After the initial block of closely matched structures, mTM begins returning structures within the same fold with more than 200 residues like d1q2la2 and d1q2la3.
+On the other hand, RUPEE begins to look outside the fold to structures like d2fyxb2 and d2fyxa1 that provide better full-length alignments with respect to both the query and the target protein.  
 
-Again, mTM faired better than SSM and CATHEDRAL. 
-Notably, mTM also shows clearly higher precision than RUPEE top-aligned, sorted by both RMSD and TM-score. 
-In the absence of \figurename~\ref{fig:combined_scoring_ce}, one may be led to regard this as a negative result. 
-However, to the contrary, in the presence of \figurename~\ref{fig:combined_scoring_ce}, where it is shown that RUPEE and mTM have almost identical scoring, this result is remarkable. 
-This disparity suggest that RUPEE is better able to find significantly similar matches not necessarily aligned with the SCOPe hierarchy. 
-In fact, since the initial min-hashing and LSH technique used by RUPEE check for similarity to all available structures, no structure is able to hide behind a sequence based cluster representative. 
-So this result is in keeping with how RUPEE is intended to work and how it is described above. 
+RUPEE top-aligned sorted by RMSD shows higher precision than for CATHEDRAL but lower precision than mTM and SSM. 
+Also, RUPEE top-aligned sorted by RMSD shows lower precision than both RUPEE fast and RUPEE top-aligned sorted by TM-score.
+The lower precision for RUPEE top-aligned sorted by RMSD is a direct consequence of RMSD not being suitable for full-length alignments as discussed above in \emph{Related work}.
+For this reason, it is advised to sort RUPEE top-aligned results by TM-score. 
+RUPEE top-align provides a sort by RMSD only for the sake of completeness.
 
 \subsection*{Response times}
 
@@ -641,12 +645,11 @@ Loess regression curves are also provided to further highlight the overall trend
 \end{figure*}
 
 In all cases, RUPEE fast is considerably faster than all other searches. 
-It is also clear that fast mode is not as sensitive to increasing residue counts in contrast to CATHEDRAL and RUPEE top-aligned.
-Response times for SSM are not affected by residue counts at all and always returns results in less than 100 seconds but this is at the expense of performance as shown in \figurename~\ref{fig:combined_scoring_ce}.
+It is also clear that fast mode is not as sensitive to increasing residue counts in contrast to RUPEE top-aligned, mTM and CATHEDRAL.
+Response times for SSM are not affected by residue counts at all and always returns results in less than 100 seconds but this is at the expense of performance as shown in \figurename~\ref{fig:combined_scoring_tm_avg}.
 
-In the left plot of \figurename~\ref{fig:combined_response}, it is shown that RUPEE top-aligned is faster than mTM for residue counts below 200, but then response times for RUPEE increase beyond that of mTM. 
-Down the stretch, mTM provides increasingly better response times than RUPEE, while RUPEE is still able to provide reasonable response times. 
-The right plot of \figurename~\ref{fig:combined_response} shows RUPEE top-aligned is significantly faster than CATHEDRAL for all residue counts. 
+The left plot of \figurename~\ref{fig:combined_response} shows that RUPEE top-aligned is faster than mTM for all residue counts. 
+Likewise, the right plot of \figurename~\ref{fig:combined_response} shows that RUPEE top-aligned is significantly faster than CATHEDRAL for all residue counts. 
 
 The trend of increasing response times for RUPEE top-aligned is a direct result of the pairwise structure comparisons that are performed on the top 8000 results provided by RUPEE fast mode.
 
@@ -703,8 +706,8 @@ The ability for RUPEE to quickly examine all structures among hundreds of thousa
 \label{S3_Fig}
 {\bf Scoring from FATCAT pairwise alignments.} 
 
-\paragraph*{S3 Methods Addendum.}
-\label{S3_Methods}
+\paragraph*{S4 Methods Addendum.}
+\label{S4_Methods}
 {\bf Run factors for shingles instead of descriptors.} 
 
 
