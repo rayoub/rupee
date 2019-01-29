@@ -229,7 +229,7 @@ Yugyung Lee\textsuperscript{1}
 Given the close relationship between protein structure and function, protein structure searches have long played an established role in bioinformatics. 
 Despite their maturity, existing protein structure searches either use simplifying assumptions or compromise between fast response times and quality of results. 
 These limitations can prevent the easy and efficient exploration of relationships between protein structures, which is the norm in other areas of inquiry.
-We have developed RUPEE, a fast, scalable, and purely geometric structure search combining techniques from information retrieval and big data with a novel approach to encoding sequences of torsion angles.
+To address these limitations we have developed RUPEE, a fast and accurate purely geometric structure search combining techniques from information retrieval and big data with a novel approach to encoding sequences of torsion angles.
     
 Comparing our results to the output of mTM, SSM, and the CATHEDRAL structural scan, it is clear that RUPEE has set a new bar for purely geometric big data approaches to protein structure searches.
 RUPEE in top-aligned mode produces equal or better results than the best available protein structure searches, and RUPEE in fast mode demonstrates the fastest response times coupled with high quality results. 
@@ -248,7 +248,7 @@ Protein structure determination, prediction, alignment, and search all serve to 
 Below, we present our approach to a fast, scalable, and purely geometric protein structure search we refer to with the acronym of \emph{RUn Position Encoded Encodings} of residue descriptors (RUPEE).
 
 Given a protein domain identifier, whole chain identifier or an uploaded PDB file, RUPEE can search for matches among domains defined in SCOPe 2.07 \cite{Fox2013}, CATH v4.2 \cite{Orengo1997}, ECOD develop210 \cite{Cheng2014}, or among whole chains defined in the PDB.
-RUPEE is able to search either of these databases using any identifier. 
+RUPEE is able to search these databases using any identifier. 
 For instance, you can search SCOPe using a CATH domain identifier. 
 
 RUPEE has two modes of operation, fast and top-aligned. 
@@ -542,12 +542,12 @@ Since mTM uses the default asymmetric normalization provided by TM-align, this a
 
 RUPEE top-aligned uses the TM-align option of normalizing by the average length. 
 This results in symmetric scoring where the order of the structures in the alignment has no effect on the TM-score.
-The first reason we use symmetric scoring in top-aligned is to synergistically match the min-hashing and LSH layer, which filters results based on the Jaccard similarity, a symmetric similarity measure.
+The first reason we use symmetric scoring in RUPEE top-aligned is to synergistically match the min-hashing and LSH layer, which filters results based on the Jaccard similarity, a symmetric similarity measure.
 If, on the other hand, RUPEE top-aligned normalizes by the query structure, scoring and precision are negatively effected. 
 The second reason is that we plan to extend RUPEE to include both \emph{contained by} and \emph{contains} searches and do not want to favor one at the expense of the other by using asymmetric scoring. 
 
 To examine how these difference effect RUPEE top-aligned and mTM results, we gathered the maximum percentage differences in length among the results for each structure search for domains in scop\_d360.
-We averaged these maximum percentage differences and found the average for RUPEE is 19.4\% and for mTM it is 90.8\%. 
+We averaged these maximum percentage differences and found the average for RUPEE is 19.4\% and for mTM is 90.8\%. 
 Whereas for RUPEE, these difference reflect larger and smaller query structures equally, for mTM, the larger difference always reflect a query structure smaller than the target structure. 
 Most of the extreme cases of mTM matching a small structure to a larger structure several times its size is matching small helical fragments to larger transmembrane proteins or other proteins with helical bundles. 
 
@@ -577,7 +577,7 @@ mTM also performed better than RUPEE fast, although RUPEE fast is still within 0
 For both TM-score and RMSD, RUPEE top-aligned performed better than mTM. 
 For RMSD, RUPEE top-aligned does perform better than mTM but this can most likely be attributed to the fact that mTM only sorts by TM-score. 
 If mTM sorted by RMSD, their results likely will be improved. 
-Nevertheless, it is worth noting that the initial LSH and min-hashing technique does not explicitly bias results towards one particular measure. 
+Nevertheless, it is worth noting that the initial min-hashing and LSH technique used by RUPEE does not explicitly bias results towards one particular measure. 
 
 \figurename~\ref{fig:combined_scoring_tm_q} again shows average cumulative values for each ranked result averaged over all searches but only for RUPEE and mTM. 
 The difference here is that instead of normalizing by the average length of the protein structures we show results for TM-align normalized by the length of the query structure. 
@@ -668,10 +668,10 @@ However, on a single compute unit, the time required is more than we are willing
 
 One possible drawback of RUPEE is that in both fast and top-aligned modes, it only returns the top 400 results. 
 Again, with more resources, this number can be increased, but there still remains a need for some kind of cut-off. 
-Nonetheless, in most search tools, having to looking past the first few hundred results usually indicates an ineffective search strategy.
+Nonetheless, in most search tools, having to look past the first few hundred results usually indicates an ineffective search strategy.
 To this end, RUPEE provides filters that can be used for traversing structure space more efficiently. 
-For SCOPe, CATH, and ECOD you can instruct the search to only return domains that differ from the query structure at a chosen hierarchy level classification. 
-Additionally, for CATH you can filter results based on hierarchy level representatives. 
+For SCOPe, CATH, and ECOD the user can instruct the search to only return domains that differ from the query structure at a chosen hierarchy level classification. 
+Additionally, for CATH the user can filter results based on hierarchy level representatives. 
 Since RUPEE does not rely on sequence clusters or pre-calculated results, these kinds of filters are easy to implement, do not reduce the number of returned results, and allow for the discovery of unexpected structural similarities across classification hierarchies.  
 
 One area that stands out for possible improvement is our longest common subsequence (LCS) scoring adjustment to the results initially returned by RUPEE. 
