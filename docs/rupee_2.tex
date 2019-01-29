@@ -259,7 +259,7 @@ On the other hand, the accuracy and response times of RUPEE in top-aligned mode 
 RUPEE stands out as not just another protein structure search, of which there are many. 
 RUPEE is the first, to our knowledge, purely geometric protein structure search to achieve results as good as the best available protein structure searches. 
 Being purely geometric, the kinds of matches that RUPEE returns are not biased toward a structure classification hierarchy such as SCOPe or sequence clusters such as the PDB-90.
-Moreover, without a dependence on pre-calculated results, it is easy to apply a number of filters to the protein structures RUPEE searches in order to better focus on structures of interest.
+Moreover, without a dependence on pre-calculated results, it is easy to apply filters at any level of granularity to the protein structures RUPEE searches in order to better focus on structures of interest.
 As one example, domains not having the same fold classification as the query structure can be searched exclusively to investigate unexpected structural relationships across folds. 
 In this regard, RUPEE makes a fundamental contribution to protein structure research that also provides a path for further research in the direction of big data representations of protein structures. 
 
@@ -525,24 +525,45 @@ For instance, while filtering the benchmarks based on the number of results retu
 We perform pairwise evaluations to ensure the fairness of our comparisons. 
 First, for domain searches, SSM is working with the SCOP 1.73 database, so accordingly we operate RUPEE on SCOP 1.73 domains to ensure RUPEE does not have more domains to work with for scoring and precision evaluations. 
 Second, mTM is updated to work with SCOPe 2.07 domain definitions but still retains domains from 2.06 that have since been redefined either through mergers or splits in 2.07. 
-On the other hand, CATHEDRAL presents no such challenges but still requires a separate benchmark since it is working with a distinct hierarchy, CATH v4.2. 
+On the other hand, CATHEDRAL presents no such challenges but still requires a separate benchmark since it is working with a distinct set of domains, CATH v4.2. 
 
 All benchmark definitions can be found in \nameref{S1_Benchmarks}. 
 
+\subsection*{Alignment normalization}
+
+The differences in approach among pairwise structure alignment tools can complicate efforts to achieve a fair comparison of protein structure searches that depend on them.
+Specifically, while RUPEE top-aligned and mTM both use TM-align for pairwise structure alignments, RUPEE normalizes by the average length of the aligned structures whereas mTM normalizes by the length of the query structure.
+Given how close the RUPEE top-aligned and mTM results shown below are with respect to scoring and precision, it is important to first examine the impact of each kind of normalization on the comparisons and also explain why we have chosen to normalize by the average length of the aligned structures for RUPEE top-aligned.
+
+By default, TM-align normalizes by the length of the query structure, that is, the first structure passed to it. 
+This normalization is asymmetric since higher TM-scores result when the query structure is smaller than the target structure and conversely, lower TM-scores result when the query structure is larger than the target structure. 
+In extreme cases, high TM-scores can be achieved even when the target structure is 10 times larger than the query structure so long as the query structure can be aligned somewhere within the target structure. 
+Since mTM uses the default asymmetric normalization provided by TM-align, this asymmetry becomes apparent in a detailed examination of mTM results. 
+
+RUPEE top-aligned uses the TM-align option of normalizing by the average length. 
+This results in symmetric scoring where the order of the structures in the alignment has no effect on the TM-score.
+The first reason we use symmetric scoring in top-aligned is to synergistically match the min-hashing and LSH layer, which filters results based on the Jaccard similarity, a symmetric similarity measure.
+If, on the other hand, RUPEE top-aligned normalizes by the query structure, scoring and precision are negatively effected. 
+The second reason is that we plan to extend RUPEE to include both \emph{contained by} and \emph{contains} searches and do not want to favor one at the expense of the other by using asymmetric scoring. 
+
+To examine how these difference effect RUPEE top-aligned and mTM results, we gathered the maximum percentage differences in length among the results for each structure search for domains in scop\_d360.
+We averaged these maximum percentage differences and found the average for RUPEE is 19.4\% and for mTM it is 90.8\%. 
+Whereas for RUPEE, these difference reflect larger and smaller query structures equally, for mTM, the larger difference always reflect a query structure smaller than the target structure. 
+Most of the extreme cases of mTM matching a small structure to a larger structure several times its size is matching small helical fragments to larger transmembrane proteins or other proteins with helical bundles. 
+
+Given the difference in normalization between RUPEE and mTM, to be fair, we compare RUPEE scoring with mTM scoring below using TM-align normalized by the length of the query structure in addition to the average length of aligned structures. 
+
 \subsection*{Scoring}
 
-\figurename~\ref{fig:combined_scoring_ce} shows average cumulative values for each ranked result averaged over all searches.
-Both RMSD and TM-score values are shown, provided as outputs from optimized CE pairwise alignments. 
+\figurename~\ref{fig:combined_scoring_tm_avg} shows average cumulative values for each ranked result averaged over all searches.
+Both RMSD and TM-score values are shown, provided as outputs from TM-align pairwise alignments normalized by the average length of aligned structures.
 A TM-score above 0.5 is a good predictor for whether or not two domains are in the same fold \cite{Xu2010}.
 TM-scores greater than 0.17 are considered potentially meaningful whereas TM-scores less than 0.17 are considered to be due to random alignment \cite{Zhang2004}.
 
 \begin{figure*}[!h]
-\caption{Scoring from CE pairwise alignments for RUPEE fast, RUPEE top-aligned sorted by TM-score, and RUPEE top-aligned sorted by RMSD}
-\label{fig:combined_scoring_ce}
+\caption{Scoring from TM-align pairwise alignments normalized by the average length of aligned structures for RUPEE fast, RUPEE top-aligned sorted by TM-score, and RUPEE top-aligned sorted by RMSD}
+\label{fig:combined_scoring_tm_avg}
 \end{figure*}
-
-A figure similar to \figurename~\ref{fig:combined_scoring_ce} but using FATCAT for pairwise comparisons can be found in \nameref{S2_Fig}. 
-The same relative relationships hold with only small variations. 
 
 RUPEE fast, top-aligned sorted by RMSD, and top-aligned sorted by TM-score, perform better than SSM and CATHEDRAL.
 The scoring in the cath\_d99 benchmark comparisons are notably lower than for the other two benchmarks. 
@@ -553,10 +574,24 @@ Given that the cath\_d99 benchmark is evaluated against representatives, there a
 In our evaluation, mTM faired better than SSM and CATHEDRAL. 
 mTM also performed better than RUPEE fast, although RUPEE fast is still within 0.08 TM-score points of mTM at the 100\textsuperscript{th} result, which is notable considering its speed.
 
-For TM-score, RUPEE top-aligned and mTM are nearly identical with RUPEE slightly better for ranks less than 50 and mTM better for ranks greater than 50. 
+For both TM-score and RMSD, RUPEE top-aligned performed better than mTM. 
 For RMSD, RUPEE top-aligned does perform better than mTM but this can most likely be attributed to the fact that mTM only sorts by TM-score. 
-If mTM sorted by RMSD we suspect the results again would be nearly identical.
+If mTM sorted by RMSD, their results likely will be improved. 
 Nevertheless, it is worth noting that the initial LSH and min-hashing technique does not explicitly bias results towards one particular measure. 
+
+\figurename~\ref{fig:combined_scoring_tm_q} again shows average cumulative values for each ranked result averaged over all searches but only for RUPEE and mTM. 
+The difference here is that instead of normalizing by the average length of the protein structures we show results for TM-align normalized by the length of the query structure. 
+This time, mTM  performs better than RUPEE top-aligned sorted by TM-score.  
+
+\begin{figure*}[!h]
+\caption{Scoring from TM-align pairwise alignments normalized by the length of the query structure for RUPEE fast, RUPEE top-aligned sorted by TM-score, and RUPEE top-aligned sorted by RMSD}
+\label{fig:combined_scoring_tm_q}
+\end{figure*}
+
+Taken together, \figurename~\ref{fig:combined_scoring_tm_avg} and \figurename~\ref{fig:combined_scoring_tm_q} show that the results of RUPEE and mTM are roughly equal and where they do differ is a result of the differences in normalization. 
+
+Figures similar to \figurename~\ref{fig:combined_scoring_tm_avg} but instead using CE and FATCAT for pairwise comparisons can be found in \nameref{S2_Fig} \nameref{S3_Fig}, respectively. 
+These additional figures lend further support to what has already been show above.
 
 \subsection*{Precision}
 
