@@ -269,7 +269,7 @@ Further, the \emph{run position encoding} heuristic introduced below may have wi
 We first discuss some related work to provide a context for our approach followed by a description of our method. 
 We end with a comparison of results against the mTM-align structure search \cite{Dong2018}, the secondary structure matching (SSM) search \cite{Krissinel2004}, and the CATHEDRAL structural scan \cite{Redfern2007} available at the CATH website.
 
-\section*{Related Work}
+\section*{Related work}
 
 Pairwise alignment involves finding a set of spatial rotations and translations for two protein structures that minimizes a distance metric. 
 Traditionally, the root mean squared deviation (RMSD) between \cas of aligned residues is minimized.
@@ -588,7 +588,7 @@ This time, mTM  performs better than RUPEE top-aligned sorted by TM-score.
 \label{fig:combined_scoring_tm_q}
 \end{figure*}
 
-Taken together, \figurename~\ref{fig:combined_scoring_tm_avg} and \figurename~\ref{fig:combined_scoring_tm_q} show that the results of RUPEE and mTM are roughly equal and where they do differ is a result of the differences in normalization. 
+Taken together, Figs~\ref{fig:combined_scoring_tm_avg}~and~\ref{fig:combined_scoring_tm_q} show that the results of RUPEE and mTM are roughly equal and where they do differ is a result of the differences in normalization. 
 
 Figures similar to \figurename~\ref{fig:combined_scoring_tm_avg} but instead using CE and FATCAT for pairwise comparisons can be found in \nameref{S2_Fig} and \nameref{S3_Fig}, respectively. 
 These additional figures lend further support to what has already been show above.
@@ -692,7 +692,7 @@ Currently, RUPEE fast is the fastest available protein structure search providin
 For RUPEE top-aligned, we have shown that a purely geometric big data approach to protein structure search is able to produce results equal to or better than the current state of the art protein structure searches that variously depend on clustered sequences or pre-calculated results. 
 The ability for RUPEE to quickly examine all structures among hundreds of thousands sets it apart as a tool that can be used for discovering previously undetected structural similarities.
 
-\section*{Supporting Information}
+\section*{Supporting information}
 
 \paragraph*{S1 Benchmarks.}
 \label{S1_Benchmarks}
@@ -726,10 +726,227 @@ The ability for RUPEE to quickly examine all structures among hundreds of thousa
 % here. See http://journals.plos.org/plosone/s/latex for 
 % step-by-step instructions.
 % 
+\begin{thebibliography}{10}
 
-\nocite{Ayoub2017}
-\nocite{BioJava2012}
-\bibliography{rupee_2}
+\bibitem{Crick1970}
+Crick F.
+\newblock Central dogma of molecular biology.
+\newblock Nature. 1970;227(5258):561--563.
+
+\bibitem{Fox2013}
+Fox NK, Brenner SE, Chandonia JM.
+\newblock {SCOP}e: Structural Classification of Proteins - extended,
+  integrating {SCOP} and {ASTRAL} data and classification of new structures.
+\newblock Nucleic Acids Res. 2014;42(1):304--309.
+
+\bibitem{Orengo1997}
+Orengo C, Mitchie A, Jones S, Jones DT, Swindells M, Thornton JM.
+\newblock {CATH} - A hierarchic classification of protein domain structures.
+\newblock Structure. 1997;5(8):1093--1109.
+
+\bibitem{Cheng2014}
+Cheng H, Schaeffer RD, Liao Y, Kinch LN, Pei J, Shi S, et~al.
+\newblock {ECOD: An Evolutionary Classification of Protein Domains}.
+\newblock PLoS Computational Biology. 2014;10(12).
+
+\bibitem{Dong2018}
+Dong R, Pan S, Peng Z, Zhang Y, Yang J.
+\newblock {mTM-align: a server for fast protein structure database search and
+  multiple protein structure alignment}.
+\newblock Nucleic Acids Research. 2018;46(July):380--386.
+
+\bibitem{Krissinel2004}
+Krissinel E, Henrick K.
+\newblock {Secondary-structure matching (SSM), a new tool for fast protein
+  structure alignment in three dimensions}.
+\newblock Acta Crystallographica Section D: Biological Crystallography.
+  2004;60(12 I):2256--2268.
+
+\bibitem{Redfern2007}
+Redfern OC, Harrison A, Dallman T, Pearl FMG, Orengo CA.
+\newblock {CATHEDRAL}: A Fast and Effective Algorithm to Predict Folds and
+  Domain Boundaries from Multidomain Protein Structures.
+\newblock {PL}o{S} Comput Biol. 2007;3(11):e232.
+
+\bibitem{Zhang2004}
+Zhang Y, Skolnick J.
+\newblock Scoring function for automated assessment of protein structure
+  template quality.
+\newblock Proteins. 2004;57(4):702--710.
+
+\bibitem{Shindyalov1998}
+Shindyalov IN, Bourne PE.
+\newblock Protein structure alignment by incremental combinatorial extension
+  ({CE}) of the optimal path.
+\newblock Protein Eng Des Sel. 1998;11(9):739--747.
+
+\bibitem{Ye2003}
+Yuzhen~Ye AG.
+\newblock Flexible structure alignment by chaining aligned fragment pairs
+  allowing twists.
+\newblock Bioinformatics. 2003;19(2):246--255.
+
+\bibitem{Zhang2005}
+Zhang Y, Skolnick J.
+\newblock {TM-align: A protein structure alignment algorithm based on the
+  TM-score}.
+\newblock Nucleic Acids Research. 2005;33(7):2302--2309.
+
+\bibitem{Sander1995}
+Holm L, Sander C.
+\newblock Dali: a network tool for protein structure comparison.
+\newblock Trends in Biochemical Sciences. 1995;20(11):478 -- 480.
+
+\bibitem{Gilbrat1996}
+Gilbrat JF, Madej T, Bryant SH.
+\newblock Surprising similarities in structure comparison.
+\newblock Curr Opin Struct Biol. 1996;6(3):377--385.
+
+\bibitem{Ye2004}
+Yuzhen~Ye AG.
+\newblock {FATCAT}: a web server for flexible structure comparison and
+  structure similarity searching.
+\newblock Nucleic Acids Res. 2004;32(2):582--585.
+
+\bibitem{Prlic2010}
+Prli{\'c} A, Bliven S, Rose PW, Bluhm WF, Bizon C, Godzik A, et~al.
+\newblock Pre-calculated protein structure alignments at the {RCSB} {PDB}
+  website.
+\newblock Bioinformatics. 2010;26(23):2983--2985.
+
+\bibitem{Holm2010}
+Holm L, Rosenstr{\"{o}}m P.
+\newblock {Dali server: Conservation mapping in 3D}.
+\newblock Nucleic Acids Research. 2010;38(SUPPL. 2):1--5.
+
+\bibitem{gkw1000}
+Rose PW, Prli{\'c} A, Altunkaya A, Bi C, Bradley AR, Christie CH, et~al.
+\newblock The {RCSB} protein data bank: integrative view of protein, gene and
+  {3D} structural information.
+\newblock Nucleic Acids Res. 2017;45(D1):D271--D281.
+
+\bibitem{Carpentier2005}
+Carpentier M, Brouillet S, Pothier J.
+\newblock {YAKUSA}: A fast structural database scanning method.
+\newblock Proteins. 2005;61(1):137--151.
+
+\bibitem{Daniluk2011}
+Daniluk P, Lesyng B.
+\newblock A novel method to compare protein structures using local descriptors.
+\newblock BMC Bioinformatics. 2011;12(1):344.
+
+\bibitem{Ritchie2012}
+Mavridis L, Ritchie DW.
+\newblock In: {3D-Blast}: {3D} protein structure alignment, comparison, and
+  classification using spherical polar fourier correlations. World Scientific;
+  2012. p. 281--292.
+
+\bibitem{Ramachandran1968}
+Ramachandran GN, Sasisekharan V.
+\newblock Conformation of polypeptides and proteins.
+\newblock Adv Protein Chem. 1968;23:283--438.
+
+\bibitem{Karplus2010}
+Hollingsworth SA, Karplus PA.
+\newblock A fresh look at the {R}amachandran plot and the occurrence of
+  standard structures in proteins.
+\newblock Biomol Concepts. 2010;1:271--283.
+
+\bibitem{Kabsch1983}
+Kabsch W, Sander C.
+\newblock Dictionary of protein secondary structure: Pattern recognition of
+  hydrogen-bonded and geometrical features.
+\newblock Biopolymers. 1983;22(12):2577--2637.
+
+\bibitem{Aungand2004}
+Aungand Z, Tan KL.
+\newblock Rapid 3D protein structure database searching using information
+  retrieval techniques.
+\newblock Bioinformatics. 2004;20(7):1045--1052.
+
+\bibitem{Zhang2010}
+Zhang L, Bailey J, Konagurthu AS, Ramamohanarao K.
+\newblock A fast indexing approach for protein structure comparison.
+\newblock {BMC} Bioinformatics. 2010;11(Suppl 1):S46.
+
+\bibitem{Budowski2010}
+Budowski-Tal I, Nov Y, Kolodny R.
+\newblock {FragBag}, an accurate representation of protein structure, retrieves
+  structural neighbors from the entire {PDB} quickly and accurately.
+\newblock Proceedings of the National Academy of Sciences.
+  2010;107(8):3481--3486.
+
+\bibitem{Broder1997a}
+Broder AZ.
+\newblock On the resemblance and containment of documents.
+\newblock In: Proc. Compression and Complexity of Sequences. Positano, Italy;
+  1997. p. 21--29.
+
+\bibitem{Karp1987}
+Karp RM, Rabin MO.
+\newblock Efficient randomized pattern-matching algorithms.
+\newblock {IBM} Journal of Research and Development. 1987;31(2):249--260.
+
+\bibitem{Levan1971}
+Levandowsky M, Winter D.
+\newblock Distance between Sets.
+\newblock Nature. 1971;234(5323):34--35.
+
+\bibitem{Ayoub2017}
+Ayoub R, Lee Y.
+\newblock RUPEE: Scalable protein structure search using run position encoded
+  residue descriptors.
+\newblock In: 2017 IEEE International Conference on Bioinformatics and
+  Biomedicine (BIBM); 2017. p. 74--78.
+
+\bibitem{Broder1997b}
+Broder AZ, Glassman SC, Manasse MS, Zweig G.
+\newblock Syntactic clustering of the Web.
+\newblock Computer Networks and ISDN Systems. 1997;29(8-13):1157--1166.
+
+\bibitem{Joshi2008}
+Joshi S, Contractor D, Ng K, Deshpande PM, Hampp T.
+\newblock Auto-grouping emails for faster e-discovery.
+\newblock In: Proceedings of Very Large Databases Endowment 2011. vol.~4; 2011.
+  p. 1284--1294.
+
+\bibitem{Broder1998}
+Broder AZ, Charikar M, Frieze AM, Mitzenmacher M.
+\newblock Min-wise independent permutations.
+\newblock In: ACM Symposium on Theory of Computing. Dallas, USA; 1998. p.
+  327--336.
+
+\bibitem{Indyk1998}
+Indyk P, Motwani R.
+\newblock Approximate nearest neighbors: towards removing the curse of
+  dimensionality.
+\newblock In: ACM Symposium on Theory of Computing. Dallas, USA; 1998. p.
+  604--613.
+
+\bibitem{Rajaraman2012}
+Rajaraman A, Ullman JD.
+\newblock 3.
+\newblock In: Mining of Massive Datasets. Cambridge University Press; 2012. p.
+  53--70.
+
+\bibitem{Xu2010}
+J~Xu YZ.
+\newblock How significant is a protein structure similarity with {TM}-score =
+  0.5?
+\newblock Bioinformatics. 2010;26(7):889--895.
+
+\bibitem{Andreeva2007}
+Andreeva A, Prli{\'c} A, Hubbard TJP, Murzin AG.
+\newblock {SISYPHUS}: structural alignments for proteins with non-trivial
+  relationships.
+\newblock Nucleic Acids Res. 2007;35(1):253--259.
+
+\bibitem{BioJava2012}
+Prli{\'c} A, Yates A, Bliven SE, Rose PW, Jacobsen J, Troshin PV, et~al.
+\newblock Bio{J}ava: an open-source framework for bioinformatics in 2012.
+\newblock Bioinformatics. 2012;28(20):2693--2695.
+
+\end{thebibliography}
 
 \end{document}
 
