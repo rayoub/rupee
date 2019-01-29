@@ -5,8 +5,8 @@ WITH rupee_results AS
         n,
         db_id_1,
         db_id_2,
-        tm_q_rmsd AS rupee_rmsd,
-        tm_q_tm_score AS rupee_tm_score
+        tm_avg_rmsd AS rupee_rmsd,
+        tm_avg_tm_score AS rupee_tm_score
     FROM
         get_rupee_results('scop_d360', 'scop_v2_07', 'tm_score', 100)
     WHERE
