@@ -44,54 +44,233 @@
 \begin{document}
 
 \section*{Response to the reviewers}
-% General intro text goes here
-We thank the reviewers for their critical assessment of our work. 
-In the following we address their concerns point by point. 
 
-% Let's start point-by-point with Reviewer 1
+% Both Reviewers
+We thank the reviewers for their critical assessment of our work. 
+
+% Reviewer 1
 \reviewersection
 
-% Point one description 
-\begin{point}
-	\lipsum[1]
-	\label{pt:foo}
-\end{point}
-
-% Our reply
-\begin{reply}
-	We agree with the reviewer on this important point. This is what we did to
-	fix it. 
-	\lipsum[2]
-\end{reply}
+\subsection*{Related work}
 
 \begin{point}
-	Reviewer \thereviewer's second point.
-	\label{pt:bar}
+The authors should also briefly introduce the TM-score as a metric, because the authors use this metric later.
+\label{pt:rw1}
 \end{point}
 
 \begin{reply}
-	And our reply to it.
+Our reply
 \end{reply}
 
-\subsection*{Minor}
+\begin{point}
+The authors should also briefly discuss and cite other pairwise structure alignment tools like TM-align and DALI.
+\label{pt:rw2}
+\end{point}
+
+\begin{reply}
+Our reply
+\end{reply}
+
+\begin{point}
+Did you consider DALI (http://ekhidna2.biocenter.helsinki.fi/dali/) when determining which methods you would include in your comparison?
+\label{pt:rw3}
+\end{point}
+
+\begin{reply}
+Our reply
+\end{reply}
+
+\subsection*{Methods}
+
+\begin{point}
+The Strand and Bend/Coil parts in Fig 2 are divided into three sections, but there are only two DSSP assignment codes of these two secondary structure. The author should give an explanation with more details.
+\label{pt:m1}
+\end{point}
+
+\begin{reply}
+Our reply
+\end{reply}
+
+\begin{point}
+The length of a shingling in this work is 3, and the length in authors’ previous work is 4. How does the length impact on the search result?
+\label{pt:m2}
+\end{point}
+
+\begin{reply}
+Our reply
+\end{reply}
+
+\begin{point}
+We think that the authors should give clear definitions of ‘a run’ and the length of ‘a run’.
+\label{pt:m3}
+\end{point}
+
+\begin{reply}
+Our reply
+\end{reply}
+
+\begin{point}
+The authors choose 8000, 2000, 400 as cut-offs in search, we think that the authors should give an explanation about these cut-offs. Maybe it is better to decide the number of results based on TM-score or RMSD.
+\label{pt:m4}
+\end{point}
+
+\begin{reply}
+Our reply
+\end{reply}
+
+\subsection*{Results}
+
+\begin{point}
+The authors use CE to get TM-score and RMSD, but mTM-align use TM-align to get TM-score and RMSD. Maybe it is unfair to RUPEE.
+\label{pt:r1}
+\end{point}
+
+\begin{reply}
+Our reply
+\end{reply}
+
+\begin{point}
+Scop\_d360, scop\_d62 and cath\_d99 just select domains that other methods can return more than 100 or 50 results. The sieving may eliminate some hard targets.
+\label{pt:r2}
+\end{point}
+
+\begin{reply}
+Our reply
+\end{reply}
+
+\begin{point}
+How diverse were your domains in scop\_d360 and scop\_d62?
+\label{pt:r3}
+\end{point}
+
+\begin{reply}
+Our reply
+\end{reply}
+
+\begin{point}
+We think that the authors should compare your methods in some free-modeling targets.
+\label{pt:r4}
+\end{point}
+
+\begin{reply}
+Our reply
+\end{reply}
+
+\begin{point}
+It is unfair to compare response time with different methods based on different platforms.
+\label{pt:r5}
+\end{point}
+
+\begin{reply}
+Our reply
+\end{reply}
+
+\begin{point}
+The authors should also consider regular database updates, optimally on a weekly basis following the PDB releases.
+\label{pt:r6}
+\end{point}
+
+\begin{reply}
+Our reply
+\end{reply}
+
+\begin{point}
+In our experience, TM-align is faster than CE. If the authors use TM-align to get pairwise alignments in Top-Aligned model, maybe it would be time-saving.
+\label{pt:r7}
+\end{point}
+
+\begin{reply}
+Our reply
+\end{reply}
+
+\subsection*{Web site}
+
+\begin{point}
+We use structure IDs (e.g. PDB ID: 8TIMA or SCOPe ID: d8TIMA\_) to search on the webserver, and there are no records.
+\label{pt:ws1}
+\end{point}
+
+\begin{reply}
+Our reply
+\end{reply}
+
+\begin{point}
+It would be nice to provide an input example.
+\label{pt:ws2}
+\end{point}
+
+\begin{reply}
+Our reply
+\end{reply}
+
+\begin{point}
+We would consider it essential to be able to download the results of the database search in a machine-readable (e.g. CSV) format.
+\label{pt:ws3}
+\end{point}
+
+\begin{reply}
+Our reply
+\end{reply}
+
+\begin{point}
+It would be nice to provide demonstrations about header in table.
+\label{pt:ws4}
+\end{point}
+
+\begin{reply}
+Our reply
+\end{reply}
+
+\begin{point}
+Occasionally, the link of CE provides an error result.
+\label{pt:ws5}
+\end{point}
+
+\begin{reply}
+Our reply
+\end{reply}
+
+% Reviewer 2
+\reviewersection
+
+\begin{point}
+The paper says that the LCS of matched gram sequences will be applied for the top 8000 candidates for validation, and adjust the Jaccard similarity scores accordingly. How exactly does the adjustment work?
+\label{pt:r21}
+\end{point}
+
+\begin{reply}
+Our reply
+\end{reply}
+
+\begin{point}
+In top-aligned mode, RUPEE performs unoptimized CE for the top 2000 matches and optimized CE alignments for the top 400 matches. What's the difference between unoptimized CE and optimized CE, and how the authors decided on the numbers of matches from fast mode for further validation?
+\label{pt:r22}
+\end{point}
+
+\begin{reply}
+Our reply
+\end{reply}
+
+\begin{point}
+It is unclear how much the MinHash and LSH helped with the speed. RUPEE retains 8000 matches after applying these techniques. What's the reduction rate here (8000 out of how many structures)?\label{pt:r23}
+\end{point}
+
+\begin{reply}
+Our reply
+\end{reply}
+
+\begin{point}
+The authors compared the score curves (Fig 4) and precision curves (Fig. 5), and claimed that RUPEE performed better than mTM (even though mTM achieved higher precision than RUPEE) in capturing structural similarities that don't align with the SCOP hierarchy. I feel this argument is a little stretchy, and perhaps the authors can use some examples to demonstrate this point.
+\label{pt:r24}
+\end{point}
+
+\begin{reply}
+Our reply
+\end{reply}
 
 % Use the short-hand macros for one-liners.
-\shortpoint{ Typo in line xy. }
-\shortreply{ Fixed.}
-
-% Begin a new reviewer section
-\reviewersection
-
-\begin{point}
-	This is the first point of Reviewer \thereviewer. With some more words foo
-	bar foo bar ...
-\end{point}
-
-\begin{reply}
-	Our reply to it with reference to one of our points above using the \LaTeX's 
-	label/ref system (see also \ref{pt:foo}).
-\end{reply}
-
+%\shortpoint{ Typo in line xy. }
+%\shortreply{ Fixed.}
 
 \end{document}
 
