@@ -59,7 +59,7 @@ The authors should also briefly introduce the TM-score as a metric, because the 
 \end{point}
 
 \begin{reply}
-We have added the following text along with citations at lines 46-52.
+We added the following text along with citations at lines 46-52.
 \begin{quote}
 However, the RMSD score does not factor in the distance between unaligned residues nor does it consider the percentage of aligned residues, that is, alignment \emph{coverage}. 
 RMSD scores also have some dependence on the length of the aligned proteins. 
@@ -74,7 +74,7 @@ The authors should also briefly discuss and cite other pairwise structure alignm
 \end{point}
 
 \begin{reply}
-We have added the following text along with citations at lines 63-72. The second paragraph is part of our reply to \ref{pt:r7} and is shown here to provide further context. 
+We added the following text along with citations at lines 63-72. The second paragraph is part of our reply to \ref{pt:r7} and is shown here to provide further context. 
 \begin{quote}
 Besides CE and FATCAT, TM-align and DALI are pairwise alignment tools also in wide use, both offering their own distinct approaches to structure alignment. 
 TM-align uses a rotation matrix designed to maximize the TM-score rather than minimizing the RMSD along with dynamic programming to find the best full-length alignment. 
@@ -91,7 +91,7 @@ Did you consider DALI (http://ekhidna2.biocenter.helsinki.fi/dali/) when determi
 \end{point}
 
 \begin{reply}
-We have added the following text along with citations at lines 92-98. The last lines provides our justification for not comparing to DALI.
+We added the following text along with citations at lines 92-98. The last lines provides our justification for not comparing to DALI.
 \begin{quote}
 DALI also provides a heuristic structure search of whole chains found in the PDB in addition to a tool for pairwise structure alignments using distance matrices as discussed above. 
 In the case of searching, DALI first identifies matched PDB-90 representatives and then walks a pre-calculated graph of structural similarities to identify further matches in the PDB to gradually build up the set of structures similar to the query structure. 
@@ -120,7 +120,7 @@ The length of a shingling in this work is 3, and the length in authors’ previo
 \end{point}
 
 \begin{reply}
-We did address this in the original paper but we did so at the wrong location and it also lacked clarity. 
+We addressed this in the previous version of this paper but we did so at the wrong location and it also lacked clarity. 
 The text at lines 169-173 was moved and replaced with the following text at a more appropriate location at lines 193-198. 
 \begin{quote}
 In applying the Jaccard similarity to sets of shingles, the length of a shingle is chosen to balance false positives, in the case of shorter shingles, against false negatives, in the case of longer shingles.
@@ -147,7 +147,7 @@ The authors choose 8000, 2000, 400 as cut-offs in search, we think that the auth
 \end{point}
 
 \begin{reply}
-We agree that RUPEE may be improved by a detailed examination of the distribution of scores to find an ideal cut-off but we do not believe this detracts from what the paper achieves. This can be addressed in future work. However, we agree that some justification should be given as to how we chose the filter sizes. We have added the following text at lines 276-281. Please note that the filter sizes have changed due to changes resulting from addressing \ref{pt:r7}.
+We agree that RUPEE may be improved by a detailed examination of the distribution of scores to find an ideal cut-off but we do not believe this detracts from what the paper accomplishes. This can be addressed in future work. However, we agree that some justification should be given as to how we chose the filter sizes. We added the following text at lines 276-281. Please note that the filter sizes have changed due to changes resulting from addressing \ref{pt:r7}.
 \begin{quote}
 The filter sizes of 8000 and 400 have been chosen based on quality of results and speed. 
 We have found that increasing the size of either of these filters results in only marginal improvements in the quality of results. 
@@ -163,7 +163,9 @@ The authors use CE to get TM-score and RMSD, but mTM-align use TM-align to get T
 \end{point}
 
 \begin{reply}
-Our reply
+We no longer use CE.
+We now use TM-align for pairwise alignments. 
+This is addressed in \ref{pt:r7}. 
 \end{reply}
 
 \begin{point}
@@ -172,7 +174,14 @@ Scop\_d360, scop\_d62 and cath\_d99 just select domains that other methods can r
 \end{point}
 
 \begin{reply}
-Our reply
+We added the following text along with citations at lines 305-309. 
+\begin{quote}
+At each point in our comparison to mTM, SSM, and CATHEDRAL, where a decision had to be made that may favor one tool over another, we were careful to make sure RUPEE is not favored. 
+For instance, while filtering the benchmarks based on the number of results returned may eliminate some hard targets, we note that in all cases RUPEE returns more than 100 results. 
+\end{quote}
+Aside from this, we do not think calculating scoring averages with varying numbers of data present at different ranks would be fair. 
+It may be the case that those missing numbers would be lower than the average if present and so calculating in their absence would unjustly give a higher scoring average for searches with missing data. 
+The same would hold true for comparing precision. 
 \end{reply}
 
 \begin{point}
@@ -190,7 +199,8 @@ We think that the authors should compare your methods in some free-modeling targ
 \end{point}
 
 \begin{reply}
-Our reply
+Whereas there may be outstanding issues to address regarding coverage of the benchmarks, the number of free-modeling targets available from CASP 13 are far more limited than our benchmarks and any evaluations using such a small sample size could be misleading.
+We also note that since RUPEE is purely geometric its approach to free-modelling targets will not be any different than for normal targets.
 \end{reply}
 
 \begin{point}
@@ -199,7 +209,20 @@ It is unfair to compare response time with different methods based on different 
 \end{point}
 
 \begin{reply}
-Our reply
+We do not disagree with this point with respect to comparing `methods.'
+However, we do believe the response times give a fair comparison with respect to the user experience. 
+We have removed the text at lines 474-480 and replaced it with the following text at lines 441-453 at the beginning of the \emph{Response times} subsection. 
+We feel the response time comparisons are important to show since they demonstrate one of the strongest features of RUPEE. 
+\begin{quote}
+Response times to a large degree are a measure of the amount of resources available to an application. 
+Response times for RUPEE were gathered from the RUPEE web site running on a single Amazon Web Services (AWS) c5.2xlarge elastic compute (EC2) unit. 
+With more resources, RUPEE response times can be further improved since pairwise alignments can be run in parallel. 
+For mTM, SSM, and CATHEDRAL, we gathered response times by automating their respective web sites using the Selenium WebDriver API. 
+
+Given that our response time comparisons are made against the respective tools running in different environments, we cannot derive solid conclusions about the efficiency of the methods themselves. 
+Nevertheless, these response times do fairly compare the user experience of the respective tools. 
+Moreover, in some cases the response times differ dramatically, by an order of magnitude in the case of RUPEE fast. 
+\end{quote}
 \end{reply}
 
 \begin{point}
@@ -208,7 +231,9 @@ The authors should also consider regular database updates, optimally on a weekly
 \end{point}
 
 \begin{reply}
-Our reply
+We do plan on updating RUPEE with each major update of SCOPe, CATH and ECOD. 
+Aside from this, our resources are currently limited. 
+With increased interest in RUPEE, that may change. 
 \end{reply}
 
 \begin{point}
@@ -237,7 +262,7 @@ It would be nice to provide an input example.
 \end{point}
 
 \begin{reply}
-We have added help text right below the `Structure Id' field. 
+We added help text right below the `Structure Id' field. 
 \end{reply}
 
 \begin{point}
@@ -246,7 +271,7 @@ We would consider it essential to be able to download the results of the databas
 \end{point}
 
 \begin{reply}
-We have added an `Export to CSV' link to the top of the results grid. 
+We added an `Export to CSV' link to the top of the results grid. 
 \end{reply}
 
 \begin{point}
@@ -255,7 +280,7 @@ It would be nice to provide demonstrations about header in table.
 \end{point}
 
 \begin{reply}
-We have added question icons and tooltips to the one- and two-letter column names. 
+We added question icons and tooltips to the one- and two-letter column names. 
 \end{reply}
 
 \begin{point}
@@ -276,7 +301,17 @@ The paper says that the LCS of matched gram sequences will be applied for the to
 \end{point}
 
 \begin{reply}
-Our reply
+We agree that this was not adequately explained. 
+We made a number of edits at lines 251-265 to clarify this point. 
+The edited paragraph is shown below. 
+\begin{quote}
+In fast mode, the top 8000 matches from the min-hashing and LSH initial filtering are obtained.
+For each match, we adjust the Jaccard similarity to account for matched shingles that are out of sequence order. 
+For this adjustment, we calculate the exact denominator in the definition of Jaccard similarity from the original shingle sequences of the structures.
+As for the numerator, instead of using the total number of matched shingles, we use the length of the longest common subsequence (LCS) of the shingle sequences for each match. 
+This LCS adjustment to the Jaccard similarity enforces the constraint that all valid shingles matches must appear in order along the length of each structure. 
+The final step of fast mode is to sort the matches based on the adjusted Jaccard similarity scores and return the results. 
+\end{quote}
 \end{reply}
 
 \begin{point}
@@ -285,7 +320,7 @@ In top-aligned mode, RUPEE performs unoptimized CE for the top 2000 matches and 
 \end{point}
 
 \begin{reply}
-Our reply
+Due to our response to \ref{pt:r7}, this comment no longer applies since we are no longer using CE. 
 \end{reply}
 
 \begin{point}
@@ -293,7 +328,8 @@ It is unclear how much the MinHash and LSH helped with the speed. RUPEE retains 
 \end{point}
 
 \begin{reply}
-Our reply
+This comment was an indicator of an overall lack of clarity in the \emph{Min-hashing and LSH} subsection. 
+For this reason, we made extensive edits to lines 213-238 to clarify how and why we use min-hashing and LSH. 
 \end{reply}
 
 \begin{point}
