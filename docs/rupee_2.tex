@@ -521,9 +521,6 @@ Similarly, scop\_d62 is derived from the d500 benchmark filtered for domains def
 scop\_d62 contains domains from 53 distinct folds. 
 In keeping with our description of RUPEE in \cite{Ayoub2017}, the cath\_d99 benchmark contains 99 superfamily representatives from the top 100 most diverse superfamilies defined in CATH v4.2 for which CATHEDRAL returns results in less than 12 hours.
 
-At each point in our comparison to mTM, SSM, and CATHEDRAL, where a decision had to be made that may favor one tool over another, we were careful to make sure RUPEE is not favored. 
-For instance, while filtering the benchmarks based on the number of results returned may eliminate some hard targets, we note that in all cases RUPEE returns more than 100 results. 
-
 We perform pairwise evaluations to ensure the fairness of our comparisons. 
 First, for domain searches, SSM is working with the SCOP 1.73 database, so accordingly we operate RUPEE on SCOP 1.73 domains to ensure RUPEE does not have more domains to work with for scoring and precision evaluations. 
 Second, mTM is updated to work with SCOPe 2.07 domain definitions but still retains domains from 2.06 that have since been redefined either through mergers or splits in 2.07. 

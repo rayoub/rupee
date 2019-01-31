@@ -111,7 +111,7 @@ The Strand and Bend/Coil parts in Fig 2 are divided into three sections, but the
 
 \begin{reply}
 This is a misunderstanding. 
-We made a number of edits at lines 139-152 to clarify this point. 
+In order to avoid any confusion, we made a number of edits at lines 139-152.
 The clusters of points do not correspond to individual DSSP assignment codes. 
 Each plot represents a clustering of points that corresponds to a \emph{set} of DSSP assignment codes. 
 The set of DSSP assignment codes are chosen for each plot because they have similar distributions of points. 
@@ -166,9 +166,8 @@ The authors use CE to get TM-score and RMSD, but mTM-align use TM-align to get T
 \end{point}
 
 \begin{reply}
-We no longer use CE.
-We now use TM-align for pairwise alignments. 
-This is addressed in \ref{pt:r7}. 
+We now use TM-align for pairwise structure alignments since it is faster than CE while still providing high-quality alignments. 
+The change from CE to TM-align is addressed in \ref{pt:r7}. 
 \end{reply}
 
 \begin{point}
@@ -177,12 +176,7 @@ Scop\_d360, scop\_d62 and cath\_d99 just select domains that other methods can r
 \end{point}
 
 \begin{reply}
-We added the following text at lines 306-310. 
-\begin{quote}
-At each point in our comparison to mTM, SSM, and CATHEDRAL, where a decision had to be made that may favor one tool over another, we were careful to make sure RUPEE is not favored. 
-For instance, while filtering the benchmarks based on the number of results returned may eliminate some hard targets, we note that in all cases RUPEE returns more than 100 results. 
-\end{quote}
-Aside from this, we do not think calculating scoring averages with varying numbers of data present at different ranks would be fair. 
+We do not think calculating scoring averages with varying numbers of data present at different ranks would be fair. 
 It may be the case that those missing numbers would be lower than the average if present and so calculating in their absence would unjustly give a higher scoring average for searches with missing data. 
 The same would hold true for comparing precision. 
 \end{reply}
@@ -227,7 +221,7 @@ It is unfair to compare response time with different methods based on different 
 \begin{reply}
 We do not disagree with this point with respect to comparing `methods.'
 However, we do believe the response times give a fair comparison with respect to the user experience. 
-We have removed the text at lines 475-481 and replaced it with the following text at lines 442-454 at the beginning of the \emph{Response times} subsection. 
+We have removed the text at lines 470-476 and replaced it with the following text at lines 437-449 at the beginning of the \emph{Response times} subsection. 
 We feel the response time comparisons are important to show since they demonstrate one of the strongest features of RUPEE. 
 \begin{quote}
 Response times to a large degree are a measure of the amount of resources available to an application. 
@@ -342,7 +336,10 @@ In top-aligned mode, RUPEE performs unoptimized CE for the top 2000 matches and 
 \end{point}
 
 \begin{reply}
-Due to our response to \ref{pt:r7}, this comment no longer applies since we are no longer using CE. 
+We now use TM-align for pairwise structure alignments since it is faster than CE while still providing high-quality alignments. 
+We run TM-align with a reduced number of dynamic programming iterations in place of unoptimized CE alignments and with the default number of iterations in place of optimized CE alignments. 
+The distinction is now better explained in the paper at lines 266-275.
+The change from CE to TM-align is addressed in \ref{pt:r7}. 
 \end{reply}
 
 \begin{point}
@@ -369,7 +366,7 @@ With changes made to address \ref{pt:r7}, precision for RUPEE top-aligned has im
 Nevertheless, this comment encouraged us to check our assumptions.
 While RUPEE filters for different hierarchy levels and hierarchy level representatives are useful for exploring unexpected structural relationships across folds, this does not necessarily extend to RUPEE without filters applied since there are usually enough similar structures within the fold that can be matched. 
 We made a number of edits at lines 21-32 to walk back these assertions and instead focus on the benefit of applying filters.
-Additionally, in our larger rework of the \emph{Precision} section we have removed lines 426-434 and we also removed text appearing at lines 539-543 of the \emph{Conclusion}.
+Additionally, in our larger rework of the \emph{Precision} section we have removed lines 421-429 and we also removed text appearing at lines 534-538 of the \emph{Conclusion}.
 \end{reply}
 
 % Use the short-hand macros for one-liners.

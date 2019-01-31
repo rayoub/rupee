@@ -1,7 +1,7 @@
 % Template for PLoS
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL rupee.tex     Tue Jan 15 09:13:33 2019
-%DIF ADD rupee_2.tex   Wed Jan 30 13:25:08 2019
+%DIF ADD rupee_2.tex   Thu Jan 31 05:24:36 2019
 % Version 3.5 March 2018
 %
 % % % % % % % % % % % % % % % % % % % % % %
@@ -633,11 +633,7 @@ For our results, we have \DIFdelbegin \DIFdel{created }\DIFdelend \DIFaddbegin \
 \DIFaddbegin \DIFadd{scop\_d62 contains domains from 53 distinct folds. 
 }\DIFaddend In keeping with our description of RUPEE in \cite{Ayoub2017}, the cath\_d99 benchmark contains 99 superfamily representatives from the top 100 most diverse superfamilies defined in CATH v4.2 for which CATHEDRAL returns results in less than 12 hours.
 
-\DIFaddbegin \DIFadd{At each point in our comparison to mTM, SSM, and CATHEDRAL, where a decision had to be made that may favor one tool over another, we were careful to make sure RUPEE is not favored. 
-For instance, while filtering the benchmarks based on the number of results returned may eliminate some hard targets, we note that in all cases RUPEE returns more than 100 results. 
-}
-
-\DIFaddend We perform pairwise evaluations to ensure the fairness of our comparisons. 
+We perform pairwise evaluations to ensure the fairness of our comparisons. 
 First, for domain searches, SSM is working with the SCOP 1.73 database, so accordingly we operate RUPEE on SCOP 1.73 domains to ensure RUPEE does not have more domains to work with for scoring and precision evaluations. 
 Second, mTM is updated to work with SCOPe 2.07 domain definitions but still retains domains from 2.06 that have since been redefined either through mergers or splits in 2.07. 
 On the other hand, CATHEDRAL presents no such challenges but still requires a separate benchmark since it is working with a distinct \DIFdelbegin \DIFdel{hierarchy}\DIFdelend \DIFaddbegin \DIFadd{set of domains}\DIFaddend , CATH v4.2. 
