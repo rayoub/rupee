@@ -516,7 +516,9 @@ Among protein structure classification databases for which corresponding structu
 For our results, we have derived 3 benchmarks, scop\_d360, scop\_d62, and cath\_d99, for pairwise evaluations to mTM, SSM, and CATHEDRAL, respectively.
 To avoid introducing our own bias, we were careful to derive each benchmark from an existing benchmark used in a previously published work or an existing list of protein domains provided by an independent third party.  
 scop\_d360 is derived from the d500 benchmark used in \cite{Dong2018} filtered for domains in SCOPe 2.07 for which mTM returns 100 or more results.
+scoo\_d360 contains domains from 262 distinct folds.
 Similarly, scop\_d62 is derived from the d500 benchmark filtered for domains defined in SCOP 1.73 for which SSM returns 50 or more results.  
+scop\_d62 contains domains from 53 distinct folds. 
 In keeping with our description of RUPEE in \cite{Ayoub2017}, the cath\_d99 benchmark contains 99 superfamily representatives from the top 100 most diverse superfamilies defined in CATH v4.2 for which CATHEDRAL returns results in less than 12 hours.
 
 At each point in our comparison to mTM, SSM, and CATHEDRAL, where a decision had to be made that may favor one tool over another, we were careful to make sure RUPEE is not favored. 
