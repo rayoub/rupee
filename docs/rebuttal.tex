@@ -4,6 +4,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{lipsum} % to generate some filler text
 \usepackage{fullpage}
+\usepackage{natbib}
 
 % import Eq and Section references from the main manuscript where needed
 % \usepackage{xr}
@@ -61,11 +62,11 @@ The authors should also briefly introduce the TM-score as a metric, because the 
 \end{point}
 
 \begin{reply}
-We added the following text along with citations at lines 46-52.
+We added the following text at lines 46-52.
 \begin{quote}
 However, the RMSD score does not factor in the distance between unaligned residues nor does it consider the percentage of aligned residues, that is, alignment \emph{coverage}. 
 RMSD scores also have some dependence on the length of the aligned proteins. 
-On the other hand, the TM-score takes all residues into account and normalizes for both coverage and length of the aligned proteins. 
+On the other hand, the TM-score \citep{Zhang2004} takes all residues into account and normalizes for both coverage and length of the aligned proteins. 
 For this reason, TM-score is frequently used in the assessment of protein structure alignments. 
 \end{quote}
 \end{reply}
@@ -76,9 +77,9 @@ The authors should also briefly discuss and cite other pairwise structure alignm
 \end{point}
 
 \begin{reply}
-We added the following text along with citations at lines 63-72. The second paragraph is part of our reply to \ref{pt:r7} and is shown here to provide further context. 
+We added the following text at lines 63-72. The second paragraph is part of our reply to \ref{pt:r7} and is shown here to provide further context. 
 \begin{quote}
-Besides CE and FATCAT, TM-align and DALI are pairwise alignment tools also in wide use, both offering their own distinct approaches to structure alignment. 
+Besides CE and FATCAT, TM-align \citep{Zhang2005} and DALI \citep{Sander1995} are pairwise alignment tools also in wide use, both offering their own distinct approaches to structure alignment. 
 TM-align uses a rotation matrix designed to maximize the TM-score rather than minimizing the RMSD along with dynamic programming to find the best full-length alignment. 
 DALI compares intramolecular distance matrices between two proteins to find a consistent set of matched submatrices that is used to align the proteins. 
 
@@ -93,11 +94,11 @@ Did you consider DALI (http://ekhidna2.biocenter.helsinki.fi/dali/) when determi
 \end{point}
 
 \begin{reply}
-We added the following text along with citations at lines 92-98. The last lines provides our justification for not comparing to DALI.
+We added the following text at lines 92-98. The last lines provides our justification for not comparing to DALI.
 \begin{quote}
-DALI also provides a heuristic structure search of whole chains found in the PDB in addition to a tool for pairwise structure alignments using distance matrices as discussed above. 
+DALI also provides a heuristic structure search \citep{Holm2010} of whole chains found in the PDB in addition to a tool for pairwise structure alignments using distance matrices as discussed above. 
 In the case of searching, DALI first identifies matched PDB-90 representatives and then walks a pre-calculated graph of structural similarities to identify further matches in the PDB to gradually build up the set of structures similar to the query structure. 
-DALI is slow in comparison to SSM, and mTM has shown better quality results than DALI.
+DALI is slow in comparison to SSM, and mTM has shown better quality results than DALI \citep{Dong2018}.
 \end{quote}
 \end{reply}
 
@@ -126,7 +127,7 @@ We addressed this in the previous version of this paper but we did so at the wro
 The text at lines 169-173 was moved and replaced with the following text at a more appropriate location at lines 193-198. 
 \begin{quote}
 In applying the Jaccard similarity to sets of shingles, the length of a shingle is chosen to balance false positives, in the case of shorter shingles, against false negatives, in the case of longer shingles.
-In [Ayoub2017], we used 4 consecutive descriptors for our shingles. 
+In \citep{Ayoub2017}, we used 4 consecutive descriptors for our shingles. 
 The additional requirements for structural similarity we introduce in the \emph{Operating modes} section below has the ultimate effect of reducing false positives, so this allowed us to decrease the shingle length to 3 to control better for false negatives. 
 \end{quote}
 \end{reply}
@@ -176,7 +177,7 @@ Scop\_d360, scop\_d62 and cath\_d99 just select domains that other methods can r
 \end{point}
 
 \begin{reply}
-We added the following text along with citations at lines 306-310. 
+We added the following text at lines 306-310. 
 \begin{quote}
 At each point in our comparison to mTM, SSM, and CATHEDRAL, where a decision had to be made that may favor one tool over another, we were careful to make sure RUPEE is not favored. 
 For instance, while filtering the benchmarks based on the number of results returned may eliminate some hard targets, we note that in all cases RUPEE returns more than 100 results. 
@@ -374,6 +375,9 @@ Additionally, in our larger rework of the \emph{Precision} section we have remov
 % Use the short-hand macros for one-liners.
 %\shortpoint{ Typo in line xy. }
 %\shortreply{ Fixed.}
+
+\bibliography{rebuttal}
+\bibliographystyle{natbib}
 
 \end{document}
 
