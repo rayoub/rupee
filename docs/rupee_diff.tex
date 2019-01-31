@@ -1,0 +1,1144 @@
+% Template for PLoS
+%DIF LATEXDIFF DIFFERENCE FILE
+%DIF DEL rupee.tex     Tue Jan 15 09:13:33 2019
+%DIF ADD rupee_2.tex   Wed Jan 30 13:25:08 2019
+% Version 3.5 March 2018
+%
+% % % % % % % % % % % % % % % % % % % % % %
+%
+% -- IMPORTANT NOTE
+%
+% This template contains comments intended 
+% to minimize problems and delays during our production 
+% process. Please follow the template instructions
+% whenever possible.
+%
+% % % % % % % % % % % % % % % % % % % % % % % 
+%
+% Once your paper is accepted for publication, 
+% PLEASE REMOVE ALL TRACKED CHANGES in this file 
+% and leave only the final text of your manuscript. 
+% PLOS recommends the use of latexdiff to track changes during review, as this will help to maintain a clean tex file.
+% Visit https://www.ctan.org/pkg/latexdiff?lang=en for info or contact us at latex@plos.org.
+%
+%
+% There are no restrictions on package use within the LaTeX files except that 
+% no packages listed in the template may be deleted.
+%
+% Please do not include colors or graphics in the text.
+%
+% The manuscript LaTeX source should be contained within a single file (do not use \input, \externaldocument, or similar commands).
+%
+% % % % % % % % % % % % % % % % % % % % % % %
+%
+% -- FIGURES AND TABLES
+%
+% Please include tables/figure captions directly after the paragraph where they are first cited in the text.
+%
+% DO NOT INCLUDE GRAPHICS IN YOUR MANUSCRIPT
+% - Figures should be uploaded separately from your manuscript file. 
+% - Figures generated using LaTeX should be extracted and removed from the PDF before submission. 
+% - Figures containing multiple panels/subfigures must be combined into one image file before submission.
+% For figure citations, please use "Fig" instead of "Figure".
+% See http://journals.plos.org/plosone/s/figures for PLOS figure guidelines.
+%
+% Tables should be cell-based and may not contain:
+% - spacing/line breaks within cells to alter layout or alignment
+% - do not nest tabular environments (no tabular environments within tabular environments)
+% - no graphics or colored text (cell background color/shading OK)
+% See http://journals.plos.org/plosone/s/tables for table guidelines.
+%
+% For tables that exceed the width of the text column, use the adjustwidth environment as illustrated in the example table in text below.
+%
+% % % % % % % % % % % % % % % % % % % % % % % %
+%
+% -- EQUATIONS, MATH SYMBOLS, SUBSCRIPTS, AND SUPERSCRIPTS
+%
+% IMPORTANT
+% Below are a few tips to help format your equations and other special characters according to our specifications. For more tips to help reduce the possibility of formatting errors during conversion, please see our LaTeX guidelines at http://journals.plos.org/plosone/s/latex
+%
+% For inline equations, please be sure to include all portions of an equation in the math environment.  For example, x$^2$ is incorrect; this should be formatted as $x^2$ (or $\mathrm{x}^2$ if the romanized font is desired).
+%
+% Do not include text that is not math in the math environment. For example, CO2 should be written as CO\textsubscript{2} instead of CO$_2$.
+%
+% Please add line breaks to long display equations when possible in order to fit size of the column. 
+%
+% For inline equations, please do not include punctuation (commas, etc) within the math environment unless this is part of the equation.
+%
+% When adding superscript or subscripts outside of brackets/braces, please group using {}.  For example, change "[U(D,E,\gamma)]^2" to "{[U(D,E,\gamma)]}^2". 
+%
+% Do not use \cal for caligraphic font.  Instead, use \mathcal{}
+%
+% % % % % % % % % % % % % % % % % % % % % % % % 
+%
+% Please contact latex@plos.org with any questions.
+%
+% % % % % % % % % % % % % % % % % % % % % % % %
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[top=0.85in,left=2.75in,footskip=0.75in]{geometry}
+
+% amsmath and amssymb packages, useful for mathematical formulas and symbols
+\usepackage{amsmath,amssymb}
+
+% Use adjustwidth environment to exceed column width (see example table in text)
+\usepackage{changepage}
+
+% Use Unicode characters when possible
+\usepackage[utf8x]{inputenc}
+
+% textcomp package and marvosym package for additional characters
+\usepackage{textcomp,marvosym}
+
+% cite package, to clean up citations in the main text. Do not remove.
+\usepackage{cite}
+
+% Use nameref to cite supporting information files (see Supporting Information section for more info)
+\usepackage{nameref,hyperref}
+
+% line numbers
+\usepackage[right]{lineno}
+
+% ligatures disabled
+\usepackage{microtype}
+\DisableLigatures[f]{encoding = *, family = * }
+
+% color can be used to apply background shading to table cells only
+\usepackage[table]{xcolor}
+
+% array package and thick rules for tables
+\usepackage{array}
+
+% create "+" rule type for thick vertical lines
+\newcolumntype{+}{!{\vrule width 2pt}}
+
+% create \thickcline for thick horizontal lines of variable length
+\newlength\savedwidth
+\newcommand\thickcline[1]{%
+  \noalign{\global\savedwidth\arrayrulewidth\global\arrayrulewidth 2pt}%
+  \cline{#1}%
+  \noalign{\vskip\arrayrulewidth}%
+  \noalign{\global\arrayrulewidth\savedwidth}%
+}
+
+% \thickhline command for thick horizontal lines that span the table
+\newcommand\thickhline{\noalign{\global\savedwidth\arrayrulewidth\global\arrayrulewidth 2pt}%
+\hline
+\noalign{\global\arrayrulewidth\savedwidth}}
+
+
+% Remove comment for double spacing
+%\usepackage{setspace} 
+%\doublespacing
+
+% Text layout
+\raggedright
+\setlength{\parindent}{0.5cm}
+\textwidth 5.25in 
+\textheight 8.75in
+
+% Bold the 'Figure #' in the caption and separate it from the title/caption with a period
+% Captions will be left justified
+\usepackage[aboveskip=1pt,labelfont=bf,labelsep=period,justification=raggedright,singlelinecheck=off]{caption}
+\renewcommand{\figurename}{Fig}
+
+% Use the PLoS provided BiBTeX style
+\bibliographystyle{plos2015}
+
+% Remove brackets from numbering in List of References
+\makeatletter
+\renewcommand{\@biblabel}[1]{\quad#1.}
+\makeatother
+
+
+
+% Header and Footer with logo
+\usepackage{lastpage,fancyhdr,graphicx}
+\usepackage{epstopdf}
+%\pagestyle{myheadings}
+\pagestyle{fancy}
+\fancyhf{}
+%\setlength{\headheight}{27.023pt}
+%\lhead{\includegraphics[width=2.0in]{PLOS-submission.eps}}
+\rfoot{\thepage/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrule}{\hrule height 2pt \vspace{2mm}}
+\fancyheadoffset[L]{2.25in}
+\fancyfootoffset[L]{2.25in}
+\lfoot{\today}
+
+%% Include all macros below
+
+\newcommand{\lorem}{{\bf LOREM}}
+\newcommand{\ipsum}{{\bf IPSUM}}
+
+%% END MACROS SECTION
+
+% -- my additions --
+
+\usepackage{gensymb}
+\usepackage{xspace}
+
+\newcommand{\ca}{$\alpha$-carbon\xspace}
+\newcommand{\cas}{$\alpha$-carbons\xspace}
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
+\RequirePackage[normalem]{ulem} %DIF PREAMBLE
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\providecommand{\DIFaddtex}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
+\providecommand{\DIFdeltex}[1]{{\protect\color{red}\sout{#1}}}                      %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+%DIF HYPERREF PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{\texorpdfstring{\DIFaddtex{#1}}{#1}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{\texorpdfstring{\DIFdeltex{#1}}{}} %DIF PREAMBLE
+\newcommand{\DIFscaledelfig}{0.5}
+%DIF HIGHLIGHTGRAPHICS PREAMBLE %DIF PREAMBLE
+\RequirePackage{settobox} %DIF PREAMBLE
+\RequirePackage{letltxmacro} %DIF PREAMBLE
+\newsavebox{\DIFdelgraphicsbox} %DIF PREAMBLE
+\newlength{\DIFdelgraphicswidth} %DIF PREAMBLE
+\newlength{\DIFdelgraphicsheight} %DIF PREAMBLE
+% store original definition of \includegraphics %DIF PREAMBLE
+\LetLtxMacro{\DIFOincludegraphics}{\includegraphics} %DIF PREAMBLE
+\newcommand{\DIFaddincludegraphics}[2][]{{\color{blue}\fbox{\DIFOincludegraphics[#1]{#2}}}} %DIF PREAMBLE
+\newcommand{\DIFdelincludegraphics}[2][]{% %DIF PREAMBLE
+\sbox{\DIFdelgraphicsbox}{\DIFOincludegraphics[#1]{#2}}% %DIF PREAMBLE
+\settoboxwidth{\DIFdelgraphicswidth}{\DIFdelgraphicsbox} %DIF PREAMBLE
+\settoboxtotalheight{\DIFdelgraphicsheight}{\DIFdelgraphicsbox} %DIF PREAMBLE
+\scalebox{\DIFscaledelfig}{% %DIF PREAMBLE
+\parbox[b]{\DIFdelgraphicswidth}{\usebox{\DIFdelgraphicsbox}\\[-\baselineskip] \rule{\DIFdelgraphicswidth}{0em}}\llap{\resizebox{\DIFdelgraphicswidth}{\DIFdelgraphicsheight}{% %DIF PREAMBLE
+\setlength{\unitlength}{\DIFdelgraphicswidth}% %DIF PREAMBLE
+\begin{picture}(1,1)% %DIF PREAMBLE
+\thicklines\linethickness{2pt} %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,0){\framebox(1,1){}}}% %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,0){\line( 1,1){1}}}% %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,1){\line(1,-1){1}}}% %DIF PREAMBLE
+\end{picture}% %DIF PREAMBLE
+}\hspace*{3pt}}} %DIF PREAMBLE
+} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddbegin}{\DIFaddbegin} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddend}{\DIFaddend} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelbegin}{\DIFdelbegin} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelend}{\DIFdelend} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddbegin}{\DIFOaddbegin \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbegin}{\DIFOdelbegin \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddbeginFL}{\DIFaddbeginFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddendFL}{\DIFaddendFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelbeginFL}{\DIFdelbeginFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelendFL}{\DIFdelendFL} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddbeginFL}{\DIFOaddbeginFL \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbeginFL}{\DIFOdelbeginFL \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
+
+\begin{document}
+\vspace*{0.2in}
+
+% Title must be 250 characters or less.
+\begin{flushleft}
+{\Large
+\textbf\newline{RUPEE: A fast and accurate purely geometric protein structure search} % Please use "sentence case" for title and headings (capitalize only the first word in a title (or heading), the first word in a subtitle (or subheading), and any proper nouns).
+}
+\newline
+% Insert author names, affiliations and corresponding author email (do not include titles, positions, or degrees).
+\\
+Ronald Ayoub\textsuperscript{1*},
+Yugyung Lee\textsuperscript{1}
+\\
+\bigskip
+\textbf{1} School of Computing and Engineering, University of Missouri at Kansas City, USA
+\\
+\bigskip
+
+% Insert additional author notes using the symbols described below. Insert symbol callouts after author names as necessary.
+% 
+% Remove or comment out the author notes below if they aren't used.
+%
+% Primary Equal Contribution Note
+%\Yinyang These authors contributed equally to this work.
+
+% Additional Equal Contribution Note
+% Also use this double-dagger symbol for special authorship notes, such as senior authorship.
+%\ddag These authors also contributed equally to this work.
+
+% Current address notes
+%\textcurrency Current Address: Dept/Program/Center, Institution Name, City, State, Country % change symbol to "\textcurrency a" if more than one current address note
+% \textcurrency b Insert second current address 
+% \textcurrency c Insert third current address
+
+% Deceased author note
+%\dag Deceased
+
+% Group/Consortium Author Note
+%\textpilcrow Membership list can be found in the Acknowledgments section.
+
+% Use the asterisk to denote corresponding authorship and provide email address in note below.
+* ronaldayoub@mail.umkc.edu
+
+\end{flushleft}
+% Please keep the abstract below 300 words
+\section*{Abstract}
+Given the close relationship between protein structure and function, protein structure searches have long played an established role in bioinformatics. 
+Despite their maturity, existing protein structure searches either use simplifying assumptions or compromise between fast response times and quality of results. 
+These limitations can prevent the easy and efficient exploration of relationships between protein structures, which is the norm in other areas of inquiry.
+\DIFdelbegin \DIFdel{We }\DIFdelend \DIFaddbegin \DIFadd{To address these limitations we }\DIFaddend have developed RUPEE, a fast \DIFdelbegin \DIFdel{, scalable, and }\DIFdelend \DIFaddbegin \DIFadd{and accurate }\DIFaddend purely geometric structure search combining techniques from information retrieval and big data with a novel approach to encoding sequences of torsion angles.
+
+Comparing our results to the output of mTM, SSM, and the CATHEDRAL structural scan, it is clear that RUPEE has set a new bar for purely geometric big data approaches to protein structure searches.
+RUPEE in top-aligned mode produces equal or better results than the best available protein structure searches, and RUPEE in fast mode demonstrates the fastest response times coupled with high quality results. 
+
+The RUPEE protein structure search is available at \DIFdelbegin %DIFDELCMD < \url{http://www.ayoubresearch.com}%%%
+\DIFdelend \DIFaddbegin \url{https://ayoubresearch.com}\DIFaddend . 
+Code and data are available at \url{https://github.com/rayoub/rupee}.
+
+\linenumbers
+
+% Use "Eq" instead of "Equation" for equation citations.
+\section*{Introduction}
+
+Proteins represent the functional end-product within the central dogma of molecular biology \cite{Crick1970}.
+As such, understanding protein structure is a central goal within structural bioinformatics. 
+Protein structure determination, prediction, alignment, and search all serve to advance this understanding. 
+Below, we present our approach to a fast, scalable, and purely geometric protein structure search we refer to with the acronym of \emph{RUn Position Encoded Encodings} of residue descriptors (RUPEE).
+
+Given a protein domain identifier, whole chain identifier or an uploaded PDB file, RUPEE can search for matches among domains defined in SCOPe 2.07 \cite{Fox2013}, CATH v4.2 \cite{Orengo1997}, ECOD develop210 \cite{Cheng2014}, or among whole chains defined in the PDB.
+RUPEE is able to search \DIFdelbegin \DIFdel{either of }\DIFdelend these databases using any identifier. 
+For instance, you can search SCOPe using a CATH domain identifier. 
+
+RUPEE has two modes of operation, fast and top-aligned. 
+Fast mode is significantly faster than all other protein structure searches discussed below but at the \DIFdelbegin \DIFdel{expensive }\DIFdelend \DIFaddbegin \DIFadd{expense }\DIFaddend of accuracy.
+Despite this, we will show that the accuracy of RUPEE in fast mode is not far below that of the best available structure searches. 
+On the other hand, the accuracy and response times of RUPEE in top-aligned mode are comparable to currently available protein structure searches that are commonly considered fast. 
+
+RUPEE stands out as not just another protein structure search, of which there are many. 
+RUPEE is the first, to our knowledge, purely geometric protein structure search to achieve results as good as the best available protein structure searches. 
+\DIFdelbegin \DIFdel{Additionally, it can be argued that }\DIFdelend \DIFaddbegin \DIFadd{Being purely geometric, }\DIFaddend the kinds of matches that RUPEE \DIFdelbegin \DIFdel{does return have more added value than the current state of the art in that with equal scores it is able to return results }\DIFdelend \DIFaddbegin \DIFadd{returns are }\DIFaddend not biased toward a structure classification hierarchy such as SCOPe or sequence clusters such as the PDB-90.
+\DIFaddbegin \DIFadd{Moreover, without a dependence on pre-calculated results, it is easy to apply filters at any level of granularity to the protein structures RUPEE searches in order to better focus on structures of interest.
+As one example, domains not having the same fold classification as the query structure can be searched exclusively to investigate unexpected structural relationships across folds. 
+}\DIFaddend In this regard, RUPEE makes a fundamental contribution to protein structure research that \DIFdelbegin \DIFdel{lends itself to being leveraged in existing systems. 
+It also provided }\DIFdelend \DIFaddbegin \DIFadd{also provides }\DIFaddend a path for further research \DIFdelbegin \DIFdel{activity }\DIFdelend in the direction of big data representations of protein structures. 
+
+Besides our approach to protein structure search, we introduce a polar plot for torsion angles that may have wider applicability in the study of protein structure. 
+Further, the \emph{run position encoding} heuristic introduced below may have wider applicability to algorithms for character sequences containing long runs of repeats. 
+
+We first discuss some related work to provide a context for our approach followed by a description of our method. 
+We end with a comparison of results against the mTM-align structure search \cite{Dong2018}, the secondary structure matching (SSM) search \cite{Krissinel2004}, and the CATHEDRAL structural scan \cite{Redfern2007} available at the CATH website.
+
+\section*{Related work}
+
+Pairwise alignment involves finding a set of spatial rotations and translations for two protein structures that minimizes a distance metric. 
+\DIFdelbegin \DIFdel{Most commonly}\DIFdelend \DIFaddbegin \DIFadd{Traditionally}\DIFaddend , the root mean squared deviation (RMSD) between \cas of aligned residues is minimized.
+\DIFaddbegin \DIFadd{However, the RMSD score does not factor in the distance between unaligned residues nor does it consider the percentage of aligned residues, that is, alignment }\emph{\DIFadd{coverage}}\DIFadd{. 
+RMSD scores also have some dependence on the length of the aligned proteins. 
+On the other hand, the TM-score \mbox{%DIFAUXCMD
+\cite{Zhang2004} }\hspace{0pt}%DIFAUXCMD
+takes all residues into account and normalizes for both coverage and length of the aligned proteins. 
+For this reason, TM-score is frequently used in the assessment of protein structure alignments. 
+}\DIFaddend 
+
+\DIFdelbegin \DIFdel{The }\DIFdelend \DIFaddbegin \DIFadd{Pairwise alignments often favor accuracy over speed because the }\DIFaddend typical use case of aligning one protein structure to another does not impose tight response time requirements. 
+\DIFdelbegin \DIFdel{For this reason, pairwise alignments can focus on accuracy. 
+}\DIFdelend On the other hand, a protein structure search can involve thousands of comparisons and accuracy is often balanced against speed. 
+In this case, pairwise alignment is still useful for evaluating the results of a search, and this is the approach we take. 
+
+For pairwise alignment, Combinatorial Extensions (CE) \cite{Shindyalov1998} and FATCAT \cite{Ye2003} are among the most popular tools, representing rigid and flexible protein alignments, respectively. 
+CE performs a rigid alignment in order to minimize RMSD and FATCAT allows for a constrained number of twists in the protein chain in order to find a more flexible alignment before minimizing RMSD.
+
+\DIFaddbegin \DIFadd{Besides CE and FATCAT, TM-align \mbox{%DIFAUXCMD
+\cite{Zhang2005} }\hspace{0pt}%DIFAUXCMD
+and DALI \mbox{%DIFAUXCMD
+\cite{Sander1995} }\hspace{0pt}%DIFAUXCMD
+are pairwise alignment tools also in wide use, both offering their own distinct approaches to structure alignment. 
+TM-align uses a rotation matrix designed to maximize the TM-score rather than minimizing the RMSD along with dynamic programming to find the best full-length alignment. 
+DALI compares intramolecular distance matrices between two proteins to find a consistent set of matched submatrices that is used to align the proteins. 
+}
+
+\DIFadd{Of the pairwise alignment tools, CE, FATCAT, TM-align and DALI, we have found TM-align is the fastest while also providing high-quality pairwise structure alignments. 
+It is for this reason that we use TM-align for RUPEE in top-aligned mode. 
+}
+
+\DIFaddend Whereas pairwise structure alignments only depend on the sequence of \ca coordinates, protein structure searches often introduce a further dependence on the sequence order of amino acids.
+This approach often takes the form of clustering proteins based on sequences and pre-calculating results for pairwise alignments among cluster representatives. 
+Then, these pre-calculated results are used for filtering the number of structures used for comparisons against a query protein.
+The exact formula for combining the use of representatives and pre-calculated results varies from system to system.
+However, all systems using this approach share the same disadvantage, an indirect dependence on amino acid sequences. 
+In the absence of a reliance on sequence representatives and pre-calculated results, and without sacrificing accuracy, response times suffer greatly, often taking upwards of an hour for queries to complete. 
+
+For protein structure searches, VAST \cite{Gilbrat1996} and the FATCAT server \cite{Ye2004} are among the most popular. 
+Nonetheless, these searches are slow in comparison to \DIFaddbegin \DIFadd{the structure searches we compare to in this paper, }\DIFaddend mTM, SSM, and CATHEDRAL\DIFaddbegin \DIFadd{, }\DIFaddend when pre-calculated results are not used. 
+If given a known protein domain, VAST can return structural neighbors in seconds using pre-calculated results. 
+However, if uploading a PDB file where pre-calculated results are not used, response times for VAST can exceed 30 minutes. 
+Similarly, the FATCAT server, that does not use pre-calculated results, can take over an hour to send results for a search against PDB-90 representatives \cite{Prlic2010}. 
+
+\DIFaddbegin \DIFadd{DALI also provides a heuristic structure search \mbox{%DIFAUXCMD
+\cite{Holm2010} }\hspace{0pt}%DIFAUXCMD
+of whole chains found in the PDB in addition to a tool for pairwise structure alignments using distance matrices as discussed above. 
+In the case of searching, DALI first identifies matched PDB-90 representatives and then walks a pre-calculated graph of structural similarities to identify further matches in the PDB to gradually build up the set of structures similar to the query structure. 
+DALI is slow in comparison to SSM, and mTM has shown better quality results than DALI \mbox{%DIFAUXCMD
+\cite{Dong2018}}\hspace{0pt}%DIFAUXCMD
+.
+}
+
+\DIFaddend Given the above, there remains a need for a purely geometric protein structure search.
+For the serendipitous exploration of relations between protein structures performed in the trenches, this search should be fast. 
+Moreover, with a $~10\%$ yearly growth rate of solved structures deposited in the PDB \cite{gkw1000}, this search should be scalable. 
+At a minimum, RUPEE takes a significant step in this direction as will be shown below. 
+
+\section*{Methods}
+
+Broadly, we define a linear encoding of protein structure and convert this linear encoding into a bag of features. 
+Min-hashing and locality sensitive hashing (LSH), techniques drawn from big data, are then applied to implement a protein structure indexing method that serves as the foundation for both RUPEE operating modes, fast and top-aligned. 
+
+Protein structure searches that use linear encodings are not unique \cite{Carpentier2005,Daniluk2011,Ritchie2012}.
+The novelty of our approach lies in its remarkable performance given its simplicity. 
+Additionally, elements of our approach can be isolated and found to be useful in their own right. 
+
+\subsection*{Regions of \DIFdelbegin \DIFdel{Torsion Angles}\DIFdelend \DIFaddbegin \DIFadd{torsion angles}\DIFaddend }
+
+Our first step towards a linear encoding of protein structure is to identify separable regions of permissible torsion angles,
+but first we introduce a new plot of torsion angles better suited to this effort. 
+
+Despite their utility and familiarity, Ramachandran plots \cite{Ramachandran1968} represent angular data using a square plot better suited for scalar data.
+This leads to the unwieldy arrangement where the top part of the plot is continuous with the bottom and the left is continuous with the right. 
+
+To identify regions of torsion angles, we randomly sampled 10,000 residues from high-resolution CATH s35 representatives to account for precision and redundancy, respectively. 
+A Ramachandran plot of the sampled torsions angles is shown in the left plot of \figurename~\ref{fig:combined_torsion}. 
+As can be seen, a single cluster of residues, consisting primarily of $\beta$-strands, appears at all 4 corners of the Ramachandran plot.
+
+\begin{figure*}[!h]
+\caption{Ramachandran plot (right) and polar plot (left) of randomly sampled torsion angles}
+\label{fig:combined_torsion}
+\end{figure*}
+
+This continuity problem was partially addressed in \cite{Karplus2010} using \emph{wrapped} and \emph{mirrored} plots. 
+Both wrapped and mirrored plots take advantage of the sparsely populated areas of the Ramachandran plot at $\phi = 0\degree$ and $\psi = -120\degree$.
+However, with larger samples of torsion angles, the area at $\psi = -120\degree$ becomes less sparse. 
+The use of a polar plot resolves this elegantly by only requiring one break in continuity at $\phi = 0\degree$. 
+
+In the right plot of \figurename~\ref{fig:combined_torsion}, we show the same torsion angles appearing in the Ramachandran plot using a polar plot. 
+In this plot, $\phi$ corresponds to the radius $r$ and $\psi$ corresponds to the angle $\theta$ in traditional polar plots. 
+Notice the residues appearing at the 4 corners of the Ramachandran plot now appear in one continuous region of the polar plot centered at $\phi = \pm180\degree$ and $\psi = \pm180\degree$. 
+
+\subsection*{Linear \DIFdelbegin \DIFdel{Encoding }\DIFdelend \DIFaddbegin \DIFadd{encoding }\DIFaddend of \DIFdelbegin \DIFdel{Protein Structure}\DIFdelend \DIFaddbegin \DIFadd{protein structure}\DIFaddend }
+
+The polar plot described above is used to define torsion angle regions for \DIFdelbegin \DIFdel{each secondary structure assignment.
+The }\DIFdelend \DIFaddbegin \DIFadd{DSSP secondary structure assignments.
+We divide six of the }\DIFaddend eight DSSP secondary structure assignment codes defined in \cite{Kabsch1983} \DIFdelbegin \DIFdel{divide }\DIFdelend into three groups\DIFdelbegin \DIFdel{in which torsion angle regions are roughly the same: }\DIFdelend \DIFaddbegin \DIFadd{: helices (}\DIFaddend `G',`H',`I'\DIFaddbegin \DIFadd{), strands (`E'), and bends and coils (`S'}\DIFaddend ,\DIFdelbegin \DIFdel{and `T'corresponding to $3_{10}$-helix, $\alpha$-helix, $\pi$-helix, and turn, respectively; `E' and }\DIFdelend `\DIFdelbegin \DIFdel{B'corresponding to $\beta$-strand and $\beta$-bridge,respectively; and `S' and `C'corresponding to bend and coil, respectively.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{Polar plots for each group of DSSP assignment codes along with defined region and descriptor designations are }\DIFdelend \DIFaddbegin \DIFadd{C').
+For each of the three groups, we plotted the torsion angles and identified regions into which they clustered as }\DIFaddend shown in \figurename~\ref{fig:regions}\DIFdelbegin \DIFdel{, with the exception of turns and bridges, which receive }\DIFdelend \DIFaddbegin \DIFadd{.
+The regions for helices are assigned descriptors 1 to 4, for strands 5 to 7, and for bends and coils 8 to 10. 
+The other two DSSP secondary structure assignments codes for turns (`T') and bridges~(`B'), are assigned }\DIFaddend descriptors 11 and 12, respectively.
+For each polar plot, there are well-defined continuous regions of torsion angles that remain continuous in the plots. 
+The only exception is found in the bends and \DIFdelbegin \DIFdel{coil }\DIFdelend \DIFaddbegin \DIFadd{coils }\DIFaddend plot at $\psi = 60\degree$ between $\phi = -180\degree$ and $\phi = 0\degree$.
+
+\begin{figure*}[!h]
+\caption{Polar plots of randomly sampled torsion angles with designated descriptors for region and DSSP code combinations}
+\label{fig:regions}
+\end{figure*}
+
+\DIFdelbegin \DIFdel{As an example of our linear encoding }\DIFdelend \DIFaddbegin \DIFadd{We use the above numeric descriptors to create a linear encoding of protein structures. 
+For example}\DIFaddend , we apply our \DIFdelbegin \DIFdel{method }\DIFdelend \DIFaddbegin \DIFadd{linear encoding }\DIFaddend to the $\beta$-turn-$\beta$ motif shown in \figurename~\ref{fig:beta_turn}.
+The corresponding sequence of residue descriptors is shown below.
+\begin{gather}\label{E:descrseq} 
+    [\, 5, 5, 5, 5, 5, 5, 7, 5, 11, 11, 5, 5, 5, 5, 5, 5 \,]
+\end{gather}
+
+\begin{figure}[!h]
+\caption{$\beta$-turn-$\beta$ motif from CATH domain 1nycA00}
+\label{fig:beta_turn}
+\end{figure}
+
+\subsection*{Bag representation of protein structure}
+
+Once a linear encoding for a protein structure is obtained, it needs to be further transformed into a representation suitable for fast and scalable similarity comparisons to other structures.
+The processing of text documents within Information Retrieval~(IR) has long been used to satisfy these requirements using bag representations.
+There are two distinct categories of representations for documents, syntactic and semantic, and much of the research applying IR to protein structure search has focused on the latter \cite{Aungand2004,Zhang2010,Budowski2010}. 
+
+We have adapted the syntactic approach to document similarity, often referred to as shingling \cite{Broder1997a}, to our linear encoding of protein structure. 
+We transform a linear sequence of descriptors into a multiset of shingles consisting of 3 consecutive descriptors.
+The overlap between shingles ensures some of the order information within the original sequence is preserved in the bag. 
+
+\DIFdelbegin \DIFdel{The length of a shingle is chosen to balance false positives, in the case of shorter shingles, against false negatives, in the case of longer shingles. 
+In \mbox{%DIFAUXCMD
+\cite{Ayoub2017}}\hspace{0pt}%DIFAUXCMD
+, we used 4 consecutive descriptors for our shingles. 
+With the additions discussed in the }\emph{\DIFdel{Operating modes}} %DIFAUXCMD
+\DIFdel{section below, we have found RUPEE is more tolerant of false positives and so accordingly we have cast a wider net by decreasing the shingle length to 3. 
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdelend By shingling, we obtain a multiset of ordered lists from an ordered list of numbers. 
+As an example, the sequence in (\ref{E:descrseq}) is transformed into the following bag of shingles. 
+\begin{align}\label{E:shinglebag}
+    \begin{split}
+        \{\,&[5, 5, 5], [5, 5, 5], [5, 5, 5], [5, 5, 5], [5, 5, 7] \\
+            & [5, 7, 5], [7, 5, 11], [5, 11, 11], [11, 11, 5], [11, 5, 5] \\
+            & [5, 5, 5], [5, 5, 5], [5, 5, 5], [5, 5, 5] \,\}
+    \end{split}
+\end{align}
+
+Next, each shingle $s$ is hashed to an integer as shown in~(\ref{E:hashdef}). 
+The hash function used is a simplification of the hash function used in the Rabin-Karp algorithm \cite{Karp1987}.
+The prime number $13$ is used as the base since it is large enough to spread the descriptor values out in hash space without collisions. 
+\begin{gather}\label{E:hashdef}
+    s_{hash} = s_1 \times 13^2 + s_2 \times 13 + s_3
+\end{gather}
+Subsequently, the multiset in (\ref{E:shinglebag}) becomes the following bag of integers.
+\begin{align}\label{E:hashbag}
+    \begin{split}
+    \{\,&915, 915, 915, 915, 917, 941, 1259 \\
+        &999, 2007, 1929, 915, 915, 915, 915 \,\}
+    \end{split}
+\end{align}
+This final step completes the transformation of an ordered list of descriptors to a multiset of integers that still retains some of the order information present in the original list. 
+
+Notice in (\ref{E:hashbag}) the value 915, corresponding to the shingle $[ 5, 5, 5 ]$, occurs frequently indicating the presence of $\beta$-strands. 
+Since most proteins are dominated by regular secondary structure, the abundance of shingles for $\beta$-strands as well as the three types of helices, end up dominating comparisons. 
+Moreover, since shingles are limited in length, this situation allows for structures with many short $\beta$-strands to match structures with fewer long $\beta$-strands.
+The same situation applies to helices. 
+
+To address this lack of specificity, we introduce a heuristic we call \emph{run position encoding} (RPE)\DIFaddbegin \DIFadd{, where a run is a consecutive sequence of identical descriptors}\DIFaddend . 
+To distinguish between short and long runs, thereby increasing the specificity of the shingles, we add a factor of $10^5$ to each shingle hash as a function of the first residue's position in a run $i$. 
+\begin{gather}
+    runfactor(i) = 
+    \begin{cases}
+        i               &\text{if $i < \lfloor l/2 \rfloor$}\\
+        l - i - 1       &\text{otherwise} 
+    \end{cases}
+\end{gather}
+where $i$ is zero-based and $l$ is the length of the run.
+Multiplying by $10^5$ places the run factor as the left-most digit in the hash to avoid interference with the digits provided by the hash in (\ref{E:hashdef}).
+This placement is also convenient for visual inspection, since the run factor is isolated as the left-most digit. 
+
+The run factors for the sequence in (\ref{E:descrseq}) are
+\begin{align}
+    [\, 0, 1, 2, 2, 1, 0, 0, 0, 0, 0, 0, 1, 2, 2, 1, 0 \,].
+\end{align}
+Applied to the bag of integers in (\ref{E:hashbag}) gives
+\begin{align}\label{E:rpebag}
+    \begin{split}
+    \{\,&00915, 10915, 20915, 20915, 10917, 00941, 01259 \\
+        &00999, 02007, 01929, 00915, 10915, 20915, 20915 \,\}
+    \end{split}
+\end{align}
+where the leading zero run factors are shown for clarity. 
+
+This pyramidal approach preserves matches at the boundaries between secondary structure runs and loops that would not otherwise be preserved in the presence of differences in run lengths of one or more. 
+
+Now that we have a representation of a protein structure as a bag of integers, similarity \DIFdelbegin \DIFdel{between any two }\DIFdelend \DIFaddbegin \DIFadd{for a candidate pair of }\DIFaddend structures $a$ and $b$ is defined as the Jaccard similarity \cite{Levan1971} for multisets,
+\begin{align}
+    J(a,b) = \frac{\sum_i min(a_i, b_i)}{\sum_i max(a_i,b_i)}\text{,}
+\end{align}
+where $i$ ranges over all possible shingle hashes $s_i$ and $a_i$ and $b_i$ give the counts of shingle hash $s_i$ in structures $a$ and $b$, respectively. 
+
+\DIFaddbegin \DIFadd{In applying the Jaccard similarity to sets of shingles, the length of a shingle is chosen to balance false positives, in the case of shorter shingles, against false negatives, in the case of longer shingles.
+In \mbox{%DIFAUXCMD
+\cite{Ayoub2017}}\hspace{0pt}%DIFAUXCMD
+, we used 4 consecutive descriptors for our shingles. 
+The additional requirements for structural similarity we introduce in the }\emph{\DIFadd{Operating modes}} \DIFadd{section below has the ultimate effect of reducing false positives, so this allowed us to decrease the shingle length to 3 to control better for false negatives. 
+}
+
+\DIFaddend \subsection*{Min-hashing and LSH}
+
+In IR, the bag of shingles representation of documents is used in the near dupe clustering of documents \cite{Broder1997b}.
+One application of near dupe clustering is in the review stage of Electronic-Discovery \cite{Joshi2008}, which is the most expensive stage in a discovery process. 
+Often millions of documents must be examined by a staff of attorneys to make a reasonable effort at providing all documents relevant to the discovery request. 
+Grouping documents into near dupe clusters and assigning all documents within a cluster to a single reviewer reduces duplication of effort. 
+
+In the case of near dupe clustering, each document must be compared to every other document in the collection, taking quadratic time.
+For this task, min-hashing \cite{Broder1998} and locality sensitive hashing (LSH) \cite{Indyk1998} can be combined to reduce this to subquadratic time. 
+Although we do not near dupe cluster domains, we can still leverage the techniques of min-hashing and LSH to speed up protein structure search by a large constant factor.
+
+Min-hashing \DIFaddbegin \DIFadd{generally }\DIFaddend is used to \DIFdelbegin \DIFdel{randomly select items from a }\DIFdelend \DIFaddbegin \DIFadd{create a fixed-length signature for a }\DIFaddend set of items by repeatedly randomly hashing the items, sorting the hashes into a list, and then selecting the minimum \DIFdelbegin \DIFdel{item }\DIFdelend \DIFaddbegin \DIFadd{hash }\DIFaddend in each permuted list.
+If the same \DIFdelbegin \DIFdel{random permutation of items }\DIFdelend \DIFaddbegin \DIFadd{process }\DIFaddend is performed on \DIFdelbegin \DIFdel{each set of items in a collection}\DIFdelend \DIFaddbegin \DIFadd{a pair of sets}\DIFaddend , the key result is that the probability of matching min-hashes \DIFaddbegin \DIFadd{at the same position }\DIFaddend is equal to the Jaccard similarity \DIFaddbegin \DIFadd{of the two sets }\DIFaddend \cite{Broder1998}.
+In order to approximate the Jaccard similarity for a given pair of sets, a sufficient number of min-hashes must be obtained. 
+
+In our case, the \DIFdelbegin \DIFdel{items are bags of shingle hashes for protein structures }\DIFdelend \DIFaddbegin \DIFadd{sets contain shingles for a protein structure }\DIFaddend from which we obtain 99 min-hashes \DIFaddbegin \DIFadd{for each set }\DIFaddend as described in \cite{Rajaraman2012}. 
+\DIFaddbegin \DIFadd{At this stage, we have reduced our representation of protein structures from variable-sized sets of shingles to fixed-length signatures.
+}\DIFaddend Given the key result above, the Jaccard similarity \DIFaddbegin \DIFadd{for any pair of protein structures }\DIFaddend can now be approximated by the proportion of matching min-hashes. 
+
+\DIFdelbegin \DIFdel{Next, we }\DIFdelend \DIFaddbegin \DIFadd{We }\DIFaddend use the LSH banding technique as described in \cite{Rajaraman2012} \DIFdelbegin \DIFdel{.
+}\DIFdelend \DIFaddbegin \DIFadd{to first identify candidate matches without having to compare min-hashes for every protein structure. 
+We divide the 99 min-hashes in the signatures into contiguous subsequences (i.e. bands) of 3 min-hashes each, giving a total of 33 bands. 
+For each band, the min-hashes it contains are combined into yet another hash. 
+}\DIFaddend The key result of the banding technique is that if \emph{any} band \DIFdelbegin \DIFdel{positions }\DIFdelend \DIFaddbegin \DIFadd{hashes }\DIFaddend are a match for a given pair of structures, \DIFaddbegin \DIFadd{we can calculate }\DIFaddend the probability that a specific \DIFaddbegin \DIFadd{Jaccard }\DIFaddend similarity threshold has been met\DIFdelbegin \DIFdel{can be calculated.
+We use }\DIFdelend \DIFaddbegin \DIFadd{.
+For }\DIFaddend 33 bands of \DIFdelbegin \DIFdel{3-min-hashes where }\DIFdelend \DIFaddbegin \DIFadd{3 min-hashes, }\DIFaddend the probability of a \DIFaddbegin \DIFadd{band match occurring for a pair of structures having a }\DIFaddend Jaccard similarity of 60\% or greater is approximately 99\%. 
+Banding allows the problem of finding similar \DIFdelbegin \DIFdel{items }\DIFdelend \DIFaddbegin \DIFadd{structures }\DIFaddend to be parallelized across bands since all that is needed for a \DIFaddbegin \DIFadd{candidate }\DIFaddend match is a single band match. 
+
+Together, min-hashing and LSH provide the foundation for both operating modes of RUPEE, fast and top-aligned.
+
+\subsection*{Operating modes}
+
+RUPEE provides two modes, fast and top-aligned. 
+Each operating mode builds on the results provided by the min-hashing and LSH system described above. 
+When a structure search is executed in either mode, a number of concurrent tasks are executed corresponding to the \DIFdelbegin \DIFdel{number of }\DIFdelend \DIFaddbegin \DIFadd{33 }\DIFaddend bands used for LSH. 
+These concurrent tasks identify candidate matches based on a single band match\DIFdelbegin \DIFdel{and then validate the matches based on a comparison of }\DIFdelend \DIFaddbegin \DIFadd{; for each candidate match, we estimate the Jaccard similarity using the }\DIFaddend min-hashes. 
+\DIFaddbegin \DIFadd{In this way, RUPEE quickly compares the query structure to every structure in the database, which in the case of ECOD is greater than 600,000 protein domains.
+}\DIFaddend 
+
+In fast mode, the top \DIFdelbegin \DIFdel{8,000 matches are obtained along with the original gram sequences defined for }\DIFdelend \DIFaddbegin \DIFadd{8000 matches from the min-hashing and LSH initial filtering are obtained.
+For each match, we adjust the Jaccard similarity to account for matched shingles that are out of sequence order. 
+For this adjustment, we calculate the exact denominator in the definition of Jaccard similarity from the original shingle sequences of }\DIFaddend the structures.
+\DIFdelbegin \DIFdel{A further validation is done by performing a }\DIFdelend \DIFaddbegin \DIFadd{As for the numerator, instead of using the total number of matched shingles, we use the length of the }\DIFaddend longest common subsequence (LCS) \DIFdelbegin \DIFdel{analysis of the matched gram sequences and adjusting }\DIFdelend \DIFaddbegin \DIFadd{of }\DIFaddend the \DIFaddbegin \DIFadd{shingle sequences for each match. 
+This LCS adjustment to the }\DIFaddend Jaccard similarity \DIFdelbegin \DIFdel{scores accordingly.
+This step accounts for possible gram matches among pairs of structures that are out of order since the min-hashing and LSH techniques themselves do not consider the order of the gram matches}\DIFdelend \DIFaddbegin \DIFadd{enforces the constraint that all valid shingles matches must appear in order along the length of each structure}\DIFaddend . 
+The final step of fast mode is to sort the matches based on the adjusted \DIFaddbegin \DIFadd{Jaccard similarity }\DIFaddend scores and return the results. 
+
+Top-aligned is an additional step following fast mode \DIFaddbegin \DIFadd{that uses TM-align to identify the best pairwise alignments among the 8000 matches returned from fast mode}\DIFaddend .
+First, \DIFdelbegin \DIFdel{unoptimized CE alignments are performed on the top 2,000 }\DIFdelend \DIFaddbegin \DIFadd{we execute TM-align on the 8000 }\DIFaddend matches obtained from fast mode \DIFdelbegin \DIFdel{. 
+Then optimized CE alignments are performed }\DIFdelend \DIFaddbegin \DIFadd{using a reduced number of dynamic programming iterations in the TM-align algorithm. 
+We sort these initial alignments by the sort criterion entered by the user, either RMSD or TM-score, and obtain the top 400 matches.
+Finally, we execute TM-align using the default number of dynamic programming iterations }\DIFaddend on the top 400 matches and \DIFdelbegin \DIFdel{these are finally returned sorted either by RMSD or TM-Score. 
+}\DIFdelend \DIFaddbegin \DIFadd{return the sorted results based on the sort criterion.
+}
+
+\DIFadd{The filter sizes of 8000 and 400 have been chosen based on quality of results and speed. 
+We have found that increasing the size of either of these filters results in only marginal improvements in the quality of results. 
+Given that performing pairwise alignments is the most time-consuming aspect of the RUPEE structure search, the marginal improvements gained from larger filter sizes have to be balanced against the number of pairwise alignments performed. 
+}
+
+\DIFaddend Top-aligned is a simple \DIFdelbegin \DIFdel{layer }\DIFdelend \DIFaddbegin \DIFadd{step }\DIFaddend following fast mode that establishes RUPEE fast mode as an effective filtering method that contains in its top \DIFdelbegin \DIFdel{2,000 }\DIFdelend \DIFaddbegin \DIFadd{8000 }\DIFaddend results enough good matches to compete with the best available structure searches.
+
+\section*{Results}
+
+Protein structure searches can be evaluated using pairwise alignment scores \DIFaddbegin \DIFadd{(e.g. RMSD and TM-score as described above) }\DIFaddend or by comparison of results against the hierarchy of a protein structure classification database.
+\DIFdelbegin \DIFdel{The RMSD of aligned residues is widely used in evaluations but is not perfectly suited to full-length comparisons between structures since distances between unaligned residues are not factored into the score.
+On the other hand, the TM-score \mbox{%DIFAUXCMD
+\cite{Zhang2004} }\hspace{0pt}%DIFAUXCMD
+takes all residues into account. 
+}\DIFdelend Among protein structure classification databases for which corresponding structure searches exist, SCOPe \cite{Fox2013} and CATH \cite{Orengo1997} are the most popular. 
+
+For our results, we have \DIFdelbegin \DIFdel{created }\DIFdelend \DIFaddbegin \DIFadd{derived }\DIFaddend 3 benchmarks, scop\_d360, scop\_d62, and cath\_d99, for pairwise evaluations to mTM, SSM, and CATHEDRAL, respectively.
+\DIFaddbegin \DIFadd{To avoid introducing our own bias, we were careful to derive each benchmark from an existing benchmark used in a previously published work or an existing list of protein domains provided by an independent third party.  
+}\DIFaddend scop\_d360 is derived from the d500 benchmark used in \cite{Dong2018} filtered for domains in SCOPe 2.07 for which mTM returns 100 or more results.
+\DIFaddbegin \DIFadd{scoo\_d360 contains domains from 262 distinct folds.
+}\DIFaddend Similarly, scop\_d62 is derived from the d500 benchmark filtered for domains defined in SCOP 1.73 for which SSM returns 50 or more results.  
+\DIFaddbegin \DIFadd{scop\_d62 contains domains from 53 distinct folds. 
+}\DIFaddend In keeping with our description of RUPEE in \cite{Ayoub2017}, the cath\_d99 benchmark contains 99 superfamily representatives from the top 100 most diverse superfamilies defined in CATH v4.2 for which CATHEDRAL returns results in less than 12 hours.
+
+\DIFaddbegin \DIFadd{At each point in our comparison to mTM, SSM, and CATHEDRAL, where a decision had to be made that may favor one tool over another, we were careful to make sure RUPEE is not favored. 
+For instance, while filtering the benchmarks based on the number of results returned may eliminate some hard targets, we note that in all cases RUPEE returns more than 100 results. 
+}
+
+\DIFaddend We perform pairwise evaluations to ensure the fairness of our comparisons. 
+First, for domain searches, SSM is working with the SCOP 1.73 database, so accordingly we operate RUPEE on SCOP 1.73 domains to ensure RUPEE does not have more domains to work with for scoring and precision evaluations. 
+Second, mTM is updated to work with SCOPe 2.07 domain definitions but still retains domains from 2.06 that have since been redefined either through mergers or splits in 2.07. 
+On the other hand, CATHEDRAL presents no such challenges but still requires a separate benchmark since it is working with a distinct \DIFdelbegin \DIFdel{hierarchy}\DIFdelend \DIFaddbegin \DIFadd{set of domains}\DIFaddend , CATH v4.2. 
+
+All benchmark definitions can be found in \nameref{S1_Benchmarks}. 
+
+\DIFaddbegin \subsection*{\DIFadd{Alignment normalization}}
+
+\DIFadd{The differences in approach among pairwise structure alignment tools can complicate efforts to achieve a fair comparison of protein structure searches that depend on them.
+Specifically, while RUPEE top-aligned and mTM both use TM-align for pairwise structure alignments, RUPEE normalizes by the average length of the aligned structures whereas mTM normalizes by the length of the query structure.
+Given how close the RUPEE top-aligned and mTM results shown below are with respect to scoring and precision, it is important to first examine the impact of each kind of normalization on the comparisons and also explain why we have chosen to normalize by the average length of the aligned structures for RUPEE top-aligned.
+}
+
+\DIFadd{By default, TM-align normalizes by the length of the query structure, that is, the first structure passed to it. 
+This normalization is asymmetric since higher TM-scores result when the query structure is smaller than the target structure and conversely, lower TM-scores result when the query structure is larger than the target structure. 
+In extreme cases, high TM-scores can be achieved even when the target structure is 10 times larger than the query structure so long as the query structure can be aligned somewhere within the target structure. 
+Since mTM uses the default asymmetric normalization provided by TM-align, this asymmetry becomes apparent in a detailed examination of mTM results. 
+}
+
+\DIFadd{RUPEE top-aligned uses the TM-align option of normalizing by the average length. 
+This results in symmetric scoring where the order of the structures in the alignment has no effect on the TM-score.
+The first reason we use symmetric scoring in RUPEE top-aligned is to synergistically match the min-hashing and LSH layer, which filters results based on the Jaccard similarity, a symmetric similarity measure.
+If, on the other hand, RUPEE top-aligned normalizes by the query structure, scoring and precision are negatively effected. 
+The second reason is that we plan to extend RUPEE to include both }\emph{\DIFadd{contained by}} \DIFadd{and }\emph{\DIFadd{contains}} \DIFadd{searches and do not want to favor one at the expense of the other by using asymmetric scoring. 
+}
+
+\DIFadd{To examine how these difference effect RUPEE top-aligned and mTM results, we gathered the maximum percentage differences in length among the results for each structure search for domains in scop\_d360.
+We averaged these maximum percentage differences and found the average for RUPEE is 19.4\% and for mTM is 90.8\%. 
+Whereas for RUPEE, these difference reflect larger and smaller query structures equally, for mTM, the larger difference always reflect a query structure smaller than the target structure. 
+Most of the extreme cases of mTM matching a small structure to a larger structure several times its size is matching small helical fragments to larger transmembrane proteins or other proteins with helical bundles. 
+}
+
+\DIFadd{Given the difference in normalization between RUPEE and mTM, to be fair, we compare RUPEE scoring with mTM scoring below using TM-align normalized by the length of the query structure in addition to the average length of aligned structures. 
+}
+
+\DIFaddend \subsection*{Scoring}
+
+\figurename~\DIFdelbegin \DIFdel{\ref{fig:combined_scoring_ce} }\DIFdelend \DIFaddbegin \DIFadd{\ref{fig:combined_scoring_tm_avg} }\DIFaddend shows average cumulative values for each ranked result averaged over all searches.
+Both RMSD and TM-score values are shown, provided as outputs from \DIFdelbegin \DIFdel{optimized CE pairwise alignments }\DIFdelend \DIFaddbegin \DIFadd{TM-align pairwise alignments normalized by the average length of aligned structures}\DIFaddend .
+A TM-score above 0.5 is a good predictor for whether or not two domains are in the same fold \cite{Xu2010}.
+TM-scores greater than 0.17 are considered potentially meaningful whereas TM-scores less than 0.17 are considered to be due to random alignment \cite{Zhang2004}.
+
+\begin{figure*}[!h]
+\caption{Scoring from \DIFdelbeginFL \DIFdelFL{CE }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{TM-align }\DIFaddendFL pairwise alignments \DIFaddbeginFL \DIFaddFL{normalized by the average length of aligned structures }\DIFaddendFL for RUPEE fast, RUPEE top-aligned sorted by \DIFdelbeginFL \DIFdelFL{TM-Score}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{TM-score}\DIFaddendFL , and RUPEE top-aligned sorted by RMSD}
+\DIFdelbeginFL %DIFDELCMD < \label{fig:combined_scoring_ce}
+%DIFDELCMD < %%%
+\DIFdelendFL \DIFaddbeginFL \label{fig:combined_scoring_tm_avg}
+\DIFaddendFL \end{figure*}
+
+\DIFdelbegin \DIFdel{A figure similar to \figurename~\ref{fig:combined_scoring_ce} but using FATCAT for pairwise comparisons can be found in }%DIFDELCMD < \nameref{S2_Fig}%%%
+\DIFdel{. 
+The same relative relationships hold with only small variations. 
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdelend RUPEE fast, top-aligned sorted by RMSD, and top-aligned sorted by \DIFdelbegin \DIFdel{TM-Score}\DIFdelend \DIFaddbegin \DIFadd{TM-score}\DIFaddend , perform better than SSM and CATHEDRAL.
+The scoring in the cath\_d99 benchmark comparisons are notably lower than for the other two benchmarks. 
+This is expected since CATHEDRAL only returns CATH s35 representatives.
+Likewise, for this comparison RUPEE is filtered for s35 representatives to match. 
+Given that the cath\_d99 benchmark is evaluated against representatives, there are fewer highly similar structures returned in the results. 
+
+In our evaluation, mTM faired better than SSM and CATHEDRAL. 
+mTM also performed better than RUPEE fast, although RUPEE fast is still within 0.08 \DIFdelbegin \DIFdel{TM-Score }\DIFdelend \DIFaddbegin \DIFadd{TM-score }\DIFaddend points of mTM at the 100\textsuperscript{th} result, which is notable considering its speed.
+
+For \DIFdelbegin \DIFdel{TM-Score}\DIFdelend \DIFaddbegin \DIFadd{both TM-score and RMSD}\DIFaddend , RUPEE top-aligned \DIFdelbegin \DIFdel{and mTM are nearly identical with RUPEE slightly better for ranks less than 50 and mTMbetter for ranks greater than 50. 
+}\DIFdelend \DIFaddbegin \DIFadd{performed better than mTM. 
+}\DIFaddend For RMSD, RUPEE top-aligned does perform better than mTM but this can most likely be attributed to the fact that mTM only sorts by \DIFdelbegin \DIFdel{TM-Score}\DIFdelend \DIFaddbegin \DIFadd{TM-score}\DIFaddend . 
+If mTM sorted by RMSD\DIFdelbegin \DIFdel{we suspect the results again would be nearly identical}\DIFdelend \DIFaddbegin \DIFadd{, their results likely will be improved}\DIFaddend . 
+Nevertheless, it is worth noting that the initial \DIFdelbegin \DIFdel{LSH and }\DIFdelend min-hashing \DIFdelbegin \DIFdel{technique }\DIFdelend \DIFaddbegin \DIFadd{and LSH technique used by RUPEE }\DIFaddend does not explicitly bias results towards one particular measure. 
+
+\DIFaddbegin \DIFadd{\figurename~\ref{fig:combined_scoring_tm_q} again shows average cumulative values for each ranked result averaged over all searches but only for RUPEE and mTM. 
+The difference here is that instead of normalizing by the average length of the protein structures we show results for TM-align normalized by the length of the query structure. 
+This time, mTM  performs better than RUPEE top-aligned sorted by TM-score.  
+}
+
+\begin{figure*}[!h]
+\caption{\DIFaddFL{Scoring from TM-align pairwise alignments normalized by the length of the query structure for RUPEE fast, RUPEE top-aligned sorted by TM-score, and RUPEE top-aligned sorted by RMSD}}
+\label{fig:combined_scoring_tm_q}
+\end{figure*}
+
+\DIFadd{Taken together, Figs~\ref{fig:combined_scoring_tm_avg}~and~\ref{fig:combined_scoring_tm_q} show that the results of RUPEE and mTM are roughly equal and where they do differ is a result of the differences in normalization. 
+}
+
+\DIFadd{Figures similar to \figurename~\ref{fig:combined_scoring_tm_avg} but instead using CE and FATCAT for pairwise comparisons can be found in }\nameref{S2_Fig} \DIFadd{and }\nameref{S3_Fig}\DIFadd{, respectively. 
+These additional figures lend further support to what has already been show above.
+}
+
+\DIFaddend \subsection*{Precision}
+
+\figurename~\ref{fig:combined_precision} shows precision (i.e. positive predictive value or PPV) averaged over all searches, where positive results are defined as domains with the same classification for the indicated hierarchy level as the query domain. 
+A plot of recall is unnecessary since \figurename~\ref{fig:combined_precision} provides precision at specific ranks for identical sets of searches. 
+Hence, recall curves have the same relative relationships as those shown for precision. 
+
+\begin{figure*}[!h]
+\caption{Precision for RUPEE fast, RUPEE top-aligned sorted by \DIFdelbeginFL \DIFdelFL{TM-Score}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{TM-score}\DIFaddendFL , and RUPEE top-aligned sorted by RMSD}
+\label{fig:combined_precision}
+\end{figure*}
+
+We should expect a structure search to have reasonable precision with respect to the hierarchy levels of the structure classification it is searching. 
+However, it is not clear how to define reasonable. 
+On the other hand, if precision is too high, the search provides little value beyond that provided by the structure classification hierarchy it is searching. 
+Towards the extreme end of high precision, it would be sufficient for a search to return the best match and from there refer to the hierarchy for additional results. 
+
+\DIFdelbegin \DIFdel{Similar to the scoring evaluations above, }\DIFdelend RUPEE fast and top-aligned \DIFdelbegin \DIFdel{, sorted by both RMSD and TM-Score, }\DIFdelend \DIFaddbegin \DIFadd{sorted by TM-score }\DIFaddend show higher precision than SSM and CATHEDRAL\DIFdelbegin \DIFdel{with the exception of RUPEE }\DIFdelend \DIFaddbegin \DIFadd{.
+mTM shows higher precision than RUPEE fast. 
+However, RUPEE }\DIFaddend top-aligned sorted by \DIFdelbegin \DIFdel{RMSD for ranks lower than 10 compared against SSM. 
+}\DIFdelend \DIFaddbegin \DIFadd{TM-score shows equal or higher precision than mTM up to the 50\textsuperscript{th} result and then drops below that of mTM. 
+The lower precision after the 50\textsuperscript{th} result can be attributed, in large part, to the differences in normalization. 
+A good example of this is for the search on domain d1j6va\_ from scop\_d360 having 148 residues.
+After the initial block of closely matched structures, mTM begins returning structures within the same fold with more than 200 residues like d1q2la2 and d1q2la3.
+On the other hand, RUPEE begins to look outside the fold to structures like d2fyxb2 and d2fyxa1 that provide better full-length alignments with respect to both the query and the target protein.  
+}\DIFaddend 
+
+\DIFdelbegin \DIFdel{Again, mTM faired better than SSM and CATHEDRAL.
+Notably, mTM also shows clearly }\DIFdelend \DIFaddbegin \DIFadd{RUPEE top-aligned sorted by RMSD shows }\DIFaddend higher precision than \DIFaddbegin \DIFadd{for CATHEDRAL but lower precision than mTM and SSM. 
+Also, }\DIFaddend RUPEE top-aligned \DIFdelbegin \DIFdel{, sorted by both RMSD and TM-Score.
+In the absence of \figurename~\ref{fig:combined_scoring_ce}, one may be led to regard this as a negative result.
+However, to the contrary, in the presence of \figurename~\ref{fig:combined_scoring_ce}, where it is shown that RUPEE and mTMhave almost identical scoring, this result is remarkable. 
+This disparity suggest that RUPEE is better able to find significantly similar matches not necessarily aligned with the SCOPe hierarchy. 
+In fact, since the initial min-hashing and LSH technique used by RUPEE check for similarity to all available structures, no structure is able to hide behind a sequence based cluster representative. 
+So this result is in keeping with how RUPEE is intended to work and how it is described above. 
+}\DIFdelend \DIFaddbegin \DIFadd{sorted by RMSD shows lower precision than both RUPEE fast and RUPEE top-aligned sorted by TM-score.
+The lower precision for RUPEE top-aligned sorted by RMSD is a direct consequence of RMSD not being suitable for full-length alignments as discussed above in }\emph{\DIFadd{Related work}}\DIFadd{.
+For this reason, it is advised to sort RUPEE top-aligned results by TM-score. 
+RUPEE top-align provides a sort by RMSD only for the sake of completeness.
+}\DIFaddend 
+
+\DIFdelbegin \subsection*{\DIFdel{Response Times}}
+%DIFAUXCMD
+\DIFdelend \DIFaddbegin \subsection*{\DIFadd{Response times}}
+\DIFaddend 
+
+\DIFaddbegin \DIFadd{Response times to a large degree are a measure of the amount of resources available to an application. 
+Response times for RUPEE were gathered from the RUPEE web site running on a single Amazon Web Services (AWS) c5.2xlarge elastic compute (EC2) unit. 
+With more resources, RUPEE response times can be further improved since pairwise alignments can be run in parallel. 
+For mTM, SSM, and CATHEDRAL, we gathered response times by automating their respective web sites using the Selenium WebDriver API. 
+}
+
+\DIFadd{Given that our response time comparisons are made against the respective tools running in different environments, we cannot derive solid conclusions about the efficiency of the methods themselves. 
+Nevertheless, these response times do fairly compare the user experience of the respective tools. 
+Moreover, in some cases the response times differ dramatically, by an order of magnitude in the case of RUPEE fast. 
+}
+
+\DIFaddend \figurename~\ref{fig:combined_response} shows response times in seconds for the scop\_d62 and cath\_d99 benchmarks. 
+Here, we are able to show RUPEE fast and top-aligned, mTM and SSM on the same plot because scop\_d62 is a subset of the scop\_d360 benchmark. 
+Both plots are shown with a logarithmic scale in order to include all outliers while still being able to view the overall trends in response times. 
+Loess regression curves are also provided to further highlight the overall trends. 
+
+\begin{figure*}[h!]
+\caption{Response times for RUPEE fast and RUPEE top-aligned. The response times for RUPEE top-aligned are dominated by pairwise structure alignments and do not depend on the sort order.}
+\label{fig:combined_response}
+\end{figure*}
+
+In all cases, RUPEE fast is considerably faster than all other searches. 
+It is also clear that fast mode is not as sensitive to increasing residue counts in contrast to \DIFdelbegin \DIFdel{CATHEDRAL and }\DIFdelend RUPEE top-aligned\DIFaddbegin \DIFadd{, mTM and CATHEDRAL}\DIFaddend .
+Response times for SSM are not affected by residue counts at all and always returns results in less than 100 seconds but this is at the expense of performance as shown in \figurename~\DIFdelbegin \DIFdel{\ref{fig:combined_scoring_ce}}\DIFdelend \DIFaddbegin \DIFadd{\ref{fig:combined_scoring_tm_avg}}\DIFaddend .
+
+\DIFdelbegin \DIFdel{In the }\DIFdelend \DIFaddbegin \DIFadd{The }\DIFaddend left plot of \figurename~\ref{fig:combined_response} \DIFdelbegin \DIFdel{, it is shown }\DIFdelend \DIFaddbegin \DIFadd{shows }\DIFaddend that RUPEE top-aligned is faster than mTM for \DIFdelbegin \DIFdel{residue counts below 200, but then response times for RUPEE increase beyond that of mTM. 
+Down the stretch, mTM provides increasingly better response times than RUPEE, while RUPEE is still able to provide reasonable response times. 
+The }\DIFdelend \DIFaddbegin \DIFadd{all residue counts. 
+Likewise, the }\DIFaddend right plot of \figurename~\ref{fig:combined_response} shows \DIFaddbegin \DIFadd{that }\DIFaddend RUPEE top-aligned is significantly faster than CATHEDRAL for all residue counts. 
+
+The trend of increasing response times for RUPEE top-aligned is a direct result of the pairwise structure comparisons that are performed on the top \DIFdelbegin \DIFdel{2,000 }\DIFdelend \DIFaddbegin \DIFadd{8000 }\DIFaddend results provided by RUPEE fast mode.
+
+\DIFdelbegin \DIFdel{Response times to a large degree are a measure of the amount of resources available to an application. 
+In the case of RUPEE, our response times were gathered from RUPEE running on a fairly old laptop with a 2nd generation Intel\textregistered{} Core\texttrademark{} i7-2720QM Quad-Core CPU and 8 GB of memory. 
+With more resources the response times of RUPEE can be further improved since pairwise alignments can be run in parallel. 
+For mTM, SSM, and CATHEDRAL, we gathered response times by automating their respective web sites using the Selenium WebDriver API. 
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdelend \section*{Discussion}
+
+As shown above, a purely geometric big data approach to protein structure search can compete with the best available protein structure searches.
+Nonetheless, there remain avenues for further improvement and investigation. 
+
+While our min-hashing and LSH scheme does allow for some flexibility in the size of matched protein structures, it is not specifically designed for containment searches. 
+However, the initial min-hashing and LSH search does operate fast enough, within seconds, that it does present the possibility of executing multiple searches within the context of a single query. 
+With more resources, we can distribute min-hash and band data across multiple compute units, with each data set representing a subset of chopped structure representations. 
+With a 75\% overlap of these subsets, RUPEE searches effectively become containment searches. 
+
+We have tried the overlapping subset idea and have found it to be effective. 
+However, on a single compute unit, the time required is more than we are willing to accept for this first iteration of RUPEE. 
+
+One possible drawback of RUPEE is that in both fast and top-aligned modes, it only returns the top 400 results. 
+Again, with more resources, this number can be increased, but there still remains a need for some kind of cut-off. 
+Nonetheless, in most search tools, having to \DIFdelbegin \DIFdel{looking }\DIFdelend \DIFaddbegin \DIFadd{look }\DIFaddend past the first few hundred results usually indicates an ineffective search strategy.
+To this end, RUPEE provides filters that can be used for traversing structure space more efficiently. 
+For SCOPe, CATH, and ECOD \DIFdelbegin \DIFdel{you }\DIFdelend \DIFaddbegin \DIFadd{the user }\DIFaddend can instruct the search to only return domains that differ from the query structure at a chosen hierarchy level classification. 
+Additionally, for CATH \DIFdelbegin \DIFdel{you }\DIFdelend \DIFaddbegin \DIFadd{the user }\DIFaddend can filter results based on hierarchy level representatives. 
+Since RUPEE does not rely on sequence clusters \DIFaddbegin \DIFadd{or pre-calculated results}\DIFaddend , these kinds of filters are easy to implement, do not reduce the number of returned results, and allow for the discovery of unexpected structural similarities across classification hierarchies.  
+
+One area that stands out for possible improvement is our longest common subsequence (LCS) scoring adjustment to the results initially returned by RUPEE. 
+While the LCS step has been shown to be effective, it is notable for its simplicity. 
+A more complex step of validating the sequence of \DIFdelbegin \DIFdel{gram }\DIFdelend \DIFaddbegin \DIFadd{shingle }\DIFaddend matches can take a form similar to the path extension algorithm used by CE. 
+In this case, sequences of matches would only be extended when the difference of interresidue distances between \DIFdelbegin \DIFdel{gram }\DIFdelend \DIFaddbegin \DIFadd{shingle }\DIFaddend pairs already in the sequence and a candidate pair to be added to the sequence fall below some threshold.
+
+On the other hand, it would be interesting to see where further analysis of the initial results returned by RUPEE before LCS and any sort of order enforcement beyond that of the \DIFdelbegin \DIFdel{grams }\DIFdelend \DIFaddbegin \DIFadd{shingles }\DIFaddend themselves could lead. 
+For instance, topological permutations such as circular permutations, segment-swapping and changing secondary structures within homologous proteins are not uncommon \cite{Andreeva2007}. 
+The initial RUPEE min-hashing and LSH algorithm provides candidate matches along with matched \DIFdelbegin \DIFdel{grams}\DIFdelend \DIFaddbegin \DIFadd{shingles}\DIFaddend . 
+With some thought, an algorithm similar to FATCAT can be developed allowing for permutations in addition to twists. 
+
+\DIFdelbegin \DIFdel{As can be observed from considering \figurename~\ref{fig:combined_scoring_ce} and \figurename~\ref{fig:combined_precision} together, there are good domain matches aligned with the SCOPe hierarchy that mTM is able to find that RUPEE does not. 
+Conversely, there are good domain matches not aligned with the SCOPe hierarchy that RUPEE finds and mTM does not. 
+A comprehensive listing of these difference may find interesting similarities not previously known. 
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdelend \section*{Conclusion}
+
+With the growth rate of solved structures deposited in the PDB, the need for a fast and scalable structure search is growing. 
+Using run position encoded shingles of residue descriptors combined with min-hashing and LSH, we have shown that RUPEE fast is able to provide good results in seconds running on \DIFdelbegin \DIFdel{an Quad-Core laptop}\DIFdelend \DIFaddbegin \DIFadd{a single AWS elastic compute unit}\DIFaddend .
+Currently, RUPEE fast is the fastest available protein structure search providing the demonstrated level of accuracy. 
+For RUPEE top-aligned, we have shown that a purely geometric big data approach to protein structure search is able to produce results equal to or better than the current state of the art protein structure searches that variously depend on clustered sequences or \DIFdelbegin \DIFdel{protein structure classification hierarchies. 
+Moreover, we have shown evidence that suggests the resultsfrom RUPEE top-aligned provide more added value by discovering high scoring protein structure matches not necessarily aligned with a particular protein structure classification hierarchy or hiding behind cluster representatives}\DIFdelend \DIFaddbegin \DIFadd{pre-calculated results}\DIFaddend . 
+The ability for RUPEE to quickly examine all structures among hundreds of thousands sets it apart as a tool that can be used for discovering previously undetected structural similarities.
+
+\section*{Supporting information}
+
+\paragraph*{S1 Benchmarks.}
+\label{S1_Benchmarks}
+{\bf Domains included in benchmarks used for evaluation.} 
+
+\paragraph*{S2 Fig.}
+\label{S2_Fig}
+{\bf Scoring from \DIFaddbegin \DIFadd{CE pairwise alignments.}} 
+
+\paragraph*{\DIFadd{S3 Fig.}}
+\label{S3_Fig}
+{\bf \DIFadd{Scoring from }\DIFaddend FATCAT pairwise alignments.} 
+
+\paragraph*{\DIFdelbegin \DIFdel{S3 }\DIFdelend \DIFaddbegin \DIFadd{S4 }\DIFaddend Methods Addendum.}
+\DIFdelbegin %DIFDELCMD < \label{S3_Methods}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \label{S4_Methods}
+\DIFaddend {\bf Run factors for shingles instead of descriptors.} 
+
+
+\nolinenumbers
+
+% Either type in your references using
+% \begin{thebibliography}{}
+% \bibitem{}
+% Text
+% \end{thebibliography}
+%
+% or
+%
+% Compile your BiBTeX database using our plos2015.bst
+% style file and paste the contents of your .bbl file
+% here. See http://journals.plos.org/plosone/s/latex for 
+% step-by-step instructions.
+% 
+\begin{thebibliography}{10}
+
+\bibitem{Crick1970}
+Crick F.
+\newblock Central dogma of molecular biology.
+\newblock Nature. 1970;227(5258):561--563.
+
+\bibitem{Fox2013}
+Fox NK, Brenner SE, Chandonia JM.
+\newblock {SCOP}e: Structural Classification of Proteins - extended,
+  integrating {SCOP} and {ASTRAL} data and classification of new structures.
+\newblock Nucleic Acids Res. 2014;42(1):304--309.
+
+\bibitem{Orengo1997}
+Orengo C, Mitchie A, Jones S, Jones DT, Swindells M, Thornton JM.
+\newblock {CATH} - A hierarchic classification of protein domain structures.
+\newblock Structure. 1997;5(8):1093--1109.
+
+\bibitem{Cheng2014}
+Cheng H, Schaeffer RD, Liao Y, Kinch LN, Pei J, Shi S, et~al.
+\newblock {ECOD: An Evolutionary Classification of Protein Domains}.
+\newblock PLoS Computational Biology. 2014;10(12).
+
+\bibitem{Dong2018}
+Dong R, Pan S, Peng Z, Zhang Y, Yang J.
+\newblock {mTM-align: a server for fast protein structure database search and
+  multiple protein structure alignment}.
+\newblock Nucleic Acids Research. 2018;46(July):380--386.
+
+\bibitem{Krissinel2004}
+Krissinel E, Henrick K.
+\newblock {Secondary-structure matching (SSM), a new tool for fast protein
+  structure alignment in three dimensions}.
+\newblock Acta Crystallographica Section D: Biological Crystallography.
+  2004;60(12 I):2256--2268.
+
+\bibitem{Redfern2007}
+Redfern OC, Harrison A, Dallman T, Pearl FMG, Orengo CA.
+\newblock {CATHEDRAL}: A Fast and Effective Algorithm to Predict Folds and
+  Domain Boundaries from Multidomain Protein Structures.
+\newblock {PL}o{S} Comput Biol. 2007;3(11):e232.
+
+\DIFaddbegin \bibitem{Zhang2004}
+\DIFadd{Zhang Y, Skolnick J.
+}\newblock \DIFadd{Scoring function for automated assessment of protein structure
+  template quality.
+}\newblock \DIFadd{Proteins. 2004;57(4):702--710.
+}
+
+\DIFaddend \bibitem{Shindyalov1998}
+Shindyalov IN, Bourne PE.
+\newblock Protein structure alignment by incremental combinatorial extension
+  ({CE}) of the optimal path.
+\newblock Protein Eng Des Sel. 1998;11(9):739--747.
+
+\bibitem{Ye2003}
+Yuzhen~Ye AG.
+\newblock Flexible structure alignment by chaining aligned fragment pairs
+  allowing twists.
+\newblock Bioinformatics. 2003;19(2):246--255.
+
+\DIFaddbegin \bibitem{Zhang2005}
+\DIFadd{Zhang Y, Skolnick J.
+}\newblock {\DIFadd{TM-align: A protein structure alignment algorithm based on the
+  TM-score}}\DIFadd{.
+}\newblock \DIFadd{Nucleic Acids Research. 2005;33(7):2302--2309.
+}
+
+\bibitem{Sander1995}
+\DIFadd{Holm L, Sander C.
+}\newblock \DIFadd{Dali: a network tool for protein structure comparison.
+}\newblock \DIFadd{Trends in Biochemical Sciences. 1995;20(11):478 -- 480.
+}
+
+\DIFaddend \bibitem{Gilbrat1996}
+Gilbrat JF, Madej T, Bryant SH.
+\newblock Surprising similarities in structure comparison.
+\newblock Curr Opin Struct Biol. 1996;6(3):377--385.
+
+\bibitem{Ye2004}
+Yuzhen~Ye AG.
+\newblock {FATCAT}: a web server for flexible structure comparison and
+  structure similarity searching.
+\newblock Nucleic Acids Res. 2004;32(2):582--585.
+
+\bibitem{Prlic2010}
+Prli{\'c} A, Bliven S, Rose PW, Bluhm WF, Bizon C, Godzik A, et~al.
+\newblock Pre-calculated protein structure alignments at the {RCSB} {PDB}
+  website.
+\newblock Bioinformatics. 2010;26(23):2983--2985.
+
+\DIFaddbegin \bibitem{Holm2010}
+\DIFadd{Holm L, Rosenstr}{\DIFadd{\"{o}}}\DIFadd{m P.
+}\newblock {\DIFadd{Dali server: Conservation mapping in 3D}}\DIFadd{.
+}\newblock \DIFadd{Nucleic Acids Research. 2010;38(SUPPL. 2):1--5.
+}
+
+\DIFaddend \bibitem{gkw1000}
+Rose PW, Prli{\'c} A, Altunkaya A, Bi C, Bradley AR, Christie CH, et~al.
+\newblock The {RCSB} protein data bank: integrative view of protein, gene and
+  {3D} structural information.
+\newblock Nucleic Acids Res. 2017;45(D1):D271--D281.
+
+\bibitem{Carpentier2005}
+Carpentier M, Brouillet S, Pothier J.
+\newblock {YAKUSA}: A fast structural database scanning method.
+\newblock Proteins. 2005;61(1):137--151.
+
+\bibitem{Daniluk2011}
+Daniluk P, Lesyng B.
+\newblock A novel method to compare protein structures using local descriptors.
+\newblock BMC Bioinformatics. 2011;12(1):344.
+
+\bibitem{Ritchie2012}
+Mavridis L, Ritchie DW.
+\newblock In: {3D-Blast}: {3D} protein structure alignment, comparison, and
+  classification using spherical polar fourier correlations. World Scientific;
+  2012. p. 281--292.
+
+\bibitem{Ramachandran1968}
+Ramachandran GN, Sasisekharan V.
+\newblock Conformation of polypeptides and proteins.
+\newblock Adv Protein Chem. 1968;23:283--438.
+
+\bibitem{Karplus2010}
+Hollingsworth SA, Karplus PA.
+\newblock A fresh look at the {R}amachandran plot and the occurrence of
+  standard structures in proteins.
+\newblock Biomol Concepts. 2010;1:271--283.
+
+\bibitem{Kabsch1983}
+Kabsch W, Sander C.
+\newblock Dictionary of protein secondary structure: Pattern recognition of
+  hydrogen-bonded and geometrical features.
+\newblock Biopolymers. 1983;22(12):2577--2637.
+
+\bibitem{Aungand2004}
+Aungand Z, Tan KL.
+\newblock Rapid 3D protein structure database searching using information
+  retrieval techniques.
+\newblock Bioinformatics. 2004;20(7):1045--1052.
+
+\bibitem{Zhang2010}
+Zhang L, Bailey J, Konagurthu AS, Ramamohanarao K.
+\newblock A fast indexing approach for protein structure comparison.
+\newblock {BMC} Bioinformatics. 2010;11(Suppl 1):S46.
+
+\bibitem{Budowski2010}
+Budowski-Tal I, Nov Y, Kolodny R.
+\newblock {FragBag}, an accurate representation of protein structure, retrieves
+  structural neighbors from the entire {PDB} quickly and accurately.
+\newblock Proceedings of the National Academy of Sciences.
+  2010;107(8):3481--3486.
+
+\bibitem{Broder1997a}
+Broder AZ.
+\newblock On the resemblance and containment of documents.
+\newblock In: Proc. Compression and Complexity of Sequences. Positano, Italy;
+  1997. p. 21--29.
+
+\DIFdelbegin %DIFDELCMD < \bibitem{Ayoub2017}
+%DIFDELCMD < %%%
+\DIFdel{Ayoub R, Lee Y.
+}%DIFDELCMD < \newblock %%%
+\DIFdel{RUPEE: Scalable protein structure search using run position encoded
+  residue descriptors.
+}%DIFDELCMD < \newblock %%%
+\DIFdel{In: 2017 IEEE International Conference on Bioinformatics and
+  Biomedicine (BIBM); 2017. p. 74--78.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdelend \bibitem{Karp1987}
+Karp RM, Rabin MO.
+\newblock Efficient randomized pattern-matching algorithms.
+\newblock {IBM} Journal of Research and Development. 1987;31(2):249--260.
+
+\bibitem{Levan1971}
+Levandowsky M, Winter D.
+\newblock Distance between Sets.
+\newblock Nature. 1971;234(5323):34--35.
+
+\DIFaddbegin \bibitem{Ayoub2017}
+\DIFadd{Ayoub R, Lee Y.
+}\newblock \DIFadd{RUPEE: Scalable protein structure search using run position encoded
+  residue descriptors.
+}\newblock \DIFadd{In: 2017 IEEE International Conference on Bioinformatics and
+  Biomedicine (BIBM); 2017. p. 74--78.
+}
+
+\DIFaddend \bibitem{Broder1997b}
+Broder AZ, Glassman SC, Manasse MS, Zweig G.
+\newblock Syntactic clustering of the Web.
+\newblock Computer Networks and ISDN Systems. 1997;29(8-13):1157--1166.
+
+\bibitem{Joshi2008}
+Joshi S, Contractor D, Ng K, Deshpande PM, Hampp T.
+\newblock Auto-grouping emails for faster e-discovery.
+\newblock In: Proceedings of Very Large Databases Endowment 2011. vol.~4; 2011.
+  p. 1284--1294.
+
+\bibitem{Broder1998}
+Broder AZ, Charikar M, Frieze AM, Mitzenmacher M.
+\newblock Min-wise independent permutations.
+\newblock In: ACM Symposium on Theory of Computing. Dallas, USA; 1998. p.
+  327--336.
+
+\bibitem{Indyk1998}
+Indyk P, Motwani R.
+\newblock Approximate nearest neighbors: towards removing the curse of
+  dimensionality.
+\newblock In: ACM Symposium on Theory of Computing. Dallas, USA; 1998. p.
+  604--613.
+
+\bibitem{Rajaraman2012}
+Rajaraman A, Ullman JD.
+\newblock 3.
+\newblock In: Mining of Massive Datasets. Cambridge University Press; 2012. p.
+  53--70\DIFdelbegin \DIFdel{.
+}%DIFDELCMD < 
+
+%DIFDELCMD < \bibitem{Zhang2004}
+%DIFDELCMD < %%%
+\DIFdel{Zhang Y, Skolnick J.
+}%DIFDELCMD < \newblock %%%
+\DIFdel{Scoring function for automated assessment of protein structure
+  template quality.
+}%DIFDELCMD < \newblock %%%
+\DIFdel{Proteins. 2004;57(4):702--710}\DIFdelend .
+
+\bibitem{Xu2010}
+J~Xu YZ.
+\newblock How significant is a protein structure similarity with {TM}-score =
+  0.5?
+\newblock Bioinformatics. 2010;26(7):889--895.
+
+\bibitem{Andreeva2007}
+Andreeva A, Prli{\'c} A, Hubbard TJP, Murzin AG.
+\newblock {SISYPHUS}: structural alignments for proteins with non-trivial
+  relationships.
+\newblock Nucleic Acids Res. 2007;35(1):253--259.
+
+\bibitem{BioJava2012}
+Prli{\'c} A, Yates A, Bliven SE, Rose PW, Jacobsen J, Troshin PV, et~al.
+\newblock Bio{J}ava: an open-source framework for bioinformatics in 2012.
+\newblock Bioinformatics. 2012;28(20):2693--2695.
+
+\end{thebibliography}
+
+\end{document}
+
