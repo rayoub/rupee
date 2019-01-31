@@ -7,7 +7,7 @@ At this stage, the initial RUPEE paper serves only to describe the common basis 
 
 RUPEE itself is available for use at <https://ayoubresearch.com>.
 
-Below, I will attempt to describe how to find your way around the RUPEE repo, directory by directory, in the order required for setting up RUPEE in your own environment. 
+Below, I will describe how to find your way around the RUPEE repo, directory by directory, in the order required for setting up RUPEE in your own environment. 
 It is assumed that you are familiar with RUPEE and have read the paper. 
 
 With respect to software dependencies, Java 8 and an installation of postgreSQL 9.4 or above are required.
