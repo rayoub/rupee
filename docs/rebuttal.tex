@@ -179,6 +179,11 @@ Scop\_d360, scop\_d62 and cath\_d99 just select domains that other methods can r
 We do not think calculating scoring averages with varying numbers of data present at different ranks would be fair. 
 It may be the case that those missing numbers would be lower than the average if present and so calculating in their absence would unjustly give a higher scoring average for searches with missing data. 
 The same would hold true for comparing precision. 
+RUPEE always returns a sufficient number of results for the original d500 benchmark defined in \citep{Dong2018}. 
+We point this out with the following text at lines 303-304.
+\begin{quote}
+For all domains contained in the d500 benchmark, RUPEE returns 100 or more results. 
+\end{quote}
 \end{reply}
 
 \begin{point}
@@ -221,7 +226,7 @@ It is unfair to compare response time with different methods based on different 
 \begin{reply}
 We do not disagree with this point with respect to comparing `methods.'
 However, we do believe the response times give a fair comparison with respect to the user experience. 
-We have removed the text at lines 470-476 and replaced it with the following text at lines 437-449 at the beginning of the \emph{Response times} subsection. 
+We have removed the text at lines 471-477 and replaced it with the following text at lines 438-450 at the beginning of the \emph{Response times} subsection. 
 We feel the response time comparisons are important to show since they demonstrate one of the strongest features of RUPEE. 
 \begin{quote}
 Response times to a large degree are a measure of the amount of resources available to an application. 
@@ -366,7 +371,7 @@ With changes made to address \ref{pt:r7}, precision for RUPEE top-aligned has im
 Nevertheless, this comment encouraged us to check our assumptions.
 While RUPEE filters for different hierarchy levels and hierarchy level representatives are useful for exploring unexpected structural relationships across folds, this does not necessarily extend to RUPEE without filters applied since there are usually enough similar structures within the fold that can be matched. 
 We made a number of edits at lines 21-32 to walk back these assertions and instead focus on the benefit of applying filters.
-Additionally, in our larger rework of the \emph{Precision} section we have removed lines 421-429 and we also removed text appearing at lines 534-538 of the \emph{Conclusion}.
+Additionally, in our larger rework of the \emph{Precision} section we have removed lines 422-430 and we also removed text appearing at lines 534-538 of the \emph{Conclusion}.
 \end{reply}
 
 % Use the short-hand macros for one-liners.
