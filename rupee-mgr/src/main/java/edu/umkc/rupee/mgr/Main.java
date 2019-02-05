@@ -58,6 +58,7 @@ import edu.umkc.rupee.scop.ScopImport;
 import edu.umkc.rupee.scop.ScopSearch;
 import edu.umkc.rupee.scop.ScopSearchCriteria;
 import edu.umkc.rupee.scop.ScopSearchRecord;
+import edu.umkc.rupee.tm.Mode;
 import edu.umkc.rupee.tm.TMAlign;
 
 public class Main {
@@ -260,7 +261,7 @@ public class Main {
         String dbId1 = args[0];
         String dbId2 = args[1];
 
-        TMAlign.Results results = Aligning.tmAlign(dbId1, dbId2);
+        TMAlign.Results results = Aligning.tmAlign(dbId1, dbId2, Mode.ALIGN_TEXT);
         System.out.print(results.getOutput());
     }
 

@@ -4,7 +4,8 @@ public enum Mode {
 
     REGULAR(30,20),
     FAST(2,2),
-    OUTPUT(30,20);
+    ALIGN_TEXT(30,20),
+    ALIGN_3D(30,20);
 
     private int dpIterations;
     private int scoreIterations;

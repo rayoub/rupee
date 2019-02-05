@@ -125,18 +125,16 @@ public class TMAlign {
     private double D0_MIN;                          // for d0
     private double Lnorm;                           // normalization length
     private double score_d8, d0, d0_search, dcu0;   // for TMscore search
-    private double score[][];                       // Input score table for dynamic programming
+    private double score[][];                       // for dynamic programming
     private boolean path[][];                       // for dynamic programming
     private double val[][];                         // for dynamic programming
     private int xlen, ylen, minlen;                 // length of proteins
-    private double xa[][], ya[][];                  // for input vectors xa[0...xlen-1][0..2],
-                                                    // ya[0...ylen-1][0..2]
-                                                    // in general, ya is regarded as native
-                                                    // structure --> superpose xa onto ya
-    private double xtm[][], ytm[][];                // for TMscore search engine
-    private double xt[][];                          // for saving the superposed version of r_1 or xtm
-    private char seqx[], seqy[];                    // for protein sequence
-    private int secx[], secy[];                     // for the secondary structure
+    private double xa[][], ya[][];                  // for input coordinates xa[0...xlen-1][0..2] and ya[0...ylen-1][0..2]
+                                                    // ya is regarded as native, superpose xa onto ya
+    private double xtm[][], ytm[][];                // for storing alignment without gaps (i.e. densely)
+    private double xt[][];                          // for saving the superposition coords of xa or xtm
+    private char seqx[], seqy[];                    // for amino acid sequence
+    private int secx[], secy[];                     // for secondary structure sequence
     private double r1[][], r2[][];                  // for Kabsch rotation
     private double t[];                             // Kabsch translation vector and rotation matrix
     private double u[][];
@@ -408,13 +406,16 @@ public class TMAlign {
         k = 0;
         for (int j = 0; j < ylen; j++) {
             int i = invmap0[j];
-            if (i >= 0)// aligned
+            if (i >= 0)
             {
+                // aligned
                 d = Math.sqrt(Functions.dist(xt[i], ya[j]));
                 if (d <= score_d8) {
+
                     m1[k] = i;
                     m2[k] = j;
 
+                    // densely packed - not transformed
                     xtm[k][0] = xa[i][0];
                     xtm[k][1] = xa[i][1];
                     xtm[k][2] = xa[i][2];
@@ -423,9 +424,11 @@ public class TMAlign {
                     ytm[k][1] = ya[j][1];
                     ytm[k][2] = ya[j][2];
 
+                    // densley packed - transformed
                     r1[k][0] = xt[i][0];
                     r1[k][1] = xt[i][1];
                     r1[k][2] = xt[i][2];
+
                     r2[k][0] = ya[j][0];
                     r2[k][1] = ya[j][1];
                     r2[k][2] = ya[j][2];
@@ -434,10 +437,13 @@ public class TMAlign {
                 }
             }
         }
+
+        // alignment length
         n_ali8 = k;
 
+        // minimize rmsd for the best rotation and translation matrices t and u
         MutableDouble rmsd0 = new MutableDouble(0.0);
-        Kabsch.execute(r1, r2, n_ali8, 0, rmsd0, t, u);
+        Kabsch.execute(r1, r2, n_ali8, 0, rmsd0, t, u); 
         rmsd0.setValue(Math.sqrt(rmsd0.getValue() / n_ali8));
 
         // ********************************************************************************* //
@@ -487,7 +493,7 @@ public class TMAlign {
         results.setTmScoreAvg(TM3);
         results.setRmsd(rmsd0.getValue());
 
-        if (this.mode == Mode.OUTPUT) {
+        if (this.mode == Mode.ALIGN_TEXT) {
 
             k = 0;
             d = 0.0;
@@ -594,6 +600,108 @@ public class TMAlign {
 
             formatter.close();
 
+            results.setOutput(sb.toString());
+        }
+        else if (mode == Mode.ALIGN_3D) {
+
+            double[][] xa_all = new double[xlen * 4][3];
+            double[][] xt_all = new double[xlen * 4][3];
+            
+            // iterate x atoms for xa_all
+            for (int i = 0; i < (xlen * 4) - 3; i += 4) {
+                
+                Group group = xgroups.get(i / 4);
+
+                Atom n = group.getAtom("N");
+                Atom ca = group.getAtom("CA");
+                Atom c = group.getAtom("C");
+                Atom o = group.getAtom("O");
+
+                xa_all[i][0] = n.getX();
+                xa_all[i][1] = n.getY();
+                xa_all[i][2] = n.getZ();
+                
+                xa_all[i+1][0] = ca.getX();
+                xa_all[i+1][1] = ca.getY();
+                xa_all[i+1][2] = ca.getZ();
+                
+                xa_all[i+2][0] = c.getX();
+                xa_all[i+2][1] = c.getY();
+                xa_all[i+2][2] = c.getZ();
+                
+                xa_all[i+3][0] = o.getX();
+                xa_all[i+3][1] = o.getY();
+                xa_all[i+3][2] = o.getZ();
+            }
+
+            // transform xa_all into xt_all
+            Functions.do_rotation(xa_all, xt_all, xlen * 4, t, u);
+
+            // set x atom coords
+            for (int i = 0; i < (xlen * 4) - 3; i += 4) {
+                
+                Group group = xgroups.get(i / 4);
+
+                Atom n = group.getAtom("N");
+                Atom ca = group.getAtom("CA");
+                Atom c = group.getAtom("C");
+                Atom o = group.getAtom("O");
+                
+                n.setX(xt_all[i][0]);
+                n.setY(xt_all[i][1]);
+                n.setZ(xt_all[i][2]);
+                
+                ca.setX(xt_all[i+1][0]);
+                ca.setY(xt_all[i+1][1]);
+                ca.setZ(xt_all[i+1][2]);
+                
+                c.setX(xt_all[i+2][0]);
+                c.setY(xt_all[i+2][1]);
+                c.setZ(xt_all[i+2][2]);
+                
+                o.setX(xt_all[i+3][0]);
+                o.setY(xt_all[i+3][1]);
+                o.setZ(xt_all[i+3][2]);
+            }
+
+            StringBuilder sb = new StringBuilder();
+
+            // iterate x atoms for chain A
+            for (int i = 0; i < xlen; i++) {
+                
+                Group group = xgroups.get(i);
+                group.getChain().setName("A");
+                
+                Atom n = group.getAtom("N");
+                Atom ca = group.getAtom("CA");
+                Atom c = group.getAtom("C");
+                Atom o = group.getAtom("O");
+                
+                // output lines
+                sb.append(n.toPDB());
+                sb.append(ca.toPDB());
+                sb.append(c.toPDB());
+                sb.append(o.toPDB());
+            }
+
+            // iterate y atoms for chain B
+            for (int i = 0; i < ylen; i++) {
+
+                Group group = ygroups.get(i);
+                group.getChain().setName("B");
+                
+                Atom n = group.getAtom("N");
+                Atom ca = group.getAtom("CA");
+                Atom c = group.getAtom("C");
+                Atom o = group.getAtom("O");
+                
+                // output lines
+                sb.append(n.toPDB());
+                sb.append(ca.toPDB());
+                sb.append(c.toPDB());
+                sb.append(o.toPDB());
+            }
+            
             results.setOutput(sb.toString());
         }
         

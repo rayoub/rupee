@@ -107,7 +107,7 @@ public class Aligning
         return record;
     }
     
-    public static TMAlign.Results tmAlign(String dbId1, String dbId2) {
+    public static TMAlign.Results tmAlign(String dbId1, String dbId2, Mode mode) {
 
         TMAlign.Results results = null;
 
@@ -130,7 +130,7 @@ public class Aligning
             queryStructure.setName(dbId1);
             targetStructure.setName(dbId2);
 
-            TMAlign tm = new TMAlign(Mode.OUTPUT);
+            TMAlign tm = new TMAlign(mode);
             results = tm.align(queryStructure, targetStructure);
 
         } catch (IOException e) {
@@ -140,7 +140,7 @@ public class Aligning
         return results;
     }
 
-    public static TMAlign.Results tmAlign(int uploadId, String dbId) {
+    public static TMAlign.Results tmAlign(int uploadId, String dbId, Mode mode) {
 
         TMAlign.Results results = null;
 
@@ -161,7 +161,7 @@ public class Aligning
             queryStructure.setName("upload");
             targetStructure.setName(dbId);
 
-            TMAlign tm = new TMAlign(Mode.OUTPUT);
+            TMAlign tm = new TMAlign(mode);
             results = tm.align(queryStructure, targetStructure);
 
         } catch (IOException e) {

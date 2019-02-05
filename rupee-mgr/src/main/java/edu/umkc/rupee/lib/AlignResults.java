@@ -172,49 +172,4 @@ public class AlignResults
             Logger.getLogger(Aligning.class.getName()).log(Level.SEVERE, null, e);
         }
     }
-
-    public static void testing(String version, DbTypeCriteria dbType) {
-
-        try {
-            
-            PGSimpleDataSource ds = Db.getDataSource();
-
-            Connection conn = ds.getConnection();
-            conn.setAutoCommit(false);
-
-            String command = "SELECT db_id_1, db_id_2 FROM alignment_scores WHERE version = ? LIMIT 1000;";
-            PreparedStatement stmt = conn.prepareCall(command);
-            stmt.setString(1, version);
-
-            ResultSet rs = stmt.executeQuery();
-
-            PDBFileReader reader = new PDBFileReader();
-            reader.setFetchBehavior(FetchBehavior.LOCAL_ONLY);
-
-            int i = 0;
-            while (rs.next()) {
-
-                String dbId1 = rs.getString("db_id_1");
-                String dbId2 = rs.getString("db_id_2");
-                
-                TMAlign.Results results1 = Aligning.tmAlign(dbId1, dbId2);
-                TMAlign.Results results2 = Aligning.tmAlign(dbId2, dbId1);
-
-                i++;
-                if (Math.abs(results1.getTmScoreQ() - results2.getTmScoreT()) < 0.0001) {
-                    System.out.println(i + ": equal");
-                }
-                else {
-                    System.out.println(i + ": " + dbId1 + "=" + results1.getTmScoreQ() + "," + dbId2 + "=" + results2.getTmScoreT());
-                }
-            }
-
-            rs.close();
-            stmt.close();
-            conn.close();
-
-        } catch (SQLException e) {
-            Logger.getLogger(Aligning.class.getName()).log(Level.SEVERE, null, e);
-        }
-    }
 }
