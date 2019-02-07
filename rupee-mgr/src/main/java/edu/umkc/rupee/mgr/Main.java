@@ -7,7 +7,6 @@ import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -86,13 +85,19 @@ public class Main {
                 .valueSeparator(',')
                 .build());
         group.addOption(Option.builder("t")
-                .longOpt("tm align")
+                .longOpt("tm-align")
                 .numberOfArgs(2)
                 .argName("DB_ID_1>,<DB_ID_2")
                 .valueSeparator(',')
                 .build());
-        group.addOption(Option.builder("l")
-                .longOpt("lcs")
+        group.addOption(Option.builder("f")
+                .longOpt("lcs-fulllength")
+                .numberOfArgs(2)
+                .argName("DB_ID_1>,<DB_ID_2")
+                .valueSeparator(',')
+                .build());
+        group.addOption(Option.builder("c")
+                .longOpt("lcs-containment")
                 .numberOfArgs(2)
                 .argName("DB_ID_1>,<DB_ID_2")
                 .valueSeparator(',')
@@ -141,8 +146,10 @@ public class Main {
                 option_a(line);
             } else if (line.hasOption("t")) {
                 option_t(line);
-            } else if (line.hasOption("l")) {
-                option_l(line);
+            } else if (line.hasOption("f")) {
+                option_f(line);
+            } else if (line.hasOption("c")) {
+                option_c(line);
             } else if (line.hasOption("s")) {
                 option_s(line);
             } else if (line.hasOption("u")) {
@@ -265,9 +272,9 @@ public class Main {
         System.out.print(results.getOutput());
     }
 
-    private static void option_l(CommandLine line) throws SQLException {
+    private static void option_f(CommandLine line) throws SQLException {
         
-        String[] args = line.getOptionValues("l");
+        String[] args = line.getOptionValues("f");
         
         String dbId1 = args[0];
         String dbId2 = args[1];
@@ -291,7 +298,7 @@ public class Main {
             double exact = Similarity.getExactSimilarity(grams1, grams2);
 
             // lcs validated matching grams
-            int score = LCS.getLCSScore(grams1, grams2); 
+            int score = LCS.getLCSScoreFullLength(grams1, grams2); 
           
             System.out.println(""); 
             System.out.println("Structure 1 Length:     " + grams1.size());
@@ -304,10 +311,62 @@ public class Main {
             System.out.println(""); 
             System.out.println("LCS Score:              " + score);
 
-            Map<Integer, String> codeMap = LCS.getCodeMap(grams1, grams2);
+            System.out.println("LCS Alignment: \n");
+            LCS.printLCSFullLength(grams1, grams2);
+            System.out.println("");
+        }
+        else {
+
+            if (hashes1 == null) {
+                System.out.println(dbId1 + " does not exist.");
+            }
+            else {
+                System.out.println(dbId2 + " does not exist.");
+            }
+        }
+    }
+    
+    private static void option_c(CommandLine line) throws SQLException {
+        
+        String[] args = line.getOptionValues("c");
+        
+        String dbId1 = args[0];
+        String dbId2 = args[1];
+
+        DbTypeCriteria dbType1 = DbId.getDbIdType(dbId1);
+        DbTypeCriteria dbType2 = DbId.getDbIdType(dbId2);
+
+        Hashes hashes1 = Db.getHashes(dbId1, dbType1);
+        Hashes hashes2 = Db.getHashes(dbId2, dbType2);
+
+        List<Integer> grams1 = Db.getGrams(dbId1, dbType1);
+        List<Integer> grams2 = Db.getGrams(dbId2, dbType2);
+
+        if (hashes1 != null && hashes2 != null) {
+
+            // band matches
+            String bandMatches = Similarity.getBandMatches(hashes1.bandHashes, hashes2.bandHashes);
+
+            // estimated and exact based on overlapping grams
+            double estimated = Similarity.getEstimatedSimilarity(hashes1.minHashes, hashes2.minHashes);
+            double exact = Similarity.getExactSimilarity(grams1, grams2);
+
+            // lcs validated matching grams
+            int score = LCS.getLCSScoreContainment(grams1, grams2); 
+          
+            System.out.println(""); 
+            System.out.println("Structure 1 Length:     " + grams1.size());
+            System.out.println("Structure 2 Length:     " + grams2.size());
+            System.out.println(""); 
+            System.out.println("Band matches:           " + bandMatches);
+            System.out.println(""); 
+            System.out.println("Estimated Similarity:   " + estimated);
+            System.out.println("Exact Similarity:       " + exact);
+            System.out.println(""); 
+            System.out.println("LCS Score:              " + score);
 
             System.out.println("LCS Alignment: \n");
-            LCS.printLCS(grams1, grams2, codeMap);
+            LCS.printLCSContainment(grams1, grams2);
             System.out.println("");
         }
         else {

@@ -15,11 +15,12 @@ public class OptionComparator implements Comparator<Option> {
         _map.put("h",2);
         _map.put("a",3);
         _map.put("t",4);
-        _map.put("l",5);
-        _map.put("s",6);
-        _map.put("u",7);
-        _map.put("d",8);
-        _map.put("?",9);
+        _map.put("f",5);
+        _map.put("c",6);
+        _map.put("s",7);
+        _map.put("u",8);
+        _map.put("d",9);
+        _map.put("?",10);
     }
 
     public int compare(Option x, Option y) {

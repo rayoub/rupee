@@ -99,7 +99,7 @@ public abstract class Search {
 
                     if (map.containsKey(record.getDbId())) {
                         List<Integer> grams2 = map.get(record.getDbId());
-                        int score = LCS.getLCSScore(grams1, grams2); 
+                        int score = LCS.getLCSScoreFullLength(grams1, grams2); 
                         record.setSimilarity(score);
                     }
                 });
