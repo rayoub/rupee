@@ -276,7 +276,7 @@ public class SearchQueue {
 
         // determine id type of our search or download
         if (criteria.searchBy == SearchBy.DB_ID) {
-            criteria.idDbType = DbId.getDbIdType(item.getDbId());
+            criteria.idDbType = DbId.getIdDbType(item.getDbId());
             criteria.dbId = item.getDbId();        
         }
         else {

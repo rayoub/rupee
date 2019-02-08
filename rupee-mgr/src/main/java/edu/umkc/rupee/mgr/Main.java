@@ -279,8 +279,8 @@ public class Main {
         String dbId1 = args[0];
         String dbId2 = args[1];
 
-        DbType dbType1 = DbId.getDbIdType(dbId1);
-        DbType dbType2 = DbId.getDbIdType(dbId2);
+        DbType dbType1 = DbId.getIdDbType(dbId1);
+        DbType dbType2 = DbId.getIdDbType(dbId2);
 
         Hashes hashes1 = Db.getHashes(dbId1, dbType1);
         Hashes hashes2 = Db.getHashes(dbId2, dbType2);
@@ -333,8 +333,8 @@ public class Main {
         String dbId1 = args[0];
         String dbId2 = args[1];
 
-        DbType dbType1 = DbId.getDbIdType(dbId1);
-        DbType dbType2 = DbId.getDbIdType(dbId2);
+        DbType dbType1 = DbId.getIdDbType(dbId1);
+        DbType dbType2 = DbId.getIdDbType(dbId2);
 
         Hashes hashes1 = Db.getHashes(dbId1, dbType1);
         Hashes hashes2 = Db.getHashes(dbId2, dbType2);
@@ -404,7 +404,7 @@ public class Main {
 
         // id
         String id = args[2];
-        DbType dbIdType = DbId.getDbIdType(id);
+        DbType dbIdType = DbId.getIdDbType(id);
 
         // limit
         int limit = tryParseInt(args[3]);

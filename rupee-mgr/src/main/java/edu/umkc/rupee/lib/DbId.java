@@ -36,7 +36,7 @@ public class DbId {
         return m.matches();
     }
 
-    public static DbType getDbIdType(String id) {
+    public static DbType getIdDbType(String id) {
 
         if (isScopId(id)) {
             return DbType.SCOP;

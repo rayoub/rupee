@@ -33,8 +33,8 @@ public class Aligning
             PDBFileReader reader = new PDBFileReader();
             reader.setFetchBehavior(FetchBehavior.LOCAL_ONLY);
 
-            DbType dbType1 = DbId.getDbIdType(dbId1);
-            DbType dbType2 = DbId.getDbIdType(dbId2);
+            DbType dbType1 = DbId.getIdDbType(dbId1);
+            DbType dbType2 = DbId.getIdDbType(dbId2);
 
             FileInputStream queryFile = new FileInputStream(dbType1.getImportPath() + dbId1 + ".pdb.gz");
             GZIPInputStream queryFileGz = new GZIPInputStream(queryFile);
@@ -64,7 +64,7 @@ public class Aligning
             PDBFileReader reader = new PDBFileReader();
             reader.setFetchBehavior(FetchBehavior.LOCAL_ONLY);
 
-            DbType dbType = DbId.getDbIdType(dbId);
+            DbType dbType = DbId.getIdDbType(dbId);
 
             FileInputStream queryFile = new FileInputStream(Constants.UPLOAD_PATH + uploadId + ".pdb");
             FileInputStream targetFile = new FileInputStream(dbType.getImportPath() + dbId + ".pdb.gz");
@@ -116,8 +116,8 @@ public class Aligning
             PDBFileReader reader = new PDBFileReader();
             reader.setFetchBehavior(FetchBehavior.LOCAL_ONLY);
 
-            DbType dbType1 = DbId.getDbIdType(dbId1);
-            DbType dbType2 = DbId.getDbIdType(dbId2);
+            DbType dbType1 = DbId.getIdDbType(dbId1);
+            DbType dbType2 = DbId.getIdDbType(dbId2);
 
             FileInputStream queryFile = new FileInputStream(dbType1.getImportPath() + dbId1 + ".pdb.gz");
             GZIPInputStream queryFileGz = new GZIPInputStream(queryFile);
@@ -149,7 +149,7 @@ public class Aligning
             PDBFileReader reader = new PDBFileReader();
             reader.setFetchBehavior(FetchBehavior.LOCAL_ONLY);
 
-            DbType dbType = DbId.getDbIdType(dbId);
+            DbType dbType = DbId.getIdDbType(dbId);
 
             FileInputStream queryFile = new FileInputStream(Constants.UPLOAD_PATH + uploadId + ".pdb");
             FileInputStream targetFile = new FileInputStream(dbType.getImportPath() + dbId + ".pdb.gz");
