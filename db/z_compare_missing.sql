@@ -71,7 +71,7 @@ missing AS (
             AND r.db_id_2 = m.db_id_2
     WHERE
         r.version = 'scop_v2_07'
-        AND r.sort = 'tm_score'
+        AND r.sort_by = 'tm_score'
         AND m.n IS NULL
         AND r.n <= 100
     ORDER BY
