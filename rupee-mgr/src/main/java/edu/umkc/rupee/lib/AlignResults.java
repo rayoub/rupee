@@ -20,8 +20,8 @@ import org.biojava.nbio.structure.io.LocalPDBDirectory.FetchBehavior;
 import org.biojava.nbio.structure.io.PDBFileReader;
 import org.postgresql.ds.PGSimpleDataSource;
 
-import edu.umkc.rupee.defs.AlignCriteria;
-import edu.umkc.rupee.defs.DbTypeCriteria;
+import edu.umkc.rupee.defs.AlignmentType;
+import edu.umkc.rupee.defs.DbType;
 import edu.umkc.rupee.tm.TMAlign;
 
 public class AlignResults
@@ -32,7 +32,7 @@ public class AlignResults
         counter = new AtomicInteger();
     }
 
-    public static void alignRupeeResults(String benchmark, String version, String sort, DbTypeCriteria dbType, int maxN) {
+    public static void alignRupeeResults(String benchmark, String version, String sort, DbType dbType, int maxN) {
 
         List<String> dbIds = Benchmarks.get(benchmark);
             
@@ -42,7 +42,7 @@ public class AlignResults
         dbIds.parallelStream().forEach(dbId -> alignResults(command, version, sort, dbType, dbId, maxN));
     }
 
-    public static void alignMtmDomResults(String benchmark, String version, DbTypeCriteria dbType, int maxN) {
+    public static void alignMtmDomResults(String benchmark, String version, DbType dbType, int maxN) {
 
         List<String> dbIds = Benchmarks.get(benchmark);
             
@@ -52,7 +52,7 @@ public class AlignResults
         dbIds.parallelStream().forEach(dbId -> alignResults(command, version, "", dbType, dbId, maxN));
     }
 
-    public static void alignCathedralResults(String benchmark, String version, DbTypeCriteria dbType, int maxN) {
+    public static void alignCathedralResults(String benchmark, String version, DbType dbType, int maxN) {
 
         List<String> dbIds = Benchmarks.get(benchmark);
 
@@ -62,7 +62,7 @@ public class AlignResults
         dbIds.parallelStream().forEach(dbId -> alignResults(command, version, "", dbType, dbId, maxN));
     }
     
-    public static void alignSsmResults(String benchmark, String version, DbTypeCriteria dbType, int maxN) {
+    public static void alignSsmResults(String benchmark, String version, DbType dbType, int maxN) {
 
         List<String> dbIds = Benchmarks.get(benchmark);
 
@@ -72,7 +72,7 @@ public class AlignResults
         dbIds.parallelStream().forEach(dbId -> alignResults(command, version, "", dbType, dbId, maxN));
     }
 
-    private static void alignResults(String command, String version, String sort, DbTypeCriteria dbType, String dbId, int maxN) {
+    private static void alignResults(String command, String version, String sort, DbType dbType, String dbId, int maxN) {
 
         try {
             
@@ -126,8 +126,8 @@ public class AlignResults
                     score.setDbId2(dbId2);
 
                     // perform biojava alignments
-                    AlignRecord ce = Aligning.align(queryStructure, targetStructure, AlignCriteria.CE);
-                    AlignRecord fatcat = Aligning.align(queryStructure, targetStructure, AlignCriteria.FATCAT_FLEXIBLE);
+                    AlignRecord ce = Aligning.align(queryStructure, targetStructure, AlignmentType.CE);
+                    AlignRecord fatcat = Aligning.align(queryStructure, targetStructure, AlignmentType.FATCAT_FLEXIBLE);
 
                     score.setCeRmsd(ce.afps.getTotalRmsdOpt());
                     score.setCeTmScore(ce.afps.getTMScore());

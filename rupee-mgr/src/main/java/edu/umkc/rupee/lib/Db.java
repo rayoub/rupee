@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 import org.postgresql.PGConnection;
 import org.postgresql.ds.PGSimpleDataSource;
 
-import edu.umkc.rupee.defs.DbTypeCriteria;
+import edu.umkc.rupee.defs.DbType;
 
 public class Db {
 
@@ -33,7 +33,7 @@ public class Db {
     // Getting Grams
     // *********************************************************************
 
-    public static List<Integer> getGrams(String dbId, DbTypeCriteria dbType) throws SQLException {
+    public static List<Integer> getGrams(String dbId, DbType dbType) throws SQLException {
 
         List<Integer> grams = new ArrayList<>();
 
@@ -47,7 +47,7 @@ public class Db {
         return grams;
     }
 
-    public static Map<String, List<Integer>> getGrams(List<String> dbIds, DbTypeCriteria dbType) throws SQLException {
+    public static Map<String, List<Integer>> getGrams(List<String> dbIds, DbType dbType) throws SQLException {
 
         Map<String, List<Integer>> map = new HashMap<>();
 
@@ -113,7 +113,7 @@ public class Db {
     // Getting Hashes
     // *********************************************************************
 
-    public static Hashes getHashes(String dbId, DbTypeCriteria dbType) throws SQLException {
+    public static Hashes getHashes(String dbId, DbType dbType) throws SQLException {
 
         Hashes hashes = null;
 
@@ -127,7 +127,7 @@ public class Db {
         return hashes;
     }
     
-    public static Map<String,Hashes> getHashes(List<String> dbIds, DbTypeCriteria dbType) throws SQLException {
+    public static Map<String,Hashes> getHashes(List<String> dbIds, DbType dbType) throws SQLException {
 
         Map<String, Hashes> map = new HashMap<>();
 

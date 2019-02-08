@@ -44,7 +44,7 @@ public class Hashing {
 
             // gramMap.get(key) is the count for that rpe hash
             for (int i = 0; i < gramMap.get(key); i++) {
-                updateMinHashes(minHashes, key + (i * Constants.DEC_POW_6)); 
+                updateMinHashes(minHashes, key + (i * Constants.DEC_POW_5)); 
             }
         }
 

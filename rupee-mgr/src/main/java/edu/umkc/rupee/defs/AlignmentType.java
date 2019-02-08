@@ -9,7 +9,7 @@ import org.biojava.nbio.structure.align.fatcat.FatCatFlexible;
 import org.biojava.nbio.structure.align.fatcat.FatCatRigid;
 import org.biojava.nbio.structure.align.fatcat.calc.FatCatParameters;
 
-public enum AlignCriteria {
+public enum AlignmentType {
 
     CE(CeMain.algorithmName, new CeParameters()),
     CECP(CeCPMain.algorithmName, new CECPParameters()),
@@ -21,7 +21,7 @@ public enum AlignCriteria {
     private String algorithmName;
     private ConfigStrucAligParams params; 
 
-    AlignCriteria(String algorithmName, ConfigStrucAligParams params) {
+    AlignmentType(String algorithmName, ConfigStrucAligParams params) {
         this.algorithmName = algorithmName;
         this.params = params;
     }

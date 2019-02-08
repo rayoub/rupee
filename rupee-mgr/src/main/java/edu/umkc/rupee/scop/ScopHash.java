@@ -1,13 +1,13 @@
 package edu.umkc.rupee.scop;
 
 import edu.umkc.rupee.base.Hash;
-import edu.umkc.rupee.defs.DbTypeCriteria;
+import edu.umkc.rupee.defs.DbType;
 
 public class ScopHash extends Hash {
 
-    public DbTypeCriteria getDbType() {
+    public DbType getDbType() {
 
-        return DbTypeCriteria.SCOP;
+        return DbType.SCOP;
     }
 }
 

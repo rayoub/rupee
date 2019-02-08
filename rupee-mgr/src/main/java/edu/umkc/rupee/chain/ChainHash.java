@@ -1,13 +1,13 @@
 package edu.umkc.rupee.chain;
 
 import edu.umkc.rupee.base.Hash;
-import edu.umkc.rupee.defs.DbTypeCriteria;
+import edu.umkc.rupee.defs.DbType;
 
 public class ChainHash extends Hash {
 
-    public DbTypeCriteria getDbType() {
+    public DbType getDbType() {
 
-        return DbTypeCriteria.CHAIN;
+        return DbType.CHAIN;
     }
 }
 

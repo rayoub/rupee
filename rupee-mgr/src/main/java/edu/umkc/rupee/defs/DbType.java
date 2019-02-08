@@ -2,7 +2,7 @@ package edu.umkc.rupee.defs;
 
 import edu.umkc.rupee.lib.Constants;
 
-public enum DbTypeCriteria {
+public enum DbType {
     
     SCOP(1, "SCOPe", "scop", Constants.SCOP_PATH),
     CATH(2, "CATH", "cath", Constants.CATH_PATH),
@@ -14,7 +14,7 @@ public enum DbTypeCriteria {
     private String tableName;
     private String importPath;
 
-    DbTypeCriteria(int id, String name, String tableName, String importPath) {
+    DbType(int id, String name, String tableName, String importPath) {
         this.id = id;
         this.name = name;
         this.tableName = tableName;
@@ -37,7 +37,7 @@ public enum DbTypeCriteria {
         return importPath;
     }
 
-    public static DbTypeCriteria fromId(int id) {
+    public static DbType fromId(int id) {
         if (id == SCOP.getId()) {
             return SCOP;
         }

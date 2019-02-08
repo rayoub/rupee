@@ -8,13 +8,13 @@ import java.sql.SQLException;
 import edu.umkc.rupee.base.Search;
 import edu.umkc.rupee.base.SearchCriteria;
 import edu.umkc.rupee.base.SearchRecord;
-import edu.umkc.rupee.defs.DbTypeCriteria;
+import edu.umkc.rupee.defs.DbType;
 
 public class ChainSearch extends Search {
 
-    public DbTypeCriteria getDbType() {
+    public DbType getDbType() {
 
-        return DbTypeCriteria.CHAIN;
+        return DbType.CHAIN;
     }
 
     public PreparedStatement getSearchStatement(SearchCriteria criteria, int bandIndex, Connection conn)
@@ -24,7 +24,7 @@ public class ChainSearch extends Search {
 
         PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_chain_band_matches(?,?,?,?);");
 
-        stmt.setInt(1, chainCriteria.dbIdType.getId());
+        stmt.setInt(1, chainCriteria.idDbType.getId());
         stmt.setString(2, chainCriteria.dbId);
         stmt.setInt(3, chainCriteria.uploadId);
         stmt.setInt(4, bandIndex + 1);

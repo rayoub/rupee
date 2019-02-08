@@ -12,7 +12,7 @@ import java.util.stream.IntStream;
 
 import org.postgresql.ds.PGSimpleDataSource;
 
-import edu.umkc.rupee.defs.DbTypeCriteria;
+import edu.umkc.rupee.defs.DbType;
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
 import edu.umkc.rupee.lib.Hashes;
@@ -24,7 +24,7 @@ public abstract class Hash {
     // Abstract Methods 
     // *********************************************************************
 
-    public abstract DbTypeCriteria getDbType();
+    public abstract DbType getDbType();
 
     // *********************************************************************
     // Instance Methods 
@@ -51,7 +51,7 @@ public abstract class Hash {
 
             // *** get split
             
-            DbTypeCriteria dbType = getDbType();
+            DbType dbType = getDbType();
 
             System.out.println("Split: " + splitIndex + ", Getting " + dbType.getName() + " Ids to Import.");
                 

@@ -1,19 +1,19 @@
 package edu.umkc.rupee.base;
 
-import edu.umkc.rupee.defs.DbTypeCriteria;
-import edu.umkc.rupee.defs.ModeCriteria;
-import edu.umkc.rupee.defs.SearchByCriteria;
-import edu.umkc.rupee.defs.SortCriteria;
+import edu.umkc.rupee.defs.DbType;
+import edu.umkc.rupee.defs.SearchMode;
+import edu.umkc.rupee.defs.SearchBy;
+import edu.umkc.rupee.defs.SortBy;
 
 public class SearchCriteria {
 
-    public DbTypeCriteria dbType;
-    public SearchByCriteria searchBy;
-    public DbTypeCriteria dbIdType;
+    public DbType searchDbType;
+    public SearchBy searchBy;
+    public DbType idDbType;
     public String dbId;
     public int uploadId = -1;
     public int limit;
-    public ModeCriteria mode;
-    public SortCriteria sort;
+    public SearchMode searchMode;
+    public SortBy sortBy;
 }
 

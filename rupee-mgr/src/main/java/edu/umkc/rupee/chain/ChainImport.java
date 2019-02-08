@@ -1,12 +1,12 @@
 package edu.umkc.rupee.chain;
 
 import edu.umkc.rupee.base.Import;
-import edu.umkc.rupee.defs.DbTypeCriteria;
+import edu.umkc.rupee.defs.DbType;
 
 public class ChainImport extends Import {
 
-    public DbTypeCriteria getDbType() {
+    public DbType getDbType() {
 
-        return DbTypeCriteria.CHAIN;
+        return DbType.CHAIN;
     }
 }

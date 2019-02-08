@@ -1,12 +1,12 @@
 package edu.umkc.rupee.cath;
 
 import edu.umkc.rupee.base.Import;
-import edu.umkc.rupee.defs.DbTypeCriteria;
+import edu.umkc.rupee.defs.DbType;
 
 public class CathImport extends Import {
 
-    public DbTypeCriteria getDbType() {
+    public DbType getDbType() {
 
-        return DbTypeCriteria.CATH;
+        return DbType.CATH;
     }
 }

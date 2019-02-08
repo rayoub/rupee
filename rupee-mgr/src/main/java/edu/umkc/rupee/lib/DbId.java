@@ -3,7 +3,7 @@ package edu.umkc.rupee.lib;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import edu.umkc.rupee.defs.DbTypeCriteria;
+import edu.umkc.rupee.defs.DbType;
 
 public class DbId {
 
@@ -36,19 +36,19 @@ public class DbId {
         return m.matches();
     }
 
-    public static DbTypeCriteria getDbIdType(String id) {
+    public static DbType getDbIdType(String id) {
 
         if (isScopId(id)) {
-            return DbTypeCriteria.SCOP;
+            return DbType.SCOP;
         }
         else if (isCathId(id)) {
-            return DbTypeCriteria.CATH;
+            return DbType.CATH;
         }
         else if (isEcodId(id)) {
-            return DbTypeCriteria.ECOD;
+            return DbType.ECOD;
         }
         else {
-            return DbTypeCriteria.CHAIN;
+            return DbType.CHAIN;
         }
     }
     

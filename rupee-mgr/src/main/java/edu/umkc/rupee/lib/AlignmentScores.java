@@ -5,7 +5,7 @@ import java.sql.SQLException;
 
 import org.postgresql.util.PGobject;
 
-import edu.umkc.rupee.defs.AlignCriteria;
+import edu.umkc.rupee.defs.AlignmentType;
 
 public class AlignmentScores extends PGobject {
 
@@ -126,7 +126,7 @@ public class AlignmentScores extends PGobject {
         this.tmAvgTmScore = tmAvgTmScore;
     }
 
-    public double getRmsd(AlignCriteria align) {
+    public double getRmsd(AlignmentType align) {
 
         double rmsd = 0.0;
 
@@ -151,7 +151,7 @@ public class AlignmentScores extends PGobject {
         return rmsd;
     }
     
-    public double getTmScore(AlignCriteria align) {
+    public double getTmScore(AlignmentType align) {
 
         double tmScore = -1.0;
 

@@ -38,10 +38,6 @@ public class Constants {
     
     public final static double SIMILARITY_THRESHOLD = 0.10;
 
-    public final static int PRIME_POW_1 = 13;
-    public final static int PRIME_POW_2 = PRIME_POW_1 * PRIME_POW_1;
-    public final static int PRIME_POW_3 = PRIME_POW_1 * PRIME_POW_2; 
-
     public final static int DEC_POW_1 = 10;
     public final static int DEC_POW_2 = DEC_POW_1 * DEC_POW_1;
     public final static int DEC_POW_3 = DEC_POW_1 * DEC_POW_2;

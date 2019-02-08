@@ -32,12 +32,12 @@ import edu.umkc.rupee.chain.ChainImport;
 import edu.umkc.rupee.chain.ChainSearch;
 import edu.umkc.rupee.chain.ChainSearchCriteria;
 import edu.umkc.rupee.chain.ChainSearchRecord;
-import edu.umkc.rupee.defs.AlignCriteria;
-import edu.umkc.rupee.defs.DbTypeCriteria;
-import edu.umkc.rupee.defs.ModeCriteria;
-import edu.umkc.rupee.defs.SearchByCriteria;
+import edu.umkc.rupee.defs.AlignmentType;
+import edu.umkc.rupee.defs.DbType;
+import edu.umkc.rupee.defs.SearchMode;
+import edu.umkc.rupee.defs.SearchBy;
 import edu.umkc.rupee.defs.SearchFrom;
-import edu.umkc.rupee.defs.SortCriteria;
+import edu.umkc.rupee.defs.SortBy;
 import edu.umkc.rupee.ecod.EcodHash;
 import edu.umkc.rupee.ecod.EcodImport;
 import edu.umkc.rupee.ecod.EcodSearch;
@@ -167,7 +167,7 @@ public class Main {
     
     private static void option_i(CommandLine line) {
 
-        Set<String> dbTypeNames = new HashSet<>(Arrays.stream(DbTypeCriteria.values()).map(v -> v.name()).collect(Collectors.toList()));
+        Set<String> dbTypeNames = new HashSet<>(Arrays.stream(DbType.values()).map(v -> v.name()).collect(Collectors.toList()));
         
         String[] args = line.getOptionValues("i");
 
@@ -176,17 +176,17 @@ public class Main {
             return;
         }
         
-        DbTypeCriteria dbType = DbTypeCriteria.valueOf(args[0]);
+        DbType dbType = DbType.valueOf(args[0]);
 
-        if (dbType == DbTypeCriteria.CATH) {
+        if (dbType == DbType.CATH) {
             CathImport cathImport = new CathImport();
             cathImport.importGrams();
         }
-        else if (dbType == DbTypeCriteria.SCOP) {
+        else if (dbType == DbType.SCOP) {
             ScopImport scopImport = new ScopImport();
             scopImport.importGrams();
         }
-        else if (dbType == DbTypeCriteria.ECOD) {
+        else if (dbType == DbType.ECOD) {
             EcodImport ecodImport = new EcodImport();
             ecodImport.importGrams();
         }
@@ -200,7 +200,7 @@ public class Main {
     
     private static void option_h(CommandLine line) {
 
-        Set<String> dbTypeNames = new HashSet<>(Arrays.stream(DbTypeCriteria.values()).map(v -> v.name()).collect(Collectors.toList()));
+        Set<String> dbTypeNames = new HashSet<>(Arrays.stream(DbType.values()).map(v -> v.name()).collect(Collectors.toList()));
 
         String[] args = line.getOptionValues("h");
 
@@ -209,17 +209,17 @@ public class Main {
             return;
         }
         
-        DbTypeCriteria dbType = DbTypeCriteria.valueOf(args[0]);
+        DbType dbType = DbType.valueOf(args[0]);
 
-        if (dbType == DbTypeCriteria.CATH) {
+        if (dbType == DbType.CATH) {
             CathHash cathHash = new CathHash();
             cathHash.hash();
         }
-        else if (dbType == DbTypeCriteria.SCOP) {
+        else if (dbType == DbType.SCOP) {
             ScopHash scopHash = new ScopHash();
             scopHash.hash();
         }
-        else if (dbType == DbTypeCriteria.ECOD) {
+        else if (dbType == DbType.ECOD) {
             EcodHash ecodHash = new EcodHash();
             ecodHash.hash();
         }
@@ -233,7 +233,7 @@ public class Main {
 
     private static void option_a(CommandLine line) throws SQLException {
 
-        Set<String> alignNames = new HashSet<>(Arrays.stream(AlignCriteria.values()).map(v -> v.name()).collect(Collectors.toList()));
+        Set<String> alignNames = new HashSet<>(Arrays.stream(AlignmentType.values()).map(v -> v.name()).collect(Collectors.toList()));
         
         String[] args = line.getOptionValues("a");
         
@@ -245,7 +245,7 @@ public class Main {
             return;
         }
 
-        AlignCriteria align = AlignCriteria.valueOf(args[2]);
+        AlignmentType align = AlignmentType.valueOf(args[2]);
 
         AlignRecord record = Aligning.align(dbId1, dbId2, align);
 
@@ -253,7 +253,7 @@ public class Main {
         System.out.println("RMSD:           " + record.afps.getTotalRmsdOpt());
         System.out.println("TM-Score:       " + record.afps.getTMScore());
 
-        if (align == AlignCriteria.CE || align == AlignCriteria.CECP) { 
+        if (align == AlignmentType.CE || align == AlignmentType.CECP) { 
             System.out.println(record.afps.toCE(record.atoms1, record.atoms2));
         }
         else {
@@ -279,8 +279,8 @@ public class Main {
         String dbId1 = args[0];
         String dbId2 = args[1];
 
-        DbTypeCriteria dbType1 = DbId.getDbIdType(dbId1);
-        DbTypeCriteria dbType2 = DbId.getDbIdType(dbId2);
+        DbType dbType1 = DbId.getDbIdType(dbId1);
+        DbType dbType2 = DbId.getDbIdType(dbId2);
 
         Hashes hashes1 = Db.getHashes(dbId1, dbType1);
         Hashes hashes2 = Db.getHashes(dbId2, dbType2);
@@ -333,8 +333,8 @@ public class Main {
         String dbId1 = args[0];
         String dbId2 = args[1];
 
-        DbTypeCriteria dbType1 = DbId.getDbIdType(dbId1);
-        DbTypeCriteria dbType2 = DbId.getDbIdType(dbId2);
+        DbType dbType1 = DbId.getDbIdType(dbId1);
+        DbType dbType2 = DbId.getDbIdType(dbId2);
 
         Hashes hashes1 = Db.getHashes(dbId1, dbType1);
         Hashes hashes2 = Db.getHashes(dbId2, dbType2);
@@ -382,10 +382,10 @@ public class Main {
     
     private static void option_s(CommandLine line) throws Exception {
 
-        Set<String> searchTypeNames = new HashSet<>(Arrays.stream(SearchByCriteria.values()).map(v -> v.name()).collect(Collectors.toList()));
-        Set<String> dbTypeNames = new HashSet<>(Arrays.stream(DbTypeCriteria.values()).map(v -> v.name()).collect(Collectors.toList()));
-        Set<String> modeNames = new HashSet<>(Arrays.stream(ModeCriteria.values()).map(v -> v.name()).collect(Collectors.toList()));
-        Set<String> sortNames = new HashSet<>(Arrays.stream(SortCriteria.values()).map(v -> v.name()).collect(Collectors.toList()));
+        Set<String> searchTypeNames = new HashSet<>(Arrays.stream(SearchBy.values()).map(v -> v.name()).collect(Collectors.toList()));
+        Set<String> dbTypeNames = new HashSet<>(Arrays.stream(DbType.values()).map(v -> v.name()).collect(Collectors.toList()));
+        Set<String> modeNames = new HashSet<>(Arrays.stream(SearchMode.values()).map(v -> v.name()).collect(Collectors.toList()));
+        Set<String> sortNames = new HashSet<>(Arrays.stream(SortBy.values()).map(v -> v.name()).collect(Collectors.toList()));
 
         String[] args = line.getOptionValues("s");
        
@@ -399,12 +399,12 @@ public class Main {
             return;
         }
        
-        SearchByCriteria searchType = SearchByCriteria.valueOf(args[0]); 
-        DbTypeCriteria dbType = DbTypeCriteria.valueOf(args[1]);
+        SearchBy searchType = SearchBy.valueOf(args[0]); 
+        DbType dbType = DbType.valueOf(args[1]);
 
         // id
         String id = args[2];
-        DbTypeCriteria dbIdType = DbId.getDbIdType(id);
+        DbType dbIdType = DbId.getDbIdType(id);
 
         // limit
         int limit = tryParseInt(args[3]);
@@ -452,7 +452,7 @@ public class Main {
             return;
         }
 
-        ModeCriteria mode = ModeCriteria.valueOf(args[10]);
+        SearchMode mode = SearchMode.valueOf(args[10]);
        
         // sorting 
         if (!sortNames.contains(args[11])) {
@@ -460,11 +460,11 @@ public class Main {
             return;
         }
 
-        SortCriteria sort = SortCriteria.valueOf(args[11]);
+        SortBy sort = SortBy.valueOf(args[11]);
 
         // consistency rule
-        if (mode == ModeCriteria.FAST) {
-            sort = SortCriteria.SIMILARITY;
+        if (mode == SearchMode.FAST) {
+            sort = SortBy.SIMILARITY;
         }
               
         //*************************************************************
@@ -474,14 +474,14 @@ public class Main {
         boolean verbose = false; 
         boolean timing = false;
 
-        if (dbType == DbTypeCriteria.SCOP) { 
+        if (dbType == DbType.SCOP) { 
 
             ScopSearchCriteria criteria = new ScopSearchCriteria();
             
             criteria.searchBy = searchType;
-            criteria.dbIdType = dbIdType;
-            criteria.dbType = dbType;
-            if (criteria.searchBy == SearchByCriteria.DB_ID) {
+            criteria.idDbType = dbIdType;
+            criteria.searchDbType = dbType;
+            if (criteria.searchBy == SearchBy.DB_ID) {
                 criteria.dbId = id;
             }
             else {
@@ -489,8 +489,8 @@ public class Main {
             }
 
             criteria.limit = limit;
-            criteria.mode = mode;
-            criteria.sort = sort;
+            criteria.searchMode = mode;
+            criteria.sortBy = sort;
             criteria.differentFold = diff1;
             criteria.differentSuperfamily = diff2;
             criteria.differentFamily = diff3;
@@ -536,19 +536,19 @@ public class Main {
                         record.getDbId(),
                         record.getRmsd(),
                         record.getTmScore(),
-                        criteria.sort.name().toLowerCase()
+                        criteria.sortBy.name().toLowerCase()
                     );
                 }
             }
         }
-        else if (dbType == DbTypeCriteria.CATH) {
+        else if (dbType == DbType.CATH) {
         
             CathSearchCriteria criteria = new CathSearchCriteria();
 
             criteria.searchBy = searchType;
-            criteria.dbIdType = dbIdType;
-            criteria.dbType = dbType;
-            if (criteria.searchBy == SearchByCriteria.DB_ID) {
+            criteria.idDbType = dbIdType;
+            criteria.searchDbType = dbType;
+            if (criteria.searchBy == SearchBy.DB_ID) {
                 criteria.dbId = id;
             }
             else {
@@ -556,8 +556,8 @@ public class Main {
             }
 
             criteria.limit = limit;
-            criteria.mode = mode;
-            criteria.sort = sort;
+            criteria.searchMode = mode;
+            criteria.sortBy = sort;
             criteria.topologyReps = rep1;
             criteria.superfamilyReps = rep2;
             criteria.s35Reps = rep3;
@@ -608,19 +608,19 @@ public class Main {
                         record.getDbId(),
                         record.getRmsd(),
                         record.getTmScore(),
-                        criteria.sort.name().toLowerCase()
+                        criteria.sortBy.name().toLowerCase()
                     );
                 }
             }
         }
-        else if (dbType == DbTypeCriteria.ECOD) {
+        else if (dbType == DbType.ECOD) {
 
             EcodSearchCriteria criteria = new EcodSearchCriteria();
             
             criteria.searchBy = searchType;
-            criteria.dbIdType = dbIdType;
-            criteria.dbType = dbType;
-            if (criteria.searchBy == SearchByCriteria.DB_ID) {
+            criteria.idDbType = dbIdType;
+            criteria.searchDbType = dbType;
+            if (criteria.searchBy == SearchBy.DB_ID) {
                 criteria.dbId = id;
             }
             else {
@@ -628,8 +628,8 @@ public class Main {
             }
 
             criteria.limit = limit;
-            criteria.mode = mode;
-            criteria.sort = sort;
+            criteria.searchMode = mode;
+            criteria.sortBy = sort;
             criteria.differentH = diff1;
             criteria.differentT = diff2;
             criteria.differentF = diff3;
@@ -665,7 +665,7 @@ public class Main {
                         record.getDbId(),
                         record.getRmsd(),
                         record.getTmScore(),
-                        criteria.sort.name().toLowerCase()
+                        criteria.sortBy.name().toLowerCase()
                     );
                 }
             }
@@ -675,9 +675,9 @@ public class Main {
             ChainSearchCriteria criteria = new ChainSearchCriteria();
             
             criteria.searchBy = searchType;
-            criteria.dbIdType = dbIdType;
-            criteria.dbType = dbType;
-            if (criteria.searchBy == SearchByCriteria.DB_ID) {
+            criteria.idDbType = dbIdType;
+            criteria.searchDbType = dbType;
+            if (criteria.searchBy == SearchBy.DB_ID) {
                 criteria.dbId = id;
             }
             else {
@@ -685,8 +685,8 @@ public class Main {
             }
 
             criteria.limit = limit;
-            criteria.mode = mode;
-            criteria.sort = sort;
+            criteria.searchMode = mode;
+            criteria.sortBy = sort;
 
             ChainSearch chainSearch = new ChainSearch();
             List<SearchRecord> records = chainSearch.search(criteria, SearchFrom.CLI);
@@ -715,7 +715,7 @@ public class Main {
                         record.getDbId(),
                         record.getRmsd(),
                         record.getTmScore(),
-                        criteria.sort.name().toLowerCase()
+                        criteria.sortBy.name().toLowerCase()
                     );
                 }
             }

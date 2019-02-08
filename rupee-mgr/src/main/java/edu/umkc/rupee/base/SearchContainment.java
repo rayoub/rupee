@@ -20,11 +20,11 @@ import org.biojava.nbio.structure.Structure;
 import org.postgresql.ds.PGSimpleDataSource;
 
 import edu.umkc.rupee.bio.Parser;
-import edu.umkc.rupee.defs.DbTypeCriteria;
-import edu.umkc.rupee.defs.ModeCriteria;
-import edu.umkc.rupee.defs.SearchByCriteria;
+import edu.umkc.rupee.defs.DbType;
+import edu.umkc.rupee.defs.SearchMode;
+import edu.umkc.rupee.defs.SearchBy;
 import edu.umkc.rupee.defs.SearchFrom;
-import edu.umkc.rupee.defs.SortCriteria;
+import edu.umkc.rupee.defs.SortBy;
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
 import edu.umkc.rupee.lib.LCS;
@@ -37,7 +37,7 @@ public abstract class SearchContainment {
     // Abstract Methods 
     // *********************************************************************
     
-    public abstract DbTypeCriteria getDbType();
+    public abstract DbType getDbType();
 
     public abstract PreparedStatement getSearchStatement(SearchCriteria criteria, int bandIndex, Connection conn) throws SQLException;
 
@@ -55,9 +55,9 @@ public abstract class SearchContainment {
         
         List<Integer> grams = null;
 
-        if (criteria.searchBy == SearchByCriteria.DB_ID) {
+        if (criteria.searchBy == SearchBy.DB_ID) {
             
-            grams = Db.getGrams(criteria.dbId, criteria.dbIdType);
+            grams = Db.getGrams(criteria.dbId, criteria.idDbType);
         }
         else { // UPLOAD
 
@@ -65,7 +65,7 @@ public abstract class SearchContainment {
         }
 
         // size limit for top-aligned searches
-        if (searchFrom == SearchFrom.WEB && criteria.mode == ModeCriteria.TOP_ALIGNED && grams.size() > 400) {
+        if (searchFrom == SearchFrom.WEB && criteria.searchMode == SearchMode.TOP_ALIGNED && grams.size() > 400) {
             
             Thread.sleep(2000); // sleeping corresponds to an event throttle on web page - looks nicer
             throw new UnsupportedOperationException("Query structures for immediate Top-Aligned searches must have fewer than 400 residues.");
@@ -79,14 +79,14 @@ public abstract class SearchContainment {
             records = IntStream.range(0, Constants.SPLIT_COUNT).boxed().parallel()
                 .flatMap(splitIndex -> gramsSplit(splitIndex, criteria, grams1).stream())
                 .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
-                .limit(criteria.mode.getLshCandidateCount()) 
+                .limit(criteria.searchMode.getLshCandidateCount()) 
                 .collect(Collectors.toList());
 
             // build comparator for final sorts
             Comparator<SearchRecord> comparator = getComparator(criteria);
 
             // if mode is TOP_ALIGNED
-            if (criteria.mode == ModeCriteria.TOP_ALIGNED) {
+            if (criteria.searchMode == SearchMode.TOP_ALIGNED) {
 
                 // *** parse query structure
         
@@ -94,9 +94,9 @@ public abstract class SearchContainment {
 
                 String fileName = "";
                 Structure structure = null;
-                if (criteria.searchBy == SearchByCriteria.DB_ID) {
+                if (criteria.searchBy == SearchBy.DB_ID) {
 
-                    fileName = criteria.dbIdType.getImportPath() + criteria.dbId + ".pdb.gz";
+                    fileName = criteria.idDbType.getImportPath() + criteria.dbId + ".pdb.gz";
                     
                     FileInputStream queryFile = new FileInputStream(fileName);
                     GZIPInputStream queryFileGz = new GZIPInputStream(queryFile);
@@ -151,7 +151,7 @@ public abstract class SearchContainment {
                     .collect(Collectors.toList());
 
             // query db id should be first
-            if (criteria.searchBy == SearchByCriteria.DB_ID) {
+            if (criteria.searchBy == SearchBy.DB_ID) {
                
                 int i; 
                 for (i = 0; i < records.size(); i++) {
@@ -165,7 +165,7 @@ public abstract class SearchContainment {
                     SearchRecord record = records.get(i);
                     records.remove(i);
                     records.add(0, record);
-                    if (criteria.mode == ModeCriteria.TOP_ALIGNED) {
+                    if (criteria.searchMode == SearchMode.TOP_ALIGNED) {
                         records.get(0).setRmsd(0.0);
                         records.get(0).setTmScore(1.0);
                     }
@@ -209,16 +209,16 @@ public abstract class SearchContainment {
 
         Comparator<SearchRecord> comparator;
 
-        if (criteria.sort == SortCriteria.SIMILARITY) {
+        if (criteria.sortBy == SortBy.SIMILARITY) {
             comparator = Comparator.comparingDouble(SearchRecord::getSimilarity);
         } 
-        else if (criteria.sort == SortCriteria.RMSD) {
+        else if (criteria.sortBy == SortBy.RMSD) {
             comparator = Comparator.comparingDouble(SearchRecord::getRmsd);
         }
         else {
             comparator = Comparator.comparingDouble(SearchRecord::getTmScore);
         }
-        if (criteria.sort.isDescending()) {
+        if (criteria.sortBy.isDescending()) {
             comparator = comparator.reversed();
         }
         comparator = comparator.thenComparing(SearchRecord::getSortKey);

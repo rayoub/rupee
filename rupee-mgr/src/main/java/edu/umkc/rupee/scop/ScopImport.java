@@ -1,12 +1,12 @@
 package edu.umkc.rupee.scop;
 
 import edu.umkc.rupee.base.Import;
-import edu.umkc.rupee.defs.DbTypeCriteria;
+import edu.umkc.rupee.defs.DbType;
 
 public class ScopImport extends Import {
 
-    public DbTypeCriteria getDbType() {
+    public DbType getDbType() {
 
-        return DbTypeCriteria.SCOP;
+        return DbType.SCOP;
     }
 }

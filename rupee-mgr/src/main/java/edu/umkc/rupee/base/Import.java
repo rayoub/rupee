@@ -28,7 +28,7 @@ import org.biojava.nbio.structure.secstruc.SecStrucCalc;
 import org.biojava.nbio.structure.secstruc.SecStrucInfo;
 import org.postgresql.ds.PGSimpleDataSource;
 
-import edu.umkc.rupee.defs.DbTypeCriteria;
+import edu.umkc.rupee.defs.DbType;
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
 import edu.umkc.rupee.lib.Log;
@@ -40,7 +40,7 @@ public abstract class Import {
     // Abstract Methods 
     // *********************************************************************
     
-    public abstract DbTypeCriteria getDbType();
+    public abstract DbType getDbType();
 
     // *********************************************************************
     // Instance Methods 
@@ -69,7 +69,7 @@ public abstract class Import {
 
             // *** get split
 
-            DbTypeCriteria dbType = getDbType();
+            DbType dbType = getDbType();
 
             System.out.println("Split: " + splitIndex + ", Getting " + dbType.getName() + " Ids to Import.");
                 
@@ -308,15 +308,15 @@ public abstract class Import {
                         residue2.getBreakBefore() || residue3.getBreakBefore()
                     )) {
 
-                    // abcd
+                    // abc
                     int gram = 
-                        residue1.getDescriptor() * Constants.PRIME_POW_2 + 
-                        residue2.getDescriptor() * Constants.PRIME_POW_1 +
+                        residue1.getDescriptor() * Constants.DEC_POW_2 + 
+                        residue2.getDescriptor() * Constants.DEC_POW_1 +
                         residue3.getDescriptor();
                    
-                    // rr abcd
+                    // rr abc
                     int runFactor = residue1.getRunFactor() % 100;
-                    gram = gram + runFactor * Constants.DEC_POW_4; 
+                    gram = gram + runFactor * Constants.DEC_POW_3; 
 
                     // set hashes
                     residue1.setGram(gram);
@@ -350,53 +350,37 @@ public abstract class Import {
         if (phi == 360 || psi == 360) 
             return calculateDefaultRegion(sse);
         
-        // helix 1, 2, 3, 4
+        // helix 0, 1, 2, 3
         else if (sse.equals("Helix")) {
             return calculateHelixRegion(phi, psi);
         }
 
-        // strand 5, 6, 7
+        // strand 4, 5, 6
         else if (sse.equals("Strand")) {
-            return calculateStrandRegion(phi, psi) + 4;
+            return calculateStrandRegion(phi, psi);
         }
      
-        // loop 8, 9, 10
-        else if (sse.equals("Loop")) {
-            return calculateLoopRegion(phi, psi) + 7;
-        }
-
-        // turns and bridges
-        else if (sse.equals("Turn")) {
-            return 11;
-        }
-        else {
-            return 12; // Bridge
+        // loop 7, 8, 9
+        else { 
+            return calculateLoopRegion(phi, psi);
         }
     }
 
     public static int calculateDefaultRegion(String sse) {
         
-        // helix 1, 2, 3, 4
+        // helix 0, 1, 2, 3
         if (sse.equals("Helix")) {
-            return 3;
+            return 2;
         }
 
-        // strand 5, 6, 7
+        // strand 4, 5, 6
         else if (sse.equals("Strand")) {
-            return 5;
+            return 4;
         }
       
-        // loop 8, 9, 10
-        else if (sse.equals("Loop")) {
-            return 8;
-        }
-
-        // turns and bridges
-        else if (sse.equals("Turn")) {
-            return 11;
-        }
-        else {
-            return 12; // Bridge
+        // loop 7, 8, 9
+        else {  
+            return 7;
         }
     }
 
@@ -406,42 +390,42 @@ public abstract class Import {
 
         if (psi >= -180 && psi < -135) {
             if (phi >= 0 && phi < 180) {
-                region = 4;
+                region = 3;
             }
             else {
-                region = 1; 
+                region = 0; 
             }
         }
         else if (psi >= -135 && psi < -75) {
             if (phi >= 0 && phi < 180) {
-                region = 4;
+                region = 3;
             }
             else {
-                region = 3;
+                region = 2;
             }
         }
         else if (psi >= -75 && psi < 90) {
             if (phi >= 0 && phi < 180) {
-                region = 2;
+                region = 1;
             }
             else {
-                region = 3;
+                region = 2;
             }
         }
         else if (psi >= 90 && psi < 120) {
             if (phi >= 0 && phi < 180) {
-                region = 2;
+                region = 1;
             }
             else {
-                region = 1;
+                region = 0;
             }
         }
         else if (psi >= 120 && psi < 180) {
             if (phi >= 0 && phi < 180) {
-                region = 4;
+                region = 3;
             }
             else {
-                region = 1;
+                region = 0;
             }
         }
         
@@ -453,34 +437,34 @@ public abstract class Import {
         int region = -1;
 
         if (psi >= -180 && psi < -110) {
-            region = 1;
+            region = 4;
         }
         else if (psi >= -110 && psi < -60) {
             if (phi >= 0 && phi < 180) {
-                region = 1;
+                region = 4;
             }
             else {
-                region = 3;
+                region = 6;
             }
         }
         else if (psi >= -60 && psi < 60) {
             if (phi >= 0 && phi < 180) {
-                region = 2;
+                region = 5;
             }
             else {
-                region = 3;
+                region = 6;
             }
         }
         else if (psi >= 60 && psi < 90) {
             if (phi >= 0 && phi < 180) {
-                region = 2;
+                region = 5;
             }
             else {
-                region = 1;
+                region = 4;
             }
         }
         else if (psi >= 90 && psi < 180) {
-            region = 1;
+            region = 4;
         }
 
         return region;
@@ -491,34 +475,34 @@ public abstract class Import {
         int region = -1;
 
         if (psi >= -180 && psi < -100) {
-            region = 1;
+            region = 7;
         }
         else if (psi >= -100 && psi < -90) {
             if (phi >= 0 && phi < 180) {
-                region = 1;
+                region = 7;
             }
             else {
-                region = 3;
+                region = 9;
             }
         }
         else if (psi >= -90 && psi < 60) {
             if (phi >= 0 && phi < 180) {
-                region = 2;
+                region = 8;
             }
             else {
-                region = 3;
+                region = 9;
             }
         }
         else if (psi >= 60 && psi < 90) {
             if (phi >= 0 && phi < 180) {
-                region = 2;
+                region = 8;
             }
             else {
-                region = 1;
+                region = 7;
             }
         }
         else if (psi >= 90 && psi < 180) {
-            region = 1;
+            region = 7;
         }
             
         return region;

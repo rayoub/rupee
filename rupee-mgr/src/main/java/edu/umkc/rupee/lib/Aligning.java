@@ -17,14 +17,14 @@ import org.biojava.nbio.structure.align.util.AFPChainScorer;
 import org.biojava.nbio.structure.io.LocalPDBDirectory.FetchBehavior;
 import org.biojava.nbio.structure.io.PDBFileReader;
 
-import edu.umkc.rupee.defs.AlignCriteria;
-import edu.umkc.rupee.defs.DbTypeCriteria;
+import edu.umkc.rupee.defs.AlignmentType;
+import edu.umkc.rupee.defs.DbType;
 import edu.umkc.rupee.tm.Mode;
 import edu.umkc.rupee.tm.TMAlign;
 
 public class Aligning
 {
-    public static AlignRecord align(String dbId1, String dbId2, AlignCriteria align) {
+    public static AlignRecord align(String dbId1, String dbId2, AlignmentType align) {
 
         AlignRecord record = null;
 
@@ -33,8 +33,8 @@ public class Aligning
             PDBFileReader reader = new PDBFileReader();
             reader.setFetchBehavior(FetchBehavior.LOCAL_ONLY);
 
-            DbTypeCriteria dbType1 = DbId.getDbIdType(dbId1);
-            DbTypeCriteria dbType2 = DbId.getDbIdType(dbId2);
+            DbType dbType1 = DbId.getDbIdType(dbId1);
+            DbType dbType2 = DbId.getDbIdType(dbId2);
 
             FileInputStream queryFile = new FileInputStream(dbType1.getImportPath() + dbId1 + ".pdb.gz");
             GZIPInputStream queryFileGz = new GZIPInputStream(queryFile);
@@ -55,7 +55,7 @@ public class Aligning
         return record;
     }
 
-    public static AlignRecord align(int uploadId, String dbId, AlignCriteria align) {
+    public static AlignRecord align(int uploadId, String dbId, AlignmentType align) {
 
         AlignRecord record = null;
 
@@ -64,7 +64,7 @@ public class Aligning
             PDBFileReader reader = new PDBFileReader();
             reader.setFetchBehavior(FetchBehavior.LOCAL_ONLY);
 
-            DbTypeCriteria dbType = DbId.getDbIdType(dbId);
+            DbType dbType = DbId.getDbIdType(dbId);
 
             FileInputStream queryFile = new FileInputStream(Constants.UPLOAD_PATH + uploadId + ".pdb");
             FileInputStream targetFile = new FileInputStream(dbType.getImportPath() + dbId + ".pdb.gz");
@@ -84,7 +84,7 @@ public class Aligning
         return record;
     }
     
-    public static AlignRecord align(Structure queryStructure, Structure targetStructure, AlignCriteria align) 
+    public static AlignRecord align(Structure queryStructure, Structure targetStructure, AlignmentType align) 
         throws IOException, StructureException {
 
         Atom[] atoms1 = StructureTools.getAtomCAArray(queryStructure);
@@ -116,8 +116,8 @@ public class Aligning
             PDBFileReader reader = new PDBFileReader();
             reader.setFetchBehavior(FetchBehavior.LOCAL_ONLY);
 
-            DbTypeCriteria dbType1 = DbId.getDbIdType(dbId1);
-            DbTypeCriteria dbType2 = DbId.getDbIdType(dbId2);
+            DbType dbType1 = DbId.getDbIdType(dbId1);
+            DbType dbType2 = DbId.getDbIdType(dbId2);
 
             FileInputStream queryFile = new FileInputStream(dbType1.getImportPath() + dbId1 + ".pdb.gz");
             GZIPInputStream queryFileGz = new GZIPInputStream(queryFile);
@@ -149,7 +149,7 @@ public class Aligning
             PDBFileReader reader = new PDBFileReader();
             reader.setFetchBehavior(FetchBehavior.LOCAL_ONLY);
 
-            DbTypeCriteria dbType = DbId.getDbIdType(dbId);
+            DbType dbType = DbId.getDbIdType(dbId);
 
             FileInputStream queryFile = new FileInputStream(Constants.UPLOAD_PATH + uploadId + ".pdb");
             FileInputStream targetFile = new FileInputStream(dbType.getImportPath() + dbId + ".pdb.gz");

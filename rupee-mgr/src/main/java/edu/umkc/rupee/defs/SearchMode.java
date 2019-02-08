@@ -1,6 +1,6 @@
 package edu.umkc.rupee.defs;
 
-public enum ModeCriteria {
+public enum SearchMode {
 
     FAST(1, "Fast", 8000),
     TOP_ALIGNED(2, "Top-Aligned", 40000);
@@ -9,7 +9,7 @@ public enum ModeCriteria {
     private String name;
     private int lshCandidateCount;
 
-    ModeCriteria(int id, String name, int lshCandidateCount) {
+    SearchMode(int id, String name, int lshCandidateCount) {
         this.id = id;
         this.name = name;
         this.lshCandidateCount = lshCandidateCount;
@@ -27,7 +27,7 @@ public enum ModeCriteria {
         return lshCandidateCount;
     }
 
-    public static ModeCriteria fromId(int id) {
+    public static SearchMode fromId(int id) {
         if (id == FAST.getId()) {
             return FAST;
         }

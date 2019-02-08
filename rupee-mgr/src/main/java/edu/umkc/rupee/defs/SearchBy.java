@@ -1,6 +1,6 @@
 package edu.umkc.rupee.defs;
 
-public enum SearchByCriteria {
+public enum SearchBy {
     
     DB_ID(1, "Structure Id"),
     UPLOAD(2, "PDB File");
@@ -8,7 +8,7 @@ public enum SearchByCriteria {
     private int id;
     private String name;
 
-    SearchByCriteria(int id, String name) {
+    SearchBy(int id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -21,7 +21,7 @@ public enum SearchByCriteria {
         return name;
     }
     
-    public static SearchByCriteria fromId(int id) {
+    public static SearchBy fromId(int id) {
         if (id == DB_ID.getId()) {
             return DB_ID;
         }

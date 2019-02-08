@@ -1,12 +1,12 @@
 package edu.umkc.rupee.ecod;
 
 import edu.umkc.rupee.base.Import;
-import edu.umkc.rupee.defs.DbTypeCriteria;
+import edu.umkc.rupee.defs.DbType;
 
 public class EcodImport extends Import {
 
-    public DbTypeCriteria getDbType() {
+    public DbType getDbType() {
 
-        return DbTypeCriteria.ECOD;
+        return DbType.ECOD;
     }
 }

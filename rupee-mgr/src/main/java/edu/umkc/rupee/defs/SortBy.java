@@ -1,6 +1,6 @@
 package edu.umkc.rupee.defs;
 
-public enum SortCriteria {
+public enum SortBy {
 
     RMSD(1, "RMSD", false),
     TM_SCORE(2, "TM-Score", true),
@@ -10,7 +10,7 @@ public enum SortCriteria {
     private String name;
     private boolean descending;
 
-    SortCriteria(int id, String name, boolean descending) {
+    SortBy(int id, String name, boolean descending) {
         this.id = id;
         this.name = name;
         this.descending = descending;
@@ -28,7 +28,7 @@ public enum SortCriteria {
         return descending;
     }
     
-    public static SortCriteria fromId(int id) {
+    public static SortBy fromId(int id) {
         if (id == RMSD.getId()) {
             return RMSD;
         }

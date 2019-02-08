@@ -1,13 +1,13 @@
 package edu.umkc.rupee.cath;
 
 import edu.umkc.rupee.base.Hash;
-import edu.umkc.rupee.defs.DbTypeCriteria;
+import edu.umkc.rupee.defs.DbType;
 
 public class CathHash extends Hash {
 
-    public DbTypeCriteria getDbType() {
+    public DbType getDbType() {
 
-        return DbTypeCriteria.CATH;
+        return DbType.CATH;
     }
 }
 

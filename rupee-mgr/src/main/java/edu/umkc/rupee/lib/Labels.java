@@ -18,7 +18,7 @@ import org.biojava.nbio.structure.secstruc.SecStrucCalc;
 import org.biojava.nbio.structure.secstruc.SecStrucInfo;
 
 import edu.umkc.rupee.base.Import;
-import edu.umkc.rupee.defs.DbTypeCriteria;
+import edu.umkc.rupee.defs.DbType;
 
 public class Labels {
 
@@ -49,7 +49,7 @@ public class Labels {
         }
     }
 
-    public static List<Label> getLabels(String dbId, DbTypeCriteria dbType) {
+    public static List<Label> getLabels(String dbId, DbType dbType) {
 
         List<Label> labels = null;
 

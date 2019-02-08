@@ -8,14 +8,14 @@ import java.sql.SQLException;
 import edu.umkc.rupee.base.SearchContainment;
 import edu.umkc.rupee.base.SearchCriteria;
 import edu.umkc.rupee.base.SearchRecord;
-import edu.umkc.rupee.defs.DbTypeCriteria;
+import edu.umkc.rupee.defs.DbType;
 import edu.umkc.rupee.lib.Constants;
 
 public class CathSearchContainment extends SearchContainment {
 
-    public DbTypeCriteria getDbType() {
+    public DbType getDbType() {
 
-        return DbTypeCriteria.CATH;
+        return DbType.CATH;
     }
 
     public PreparedStatement getSearchStatement(SearchCriteria criteria, int splitIndex, Connection conn)
@@ -25,7 +25,7 @@ public class CathSearchContainment extends SearchContainment {
 
         PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_cath_split_matches(?,?,?,?,?,?,?,?,?,?,?);");
 
-        stmt.setInt(1, cathCriteria.dbIdType.getId());
+        stmt.setInt(1, cathCriteria.idDbType.getId());
         stmt.setString(2, cathCriteria.dbId);
         stmt.setInt(3, cathCriteria.uploadId);
         stmt.setInt(4, splitIndex);
