@@ -84,7 +84,7 @@ public abstract class Search {
 
             // parallel band match searches to gather lsh candidates
             records = IntStream.range(0, Constants.BAND_CHECK_COUNT).boxed().parallel()
-                .flatMap(bandIndex -> searchBand(bandIndex, criteria, grams1, hashes1).stream())
+                .flatMap(bandIndex -> searchBand(bandIndex, criteria, hashes1).stream())
                 .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
                 .limit(criteria.mode.getLshCandidateCount()) 
                 .collect(Collectors.toList());
@@ -281,7 +281,7 @@ public abstract class Search {
         }
     }
 
-    private List<SearchRecord> searchBand(int bandIndex, SearchCriteria criteria, List<Integer> grams, Hashes hashes) {
+    private List<SearchRecord> searchBand(int bandIndex, SearchCriteria criteria, Hashes hashes1) {
 
         List<SearchRecord> records = new ArrayList<>();
 
@@ -305,9 +305,9 @@ public abstract class Search {
                 Integer[] minHashes = (Integer[])rs.getArray("min_hashes").getArray();
                 Integer[] bandHashes = (Integer[])rs.getArray("band_hashes").getArray();
                 
-                if(!lowerBandMatch(hashes.bandHashes, bandHashes, bandIndex)) {
+                if(!lowerBandMatch(hashes1.bandHashes, bandHashes, bandIndex)) {
                    
-                    double similarity = Similarity.getEstimatedSimilarity(hashes.minHashes, minHashes); 
+                    double similarity = Similarity.getEstimatedSimilarity(hashes1.minHashes, minHashes); 
                     if (similarity >= Constants.SIMILARITY_THRESHOLD) {
 
                         SearchRecord record = getSearchRecord();
