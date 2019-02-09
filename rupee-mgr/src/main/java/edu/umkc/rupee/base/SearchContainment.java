@@ -22,6 +22,7 @@ import org.postgresql.ds.PGSimpleDataSource;
 import edu.umkc.rupee.bio.Parser;
 import edu.umkc.rupee.defs.DbType;
 import edu.umkc.rupee.defs.SearchMode;
+import edu.umkc.rupee.defs.SearchType;
 import edu.umkc.rupee.defs.SearchBy;
 import edu.umkc.rupee.defs.SearchFrom;
 import edu.umkc.rupee.defs.SortBy;
@@ -122,10 +123,10 @@ public abstract class SearchContainment {
                 
                 // fast alignments
                 if (searchFrom == SearchFrom.SERVER) {
-                    records.stream().forEach(record -> align(record, queryStructure, Mode.FAST));
+                    records.stream().forEach(record -> align(record, queryStructure, criteria.searchType, Mode.FAST));
                 }
                 else {
-                    records.stream().parallel().forEach(record -> align(record, queryStructure, Mode.FAST));
+                    records.stream().parallel().forEach(record -> align(record, queryStructure, criteria.searchType, Mode.FAST));
                 }
 
                 // sort and filter for regular alignments
@@ -136,10 +137,10 @@ public abstract class SearchContainment {
                 
                 // regular alignments
                 if (searchFrom == SearchFrom.SERVER) {
-                    records.stream().forEach(record -> align(record, queryStructure, Mode.REGULAR));
+                    records.stream().forEach(record -> align(record, queryStructure, criteria.searchType, Mode.REGULAR));
                 }
                 else {
-                    records.stream().parallel().forEach(record -> align(record, queryStructure, Mode.REGULAR));
+                    records.stream().parallel().forEach(record -> align(record, queryStructure, criteria.searchType, Mode.REGULAR));
                 }
 
             } // end mode == TOP_ALIGNED
@@ -226,7 +227,7 @@ public abstract class SearchContainment {
         return comparator;
     }
 
-    private void align(SearchRecord record, Structure queryStructure, Mode mode) {
+    private void align(SearchRecord record, Structure queryStructure, SearchType searchType, Mode mode) {
 
         try {
        
@@ -240,7 +241,17 @@ public abstract class SearchContainment {
             TMAlign.Results results = tm.align(queryStructure, targetStructure);
 
             record.setRmsd(results.getRmsd());
-            record.setTmScore(results.getTmScoreQ());
+
+            if (searchType == SearchType.FULL_LENGTH) {
+                record.setTmScore(results.getTmScoreAvg());
+            } 
+            else if (searchType == SearchType.CONTAINED_IN) {
+                record.setTmScore(results.getTmScoreQ());
+            }
+            else { // SearchType.CONTAINED_BY
+                record.setTmScore(results.getTmScoreT());
+            }
+
         }
         catch (IOException e) {
             
@@ -277,7 +288,16 @@ public abstract class SearchContainment {
                 String sortKey = rs.getString("sort_key");
                 Integer[] grams2 = (Integer[])rs.getArray("grams").getArray();
                
-                double similarity = LCS.getLCSScoreContainment(grams1, Arrays.asList(grams2)); 
+                double similarity = Integer.MIN_VALUE;
+                if (criteria.searchType == SearchType.FULL_LENGTH) {
+                    similarity = LCS.getLCSScoreFullLength(grams1, Arrays.asList(grams2)); 
+                } 
+                else if (criteria.searchType == SearchType.CONTAINED_IN) {
+                    similarity = LCS.getLCSScoreContainment(grams1, Arrays.asList(grams2)); 
+                }
+                else if (grams2.length > (grams1.size() / 3.0)) { // SearchType.CONTAINS
+                    similarity = LCS.getLCSScoreContainment(Arrays.asList(grams2), grams1); 
+                }
 
                 SearchRecord record = getSearchRecord();
                 record.setDbId(dbId);
