@@ -24,23 +24,24 @@ import org.apache.commons.cli.ParseException;
 import edu.umkc.rupee.base.SearchRecord;
 import edu.umkc.rupee.cath.CathHash;
 import edu.umkc.rupee.cath.CathImport;
-import edu.umkc.rupee.cath.CathSearch;
+import edu.umkc.rupee.cath.CathSearchContainment;
 import edu.umkc.rupee.cath.CathSearchCriteria;
 import edu.umkc.rupee.cath.CathSearchRecord;
 import edu.umkc.rupee.chain.ChainHash;
 import edu.umkc.rupee.chain.ChainImport;
-import edu.umkc.rupee.chain.ChainSearch;
+import edu.umkc.rupee.chain.ChainSearchContainment;
 import edu.umkc.rupee.chain.ChainSearchCriteria;
 import edu.umkc.rupee.chain.ChainSearchRecord;
 import edu.umkc.rupee.defs.AlignmentType;
 import edu.umkc.rupee.defs.DbType;
-import edu.umkc.rupee.defs.SearchMode;
 import edu.umkc.rupee.defs.SearchBy;
 import edu.umkc.rupee.defs.SearchFrom;
+import edu.umkc.rupee.defs.SearchMode;
+import edu.umkc.rupee.defs.SearchType;
 import edu.umkc.rupee.defs.SortBy;
 import edu.umkc.rupee.ecod.EcodHash;
 import edu.umkc.rupee.ecod.EcodImport;
-import edu.umkc.rupee.ecod.EcodSearch;
+import edu.umkc.rupee.ecod.EcodSearchContainment;
 import edu.umkc.rupee.ecod.EcodSearchCriteria;
 import edu.umkc.rupee.ecod.EcodSearchRecord;
 import edu.umkc.rupee.lib.AlignRecord;
@@ -54,7 +55,7 @@ import edu.umkc.rupee.lib.Similarity;
 import edu.umkc.rupee.lib.Uploading;
 import edu.umkc.rupee.scop.ScopHash;
 import edu.umkc.rupee.scop.ScopImport;
-import edu.umkc.rupee.scop.ScopSearch;
+import edu.umkc.rupee.scop.ScopSearchContainment;
 import edu.umkc.rupee.scop.ScopSearchCriteria;
 import edu.umkc.rupee.scop.ScopSearchRecord;
 import edu.umkc.rupee.tm.Mode;
@@ -105,7 +106,7 @@ public class Main {
         group.addOption(Option.builder("s")
                 .longOpt("search")
                 .numberOfArgs(12)
-                .argName("SEARCH_BY>,<DB_TYPE>,<DB_ID>,<LIMIT>,<REP1>,<REP2>,<REP3>,<DIFF1>,<DIFF2>,<DIFF3>,<MODE>,<SORT")
+                .argName("SEARCH_BY>,<DB_TYPE>,<DB_ID>,<LIMIT>,<REP1>,<REP2>,<REP3>,<DIFF1>,<DIFF2>,<DIFF3>,<SEARCH_MODE>,<SORT_BY")
                 .valueSeparator(',')
                 .build());
         group.addOption(Option.builder("u")
@@ -382,16 +383,16 @@ public class Main {
     
     private static void option_s(CommandLine line) throws Exception {
 
-        Set<String> searchTypeNames = new HashSet<>(Arrays.stream(SearchBy.values()).map(v -> v.name()).collect(Collectors.toList()));
+        Set<String> searchByNames = new HashSet<>(Arrays.stream(SearchBy.values()).map(v -> v.name()).collect(Collectors.toList()));
         Set<String> dbTypeNames = new HashSet<>(Arrays.stream(DbType.values()).map(v -> v.name()).collect(Collectors.toList()));
-        Set<String> modeNames = new HashSet<>(Arrays.stream(SearchMode.values()).map(v -> v.name()).collect(Collectors.toList()));
-        Set<String> sortNames = new HashSet<>(Arrays.stream(SortBy.values()).map(v -> v.name()).collect(Collectors.toList()));
+        Set<String> searchModeNames = new HashSet<>(Arrays.stream(SearchMode.values()).map(v -> v.name()).collect(Collectors.toList()));
+        Set<String> sortByNames = new HashSet<>(Arrays.stream(SortBy.values()).map(v -> v.name()).collect(Collectors.toList()));
 
         String[] args = line.getOptionValues("s");
        
         // types 
-        if (!searchTypeNames.contains(args[0])) {
-            System.err.println("The <SEARCH_BY> argument must be one of " + searchTypeNames.toString());
+        if (!searchByNames.contains(args[0])) {
+            System.err.println("The <SEARCH_BY> argument must be one of " + searchByNames.toString());
             return;
         }
         if (!dbTypeNames.contains(args[1])) {
@@ -399,12 +400,12 @@ public class Main {
             return;
         }
        
-        SearchBy searchType = SearchBy.valueOf(args[0]); 
+        SearchBy searchBy = SearchBy.valueOf(args[0]); 
         DbType dbType = DbType.valueOf(args[1]);
 
         // id
         String id = args[2];
-        DbType dbIdType = DbId.getIdDbType(id);
+        DbType idDbType = DbId.getIdDbType(id);
 
         // limit
         int limit = tryParseInt(args[3]);
@@ -446,30 +447,32 @@ public class Main {
         boolean diff2 = Boolean.parseBoolean(args[8]);
         boolean diff3 = Boolean.parseBoolean(args[9]);
 
-        // mode
-        if (!modeNames.contains(args[10])) {
-            System.err.println("The <MODE> argument must be one of " + modeNames.toString());
+        // search mode
+        if (!searchModeNames.contains(args[10])) {
+            System.err.println("The <SEARCH_MODE> argument must be one of " + searchModeNames.toString());
             return;
         }
 
-        SearchMode mode = SearchMode.valueOf(args[10]);
+        SearchMode searchMode = SearchMode.valueOf(args[10]);
        
-        // sorting 
-        if (!sortNames.contains(args[11])) {
-            System.err.println("The <SORT> argument must be one of " + sortNames.toString());
+        // sort by
+        if (!sortByNames.contains(args[11])) {
+            System.err.println("The <SORT_BY> argument must be one of " + sortByNames.toString());
             return;
         }
 
-        SortBy sort = SortBy.valueOf(args[11]);
+        SortBy sortBy = SortBy.valueOf(args[11]);
 
         // consistency rule
-        if (mode == SearchMode.FAST) {
-            sort = SortBy.SIMILARITY;
+        if (searchMode == SearchMode.FAST) {
+            sortBy = SortBy.SIMILARITY;
         }
               
         //*************************************************************
         //***  OUTPUT
         //*************************************************************
+
+        SearchType searchType = SearchType.FULL_LENGTH;
 
         boolean verbose = false; 
         boolean timing = false;
@@ -478,8 +481,8 @@ public class Main {
 
             ScopSearchCriteria criteria = new ScopSearchCriteria();
             
-            criteria.searchBy = searchType;
-            criteria.idDbType = dbIdType;
+            criteria.searchBy = searchBy;
+            criteria.idDbType = idDbType;
             criteria.searchDbType = dbType;
             if (criteria.searchBy == SearchBy.DB_ID) {
                 criteria.dbId = id;
@@ -489,13 +492,14 @@ public class Main {
             }
 
             criteria.limit = limit;
-            criteria.searchMode = mode;
-            criteria.sortBy = sort;
+            criteria.searchType = searchType;
+            criteria.searchMode = searchMode;
+            criteria.sortBy = sortBy;
             criteria.differentFold = diff1;
             criteria.differentSuperfamily = diff2;
             criteria.differentFamily = diff3;
 
-            ScopSearch scopSearch = new ScopSearch();
+            ScopSearchContainment scopSearch = new ScopSearchContainment();
 
             long start = 0, stop = 0;
             if (timing) {
@@ -545,8 +549,8 @@ public class Main {
         
             CathSearchCriteria criteria = new CathSearchCriteria();
 
-            criteria.searchBy = searchType;
-            criteria.idDbType = dbIdType;
+            criteria.searchBy = searchBy;
+            criteria.idDbType = idDbType;
             criteria.searchDbType = dbType;
             if (criteria.searchBy == SearchBy.DB_ID) {
                 criteria.dbId = id;
@@ -556,8 +560,9 @@ public class Main {
             }
 
             criteria.limit = limit;
-            criteria.searchMode = mode;
-            criteria.sortBy = sort;
+            criteria.searchType = searchType;
+            criteria.searchMode = searchMode;
+            criteria.sortBy = sortBy;
             criteria.topologyReps = rep1;
             criteria.superfamilyReps = rep2;
             criteria.s35Reps = rep3;
@@ -565,7 +570,7 @@ public class Main {
             criteria.differentSuperfamily = diff2;
             criteria.differentS35 = diff3;
 
-            CathSearch cathSearch = new CathSearch();
+            CathSearchContainment cathSearch = new CathSearchContainment();
 
             long start = 0, stop = 0;
             if (timing) {
@@ -617,8 +622,8 @@ public class Main {
 
             EcodSearchCriteria criteria = new EcodSearchCriteria();
             
-            criteria.searchBy = searchType;
-            criteria.idDbType = dbIdType;
+            criteria.searchBy = searchBy;
+            criteria.idDbType = idDbType;
             criteria.searchDbType = dbType;
             if (criteria.searchBy == SearchBy.DB_ID) {
                 criteria.dbId = id;
@@ -628,13 +633,14 @@ public class Main {
             }
 
             criteria.limit = limit;
-            criteria.searchMode = mode;
-            criteria.sortBy = sort;
+            criteria.searchType = searchType;
+            criteria.searchMode = searchMode;
+            criteria.sortBy = sortBy;
             criteria.differentH = diff1;
             criteria.differentT = diff2;
             criteria.differentF = diff3;
 
-            EcodSearch ecodSearch = new EcodSearch();
+            EcodSearchContainment ecodSearch = new EcodSearchContainment();
             List<SearchRecord> records = ecodSearch.search(criteria, SearchFrom.CLI);
         
             for (SearchRecord baseRecord : records) {
@@ -674,8 +680,8 @@ public class Main {
             
             ChainSearchCriteria criteria = new ChainSearchCriteria();
             
-            criteria.searchBy = searchType;
-            criteria.idDbType = dbIdType;
+            criteria.searchBy = searchBy;
+            criteria.idDbType = idDbType;
             criteria.searchDbType = dbType;
             if (criteria.searchBy == SearchBy.DB_ID) {
                 criteria.dbId = id;
@@ -685,10 +691,11 @@ public class Main {
             }
 
             criteria.limit = limit;
-            criteria.searchMode = mode;
-            criteria.sortBy = sort;
+            criteria.searchType = searchType;
+            criteria.searchMode = searchMode;
+            criteria.sortBy = sortBy;
 
-            ChainSearch chainSearch = new ChainSearch();
+            ChainSearchContainment chainSearch = new ChainSearchContainment();
             List<SearchRecord> records = chainSearch.search(criteria, SearchFrom.CLI);
         
             for (SearchRecord baseRecord : records) {
@@ -750,22 +757,22 @@ public class Main {
         */
 
         /*
-        AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "tm_score", DbTypeCriteria.SCOP, 100);
-        AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "rmsd", DbTypeCriteria.SCOP, 100);
-        AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "similarity", DbTypeCriteria.SCOP, 100);
-        AlignResults.alignMtmDomResults("scop_d360", "scop_v2_07", DbTypeCriteria.SCOP, 100);
+        AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "tm_score", DbType.SCOP, 100);
+        AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "rmsd", DbType.SCOP, 100);
+        AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "similarity", DbType.SCOP, 100);
+        AlignResults.alignMtmDomResults("scop_d360", "scop_v2_07", DbType.SCOP, 100);
 
-        AlignResults.alignRupeeResults("cath_d99", "cath_v4_2_0", "tm_score", DbTypeCriteria.CATH, 100);
-        AlignResults.alignRupeeResults("cath_d99", "cath_v4_2_0", "rmsd", DbTypeCriteria.CATH, 100);
-        AlignResults.alignRupeeResults("cath_d99", "cath_v4_2_0", "similarity", DbTypeCriteria.CATH, 100);
-        AlignResults.alignCathedralResults("cath_d99", "cath_v4_2_0", DbTypeCriteria.CATH, 100);
+        AlignResults.alignRupeeResults("cath_d99", "cath_v4_2_0", "tm_score", DbType.CATH, 100);
+        AlignResults.alignRupeeResults("cath_d99", "cath_v4_2_0", "rmsd", DbType.CATH, 100);
+        AlignResults.alignRupeeResults("cath_d99", "cath_v4_2_0", "similarity", DbType.CATH, 100);
+        AlignResults.alignCathedralResults("cath_d99", "cath_v4_2_0", DbType.CATH, 100);
         */
 
         /*
-        AlignResults.alignRupeeResults("scop_d62", "scop_v1_73", "tm_score", DbTypeCriteria.SCOP, 50);
-        AlignResults.alignRupeeResults("scop_d62", "scop_v1_73", "rmsd", DbTypeCriteria.SCOP, 50);
-        AlignResults.alignRupeeResults("scop_d62", "scop_v1_73", "similarity", DbTypeCriteria.SCOP, 50);
-        AlignResults.alignSsmResults("scop_d62", "scop_v1_73", DbTypeCriteria.SCOP, 50);
+        AlignResults.alignRupeeResults("scop_d62", "scop_v1_73", "tm_score", DbType.SCOP, 50);
+        AlignResults.alignRupeeResults("scop_d62", "scop_v1_73", "rmsd", DbType.SCOP, 50);
+        AlignResults.alignRupeeResults("scop_d62", "scop_v1_73", "similarity", DbType.SCOP, 50);
+        AlignResults.alignSsmResults("scop_d62", "scop_v1_73", DbType.SCOP, 50);
         */
     }
 
