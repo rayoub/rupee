@@ -165,7 +165,17 @@ public class LCS {
             }
         }
 
-        // build output
+        // build original sequence output
+        StringBuilder org1 = new StringBuilder();
+        StringBuilder org2 = new StringBuilder();
+        for (int gram : grams1) {
+            org1.append((gram % Constants.DEC_POW_3) / Constants.DEC_POW_2);
+        }
+        for (int gram : grams2) {
+            org2.append((gram % Constants.DEC_POW_3) / Constants.DEC_POW_2);
+        }
+
+        // build aligned sequence output
         StringBuilder seq1 = new StringBuilder();
         StringBuilder seq2 = new StringBuilder();
         int i = grams1.size();
@@ -205,6 +215,10 @@ public class LCS {
         }
 
         // print output
+        System.out.println(org1);
+        System.out.println("");
+        System.out.println(org2);
+        System.out.println("");
         System.out.println(seq1.reverse());
         System.out.println("");
         System.out.println(seq2.reverse());
@@ -279,7 +293,17 @@ public class LCS {
             }
         }
 
-        // build output
+        // build original sequence output
+        StringBuilder org1 = new StringBuilder();
+        StringBuilder org2 = new StringBuilder();
+        for (int gram : grams1) {
+            org1.append((gram % Constants.DEC_POW_3) / Constants.DEC_POW_2);
+        }
+        for (int gram : grams2) {
+            org2.append((gram % Constants.DEC_POW_3) / Constants.DEC_POW_2);
+        }
+
+        // build aligned sequence output
         StringBuilder seq1 = new StringBuilder();
         StringBuilder seq2 = new StringBuilder();
         i = grams1.size();
@@ -319,6 +343,10 @@ public class LCS {
         }
 
         // print output
+        System.out.println(org1);
+        System.out.println("");
+        System.out.println(org2);
+        System.out.println("");
         System.out.println(seq1.reverse());
         System.out.println("");
         System.out.println(seq2.reverse());
