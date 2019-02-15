@@ -61,10 +61,10 @@ public class Uploading {
         List<String> lines = Arrays.stream(BREAK_PATTERN.split(pdbContent)).filter(ATOM_PATTERN.asPredicate()).collect(Collectors.toList());
     
         // first chain id
-        char chainId = lines.get(0).charAt(22); 
+        char chainId = lines.get(0).charAt(21); 
 
         // filter lines again based on chain id and join
-        pdbContent = lines.stream().filter(l -> l.charAt(22) == chainId).collect(Collectors.joining(System.lineSeparator()));
+        pdbContent = lines.stream().filter(l -> l.charAt(21) == chainId).collect(Collectors.joining(System.lineSeparator()));
 
         return pdbContent;
     }

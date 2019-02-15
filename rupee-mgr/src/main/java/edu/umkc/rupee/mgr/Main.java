@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -313,7 +314,8 @@ public class Main {
             System.out.println("LCS Score:              " + score);
 
             System.out.println("LCS Alignment: \n");
-            LCS.printLCSFullLength(grams1, grams2);
+            Map<Integer, String> codeMap = LCS.getCodeMap(grams1, grams2);
+            LCS.printLCSFullLength(grams1, grams2, codeMap);
             System.out.println("");
         }
         else {
@@ -367,7 +369,8 @@ public class Main {
             System.out.println("LCS Score:              " + score);
 
             System.out.println("LCS Alignment: \n");
-            LCS.printLCSContainment(grams1, grams2);
+            Map<Integer, String> codeMap = LCS.getCodeMap(grams1, grams2);
+            LCS.printLCSContainment(grams1, grams2, codeMap);
             System.out.println("");
         }
         else {
@@ -472,7 +475,7 @@ public class Main {
         //***  OUTPUT
         //*************************************************************
 
-        SearchType searchType = SearchType.FULL_LENGTH;
+        SearchType searchType = SearchType.CONTAINED_IN;
 
         boolean verbose = false; 
         boolean timing = false;

@@ -1,6 +1,10 @@
 package edu.umkc.rupee.lib;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class LCS {
     
@@ -110,7 +114,7 @@ public class LCS {
         return maxScore;
     }
 
-    public static void printLCSFullLength(List<Integer> grams1, List<Integer> grams2) {
+    public static void printLCSFullLength(List<Integer> grams1, List<Integer> grams2, Map<Integer, String> codeMap) {
 
         int[][] s = new int[grams1.size() + 1][grams2.size() + 1];
         Direction[][] d = new Direction[grams1.size() + 1][grams2.size() + 1];
@@ -185,31 +189,31 @@ public class LCS {
             if (d[i][j] == Direction.DIAGONAL_MATCH) {
 
                 //diagonal match
-                seq1.append((grams1.get(i-1) % Constants.DEC_POW_3) / Constants.DEC_POW_2);
-                seq2.append((grams2.get(j-1) % Constants.DEC_POW_3) / Constants.DEC_POW_2);
+                seq1.append(codeMap.get(grams1.get(i-1)));
+                seq2.append(codeMap.get(grams2.get(j-1)));
                 i = i - 1;
                 j = j - 1;
             }
             else if (d[i][j] == Direction.DIAGONAL_MISMATCH) {
 
                 //diagonal mismatch
-                seq1.append("*");
-                seq2.append("*");
+                seq1.append("** ");
+                seq2.append("** ");
                 i = i - 1;
                 j = j - 1;
             }
             else if (d[i][j] == Direction.UP) {
 
                 // up gap
-                seq1.append((grams1.get(i-1) % Constants.DEC_POW_3) / Constants.DEC_POW_2);
-                seq2.append("-");
+                seq1.append(codeMap.get(grams1.get(i-1))); 
+                seq2.append("-- ");
                 i = i - 1;
             }
             else { // b[i][j] == Direction.LEFT
 
                 // left gap
-                seq1.append("-");
-                seq2.append((grams2.get(j-1) % Constants.DEC_POW_3) / Constants.DEC_POW_2);
+                seq1.append("-- ");
+                seq2.append(codeMap.get(grams2.get(j-1))); 
                 j = j - 1;
             }
         }
@@ -224,7 +228,7 @@ public class LCS {
         System.out.println(seq2.reverse());
     }
 
-    public static void printLCSContainment(List<Integer> grams1, List<Integer> grams2) {
+    public static void printLCSContainment(List<Integer> grams1, List<Integer> grams2, Map<Integer, String> codeMap) {
 
         int[][] s = new int[grams1.size() + 1][grams2.size() + 1];
         Direction[][] d = new Direction[grams1.size() + 1][grams2.size() + 1];
@@ -313,31 +317,31 @@ public class LCS {
             if (d[i][j] == Direction.DIAGONAL_MATCH) {
 
                 //diagonal match
-                seq1.append((grams1.get(i-1) % Constants.DEC_POW_3) / Constants.DEC_POW_2);
-                seq2.append((grams2.get(j-1) % Constants.DEC_POW_3) / Constants.DEC_POW_2);
+                seq1.append(codeMap.get(grams1.get(i-1)));
+                seq2.append(codeMap.get(grams2.get(j-1)));
                 i = i - 1;
                 j = j - 1;
             }
             else if (d[i][j] == Direction.DIAGONAL_MISMATCH) {
 
                 //diagonal mismatch
-                seq1.append("*");
-                seq2.append("*");
+                seq1.append("** ");
+                seq2.append("** ");
                 i = i - 1;
                 j = j - 1;
             }
             else if (d[i][j] == Direction.UP) {
 
                 // up gap
-                seq1.append((grams1.get(i-1) % Constants.DEC_POW_3) / Constants.DEC_POW_2);
-                seq2.append("-");
+                seq1.append(codeMap.get(grams1.get(i-1)));
+                seq2.append("-- ");
                 i = i - 1;
             }
             else { // b[i][j] == Direction.LEFT
 
                 // left gap
-                seq1.append("-");
-                seq2.append((grams2.get(j-1) % Constants.DEC_POW_3) / Constants.DEC_POW_2);
+                seq1.append("-- ");
+                seq2.append(codeMap.get(grams2.get(j-1)));
                 j = j - 1;
             }
         }
@@ -350,5 +354,29 @@ public class LCS {
         System.out.println(seq1.reverse());
         System.out.println("");
         System.out.println(seq2.reverse());
+    }
+
+    public static Map<Integer, String>  getCodeMap(List<Integer> grams1, List<Integer> grams2) {
+     
+        // get a list of distinct grams
+        List<Integer> copy1 = grams1.stream().collect(Collectors.toList());
+        List<Integer> copy2 = grams2.stream().collect(Collectors.toList());
+        copy1.addAll(copy2);
+        List<Integer> grams = copy1.stream().distinct().sorted().collect(Collectors.toList());
+
+        // get a list of codes
+        List<String> codes = new ArrayList<>();
+        for (char c1 = 'A'; c1 <= 'Z'; c1++) {
+            for(char c2 = 'A'; c2 <= 'Z'; c2++) {
+                codes.add("" + c1 + c2 + " ");
+            }
+        }
+     
+        // build a code map for the grams
+        Map<Integer, String> map = new HashMap<>();
+        for (int i = 0; i < grams.size(); i++) {
+            map.put(grams.get(i), codes.get(i)); 
+        }
+        return map;
     }
 }
