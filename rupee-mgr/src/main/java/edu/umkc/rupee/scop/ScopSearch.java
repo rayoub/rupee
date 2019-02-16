@@ -9,6 +9,7 @@ import edu.umkc.rupee.base.Search;
 import edu.umkc.rupee.base.SearchCriteria;
 import edu.umkc.rupee.base.SearchRecord;
 import edu.umkc.rupee.defs.DbType;
+import edu.umkc.rupee.lib.Constants;
 
 public class ScopSearch extends Search {
 
@@ -17,7 +18,26 @@ public class ScopSearch extends Search {
         return DbType.SCOP;
     }
     
-    public PreparedStatement getSearchStatement(SearchCriteria criteria, int bandIndex, Connection conn)
+    public PreparedStatement getSplitSearchStatement(SearchCriteria criteria, int splitIndex, Connection conn)
+            throws SQLException {
+        
+        ScopSearchCriteria scopCriteria = (ScopSearchCriteria) criteria;
+
+        PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_scop_split_matches(?,?,?,?,?,?,?,?);");
+
+        stmt.setInt(1, scopCriteria.idDbType.getId());
+        stmt.setString(2, scopCriteria.dbId);
+        stmt.setInt(3, scopCriteria.uploadId);
+        stmt.setInt(4, splitIndex);
+        stmt.setInt(5, Constants.SPLIT_COUNT);
+        stmt.setBoolean(6, scopCriteria.differentFold);
+        stmt.setBoolean(7, scopCriteria.differentSuperfamily);
+        stmt.setBoolean(8, scopCriteria.differentFamily);
+
+        return stmt;
+    }
+    
+    public PreparedStatement getBandSearchStatement(SearchCriteria criteria, int bandIndex, Connection conn)
             throws SQLException {
         
         ScopSearchCriteria scopCriteria = (ScopSearchCriteria) criteria;

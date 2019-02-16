@@ -25,12 +25,12 @@ import org.apache.commons.cli.ParseException;
 import edu.umkc.rupee.base.SearchRecord;
 import edu.umkc.rupee.cath.CathHash;
 import edu.umkc.rupee.cath.CathImport;
-import edu.umkc.rupee.cath.CathSearchContainment;
+import edu.umkc.rupee.cath.CathSearch;
 import edu.umkc.rupee.cath.CathSearchCriteria;
 import edu.umkc.rupee.cath.CathSearchRecord;
 import edu.umkc.rupee.chain.ChainHash;
 import edu.umkc.rupee.chain.ChainImport;
-import edu.umkc.rupee.chain.ChainSearchContainment;
+import edu.umkc.rupee.chain.ChainSearch;
 import edu.umkc.rupee.chain.ChainSearchCriteria;
 import edu.umkc.rupee.chain.ChainSearchRecord;
 import edu.umkc.rupee.defs.AlignmentType;
@@ -42,7 +42,7 @@ import edu.umkc.rupee.defs.SearchType;
 import edu.umkc.rupee.defs.SortBy;
 import edu.umkc.rupee.ecod.EcodHash;
 import edu.umkc.rupee.ecod.EcodImport;
-import edu.umkc.rupee.ecod.EcodSearchContainment;
+import edu.umkc.rupee.ecod.EcodSearch;
 import edu.umkc.rupee.ecod.EcodSearchCriteria;
 import edu.umkc.rupee.ecod.EcodSearchRecord;
 import edu.umkc.rupee.lib.AlignRecord;
@@ -56,7 +56,7 @@ import edu.umkc.rupee.lib.Similarity;
 import edu.umkc.rupee.lib.Uploading;
 import edu.umkc.rupee.scop.ScopHash;
 import edu.umkc.rupee.scop.ScopImport;
-import edu.umkc.rupee.scop.ScopSearchContainment;
+import edu.umkc.rupee.scop.ScopSearch;
 import edu.umkc.rupee.scop.ScopSearchCriteria;
 import edu.umkc.rupee.scop.ScopSearchRecord;
 import edu.umkc.rupee.tm.Mode;
@@ -475,7 +475,7 @@ public class Main {
         //***  OUTPUT
         //*************************************************************
 
-        SearchType searchType = SearchType.CONTAINED_IN;
+        SearchType searchType = SearchType.FULL_LENGTH;
 
         boolean verbose = false; 
         boolean timing = false;
@@ -502,7 +502,7 @@ public class Main {
             criteria.differentSuperfamily = diff2;
             criteria.differentFamily = diff3;
 
-            ScopSearchContainment scopSearch = new ScopSearchContainment();
+            ScopSearch scopSearch = new ScopSearch();
 
             long start = 0, stop = 0;
             if (timing) {
@@ -573,7 +573,7 @@ public class Main {
             criteria.differentSuperfamily = diff2;
             criteria.differentS35 = diff3;
 
-            CathSearchContainment cathSearch = new CathSearchContainment();
+            CathSearch cathSearch = new CathSearch();
 
             long start = 0, stop = 0;
             if (timing) {
@@ -591,7 +591,6 @@ public class Main {
                 CathSearchRecord record = (CathSearchRecord) baseRecord; 
 
                 if (verbose) {
-
 
                     // verbose 
                     System.out.printf("%-10d %-10s %-24s %-24s %-24s %-16s %-16s %-10.2f %-10.2f %-10.2f\n", 
@@ -643,7 +642,7 @@ public class Main {
             criteria.differentT = diff2;
             criteria.differentF = diff3;
 
-            EcodSearchContainment ecodSearch = new EcodSearchContainment();
+            EcodSearch ecodSearch = new EcodSearch();
             List<SearchRecord> records = ecodSearch.search(criteria, SearchFrom.CLI);
         
             for (SearchRecord baseRecord : records) {
@@ -698,7 +697,7 @@ public class Main {
             criteria.searchMode = searchMode;
             criteria.sortBy = sortBy;
 
-            ChainSearchContainment chainSearch = new ChainSearchContainment();
+            ChainSearch chainSearch = new ChainSearch();
             List<SearchRecord> records = chainSearch.search(criteria, SearchFrom.CLI);
         
             for (SearchRecord baseRecord : records) {

@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
@@ -22,17 +23,18 @@ import org.postgresql.ds.PGSimpleDataSource;
 import edu.umkc.rupee.bio.Parser;
 import edu.umkc.rupee.defs.DbType;
 import edu.umkc.rupee.defs.SearchMode;
-import edu.umkc.rupee.defs.SearchType;
 import edu.umkc.rupee.defs.SearchBy;
 import edu.umkc.rupee.defs.SearchFrom;
 import edu.umkc.rupee.defs.SortBy;
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
+import edu.umkc.rupee.lib.Hashes;
 import edu.umkc.rupee.lib.LCS;
+import edu.umkc.rupee.lib.Similarity;
 import edu.umkc.rupee.tm.Mode;
 import edu.umkc.rupee.tm.TMAlign;
 
-public abstract class SearchContainment {
+public abstract class SearchLegacy {
 
     // *********************************************************************
     // Abstract Methods 
@@ -55,14 +57,17 @@ public abstract class SearchContainment {
         List<SearchRecord> records = new ArrayList<>();
         
         List<Integer> grams = null;
+        Hashes hashes = null;
 
         if (criteria.searchBy == SearchBy.DB_ID) {
             
             grams = Db.getGrams(criteria.dbId, criteria.idDbType);
+            hashes = Db.getHashes(criteria.dbId, criteria.idDbType);
         }
         else { // UPLOAD
 
             grams = Db.getUploadGrams(criteria.uploadId);
+            hashes = Db.getUploadHashes(criteria.uploadId);
         }
 
         // size limit for top-aligned searches
@@ -73,14 +78,35 @@ public abstract class SearchContainment {
         }
 
         final List<Integer> grams1 = grams;
+        final Hashes hashes1 = hashes;
 
-        if (grams1 != null) {
+        if (grams1 != null && hashes1 != null) {
 
-            // split grams and search in parallel on splits
-            records = IntStream.range(0, Constants.SPLIT_COUNT).boxed().parallel()
-                .flatMap(splitIndex -> gramsSplit(splitIndex, criteria, grams1).stream())
+            // parallel band match searches to gather lsh candidates
+            records = IntStream.range(0, Constants.BAND_CHECK_COUNT).boxed().parallel()
+                .flatMap(bandIndex -> searchBand(bandIndex, criteria, hashes1).stream())
                 .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
                 .limit(criteria.searchMode.getLshCandidateCount()) 
+                .collect(Collectors.toList());
+            
+            // cache map of residue grams
+            List<String> dbIds = records.stream().map(SearchRecord::getDbId).collect(Collectors.toList());
+            Map<String, List<Integer>> map = Db.getGrams(dbIds, criteria.searchDbType);
+
+            // parallel lcs algorithm
+            records.stream()
+                .forEach(record -> {
+
+                    if (map.containsKey(record.getDbId())) {
+                        List<Integer> grams2 = map.get(record.getDbId());
+                        int score = LCS.getLCSScoreFullLength(grams1, grams2); 
+                        record.setSimilarity(score);
+                    }
+                });
+
+            // sort lcs candidates
+            records = records.stream()
+                .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
                 .collect(Collectors.toList());
 
             // build comparator for final sorts
@@ -123,10 +149,10 @@ public abstract class SearchContainment {
                 
                 // fast alignments
                 if (searchFrom == SearchFrom.SERVER) {
-                    records.stream().forEach(record -> align(record, queryStructure, criteria.searchType, Mode.FAST));
+                    records.stream().forEach(record -> align(record, queryStructure, Mode.FAST));
                 }
                 else {
-                    records.stream().parallel().forEach(record -> align(record, queryStructure, criteria.searchType, Mode.FAST));
+                    records.stream().parallel().forEach(record -> align(record, queryStructure, Mode.FAST));
                 }
 
                 // sort and filter for regular alignments
@@ -137,10 +163,10 @@ public abstract class SearchContainment {
                 
                 // regular alignments
                 if (searchFrom == SearchFrom.SERVER) {
-                    records.stream().forEach(record -> align(record, queryStructure, criteria.searchType, Mode.REGULAR));
+                    records.stream().forEach(record -> align(record, queryStructure, Mode.REGULAR));
                 }
                 else {
-                    records.stream().parallel().forEach(record -> align(record, queryStructure, criteria.searchType, Mode.REGULAR));
+                    records.stream().parallel().forEach(record -> align(record, queryStructure, Mode.REGULAR));
                 }
 
             } // end mode == TOP_ALIGNED
@@ -227,7 +253,7 @@ public abstract class SearchContainment {
         return comparator;
     }
 
-    private void align(SearchRecord record, Structure queryStructure, SearchType searchType, Mode mode) {
+    private void align(SearchRecord record, Structure queryStructure, Mode mode) {
 
         try {
        
@@ -241,17 +267,7 @@ public abstract class SearchContainment {
             TMAlign.Results results = tm.align(queryStructure, targetStructure);
 
             record.setRmsd(results.getRmsd());
-
-            if (searchType == SearchType.FULL_LENGTH) {
-                record.setTmScore(results.getTmScoreAvg());
-            } 
-            else if (searchType == SearchType.CONTAINED_IN) {
-                record.setTmScore(results.getTmScoreQ());
-            }
-            else { // SearchType.CONTAINED_BY
-                record.setTmScore(results.getTmScoreT());
-            }
-
+            record.setTmScore(results.getTmScoreAvg());
         }
         catch (IOException e) {
             
@@ -265,7 +281,7 @@ public abstract class SearchContainment {
         }
     }
 
-    private List<SearchRecord> gramsSplit(int splitIndex, SearchCriteria criteria, List<Integer> grams1) {
+    private List<SearchRecord> searchBand(int bandIndex, SearchCriteria criteria, Hashes hashes1) {
 
         List<SearchRecord> records = new ArrayList<>();
 
@@ -278,7 +294,7 @@ public abstract class SearchContainment {
             Connection conn = ds.getConnection();
             conn.setAutoCommit(false);
 
-            PreparedStatement stmt = getSearchStatement(criteria, splitIndex, conn);
+            PreparedStatement stmt = getSearchStatement(criteria, bandIndex, conn);
             
             ResultSet rs = stmt.executeQuery();
             while(rs.next()) {
@@ -286,25 +302,22 @@ public abstract class SearchContainment {
                 String dbId = rs.getString("db_id");
                 String pdbId = rs.getString("pdb_id");
                 String sortKey = rs.getString("sort_key");
-                Integer[] grams2 = (Integer[])rs.getArray("grams").getArray();
-               
-                double similarity = Integer.MIN_VALUE;
-                if (criteria.searchType == SearchType.FULL_LENGTH) {
-                    similarity = LCS.getLCSScoreFullLength(grams1, Arrays.asList(grams2)); 
-                } 
-                else if (criteria.searchType == SearchType.CONTAINED_IN) {
-                    similarity = LCS.getLCSScoreContainment(grams1, Arrays.asList(grams2)); 
-                }
-                else if (grams2.length > (grams1.size() / 3.0)) { // SearchType.CONTAINS
-                    similarity = LCS.getLCSScoreContainment(Arrays.asList(grams2), grams1); 
-                }
+                Integer[] minHashes = (Integer[])rs.getArray("min_hashes").getArray();
+                Integer[] bandHashes = (Integer[])rs.getArray("band_hashes").getArray();
+                
+                if(!lowerBandMatch(hashes1.bandHashes, bandHashes, bandIndex)) {
+                   
+                    double similarity = Similarity.getEstimatedSimilarity(hashes1.minHashes, minHashes); 
+                    if (similarity >= Constants.SIMILARITY_THRESHOLD) {
 
-                SearchRecord record = getSearchRecord();
-                record.setDbId(dbId);
-                record.setPdbId(pdbId);
-                record.setSortKey(sortKey);
-                record.setSimilarity(similarity);
-                records.add(record);
+                        SearchRecord record = getSearchRecord();
+                        record.setDbId(dbId);
+                        record.setPdbId(pdbId);
+                        record.setSortKey(sortKey);
+                        record.setSimilarity(similarity);
+                        records.add(record);
+                    }
+                }
             }
 
             rs.close();
@@ -312,7 +325,7 @@ public abstract class SearchContainment {
             conn.close();
 
         } catch (SQLException e) {
-            Logger.getLogger(Search.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(SearchLegacy.class.getName()).log(Level.SEVERE, null, e);
         } 
 
         return records;
@@ -354,7 +367,25 @@ public abstract class SearchContainment {
             conn.close();
 
         } catch (SQLException e) {
-            Logger.getLogger(Search.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(SearchLegacy.class.getName()).log(Level.SEVERE, null, e);
         } 
+    }
+    
+    // *********************************************************************
+    // Static Methods
+    // *********************************************************************
+
+    private static boolean lowerBandMatch(Integer[] bands1, Integer[] bands2, int bandIndex) {
+
+        // use this function in case of distributed system to eliminate intermediate results up front
+
+        boolean match = false; 
+        for (int i = 0; i < bandIndex; i++) {
+           if (bands1[i].equals(bands2[i])) {
+                match = true;
+                break;
+           }
+        }
+        return match;
     }
 }

@@ -9,6 +9,7 @@ import edu.umkc.rupee.base.Search;
 import edu.umkc.rupee.base.SearchCriteria;
 import edu.umkc.rupee.base.SearchRecord;
 import edu.umkc.rupee.defs.DbType;
+import edu.umkc.rupee.lib.Constants;
 
 public class EcodSearch extends Search {
 
@@ -17,7 +18,26 @@ public class EcodSearch extends Search {
         return DbType.ECOD;
     }
     
-    public PreparedStatement getSearchStatement(SearchCriteria criteria, int bandIndex, Connection conn)
+    public PreparedStatement getSplitSearchStatement(SearchCriteria criteria, int splitIndex, Connection conn)
+            throws SQLException {
+        
+        EcodSearchCriteria ecodCriteria = (EcodSearchCriteria) criteria;
+
+        PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_ecod_split_matches(?,?,?,?,?,?,?,?);");
+
+        stmt.setInt(1, ecodCriteria.idDbType.getId());
+        stmt.setString(2, ecodCriteria.dbId);
+        stmt.setInt(3, ecodCriteria.uploadId);
+        stmt.setInt(4, splitIndex);
+        stmt.setInt(5, Constants.SPLIT_COUNT);
+        stmt.setBoolean(6, ecodCriteria.differentH);
+        stmt.setBoolean(7, ecodCriteria.differentT);
+        stmt.setBoolean(8, ecodCriteria.differentF);
+
+        return stmt;
+    }
+    
+    public PreparedStatement getBandSearchStatement(SearchCriteria criteria, int bandIndex, Connection conn)
             throws SQLException {
         
         EcodSearchCriteria ecodCriteria = (EcodSearchCriteria) criteria;

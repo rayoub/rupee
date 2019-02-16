@@ -22,9 +22,10 @@ import org.postgresql.ds.PGSimpleDataSource;
 
 import edu.umkc.rupee.bio.Parser;
 import edu.umkc.rupee.defs.DbType;
-import edu.umkc.rupee.defs.SearchMode;
 import edu.umkc.rupee.defs.SearchBy;
 import edu.umkc.rupee.defs.SearchFrom;
+import edu.umkc.rupee.defs.SearchMode;
+import edu.umkc.rupee.defs.SearchType;
 import edu.umkc.rupee.defs.SortBy;
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
@@ -42,7 +43,9 @@ public abstract class Search {
     
     public abstract DbType getDbType();
 
-    public abstract PreparedStatement getSearchStatement(SearchCriteria criteria, int bandIndex, Connection conn) throws SQLException;
+    public abstract PreparedStatement getSplitSearchStatement(SearchCriteria criteria, int splitIndex, Connection conn) throws SQLException;
+
+    public abstract PreparedStatement getBandSearchStatement(SearchCriteria criteria, int bandIndex, Connection conn) throws SQLException;
 
     public abstract void augment(SearchRecord record, ResultSet rs) throws SQLException;
 
@@ -80,34 +83,47 @@ public abstract class Search {
         final List<Integer> grams1 = grams;
         final Hashes hashes1 = hashes;
 
-        if (hashes1 != null) {
+        if (grams1 != null && hashes1 != null) {
 
-            // parallel band match searches to gather lsh candidates
-            records = IntStream.range(0, Constants.BAND_CHECK_COUNT).boxed().parallel()
-                .flatMap(bandIndex -> searchBand(bandIndex, criteria, hashes1).stream())
-                .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
-                .limit(criteria.searchMode.getLshCandidateCount()) 
-                .collect(Collectors.toList());
-            
-            // cache map of residue grams
-            List<String> dbIds = records.stream().map(SearchRecord::getDbId).collect(Collectors.toList());
-            Map<String, List<Integer>> map = Db.getGrams(dbIds, criteria.searchDbType);
+            if (criteria.searchType == SearchType.FULL_LENGTH) {
 
-            // parallel lcs algorithm
-            records.stream()
-                .forEach(record -> {
+                // parallel band match searches to gather lsh candidates
+                records = IntStream.range(0, Constants.BAND_CHECK_COUNT).boxed().parallel()
+                    .flatMap(bandIndex -> searchBand(bandIndex, criteria, hashes1).stream())
+                    .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
+                    .limit(criteria.searchMode.getLshCandidateCount()) 
+                    .collect(Collectors.toList());
+                
+                // cache map of residue grams
+                List<String> dbIds = records.stream().map(SearchRecord::getDbId).collect(Collectors.toList());
+                Map<String, List<Integer>> map = Db.getGrams(dbIds, criteria.searchDbType);
 
-                    if (map.containsKey(record.getDbId())) {
-                        List<Integer> grams2 = map.get(record.getDbId());
-                        int score = LCS.getLCSScoreFullLength(grams1, grams2); 
-                        record.setSimilarity(score);
-                    }
-                });
+                // parallel lcs algorithm
+                records.stream()
+                    .forEach(record -> {
 
-            // sort lcs candidates
-            records = records.stream()
-                .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
-                .collect(Collectors.toList());
+                        if (map.containsKey(record.getDbId())) {
+                            List<Integer> grams2 = map.get(record.getDbId());
+                            int score = LCS.getLCSScoreFullLength(grams1, grams2); 
+                            record.setSimilarity(score);
+                        }
+                    });
+
+                // sort lcs candidates
+                records = records.stream()
+                    .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
+                    .collect(Collectors.toList());
+
+            }
+            else { // 'contained in' or 'contains'
+
+                // split grams and search in parallel on splits
+                records = IntStream.range(0, Constants.SPLIT_COUNT).boxed().parallel()
+                    .flatMap(splitIndex -> gramsSplit(splitIndex, criteria, grams1).stream())
+                    .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
+                    .limit(criteria.searchMode.getLshCandidateCount()) 
+                    .collect(Collectors.toList());
+            }
 
             // build comparator for final sorts
             Comparator<SearchRecord> comparator = getComparator(criteria);
@@ -149,10 +165,10 @@ public abstract class Search {
                 
                 // fast alignments
                 if (searchFrom == SearchFrom.SERVER) {
-                    records.stream().forEach(record -> align(record, queryStructure, Mode.FAST));
+                    records.stream().forEach(record -> align(record, queryStructure, criteria.searchType, Mode.FAST));
                 }
                 else {
-                    records.stream().parallel().forEach(record -> align(record, queryStructure, Mode.FAST));
+                    records.stream().parallel().forEach(record -> align(record, queryStructure, criteria.searchType, Mode.FAST));
                 }
 
                 // sort and filter for regular alignments
@@ -163,10 +179,10 @@ public abstract class Search {
                 
                 // regular alignments
                 if (searchFrom == SearchFrom.SERVER) {
-                    records.stream().forEach(record -> align(record, queryStructure, Mode.REGULAR));
+                    records.stream().forEach(record -> align(record, queryStructure, criteria.searchType, Mode.REGULAR));
                 }
                 else {
-                    records.stream().parallel().forEach(record -> align(record, queryStructure, Mode.REGULAR));
+                    records.stream().parallel().forEach(record -> align(record, queryStructure, criteria.searchType, Mode.REGULAR));
                 }
 
             } // end mode == TOP_ALIGNED
@@ -253,7 +269,7 @@ public abstract class Search {
         return comparator;
     }
 
-    private void align(SearchRecord record, Structure queryStructure, Mode mode) {
+    private void align(SearchRecord record, Structure queryStructure, SearchType searchType, Mode mode) {
 
         try {
        
@@ -267,7 +283,16 @@ public abstract class Search {
             TMAlign.Results results = tm.align(queryStructure, targetStructure);
 
             record.setRmsd(results.getRmsd());
-            record.setTmScore(results.getTmScoreAvg());
+
+            if (searchType == SearchType.FULL_LENGTH) {
+                record.setTmScore(results.getTmScoreAvg());
+            } 
+            else if (searchType == SearchType.CONTAINED_IN) {
+                record.setTmScore(results.getTmScoreQ());
+            }
+            else { // SearchType.CONTAINS
+                record.setTmScore(results.getTmScoreT());
+            }
         }
         catch (IOException e) {
             
@@ -281,6 +306,59 @@ public abstract class Search {
         }
     }
 
+    private List<SearchRecord> gramsSplit(int splitIndex, SearchCriteria criteria, List<Integer> grams1) {
+
+        List<SearchRecord> records = new ArrayList<>();
+
+        try {
+   
+            // *** LSH band matches
+            
+            PGSimpleDataSource ds = Db.getDataSource();
+
+            Connection conn = ds.getConnection();
+            conn.setAutoCommit(false);
+
+            PreparedStatement stmt = getSplitSearchStatement(criteria, splitIndex, conn);
+            
+            ResultSet rs = stmt.executeQuery();
+            while(rs.next()) {
+
+                String dbId = rs.getString("db_id");
+                String pdbId = rs.getString("pdb_id");
+                String sortKey = rs.getString("sort_key");
+                Integer[] grams2 = (Integer[])rs.getArray("grams").getArray();
+               
+                double similarity = Integer.MIN_VALUE;
+                if (criteria.searchType == SearchType.FULL_LENGTH) {
+                    similarity = LCS.getLCSScoreFullLength(grams1, Arrays.asList(grams2)); 
+                } 
+                else if (criteria.searchType == SearchType.CONTAINED_IN) {
+                    similarity = LCS.getLCSScoreContainment(grams1, Arrays.asList(grams2)); 
+                }
+                else if (grams2.length > (grams1.size() / 3.0)) { // SearchType.CONTAINS
+                    similarity = LCS.getLCSScoreContainment(Arrays.asList(grams2), grams1); 
+                }
+
+                SearchRecord record = getSearchRecord();
+                record.setDbId(dbId);
+                record.setPdbId(pdbId);
+                record.setSortKey(sortKey);
+                record.setSimilarity(similarity);
+                records.add(record);
+            }
+
+            rs.close();
+            stmt.close();
+            conn.close();
+
+        } catch (SQLException e) {
+            Logger.getLogger(SearchLegacy.class.getName()).log(Level.SEVERE, null, e);
+        } 
+
+        return records;
+    }
+    
     private List<SearchRecord> searchBand(int bandIndex, SearchCriteria criteria, Hashes hashes1) {
 
         List<SearchRecord> records = new ArrayList<>();
@@ -294,7 +372,7 @@ public abstract class Search {
             Connection conn = ds.getConnection();
             conn.setAutoCommit(false);
 
-            PreparedStatement stmt = getSearchStatement(criteria, bandIndex, conn);
+            PreparedStatement stmt = getBandSearchStatement(criteria, bandIndex, conn);
             
             ResultSet rs = stmt.executeQuery();
             while(rs.next()) {
@@ -325,7 +403,7 @@ public abstract class Search {
             conn.close();
 
         } catch (SQLException e) {
-            Logger.getLogger(Search.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(SearchLegacy.class.getName()).log(Level.SEVERE, null, e);
         } 
 
         return records;
@@ -367,7 +445,7 @@ public abstract class Search {
             conn.close();
 
         } catch (SQLException e) {
-            Logger.getLogger(Search.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(SearchLegacy.class.getName()).log(Level.SEVERE, null, e);
         } 
     }
     

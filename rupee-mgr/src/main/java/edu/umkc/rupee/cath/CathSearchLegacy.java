@@ -5,37 +5,35 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import edu.umkc.rupee.base.SearchContainment;
 import edu.umkc.rupee.base.SearchCriteria;
+import edu.umkc.rupee.base.SearchLegacy;
 import edu.umkc.rupee.base.SearchRecord;
 import edu.umkc.rupee.defs.DbType;
-import edu.umkc.rupee.lib.Constants;
 
-public class CathSearchContainment extends SearchContainment {
+public class CathSearchLegacy extends SearchLegacy {
 
     public DbType getDbType() {
 
         return DbType.CATH;
     }
 
-    public PreparedStatement getSearchStatement(SearchCriteria criteria, int splitIndex, Connection conn)
+    public PreparedStatement getSearchStatement(SearchCriteria criteria, int bandIndex, Connection conn)
             throws SQLException {
-        
+
         CathSearchCriteria cathCriteria = (CathSearchCriteria) criteria;
 
-        PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_cath_split_matches(?,?,?,?,?,?,?,?,?,?,?);");
+        PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_cath_band_matches(?,?,?,?,?,?,?,?,?,?);");
 
         stmt.setInt(1, cathCriteria.idDbType.getId());
         stmt.setString(2, cathCriteria.dbId);
         stmt.setInt(3, cathCriteria.uploadId);
-        stmt.setInt(4, splitIndex);
-        stmt.setInt(5, Constants.SPLIT_COUNT);
-        stmt.setBoolean(6, cathCriteria.topologyReps);
-        stmt.setBoolean(7, cathCriteria.superfamilyReps);
-        stmt.setBoolean(8, cathCriteria.s35Reps);
-        stmt.setBoolean(9, cathCriteria.differentTopology);
-        stmt.setBoolean(10, cathCriteria.differentSuperfamily);
-        stmt.setBoolean(11, cathCriteria.differentS35);
+        stmt.setInt(4, bandIndex + 1);
+        stmt.setBoolean(5, cathCriteria.topologyReps);
+        stmt.setBoolean(6, cathCriteria.superfamilyReps);
+        stmt.setBoolean(7, cathCriteria.s35Reps);
+        stmt.setBoolean(8, cathCriteria.differentTopology);
+        stmt.setBoolean(9, cathCriteria.differentSuperfamily);
+        stmt.setBoolean(10, cathCriteria.differentS35);
 
         return stmt;
     }

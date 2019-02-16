@@ -5,34 +5,32 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import edu.umkc.rupee.base.SearchContainment;
+import edu.umkc.rupee.base.SearchLegacy;
 import edu.umkc.rupee.base.SearchCriteria;
 import edu.umkc.rupee.base.SearchRecord;
 import edu.umkc.rupee.defs.DbType;
-import edu.umkc.rupee.lib.Constants;
 
-public class ScopSearchContainment extends SearchContainment {
+public class ScopSearchLegacy extends SearchLegacy {
 
     public DbType getDbType() {
 
         return DbType.SCOP;
     }
     
-    public PreparedStatement getSearchStatement(SearchCriteria criteria, int splitIndex, Connection conn)
+    public PreparedStatement getSearchStatement(SearchCriteria criteria, int bandIndex, Connection conn)
             throws SQLException {
         
         ScopSearchCriteria scopCriteria = (ScopSearchCriteria) criteria;
 
-        PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_scop_split_matches(?,?,?,?,?,?,?,?);");
+        PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_scop_band_matches(?,?,?,?,?,?,?);");
 
         stmt.setInt(1, scopCriteria.idDbType.getId());
         stmt.setString(2, scopCriteria.dbId);
         stmt.setInt(3, scopCriteria.uploadId);
-        stmt.setInt(4, splitIndex);
-        stmt.setInt(5, Constants.SPLIT_COUNT);
-        stmt.setBoolean(6, scopCriteria.differentFold);
-        stmt.setBoolean(7, scopCriteria.differentSuperfamily);
-        stmt.setBoolean(8, scopCriteria.differentFamily);
+        stmt.setInt(4, bandIndex + 1);
+        stmt.setBoolean(5, scopCriteria.differentFold);
+        stmt.setBoolean(6, scopCriteria.differentSuperfamily);
+        stmt.setBoolean(7, scopCriteria.differentFamily);
 
         return stmt;
     }

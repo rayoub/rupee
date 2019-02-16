@@ -5,31 +5,29 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import edu.umkc.rupee.base.SearchContainment;
+import edu.umkc.rupee.base.SearchLegacy;
 import edu.umkc.rupee.base.SearchCriteria;
 import edu.umkc.rupee.base.SearchRecord;
 import edu.umkc.rupee.defs.DbType;
-import edu.umkc.rupee.lib.Constants;
 
-public class ChainSearchContainment extends SearchContainment {
+public class ChainSearchLegacy extends SearchLegacy {
 
     public DbType getDbType() {
 
         return DbType.CHAIN;
     }
 
-    public PreparedStatement getSearchStatement(SearchCriteria criteria, int splitIndex, Connection conn)
+    public PreparedStatement getSearchStatement(SearchCriteria criteria, int bandIndex, Connection conn)
             throws SQLException {
         
         ChainSearchCriteria chainCriteria = (ChainSearchCriteria) criteria;
 
-        PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_chain_split_matches(?,?,?,?,?);");
+        PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_chain_band_matches(?,?,?,?);");
 
         stmt.setInt(1, chainCriteria.idDbType.getId());
         stmt.setString(2, chainCriteria.dbId);
         stmt.setInt(3, chainCriteria.uploadId);
-        stmt.setInt(4, splitIndex);
-        stmt.setInt(5, Constants.SPLIT_COUNT);
+        stmt.setInt(4, bandIndex + 1);
 
         return stmt;
     }
