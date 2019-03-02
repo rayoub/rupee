@@ -47,13 +47,15 @@ SELECT
     CARDINALITY(g.grams) AS residues,
     r.avg_rupee_tm_score AS rupee,
     m.avg_mtm_tm_score AS mtm,
-    CASE WHEN r.avg_rupee_tm_score + 0.05 < m.avg_mtm_tm_score THEN 1 END AS examine
+    CASE WHEN r.avg_rupee_tm_score + 0.03 < m.avg_mtm_tm_score THEN 1 END AS examine
 FROM
     rupee_eval r
     INNER JOIN mtm_eval m
         ON r.db_id_1 = m.db_id_1
     INNER JOIN scop_grams g
         On g.scop_id = r.db_id_1
+WHERE
+    r.avg_rupee_tm_score + 0.03 < m.avg_mtm_tm_score
 ORDER BY
     r.db_id_1;
 

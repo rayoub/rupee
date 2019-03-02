@@ -5,12 +5,12 @@ WITH rupee_results AS
         n,
         db_id_1,
         db_id_2,
-        tm_avg_rmsd AS rupee_rmsd,
-        tm_avg_tm_score AS rupee_tm_score
+        tm_q_rmsd AS rupee_rmsd,
+        tm_q_tm_score AS rupee_tm_score
     FROM
         get_rupee_results('scop_d360', 'scop_v2_07', 'tm_score', 100)
     WHERE
-        db_id_1 = 'd1j6va_'
+        db_id_1 = 'd2b66k2'
 ),
 mtm_results AS
 (
@@ -23,7 +23,7 @@ mtm_results AS
     FROM
         get_mtm_dom_results('scop_d360','scop_v2_07', 100)
     WHERE
-        db_id_1 = 'd1j6va_'
+        db_id_1 = 'd2b66k2'
 ),
 mtm_first AS
 (
@@ -81,6 +81,6 @@ rupee_first AS
     ORDER BY
         r.n
 )
-SELECT * FROM rupee_first;
+SELECT * FROM mtm_first;
 
 

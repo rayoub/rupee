@@ -55,8 +55,7 @@ BEGIN
                     AND (p_different_superfamily = FALSE OR d.cl <> q_cl OR d.cf <> q_cf OR d.sf <> q_sf)
                     AND (p_different_family = FALSE OR d.cl <> q_cl OR d.cf <> q_cf OR d.sf <> q_sf OR d.fa <> q_fa)
                 )
-            )
-            AND d.cl <> 'l'; -- exclude artifacts
+            );
 
     ELSE
 
@@ -71,8 +70,7 @@ BEGIN
             INNER JOIN scop_grams g
                 ON g.scop_id = d.scop_id
         WHERE 
-            d.scop_sid % p_split_count = p_split_index
-            AND d.cl <> 'l'; -- exclude artifacts
+            d.scop_sid % p_split_count = p_split_index;
 
     END IF;
 
