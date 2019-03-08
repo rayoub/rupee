@@ -776,6 +776,11 @@ public class Main {
         AlignResults.alignRupeeResults("scop_d62", "scop_v1_73", "similarity", DbType.SCOP, 50);
         AlignResults.alignSsmResults("scop_d62", "scop_v1_73", DbType.SCOP, 50);
         */
+       
+        /* 
+        AlignResults.alignRupeeResults("scop_d50", "scop_v2_07", "similarity_1", DbType.SCOP, 100);
+        AlignResults.alignRupeeResults("scop_d50", "scop_v2_07", "similarity_2", DbType.SCOP, 100);
+        */
     }
 
     private static void option_help(Options options) {

@@ -22,6 +22,10 @@ COPY rupee_result (version, n, db_id_1, db_id_2, rupee_rmsd, rupee_tm_score, sor
 
 COPY rupee_result (version, n, db_id_1, db_id_2, rupee_rmsd, rupee_tm_score, sort_by) FROM '/home/ayoub/git/rupee/results/rupee/cath_d99_cath_v4_2_0_fast.txt' WITH (DELIMITER ',');
 
+-- scop_d50 (used for comparing rupee against rupee)
+COPY rupee_result (version, n, db_id_1, db_id_2, rupee_rmsd, rupee_tm_score, sort_by) FROM '/home/ayoub/git/rupee/results/rupee/scop_d50_scop_v2_07_fast_1.txt' WITH (DELIMITER ',');
+
+COPY rupee_result (version, n, db_id_1, db_id_2, rupee_rmsd, rupee_tm_score, sort_by) FROM '/home/ayoub/git/rupee/results/rupee/scop_d50_scop_v2_07_fast_2.txt' WITH (DELIMITER ',');
 
 
 
