@@ -604,102 +604,171 @@ public class TMAlign {
         }
         else if (mode == Mode.ALIGN_3D) {
 
-            double[][] xa_all = new double[xlen * 4][3];
-            double[][] xt_all = new double[xlen * 4][3];
+            int xlenreal = 0;
+            for(Group g : xgroups) {
+               
+                if (g.hasAtom("N")) xlenreal++;
+                xlenreal++; // for known CA
+                if (g.hasAtom("C")) xlenreal++;
+                if (g.hasAtom("O")) xlenreal++;
+            }
+
+            double[][] xa_all = new double[xlenreal][3];
+            double[][] xt_all = new double[xlenreal][3];
             
             // iterate x atoms for xa_all
-            for (int i = 0; i < (xlen * 4) - 3; i += 4) {
+            int j = 0;
+            for (int i = 0; i < xgroups.size(); i++) {
                 
-                Group group = xgroups.get(i / 4);
+                Group group = xgroups.get(i);
 
-                Atom n = group.getAtom("N");
+                if (group.hasAtom("N")) {
+                    
+                    Atom n = group.getAtom("N");
+                    xa_all[j][0] = n.getX();
+                    xa_all[j][1] = n.getY();
+                    xa_all[j][2] = n.getZ();
+                    j++;
+                }
+
+                // for known CA
                 Atom ca = group.getAtom("CA");
-                Atom c = group.getAtom("C");
-                Atom o = group.getAtom("O");
+                xa_all[j][0] = ca.getX();
+                xa_all[j][1] = ca.getY();
+                xa_all[j][2] = ca.getZ();
+                j++;
 
-                xa_all[i][0] = n.getX();
-                xa_all[i][1] = n.getY();
-                xa_all[i][2] = n.getZ();
+                if (group.hasAtom("C")) {
+
+                    Atom c = group.getAtom("C");
+                    xa_all[j][0] = c.getX();
+                    xa_all[j][1] = c.getY();
+                    xa_all[j][2] = c.getZ();
+                    j++;
+                }
                 
-                xa_all[i+1][0] = ca.getX();
-                xa_all[i+1][1] = ca.getY();
-                xa_all[i+1][2] = ca.getZ();
-                
-                xa_all[i+2][0] = c.getX();
-                xa_all[i+2][1] = c.getY();
-                xa_all[i+2][2] = c.getZ();
-                
-                xa_all[i+3][0] = o.getX();
-                xa_all[i+3][1] = o.getY();
-                xa_all[i+3][2] = o.getZ();
+                if (group.hasAtom("O")) {
+
+                    Atom o = group.getAtom("O");
+                    xa_all[j][0] = o.getX();
+                    xa_all[j][1] = o.getY();
+                    xa_all[j][2] = o.getZ();
+                    j++;
+                }
             }
 
             // transform xa_all into xt_all
-            Functions.do_rotation(xa_all, xt_all, xlen * 4, t, u);
+            Functions.do_rotation(xa_all, xt_all, xlenreal, t, u);
 
             // set x atom coords
-            for (int i = 0; i < (xlen * 4) - 3; i += 4) {
+            j = 0;
+            for (int i = 0; i < xgroups.size(); i++) {
                 
-                Group group = xgroups.get(i / 4);
+                Group group = xgroups.get(i);
 
-                Atom n = group.getAtom("N");
+                if (group.hasAtom("N")) {
+                    
+                    Atom n = group.getAtom("N");
+                    n.setX(xt_all[j][0]);
+                    n.setY(xt_all[j][1]);
+                    n.setZ(xt_all[j][2]);
+                    j++;
+                }
+
+                // for known CA
                 Atom ca = group.getAtom("CA");
-                Atom c = group.getAtom("C");
-                Atom o = group.getAtom("O");
+                ca.setX(xt_all[j][0]);
+                ca.setY(xt_all[j][1]);
+                ca.setZ(xt_all[j][2]);
+                j++;
+
+                if (group.hasAtom("C")) {
+
+                    Atom c = group.getAtom("C");
+                    c.setX(xt_all[j][0]);
+                    c.setY(xt_all[j][1]);
+                    c.setZ(xt_all[j][2]);
+                    j++;
+                }
                 
-                n.setX(xt_all[i][0]);
-                n.setY(xt_all[i][1]);
-                n.setZ(xt_all[i][2]);
-                
-                ca.setX(xt_all[i+1][0]);
-                ca.setY(xt_all[i+1][1]);
-                ca.setZ(xt_all[i+1][2]);
-                
-                c.setX(xt_all[i+2][0]);
-                c.setY(xt_all[i+2][1]);
-                c.setZ(xt_all[i+2][2]);
-                
-                o.setX(xt_all[i+3][0]);
-                o.setY(xt_all[i+3][1]);
-                o.setZ(xt_all[i+3][2]);
+                if (group.hasAtom("O")) {
+
+                    Atom o = group.getAtom("O");
+                    o.setX(xt_all[j][0]);
+                    o.setY(xt_all[j][1]);
+                    o.setZ(xt_all[j][2]);
+                    j++;
+                }
             }
 
             StringBuilder sb = new StringBuilder();
 
             // iterate x atoms for chain A
-            for (int i = 0; i < xlen; i++) {
+            j = 0;
+            for (int i = 0; i < xgroups.size(); i++) {
                 
                 Group group = xgroups.get(i);
                 group.getChain().setName("A");
                 
-                Atom n = group.getAtom("N");
+                if (group.hasAtom("N")) {
+                    
+                    Atom n = group.getAtom("N");
+                    sb.append(n.toPDB());
+                    j++;
+                }
+
+                // for known CA
                 Atom ca = group.getAtom("CA");
-                Atom c = group.getAtom("C");
-                Atom o = group.getAtom("O");
-                
-                // output lines
-                sb.append(n.toPDB());
                 sb.append(ca.toPDB());
-                sb.append(c.toPDB());
-                sb.append(o.toPDB());
+                j++;
+
+                if (group.hasAtom("C")) {
+
+                    Atom c = group.getAtom("C");
+                    sb.append(c.toPDB());
+                    j++;
+                }
+                
+                if (group.hasAtom("O")) {
+
+                    Atom o = group.getAtom("O");
+                    sb.append(o.toPDB());
+                    j++;
+                }
             }
 
             // iterate y atoms for chain B
-            for (int i = 0; i < ylen; i++) {
+            j = 0;
+            for (int i = 0; i < ygroups.size(); i++) {
 
                 Group group = ygroups.get(i);
                 group.getChain().setName("B");
                 
-                Atom n = group.getAtom("N");
+                if (group.hasAtom("N")) {
+                    
+                    Atom n = group.getAtom("N");
+                    sb.append(n.toPDB());
+                    j++;
+                }
+
+                // for known CA
                 Atom ca = group.getAtom("CA");
-                Atom c = group.getAtom("C");
-                Atom o = group.getAtom("O");
-                
-                // output lines
-                sb.append(n.toPDB());
                 sb.append(ca.toPDB());
-                sb.append(c.toPDB());
-                sb.append(o.toPDB());
+                j++;
+
+                if (group.hasAtom("C")) {
+
+                    Atom c = group.getAtom("C");
+                    sb.append(c.toPDB());
+                    j++;
+                }
+                
+                if (group.hasAtom("O")) {
+
+                    Atom o = group.getAtom("O");
+                    sb.append(o.toPDB());
+                    j++;
+                }
             }
             
             results.setOutput(sb.toString());
