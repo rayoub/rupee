@@ -11,20 +11,9 @@ import java.util.logging.Logger;
 
 import org.postgresql.ds.PGSimpleDataSource;
 
-import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
 
 public class Benchmarks {
-
-    public static PGSimpleDataSource getDataSource() {
-
-        PGSimpleDataSource ds = new PGSimpleDataSource();
-        ds.setDatabaseName(Constants.DB_NAME);
-        ds.setUser(Constants.DB_USER);
-        ds.setPassword(Constants.DB_PASSWORD);
-
-        return ds;
-    }
 
     public static List<String> get(String name) {
 
@@ -51,7 +40,7 @@ public class Benchmarks {
             conn.close();
 
         } catch (SQLException e) {
-            Logger.getLogger(Db.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(Benchmarks.class.getName()).log(Level.SEVERE, null, e);
         }
 
         return dbIds;
