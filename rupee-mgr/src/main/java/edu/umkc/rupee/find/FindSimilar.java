@@ -31,25 +31,15 @@ public class FindSimilar {
     private static double SIMILARITY_THRESHOLD = 0.50;
     private static int RESULTS_DEPTH = 10;
 
-    public static class Domain {
-
-        public String ScopId;
-        public String PdbId;
-        public String Cl;
-        public int Cf;
-        public int Sf;
-        public int Fa;
-    }
-
     public static void searchAcross(SearchType searchType, AcrossType acrossType) {
 
         PGSimpleDataSource ds = Db.getDataSource();
 
         // grab domains from the database
-        List<Domain> domains = getDomains();
+        List<FsDomain> domains = getDomains();
 
         // iterate domains
-        for (Domain domain : domains) {
+        for (FsDomain domain : domains) {
 
             List<SearchRecord> records = searchAcross(domain.ScopId, searchType, acrossType);
 
@@ -58,31 +48,37 @@ public class FindSimilar {
                 SearchRecord record = records.get(i);
                 if (!domain.ScopId.equals(record.getDbId())) {
 
-                    TMAlign.Results results = Aligning.tmAlign(domain.ScopId, record.getDbId(), Mode.REGULAR);
-                    if (getTmScore(searchType, results) > SIMILARITY_THRESHOLD) {
+                    try {
 
-                        try {
+                        TMAlign.Results results = Aligning.tmAlign(domain.ScopId, record.getDbId(), Mode.REGULAR);
+                        if (getTmScore(searchType, results) > SIMILARITY_THRESHOLD) {
 
-                            Connection conn = ds.getConnection();
-                            conn.setAutoCommit(true);
+                            try {
 
-                            PreparedStatement updt = conn.prepareStatement(
-                                    "INSERT INTO fs_domains (scop_id_1, scop_id_2, search_type, across_type, rmsd, tm_score) VALUES (?,?,?,?,?,?);"
-                                    );
+                                Connection conn = ds.getConnection();
+                                conn.setAutoCommit(true);
 
-                            updt.setString(1, domain.ScopId);
-                            updt.setString(2, record.getDbId());
-                            updt.setString(3, searchType.toString());
-                            updt.setString(4, acrossType.toString());
-                            updt.setDouble(5, results.getRmsd());
-                            updt.setDouble(6, getTmScore(searchType, results));
+                                PreparedStatement updt = conn.prepareStatement(
+                                        "INSERT INTO fs_sims (scop_id_1, scop_id_2, search_type, across_type, rmsd, tm_score) VALUES (?,?,?,?,?,?);"
+                                        );
 
-                            updt.execute();
-                            updt.close();
+                                updt.setString(1, domain.ScopId);
+                                updt.setString(2, record.getDbId());
+                                updt.setString(3, searchType.toString());
+                                updt.setString(4, acrossType.toString());
+                                updt.setDouble(5, results.getRmsd());
+                                updt.setDouble(6, getTmScore(searchType, results));
 
-                        } catch (SQLException e) {
-                            Logger.getLogger(FindSimilar.class.getName()).log(Level.SEVERE, null, e);
+                                updt.execute();
+                                updt.close();
+
+                            } catch (SQLException e) {
+                                Logger.getLogger(FindSimilar.class.getName()).log(Level.SEVERE, null, e);
+                            }
                         }
+                    }
+                    catch (Exception e) {
+                        Logger.getLogger(FindSimilar.class.getName()).log(Level.SEVERE, domain.ScopId + " - " + record.getDbId(), e);
                     }
                 }
             }
@@ -130,9 +126,9 @@ public class FindSimilar {
             return results.getTmScoreT();
     }
     
-    private static List<Domain> getDomains() {
+    private static List<FsDomain> getDomains() {
 
-        List<Domain> domains = new ArrayList<>();
+        List<FsDomain> domains = new ArrayList<>();
 
         PGSimpleDataSource ds = Db.getDataSource();
 
@@ -145,7 +141,7 @@ public class FindSimilar {
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
 
-                Domain domain = new Domain();
+                FsDomain domain = new FsDomain();
 
                 domain.ScopId = rs.getString("scop_id");
                 domain.PdbId = rs.getString("pdb_id");
@@ -166,5 +162,49 @@ public class FindSimilar {
         }
 
         return domains;
+    }
+    
+    public static List<FsSim> getSims() {
+
+        List<FsSim> sims = new ArrayList<>();
+
+        PGSimpleDataSource ds = Db.getDataSource();
+
+        try {
+
+            Connection conn = ds.getConnection();
+       
+            PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_fs_sims();");
+            
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+
+                FsSim sim = new FsSim();
+
+                sim.SearchType = rs.getString("search_type");
+                sim.AcrossType = rs.getString("across_type");
+                sim.ScopId1 = rs.getString("scop_id_1");
+                sim.Len1 = rs.getInt("len_1");
+                sim.ClCfSfFa1 = rs.getString("cl_cf_sf_fa_1");
+                sim.Description1 = rs.getString("description_1");
+                sim.ScopId2 = rs.getString("scop_id_2");
+                sim.Len2 = rs.getInt("len_2");
+                sim.ClCfSfFa2 = rs.getString("cl_cf_sf_fa_2");
+                sim.Description2 = rs.getString("description_2");
+                sim.Rmsd = rs.getDouble("rmsd");
+                sim.TmScore = rs.getDouble("tm_score");
+
+                sims.add(sim);
+            }
+
+            rs.close();
+            stmt.close();
+            conn.close();
+
+        } catch (SQLException e) {
+            Logger.getLogger(FindSimilar.class.getName()).log(Level.SEVERE, null, e);
+        }
+
+        return sims;
     }
 }

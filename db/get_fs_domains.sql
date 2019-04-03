@@ -27,7 +27,7 @@ BEGIN
             INNER JOIN scop_grams g
                 ON g.scop_id = d.scop_id
         WHERE
-            d.cl IN ('a','b','c','d')
+            d.cl IN ('c')
             AND CARDINALITY(g.grams) BETWEEN 50 AND 500
     )
     SELECT 

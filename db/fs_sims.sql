@@ -1,5 +1,5 @@
 
-CREATE TABLE fs_domains
+CREATE TABLE fs_sims
 (
     scop_id_1 VARCHAR NOT NULL,
     scop_id_2 VARCHAR NOT NULL,
