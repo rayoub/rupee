@@ -70,13 +70,6 @@ public abstract class SearchLegacy {
             hashes = Db.getUploadHashes(criteria.uploadId);
         }
 
-        // size limit for top-aligned searches
-        if (searchFrom == SearchFrom.WEB && criteria.searchMode == SearchMode.TOP_ALIGNED && grams.size() > 400) {
-            
-            Thread.sleep(2000); // sleeping corresponds to an event throttle on web page - looks nicer
-            throw new UnsupportedOperationException("Query structures for immediate Top-Aligned searches must have fewer than 400 residues.");
-        }
-
         final List<Integer> grams1 = grams;
         final Hashes hashes1 = hashes;
 
@@ -148,12 +141,7 @@ public abstract class SearchLegacy {
                     .collect(Collectors.toList());
                 
                 // fast alignments
-                if (searchFrom == SearchFrom.SERVER) {
-                    records.stream().forEach(record -> align(record, queryStructure, Mode.FAST));
-                }
-                else {
-                    records.stream().parallel().forEach(record -> align(record, queryStructure, Mode.FAST));
-                }
+                records.stream().parallel().forEach(record -> align(record, queryStructure, Mode.FAST));
 
                 // sort and filter for regular alignments
                 records = records.stream()
@@ -162,12 +150,7 @@ public abstract class SearchLegacy {
                     .collect(Collectors.toList());
                 
                 // regular alignments
-                if (searchFrom == SearchFrom.SERVER) {
-                    records.stream().forEach(record -> align(record, queryStructure, Mode.REGULAR));
-                }
-                else {
-                    records.stream().parallel().forEach(record -> align(record, queryStructure, Mode.REGULAR));
-                }
+                records.stream().parallel().forEach(record -> align(record, queryStructure, Mode.REGULAR));
 
             } // end mode == TOP_ALIGNED
 

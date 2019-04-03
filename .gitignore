@@ -43,7 +43,6 @@ data/scop/version.txt
 
 # build ignores
 rupee-mgr/target/
-rupee-srv/target/
 
 # file types
 **/*.swp
@@ -64,8 +63,4 @@ rupee-mgr/.settings/
 rupee-mgr/.classpath
 rupee-mgr/.project
 rupee-mgr/.gitignore
-rupee-srv/.settings/
-rupee-srv/.classpath
-rupee-srv/.project
-rupee-srv/.gitignore
 
