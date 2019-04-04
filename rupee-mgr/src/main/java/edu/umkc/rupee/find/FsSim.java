@@ -2,17 +2,22 @@ package edu.umkc.rupee.find;
 
 public class FsSim {
 
-    public String SearchType;
-    public String AcrossType;
+    public int N;
+
     public String ScopId1;
-    public int Len1;
-    public String ClCfSfFa1;
-    public String Description1;
+    public int Sunid1;
+    public String ClCf1;
+    public String CfDescr1;
+    public String ClCfSf1;
+    public String SfDescr1;
+    
     public String ScopId2;
-    public int Len2;
-    public String ClCfSfFa2;
-    public String Description2;
-    public double Rmsd;
+    public int Sunid2;
+    public String ClCf2;
+    public String CfDescr2;
+    public String ClCfSf2;
+    public String SfDescr2;
+   
     public double TmScore;
 }
 

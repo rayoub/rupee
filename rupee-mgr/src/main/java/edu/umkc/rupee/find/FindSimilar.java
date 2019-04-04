@@ -164,7 +164,7 @@ public class FindSimilar {
         return domains;
     }
     
-    public static List<FsSim> getSims() {
+    public static List<FsSim> getSims(SearchType searchType, AcrossType acrossType) {
 
         List<FsSim> sims = new ArrayList<>();
 
@@ -174,24 +174,31 @@ public class FindSimilar {
 
             Connection conn = ds.getConnection();
        
-            PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_fs_sims();");
-            
+            PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_fs_sims(?,?);");
+            stmt.setString(1, searchType.toString());
+            stmt.setString(2, acrossType.toString());
+
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
 
                 FsSim sim = new FsSim();
 
-                sim.SearchType = rs.getString("search_type");
-                sim.AcrossType = rs.getString("across_type");
+                sim.N = rs.getInt("n");
+
                 sim.ScopId1 = rs.getString("scop_id_1");
-                sim.Len1 = rs.getInt("len_1");
-                sim.ClCfSfFa1 = rs.getString("cl_cf_sf_fa_1");
-                sim.Description1 = rs.getString("description_1");
+                sim.Sunid1 = rs.getInt("sunid_1");
+                sim.ClCf1 = rs.getString("cl_cf_1");
+                sim.CfDescr1 = rs.getString("cf_descr_1");
+                sim.ClCfSf1 = rs.getString("cl_cf_sf_1");
+                sim.SfDescr1 = rs.getString("sf_descr_1");
+                
                 sim.ScopId2 = rs.getString("scop_id_2");
-                sim.Len2 = rs.getInt("len_2");
-                sim.ClCfSfFa2 = rs.getString("cl_cf_sf_fa_2");
-                sim.Description2 = rs.getString("description_2");
-                sim.Rmsd = rs.getDouble("rmsd");
+                sim.Sunid2 = rs.getInt("sunid_2");
+                sim.ClCf2 = rs.getString("cl_cf_2");
+                sim.CfDescr2 = rs.getString("cf_descr_2");
+                sim.ClCfSf2 = rs.getString("cl_cf_sf_2");
+                sim.SfDescr2 = rs.getString("sf_descr_2");
+                
                 sim.TmScore = rs.getDouble("tm_score");
 
                 sims.add(sim);

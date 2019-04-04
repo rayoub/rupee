@@ -2,7 +2,7 @@ package edu.umkc.rupee.defs;
 
 public enum SearchMode {
 
-    FAST(1, "Fast", 8000),
+    FAST(1, "Fast", 40000),
     TOP_ALIGNED(2, "Top-Aligned", 40000);
 
     private int id;
