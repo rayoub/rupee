@@ -16,6 +16,7 @@ RETURNS TABLE (
     cf_descr_2 VARCHAR,
     cl_cf_sf_2 VARCHAR,
     sf_descr_2 VARCHAR, 
+
     tm_score NUMERIC
 )
 AS $$
@@ -39,7 +40,10 @@ BEGIN
             d2.cl_cf_sf AS cl_cf_sf_2,
             nsf2.description AS sf_descr_2,
 
-            s.tm_score
+            s.tm_score,
+
+            ROW_NUMBER() OVER (PARTITION BY d1.cl_cf, d2.cl_cf ORDER BY s.tm_score DESC, s.scop_id_1, s.scop_id_2) AS rank_cf,
+            ROW_NUMBER() OVER (PARTITION BY d1.cl_cf_sf, d2.cl_cf_sf ORDER BY s.tm_score DESC, s.scop_id_1, s.scop_id_2) AS rank_sf
         FROM
             fs_sims s
             INNER JOIN scop_grams g1
@@ -83,10 +87,13 @@ BEGIN
     FROM 
         domall d
     WHERE
-        1 = 1
+        (p_across_type = 'CF' AND rank_cf = 1)
+        OR
+        (p_across_type = 'SF' AND rank_sf = 1)
     ORDER BY
         d.tm_score DESC,
-        d.scop_id_1;
+        d.scop_id_1,
+        d.scop_id_2;
 
 END;
 $$LANGUAGE plpgsql;
