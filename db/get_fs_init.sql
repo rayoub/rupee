@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE FUNCTION get_fs_domains ()
+CREATE OR REPLACE FUNCTION get_fs_init ()
 RETURNS TABLE (
     scop_id VARCHAR,
     pdb_id VARCHAR,

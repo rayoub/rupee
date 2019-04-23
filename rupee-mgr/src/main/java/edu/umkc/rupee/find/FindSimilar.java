@@ -31,12 +31,16 @@ public class FindSimilar {
     private static double SIMILARITY_THRESHOLD = 0.50;
     private static int RESULTS_DEPTH = 10;
 
-    public static void searchAcross(SearchType searchType, AcrossType acrossType) {
+    // init: types are used for filtering only
+    // refine: types are used for filtering and getting domains to refine on 
+    // either way, you have to run this once for each type combo
+
+    public static void searchAcross(SearchType searchType, AcrossType acrossType, boolean init) {
 
         PGSimpleDataSource ds = Db.getDataSource();
 
         // grab domains from the database
-        List<FsDomain> domains = getDomains();
+        List<FsDomain> domains = getDomains(searchType, acrossType, init);
 
         // iterate domains
         for (FsDomain domain : domains) {
@@ -126,7 +130,7 @@ public class FindSimilar {
             return results.getTmScoreT();
     }
     
-    private static List<FsDomain> getDomains() {
+    private static List<FsDomain> getDomains(SearchType searchType, AcrossType acrossType, boolean init) {
 
         List<FsDomain> domains = new ArrayList<>();
 
@@ -135,8 +139,16 @@ public class FindSimilar {
         try {
 
             Connection conn = ds.getConnection();
-       
-            PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_fs_domains();");
+     
+            PreparedStatement stmt = null; 
+            if (init) {
+                stmt = conn.prepareCall("SELECT * FROM get_fs_init();");
+            }
+            else {
+                stmt = conn.prepareCall("SELECT * FROM get_fs_refine(?,?);");
+                stmt.setString(1, searchType.toString());
+                stmt.setString(2, acrossType.toString());
+            }
             
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
