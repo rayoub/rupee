@@ -67,7 +67,7 @@ BEGIN
             AND s.across_type = p_across_type
     )
     SELECT 
-        ROW_NUMBER() OVER (ORDER BY d.tm_score DESC, d.scop_id_1) AS n,
+        ROW_NUMBER() OVER (ORDER BY d.tm_score DESC, d.scop_id_1, d.scop_id_2) AS n,
 
         d.scop_id_1,
         d.sunid_1,

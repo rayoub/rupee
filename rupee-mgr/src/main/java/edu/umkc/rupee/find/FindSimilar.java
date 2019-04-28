@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -23,6 +24,7 @@ import edu.umkc.rupee.lib.Aligning;
 import edu.umkc.rupee.lib.Db;
 import edu.umkc.rupee.scop.ScopSearch;
 import edu.umkc.rupee.scop.ScopSearchCriteria;
+import edu.umkc.rupee.scop.ScopSearchRecord;
 import edu.umkc.rupee.tm.Mode;
 import edu.umkc.rupee.tm.TMAlign;
 
@@ -30,17 +32,22 @@ public class FindSimilar {
 
     private static double SIMILARITY_THRESHOLD = 0.50;
     private static int RESULTS_DEPTH = 10;
+    
+    private static AtomicInteger counter;
 
-    // init: types are used for filtering only
-    // refine: types are used for filtering and getting domains to refine on 
-    // either way, you have to run this once for each type combo
+    static {
+        counter = new AtomicInteger();
+    }
 
-    public static void searchAcross(SearchType searchType, AcrossType acrossType, boolean init) {
+    public static void searchAcross(SearchType searchType, AcrossType acrossType) {
 
+        counter.set(0);
         PGSimpleDataSource ds = Db.getDataSource();
 
         // grab domains from the database
-        List<FsDomain> domains = getDomains(searchType, acrossType, init);
+        List<FsDomain> domains = getDomains();
+
+        System.out.println("Processing " + domains.size() + " domains");
 
         // iterate domains
         for (FsDomain domain : domains) {
@@ -49,7 +56,7 @@ public class FindSimilar {
 
             for (int i = 0; i < Math.min(RESULTS_DEPTH, records.size()); i++) {
 
-                SearchRecord record = records.get(i);
+                ScopSearchRecord record = (ScopSearchRecord) records.get(i);
                 if (!domain.ScopId.equals(record.getDbId())) {
 
                     try {
@@ -66,8 +73,35 @@ public class FindSimilar {
                                         "INSERT INTO fs_sims (scop_id_1, scop_id_2, search_type, across_type, rmsd, tm_score) VALUES (?,?,?,?,?,?);"
                                         );
 
-                                updt.setString(1, domain.ScopId);
-                                updt.setString(2, record.getDbId());
+                                // don't want reverse dupes for FULL_LENGTH searches
+                                if (searchType == SearchType.FULL_LENGTH && acrossType == AcrossType.CF) {
+                              
+                                    if (record.getCf() < domain.Cf) {
+                                        updt.setString(1, record.getDbId());
+                                        updt.setString(2, domain.ScopId);
+                                    }  
+                                    else {
+                                        updt.setString(1, domain.ScopId);
+                                        updt.setString(2, record.getDbId());
+                                    }
+                                }
+                                else if (searchType == SearchType.FULL_LENGTH && acrossType == AcrossType.SF) {
+
+                                    if ((record.getCf() < domain.Cf) || (record.getCf() == domain.Cf && record.getSf() < domain.Sf)) {
+                                        updt.setString(1, record.getDbId());
+                                        updt.setString(2, domain.ScopId);
+                                    }
+                                    else {
+                                        updt.setString(1, domain.ScopId);
+                                        updt.setString(2, record.getDbId());
+                                    }
+                                }
+                                else { // SearchType.CONTAINED_IN
+
+                                    updt.setString(1, domain.ScopId);
+                                    updt.setString(2, record.getDbId());
+                                }
+
                                 updt.setString(3, searchType.toString());
                                 updt.setString(4, acrossType.toString());
                                 updt.setDouble(5, results.getRmsd());
@@ -86,7 +120,13 @@ public class FindSimilar {
                     }
                 }
             }
-        }
+
+            int count = counter.incrementAndGet();
+            if (count % 100 == 0) {
+                System.out.println("Processed Count: " + count);
+            }
+
+        } // for
     }
 
     private static List<SearchRecord> searchAcross(String scopId, SearchType searchType, AcrossType acrossType) {
@@ -126,11 +166,11 @@ public class FindSimilar {
             return results.getTmScoreAvg();
         else if (searchType == SearchType.CONTAINED_IN) 
             return results.getTmScoreQ();
-        else  // SearchType.CONTAINS
+        else  // SearchType.CONTAINS (not used currently)
             return results.getTmScoreT();
     }
     
-    private static List<FsDomain> getDomains(SearchType searchType, AcrossType acrossType, boolean init) {
+    private static List<FsDomain> getDomains() {
 
         List<FsDomain> domains = new ArrayList<>();
 
@@ -140,15 +180,7 @@ public class FindSimilar {
 
             Connection conn = ds.getConnection();
      
-            PreparedStatement stmt = null; 
-            if (init) {
-                stmt = conn.prepareCall("SELECT * FROM get_fs_init();");
-            }
-            else {
-                stmt = conn.prepareCall("SELECT * FROM get_fs_refine(?,?);");
-                stmt.setString(1, searchType.toString());
-                stmt.setString(2, acrossType.toString());
-            }
+            PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_fs_domains();");
             
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
@@ -156,7 +188,6 @@ public class FindSimilar {
                 FsDomain domain = new FsDomain();
 
                 domain.ScopId = rs.getString("scop_id");
-                domain.PdbId = rs.getString("pdb_id");
                 domain.Cl = rs.getString("cl");
                 domain.Cf = rs.getInt("cf");
                 domain.Sf = rs.getInt("sf");
