@@ -295,7 +295,7 @@ public abstract class Search {
 
         try {
    
-            // *** LSH band matches
+            // *** LCS matches
             
             PGSimpleDataSource ds = Db.getDataSource();
 
