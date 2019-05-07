@@ -46,6 +46,7 @@ BEGIN
                 ON g.scop_id = d.scop_id
         WHERE  
             d.scop_sid % p_split_count = p_split_index
+            -- AND d.cl IN ('c') -- uncomment for find similar
             AND
             (
                 d.scop_id = p_db_id
@@ -71,6 +72,7 @@ BEGIN
                 ON g.scop_id = d.scop_id
         WHERE 
             d.scop_sid % p_split_count = p_split_index;
+            -- AND d.cl IN ('c'); -- uncomment for find similar
 
     END IF;
 

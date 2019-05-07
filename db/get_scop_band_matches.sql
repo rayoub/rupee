@@ -107,14 +107,19 @@ BEGIN
             scop_domain d
             INNER JOIN scop_hashes h
                 ON h.db_id = d.scop_id
-        WHERE  
-            h.db_id = p_db_id
-            OR 
+        WHERE
+            1 = 1
+            -- AND d.cl IN ('c') -- uncomment for find similar
+            AND
             (
-                h.band_hashes[p_band_index] = band_value
-                AND (p_different_fold = FALSE OR d.cl <> q_cl OR d.cf <> q_cf)
-                AND (p_different_superfamily = FALSE OR d.cl <> q_cl OR d.cf <> q_cf OR d.sf <> q_sf)
-                AND (p_different_family = FALSE OR d.cl <> q_cl OR d.cf <> q_cf OR d.sf <> q_sf OR d.fa <> q_fa)
+                h.db_id = p_db_id
+                OR 
+                (
+                    h.band_hashes[p_band_index] = band_value
+                    AND (p_different_fold = FALSE OR d.cl <> q_cl OR d.cf <> q_cf)
+                    AND (p_different_superfamily = FALSE OR d.cl <> q_cl OR d.cf <> q_cf OR d.sf <> q_sf)
+                    AND (p_different_family = FALSE OR d.cl <> q_cl OR d.cf <> q_cf OR d.sf <> q_sf OR d.fa <> q_fa)
+                )
             );
 
     ELSE
@@ -131,8 +136,13 @@ BEGIN
             INNER JOIN scop_hashes h
                 ON h.db_id = d.scop_id
         WHERE  
-            h.db_id = p_db_id
-            OR h.band_hashes[p_band_index] = band_value;
+            1 = 1
+            -- AND d.cl IN ('c') -- uncomment for find similar
+            AND
+            (
+                h.db_id = p_db_id
+                OR h.band_hashes[p_band_index] = band_value
+            );
 
     END IF;
 
