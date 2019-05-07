@@ -54,7 +54,7 @@ public abstract class Search {
     // *********************************************************************
     // Instance Methods
     // *********************************************************************
-    
+   
     public List<SearchRecord> search(SearchCriteria criteria, SearchFrom searchFrom) throws Exception {
 
         List<SearchRecord> records = new ArrayList<>();
@@ -97,7 +97,7 @@ public abstract class Search {
 
                         if (map.containsKey(record.getDbId())) {
                             List<Integer> grams2 = map.get(record.getDbId());
-                            int score = LCS.getLCSScoreFullLength(grams1, grams2); 
+                            double score = LCS.getLCSScoreFullLength(grams1, grams2); 
                             record.setSimilarity(score);
                         }
                     });
@@ -311,7 +311,7 @@ public abstract class Search {
                 String pdbId = rs.getString("pdb_id");
                 String sortKey = rs.getString("sort_key");
                 Integer[] grams2 = (Integer[])rs.getArray("grams").getArray();
-               
+              
                 double similarity = Integer.MIN_VALUE;
                 if (criteria.searchType == SearchType.FULL_LENGTH) {
                     similarity = LCS.getLCSScoreFullLength(grams1, Arrays.asList(grams2)); 

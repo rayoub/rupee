@@ -300,7 +300,7 @@ public class Main {
             double exact = Similarity.getExactSimilarity(grams1, grams2);
 
             // lcs validated matching grams
-            int score = LCS.getLCSScoreFullLength(grams1, grams2); 
+            double score = LCS.getLCSScoreFullLength(grams1, grams2); 
           
             System.out.println(""); 
             System.out.println("Structure 1 Length:     " + grams1.size());
@@ -355,7 +355,7 @@ public class Main {
             double exact = Similarity.getExactSimilarity(grams1, grams2);
 
             // lcs validated matching grams
-            int score = LCS.getLCSScoreContainment(grams1, grams2); 
+            double score = LCS.getLCSScoreContainment(grams1, grams2); 
           
             System.out.println(""); 
             System.out.println("Structure 1 Length:     " + grams1.size());
