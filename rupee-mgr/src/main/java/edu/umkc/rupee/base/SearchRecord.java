@@ -1,9 +1,8 @@
 package edu.umkc.rupee.base;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
 import org.postgresql.util.PGobject;
+
+import edu.umkc.rupee.defs.SearchType;
 
 public class SearchRecord extends PGobject {
 
@@ -12,6 +11,7 @@ public class SearchRecord extends PGobject {
     private String dbId;
     private String pdbId;
     private String sortKey;
+    private SearchType searchType;
     private double similarity;
     private double rmsd;
     private double tmScore;
@@ -54,6 +54,14 @@ public class SearchRecord extends PGobject {
 
     public void setSortKey(String sortKey) {
         this.sortKey = sortKey;
+    }
+
+    public SearchType getSearchType() {
+        return searchType;
+    }
+
+    public void setSearchType(SearchType searchType) {
+        this.searchType = searchType;
     }
 
     public double getSimilarity() {

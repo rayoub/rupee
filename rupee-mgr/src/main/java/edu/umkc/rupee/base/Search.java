@@ -54,7 +54,8 @@ public abstract class Search {
     // *********************************************************************
     // Instance Methods
     // *********************************************************************
-   
+ 
+    @SuppressWarnings("unused") 
     public List<SearchRecord> search(SearchCriteria criteria, SearchFrom searchFrom) throws Exception {
 
         List<SearchRecord> records = new ArrayList<>();
@@ -78,7 +79,8 @@ public abstract class Search {
 
         if (grams1 != null && hashes1 != null) {
 
-            if (criteria.searchType == SearchType.FULL_LENGTH) {
+            // if (criteria.searchTypes.contains(SearchType.FULL_LENGTH) && criteria.searchTypes.size() == 1) {
+            if (false) {
 
                 // parallel band match searches to gather lsh candidates
                 records = IntStream.range(0, Constants.BAND_CHECK_COUNT).boxed().parallel()
@@ -108,7 +110,7 @@ public abstract class Search {
                     .collect(Collectors.toList());
 
             }
-            else { // 'contained in' or 'contains'
+            else { // 'contained in' or 'contains' selected
 
                 // split grams and search in parallel on splits
                 records = IntStream.range(0, Constants.SPLIT_COUNT).boxed().parallel()
@@ -157,7 +159,7 @@ public abstract class Search {
                     .collect(Collectors.toList());
                 
                 // fast alignments
-                records.stream().parallel().forEach(record -> align(record, queryStructure, criteria.searchType, Mode.FAST));
+                records.stream().parallel().forEach(record -> align(criteria, record, queryStructure, Mode.FAST));
 
                 // sort and filter for regular alignments
                 records = records.stream()
@@ -166,7 +168,7 @@ public abstract class Search {
                     .collect(Collectors.toList());
                 
                 // regular alignments
-                records.stream().parallel().forEach(record -> align(record, queryStructure, criteria.searchType, Mode.REGULAR));
+                records.stream().parallel().forEach(record -> align(criteria, record, queryStructure, Mode.REGULAR));
 
             } // end mode == TOP_ALIGNED
 
@@ -252,7 +254,7 @@ public abstract class Search {
         return comparator;
     }
 
-    private void align(SearchRecord record, Structure queryStructure, SearchType searchType, Mode mode) {
+    private void align(SearchCriteria criteria, SearchRecord record, Structure queryStructure, Mode mode) {
 
         try {
        
@@ -267,15 +269,31 @@ public abstract class Search {
 
             record.setRmsd(results.getRmsd());
 
-            if (searchType == SearchType.FULL_LENGTH) {
-                record.setTmScore(results.getTmScoreAvg());
-            } 
-            else if (searchType == SearchType.CONTAINED_IN) {
-                record.setTmScore(results.getTmScoreQ());
+            double maxScore = Integer.MIN_VALUE;
+            SearchType searchType = SearchType.FULL_LENGTH;
+
+            // take the max one regardless of initial max one from FAST
+            if (criteria.searchTypes.contains(SearchType.FULL_LENGTH)) {
+                if (results.getTmScoreAvg() > maxScore) {
+                    maxScore = results.getTmScoreAvg();
+                    searchType = SearchType.FULL_LENGTH;
+                } 
             }
-            else { // SearchType.CONTAINS
-                record.setTmScore(results.getTmScoreT());
+            if (criteria.searchTypes.contains(SearchType.CONTAINED_IN)) {
+                if (results.getTmScoreQ() > maxScore) {
+                    maxScore = results.getTmScoreQ();
+                    searchType = SearchType.CONTAINED_IN;
+                } 
             }
+            if (criteria.searchTypes.contains(SearchType.CONTAINS)) {
+                if (results.getTmScoreT() > maxScore) {
+                    maxScore = results.getTmScoreT();
+                    searchType = SearchType.CONTAINS;
+                } 
+            }
+
+            record.setTmScore(maxScore);
+            record.setSearchType(searchType);
         }
         catch (IOException e) {
             
@@ -310,23 +328,82 @@ public abstract class Search {
                 String dbId = rs.getString("db_id");
                 String pdbId = rs.getString("pdb_id");
                 String sortKey = rs.getString("sort_key");
+                
                 Integer[] grams2 = (Integer[])rs.getArray("grams").getArray();
-              
+                List<Integer> grams2AsList = Arrays.asList(grams2);
+           
                 double similarity = Integer.MIN_VALUE;
-                if (criteria.searchType == SearchType.FULL_LENGTH) {
-                    similarity = LCS.getLCSScoreFullLength(grams1, Arrays.asList(grams2)); 
-                } 
-                else if (criteria.searchType == SearchType.CONTAINED_IN) {
-                    similarity = LCS.getLCSScoreContainment(grams1, Arrays.asList(grams2)); 
+                SearchType searchType = SearchType.FULL_LENGTH;
+            
+                // take the max one based on filters selected
+                if (criteria.searchTypes.size() == 3) {
+
+                    double containedIn = Integer.MIN_VALUE;
+                    double contains = Integer.MIN_VALUE;
+
+                    if (grams2AsList.size() > Math.ceil(grams1.size() / 2.0)) {
+                        containedIn = LCS.getLCSScoreContainment(grams1, grams2AsList);
+                    } 
+                    if (grams2AsList.size() > Math.ceil(grams1.size() / 3.0)) {
+                        contains = LCS.getLCSScoreContainment(grams2AsList, grams1);
+                    }
+
+                    if (containedIn == contains) {
+
+                        // this will always be the case if FULL_LENGTH wins for LCS
+                        similarity = containedIn;
+                        searchType = SearchType.FULL_LENGTH;
+                    }
+                    else if (containedIn > contains) {
+                        similarity = containedIn;
+                        searchType = SearchType.CONTAINED_IN;
+                    }
+                    else {
+                        similarity = contains;
+                        searchType = SearchType.CONTAINS;
+                    }
                 }
-                else if (grams2.length > (grams1.size() / 3.0)) { // SearchType.CONTAINS
-                    similarity = LCS.getLCSScoreContainment(Arrays.asList(grams2), grams1); 
+                else {
+                    
+                    double fullLength = Integer.MIN_VALUE;
+                    double containedIn = Integer.MIN_VALUE;
+                    double contains = Integer.MIN_VALUE;
+
+                    if (criteria.searchTypes.contains(SearchType.FULL_LENGTH)) {
+                        if (grams2AsList.size() > Math.ceil(grams1.size() / 2.0) && grams2AsList.size() < grams1.size() * 2) {
+                            fullLength = LCS.getLCSScoreFullLength(grams1, grams2AsList);
+                        }
+                    }
+                    if (criteria.searchTypes.contains(SearchType.CONTAINED_IN)) {
+                        if (grams2AsList.size() > Math.ceil(grams1.size() / 2.0)) {
+                            containedIn = LCS.getLCSScoreContainment(grams1, grams2AsList);
+                        }
+                    }
+                    if (criteria.searchTypes.contains(SearchType.CONTAINS)) {
+                        if (grams2AsList.size() > Math.ceil(grams1.size() / 3.0)) {
+                            contains = LCS.getLCSScoreContainment(grams2AsList, grams1);
+                        }
+                    }
+
+                    if (fullLength >= containedIn && fullLength >= contains) {
+                        similarity = fullLength;
+                        searchType = SearchType.FULL_LENGTH;
+                    }
+                    else if (containedIn >= contains) {
+                        similarity = containedIn;
+                        searchType = SearchType.CONTAINED_IN;
+                    }
+                    else {
+                        similarity = contains;
+                        searchType = SearchType.CONTAINS;
+                    }
                 }
 
                 SearchRecord record = getSearchRecord();
                 record.setDbId(dbId);
                 record.setPdbId(pdbId);
                 record.setSortKey(sortKey);
+                record.setSearchType(searchType);
                 record.setSimilarity(similarity);
                 records.add(record);
             }
@@ -336,7 +413,7 @@ public abstract class Search {
             conn.close();
 
         } catch (SQLException e) {
-            Logger.getLogger(SearchLegacy.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(Search.class.getName()).log(Level.SEVERE, null, e);
         } 
 
         return records;
@@ -376,6 +453,7 @@ public abstract class Search {
                         record.setPdbId(pdbId);
                         record.setSortKey(sortKey);
                         record.setSimilarity(similarity);
+                        record.setSearchType(SearchType.FULL_LENGTH);
                         records.add(record);
                     }
                 }
@@ -386,7 +464,7 @@ public abstract class Search {
             conn.close();
 
         } catch (SQLException e) {
-            Logger.getLogger(SearchLegacy.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(Search.class.getName()).log(Level.SEVERE, null, e);
         } 
 
         return records;
@@ -428,7 +506,7 @@ public abstract class Search {
             conn.close();
 
         } catch (SQLException e) {
-            Logger.getLogger(SearchLegacy.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(Search.class.getName()).log(Level.SEVERE, null, e);
         } 
     }
     

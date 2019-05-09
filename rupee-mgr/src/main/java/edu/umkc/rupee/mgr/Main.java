@@ -5,6 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.sql.SQLException;
 import java.util.Arrays;
+import java.util.EnumSet;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -475,7 +476,7 @@ public class Main {
         //***  OUTPUT
         //*************************************************************
 
-        SearchType searchType = SearchType.FULL_LENGTH;
+        SearchType searchType = SearchType.CONTAINED_IN;
 
         boolean verbose = false; 
         boolean timing = false;
@@ -495,7 +496,7 @@ public class Main {
             }
 
             criteria.limit = limit;
-            criteria.searchType = searchType;
+            criteria.searchTypes = EnumSet.of(searchType);
             criteria.searchMode = searchMode;
             criteria.sortBy = sortBy;
             criteria.differentFold = diff1;
@@ -563,7 +564,7 @@ public class Main {
             }
 
             criteria.limit = limit;
-            criteria.searchType = searchType;
+            criteria.searchTypes = EnumSet.of(searchType);
             criteria.searchMode = searchMode;
             criteria.sortBy = sortBy;
             criteria.topologyReps = rep1;
@@ -635,7 +636,7 @@ public class Main {
             }
 
             criteria.limit = limit;
-            criteria.searchType = searchType;
+            criteria.searchTypes = EnumSet.of(searchType);
             criteria.searchMode = searchMode;
             criteria.sortBy = sortBy;
             criteria.differentH = diff1;
@@ -693,7 +694,7 @@ public class Main {
             }
 
             criteria.limit = limit;
-            criteria.searchType = searchType;
+            criteria.searchTypes = EnumSet.of(searchType);
             criteria.searchMode = searchMode;
             criteria.sortBy = sortBy;
 
