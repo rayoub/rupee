@@ -296,7 +296,7 @@ public abstract class Search {
             record.setSearchType(searchType);
         }
         catch (IOException e) {
-            
+           
             record.setRmsd(Double.MAX_VALUE);
             record.setTmScore(0);
         }
@@ -310,6 +310,9 @@ public abstract class Search {
     private List<SearchRecord> gramsSplit(int splitIndex, SearchCriteria criteria, List<Integer> grams1) {
 
         List<SearchRecord> records = new ArrayList<>();
+
+        boolean containmentSearch = criteria.searchTypes.contains(SearchType.CONTAINED_IN) 
+            || criteria.searchTypes.contains(SearchType.CONTAINS);
 
         try {
    
@@ -362,6 +365,10 @@ public abstract class Search {
                         similarity = contains;
                         searchType = SearchType.CONTAINS;
                     }
+
+                    // discard
+                    if (containedIn == Integer.MIN_VALUE && contains == Integer.MIN_VALUE) 
+                        continue;
                 }
                 else {
                     
@@ -397,13 +404,25 @@ public abstract class Search {
                         similarity = contains;
                         searchType = SearchType.CONTAINS;
                     }
+                   
+                    // discard
+                    if (fullLength == Integer.MIN_VALUE && containedIn == Integer.MIN_VALUE && contains == Integer.MIN_VALUE) 
+                        continue;
                 }
+
+                // track if structures are similar length
+                boolean similarLength = false;
+                if (containmentSearch && 
+                        Math.min((double)grams1.size(), grams2AsList.size()) / Math.max((double)grams1.size(), grams2AsList.size()) > 0.85) {
+                    similarLength = true; 
+                } 
 
                 SearchRecord record = getSearchRecord();
                 record.setDbId(dbId);
                 record.setPdbId(pdbId);
                 record.setSortKey(sortKey);
                 record.setSearchType(searchType);
+                record.setSimilarLength(similarLength);
                 record.setSimilarity(similarity);
                 records.add(record);
             }

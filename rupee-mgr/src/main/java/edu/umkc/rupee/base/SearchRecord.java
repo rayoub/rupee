@@ -1,29 +1,19 @@
 package edu.umkc.rupee.base;
 
-import org.postgresql.util.PGobject;
-
 import edu.umkc.rupee.defs.SearchType;
 
-public class SearchRecord extends PGobject {
-
-    private int searchId;
+public class SearchRecord {
+    
     private int n;
     private String dbId;
     private String pdbId;
     private String sortKey;
     private SearchType searchType;
+    private boolean similarLength;
     private double similarity;
     private double rmsd;
     private double tmScore;
     
-    public int getSearchId() {
-        return searchId;
-    }
-
-    public void setSearchId(int searchId) {
-        this.searchId = searchId;
-    }
-
     public int getN() {
         return n;
     }
@@ -64,6 +54,14 @@ public class SearchRecord extends PGobject {
         this.searchType = searchType;
     }
 
+    public boolean isSimilarLength() {
+        return similarLength;
+    }
+
+    public void setSimilarLength(boolean essentiallyFullLength) {
+        this.similarLength = essentiallyFullLength;
+    }
+
     public double getSimilarity() {
         return similarity;
     }
@@ -86,10 +84,5 @@ public class SearchRecord extends PGobject {
 
     public void setTmScore(double tmScore) {
         this.tmScore = tmScore;
-    }
-
-    @Override
-    public String getValue() {
-        return "(" + searchId + "," + n + "," + dbId + "," + pdbId + "," + sortKey + "," + similarity + "," + rmsd + "," + tmScore + ")";
     }
 }
