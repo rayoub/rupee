@@ -55,7 +55,6 @@ public abstract class Search {
     // Instance Methods
     // *********************************************************************
  
-    @SuppressWarnings("unused") 
     public List<SearchRecord> search(SearchCriteria criteria, SearchFrom searchFrom) throws Exception {
 
         List<SearchRecord> records = new ArrayList<>();
@@ -79,8 +78,7 @@ public abstract class Search {
 
         if (grams1 != null && hashes1 != null) {
 
-            // if (criteria.searchTypes.contains(SearchType.FULL_LENGTH) && criteria.searchTypes.size() == 1) {
-            if (false) {
+            if (criteria.searchTypes.contains(SearchType.FULL_LENGTH) && criteria.searchTypes.size() == 1) {
 
                 // parallel band match searches to gather lsh candidates
                 records = IntStream.range(0, Constants.BAND_CHECK_COUNT).boxed().parallel()
@@ -377,9 +375,7 @@ public abstract class Search {
                     double contains = Integer.MIN_VALUE;
 
                     if (criteria.searchTypes.contains(SearchType.FULL_LENGTH)) {
-                        if (grams2AsList.size() > Math.ceil(grams1.size() / 2.0) && grams2AsList.size() < grams1.size() * 2) {
-                            fullLength = LCS.getLCSScoreFullLength(grams1, grams2AsList);
-                        }
+                        fullLength = LCS.getLCSScoreFullLength(grams1, grams2AsList);
                     }
                     if (criteria.searchTypes.contains(SearchType.CONTAINED_IN)) {
                         if (grams2AsList.size() > Math.ceil(grams1.size() / 2.0)) {
