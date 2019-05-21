@@ -1,15 +1,11 @@
 package edu.umkc.rupee.base;
 
-import edu.umkc.rupee.defs.SearchType;
-
 public class SearchRecord {
     
     private int n;
     private String dbId;
     private String pdbId;
     private String sortKey;
-    private SearchType searchType;
-    private boolean similarLength;
     private double similarity;
     private double rmsd;
     private double tmScore;
@@ -44,22 +40,6 @@ public class SearchRecord {
 
     public void setSortKey(String sortKey) {
         this.sortKey = sortKey;
-    }
-
-    public SearchType getSearchType() {
-        return searchType;
-    }
-
-    public void setSearchType(SearchType searchType) {
-        this.searchType = searchType;
-    }
-
-    public boolean isSimilarLength() {
-        return similarLength;
-    }
-
-    public void setSimilarLength(boolean essentiallyFullLength) {
-        this.similarLength = essentiallyFullLength;
     }
 
     public double getSimilarity() {

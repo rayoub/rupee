@@ -5,7 +5,6 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.sql.SQLException;
 import java.util.Arrays;
-import java.util.EnumSet;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -314,7 +313,6 @@ public class Main {
             System.out.println(""); 
             System.out.println("LCS Score:              " + score);
 
-            System.out.println("LCS Alignment: \n");
             Map<Integer, String> codeMap = LCS.getCodeMap(grams1, grams2);
             LCS.printLCSFullLength(grams1, grams2, codeMap);
             System.out.println("");
@@ -348,13 +346,6 @@ public class Main {
 
         if (hashes1 != null && hashes2 != null) {
 
-            // band matches
-            String bandMatches = Similarity.getBandMatches(hashes1.bandHashes, hashes2.bandHashes);
-
-            // estimated and exact based on overlapping grams
-            double estimated = Similarity.getEstimatedSimilarity(hashes1.minHashes, hashes2.minHashes);
-            double exact = Similarity.getExactSimilarity(grams1, grams2);
-
             // lcs validated matching grams
             double score = LCS.getLCSScoreContainment(grams1, grams2); 
           
@@ -362,14 +353,8 @@ public class Main {
             System.out.println("Structure 1 Length:     " + grams1.size());
             System.out.println("Structure 2 Length:     " + grams2.size());
             System.out.println(""); 
-            System.out.println("Band matches:           " + bandMatches);
-            System.out.println(""); 
-            System.out.println("Estimated Similarity:   " + estimated);
-            System.out.println("Exact Similarity:       " + exact);
-            System.out.println(""); 
             System.out.println("LCS Score:              " + score);
 
-            System.out.println("LCS Alignment: \n");
             Map<Integer, String> codeMap = LCS.getCodeMap(grams1, grams2);
             LCS.printLCSContainment(grams1, grams2, codeMap);
             System.out.println("");
@@ -496,7 +481,7 @@ public class Main {
             }
 
             criteria.limit = limit;
-            criteria.searchTypes = EnumSet.of(searchType);
+            criteria.searchType = searchType;
             criteria.searchMode = searchMode;
             criteria.sortBy = sortBy;
             criteria.differentFold = diff1;
@@ -564,7 +549,7 @@ public class Main {
             }
 
             criteria.limit = limit;
-            criteria.searchTypes = EnumSet.of(searchType);
+            criteria.searchType = searchType;
             criteria.searchMode = searchMode;
             criteria.sortBy = sortBy;
             criteria.topologyReps = rep1;
@@ -636,7 +621,7 @@ public class Main {
             }
 
             criteria.limit = limit;
-            criteria.searchTypes = EnumSet.of(searchType);
+            criteria.searchType = searchType;
             criteria.searchMode = searchMode;
             criteria.sortBy = sortBy;
             criteria.differentH = diff1;
@@ -694,7 +679,7 @@ public class Main {
             }
 
             criteria.limit = limit;
-            criteria.searchTypes = EnumSet.of(searchType);
+            criteria.searchType = searchType;
             criteria.searchMode = searchMode;
             criteria.sortBy = sortBy;
 

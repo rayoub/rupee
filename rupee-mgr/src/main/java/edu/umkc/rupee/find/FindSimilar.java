@@ -5,7 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.EnumSet;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
@@ -139,7 +138,7 @@ public class FindSimilar {
         criteria.searchDbType = DbType.SCOP;
         criteria.dbId = scopId;
         criteria.limit = 100;
-        criteria.searchTypes = EnumSet.of(searchType);
+        criteria.searchType = searchType;
         criteria.searchMode = SearchMode.FAST;
         criteria.sortBy =  SortBy.SIMILARITY;
         criteria.differentFold = (acrossType == AcrossType.CF ? true : false);

@@ -2,9 +2,9 @@ package edu.umkc.rupee.defs;
 
 public enum SearchType {
 
-    FULL_LENGTH(0, "Full-Length"),
-    CONTAINED_IN(1, "Contained In"),
-    CONTAINS(2, "Contains");
+    FULL_LENGTH(1, "Full-Length"),
+    CONTAINED_IN(2, "Contained In"),
+    CONTAINS(3, "Contains");
 
     private int id;
     private String name;

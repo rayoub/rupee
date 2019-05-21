@@ -172,11 +172,11 @@ public class LCS {
         // build original sequence output
         StringBuilder org1 = new StringBuilder();
         StringBuilder org2 = new StringBuilder();
-        for (int gram : grams1) {
-            org1.append((gram % Constants.DEC_POW_3) / Constants.DEC_POW_2);
+        for (int k = grams1.size() - 1; k >= 0; k--) {
+            org1.append(" " + codeMap.get(grams1.get(k)));
         }
-        for (int gram : grams2) {
-            org2.append((gram % Constants.DEC_POW_3) / Constants.DEC_POW_2);
+        for (int k = grams2.size() - 1; k >= 0; k--) {
+            org2.append(" " + codeMap.get(grams2.get(k)));
         }
 
         // build aligned sequence output
@@ -219,9 +219,14 @@ public class LCS {
         }
 
         // print output
-        System.out.println(org1);
         System.out.println("");
-        System.out.println(org2);
+        System.out.println("Sequences:");
+        System.out.println("");
+        System.out.println(org1.reverse());
+        System.out.println("");
+        System.out.println(org2.reverse());
+        System.out.println("");
+        System.out.println("Aligned Sequences:");
         System.out.println("");
         System.out.println(seq1.reverse());
         System.out.println("");
@@ -300,11 +305,11 @@ public class LCS {
         // build original sequence output
         StringBuilder org1 = new StringBuilder();
         StringBuilder org2 = new StringBuilder();
-        for (int gram : grams1) {
-            org1.append((gram % Constants.DEC_POW_3) / Constants.DEC_POW_2);
+        for (int k = grams1.size() - 1; k >= 0; k--) {
+            org1.append(" " + codeMap.get(grams1.get(k)));
         }
-        for (int gram : grams2) {
-            org2.append((gram % Constants.DEC_POW_3) / Constants.DEC_POW_2);
+        for (int k = grams2.size() - 1; k >= 0; k--) {
+            org2.append(" " + codeMap.get(grams2.get(k)));
         }
 
         // build aligned sequence output
@@ -347,9 +352,14 @@ public class LCS {
         }
 
         // print output
-        System.out.println(org1);
         System.out.println("");
-        System.out.println(org2);
+        System.out.println("Sequences:");
+        System.out.println("");
+        System.out.println(org1.reverse());
+        System.out.println("");
+        System.out.println(org2.reverse());
+        System.out.println("");
+        System.out.println("Aligned Sequences:");
         System.out.println("");
         System.out.println(seq1.reverse());
         System.out.println("");
