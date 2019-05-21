@@ -17,7 +17,6 @@ import org.biojava.nbio.structure.io.PDBFileReader;
 import org.biojava.nbio.structure.secstruc.SecStrucCalc;
 import org.biojava.nbio.structure.secstruc.SecStrucInfo;
 
-import edu.umkc.rupee.base.Import;
 import edu.umkc.rupee.defs.DbType;
 
 public class Labels {
@@ -159,7 +158,7 @@ public class Labels {
                 }
 
                 int residueNumber = g2.getResidueNumber().getSeqNum();
-                int label = Import.calculateRegion(phi, psi, sse);
+                int label = Importing.calculateRegion(phi, psi, sse);
 
                 labels.add(new Label(residueNumber, label));
             }

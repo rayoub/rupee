@@ -27,7 +27,6 @@ import org.biojava.nbio.structure.io.PDBFileReader;
 import org.postgresql.ds.PGSimpleDataSource;
 
 import edu.umkc.rupee.base.Hash;
-import edu.umkc.rupee.base.Import;
 
 public class Uploading {
 
@@ -77,7 +76,7 @@ public class Uploading {
         Structure structure = reader.getStructure(stream);
 
         // get grams
-        Integer[] grams = Import.parseStructure(structure);
+        Integer[] grams = Importing.parseStructure(structure);
 
         return grams;
     }
