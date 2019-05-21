@@ -2,7 +2,6 @@ package edu.umkc.rupee.lib;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.biojava.nbio.structure.AminoAcid;
 import org.biojava.nbio.structure.Calc;
@@ -15,13 +14,12 @@ import org.biojava.nbio.structure.secstruc.SecStrucInfo;
 
 public class Importing {
 
-    public static Integer[] parseStructure(Structure structure) {
+    public static List<Residue> parseStructure(Structure structure) {
 
-        List<Integer> grams = new ArrayList<>();
-
-        SecStrucCalc ssCalc = new SecStrucCalc();
+        List<Residue> residues = new ArrayList<>();
             
         // assign secondary structure
+        SecStrucCalc ssCalc = new SecStrucCalc();
         try {
             ssCalc.calculate(structure, true);
         } catch (StructureException e) {
@@ -33,8 +31,6 @@ public class Importing {
         for(Chain chain : chains) {
         
             // *** gather residues
-            
-            List<Residue> residues = new ArrayList<>();
 
             // iterate residues (i.e. groups of atoms)
             List<Group> groups = chain.getAtomGroups();
@@ -180,11 +176,9 @@ public class Importing {
                 }
             }
 
-            grams.addAll(residues.stream().filter(r -> r.getGram() > 0).map(r -> r.getGram()).collect(Collectors.toList()));
-            
         } // iterating chains
 
-        return grams.stream().toArray(Integer[]::new);
+        return residues;
     }
 
     public static void setRunFactors(List<Residue> residues) {

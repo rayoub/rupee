@@ -76,7 +76,7 @@ public class Uploading {
         Structure structure = reader.getStructure(stream);
 
         // get grams
-        Integer[] grams = Importing.parseStructure(structure);
+        Integer[] grams = Importing.parseStructure(structure).stream().filter(r -> r.getGram() > 0).map(r -> r.getGram()).toArray(Integer[]::new);
 
         return grams;
     }

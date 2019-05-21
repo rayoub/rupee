@@ -104,7 +104,7 @@ public abstract class Import {
                     Structure structure = reader.getStructure(fileName);
                     structure.setPDBCode(pdbId);
                 
-                    Integer[] grams = Importing.parseStructure(structure);
+                    Integer[] grams = Importing.parseStructure(structure).stream().filter(r -> r.getGram() > 0).map(r -> r.getGram()).toArray(Integer[]::new);
 
                     saveGrams(dbId, grams, conn);
 
