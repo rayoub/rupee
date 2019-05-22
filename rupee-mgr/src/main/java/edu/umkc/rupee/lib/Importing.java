@@ -108,7 +108,7 @@ public class Importing {
                 residue.setChainId(chain.getId());
                 residue.setAtomNumber(g2.getAtom("CA").getPDBserial());
                 residue.setResidueNumber(g2.getResidueNumber().getSeqNum());
-                residue.setResidueCode(String.valueOf(g2.getResidueNumber().getInsCode()));
+                residue.setInsertCode(String.valueOf(g2.getResidueNumber().getInsCode()));
                 residue.setResidueCode(residueCode);
                 residue.setSSA(ssa);
                 residue.setSSE(sse);
