@@ -281,13 +281,24 @@ public class Main {
         String dbId1 = args[0];
         String dbId2 = args[1];
 
-        DbType dbType1 = DbId.getIdDbType(dbId1);
+        int uploadId1 = tryParseInt(dbId1);
+
+        Hashes hashes1;
+        List<Integer> grams1;
+        if (uploadId1 != -1) {
+
+            hashes1 = Db.getUploadHashes(uploadId1);
+            grams1 = Db.getUploadGrams(uploadId1);
+        }
+        else {
+
+            DbType dbType1 = DbId.getIdDbType(dbId1);
+            hashes1 = Db.getHashes(dbId1, dbType1);
+            grams1 = Db.getGrams(dbId1, dbType1);
+        }
+        
         DbType dbType2 = DbId.getIdDbType(dbId2);
-
-        Hashes hashes1 = Db.getHashes(dbId1, dbType1);
         Hashes hashes2 = Db.getHashes(dbId2, dbType2);
-
-        List<Integer> grams1 = Db.getGrams(dbId1, dbType1);
         List<Integer> grams2 = Db.getGrams(dbId2, dbType2);
 
         if (hashes1 != null && hashes2 != null) {
@@ -335,13 +346,24 @@ public class Main {
         String dbId1 = args[0];
         String dbId2 = args[1];
 
-        DbType dbType1 = DbId.getIdDbType(dbId1);
+        int uploadId1 = tryParseInt(dbId1);
+
+        Hashes hashes1;
+        List<Integer> grams1;
+        if (uploadId1 != -1) {
+
+            hashes1 = Db.getUploadHashes(uploadId1);
+            grams1 = Db.getUploadGrams(uploadId1);
+        }
+        else {
+
+            DbType dbType1 = DbId.getIdDbType(dbId1);
+            hashes1 = Db.getHashes(dbId1, dbType1);
+            grams1 = Db.getGrams(dbId1, dbType1);
+        }
+        
         DbType dbType2 = DbId.getIdDbType(dbId2);
-
-        Hashes hashes1 = Db.getHashes(dbId1, dbType1);
         Hashes hashes2 = Db.getHashes(dbId2, dbType2);
-
-        List<Integer> grams1 = Db.getGrams(dbId1, dbType1);
         List<Integer> grams2 = Db.getGrams(dbId2, dbType2);
 
         if (hashes1 != null && hashes2 != null) {
@@ -461,9 +483,9 @@ public class Main {
         //***  OUTPUT
         //*************************************************************
 
-        SearchType searchType = SearchType.CONTAINED_IN;
+        SearchType searchType = SearchType.ALIGN_ALL;
 
-        boolean verbose = false; 
+        boolean verbose = true; 
         boolean timing = false;
 
         if (dbType == DbType.SCOP) { 
