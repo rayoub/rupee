@@ -303,7 +303,7 @@ public class TMAlign {
         // * get initial alignment based on local superposition *
         // ********************************************************************************** //
 
-        if (mode == Mode.REGULAR && get_initial5(xa, ya, xlen, ylen, invmap)) {
+        if (this.mode != Mode.FAST && get_initial5(xa, ya, xlen, ylen, invmap)) {
 
             TM = detailed_search(xa, ya, xlen, ylen, invmap, t, u, simplify_step, score_sum_method, local_d0_search);
 
@@ -602,7 +602,7 @@ public class TMAlign {
 
             results.setOutput(sb.toString());
         }
-        else if (mode == Mode.ALIGN_3D) {
+        else if (this.mode == Mode.ALIGN_3D) {
 
             int xlenreal = 0;
             for(Group g : xgroups) {
