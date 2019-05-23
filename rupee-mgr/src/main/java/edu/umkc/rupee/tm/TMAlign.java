@@ -164,8 +164,8 @@ public class TMAlign {
         Chain ychain = ystruct.getChains().get(0);
 
         // get groups of atoms per residue
-        List<Group> xgroups = xchain.getAtomGroups().stream().filter(g -> !g.isHetAtomInFile() && g.hasAtom("CA")).collect(Collectors.toList());
-        List<Group> ygroups = ychain.getAtomGroups().stream().filter(g -> !g.isHetAtomInFile() && g.hasAtom("CA")).collect(Collectors.toList());
+        List<Group> xgroups = xchain.getAtomGroups().stream().filter(g -> g.hasAtom("CA")).collect(Collectors.toList());
+        List<Group> ygroups = ychain.getAtomGroups().stream().filter(g -> g.hasAtom("CA")).collect(Collectors.toList());
 
         // get carbon alpha atoms per residue
         List<Atom> xatoms = xgroups.stream().map(g -> g.getAtom("CA")).collect(Collectors.toList());
