@@ -32,8 +32,8 @@ import edu.umkc.rupee.lib.Db;
 import edu.umkc.rupee.lib.Hashes;
 import edu.umkc.rupee.lib.LCS;
 import edu.umkc.rupee.lib.Similarity;
-import edu.umkc.rupee.tm.Mode;
-import edu.umkc.rupee.tm.TMAlign;
+import edu.umkc.rupee.tm.TmMode;
+import edu.umkc.rupee.tm.TmAlign;
 
 public abstract class Search {
 
@@ -160,20 +160,20 @@ public abstract class Search {
                 
                 // filter for fast alignments 
                 records = records.stream()
-                    .limit(alignmentFilter(Mode.FAST, grams1.size()))
+                    .limit(alignmentFilter(TmMode.FAST, grams1.size()))
                     .collect(Collectors.toList());
                 
                 // fast alignments
-                records.stream().parallel().forEach(record -> align(criteria, record, queryStructure, Mode.FAST));
+                records.stream().parallel().forEach(record -> align(criteria, record, queryStructure, TmMode.FAST));
 
                 // sort and filter for regular alignments
                 records = records.stream()
                     .sorted(comparator)
-                    .limit(alignmentFilter(Mode.REGULAR, grams1.size())) 
+                    .limit(alignmentFilter(TmMode.REGULAR, grams1.size())) 
                     .collect(Collectors.toList());
                 
                 // regular alignments
-                records.stream().parallel().forEach(record -> align(criteria, record, queryStructure, Mode.REGULAR));
+                records.stream().parallel().forEach(record -> align(criteria, record, queryStructure, TmMode.REGULAR));
 
             } 
             else if (criteria.searchType == SearchType.ALIGN_ALL) {
@@ -206,16 +206,16 @@ public abstract class Search {
                 // *** perform alignments
                 
                 // fast alignments
-                records.stream().parallel().forEach(record -> alignAll(criteria, record, queryStructure, Mode.FAST));
+                records.stream().parallel().forEach(record -> alignAll(criteria, record, queryStructure, TmMode.FAST));
 
                 // sort and filter for regular alignments
                 records = records.stream()
                     .sorted(comparator)
-                    .limit(alignmentFilter(Mode.REGULAR, 1000)) 
+                    .limit(alignmentFilter(TmMode.REGULAR, 1000)) 
                     .collect(Collectors.toList());
                 
                 // regular alignments
-                records.stream().parallel().forEach(record -> alignAll(criteria, record, queryStructure, Mode.REGULAR));
+                records.stream().parallel().forEach(record -> alignAll(criteria, record, queryStructure, TmMode.REGULAR));
             }
 
             // sort using comparator from above
@@ -253,9 +253,9 @@ public abstract class Search {
         return records;
     }
 
-    private int alignmentFilter(Mode mode, int gramCount) {
+    private int alignmentFilter(TmMode mode, int gramCount) {
 
-        if (mode == Mode.FAST) {
+        if (mode == TmMode.FAST) {
 
             if (gramCount <= 200) {
                 return 8000; 
@@ -300,7 +300,7 @@ public abstract class Search {
         return comparator;
     }
 
-    private void align(SearchCriteria criteria, SearchRecord record, Structure queryStructure, Mode mode) {
+    private void align(SearchCriteria criteria, SearchRecord record, Structure queryStructure, TmMode mode) {
 
         try {
        
@@ -310,8 +310,8 @@ public abstract class Search {
             Parser parser = new Parser(Integer.MAX_VALUE);
             Structure targetStructure = parser.parsePDBFile(targetFileGz);
      
-            TMAlign tm = new TMAlign(mode);
-            TMAlign.Results results = tm.align(queryStructure, targetStructure);
+            TmAlign tm = new TmAlign(mode);
+            TmAlign.Results results = tm.align(queryStructure, targetStructure);
 
             record.setRmsd(results.getRmsd());
 
@@ -340,7 +340,7 @@ public abstract class Search {
         }
     }
     
-    private void alignAll(SearchCriteria criteria, SearchRecord record, Structure queryStructure, Mode mode) {
+    private void alignAll(SearchCriteria criteria, SearchRecord record, Structure queryStructure, TmMode mode) {
 
         try {
        
@@ -350,8 +350,8 @@ public abstract class Search {
             Parser parser = new Parser(Integer.MAX_VALUE);
             Structure targetStructure = parser.parsePDBFile(targetFileGz);
      
-            TMAlign tm = new TMAlign(mode);
-            TMAlign.Results results = tm.align(queryStructure, targetStructure);
+            TmAlign tm = new TmAlign(mode);
+            TmAlign.Results results = tm.align(queryStructure, targetStructure);
 
             record.setRmsd(results.getRmsd());
 

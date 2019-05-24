@@ -1,6 +1,6 @@
 package edu.umkc.rupee.tm;
 
-public enum Mode {
+public enum TmMode {
 
     REGULAR(30,20),
     FAST(2,2),
@@ -10,7 +10,7 @@ public enum Mode {
     private int dpIterations;
     private int scoreIterations;
 
-    Mode(int dpIterations, int scoreIterations) {
+    TmMode(int dpIterations, int scoreIterations) {
        
         this.dpIterations = dpIterations;
         this.scoreIterations = scoreIterations;

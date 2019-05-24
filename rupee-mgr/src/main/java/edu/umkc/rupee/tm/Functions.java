@@ -14,15 +14,15 @@ public class Functions {
         return (a[0] * b[0] + a[1] * b[1] + a[2] * b[2]);
     }
 
-    public static void transform(double t[], double u[][], double x[], double x1[]) {
-        x1[0] = t[0] + dot(u[0], x);
-        x1[1] = t[1] + dot(u[1], x);
-        x1[2] = t[2] + dot(u[2], x);
+    public static void transform(double t[], double u[][], double from[], double to[]) {
+        to[0] = t[0] + dot(u[0], from);
+        to[1] = t[1] + dot(u[1], from);
+        to[2] = t[2] + dot(u[2], from);
     }
 
-    public static void do_rotation(double x[][], double x1[][], int len, double t[], double u[][]) {
+    public static void do_rotation(double from[][], double to[][], int len, double t[], double u[][]) {
         for (int i = 0; i < len; i++) {
-            transform(t, u, x[i], x1[i]);
+            transform(t, u, from[i], to[i]);
         }
     }
 }

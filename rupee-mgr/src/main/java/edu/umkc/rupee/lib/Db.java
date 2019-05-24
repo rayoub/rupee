@@ -217,6 +217,36 @@ public class Db {
         return dbIds;
     }
     
+    public static List<AlignmentScores> getAlignmentScores(String version) {
+
+        List<AlignmentScores> list = new ArrayList<>();
+
+        try {
+
+            PGSimpleDataSource ds = Db.getDataSource();
+            Connection conn = ds.getConnection();
+
+            PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_alignment_scores(?);");
+            stmt.setString(1, version);
+
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+
+                AlignmentScores scores = new AlignmentScores(rs);
+                list.add(scores);
+            }
+
+            rs.close();
+            stmt.close();
+            conn.close();
+        
+        } catch (SQLException e) {
+            Logger.getLogger(Db.class.getName()).log(Level.WARNING, null, e);
+        }
+
+        return list;
+    }
+    
     public static Map<String, AlignmentScores> getAlignmentScores(String version, String dbId) {
 
         Map<String, AlignmentScores> map = new HashMap<>();
@@ -234,7 +264,6 @@ public class Db {
             while (rs.next()) {
 
                 AlignmentScores scores = new AlignmentScores(rs);
-
                 map.put(scores.getDbId2(), scores);
             }
 

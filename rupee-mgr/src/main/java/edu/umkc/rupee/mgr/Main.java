@@ -59,8 +59,9 @@ import edu.umkc.rupee.scop.ScopImport;
 import edu.umkc.rupee.scop.ScopSearch;
 import edu.umkc.rupee.scop.ScopSearchCriteria;
 import edu.umkc.rupee.scop.ScopSearchRecord;
-import edu.umkc.rupee.tm.Mode;
-import edu.umkc.rupee.tm.TMAlign;
+import edu.umkc.rupee.tm.Testing;
+import edu.umkc.rupee.tm.TmAlign;
+import edu.umkc.rupee.tm.TmMode;
 
 public class Main {
 
@@ -270,7 +271,7 @@ public class Main {
         String dbId1 = args[0];
         String dbId2 = args[1];
 
-        TMAlign.Results results = Aligning.tmAlign(dbId1, dbId2, Mode.ALIGN_TEXT);
+        TmAlign.Results results = Aligning.tmAlign(dbId1, dbId2, TmMode.ALIGN_TEXT);
         System.out.print(results.getOutput());
     }
 
@@ -759,6 +760,7 @@ public class Main {
 
     private static void option_d(CommandLine line) throws Exception {
 
+        Testing.test();
         /*
         List<Labels.Label> labels = Labels.getLabels("d2pf2a2", DbTypeCriteria.SCOP);
         for (Labels.Label label : labels) {

@@ -19,8 +19,8 @@ import org.biojava.nbio.structure.io.PDBFileReader;
 
 import edu.umkc.rupee.defs.AlignmentType;
 import edu.umkc.rupee.defs.DbType;
-import edu.umkc.rupee.tm.Mode;
-import edu.umkc.rupee.tm.TMAlign;
+import edu.umkc.rupee.tm.TmMode;
+import edu.umkc.rupee.tm.TmAlign;
 
 public class Aligning
 {
@@ -107,9 +107,9 @@ public class Aligning
         return record;
     }
     
-    public static TMAlign.Results tmAlign(String dbId1, String dbId2, Mode mode) {
+    public static TmAlign.Results tmAlign(String dbId1, String dbId2, TmMode mode) {
 
-        TMAlign.Results results = null;
+        TmAlign.Results results = null;
 
         try {
 
@@ -130,7 +130,7 @@ public class Aligning
             queryStructure.setName(dbId1);
             targetStructure.setName(dbId2);
 
-            TMAlign tm = new TMAlign(mode);
+            TmAlign tm = new TmAlign(mode);
             results = tm.align(queryStructure, targetStructure);
 
         } catch (IOException e) {
@@ -140,9 +140,9 @@ public class Aligning
         return results;
     }
 
-    public static TMAlign.Results tmAlign(int uploadId, String dbId, Mode mode) {
+    public static TmAlign.Results tmAlign(int uploadId, String dbId, TmMode mode) {
 
-        TMAlign.Results results = null;
+        TmAlign.Results results = null;
 
         try {
 
@@ -161,7 +161,7 @@ public class Aligning
             queryStructure.setName("upload");
             targetStructure.setName(dbId);
 
-            TMAlign tm = new TMAlign(mode);
+            TmAlign tm = new TmAlign(mode);
             results = tm.align(queryStructure, targetStructure);
 
         } catch (IOException e) {
