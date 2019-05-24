@@ -232,8 +232,12 @@ public class TmAlign {
         // * parameter set *
         // ********************************************************************************** //
 
-        // set: D0_MIN, Lnorm, d0, d0_search, score_d8
+        // set d0 terms and normalization term
         parameter_set4search(_xlen, _ylen); 
+      
+        // set globals 
+        _dist_cut = 4.25; 
+        _score_d8 = 1.5 * Math.pow(_normalize_by * 1.0, 0.3) + 3.5;
        
         // set scoring method 
         int simplify_step = 40; 
@@ -779,43 +783,48 @@ public class TmAlign {
     // **********************************************************************************
 
     public void parameter_set4search(int xlen, int ylen) {
-        // parameter initilization for searching: D0_MIN, Lnorm, d0, d0_search,
-        // score_d8
-        _D0_MIN = 0.5;
-        _dist_cut = 4.25; // update 3.85-->4.25
+        
+        _normalize_by = Math.min(xlen, ylen); 
+                                            
+        // set d0 term
+        if (_normalize_by <= 19) {
 
-        _normalize_by = Math.min(xlen, ylen); // normaliz TMscore by this in
-                                                // searching
-        if (_normalize_by <= 19) // update 15-->19
-        {
-            _d0 = 0.168; // update 0.5-->0.168
+            _d0 = 0.168; 
         } else {
+
+            // equation (5) from Zhang, 2004
             _d0 = (1.24 * Math.pow((_normalize_by * 1.0 - 15), 1.0 / 3.0) - 1.8);
         }
-        _D0_MIN = _d0 + 0.8; // this should be moved to above
-        _d0 = _D0_MIN; // update: best for search
 
+        _d0 = _d0 + 0.8;
+        _D0_MIN = _d0; 
+       
+        // set bounded d0 term 
         _d0_bounded = _d0;
         if (_d0_bounded > 8)
             _d0_bounded = 8;
         if (_d0_bounded < 4.5)
             _d0_bounded = 4.5;
-
-        _score_d8 = 1.5 * Math.pow(_normalize_by * 1.0, 0.3) + 3.5;
     }
 
     public void parameter_set4final(double len) {
-        _D0_MIN = 0.5;
+        
+        _normalize_by = len; 
 
-        _normalize_by = len; // normaliz TMscore by this in searching
         if (_normalize_by <= 21) {
+
             _d0 = 0.5;
         } else {
+
+            // equation (5) from Zhang, 2004
             _d0 = (1.24 * Math.pow((_normalize_by * 1.0 - 15), 1.0 / 3) - 1.8);
         }
+
+        _D0_MIN = 0.5;
         if (_d0 < _D0_MIN)
             _d0 = _D0_MIN;
 
+        // set bounded d0 term 
         _d0_bounded = _d0;
         if (_d0_bounded > 8)
             _d0_bounded = 8;
