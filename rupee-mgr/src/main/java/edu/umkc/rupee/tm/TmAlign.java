@@ -1609,60 +1609,62 @@ public class TmAlign {
     
     public double TMscore8_search(
             double xtm[][], double ytm[][], 
-            int Lali, 
-            double t0[], double u0[][],
+            int align_len, 
+            double t_out[], double u_out[][],
             int simplify_step,
             int score_sum_method) {
 
         int i, m;
-        double score_max;
         MutableDouble score = new MutableDouble(0.0);
-        int kmax = Lali;
+        int kmax = align_len;
         int k_ali[] = new int[kmax];
         int ka, k;
         double t[] = new double[3];
         double u[][] = new double[3][3];
-        double d;
+        double dist_th;
 
-        // iterative parameters
-        int n_it = _mode.getScoreIterations(); // maximum number of iterations
-        int n_init_max = 6; // maximum number of different fragment length
-        int L_ini[] = new int[n_init_max]; // fragment lengths, Lali, Lali/2,
-                                            // Lali/4 ... 4
-        int L_ini_min = 4;
-        if (Lali < 4)
-            L_ini_min = Lali;
-        int n_init = 0, i_init;
-        for (i = 0; i < n_init_max - 1; i++) {
-            n_init++;
-            L_ini[i] = (int) (Lali / Math.pow(2.0, (double) i));
-            if (L_ini[i] <= L_ini_min) {
-                L_ini[i] = L_ini_min;
+        int num_iters = _mode.getScoreIterations(); 
+        int max_num_frag_lens = 6; 
+        // fragment lengths, align_len, align_len/2, align_len/4 ... 4
+        int frag_lens[] = new int[max_num_frag_lens]; 
+                                            
+        // initialize fragment lengths
+        int min_frag_len = 4;
+        if (align_len < 4)
+            min_frag_len = align_len;
+        int num_frag_lens = 0;
+        for (i = 0; i < max_num_frag_lens - 1; i++) {
+            num_frag_lens++;
+            frag_lens[i] = (int) (align_len / Math.pow(2.0, (double) i));
+            if (frag_lens[i] <= min_frag_len) {
+                frag_lens[i] = min_frag_len;
                 break;
             }
         }
-        if (i == n_init_max - 1) {
-            n_init++;
-            L_ini[i] = L_ini_min;
+        // if we made it all the way to the end
+        if (i == max_num_frag_lens - 1) {
+            num_frag_lens++;
+            frag_lens[i] = min_frag_len;
         }
 
-        score_max = -1;
-        // find the maximum score starting from local structures superposition
-        int i_ali[] = new int[kmax];
-        int n_cut;
-        int L_frag; // fragment length
-        int iL_max; // maximum starting postion for the fragment
+        // find the maximum score starting from superposition of fragments
+        double max_score = -1;
+        int sat_indices[] = new int[kmax];
+        int num_sat;
+        int frag_len; 
+        int max_start_pos; 
 
-        for (i_init = 0; i_init < n_init; i_init++) {
-            L_frag = L_ini[i_init];
-            iL_max = Lali - L_frag;
+        for (int j = 0; j < num_frag_lens; j++) {
 
-            i = 0;
+            frag_len = frag_lens[j];
+            max_start_pos = align_len - frag_len;
+
+            int pos = 0;
             while (true) {
                 // extract the fragment starting from position i
                 ka = 0;
-                for (k = 0; k < L_frag; k++) {
-                    int kk = k + i;
+                for (k = 0; k < frag_len; k++) {
+                    int kk = k + pos;
                     _r1[k][0] = xtm[kk][0];
                     _r1[k][1] = xtm[kk][1];
                     _r1[k][2] = xtm[kk][2];
@@ -1676,30 +1678,30 @@ public class TmAlign {
                 }
 
                 // extract rotation matrix based on the fragment
-                Kabsch.execute(_r1, _r2, L_frag, 1, t, u);
-                Functions.do_rotation(xtm, _xt, Lali, t, u);
+                Kabsch.execute(_r1, _r2, frag_len, 1, t, u);
+                Functions.do_rotation(xtm, _xt, align_len, t, u);
 
                 // get subsegment of this fragment
-                d = _d0_bounded - 1;
-                n_cut = calculate_tm_score(_xt, ytm, Lali, d, i_ali, score, score_sum_method, false);
-                if (score.getValue() > score_max) {
-                    score_max = score.getValue();
+                dist_th = _d0_bounded - 1;
+                num_sat = calculate_tm_score(_xt, ytm, align_len, dist_th, sat_indices, score, score_sum_method, false);
+                if (score.getValue() > max_score) {
+                    max_score = score.getValue();
 
                     // save the rotation matrix
                     for (k = 0; k < 3; k++) {
-                        t0[k] = t[k];
-                        u0[k][0] = u[k][0];
-                        u0[k][1] = u[k][1];
-                        u0[k][2] = u[k][2];
+                        t_out[k] = t[k];
+                        u_out[k][0] = u[k][0];
+                        u_out[k][1] = u[k][1];
+                        u_out[k][2] = u[k][2];
                     }
                 }
 
                 // try to extend the alignment iteratively
-                d = _d0_bounded + 1;
-                for (int it = 0; it < n_it; it++) {
+                dist_th = _d0_bounded + 1;
+                for (int it = 0; it < num_iters; it++) {
                     ka = 0;
-                    for (k = 0; k < n_cut; k++) {
-                        m = i_ali[k];
+                    for (k = 0; k < num_sat; k++) {
+                        m = sat_indices[k];
                         _r1[k][0] = xtm[m][0];
                         _r1[k][1] = xtm[m][1];
                         _r1[k][2] = xtm[m][2];
@@ -1712,45 +1714,44 @@ public class TmAlign {
                         ka++;
                     }
                     // extract rotation matrix based on the fragment
-                    Kabsch.execute(_r1, _r2, n_cut, 1, t, u);
-                    Functions.do_rotation(xtm, _xt, Lali, t, u);
-                    n_cut = calculate_tm_score(_xt, ytm, Lali, d, i_ali, score, score_sum_method, false);
-                    if (score.getValue() > score_max) {
-                        score_max = score.getValue();
+                    Kabsch.execute(_r1, _r2, num_sat, 1, t, u);
+                    Functions.do_rotation(xtm, _xt, align_len, t, u);
+                    num_sat = calculate_tm_score(_xt, ytm, align_len, dist_th, sat_indices, score, score_sum_method, false);
+                    if (score.getValue() > max_score) {
+                        max_score = score.getValue();
 
                         // save the rotation matrix
                         for (k = 0; k < 3; k++) {
-                            t0[k] = t[k];
-                            u0[k][0] = u[k][0];
-                            u0[k][1] = u[k][1];
-                            u0[k][2] = u[k][2];
+                            t_out[k] = t[k];
+                            u_out[k][0] = u[k][0];
+                            u_out[k][1] = u[k][1];
+                            u_out[k][2] = u[k][2];
                         }
                     }
 
                     // check if it converges
-                    if (n_cut == ka) {
-                        for (k = 0; k < n_cut; k++) {
-                            if (i_ali[k] != k_ali[k]) {
+                    if (num_sat == ka) {
+                        for (k = 0; k < num_sat; k++) {
+                            if (sat_indices[k] != k_ali[k]) {
                                 break;
                             }
                         }
-                        if (k == n_cut) {
+                        if (k == num_sat) {
                             break; // stop iteration
                         }
                     }
                 } // for iteration
 
-                if (i < iL_max) {
-                    i = i + simplify_step; // shift the fragment
-                    if (i > iL_max)
-                        i = iL_max; // do this to use the last missed fragment
-                } else if (i >= iL_max) {
+                if (pos < max_start_pos) {
+                    pos = Math.min(pos + simplify_step, max_start_pos);
+                } else {
                     break;
                 }
-            } // while(1)
-                // end of one fragment
-        } // for(i_init
-        return score_max;
+
+            } // while(true)
+        } // fragment lengths iter
+        
+        return max_score;
     }
 
     public double TMscore8_search_standard(
