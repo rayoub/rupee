@@ -1616,8 +1616,6 @@ public class TmAlign {
 
         int i, m;
         MutableDouble score = new MutableDouble(0.0);
-        int kmax = align_len;
-        int k_ali[] = new int[kmax];
         int ka, k;
         double t[] = new double[3];
         double u[][] = new double[3][3];
@@ -1649,7 +1647,7 @@ public class TmAlign {
 
         // find the maximum score starting from superposition of fragments
         double max_score = -1;
-        int sat_indices[] = new int[kmax];
+        int sat_indices[] = new int[align_len];
         int num_sat;
         int frag_len; 
         int max_start_pos; 
@@ -1661,27 +1659,28 @@ public class TmAlign {
 
             int pos = 0;
             while (true) {
-                // extract the fragment starting from position i
-                ka = 0;
+                
+                // extract the fragment starting from pos and pack
                 for (k = 0; k < frag_len; k++) {
-                    int kk = k + pos;
-                    _r1[k][0] = xtm[kk][0];
-                    _r1[k][1] = xtm[kk][1];
-                    _r1[k][2] = xtm[kk][2];
 
-                    _r2[k][0] = ytm[kk][0];
-                    _r2[k][1] = ytm[kk][1];
-                    _r2[k][2] = ytm[kk][2];
+                    int offset_k = k + pos;
 
-                    k_ali[ka] = kk;
-                    ka++;
+                    _r1[k][0] = xtm[offset_k][0];
+                    _r1[k][1] = xtm[offset_k][1];
+                    _r1[k][2] = xtm[offset_k][2];
+
+                    _r2[k][0] = ytm[offset_k][0];
+                    _r2[k][1] = ytm[offset_k][1];
+                    _r2[k][2] = ytm[offset_k][2];
                 }
 
-                // extract rotation matrix based on the fragment
+                // calculate rotation matrix based on the fragment
                 Kabsch.execute(_r1, _r2, frag_len, 1, t, u);
+                
+                // peform rotation and store in xt
                 Functions.do_rotation(xtm, _xt, align_len, t, u);
 
-                // get subsegment of this fragment
+                // calcualte tm-score and get indices satisfying distance threshold
                 dist_th = _d0_bounded - 1;
                 num_sat = calculate_tm_score(_xt, ytm, align_len, dist_th, sat_indices, score, score_sum_method, false);
                 if (score.getValue() > max_score) {
@@ -1697,6 +1696,7 @@ public class TmAlign {
                 }
 
                 // try to extend the alignment iteratively
+                int last_sat_indices[] = new int[align_len];
                 dist_th = _d0_bounded + 1;
                 for (int it = 0; it < num_iters; it++) {
                     ka = 0;
@@ -1710,7 +1710,7 @@ public class TmAlign {
                         _r2[k][1] = ytm[m][1];
                         _r2[k][2] = ytm[m][2];
 
-                        k_ali[ka] = m;
+                        last_sat_indices[ka] = m;
                         ka++;
                     }
                     // extract rotation matrix based on the fragment
@@ -1732,7 +1732,7 @@ public class TmAlign {
                     // check if it converges
                     if (num_sat == ka) {
                         for (k = 0; k < num_sat; k++) {
-                            if (sat_indices[k] != k_ali[k]) {
+                            if (sat_indices[k] != last_sat_indices[k]) {
                                 break;
                             }
                         }
