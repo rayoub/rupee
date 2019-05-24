@@ -116,8 +116,7 @@ public class TMAlign {
      *  get_score_fast
      *  TMscore8_search
      *  TMscore8_search_standard
-     *  score_fun8
-     *  score_fun8_standard
+     *  calculate_tm_score
      */
 
     private Mode _mode;                             // regular, fast, ...
@@ -1705,7 +1704,7 @@ public class TMAlign {
 
                 // get subsegment of this fragment
                 d = _d0_search - 1;
-                n_cut = score_fun8(_xt, ytm, align_len, d, i_ali, score, score_sum_method, false);
+                n_cut = calculate_tm_score(_xt, ytm, align_len, d, i_ali, score, score_sum_method, false);
                 if (score.getValue() > max_score) {
                     max_score = score.getValue();
 
@@ -1742,7 +1741,7 @@ public class TMAlign {
                     // peform rotation and store in xt
                     Functions.do_rotation(xtm, _xt, align_len, t, u);
                     
-                    n_cut = score_fun8(_xt, ytm, align_len, d, i_ali, score, score_sum_method, false);
+                    n_cut = calculate_tm_score(_xt, ytm, align_len, d, i_ali, score, score_sum_method, false);
                     if (score.getValue() > max_score) {
                         max_score = score.getValue();
 
@@ -1857,7 +1856,7 @@ public class TMAlign {
 
                 // get subsegment of this fragment
                 d = _d0_search - 1;
-                n_cut = score_fun8(_xt, ytm, Lali, d, i_ali, score, score_sum_method, true);
+                n_cut = calculate_tm_score(_xt, ytm, Lali, d, i_ali, score, score_sum_method, true);
 
                 if (score.getValue() > score_max) {
                     score_max = score.getValue();
@@ -1891,7 +1890,7 @@ public class TMAlign {
                     // extract rotation matrix based on the fragment
                     Kabsch.execute(_r1, _r2, n_cut, 1, rmsd, t, u);
                     Functions.do_rotation(xtm, _xt, Lali, t, u);
-                    n_cut = score_fun8(_xt, ytm, Lali, d, i_ali, score, score_sum_method, true);
+                    n_cut = calculate_tm_score(_xt, ytm, Lali, d, i_ali, score, score_sum_method, true);
                     if (score.getValue() > score_max) {
                         score_max = score.getValue();
 
@@ -1930,8 +1929,7 @@ public class TMAlign {
         return score_max;
     }
     
-    // calculate TMscore
-    public int score_fun8(
+    public int calculate_tm_score(
             double xa[][], double ya[][],
             int align_len, 
             double dist_th, int sat_indices[], 
