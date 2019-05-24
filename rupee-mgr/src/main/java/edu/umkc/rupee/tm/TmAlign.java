@@ -258,7 +258,6 @@ public class TmAlign {
         double ddcc = 0.4;
         if (_normalize_by <= 40)
             ddcc = 0.1; 
-        double local_d0_search = _d0_bounded;
 
         // ********************************************************************************** //
         // * get initial alignment with gapless threading *
@@ -270,7 +269,7 @@ public class TmAlign {
         if (TM > TMmax) {
             TMmax = TM;
         }
-        TM = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 0, 2, _mode.getDpIterations(), local_d0_search);
+        TM = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 0, 2, _mode.getDpIterations());
         if (TM > TMmax) {
             TMmax = TM;
             for (int i = 0; i < _ylen; i++) {
@@ -292,7 +291,7 @@ public class TmAlign {
             }
         }
         if (TM > TMmax * 0.2) {
-            TM = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 0, 2, _mode.getDpIterations(), local_d0_search);
+            TM = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 0, 2, _mode.getDpIterations());
             if (TM > TMmax) {
                 TMmax = TM;
                 for (int i = 0; i < _ylen; i++) {
@@ -316,7 +315,7 @@ public class TmAlign {
                 }
             }
             if (TM > TMmax * ddcc) {
-                TM = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 0, 2, 2, local_d0_search);
+                TM = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 0, 2, 2);
                 if (TM > TMmax) {
                     TMmax = TM;
                     for (int i = 0; i < _ylen; i++) {
@@ -340,7 +339,7 @@ public class TmAlign {
             }
         }
         if (TM > TMmax * ddcc) {
-            TM = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 0, 2, _mode.getDpIterations(), local_d0_search);
+            TM = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 0, 2, _mode.getDpIterations());
             if (TM > TMmax) {
                 TMmax = TM;
                 for (int i = 0; i < _ylen; i++) {
@@ -363,7 +362,7 @@ public class TmAlign {
             }
         }
         if (TM > TMmax * ddcc) {
-            TM = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 1, 2, 2, local_d0_search);
+            TM = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 1, 2, 2);
             if (TM > TMmax) {
                 TMmax = TM;
                 for (int i = 0; i < _ylen; i++) {
@@ -456,29 +455,21 @@ public class TmAlign {
         double u0[][] = new double[3][3];
         double TM1, TM2, TM3; // confusing but TM2 is normalized by first structure and TM1 by second
         double d0_out=5.0;  
-        double Lnorm_0 = _ylen;
 
         // set score method 
         simplify_step = 1;
         score_sum_method = 0;
     
         //normalized by length of second structure
-        parameter_set4final(Lnorm_0);
-        double d0A=_d0;
-        local_d0_search = _d0_bounded;
+        parameter_set4final(_ylen);
         TM1 = detailed_search(_xtm, _ytm, n_ali8, t0, u0, simplify_step, score_sum_method, false);
         
         // normalized by length of first structure
         parameter_set4final(_xlen);
-        double d0B=_d0;
-        local_d0_search = _d0_bounded;
         TM2 = detailed_search(_xtm, _ytm, n_ali8, _t, _u, simplify_step, score_sum_method, false);
         
         // normalized by average length of structures
-        Lnorm_0=(_xlen+_ylen)*0.5;
-        parameter_set4final(Lnorm_0);
-        double d0a=_d0;
-        local_d0_search = _d0_bounded;
+        parameter_set4final((_xlen + _ylen) * 0.5);
         TM3 = detailed_search(_xtm, _ytm, n_ali8, _t, _u, simplify_step, score_sum_method, false);
         
         // ********************************************************************************* //
@@ -579,11 +570,10 @@ public class TmAlign {
             formatter.format("Length of Chain_2: %d residues\n\n", _ylen);
 
             formatter.format("Aligned length= %d, RMSD= %6.2f, Seq_ID=n_identical/n_aligned= %4.3f\n", n_ali8, rmsd0.getValue(), seq_id); 
-            formatter.format("TM-score= %6.5f (if normalized by length of Chain_1)\n", TM2, _xlen, d0B);
-            formatter.format("TM-score= %6.5f (if normalized by length of Chain_2)\n", TM1, _ylen, d0A);
+            formatter.format("TM-score= %6.5f (if normalized by length of Chain_1)\n", TM2);
+            formatter.format("TM-score= %6.5f (if normalized by length of Chain_2)\n", TM1);
             
-            double L_ave = (_xlen + _ylen) * 0.5;
-            formatter.format("TM-score= %6.5f (if normalized by average length of chains)\n", TM3, L_ave, d0a);
+            formatter.format("TM-score= %6.5f (if normalized by average length of chains)\n", TM3);
             
             //output structure alignment
             formatter.format("\n(\":\" denotes residue pairs of d < %4.1f Angstrom, ", d0_out);
@@ -1330,7 +1320,7 @@ public class TmAlign {
             double t[], double u[][], int 
             invmap0[],
             int g1, int g2, 
-            int iteration_max, double local_d0_search) {
+            int iteration_max) {
 
         // Output
         // best alignment stored in invmap0
