@@ -1,6 +1,5 @@
 package edu.umkc.rupee.tm;
 
-import org.apache.commons.lang3.mutable.MutableDouble;
 
 /* 
 *************************************************************************
@@ -20,7 +19,7 @@ t    - t(i)   is translation vector for best superposition  (output)
 
 public class Kabsch {
 
-    public static boolean execute(double x[][], double y[][], int n, int mode, MutableDouble rms, double t[], double u[][]) {
+    public static double execute(double x[][], double y[][], int n, int mode, double t[], double u[][]) {
 
         int i, j, m, m1, l, k;
         double e0, rms1, d, h, g;
@@ -41,7 +40,7 @@ public class Kabsch {
         double epsilon = 0.00000001;
 
         // initializtation
-        rms.setValue(0.0);
+        double rmsd = 0.0;
         rms1 = 0;
         e0 = 0;
         double c1[] = new double[3];
@@ -76,7 +75,7 @@ public class Kabsch {
         }
 
         if (n < 1) {
-            return false;
+            return rmsd;
         }
 
         // compute centers for vector sets x, y
@@ -352,8 +351,6 @@ public class Kabsch {
                 rms1 = 0.0;
         }
 
-        rms.setValue(rms1);
-
-        return true;
+        return rmsd;
     }
 }

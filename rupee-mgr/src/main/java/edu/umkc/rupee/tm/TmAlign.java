@@ -443,7 +443,7 @@ public class TmAlign {
 
         // minimize rmsd for the best rotation and translation matrices t and u
         MutableDouble rmsd0 = new MutableDouble(0.0);
-        Kabsch.execute(_r1, _r2, n_ali8, 0, rmsd0, _t, _u); 
+        Kabsch.execute(_r1, _r2, n_ali8, 0, _t, _u); 
         rmsd0.setValue(Math.sqrt(rmsd0.getValue() / n_ali8));
 
         // ********************************************************************************* //
@@ -987,7 +987,6 @@ public class TmAlign {
 
         double t[] = new double[3];
         double u[][] = new double[3][3];
-        MutableDouble rmsd = new MutableDouble(0.0);
         double dij;
         double d01 = _d0 + 1.5;
         if (d01 < _D0_MIN)
@@ -1010,7 +1009,7 @@ public class TmAlign {
                 k++;
             }
         }
-        Kabsch.execute(_r1, _r2, k, 1, rmsd, t, u);
+        Kabsch.execute(_r1, _r2, k, 1, t, u);
 
         for (int ii = 0; ii < x_len; ii++) {
             Functions.transform(t, u, x[ii], xx);
@@ -1032,7 +1031,6 @@ public class TmAlign {
         // y2x: alignment of y to x (-1 indicates unaligned)
         
         double GL;
-        MutableDouble rmsd = new MutableDouble(0.0);
         double t[] = new double[3];
         double u[][] = new double[3][3];
 
@@ -1105,7 +1103,7 @@ public class TmAlign {
                     }
 
                     // superpose the two structures and rotate it
-                    Kabsch.execute(_r1, _r2, n_frag[i_frag], 1, rmsd, t, u);
+                    Kabsch.execute(_r1, _r2, n_frag[i_frag], 1, t, u);
 
                     double gap_open = 0.0;
                     NW.NWDP_TM(_path, _val, x, y, x_len, y_len, t, u, d02, gap_open, invmap);
@@ -1485,7 +1483,6 @@ public class TmAlign {
     // compute the score quickly in three iterations
     public double get_score_fast(double x[][], double y[][], int x_len, int y_len, int invmap[]) {
         
-        MutableDouble rms = new MutableDouble(0.0);
         double tmscore, tmscore1, tmscore2;
         int i, j, k;
 
@@ -1514,7 +1511,7 @@ public class TmAlign {
                 throw new RuntimeException("Wrong map!");
             }
         }
-        Kabsch.execute(_r1, _r2, k, 1, rms, _t, _u);
+        Kabsch.execute(_r1, _r2, k, 1, _t, _u);
 
         // evaluate score
         double di;
@@ -1560,7 +1557,7 @@ public class TmAlign {
         }
 
         if (n_ali != j) {
-            Kabsch.execute(_r1, _r2, j, 1, rms, _t, _u);
+            Kabsch.execute(_r1, _r2, j, 1, _t, _u);
             tmscore1 = 0;
             for (k = 0; k < n_ali; k++) {
                 Functions.transform(_t, _u, _xtm[k], xrot);
@@ -1596,7 +1593,7 @@ public class TmAlign {
             }
 
             // evaluate the score
-            Kabsch.execute(_r1, _r2, j, 1, rms, _t, _u);
+            Kabsch.execute(_r1, _r2, j, 1, _t, _u);
             tmscore2 = 0;
             for (k = 0; k < n_ali; k++) {
                 Functions.transform(_t, _u, _xtm[k], xrot);
@@ -1627,7 +1624,6 @@ public class TmAlign {
         int i, m;
         double score_max;
         MutableDouble score = new MutableDouble(0.0);
-        MutableDouble rmsd = new MutableDouble(0.0);
         int kmax = Lali;
         int k_ali[] = new int[kmax];
         int ka, k;
@@ -1687,7 +1683,7 @@ public class TmAlign {
                 }
 
                 // extract rotation matrix based on the fragment
-                Kabsch.execute(_r1, _r2, L_frag, 1, rmsd, t, u);
+                Kabsch.execute(_r1, _r2, L_frag, 1, t, u);
                 if (simplify_step != 1)
                     Rcomm.setValue(0.0);
                 Functions.do_rotation(xtm, _xt, Lali, t, u);
@@ -1725,7 +1721,7 @@ public class TmAlign {
                         ka++;
                     }
                     // extract rotation matrix based on the fragment
-                    Kabsch.execute(_r1, _r2, n_cut, 1, rmsd, t, u);
+                    Kabsch.execute(_r1, _r2, n_cut, 1, t, u);
                     Functions.do_rotation(xtm, _xt, Lali, t, u);
                     n_cut = calculate_tm_score(_xt, ytm, Lali, d, i_ali, score, score_sum_method, false);
                     if (score.getValue() > score_max) {
@@ -1774,7 +1770,6 @@ public class TmAlign {
             MutableDouble Rcomm, double local_d0_search) {
 
         MutableDouble score = new MutableDouble(0.0);
-        MutableDouble rmsd = new MutableDouble(0.0);
         double t[] = new double[3];
         double u[][] = new double[3][3];
         int i, m;
@@ -1836,7 +1831,7 @@ public class TmAlign {
                     ka++;
                 }
                 // extract rotation matrix based on the fragment
-                Kabsch.execute(_r1, _r2, L_frag, 1, rmsd, t, u);
+                Kabsch.execute(_r1, _r2, L_frag, 1, t, u);
                 if (simplify_step != 1)
                     Rcomm.setValue(0.0);
                 Functions.do_rotation(xtm, _xt, Lali, t, u);
@@ -1875,7 +1870,7 @@ public class TmAlign {
                         ka++;
                     }
                     // extract rotation matrix based on the fragment
-                    Kabsch.execute(_r1, _r2, n_cut, 1, rmsd, t, u);
+                    Kabsch.execute(_r1, _r2, n_cut, 1, t, u);
                     Functions.do_rotation(xtm, _xt, Lali, t, u);
                     n_cut = calculate_tm_score(_xt, ytm, Lali, d, i_ali, score, score_sum_method, true);
                     if (score.getValue() > score_max) {
