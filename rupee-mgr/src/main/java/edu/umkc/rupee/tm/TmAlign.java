@@ -108,16 +108,14 @@ public class TmAlign {
      *  get_initial5
      *  get_initial_fgt
      *
-     * searching
-     *  detailed_search
-     *  detailed_search_standard
+     * dynamic programming
+     *  DP_iter
      *
      * scoring
-     *  get_score_fast
-     *  TMscore8_search
-     *  TMscore8_search_standard
-     *  score_fun8
-     *  score_fun8_standard
+     *  fast_search
+     *  detailed_search_wrapper
+     *  detailed_search
+     *  calculate_tm_score
      */
 
     private TmMode _mode;                           // regular, fast, ...
@@ -263,7 +261,7 @@ public class TmAlign {
         // ********************************************************************************** //
 
         get_initial(_xa, _ya, _xlen, _ylen, invmap0);
-        TM = detailed_search(_xa, _ya, _xlen, _ylen, invmap0, _t, _u, simplify_step, score_sum_method);
+        TM = detailed_search_wrapper(_xa, _ya, _xlen, _ylen, invmap0, _t, _u, simplify_step, score_sum_method, false);
 
         if (TM > TMmax) {
             TMmax = TM;
@@ -281,7 +279,7 @@ public class TmAlign {
         // ********************************************************************************** //
         
         get_initial_ss(_xa, _ya, _xlen, _ylen, invmap);
-        TM = detailed_search(_xa, _ya, _xlen, _ylen, invmap, _t, _u, simplify_step, score_sum_method);
+        TM = detailed_search_wrapper(_xa, _ya, _xlen, _ylen, invmap, _t, _u, simplify_step, score_sum_method, false);
 
         if (TM > TMmax) {
             TMmax = TM;
@@ -305,7 +303,7 @@ public class TmAlign {
 
         if (_mode == TmMode.REGULAR && get_initial5(_xa, _ya, _xlen, _ylen, invmap)) {
 
-            TM = detailed_search(_xa, _ya, _xlen, _ylen, invmap, _t, _u, simplify_step, score_sum_method);
+            TM = detailed_search_wrapper(_xa, _ya, _xlen, _ylen, invmap, _t, _u, simplify_step, score_sum_method, false);
 
             if (TM > TMmax) {
                 TMmax = TM;
@@ -329,7 +327,7 @@ public class TmAlign {
         // ********************************************************************************** //
         
         get_initial_ssplus(_xa, _ya, _xlen, _ylen, invmap0, invmap);
-        TM = detailed_search(_xa, _ya, _xlen, _ylen, invmap, _t, _u, simplify_step, score_sum_method);
+        TM = detailed_search_wrapper(_xa, _ya, _xlen, _ylen, invmap, _t, _u, simplify_step, score_sum_method, false);
 
         if (TM > TMmax) {
             TMmax = TM;
@@ -352,7 +350,7 @@ public class TmAlign {
         // ********************************************************************************** //
         
         get_initial_fgt(_xa, _ya, _xlen, _ylen, invmap);
-        TM = detailed_search(_xa, _ya, _xlen, _ylen, invmap, _t, _u, simplify_step, score_sum_method);
+        TM = detailed_search_wrapper(_xa, _ya, _xlen, _ylen, invmap, _t, _u, simplify_step, score_sum_method, false);
 
         if (TM > TMmax) {
             TMmax = TM;
@@ -394,7 +392,7 @@ public class TmAlign {
         simplify_step = 1;
         score_sum_method = 8;
 
-        TM = detailed_search_standard(_xa, _ya, _xlen, _ylen, invmap0, _t, _u, simplify_step, score_sum_method);
+        TM = detailed_search_wrapper(_xa, _ya, _xlen, _ylen, invmap0, _t, _u, simplify_step, score_sum_method, true);
 
         // select pairs with dis < d8 for final TMscore computation and output alignment
         int n_ali8, k = 0;
@@ -464,20 +462,20 @@ public class TmAlign {
         parameter_set4final(Lnorm_0);
         double d0A=_d0;
         local_d0_search = _d0_bounded;
-        TM1 = TMscore8_search(_xtm, _ytm, n_ali8, t0, u0, simplify_step, score_sum_method);
+        TM1 = detailed_search(_xtm, _ytm, n_ali8, t0, u0, simplify_step, score_sum_method, false);
         
         // normalized by length of first structure
         parameter_set4final(_xlen);
         double d0B=_d0;
         local_d0_search = _d0_bounded;
-        TM2 = TMscore8_search(_xtm, _ytm, n_ali8, _t, _u, simplify_step, score_sum_method);
+        TM2 = detailed_search(_xtm, _ytm, n_ali8, _t, _u, simplify_step, score_sum_method, false);
         
         // normalized by average length of structures
         Lnorm_0=(_xlen+_ylen)*0.5;
         parameter_set4final(Lnorm_0);
         double d0a=_d0;
         local_d0_search = _d0_bounded;
-        TM3 = TMscore8_search(_xtm, _ytm, n_ali8, _t, _u, simplify_step, score_sum_method);
+        TM3 = detailed_search(_xtm, _ytm, n_ali8, _t, _u, simplify_step, score_sum_method, false);
         
         // ********************************************************************************* //
         // * Output *
@@ -867,7 +865,7 @@ public class TmAlign {
             }
 
             // evaluate the initial alignments
-            tmscore = get_score_fast(x, y, x_len, y_len, y2x);
+            tmscore = fast_search(x, y, x_len, y_len, y2x);
             if (tmscore >= tmscore_max) {
                 tmscore_max = tmscore;
                 k_best = k;
@@ -1106,7 +1104,7 @@ public class TmAlign {
 
                     double gap_open = 0.0;
                     NW.NWDP_TM(_path, _val, x, y, x_len, y_len, t, u, d02, gap_open, invmap);
-                    GL = get_score_fast(x, y, x_len, y_len, invmap);
+                    GL = fast_search(x, y, x_len, y_len, invmap);
                     if (GL > GLmax) {
                         GLmax = GL;
                         for (int ii = 0; ii < y_len; ii++) {
@@ -1200,7 +1198,7 @@ public class TmAlign {
                 }
 
                 // evaluate the map quickly in three iterations
-                tmscore = get_score_fast(x, y, x_len, y_len, y2x_);
+                tmscore = fast_search(x, y, x_len, y_len, y2x_);
 
                 if (tmscore >= tmscore_max) {
                     tmscore_max = tmscore;
@@ -1236,7 +1234,7 @@ public class TmAlign {
                 }
 
                 // evaluate the map quickly in three iterations
-                tmscore = get_score_fast(x, y, x_len, y_len, y2x_);
+                tmscore = fast_search(x, y, x_len, y_len, y2x_);
                 if (tmscore >= tmscore_max) {
                     tmscore_max = tmscore;
                     for (j = 0; j < y_len; j++) {
@@ -1315,7 +1313,7 @@ public class TmAlign {
     }
     
     // **********************************************************************************
-    // searching
+    // dynamic programming
     // **********************************************************************************
 
     public double DP_iter(
@@ -1368,7 +1366,7 @@ public class TmAlign {
 
                 // k is the length of the alignment stored densely in xtm and ytm
                 
-                tmscore = TMscore8_search(_xtm, _ytm, k, t, u, simplify_step, score_sum_method);
+                tmscore = detailed_search(_xtm, _ytm, k, t, u, simplify_step, score_sum_method, false);
 
                 // update the best
                 if (tmscore > tmscore_max) {
@@ -1393,88 +1391,11 @@ public class TmAlign {
         return tmscore_max;
     }
 
-    // simplify_step: 1 or 40
-    // score_sum_method:
-    //      0 for score over all pairs
-    //      8 for score over pairs with dist < score_d8
-    
-    public double detailed_search(
-            double x[][], double y[][], int x_len, int y_len, 
-            int invmap0[], 
-            double t[], double u[][], 
-            int simplify_step, 
-            int score_sum_method) {
-
-        // x is model, y is template, try to superpose onto y
-        int i, j, k;
-
-        k = 0;
-        for (i = 0; i < y_len; i++) {
-            j = invmap0[i];
-            if (j >= 0) {
-
-                // aligned
-                _xtm[k][0] = x[j][0];
-                _xtm[k][1] = x[j][1];
-                _xtm[k][2] = x[j][2];
-
-                _ytm[k][0] = y[i][0];
-                _ytm[k][1] = y[i][1];
-                _ytm[k][2] = y[i][2];
-
-                k++;
-            }
-        }
-
-        // k is the length of the alignment stored densely in xtm, ytm
-
-        // detailed search 40-->1
-        return TMscore8_search(_xtm, _ytm, k, t, u, simplify_step, score_sum_method);
-    }
-
-    public double detailed_search_standard(
-            double x[][], double y[][], int x_len, int y_len, 
-            int invmap0[], 
-            double t[], double u[][], 
-            int simplify_step, 
-            int score_sum_method) {
-
-        // x is model, y is template, try to superpose onto y
-        int i, j, k;
-
-        k = 0;
-        for (i = 0; i < y_len; i++) {
-            j = invmap0[i];
-            if (j >= 0) {
-
-                // aligned
-                _xtm[k][0] = x[j][0];
-                _xtm[k][1] = x[j][1];
-                _xtm[k][2] = x[j][2];
-
-                _ytm[k][0] = y[i][0];
-                _ytm[k][1] = y[i][1];
-                _ytm[k][2] = y[i][2];
-
-                k++;
-            }
-        }
-        
-        // k is the length of the alignment stored densely in xtm, ytm
-
-        // detailed search 40-->1
-        double tmscore = TMscore8_search_standard(_xtm, _ytm, k, t, u, simplify_step, score_sum_method);
-
-
-        return tmscore;
-    }
-
     // **********************************************************************************
-    // scoring
+    // searching
     // **********************************************************************************
     
-    // compute the score quickly in three iterations
-    public double get_score_fast(double x[][], double y[][], int x_len, int y_len, int invmap[]) {
+    public double fast_search(double x[][], double y[][], int x_len, int y_len, int invmap[]) {
         
         double tmscore, tmscore1, tmscore2;
         int i, j, k;
@@ -1607,12 +1528,44 @@ public class TmAlign {
                         // be used for latter scoring
     }
     
-    public double TMscore8_search(
+    public double detailed_search_wrapper(
+            double x[][], double y[][], 
+            int x_len, int y_len, 
+            int invmap0[], 
+            double t_out[], double u_out[][], 
+            int simplify_step, 
+            int score_sum_method,
+            boolean length_normalize) {
+
+        int i, j;
+        int align_len = 0;
+        for (i = 0; i < y_len; i++) {
+            j = invmap0[i];
+            if (j >= 0) {
+
+                // aligned
+                _xtm[align_len][0] = x[j][0];
+                _xtm[align_len][1] = x[j][1];
+                _xtm[align_len][2] = x[j][2];
+
+                _ytm[align_len][0] = y[i][0];
+                _ytm[align_len][1] = y[i][1];
+                _ytm[align_len][2] = y[i][2];
+
+                align_len++;
+            }
+        }
+
+        return detailed_search(_xtm, _ytm, align_len, t_out, u_out, simplify_step, score_sum_method, length_normalize);
+    }
+    
+    public double detailed_search(
             double xtm[][], double ytm[][], 
             int align_len, 
             double t_out[], double u_out[][],
             int simplify_step,
-            int score_sum_method) {
+            int score_sum_method,
+            boolean length_normalize) {
 
         int i, m;
         MutableDouble score = new MutableDouble(0.0);
@@ -1682,7 +1635,7 @@ public class TmAlign {
 
                 // calcualte tm-score and get indices satisfying distance threshold
                 dist_th = _d0_bounded - 1;
-                num_sat = calculate_tm_score(_xt, ytm, align_len, dist_th, sat_indices, score, score_sum_method, false);
+                num_sat = calculate_tm_score(_xt, ytm, align_len, dist_th, sat_indices, score, score_sum_method, length_normalize);
                 if (score.getValue() > max_score) {
                     max_score = score.getValue();
 
@@ -1716,7 +1669,7 @@ public class TmAlign {
                     // extract rotation matrix based on the fragment
                     Kabsch.execute(_r1, _r2, num_sat, 1, t, u);
                     Functions.do_rotation(xtm, _xt, align_len, t, u);
-                    num_sat = calculate_tm_score(_xt, ytm, align_len, dist_th, sat_indices, score, score_sum_method, false);
+                    num_sat = calculate_tm_score(_xt, ytm, align_len, dist_th, sat_indices, score, score_sum_method, length_normalize);
                     if (score.getValue() > max_score) {
                         max_score = score.getValue();
 
@@ -1752,153 +1705,6 @@ public class TmAlign {
         } // fragment lengths iter
         
         return max_score;
-    }
-
-    public double TMscore8_search_standard(
-            double xtm[][], double ytm[][], 
-            int Lali, 
-            double t0[], double u0[][],
-            int simplify_step, 
-            int score_sum_method) {
-
-        MutableDouble score = new MutableDouble(0.0);
-        double t[] = new double[3];
-        double u[][] = new double[3][3];
-        int i, m;
-        double d;
-
-        // max number of iterations
-        int n_it = _mode.getScoreIterations(); 
-        
-        // fragment lengths
-        int n_init_max = 6;                 // maximum number of fragments lengths
-        int L_ini[] = new int[n_init_max];  // fragment lengths Lali, Lali/2, ...
-        int L_ini_min = 4;
-        if (Lali < 4)
-            L_ini_min = Lali;
-        int n_init = 0;
-        for (i = 0; i < n_init_max - 1; i++) {
-            n_init++;
-            L_ini[i] = (int) (Lali / Math.pow(2.0, (double) i));
-            if (L_ini[i] <= L_ini_min) {
-                L_ini[i] = L_ini_min;
-                break;
-            }
-        }
-        if (i == n_init_max - 1) {
-            n_init++;
-            L_ini[i] = L_ini_min;
-        }
-
-        // find the maximum score starting from local structures superposition
-        int kmax = Lali;
-        int k_ali[] = new int[kmax];
-        int ka, k;
-        double score_max = -1;
-        int i_ali[] = new int[kmax];
-        int n_cut;
-        int L_frag; // fragment length
-        int iL_max; // maximum starting postion for the fragment
-
-        int i_init;
-        for (i_init = 0; i_init < n_init; i_init++) {
-            L_frag = L_ini[i_init];
-            iL_max = Lali - L_frag;
-
-            i = 0;
-            while (true) {
-                // extract the fragment starting from position i
-                ka = 0;
-                for (k = 0; k < L_frag; k++) {
-                    int kk = k + i;
-                    _r1[k][0] = xtm[kk][0];
-                    _r1[k][1] = xtm[kk][1];
-                    _r1[k][2] = xtm[kk][2];
-
-                    _r2[k][0] = ytm[kk][0];
-                    _r2[k][1] = ytm[kk][1];
-                    _r2[k][2] = ytm[kk][2];
-
-                    k_ali[ka] = kk;
-                    ka++;
-                }
-                // extract rotation matrix based on the fragment
-                Kabsch.execute(_r1, _r2, L_frag, 1, t, u);
-                Functions.do_rotation(xtm, _xt, Lali, t, u);
-
-                // get subsegment of this fragment
-                d = _d0_bounded - 1;
-                n_cut = calculate_tm_score(_xt, ytm, Lali, d, i_ali, score, score_sum_method, true);
-
-                if (score.getValue() > score_max) {
-                    score_max = score.getValue();
-
-                    // save the rotation matrix
-                    for (k = 0; k < 3; k++) {
-                        t0[k] = t[k];
-                        u0[k][0] = u[k][0];
-                        u0[k][1] = u[k][1];
-                        u0[k][2] = u[k][2];
-                    }
-                }
-
-                // try to extend the alignment iteratively
-                d = _d0_bounded + 1;
-                for (int it = 0; it < n_it; it++) {
-                    ka = 0;
-                    for (k = 0; k < n_cut; k++) {
-                        m = i_ali[k];
-                        _r1[k][0] = xtm[m][0];
-                        _r1[k][1] = xtm[m][1];
-                        _r1[k][2] = xtm[m][2];
-
-                        _r2[k][0] = ytm[m][0];
-                        _r2[k][1] = ytm[m][1];
-                        _r2[k][2] = ytm[m][2];
-
-                        k_ali[ka] = m;
-                        ka++;
-                    }
-                    // extract rotation matrix based on the fragment
-                    Kabsch.execute(_r1, _r2, n_cut, 1, t, u);
-                    Functions.do_rotation(xtm, _xt, Lali, t, u);
-                    n_cut = calculate_tm_score(_xt, ytm, Lali, d, i_ali, score, score_sum_method, true);
-                    if (score.getValue() > score_max) {
-                        score_max = score.getValue();
-
-                        // save the rotation matrix
-                        for (k = 0; k < 3; k++) {
-                            t0[k] = t[k];
-                            u0[k][0] = u[k][0];
-                            u0[k][1] = u[k][1];
-                            u0[k][2] = u[k][2];
-                        }
-                    }
-
-                    // check if it converges
-                    if (n_cut == ka) {
-                        for (k = 0; k < n_cut; k++) {
-                            if (i_ali[k] != k_ali[k]) {
-                                break;
-                            }
-                        }
-                        if (k == n_cut) {
-                            break; // stop iteration
-                        }
-                    }
-                } // for iteration
-
-                if (i < iL_max) {
-                    i = i + simplify_step; // shift the fragment
-                    if (i > iL_max)
-                        i = iL_max; // do this to use the last missed fragment
-                } else if (i >= iL_max) {
-                    break;
-                }
-            } // while(1)
-                // end of one fragment
-        } // for(i_init
-        return score_max;
     }
     
     public int calculate_tm_score(
