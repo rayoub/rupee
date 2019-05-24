@@ -1694,7 +1694,7 @@ public class TmAlign {
 
                 // get subsegment of this fragment
                 d = local_d0_search - 1;
-                n_cut = score_fun8(_xt, ytm, Lali, d, i_ali, score, score_sum_method);
+                n_cut = calculate_tm_score(_xt, ytm, Lali, d, i_ali, score, score_sum_method, false);
                 if (score.getValue() > score_max) {
                     score_max = score.getValue();
 
@@ -1727,7 +1727,7 @@ public class TmAlign {
                     // extract rotation matrix based on the fragment
                     Kabsch.execute(_r1, _r2, n_cut, 1, rmsd, t, u);
                     Functions.do_rotation(xtm, _xt, Lali, t, u);
-                    n_cut = score_fun8(_xt, ytm, Lali, d, i_ali, score, score_sum_method);
+                    n_cut = calculate_tm_score(_xt, ytm, Lali, d, i_ali, score, score_sum_method, false);
                     if (score.getValue() > score_max) {
                         score_max = score.getValue();
 
@@ -1843,7 +1843,7 @@ public class TmAlign {
 
                 // get subsegment of this fragment
                 d = local_d0_search - 1;
-                n_cut = score_fun8_standard(_xt, ytm, Lali, d, i_ali, score, score_sum_method);
+                n_cut = calculate_tm_score(_xt, ytm, Lali, d, i_ali, score, score_sum_method, true);
 
                 if (score.getValue() > score_max) {
                     score_max = score.getValue();
@@ -1877,7 +1877,7 @@ public class TmAlign {
                     // extract rotation matrix based on the fragment
                     Kabsch.execute(_r1, _r2, n_cut, 1, rmsd, t, u);
                     Functions.do_rotation(xtm, _xt, Lali, t, u);
-                    n_cut = score_fun8_standard(_xt, ytm, Lali, d, i_ali, score, score_sum_method);
+                    n_cut = calculate_tm_score(_xt, ytm, Lali, d, i_ali, score, score_sum_method, true);
                     if (score.getValue() > score_max) {
                         score_max = score.getValue();
 
@@ -1916,93 +1916,57 @@ public class TmAlign {
         return score_max;
     }
     
-    // 1, collect those residues with dis<d;
-    // 2, calculate TMscore
-    public int score_fun8(
+    public int calculate_tm_score(
             double xa[][], double ya[][],
-            int n_ali, double d, int i_ali[], MutableDouble score1, int score_sum_method) {
+            int align_len, 
+            double dist_th, int sat_indices[], 
+            MutableDouble score, 
+            int score_sum_method,
+            boolean length_normalize) {
 
-        double score_sum = 0, di;
-        double d_tmp = d * d;
+        double score_sum = 0;
+        double dist;
+        double dist_th2 = dist_th * dist_th;
         double d02 = _d0 * _d0;
-        double score_d8_cut = _score_d8 * _score_d8;
+        double score_d82 = _score_d8 * _score_d8;
 
-        int i, n_cut, inc = 0;
-
+        int num_sat;
+        int relax_factor = 0;
         while (true) {
-            n_cut = 0;
+
+            num_sat = 0;
             score_sum = 0;
-            for (i = 0; i < n_ali; i++) {
-                di = Functions.dist(xa[i], ya[i]);
-                if (di < d_tmp) {
-                    i_ali[n_cut] = i;
-                    n_cut++;
+            for (int i = 0; i < align_len; i++) {
+                dist = Functions.dist(xa[i], ya[i]);
+                if (dist < dist_th2) {
+                    sat_indices[num_sat] = i;
+                    num_sat++;
                 }
                 if (score_sum_method == 8) {
-                    if (di <= score_d8_cut) {
-                        score_sum += 1 / (1 + di / d02);
+                    if (dist <= score_d82) {
+                        score_sum += 1 / (1 + dist / d02);
                     }
                 } else {
-                    score_sum += 1 / (1 + di / d02);
+                    score_sum += 1 / (1 + dist / d02);
                 }
             }
-            // there are not enough feasible pairs, reliefe the threshold
-            if (n_cut < 3 && n_ali > 3) {
-                inc++;
-                double dinc = (d + inc * 0.5);
-                d_tmp = dinc * dinc;
+            // there are not enough close residues, relax the threshold
+            if (num_sat < 3 && align_len > 3) {
+                relax_factor++;
+                dist_th2 = Math.pow(dist_th + relax_factor * 0.5, 2);
             } else {
                 break;
             }
-
         }
 
-        score1.setValue(score_sum / _normalize_by);
-
-        return n_cut;
-    }
-
-    public int score_fun8_standard(
-            double xa[][], double ya[][], 
-            int n_ali, double d, int i_ali[], MutableDouble score1, int score_sum_method) {
-
-        double score_sum = 0, di;
-        double d_tmp = d * d;
-        double d02 = _d0 * _d0;
-        double score_d8_cut = _score_d8 * _score_d8;
-
-        int i, n_cut, inc = 0;
-        while (true) {
-            n_cut = 0;
-            score_sum = 0;
-            for (i = 0; i < n_ali; i++) {
-                di = Functions.dist(xa[i], ya[i]);
-                if (di < d_tmp) {
-                    i_ali[n_cut] = i;
-                    n_cut++;
-                }
-                if (score_sum_method == 8) {
-                    if (di <= score_d8_cut) {
-                        score_sum += 1 / (1 + di / d02);
-                    }
-                } else {
-                    score_sum += 1 / (1 + di / d02);
-                }
-            }
-            // there are not enough feasible pairs, reliefe the threshold
-            if (n_cut < 3 && n_ali > 3) {
-                inc++;
-                double dinc = (d + inc * 0.5);
-                d_tmp = dinc * dinc;
-            } else {
-                break;
-            }
-
+        if (length_normalize) {
+            score.setValue(score_sum / align_len);
+        }
+        else {
+            score.setValue(score_sum / _normalize_by);
         }
 
-        score1.setValue(score_sum / n_ali);
-
-        return n_cut;
+        return num_sat;
     }
 }
 
