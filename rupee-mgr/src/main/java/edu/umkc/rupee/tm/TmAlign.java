@@ -227,6 +227,20 @@ public class TmAlign {
             _ya[i][1] = atom.getY();
             _ya[i][2] = atom.getZ();
         }
+        
+        // ********************************************************************************** //
+        // * outline *
+        // ********************************************************************************** //
+
+        /*
+         * the initial alignments create an inverse map to represent the alignment
+         * the inverse map is then packed into _xtm and _ytm and used for a score search
+         * during a score search, fragments of _xtm and _ytm are packed into _r1 and _r2
+         * Kabasch is run on the fragments until a best rotation matrix is found
+         * and an attempt is made to extend that alignment. 
+         * Indices satisfying a distance threshold are used to determine convergence of the 
+         * score search.
+         */
 
         // ********************************************************************************** //
         // * parameter set *
@@ -247,33 +261,33 @@ public class TmAlign {
         int invmap[] = new int[_ylen + 1];
 
         // store the best initial alignment
-        int invmap0[] = new int[_ylen + 1];
-        
-        double TM = 0;
-        double TMmax = -1;
+        int invmap_best[] = new int[_ylen + 1];
         for (int i = 0; i < _ylen; i++) {
-            invmap0[i] = -1;
+            invmap_best[i] = -1;
         }
+        
+        double tm = 0;
+        double max_tm = -1;
 
-        double ddcc = 0.4;
+        double percent_of_max = 0.4;
         if (_normalize_by <= 40)
-            ddcc = 0.1; 
+            percent_of_max = 0.1; 
 
         // ********************************************************************************** //
         // * get initial alignment with gapless threading *
         // ********************************************************************************** //
 
-        get_initial(_xa, _ya, _xlen, _ylen, invmap0);
-        TM = detailed_search_wrapper(_xa, _ya, _xlen, _ylen, invmap0, _t, _u, simplify_step, score_sum_method, false);
+        get_initial(_xa, _ya, _xlen, _ylen, invmap_best);
+        tm = detailed_search_wrapper(_xa, _ya, _xlen, _ylen, invmap_best, _t, _u, simplify_step, score_sum_method, false);
 
-        if (TM > TMmax) {
-            TMmax = TM;
+        if (tm > max_tm) {
+            max_tm = tm;
         }
-        TM = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 0, 2, _mode.getDpIterations());
-        if (TM > TMmax) {
-            TMmax = TM;
+        tm = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 0, 2, _mode.getDpIterations());
+        if (tm > max_tm) {
+            max_tm = tm;
             for (int i = 0; i < _ylen; i++) {
-                invmap0[i] = invmap[i];
+                invmap_best[i] = invmap[i];
             }
         }
 
@@ -282,20 +296,20 @@ public class TmAlign {
         // ********************************************************************************** //
         
         get_initial_ss(_xa, _ya, _xlen, _ylen, invmap);
-        TM = detailed_search_wrapper(_xa, _ya, _xlen, _ylen, invmap, _t, _u, simplify_step, score_sum_method, false);
+        tm = detailed_search_wrapper(_xa, _ya, _xlen, _ylen, invmap, _t, _u, simplify_step, score_sum_method, false);
 
-        if (TM > TMmax) {
-            TMmax = TM;
+        if (tm > max_tm) {
+            max_tm = tm;
             for (int i = 0; i < _ylen; i++) {
-                invmap0[i] = invmap[i];
+                invmap_best[i] = invmap[i];
             }
         }
-        if (TM > TMmax * 0.2) {
-            TM = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 0, 2, _mode.getDpIterations());
-            if (TM > TMmax) {
-                TMmax = TM;
+        if (tm > max_tm * 0.2) {
+            tm = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 0, 2, _mode.getDpIterations());
+            if (tm > max_tm) {
+                max_tm = tm;
                 for (int i = 0; i < _ylen; i++) {
-                    invmap0[i] = invmap[i];
+                    invmap_best[i] = invmap[i];
                 }
             }
         }
@@ -306,20 +320,20 @@ public class TmAlign {
 
         if (_mode == TmMode.REGULAR && get_initial5(_xa, _ya, _xlen, _ylen, invmap)) {
 
-            TM = detailed_search_wrapper(_xa, _ya, _xlen, _ylen, invmap, _t, _u, simplify_step, score_sum_method, false);
+            tm = detailed_search_wrapper(_xa, _ya, _xlen, _ylen, invmap, _t, _u, simplify_step, score_sum_method, false);
 
-            if (TM > TMmax) {
-                TMmax = TM;
+            if (tm > max_tm) {
+                max_tm = tm;
                 for (int i = 0; i < _ylen; i++) {
-                    invmap0[i] = invmap[i];
+                    invmap_best[i] = invmap[i];
                 }
             }
-            if (TM > TMmax * ddcc) {
-                TM = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 0, 2, 2);
-                if (TM > TMmax) {
-                    TMmax = TM;
+            if (tm > max_tm * percent_of_max) {
+                tm = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 0, 2, 2);
+                if (tm > max_tm) {
+                    max_tm = tm;
                     for (int i = 0; i < _ylen; i++) {
-                        invmap0[i] = invmap[i];
+                        invmap_best[i] = invmap[i];
                     }
                 }
             }
@@ -329,21 +343,21 @@ public class TmAlign {
         // * get initial alignment based on previous alignment+secondary structure *
         // ********************************************************************************** //
         
-        get_initial_ssplus(_xa, _ya, _xlen, _ylen, invmap0, invmap);
-        TM = detailed_search_wrapper(_xa, _ya, _xlen, _ylen, invmap, _t, _u, simplify_step, score_sum_method, false);
+        get_initial_ssplus(_xa, _ya, _xlen, _ylen, invmap_best, invmap);
+        tm = detailed_search_wrapper(_xa, _ya, _xlen, _ylen, invmap, _t, _u, simplify_step, score_sum_method, false);
 
-        if (TM > TMmax) {
-            TMmax = TM;
+        if (tm > max_tm) {
+            max_tm = tm;
             for (int i = 0; i < _ylen; i++) {
-                invmap0[i] = invmap[i];
+                invmap_best[i] = invmap[i];
             }
         }
-        if (TM > TMmax * ddcc) {
-            TM = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 0, 2, _mode.getDpIterations());
-            if (TM > TMmax) {
-                TMmax = TM;
+        if (tm > max_tm * percent_of_max) {
+            tm = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 0, 2, _mode.getDpIterations());
+            if (tm > max_tm) {
+                max_tm = tm;
                 for (int i = 0; i < _ylen; i++) {
-                    invmap0[i] = invmap[i];
+                    invmap_best[i] = invmap[i];
                 }
             }
         }
@@ -353,20 +367,20 @@ public class TmAlign {
         // ********************************************************************************** //
         
         get_initial_fgt(_xa, _ya, _xlen, _ylen, invmap);
-        TM = detailed_search_wrapper(_xa, _ya, _xlen, _ylen, invmap, _t, _u, simplify_step, score_sum_method, false);
+        tm = detailed_search_wrapper(_xa, _ya, _xlen, _ylen, invmap, _t, _u, simplify_step, score_sum_method, false);
 
-        if (TM > TMmax) {
-            TMmax = TM;
+        if (tm > max_tm) {
+            max_tm = tm;
             for (int i = 0; i < _ylen; i++) {
-                invmap0[i] = invmap[i];
+                invmap_best[i] = invmap[i];
             }
         }
-        if (TM > TMmax * ddcc) {
-            TM = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 1, 2, 2);
-            if (TM > TMmax) {
-                TMmax = TM;
+        if (tm > max_tm * percent_of_max) {
+            tm = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 1, 2, 2);
+            if (tm > max_tm) {
+                max_tm = tm;
                 for (int i = 0; i < _ylen; i++) {
-                    invmap0[i] = invmap[i];
+                    invmap_best[i] = invmap[i];
                 }
             }
         }
@@ -378,7 +392,7 @@ public class TmAlign {
         // make sure at least one pair is aligned 
         boolean flag = false;
         for (int i = 0; i < _ylen; i++) {
-            if (invmap0[i] >= 0) {
+            if (invmap_best[i] >= 0) {
                 flag = true;
                 break;
             }
@@ -395,7 +409,7 @@ public class TmAlign {
         simplify_step = 1;
         score_sum_method = 8;
 
-        TM = detailed_search_wrapper(_xa, _ya, _xlen, _ylen, invmap0, _t, _u, simplify_step, score_sum_method, true);
+        tm = detailed_search_wrapper(_xa, _ya, _xlen, _ylen, invmap_best, _t, _u, simplify_step, score_sum_method, true);
 
         // select pairs with dis < d8 for final TMscore computation and output alignment
         int n_ali8, k = 0;
@@ -406,7 +420,7 @@ public class TmAlign {
         Functions.do_rotation(_xa, _xt, _xlen, _t, _u);
         k = 0;
         for (int j = 0; j < _ylen; j++) {
-            int i = invmap0[j];
+            int i = invmap_best[j];
             if (i >= 0)
             {
                 // aligned
@@ -443,9 +457,8 @@ public class TmAlign {
         n_ali8 = k;
 
         // minimize rmsd for the best rotation and translation matrices t and u
-        MutableDouble rmsd0 = new MutableDouble(0.0);
-        Kabsch.execute(_r1, _r2, n_ali8, 0, _t, _u); 
-        rmsd0.setValue(Math.sqrt(rmsd0.getValue() / n_ali8));
+        double rmsd = Kabsch.execute(_r1, _r2, n_ali8, 0, _t, _u); 
+        rmsd = Math.sqrt(rmsd / (double) n_ali8);
 
         // ********************************************************************************* //
         // * Final TMscore *
@@ -483,7 +496,7 @@ public class TmAlign {
         results.setTmScoreQ(TM2);
         results.setTmScoreT(TM1);
         results.setTmScoreAvg(TM3);
-        results.setRmsd(rmsd0.getValue());
+        results.setRmsd(rmsd);
 
         if (this._mode == TmMode.ALIGN_TEXT) {
 
@@ -569,7 +582,7 @@ public class TmAlign {
             formatter.format("Length of Chain_1: %d residues\n", _xlen);
             formatter.format("Length of Chain_2: %d residues\n\n", _ylen);
 
-            formatter.format("Aligned length= %d, RMSD= %6.2f, Seq_ID=n_identical/n_aligned= %4.3f\n", n_ali8, rmsd0.getValue(), seq_id); 
+            formatter.format("Aligned length= %d, RMSD= %6.2f, Seq_ID=n_identical/n_aligned= %4.3f\n", n_ali8, rmsd, seq_id); 
             formatter.format("TM-score= %6.5f (if normalized by length of Chain_1)\n", TM2);
             formatter.format("TM-score= %6.5f (if normalized by length of Chain_2)\n", TM1);
             
@@ -1530,32 +1543,34 @@ public class TmAlign {
     public double detailed_search_wrapper(
             double x[][], double y[][], 
             int x_len, int y_len, 
-            int invmap0[], 
+            int invmap[], 
             double t_out[], double u_out[][], 
             int simplify_step, 
             int score_sum_method,
             boolean length_normalize) {
 
-        int i, j;
-        int align_len = 0;
+        // pack the alignment into _xtm and _ytm based on the inverse map
+        int i, j, k = 0;
         for (i = 0; i < y_len; i++) {
-            j = invmap0[i];
+        
+            j = invmap[i];
             if (j >= 0) {
 
                 // aligned
-                _xtm[align_len][0] = x[j][0];
-                _xtm[align_len][1] = x[j][1];
-                _xtm[align_len][2] = x[j][2];
+                _xtm[k][0] = x[j][0];
+                _xtm[k][1] = x[j][1];
+                _xtm[k][2] = x[j][2];
 
-                _ytm[align_len][0] = y[i][0];
-                _ytm[align_len][1] = y[i][1];
-                _ytm[align_len][2] = y[i][2];
+                _ytm[k][0] = y[i][0];
+                _ytm[k][1] = y[i][1];
+                _ytm[k][2] = y[i][2];
 
-                align_len++;
+                k++;
             }
         }
 
-        return detailed_search(_xtm, _ytm, align_len, t_out, u_out, simplify_step, score_sum_method, length_normalize);
+        // k holds the length of the alignment obtained from the inverse map
+        return detailed_search(_xtm, _ytm, k, t_out, u_out, simplify_step, score_sum_method, length_normalize);
     }
     
     public double detailed_search(
@@ -1665,9 +1680,14 @@ public class TmAlign {
                         last_sat_indices[ka] = m;
                         ka++;
                     }
-                    // extract rotation matrix based on the fragment
+
+                    // calculate rotation matrix based on the fragment
                     Kabsch.execute(_r1, _r2, num_sat, 1, t, u);
+                    
+                    // peform rotation and store in xt
                     Functions.do_rotation(xtm, _xt, align_len, t, u);
+                    
+                    // calcualte the new tm-score and get indices satisfying distance threshold
                     num_sat = calculate_tm_score(_xt, ytm, align_len, dist_th, sat_indices, score, score_sum_method, length_normalize);
                     if (score.getValue() > max_score) {
                         max_score = score.getValue();

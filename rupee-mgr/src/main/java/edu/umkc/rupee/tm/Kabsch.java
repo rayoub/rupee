@@ -22,7 +22,7 @@ public class Kabsch {
     public static double execute(double x[][], double y[][], int n, int mode, double t[], double u[][]) {
 
         int i, j, m, m1, l, k;
-        double e0, rms1, d, h, g;
+        double e0, rmsd, d, h, g;
         double cth, sth, sqrth, p, det, sigma;
         double xc[] = new double[3];
         double yc[] = new double[3];
@@ -40,8 +40,7 @@ public class Kabsch {
         double epsilon = 0.00000001;
 
         // initializtation
-        double rmsd = 0.0;
-        rms1 = 0;
+        rmsd = 0;
         e0 = 0;
         double c1[] = new double[3];
         double c2[] = new double[3];
@@ -346,9 +345,9 @@ public class Kabsch {
         d = (d + e[1]) + e[0];
 
         if (mode == 2 || mode == 0) {
-            rms1 = (e0 - d) - d;
-            if (rms1 < 0.0)
-                rms1 = 0.0;
+            rmsd = (e0 - d) - d;
+            if (rmsd < 0.0)
+                rmsd = 0.0;
         }
 
         return rmsd;
