@@ -15,14 +15,20 @@ public class Testing {
         list.stream().limit(1000).forEach(s -> {
 
             TmAlign.Results results = Aligning.tmAlign(s.getDbId1(), s.getDbId2(), TmMode.REGULAR);
-            double score1 = s.getTmAvgTmScore();
-            double score2 = results.getTmScoreAvg();
-            double diff = Math.abs(score1 - score2);
-            if (diff > 0.00001) {
-                System.out.println("Inconsistent");
-                System.out.println(s.getDbId1() + ", " + s.getDbId2());
-                System.out.println(score1 + " != " + score2 + " (" + diff + ")");
-            }
+
+            test(s, s.getTmAvgRmsd(), results.getRmsd());
+            test(s, s.getTmAvgTmScore(), results.getTmScoreAvg());
+            test(s, s.getTmQTmScore(), results.getTmScoreQ());
         });
+    }
+
+    public static void test(AlignmentScores s, double score1, double score2) {
+
+        double diff = Math.abs(score1 - score2);
+        if (diff > 0.00001) {
+            System.out.println("Inconsistent");
+            System.out.println(s.getDbId1() + ", " + s.getDbId2());
+            System.out.println(score1 + " != " + score2 + " (" + diff + ")");
+        }
     }
 }
