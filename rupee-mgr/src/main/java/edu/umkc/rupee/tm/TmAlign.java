@@ -109,7 +109,7 @@ public class TmAlign {
      *  get_initial_fgt
      *
      * dynamic programming
-     *  DP_iter
+     *  dp_iteration
      *
      * scoring
      *  fast_search
@@ -118,11 +118,15 @@ public class TmAlign {
      *  calculate_tm_score
      */
 
+    // globals (set only once)
+    private double SCORE_D8;
+    private double SCORE_D82;
+    private double DIST_CUT;  
+
     private TmMode _mode;                           // regular, fast, ...
 
-    private double _D0_MIN;                         // for d0 
+    private double _d0_min;                         // for d0 
     private double _normalize_by;                   // normalization length
-    private double _score_d8, _dist_cut;   
     private double _d0, _d02, _d0_bounded;
     private double _score[][];                      // for dynamic programming
     private boolean _path[][];                      // for dynamic programming
@@ -254,8 +258,9 @@ public class TmAlign {
         parameter_set4search(_xlen, _ylen); 
       
         // set globals 
-        _dist_cut = 4.25; 
-        _score_d8 = 1.5 * Math.pow(_normalize_by * 1.0, 0.3) + 3.5;
+        DIST_CUT = 4.25; 
+        SCORE_D8 = 1.5 * Math.pow(_normalize_by * 1.0, 0.3) + 3.5;
+        SCORE_D82 = SCORE_D8 * SCORE_D8;
        
         // set scoring method 
         int simplify_step = 40; 
@@ -429,7 +434,7 @@ public class TmAlign {
             {
                 // aligned
                 d = Math.sqrt(Functions.dist(_xt[i], _ya[j]));
-                if (d <= _score_d8) {
+                if (d <= SCORE_D8) {
 
                     m1[k] = i;
                     m2[k] = j;
@@ -800,7 +805,7 @@ public class TmAlign {
         }
 
         _d0 = _d0 + 0.8;
-        _D0_MIN = _d0; 
+        _d0_min = _d0; 
         _d02 = _d0 * _d0;
        
         // set bounded d0 term 
@@ -822,9 +827,9 @@ public class TmAlign {
             _d0 = (1.24 * Math.pow((_normalize_by * 1.0 - 15), 1.0 / 3) - 1.8);
         }
 
-        _D0_MIN = 0.5;
-        if (_d0 < _D0_MIN)
-            _d0 = _D0_MIN;
+        _d0_min = 0.5;
+        if (_d0 < _d0_min)
+            _d0 = _d0_min;
         _d02 = _d0 * _d0;
 
         // set bounded d0 term 
@@ -993,8 +998,8 @@ public class TmAlign {
         double u[][] = new double[3][3];
         double dij;
         double d01 = _d0 + 1.5;
-        if (d01 < _D0_MIN)
-            d01 = _D0_MIN;
+        if (d01 < _d0_min)
+            d01 = _d0_min;
         double d02 = d01 * d01;
 
         double xx[] = new double[3];
@@ -1039,8 +1044,8 @@ public class TmAlign {
         double u[][] = new double[3][3];
 
         double d01 = _d0 + 1.5;
-        if (d01 < _D0_MIN)
-            d01 = _D0_MIN;
+        if (d01 < _d0_min)
+            d01 = _d0_min;
         double d02 = d01 * d01;
 
         double GLmax = 0;
@@ -1266,7 +1271,7 @@ public class TmAlign {
             r_min = fra_min;
 
         int inc = 0;
-        double dcu0_cut = _dist_cut * _dist_cut;
+        double dcu0_cut = DIST_CUT * DIST_CUT;
         ;
         double dcu_cut = dcu0_cut;
 
@@ -1313,7 +1318,7 @@ public class TmAlign {
 
             if (Lfr_max < r_min) {
                 inc++;
-                double dinc = Math.pow(1.1, (double) inc) * _dist_cut;
+                double dinc = Math.pow(1.1, (double) inc) * DIST_CUT;
                 dcu_cut = dinc * dinc;
             }
         } // while <;
@@ -1745,7 +1750,6 @@ public class TmAlign {
         double score_sum = 0;
         double dist;
         double dist_th2 = dist_th * dist_th;
-        double score_d82 = _score_d8 * _score_d8;
 
         int num_sat;
         int relax_factor = 0;
@@ -1760,7 +1764,7 @@ public class TmAlign {
                     num_sat++;
                 }
                 if (score_sum_method == 8) {
-                    if (dist <= score_d82) {
+                    if (dist <= SCORE_D82) {
                         score_sum += 1 / (1 + dist / d02);
                     }
                 } else {
