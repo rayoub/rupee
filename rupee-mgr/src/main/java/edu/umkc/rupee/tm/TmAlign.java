@@ -283,7 +283,7 @@ public class TmAlign {
         if (tm > max_tm) {
             max_tm = tm;
         }
-        tm = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 0, 2, _mode.getDpIterations());
+        tm = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, _mode.getDpIterations(), false);
         if (tm > max_tm) {
             max_tm = tm;
             for (int i = 0; i < _ylen; i++) {
@@ -305,7 +305,7 @@ public class TmAlign {
             }
         }
         if (tm > max_tm * 0.2) {
-            tm = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 0, 2, _mode.getDpIterations());
+            tm = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, _mode.getDpIterations(), false);
             if (tm > max_tm) {
                 max_tm = tm;
                 for (int i = 0; i < _ylen; i++) {
@@ -329,7 +329,7 @@ public class TmAlign {
                 }
             }
             if (tm > max_tm * percent_of_max) {
-                tm = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 0, 2, 2);
+                tm = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 2, false);
                 if (tm > max_tm) {
                     max_tm = tm;
                     for (int i = 0; i < _ylen; i++) {
@@ -353,7 +353,7 @@ public class TmAlign {
             }
         }
         if (tm > max_tm * percent_of_max) {
-            tm = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 0, 2, _mode.getDpIterations());
+            tm = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, _mode.getDpIterations(), false);
             if (tm > max_tm) {
                 max_tm = tm;
                 for (int i = 0; i < _ylen; i++) {
@@ -376,7 +376,7 @@ public class TmAlign {
             }
         }
         if (tm > max_tm * percent_of_max) {
-            tm = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 1, 2, 2);
+            tm = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 2, true);
             if (tm > max_tm) {
                 max_tm = tm;
                 for (int i = 0; i < _ylen; i++) {
@@ -1329,16 +1329,13 @@ public class TmAlign {
     // **********************************************************************************
 
     public double DP_iter(
-            double x[][], double y[][], int x_len, int y_len, 
-            double t[], double u[][], int 
-            invmap0[],
-            int g1, int g2, 
-            int iteration_max) {
+            double x[][], double y[][], 
+            int x_len, int y_len, 
+            double t[], double u[][], 
+            int invmap_best[],
+            int iteration_max,
+            boolean gapless) {
 
-        // Output
-        // best alignment stored in invmap0
-
-        double gap_open[] = { -0.6, 0 };
         int invmap[] = new int[y_len + 1];
 
         int iteration, i, j, k;
@@ -1349,21 +1346,27 @@ public class TmAlign {
 
         double d02 = _d0 * _d0;
 
+        int g1 = 0; 
+        int g2 = 2;
+        if (gapless) 
+            g1 = 1;
+        double gap_open[] = { -0.6, 0 };
+
         // try different gap open penalties
         for (int g = g1; g < g2; g++) {
 
-            // iterate on DP algorithms
+            // iterate on NW algorithm
             for (iteration = 0; iteration < iteration_max; iteration++) {
 
                 NW.NWDP_TM(_path, _val, x, y, x_len, y_len, t, u, d02, gap_open[g], invmap);
 
                 k = 0;
                 for (j = 0; j < y_len; j++) {
-                    i = invmap[j];
 
+                    i = invmap[j];
                     if (i >= 0) {
 
-                        // aligned
+                        // pack alignment
                         _xtm[k][0] = x[i][0];
                         _xtm[k][1] = x[i][1];
                         _xtm[k][2] = x[i][2];
@@ -1377,14 +1380,13 @@ public class TmAlign {
                 }
 
                 // k is the length of the alignment stored densely in xtm and ytm
-                
                 tmscore = detailed_search(_xtm, _ytm, k, t, u, simplify_step, score_sum_method, false);
 
                 // update the best
                 if (tmscore > tmscore_max) {
                     tmscore_max = tmscore;
                     for (i = 0; i < y_len; i++) {
-                        invmap0[i] = invmap[i];
+                        invmap_best[i] = invmap[i];
                     }
                 }
 
@@ -1396,7 +1398,7 @@ public class TmAlign {
                 }
                 tmscore_old = tmscore;
 
-            } // for iteration
+            } // for NW iteration
 
         } // for gap open
 
