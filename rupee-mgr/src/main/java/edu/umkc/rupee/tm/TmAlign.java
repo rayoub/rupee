@@ -123,7 +123,7 @@ public class TmAlign {
     private double _D0_MIN;                         // for d0 
     private double _normalize_by;                   // normalization length
     private double _score_d8, _dist_cut;   
-    private double _d0, _d0_bounded;
+    private double _d0, _d02, _d0_bounded;
     private double _score[][];                      // for dynamic programming
     private boolean _path[][];                      // for dynamic programming
     private double _val[][];                        // for dynamic programming
@@ -282,12 +282,12 @@ public class TmAlign {
         // ********************************************************************************** //
 
         get_initial(_xa, _ya, _xlen, _ylen, invmap_best);
-        tm = detailed_search_wrapper(_xa, _ya, _xlen, _ylen, invmap_best, _t, _u, simplify_step, score_sum_method, false);
+        tm = detailed_search_wrapper(_xa, _ya, _xlen, _ylen, invmap_best, _t, _u, simplify_step, score_sum_method, _d02, false);
 
         if (tm > max_tm) {
             max_tm = tm;
         }
-        tm = dp_iteration(_xa, _ya, _xlen, _ylen, _t, _u, invmap, _mode.getDpIterations(), false);
+        tm = dp_iteration(_xa, _ya, _xlen, _ylen, _t, _u, invmap, _mode.getDpIterations(), _d02, false);
         if (tm > max_tm) {
             max_tm = tm;
             for (int i = 0; i < _ylen; i++) {
@@ -300,7 +300,7 @@ public class TmAlign {
         // ********************************************************************************** //
         
         get_initial_ss(_xa, _ya, _xlen, _ylen, invmap);
-        tm = detailed_search_wrapper(_xa, _ya, _xlen, _ylen, invmap, _t, _u, simplify_step, score_sum_method, false);
+        tm = detailed_search_wrapper(_xa, _ya, _xlen, _ylen, invmap, _t, _u, simplify_step, score_sum_method, _d02, false);
 
         if (tm > max_tm) {
             max_tm = tm;
@@ -309,7 +309,7 @@ public class TmAlign {
             }
         }
         if (tm > max_tm * 0.2) {
-            tm = dp_iteration(_xa, _ya, _xlen, _ylen, _t, _u, invmap, _mode.getDpIterations(), false);
+            tm = dp_iteration(_xa, _ya, _xlen, _ylen, _t, _u, invmap, _mode.getDpIterations(), _d02, false);
             if (tm > max_tm) {
                 max_tm = tm;
                 for (int i = 0; i < _ylen; i++) {
@@ -324,7 +324,7 @@ public class TmAlign {
 
         if (_mode == TmMode.REGULAR && get_initial5(_xa, _ya, _xlen, _ylen, invmap)) {
 
-            tm = detailed_search_wrapper(_xa, _ya, _xlen, _ylen, invmap, _t, _u, simplify_step, score_sum_method, false);
+            tm = detailed_search_wrapper(_xa, _ya, _xlen, _ylen, invmap, _t, _u, simplify_step, score_sum_method, _d02, false);
 
             if (tm > max_tm) {
                 max_tm = tm;
@@ -333,7 +333,7 @@ public class TmAlign {
                 }
             }
             if (tm > max_tm * percent_of_max) {
-                tm = dp_iteration(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 2, false);
+                tm = dp_iteration(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 2, _d02, false);
                 if (tm > max_tm) {
                     max_tm = tm;
                     for (int i = 0; i < _ylen; i++) {
@@ -348,7 +348,7 @@ public class TmAlign {
         // ********************************************************************************** //
         
         get_initial_ssplus(_xa, _ya, _xlen, _ylen, invmap_best, invmap);
-        tm = detailed_search_wrapper(_xa, _ya, _xlen, _ylen, invmap, _t, _u, simplify_step, score_sum_method, false);
+        tm = detailed_search_wrapper(_xa, _ya, _xlen, _ylen, invmap, _t, _u, simplify_step, score_sum_method, _d02, false);
 
         if (tm > max_tm) {
             max_tm = tm;
@@ -357,7 +357,7 @@ public class TmAlign {
             }
         }
         if (tm > max_tm * percent_of_max) {
-            tm = dp_iteration(_xa, _ya, _xlen, _ylen, _t, _u, invmap, _mode.getDpIterations(), false);
+            tm = dp_iteration(_xa, _ya, _xlen, _ylen, _t, _u, invmap, _mode.getDpIterations(), _d02, false);
             if (tm > max_tm) {
                 max_tm = tm;
                 for (int i = 0; i < _ylen; i++) {
@@ -371,7 +371,7 @@ public class TmAlign {
         // ********************************************************************************** //
         
         get_initial_fgt(_xa, _ya, _xlen, _ylen, invmap);
-        tm = detailed_search_wrapper(_xa, _ya, _xlen, _ylen, invmap, _t, _u, simplify_step, score_sum_method, false);
+        tm = detailed_search_wrapper(_xa, _ya, _xlen, _ylen, invmap, _t, _u, simplify_step, score_sum_method, _d02, false);
 
         if (tm > max_tm) {
             max_tm = tm;
@@ -380,7 +380,7 @@ public class TmAlign {
             }
         }
         if (tm > max_tm * percent_of_max) {
-            tm = dp_iteration(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 2, true);
+            tm = dp_iteration(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 2, _d02, true);
             if (tm > max_tm) {
                 max_tm = tm;
                 for (int i = 0; i < _ylen; i++) {
@@ -413,7 +413,7 @@ public class TmAlign {
         simplify_step = 1;
         score_sum_method = 8;
 
-        tm = detailed_search_wrapper(_xa, _ya, _xlen, _ylen, invmap_best, _t, _u, simplify_step, score_sum_method, true);
+        tm = detailed_search_wrapper(_xa, _ya, _xlen, _ylen, invmap_best, _t, _u, simplify_step, score_sum_method, _d02, true);
 
         // select pairs with dis < d8 for final TMscore computation and output alignment
         int align_len, k = 0;
@@ -477,15 +477,15 @@ public class TmAlign {
     
         // normalized by length of first structure
         parameter_set4final(_xlen);
-        tmQ = detailed_search(_xtm, _ytm, align_len, _t, _u, simplify_step, score_sum_method, false);
+        tmQ = detailed_search(_xtm, _ytm, align_len, _t, _u, simplify_step, score_sum_method, _d02, false);
 
         //normalized by length of second structure
         parameter_set4final(_ylen);
-        tmT = detailed_search(_xtm, _ytm, align_len, _t, _u, simplify_step, score_sum_method, false);
+        tmT = detailed_search(_xtm, _ytm, align_len, _t, _u, simplify_step, score_sum_method, _d02, false);
         
         // normalized by average length of structures
         parameter_set4final((_xlen + _ylen) * 0.5);
-        tmAvg = detailed_search(_xtm, _ytm, align_len, _t, _u, simplify_step, score_sum_method, false);
+        tmAvg = detailed_search(_xtm, _ytm, align_len, _t, _u, simplify_step, score_sum_method, _d02, false);
         
         // ********************************************************************************* //
         // * Output *
@@ -793,16 +793,15 @@ public class TmAlign {
                                             
         // set d0 term
         if (_normalize_by <= 19) {
-
             _d0 = 0.168; 
         } else {
-
             // equation (5) from Zhang, 2004
             _d0 = (1.24 * Math.pow((_normalize_by * 1.0 - 15), 1.0 / 3.0) - 1.8);
         }
 
         _d0 = _d0 + 0.8;
         _D0_MIN = _d0; 
+        _d02 = _d0 * _d0;
        
         // set bounded d0 term 
         _d0_bounded = _d0;
@@ -817,10 +816,8 @@ public class TmAlign {
         _normalize_by = len; 
 
         if (_normalize_by <= 21) {
-
             _d0 = 0.5;
         } else {
-
             // equation (5) from Zhang, 2004
             _d0 = (1.24 * Math.pow((_normalize_by * 1.0 - 15), 1.0 / 3) - 1.8);
         }
@@ -828,6 +825,7 @@ public class TmAlign {
         _D0_MIN = 0.5;
         if (_d0 < _D0_MIN)
             _d0 = _D0_MIN;
+        _d02 = _d0 * _d0;
 
         // set bounded d0 term 
         _d0_bounded = _d0;
@@ -1331,6 +1329,7 @@ public class TmAlign {
             double t[], double u[][], 
             int invmap_best[],
             int iteration_max,
+            double d02,
             boolean gapless) {
 
         int invmap[] = new int[y_len + 1];
@@ -1340,8 +1339,6 @@ public class TmAlign {
         int score_sum_method = 8;
         int simplify_step = 40;
         tmscore_max = -1;
-
-        double d02 = _d0 * _d0;
 
         int g1 = 0; 
         int g2 = 2;
@@ -1377,7 +1374,7 @@ public class TmAlign {
                 }
 
                 // k is the length of the alignment stored densely in xtm and ytm
-                tmscore = detailed_search(_xtm, _ytm, k, t, u, simplify_step, score_sum_method, false);
+                tmscore = detailed_search(_xtm, _ytm, k, t, u, simplify_step, score_sum_method, d02, false);
 
                 // update the best
                 if (tmscore > tmscore_max) {
@@ -1547,6 +1544,7 @@ public class TmAlign {
             double t_out[], double u_out[][], 
             int simplify_step, 
             int score_sum_method,
+            double d02,
             boolean length_normalize) {
 
         // pack the alignment into _xtm and _ytm based on the inverse map
@@ -1570,7 +1568,7 @@ public class TmAlign {
         }
 
         // k holds the length of the alignment obtained from the inverse map
-        return detailed_search(_xtm, _ytm, k, t_out, u_out, simplify_step, score_sum_method, length_normalize);
+        return detailed_search(_xtm, _ytm, k, t_out, u_out, simplify_step, score_sum_method, d02, length_normalize);
     }
     
     public double detailed_search(
@@ -1579,6 +1577,7 @@ public class TmAlign {
             double t_out[], double u_out[][],
             int simplify_step,
             int score_sum_method,
+            double d02,
             boolean length_normalize) {
 
         int i, m;
@@ -1649,7 +1648,11 @@ public class TmAlign {
 
                 // calcualte tm-score and get indices satisfying distance threshold
                 dist_th = _d0_bounded - 1;
-                num_sat = calculate_tm_score(_xt, ytm, align_len, dist_th, sat_indices, score, score_sum_method, length_normalize);
+                num_sat = calculate_tm_score(
+                        _xt, ytm, align_len, 
+                        dist_th, sat_indices, 
+                        score, score_sum_method, 
+                        d02, length_normalize);
                 if (score.getValue() > max_score) {
                     max_score = score.getValue();
 
@@ -1688,7 +1691,11 @@ public class TmAlign {
                     Functions.do_rotation(xtm, _xt, align_len, t, u);
                     
                     // calcualte the new tm-score and get indices satisfying distance threshold
-                    num_sat = calculate_tm_score(_xt, ytm, align_len, dist_th, sat_indices, score, score_sum_method, length_normalize);
+                    num_sat = calculate_tm_score(
+                            _xt, ytm, align_len, 
+                            dist_th, sat_indices, 
+                            score, score_sum_method, 
+                            d02, length_normalize);
                     if (score.getValue() > max_score) {
                         max_score = score.getValue();
 
@@ -1732,12 +1739,12 @@ public class TmAlign {
             double dist_th, int sat_indices[], 
             MutableDouble score, 
             int score_sum_method,
+            double d02,
             boolean length_normalize) {
 
         double score_sum = 0;
         double dist;
         double dist_th2 = dist_th * dist_th;
-        double d02 = _d0 * _d0;
         double score_d82 = _score_d8 * _score_d8;
 
         int num_sat;
