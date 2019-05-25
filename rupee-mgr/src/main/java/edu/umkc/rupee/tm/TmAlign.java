@@ -233,6 +233,7 @@ public class TmAlign {
         // ********************************************************************************** //
 
         /*
+         * Part 1: Obtaining the TM-score rotation matrix
          * the initial alignments create an inverse map to represent the alignment
          * the inverse map is then packed into _xtm and _ytm and used for a score search
          * during a score search, fragments of _xtm and _ytm are packed into _r1 and _r2
@@ -240,6 +241,9 @@ public class TmAlign {
          * and an attempt is made to extend that alignment. 
          * Indices satisfying a distance threshold are used to determine convergence of the 
          * score search.
+         * Part 2: Refining the rotation matrix with DP
+         * Once the legacy TM-score rotation matrix is obtained, dynamic programming is
+         * used to further refine the alignment.
          */
 
         // ********************************************************************************** //
@@ -283,7 +287,7 @@ public class TmAlign {
         if (tm > max_tm) {
             max_tm = tm;
         }
-        tm = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, _mode.getDpIterations(), false);
+        tm = dp_iteration(_xa, _ya, _xlen, _ylen, _t, _u, invmap, _mode.getDpIterations(), false);
         if (tm > max_tm) {
             max_tm = tm;
             for (int i = 0; i < _ylen; i++) {
@@ -305,7 +309,7 @@ public class TmAlign {
             }
         }
         if (tm > max_tm * 0.2) {
-            tm = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, _mode.getDpIterations(), false);
+            tm = dp_iteration(_xa, _ya, _xlen, _ylen, _t, _u, invmap, _mode.getDpIterations(), false);
             if (tm > max_tm) {
                 max_tm = tm;
                 for (int i = 0; i < _ylen; i++) {
@@ -329,7 +333,7 @@ public class TmAlign {
                 }
             }
             if (tm > max_tm * percent_of_max) {
-                tm = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 2, false);
+                tm = dp_iteration(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 2, false);
                 if (tm > max_tm) {
                     max_tm = tm;
                     for (int i = 0; i < _ylen; i++) {
@@ -353,7 +357,7 @@ public class TmAlign {
             }
         }
         if (tm > max_tm * percent_of_max) {
-            tm = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, _mode.getDpIterations(), false);
+            tm = dp_iteration(_xa, _ya, _xlen, _ylen, _t, _u, invmap, _mode.getDpIterations(), false);
             if (tm > max_tm) {
                 max_tm = tm;
                 for (int i = 0; i < _ylen; i++) {
@@ -376,7 +380,7 @@ public class TmAlign {
             }
         }
         if (tm > max_tm * percent_of_max) {
-            tm = DP_iter(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 2, true);
+            tm = dp_iteration(_xa, _ya, _xlen, _ylen, _t, _u, invmap, 2, true);
             if (tm > max_tm) {
                 max_tm = tm;
                 for (int i = 0; i < _ylen; i++) {
@@ -898,18 +902,25 @@ public class TmAlign {
         return tmscore_max;
     }
 
-    // secondary structure alignment to find initial alignment
-    public void get_initial_ss(double x[][], double y[][], int x_len, int y_len, int y2x[]) {
+    // get initial alignment from secondary structure 
+    public void get_initial_ss(double x[][], double y[][], int x_len, int y_len, int invmap[]) {
 
-        // Output:
-        // y2x: alignment of y to x (-1 indicates unaligned)
-        
         // assign secondary structures
         make_sec(x, x_len, _secx);
         make_sec(y, y_len, _secy);
 
         double gap_open = -1.0;
-        NW.NWDP_TM(_path, _val, _secx, _secy, x_len, y_len, gap_open, y2x);
+        NW.dp_ss(_path, _val, _secx, _secy, x_len, y_len, gap_open, invmap);
+    }
+    
+    // get initial alignment from secondary structure plus previous alignments
+    public void get_initial_ssplus(double x[][], double y[][], int x_len, int y_len, int invmap_best[], int invmap[]) {
+        
+        // create score matrix for DP
+        score_matrix_rmsd_sec(x, y, x_len, y_len, invmap_best);
+
+        double gap_open = -1.0;
+        NW.dp_score(_score, _path, _val, x_len, y_len, gap_open, invmap);
     }
     
     // 1->coil, 2->helix, 3->turn, 4->strand
@@ -939,7 +950,8 @@ public class TmAlign {
 
     public int sec_str(double dis13, double dis14, double dis15, double dis24, double dis25, double dis35) {
         
-        int s = 1;
+        int s = 1; // coil
+
         double delta = 2.1;
         if (Math.abs(dis15 - 6.37) < delta) {
             if (Math.abs(dis14 - 5.18) < delta) {
@@ -978,21 +990,8 @@ public class TmAlign {
 
         return s;
     }
-    
-    // get initial alignment from secondary structure and previous alignments
-    public void get_initial_ssplus(double x[][], double y[][], int x_len, int y_len, int y2x0[], int y2x[]) {
-        
-        // Output:
-        // y2x: alignment of y to x (-1 indicates unaligned)
 
-        // create score matrix for DP
-        score_matrix_rmsd_sec(x, y, x_len, y_len, y2x0);
-
-        double gap_open = -1.0;
-        NW.NWDP_TM(_score, _path, _val, x_len, y_len, gap_open, y2x);
-    }
-
-    public void score_matrix_rmsd_sec(double x[][], double y[][], int x_len, int y_len, int y2x[]) {
+    public void score_matrix_rmsd_sec(double x[][], double y[][], int x_len, int y_len, int invmap[]) {
 
         double t[] = new double[3];
         double u[][] = new double[3][3];
@@ -1005,7 +1004,7 @@ public class TmAlign {
         double xx[] = new double[3];
         int i, k = 0;
         for (int j = 0; j < y_len; j++) {
-            i = y2x[j];
+            i = invmap[j];
             if (i >= 0) {
                 _r1[k][0] = x[i][0];
                 _r1[k][1] = x[i][1];
@@ -1115,7 +1114,7 @@ public class TmAlign {
                     Kabsch.execute(_r1, _r2, n_frag[i_frag], 1, t, u);
 
                     double gap_open = 0.0;
-                    NW.NWDP_TM(_path, _val, x, y, x_len, y_len, t, u, d02, gap_open, invmap);
+                    NW.dp_dist(_path, _val, x, y, x_len, y_len, t, u, d02, gap_open, invmap);
                     GL = fast_search(x, y, x_len, y_len, invmap);
                     if (GL > GLmax) {
                         GLmax = GL;
@@ -1132,7 +1131,7 @@ public class TmAlign {
     }
     
     // perform fragment gapless threading to find the best initial alignment
-    public double get_initial_fgt(double x[][], double y[][], int x_len, int y_len, int y2x[]) {
+    public double get_initial_fgt(double x[][], double y[][], int x_len, int y_len, int invmap[]) {
 
         // Output:
         // y2x: alignment of y to x (-1 indicates unaligned)
@@ -1215,7 +1214,7 @@ public class TmAlign {
                 if (tmscore >= tmscore_max) {
                     tmscore_max = tmscore;
                     for (j = 0; j < y_len; j++) {
-                        y2x[j] = y2x_[j];
+                        invmap[j] = y2x_[j];
                     }
                 }
             }
@@ -1250,7 +1249,7 @@ public class TmAlign {
                 if (tmscore >= tmscore_max) {
                     tmscore_max = tmscore;
                     for (j = 0; j < y_len; j++) {
-                        y2x[j] = y2x_[j];
+                        invmap[j] = y2x_[j];
                     }
                 }
             }
@@ -1325,10 +1324,10 @@ public class TmAlign {
     }
     
     // **********************************************************************************
-    // dynamic programming
+    // dynamic programming iteration
     // **********************************************************************************
 
-    public double DP_iter(
+    public double dp_iteration(
             double x[][], double y[][], 
             int x_len, int y_len, 
             double t[], double u[][], 
@@ -1358,7 +1357,7 @@ public class TmAlign {
             // iterate on NW algorithm
             for (iteration = 0; iteration < iteration_max; iteration++) {
 
-                NW.NWDP_TM(_path, _val, x, y, x_len, y_len, t, u, d02, gap_open[g], invmap);
+                NW.dp_dist(_path, _val, x, y, x_len, y_len, t, u, d02, gap_open[g], invmap);
 
                 k = 0;
                 for (j = 0; j < y_len; j++) {
@@ -1396,9 +1395,10 @@ public class TmAlign {
                         break;
                     }
                 }
+
                 tmscore_old = tmscore;
 
-            } // for NW iteration
+            } // for dp iteration
 
         } // for gap open
 
