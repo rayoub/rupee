@@ -16,82 +16,6 @@ import org.biojava.nbio.structure.Structure;
 
 public class TmAlign {
 
-    public static class Results {
-
-        private int chainLength1;
-        private int chainLength2;
-        private int alignedLength;
-        private double tmScoreQ;
-        private double tmScoreT;
-        private double tmScoreAvg;
-        private double rmsd;
-        private String output;
-
-        public int getChainLength1() {
-            return chainLength1;
-        }
-
-        public void setChainLength1(int chainLength1) {
-            this.chainLength1 = chainLength1;
-        }
-
-        public int getChainLength2() {
-            return chainLength2;
-        }
-
-        public void setChainLength2(int chainLength2) {
-            this.chainLength2 = chainLength2;
-        }
-
-        public int getAlignedLength() {
-            return alignedLength;
-        }
-
-        public void setAlignedLength(int alignedLength) {
-            this.alignedLength = alignedLength;
-        }
-
-        public double getTmScoreQ() {
-            return tmScoreQ;
-        }
-
-        public void setTmScoreQ(double tmScoreQ) {
-            this.tmScoreQ = tmScoreQ;
-        }
-
-        public double getTmScoreT() {
-            return tmScoreT;
-        }
-
-        public void setTmScoreT(double tmScoreT) {
-            this.tmScoreT = tmScoreT;
-        }
-
-        public double getTmScoreAvg() {
-            return tmScoreAvg;
-        }
-
-        public void setTmScoreAvg(double tmScoreAvg) {
-            this.tmScoreAvg = tmScoreAvg;
-        }
-
-        public double getRmsd() {
-            return rmsd;
-        }
-
-        public void setRmsd(double rmsd) {
-            this.rmsd = rmsd;
-        }
-
-        public String getOutput() {
-            return output;
-        }
-
-        public void setOutput(String output) {
-            this.output = output;
-        }
-    }
-
     /*
      * Layout
      * 
@@ -149,7 +73,7 @@ public class TmAlign {
         this._mode = mode;
     }
 
-    public Results align(Structure xstruct, Structure ystruct) { 
+    public TmResults align(Structure xstruct, Structure ystruct) { 
 
         // ********************************************************************************** //
         // * load data *
@@ -494,7 +418,7 @@ public class TmAlign {
         // * Output *
         // ********************************************************************************* //
 
-        Results results = new Results();
+        TmResults results = new TmResults();
         results.setChainLength1(_xlen);
         results.setChainLength2(_ylen);
         results.setAlignedLength(align_len);

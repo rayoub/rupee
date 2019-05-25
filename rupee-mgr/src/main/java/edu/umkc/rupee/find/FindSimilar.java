@@ -26,7 +26,7 @@ import edu.umkc.rupee.scop.ScopSearch;
 import edu.umkc.rupee.scop.ScopSearchCriteria;
 import edu.umkc.rupee.scop.ScopSearchRecord;
 import edu.umkc.rupee.tm.TmMode;
-import edu.umkc.rupee.tm.TmAlign;
+import edu.umkc.rupee.tm.TmResults;
 
 public class FindSimilar {
 
@@ -61,7 +61,7 @@ public class FindSimilar {
 
                     try {
 
-                        TmAlign.Results results = Aligning.tmAlign(domain.ScopId, record.getDbId(), TmMode.REGULAR);
+                        TmResults results = Aligning.tmAlign(domain.ScopId, record.getDbId(), TmMode.REGULAR);
                         if (getTmScore(searchType, results) > SIMILARITY_THRESHOLD) {
 
                             try {
@@ -160,7 +160,7 @@ public class FindSimilar {
         return records;
     }
 
-    private static double getTmScore(SearchType searchType, TmAlign.Results results) {
+    private static double getTmScore(SearchType searchType, TmResults results) {
 
         if (searchType == SearchType.FULL_LENGTH) 
             return results.getTmScoreAvg();

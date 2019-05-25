@@ -14,7 +14,7 @@ public class Testing {
 
         list.stream().limit(1000).forEach(s -> {
 
-            TmAlign.Results results = Aligning.tmAlign(s.getDbId1(), s.getDbId2(), TmMode.REGULAR);
+            TmResults results = Aligning.tmAlign(s.getDbId1(), s.getDbId2(), TmMode.REGULAR);
 
             test(s, s.getTmAvgRmsd(), results.getRmsd());
             test(s, s.getTmAvgTmScore(), results.getTmScoreAvg());

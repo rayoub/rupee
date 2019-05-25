@@ -19,8 +19,9 @@ import org.biojava.nbio.structure.io.PDBFileReader;
 
 import edu.umkc.rupee.defs.AlignmentType;
 import edu.umkc.rupee.defs.DbType;
-import edu.umkc.rupee.tm.TmMode;
 import edu.umkc.rupee.tm.TmAlign;
+import edu.umkc.rupee.tm.TmMode;
+import edu.umkc.rupee.tm.TmResults;
 
 public class Aligning
 {
@@ -107,9 +108,9 @@ public class Aligning
         return record;
     }
     
-    public static TmAlign.Results tmAlign(String dbId1, String dbId2, TmMode mode) {
+    public static TmResults tmAlign(String dbId1, String dbId2, TmMode mode) {
 
-        TmAlign.Results results = null;
+        TmResults results = null;
 
         try {
 
@@ -140,9 +141,9 @@ public class Aligning
         return results;
     }
 
-    public static TmAlign.Results tmAlign(int uploadId, String dbId, TmMode mode) {
+    public static TmResults tmAlign(int uploadId, String dbId, TmMode mode) {
 
-        TmAlign.Results results = null;
+        TmResults results = null;
 
         try {
 

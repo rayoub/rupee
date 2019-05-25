@@ -32,8 +32,9 @@ import edu.umkc.rupee.lib.Db;
 import edu.umkc.rupee.lib.Hashes;
 import edu.umkc.rupee.lib.LCS;
 import edu.umkc.rupee.lib.Similarity;
-import edu.umkc.rupee.tm.TmMode;
 import edu.umkc.rupee.tm.TmAlign;
+import edu.umkc.rupee.tm.TmMode;
+import edu.umkc.rupee.tm.TmResults;
 
 public abstract class Search {
 
@@ -311,7 +312,7 @@ public abstract class Search {
             Structure targetStructure = parser.parsePDBFile(targetFileGz);
      
             TmAlign tm = new TmAlign(mode);
-            TmAlign.Results results = tm.align(queryStructure, targetStructure);
+            TmResults results = tm.align(queryStructure, targetStructure);
 
             record.setRmsd(results.getRmsd());
 
@@ -351,7 +352,7 @@ public abstract class Search {
             Structure targetStructure = parser.parsePDBFile(targetFileGz);
      
             TmAlign tm = new TmAlign(mode);
-            TmAlign.Results results = tm.align(queryStructure, targetStructure);
+            TmResults results = tm.align(queryStructure, targetStructure);
 
             record.setRmsd(results.getRmsd());
 
