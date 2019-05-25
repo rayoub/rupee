@@ -416,7 +416,7 @@ public class TmAlign {
         tm = detailed_search_wrapper(_xa, _ya, _xlen, _ylen, invmap_best, _t, _u, simplify_step, score_sum_method, true);
 
         // select pairs with dis < d8 for final TMscore computation and output alignment
-        int n_ali8, k = 0;
+        int align_len, k = 0;
         int m1[], m2[];
         double d;
         m1 = new int[_xlen]; // alignd index in x
@@ -458,36 +458,34 @@ public class TmAlign {
         }
 
         // alignment length
-        n_ali8 = k;
+        align_len = k;
 
         // minimize rmsd for the best rotation and translation matrices t and u
-        double rmsd = Kabsch.execute(_r1, _r2, n_ali8, 0, _t, _u); 
-        rmsd = Math.sqrt(rmsd / (double) n_ali8);
+        double rmsd = Kabsch.execute(_r1, _r2, align_len, 0, _t, _u); 
+        rmsd = Math.sqrt(rmsd / (double) align_len);
 
         // ********************************************************************************* //
         // * Final TMscore *
         // ********************************************************************************* //
         
-        double t0[] = new double[3];
-        double u0[][] = new double[3][3];
-        double TM1, TM2, TM3; // confusing but TM2 is normalized by first structure and TM1 by second
-        double d0_out=5.0;  
+        double tmQ, tmT, tmAvg; 
+        double d0_out = 5.0;  
 
         // set score method 
         simplify_step = 1;
         score_sum_method = 0;
     
-        //normalized by length of second structure
-        parameter_set4final(_ylen);
-        TM1 = detailed_search(_xtm, _ytm, n_ali8, t0, u0, simplify_step, score_sum_method, false);
-        
         // normalized by length of first structure
         parameter_set4final(_xlen);
-        TM2 = detailed_search(_xtm, _ytm, n_ali8, _t, _u, simplify_step, score_sum_method, false);
+        tmQ = detailed_search(_xtm, _ytm, align_len, _t, _u, simplify_step, score_sum_method, false);
+
+        //normalized by length of second structure
+        parameter_set4final(_ylen);
+        tmT = detailed_search(_xtm, _ytm, align_len, _t, _u, simplify_step, score_sum_method, false);
         
         // normalized by average length of structures
         parameter_set4final((_xlen + _ylen) * 0.5);
-        TM3 = detailed_search(_xtm, _ytm, n_ali8, _t, _u, simplify_step, score_sum_method, false);
+        tmAvg = detailed_search(_xtm, _ytm, align_len, _t, _u, simplify_step, score_sum_method, false);
         
         // ********************************************************************************* //
         // * Output *
@@ -496,10 +494,10 @@ public class TmAlign {
         Results results = new Results();
         results.setChainLength1(_xlen);
         results.setChainLength2(_ylen);
-        results.setAlignedLength(n_ali8);
-        results.setTmScoreQ(TM2);
-        results.setTmScoreT(TM1);
-        results.setTmScoreAvg(TM3);
+        results.setAlignedLength(align_len);
+        results.setTmScoreQ(tmQ);
+        results.setTmScoreT(tmT);
+        results.setTmScoreAvg(tmAvg);
         results.setRmsd(rmsd);
 
         if (this._mode == TmMode.ALIGN_TEXT) {
@@ -518,7 +516,7 @@ public class TmAlign {
 
             seq_id=0;
             int kk=0, i_old=0, j_old=0;
-            for(k=0; k<n_ali8; k++)
+            for(k=0; k<align_len; k++)
             {
                 for(i=i_old; i<m1[k]; i++)
                 {
@@ -576,7 +574,7 @@ public class TmAlign {
                 kk++;
             }
          
-            seq_id = seq_id/( n_ali8+0.00000001); //what did by TMalign, but not reasonable, it should be n_ali8
+            seq_id = seq_id/( align_len+0.00000001); //what did by TMalign, but not reasonable, it should be n_ali8
         
             StringBuilder sb = new StringBuilder();
             Formatter formatter = new Formatter(sb, Locale.US);
@@ -586,11 +584,11 @@ public class TmAlign {
             formatter.format("Length of Chain_1: %d residues\n", _xlen);
             formatter.format("Length of Chain_2: %d residues\n\n", _ylen);
 
-            formatter.format("Aligned length= %d, RMSD= %6.2f, Seq_ID=n_identical/n_aligned= %4.3f\n", n_ali8, rmsd, seq_id); 
-            formatter.format("TM-score= %6.5f (if normalized by length of Chain_1)\n", TM2);
-            formatter.format("TM-score= %6.5f (if normalized by length of Chain_2)\n", TM1);
+            formatter.format("Aligned length= %d, RMSD= %6.2f, Seq_ID=n_identical/n_aligned= %4.3f\n", align_len, rmsd, seq_id); 
+            formatter.format("TM-score= %6.5f (if normalized by length of Chain_1)\n", tmQ);
+            formatter.format("TM-score= %6.5f (if normalized by length of Chain_2)\n", tmT);
             
-            formatter.format("TM-score= %6.5f (if normalized by average length of chains)\n", TM3);
+            formatter.format("TM-score= %6.5f (if normalized by average length of chains)\n", tmAvg);
             
             //output structure alignment
             formatter.format("\n(\":\" denotes residue pairs of d < %4.1f Angstrom, ", d0_out);
@@ -1354,7 +1352,7 @@ public class TmAlign {
         // try different gap open penalties
         for (int g = g1; g < g2; g++) {
 
-            // iterate on NW algorithm
+            // iterate on NW dp algorithm
             for (iteration = 0; iteration < iteration_max; iteration++) {
 
                 NW.dp_dist(_path, _val, x, y, x_len, y_len, t, u, d02, gap_open[g], invmap);
