@@ -149,11 +149,11 @@ public class Importing {
             
             // *** calculate gram hashes
     
-            for (int i = 0; i < residues.size() - 2; i++) {
+            for (int i = 1; i < residues.size() - 1; i++) {
 
-                Residue residue1 = residues.get(i);
-                Residue residue2 = residues.get(i + 1);
-                Residue residue3 = residues.get(i + 2);
+                Residue residue1 = residues.get(i - 1);
+                Residue residue2 = residues.get(i);
+                Residue residue3 = residues.get(i + 1);
 
                 // good window
                 if (!(
@@ -172,7 +172,7 @@ public class Importing {
                     gram = gram + runFactor * Constants.DEC_POW_3; 
 
                     // set hashes
-                    residue1.setGram(gram);
+                    residue2.setGram(gram);
                 }
             }
 
