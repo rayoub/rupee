@@ -312,8 +312,8 @@ public abstract class Search {
             Parser parser = new Parser(Integer.MAX_VALUE);
             Structure targetStructure = parser.parsePDBFile(targetFileGz);
      
-            TmAlign tm = new TmAlign(mode);
-            TmResults results = tm.align(queryStructure, targetStructure);
+            TmAlign tm = new TmAlign(queryStructure, targetStructure, mode);
+            TmResults results = tm.align();
 
             record.setRmsd(results.getRmsd());
 
@@ -352,8 +352,8 @@ public abstract class Search {
             Parser parser = new Parser(Integer.MAX_VALUE);
             Structure targetStructure = parser.parsePDBFile(targetFileGz);
      
-            TmAlign tm = new TmAlign(mode);
-            TmResults results = tm.align(queryStructure, targetStructure);
+            TmAlign tm = new TmAlign(queryStructure, targetStructure, mode);
+            TmResults results = tm.align();
 
             record.setRmsd(results.getRmsd());
 

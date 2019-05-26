@@ -137,8 +137,8 @@ public class AlignResults
 
                     // perform tm-align alignment
                     try {
-                        TmAlign tm = new TmAlign();
-                        TmResults results = tm.align(queryStructure, targetStructure);
+                        TmAlign tm = new TmAlign(queryStructure, targetStructure);
+                        TmResults results = tm.align();
 
                         score.setTmQRmsd(results.getRmsd());
                         score.setTmQTmScore(results.getTmScoreQ());

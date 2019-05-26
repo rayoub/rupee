@@ -16,38 +16,23 @@ import org.biojava.nbio.structure.Structure;
 
 public class TmAlign {
 
-    /*
-     * Layout
-     * 
-     * main alignment function
-     *
-     * parameters
-     *  parameter_set4search
-     *  parameter_set4final
-     *
-     * initial alignments
-     *  get_initial
-     *  get_initial_ss
-     *  get_initial_ssplus
-     *  get_initial5
-     *  get_initial_fgt
-     *
-     * dynamic programming
-     *  dp_iteration
-     *
-     * scoring
-     *  fast_search
-     *  detailed_search_wrapper
-     *  detailed_search
-     *  calculate_tm_score
-     */
+    // globals 
+    private static double DIST_CUT = 4.25;
 
-    // globals (set only once)
-    private double DIST_CUT;  
-
+    // privates
     private TmMode _mode;                           // regular, fast, ...
 
-    // mostly just scratch space (not a problem)
+    // structure privates
+    private String _xname;
+    private String _yname;
+    private Chain _xchain;
+    private Chain _ychain;
+    private List<Group> _xgroups;
+    private List<Group> _ygroups;
+    private List<Atom> _xatoms;
+    private List<Atom> _yatoms;
+
+    // scratch privates 
     private double _score[][];                      // for dynamic programming
     private boolean _path[][];                      // for dynamic programming
     private double _val[][];                        // for dynamic programming
@@ -61,41 +46,27 @@ public class TmAlign {
     private double _t[];                            // Kabsch translation vector and rotation matrix
     private double _u[][];
 
-    public TmAlign() {
+    public TmAlign(Structure xstruct, Structure ystruct) {
 
-        this._mode = TmMode.REGULAR;
-    }
-
-    public TmAlign(TmMode mode) {
-        
-        this._mode = mode;
-    }
-
-    public TmResults align(Structure xstruct, Structure ystruct) { 
-
-        // ********************************************************************************** //
-        // * load data *
-        // ********************************************************************************** //
-       
         // chain names
-        String xname = xstruct.getName();
-        String yname = ystruct.getName();
+        _xname = xstruct.getName();
+        _yname = ystruct.getName();
 
         // get first chain in each structure
-        Chain xchain = xstruct.getChains().get(0);
-        Chain ychain = ystruct.getChains().get(0);
+        _xchain = xstruct.getChains().get(0);
+        _ychain = ystruct.getChains().get(0);
 
         // get groups of atoms per residue
-        List<Group> xgroups = xchain.getAtomGroups().stream().filter(g -> !g.isHetAtomInFile() && g.hasAtom("CA")).collect(Collectors.toList());
-        List<Group> ygroups = ychain.getAtomGroups().stream().filter(g -> !g.isHetAtomInFile() && g.hasAtom("CA")).collect(Collectors.toList());
+        _xgroups = _xchain.getAtomGroups().stream().filter(g -> !g.isHetAtomInFile() && g.hasAtom("CA")).collect(Collectors.toList());
+        _ygroups = _ychain.getAtomGroups().stream().filter(g -> !g.isHetAtomInFile() && g.hasAtom("CA")).collect(Collectors.toList());
 
         // get carbon alpha atoms per residue
-        List<Atom> xatoms = xgroups.stream().map(g -> g.getAtom("CA")).collect(Collectors.toList());
-        List<Atom> yatoms = ygroups.stream().map(g -> g.getAtom("CA")).collect(Collectors.toList());
+        _xatoms = _xgroups.stream().map(g -> g.getAtom("CA")).collect(Collectors.toList());
+        _yatoms = _ygroups.stream().map(g -> g.getAtom("CA")).collect(Collectors.toList());
 
         // get number of residues
-        _xlen = xatoms.size();
-        _ylen = yatoms.size();
+        _xlen = _xatoms.size();
+        _ylen = _yatoms.size();
         _minlen = Math.min(_xlen, _ylen);
 
         // allocate storage
@@ -116,9 +87,9 @@ public class TmAlign {
 
         // get x atom coordinates
         _xa = new double[_xlen][3];
-        for (int i = 0; i < xatoms.size(); i++) {
+        for (int i = 0; i < _xatoms.size(); i++) {
 
-            Group g = xatoms.get(i).getGroup();
+            Group g = _xatoms.get(i).getGroup();
             if (g instanceof AminoAcid) {
                 AminoAcid aa = (AminoAcid)g;
                 _seqx[i] = aa.getAminoType();
@@ -127,7 +98,7 @@ public class TmAlign {
                 _seqx[i] = 'X';
             }
 
-            Atom atom = xatoms.get(i);
+            Atom atom = _xatoms.get(i);
             _xa[i][0] = atom.getX();
             _xa[i][1] = atom.getY();
             _xa[i][2] = atom.getZ();
@@ -135,9 +106,9 @@ public class TmAlign {
 
         // get y atom coordinates
         _ya = new double[_ylen][3];
-        for (int i = 0; i < yatoms.size(); i++) {
+        for (int i = 0; i < _yatoms.size(); i++) {
             
-            Group g = yatoms.get(i).getGroup();
+            Group g = _yatoms.get(i).getGroup();
             if (g instanceof AminoAcid) {
                 AminoAcid aa = (AminoAcid)g;
                 _seqy[i] = aa.getAminoType();
@@ -146,39 +117,57 @@ public class TmAlign {
                 _seqy[i] = 'X';
             }
 
-            Atom atom = yatoms.get(i);
+            Atom atom = _yatoms.get(i);
             _ya[i][0] = atom.getX();
             _ya[i][1] = atom.getY();
             _ya[i][2] = atom.getZ();
         }
+    }
+
+    public TmAlign(Structure xstruct, Structure ystruct, TmMode mode) {
         
-        // ********************************************************************************** //
-        // * outline *
-        // ********************************************************************************** //
+        this(xstruct, ystruct);
+        this._mode = mode;
+    }
 
-        /*
-         * Part 1: Obtaining the TM-score rotation matrix
-         * the initial alignments create an inverse map to represent the alignment
-         * the inverse map is then packed into _xtm and _ytm and used for a score search
-         * during a score search, fragments of _xtm and _ytm are packed into _r1 and _r2
-         * Kabasch is run on the fragments until a best rotation matrix is found
-         * and an attempt is made to extend that alignment. 
-         * Indices satisfying a distance threshold are used to determine convergence of the 
-         * score search.
-         * Part 2: Refining the rotation matrix with DP
-         * Once the legacy TM-score rotation matrix is obtained, dynamic programming is
-         * used to further refine the alignment.
-         */
+    public TmAlign(int xlen, int ylen) {
+
+        // get number of residues
+        _xlen = xlen;
+        _ylen = ylen;
+        _minlen = Math.min(_xlen, _ylen);
+
+        // allocate storage
+        _score = new double[_xlen + 1][_ylen + 1];
+        _path = new boolean[_xlen + 1][_ylen + 1];
+        _val = new double[_xlen + 1][_ylen + 1];
+        _xtm = new double[_minlen][3];
+        _ytm = new double[_minlen][3];
+        _xt = new double[_xlen][3];
+        _seqx = new char[_xlen];
+        _seqy = new char[_ylen];
+        _secx = new int[_xlen];
+        _secy = new int[_ylen];
+        _r1 = new double[_minlen][3];
+        _r2 = new double[_minlen][3];
+        _t = new double[3];
+        _u = new double[3][3];
+    }
+
+    public TmAlign(int xlen, int ylen, TmMode mode) {
+        
+        this(xlen, ylen);
+        this._mode = mode;
+    }
+
+    public TmResults align() { 
 
         // ********************************************************************************** //
-        // * parameter set *
+        // * initialization *
         // ********************************************************************************** //
 
         // set d0 terms and normalization term
         Parameters params = Parameters.getSearchParameters(_xlen, _ylen);
-      
-        // set globals 
-        DIST_CUT = 4.25; 
        
         // set scoring method 
         int simplify_step = 40; 
@@ -502,8 +491,8 @@ public class TmAlign {
             StringBuilder sb = new StringBuilder();
             Formatter formatter = new Formatter(sb, Locale.US);
             
-            formatter.format("\nName of Chain_1: %s\n", xname); 
-            formatter.format("Name of Chain_2: %s\n", yname);
+            formatter.format("\nName of Chain_1: %s\n", _xname); 
+            formatter.format("Name of Chain_2: %s\n", _yname);
             formatter.format("Length of Chain_1: %d residues\n", _xlen);
             formatter.format("Length of Chain_2: %d residues\n\n", _ylen);
 
@@ -534,7 +523,7 @@ public class TmAlign {
         else if (_mode == TmMode.ALIGN_3D) {
 
             int xlenreal = 0;
-            for(Group g : xgroups) {
+            for(Group g : _xgroups) {
                
                 if (g.hasAtom("N")) xlenreal++;
                 xlenreal++; // for known CA
@@ -547,9 +536,9 @@ public class TmAlign {
             
             // iterate x atoms for xa_all
             int j = 0;
-            for (int i = 0; i < xgroups.size(); i++) {
+            for (int i = 0; i < _xgroups.size(); i++) {
                 
-                Group group = xgroups.get(i);
+                Group group = _xgroups.get(i);
 
                 if (group.hasAtom("N")) {
                     
@@ -591,9 +580,9 @@ public class TmAlign {
 
             // set x atom coords
             j = 0;
-            for (int i = 0; i < xgroups.size(); i++) {
+            for (int i = 0; i < _xgroups.size(); i++) {
                 
-                Group group = xgroups.get(i);
+                Group group = _xgroups.get(i);
 
                 if (group.hasAtom("N")) {
                     
@@ -634,9 +623,9 @@ public class TmAlign {
 
             // iterate x atoms for chain A
             j = 0;
-            for (int i = 0; i < xgroups.size(); i++) {
+            for (int i = 0; i < _xgroups.size(); i++) {
                 
-                Group group = xgroups.get(i);
+                Group group = _xgroups.get(i);
                 group.getChain().setName("A");
                 
                 if (group.hasAtom("N")) {
@@ -668,9 +657,9 @@ public class TmAlign {
 
             // iterate y atoms for chain B
             j = 0;
-            for (int i = 0; i < ygroups.size(); i++) {
+            for (int i = 0; i < _ygroups.size(); i++) {
 
-                Group group = ygroups.get(i);
+                Group group = _ygroups.get(i);
                 group.getChain().setName("B");
                 
                 if (group.hasAtom("N")) {

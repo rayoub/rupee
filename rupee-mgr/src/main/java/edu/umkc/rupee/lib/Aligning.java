@@ -131,8 +131,8 @@ public class Aligning
             queryStructure.setName(dbId1);
             targetStructure.setName(dbId2);
 
-            TmAlign tm = new TmAlign(mode);
-            results = tm.align(queryStructure, targetStructure);
+            TmAlign tm = new TmAlign(queryStructure, targetStructure, mode);
+            results = tm.align();
 
         } catch (IOException e) {
             Logger.getLogger(Aligning.class.getName()).log(Level.SEVERE, null, e);
@@ -162,8 +162,8 @@ public class Aligning
             queryStructure.setName("upload");
             targetStructure.setName(dbId);
 
-            TmAlign tm = new TmAlign(mode);
-            results = tm.align(queryStructure, targetStructure);
+            TmAlign tm = new TmAlign(queryStructure, targetStructure, mode);
+            results = tm.align();
 
         } catch (IOException e) {
             Logger.getLogger(Aligning.class.getName()).log(Level.SEVERE, null, e);
