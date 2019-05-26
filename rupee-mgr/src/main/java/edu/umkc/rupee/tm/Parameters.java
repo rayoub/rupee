@@ -6,6 +6,8 @@ public class Parameters {
     private double d0;
     private double d02;
     private double d0Bounded;
+    private double scoreD8;
+    private double scoreD8Squared;
 
     public double getNormalizeBy() {
         return normalizeBy;
@@ -39,6 +41,22 @@ public class Parameters {
         this.d0Bounded = d0Bounded;
     }
 
+    public double getScoreD8() {
+        return scoreD8;
+    }
+
+    public void setScoreD8(double scoreD8) {
+        this.scoreD8 = scoreD8;
+    }
+
+    public double getScoreD8Squared() {
+        return scoreD8Squared;
+    }
+
+    public void setScoreD8Squared(double scoreD8Squared) {
+        this.scoreD8Squared = scoreD8Squared;
+    }
+
     public static Parameters getSearchParameters(int xlen, int ylen) {
 
         Parameters params = new Parameters();
@@ -62,11 +80,14 @@ public class Parameters {
             params.d0Bounded = 8;
         if (params.d0Bounded < 4.5)
             params.d0Bounded = 4.5;
+       
+        params.scoreD8 = 1.5 * Math.pow(Math.min(xlen, ylen) * 1.0, 0.3) + 3.5;
+        params.scoreD8Squared = params.scoreD8 * params.scoreD8;
 
         return params;
     }
 
-    public static Parameters getFinalParameters(double len) {
+    public static Parameters getFinalParameters(double xlen, double ylen, double len) {
 
         Parameters params = new Parameters();
 
@@ -88,6 +109,9 @@ public class Parameters {
             params.d0Bounded = 8;
         if (params.d0Bounded < 4.5)
             params.d0Bounded = 4.5;
+
+        params.scoreD8 = 1.5 * Math.pow(Math.min(xlen, ylen) * 1.0, 0.3) + 3.5;
+        params.scoreD8Squared = params.scoreD8 * params.scoreD8;
 
         return params;
     }

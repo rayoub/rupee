@@ -43,8 +43,6 @@ public class TmAlign {
      */
 
     // globals (set only once)
-    private double SCORE_D8;
-    private double SCORE_D82;
     private double DIST_CUT;  
 
     private TmMode _mode;                           // regular, fast, ...
@@ -181,8 +179,6 @@ public class TmAlign {
       
         // set globals 
         DIST_CUT = 4.25; 
-        SCORE_D8 = 1.5 * Math.pow(params.getNormalizeBy() * 1.0, 0.3) + 3.5;
-        SCORE_D82 = SCORE_D8 * SCORE_D8;
        
         // set scoring method 
         int simplify_step = 40; 
@@ -356,7 +352,7 @@ public class TmAlign {
             {
                 // aligned
                 d = Math.sqrt(Functions.dist(_xt[i], _ya[j]));
-                if (d <= SCORE_D8) {
+                if (d <= params.getScoreD8()) {
 
                     m1[k] = i;
                     m2[k] = j;
@@ -403,15 +399,15 @@ public class TmAlign {
         score_sum_method = 0;
     
         // normalized by length of first structure
-        params = Parameters.getFinalParameters(_xlen);
+        params = Parameters.getFinalParameters(_xlen, _ylen, _xlen);
         tmQ = detailed_search(_xtm, _ytm, align_len, _t, _u, simplify_step, score_sum_method, false, params);
 
         //normalized by length of second structure
-        params = Parameters.getFinalParameters(_ylen);
+        params = Parameters.getFinalParameters(_xlen, _ylen, _ylen);
         tmT = detailed_search(_xtm, _ytm, align_len, _t, _u, simplify_step, score_sum_method, false, params);
         
         // normalized by average length of structures
-        params = Parameters.getFinalParameters((_xlen + _ylen) * 0.5);
+        params = Parameters.getFinalParameters(_xlen, _ylen, (_xlen + _ylen) * 0.5);
         tmAvg = detailed_search(_xtm, _ytm, align_len, _t, _u, simplify_step, score_sum_method, false, params);
         
         // ********************************************************************************* //
@@ -1624,7 +1620,7 @@ public class TmAlign {
                     num_sat++;
                 }
                 if (score_sum_method == 8) {
-                    if (dist <= SCORE_D82) {
+                    if (dist <= params.getScoreD8Squared()) {
                         score_sum += 1 / (1 + dist / params.getD02());
                     }
                 } else {
