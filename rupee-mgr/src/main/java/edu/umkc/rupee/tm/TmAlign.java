@@ -1409,7 +1409,7 @@ public class TmAlign {
             double t_out[], double u_out[][], 
             int simplify_step, 
             int score_sum_method,
-            boolean length_normalize,
+            boolean align_normalize,
             Parameters params) {
 
         // pack the alignment into _xtm and _ytm based on the inverse map
@@ -1433,7 +1433,7 @@ public class TmAlign {
         }
 
         // k holds the length of the alignment obtained from the inverse map
-        return detailed_search(_xtm, _ytm, k, t_out, u_out, simplify_step, score_sum_method, length_normalize, params);
+        return detailed_search(_xtm, _ytm, k, t_out, u_out, simplify_step, score_sum_method, align_normalize, params);
     }
     
     public double detailed_search(
@@ -1442,7 +1442,7 @@ public class TmAlign {
             double t_out[], double u_out[][],
             int simplify_step,
             int score_sum_method,
-            boolean length_normalize,
+            boolean align_normalize,
             Parameters params) {
 
         int i, m;
@@ -1517,7 +1517,7 @@ public class TmAlign {
                         _xt, ytm, align_len, 
                         dist_th, sat_indices, 
                         score, score_sum_method, 
-                        length_normalize, params);
+                        align_normalize, params);
                 if (score.getValue() > max_score) {
                     max_score = score.getValue();
 
@@ -1560,7 +1560,7 @@ public class TmAlign {
                             _xt, ytm, align_len, 
                             dist_th, sat_indices, 
                             score, score_sum_method, 
-                            length_normalize, params);
+                            align_normalize, params);
                     if (score.getValue() > max_score) {
                         max_score = score.getValue();
 
@@ -1604,7 +1604,7 @@ public class TmAlign {
             double dist_th, int sat_indices[], 
             MutableDouble score, 
             int score_sum_method,
-            boolean length_normalize,
+            boolean align_normalize,
             Parameters params) {
 
         double score_sum = 0;
@@ -1640,7 +1640,7 @@ public class TmAlign {
             }
         }
 
-        if (length_normalize) {
+        if (align_normalize) {
             score.setValue(score_sum / align_len);
         }
         else {
