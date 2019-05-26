@@ -180,10 +180,10 @@ public class TmAlign {
         int score_sum_method = 8; 
        
         // temp storage for initial alignments
-        int invmap[] = new int[_ylen + 1];
+        int invmap[] = new int[_ylen];
 
         // store the best initial alignment
-        int invmap_best[] = new int[_ylen + 1];
+        int invmap_best[] = new int[_ylen];
         for (int i = 0; i < _ylen; i++) {
             invmap_best[i] = -1;
         }
@@ -904,7 +904,7 @@ public class TmAlign {
 
         double GLmax = 0;
         int aL = Math.min(xlen, ylen);
-        int invmap_local[] = new int[ylen + 1];
+        int invmap_local[] = new int[ylen];
 
         // jump on sequence1-------------->
         int n_jump1 = 0;
@@ -1003,7 +1003,7 @@ public class TmAlign {
         int ifr[], invmap_local[];
         int L_fr = Math.min(Lx, Ly);
         ifr = new int[L_fr];
-        invmap_local = new int[ylen + 1];
+        invmap_local = new int[ylen];
 
         // select what piece will be used (this may araise ansysmetry, but
         // only when L1=L2 and Lfr1=Lfr2 and L1 ne Lfr1
@@ -1188,7 +1188,7 @@ public class TmAlign {
             boolean gapless,
             Parameters params) {
 
-        int invmap_local[] = new int[ylen + 1];
+        int invmap_local[] = new int[ylen];
 
         int iteration, i, j, k;
         double tmscore, tmscore_max, tmscore_old = 0;

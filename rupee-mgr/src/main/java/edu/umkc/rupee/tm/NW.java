@@ -32,8 +32,10 @@ public class NW {
         for (j = 0; j <= ylen; j++) {
             val[0][j] = 0;
             path[0][j] = false; // not from diagonal
-            
-            // may as well init the alignment to all not aligned
+        }
+        
+        // initialize inverse map
+        for (j = 0; j < ylen; j++) {
             invmap[j] = -1; 
         }
 
@@ -133,9 +135,11 @@ public class NW {
         for (j = 0; j <= ylen; j++) {
             val[0][j] = 0;
             path[0][j] = false; // not from diagonal
-
-            // may as well init the alignment to all not aligned
-            invmap[j] = -1;
+        }
+        
+        // initialize inverse map
+        for (j = 0; j < ylen; j++) {
+            invmap[j] = -1; 
         }
 
         // iterate row major
@@ -230,8 +234,10 @@ public class NW {
         for (j = 0; j <= ylen; j++) {
             val[0][j] = 0;
             path[0][j] = false; // not from diagonal
-
-            // may as well init the alignment to all not aligned
+        }
+        
+        // initialize inverse map
+        for (j = 0; j < ylen; j++) {
             invmap[j] = -1; 
         }
 
