@@ -38,8 +38,8 @@ public class Uploading {
 
         content = preProcess(content);
 
-        Integer[] grams = getGrams(content);
-        Hashes hashes = getHashes(grams);
+        Grams grams = getGrams(content);
+        Hashes hashes = getHashes(grams.getGramsAsArray());
       
         int uploadId = saveGrams(grams);
         saveHashes(uploadId, hashes);
@@ -68,7 +68,7 @@ public class Uploading {
         return pdbContent;
     }
 
-    private static Integer[] getGrams(String content) throws IOException {
+    private static Grams getGrams(String content) throws IOException {
         
         // get structure 
         PDBFileReader reader = new PDBFileReader();
@@ -76,7 +76,8 @@ public class Uploading {
         Structure structure = reader.getStructure(stream);
 
         // get grams
-        Integer[] grams = Importing.parseStructure(structure).stream().filter(r -> r.getGram() > 0).map(r -> r.getGram()).toArray(Integer[]::new);
+        List<Residue> residues = Importing.parseStructure(structure);
+        Grams grams = Grams.fromResidues(residues);
 
         return grams;
     }
@@ -89,7 +90,7 @@ public class Uploading {
         return hashes;
     }
     
-    public static int saveGrams(Integer[] grams) {
+    private static int saveGrams(Grams grams) {
         
         int id = -1;
 
@@ -106,7 +107,7 @@ public class Uploading {
             stmt = conn.prepareCall("{ ? = call insert_upload_grams(?) }");
 
             stmt.registerOutParameter(1, Types.INTEGER); 
-            stmt.setArray(2, conn.createArrayOf("INTEGER", grams));
+            stmt.setArray(2, conn.createArrayOf("INTEGER", grams.getGramsAsArray()));
 
             stmt.execute();
 

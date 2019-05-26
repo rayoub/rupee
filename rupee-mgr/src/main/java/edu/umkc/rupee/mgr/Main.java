@@ -50,6 +50,7 @@ import edu.umkc.rupee.lib.Aligning;
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
 import edu.umkc.rupee.lib.DbId;
+import edu.umkc.rupee.lib.Grams;
 import edu.umkc.rupee.lib.Hashes;
 import edu.umkc.rupee.lib.LCS;
 import edu.umkc.rupee.lib.Similarity;
@@ -285,7 +286,7 @@ public class Main {
         int uploadId1 = tryParseInt(dbId1);
 
         Hashes hashes1;
-        List<Integer> grams1;
+        Grams grams1;
         if (uploadId1 != -1) {
 
             hashes1 = Db.getUploadHashes(uploadId1);
@@ -300,7 +301,7 @@ public class Main {
         
         DbType dbType2 = DbId.getIdDbType(dbId2);
         Hashes hashes2 = Db.getHashes(dbId2, dbType2);
-        List<Integer> grams2 = Db.getGrams(dbId2, dbType2);
+        Grams grams2 = Db.getGrams(dbId2, dbType2);
 
         if (hashes1 != null && hashes2 != null) {
 
@@ -309,14 +310,14 @@ public class Main {
 
             // estimated and exact based on overlapping grams
             double estimated = Similarity.getEstimatedSimilarity(hashes1.minHashes, hashes2.minHashes);
-            double exact = Similarity.getExactSimilarity(grams1, grams2);
+            double exact = Similarity.getExactSimilarity(grams1.getGramsAsList(), grams2.getGramsAsList());
 
             // lcs validated matching grams
-            double score = LCS.getLCSScoreFullLength(grams1, grams2); 
+            double score = LCS.getLCSScoreFullLength(grams1.getGramsAsList(), grams2.getGramsAsList()); 
           
             System.out.println(""); 
-            System.out.println("Structure 1 Length:     " + grams1.size());
-            System.out.println("Structure 2 Length:     " + grams2.size());
+            System.out.println("Structure 1 Length:     " + grams1.getLength());
+            System.out.println("Structure 2 Length:     " + grams2.getLength());
             System.out.println(""); 
             System.out.println("Band matches:           " + bandMatches);
             System.out.println(""); 
@@ -325,8 +326,8 @@ public class Main {
             System.out.println(""); 
             System.out.println("LCS Score:              " + score);
 
-            Map<Integer, String> codeMap = LCS.getCodeMap(grams1, grams2);
-            LCS.printLCSFullLength(grams1, grams2, codeMap);
+            Map<Integer, String> codeMap = LCS.getCodeMap(grams1.getGramsAsList(), grams2.getGramsAsList());
+            LCS.printLCSFullLength(grams1.getGramsAsList(), grams2.getGramsAsList(), codeMap);
             System.out.println("");
         }
         else {
@@ -350,7 +351,7 @@ public class Main {
         int uploadId1 = tryParseInt(dbId1);
 
         Hashes hashes1;
-        List<Integer> grams1;
+        Grams grams1;
         if (uploadId1 != -1) {
 
             hashes1 = Db.getUploadHashes(uploadId1);
@@ -365,21 +366,21 @@ public class Main {
         
         DbType dbType2 = DbId.getIdDbType(dbId2);
         Hashes hashes2 = Db.getHashes(dbId2, dbType2);
-        List<Integer> grams2 = Db.getGrams(dbId2, dbType2);
+        Grams grams2 = Db.getGrams(dbId2, dbType2);
 
         if (hashes1 != null && hashes2 != null) {
 
             // lcs validated matching grams
-            double score = LCS.getLCSScoreContainment(grams1, grams2); 
+            double score = LCS.getLCSScoreContainment(grams1.getGramsAsList(), grams2.getGramsAsList()); 
           
             System.out.println(""); 
-            System.out.println("Structure 1 Length:     " + grams1.size());
-            System.out.println("Structure 2 Length:     " + grams2.size());
+            System.out.println("Structure 1 Length:     " + grams1.getLength());
+            System.out.println("Structure 2 Length:     " + grams2.getLength());
             System.out.println(""); 
             System.out.println("LCS Score:              " + score);
 
-            Map<Integer, String> codeMap = LCS.getCodeMap(grams1, grams2);
-            LCS.printLCSContainment(grams1, grams2, codeMap);
+            Map<Integer, String> codeMap = LCS.getCodeMap(grams1.getGramsAsList(), grams2.getGramsAsList());
+            LCS.printLCSContainment(grams1.getGramsAsList(), grams2.getGramsAsList(), codeMap);
             System.out.println("");
         }
         else {

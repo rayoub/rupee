@@ -23,8 +23,10 @@ import org.postgresql.ds.PGSimpleDataSource;
 import edu.umkc.rupee.defs.DbType;
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
+import edu.umkc.rupee.lib.Grams;
 import edu.umkc.rupee.lib.Importing;
 import edu.umkc.rupee.lib.Log;
+import edu.umkc.rupee.lib.Residue;
 
 public abstract class Import {
     
@@ -104,7 +106,8 @@ public abstract class Import {
                     Structure structure = reader.getStructure(fileName);
                     structure.setPDBCode(pdbId);
                 
-                    Integer[] grams = Importing.parseStructure(structure).stream().filter(r -> r.getGram() > 0).map(r -> r.getGram()).toArray(Integer[]::new);
+                    List<Residue> residues = Importing.parseStructure(structure);
+                    Grams grams = Grams.fromResidues(residues); 
 
                     saveGrams(dbId, grams, conn);
 
@@ -137,11 +140,11 @@ public abstract class Import {
         }
     }
 
-    public void saveGrams(String dbId, Integer[] grams, Connection conn) throws SQLException {
+    public void saveGrams(String dbId, Grams grams, Connection conn) throws SQLException {
         
         PreparedStatement updt = conn.prepareStatement("SELECT insert_" + getDbType().getTableName() + "_grams(?, ?);");
         updt.setString(1, dbId);
-        updt.setArray(2, conn.createArrayOf("INTEGER", grams));
+        updt.setArray(2, conn.createArrayOf("INTEGER", grams.getGramsAsArray()));
         updt.execute();
         updt.close();
     }

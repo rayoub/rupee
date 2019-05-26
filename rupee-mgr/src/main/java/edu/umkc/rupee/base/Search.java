@@ -29,6 +29,7 @@ import edu.umkc.rupee.defs.SearchType;
 import edu.umkc.rupee.defs.SortBy;
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
+import edu.umkc.rupee.lib.Grams;
 import edu.umkc.rupee.lib.Hashes;
 import edu.umkc.rupee.lib.LCS;
 import edu.umkc.rupee.lib.Similarity;
@@ -60,7 +61,7 @@ public abstract class Search {
 
         List<SearchRecord> records = new ArrayList<>();
         
-        List<Integer> grams = null;
+        Grams grams = null;
         Hashes hashes = null;
 
         if (criteria.searchBy == SearchBy.DB_ID) {
@@ -74,7 +75,7 @@ public abstract class Search {
             hashes = Db.getUploadHashes(criteria.uploadId);
         }
 
-        final List<Integer> grams1 = grams;
+        final Grams grams1 = grams;
         final Hashes hashes1 = hashes;
 
         if (grams1 != null && hashes1 != null) {
@@ -90,15 +91,15 @@ public abstract class Search {
                 
                 // cache map of residue grams
                 List<String> dbIds = records.stream().map(SearchRecord::getDbId).collect(Collectors.toList());
-                Map<String, List<Integer>> map = Db.getGrams(dbIds, criteria.searchDbType);
+                Map<String, Grams> map = Db.getGrams(dbIds, criteria.searchDbType);
 
                 // parallel lcs algorithm
                 records.stream()
                     .forEach(record -> {
 
                         if (map.containsKey(record.getDbId())) {
-                            List<Integer> grams2 = map.get(record.getDbId());
-                            double score = LCS.getLCSScoreFullLength(grams1, grams2); 
+                            Grams grams2 = map.get(record.getDbId());
+                            double score = LCS.getLCSScoreFullLength(grams1.getGramsAsList(), grams2.getGramsAsList()); 
                             record.setSimilarity(score);
                         }
                     });
@@ -161,7 +162,7 @@ public abstract class Search {
                 
                 // filter for fast alignments 
                 records = records.stream()
-                    .limit(alignmentFilter(TmMode.FAST, grams1.size()))
+                    .limit(alignmentFilter(TmMode.FAST, grams1.getLength()))
                     .collect(Collectors.toList());
                 
                 // fast alignments
@@ -170,7 +171,7 @@ public abstract class Search {
                 // sort and filter for regular alignments
                 records = records.stream()
                     .sorted(comparator)
-                    .limit(alignmentFilter(TmMode.REGULAR, grams1.size())) 
+                    .limit(alignmentFilter(TmMode.REGULAR, grams1.getLength())) 
                     .collect(Collectors.toList());
                 
                 // regular alignments
@@ -378,7 +379,7 @@ public abstract class Search {
         }
     }
 
-    private List<SearchRecord> gramsSplit(int splitIndex, SearchCriteria criteria, List<Integer> grams1) {
+    private List<SearchRecord> gramsSplit(int splitIndex, SearchCriteria criteria, Grams grams1) {
 
         List<SearchRecord> records = new ArrayList<>();
 
@@ -399,26 +400,25 @@ public abstract class Search {
                 String dbId = rs.getString("db_id");
                 String pdbId = rs.getString("pdb_id");
                 String sortKey = rs.getString("sort_key");
-                
-                Integer[] grams2 = (Integer[])rs.getArray("grams").getArray();
-                List<Integer> grams2AsList = Arrays.asList(grams2);
 
-                if (grams2AsList.size() < Math.floorDiv(grams1.size(), 3)) {
+                Grams grams2 = Grams.fromResultSet(rs);                
+
+                if (grams2.getLength() < Math.floorDiv(grams1.getLength(), 3)) {
                     continue;
                 }
            
                 double similarity = Integer.MIN_VALUE;
                 if (criteria.searchType == SearchType.FULL_LENGTH) {
-                    similarity = LCS.getLCSScoreFullLength(grams1, grams2AsList);
+                    similarity = LCS.getLCSScoreFullLength(grams1.getGramsAsList(), grams2.getGramsAsList());
                 }            
                 else if (criteria.searchType == SearchType.CONTAINED_IN) {
-                    similarity = LCS.getLCSScoreContainment(grams1, grams2AsList);
+                    similarity = LCS.getLCSScoreContainment(grams1.getGramsAsList(), grams2.getGramsAsList());
                 }
                 else if (criteria.searchType == SearchType.CONTAINS) { 
-                    similarity = LCS.getLCSScoreContainment(grams2AsList, grams1);
+                    similarity = LCS.getLCSScoreContainment(grams2.getGramsAsList(), grams1.getGramsAsList());
                 }
                 else { // SearchType.ALIGN_ALL
-                    similarity = LCS.getLCSScoreFullLength(grams1, grams2AsList);
+                    similarity = LCS.getLCSScoreFullLength(grams1.getGramsAsList(), grams2.getGramsAsList());
                 }
 
                 SearchRecord record = getSearchRecord();

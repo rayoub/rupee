@@ -33,13 +33,13 @@ public class Db {
     // Getting Grams
     // *********************************************************************
 
-    public static List<Integer> getGrams(String dbId, DbType dbType) throws SQLException {
+    public static Grams getGrams(String dbId, DbType dbType) throws SQLException {
 
-        List<Integer> grams = new ArrayList<>();
+        Grams grams = null;
 
         List<String> dbIds = new ArrayList<>();
         dbIds.add(dbId);
-        Map<String, List<Integer>> map = getGrams(dbIds, dbType);
+        Map<String, Grams> map = getGrams(dbIds, dbType);
         if (map.containsKey(dbId)) {
             grams = map.get(dbId);
         }
@@ -47,9 +47,9 @@ public class Db {
         return grams;
     }
 
-    public static Map<String, List<Integer>> getGrams(List<String> dbIds, DbType dbType) throws SQLException {
+    public static Map<String, Grams> getGrams(List<String> dbIds, DbType dbType) throws SQLException {
 
-        Map<String, List<Integer>> map = new HashMap<>();
+        Map<String, Grams> map = new HashMap<>();
 
         PGSimpleDataSource ds = Db.getDataSource();
 
@@ -66,10 +66,15 @@ public class Db {
         while(rs.next()) {
 
             String dbId = rs.getString("db_id");
-            Integer[] grams = (Integer[])rs.getArray("grams").getArray();
+            Integer[] gramsAsArray = (Integer[])rs.getArray("grams").getArray();
           
-            if (grams != null && grams.length > 0) {
-                map.put(dbId, Arrays.asList(grams));
+            if (gramsAsArray != null && gramsAsArray.length > 0) {
+                
+                Grams grams = new Grams();
+                grams.setGramsAsArray(gramsAsArray);
+                grams.setGramsAsList(Arrays.asList(gramsAsArray));
+
+                map.put(dbId, grams);
             } 
         }
 
@@ -80,9 +85,9 @@ public class Db {
         return map;
     }
 
-    public static List<Integer> getUploadGrams(int uploadId) throws SQLException {
+    public static Grams getUploadGrams(int uploadId) throws SQLException {
 
-        List<Integer> grams = null;
+        Grams grams = null;
 
         PGSimpleDataSource ds = Db.getDataSource();
 
@@ -96,9 +101,12 @@ public class Db {
         ResultSet rs = stmt.executeQuery();
         if(rs.next()) {
 
-            Integer[] grams1 = (Integer[])rs.getArray("grams").getArray();
-            if (grams1 != null && grams1.length > 0) {
-                grams = Arrays.asList(grams1);
+            Integer[] gramsAsArray = (Integer[])rs.getArray("grams").getArray();
+            if (gramsAsArray != null && gramsAsArray.length > 0) {
+
+                grams = new Grams();
+                grams.setGramsAsArray(gramsAsArray);
+                grams.setGramsAsList(Arrays.asList(gramsAsArray));
             }
         }
 
