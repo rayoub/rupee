@@ -48,6 +48,9 @@ public class TmAlign {
 
     public TmAlign(Structure xstruct, Structure ystruct) {
 
+        // default mode
+        _mode = TmMode.REGULAR;
+
         // chain names
         _xname = xstruct.getName();
         _yname = ystruct.getName();
@@ -131,6 +134,9 @@ public class TmAlign {
     }
 
     public TmAlign(int xlen, int ylen) {
+
+        // default mode 
+        _mode = TmMode.REGULAR; 
 
         // get number of residues
         _xlen = xlen;
