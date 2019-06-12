@@ -312,10 +312,10 @@ public class Main {
             double exact = Similarity.getExactSimilarity(grams1.getGramsAsList(), grams2.getGramsAsList());
 
             // lcs validated matching grams
-            double score = LCS.getLCSScoreFullLength(grams1.getGramsAsList(), grams2.getGramsAsList()); 
+            double score = LCS.getLCSScore(grams1.getGramsAsList(), grams2.getGramsAsList(), SearchType.FULL_LENGTH); 
 
             // rough tm-score estimate
-            double rough_tm = LCS.getLCSPlusFullLength(grams1, grams2);
+            double rough_tm = LCS.getLCSPlusScore(grams1, grams2, SearchType.FULL_LENGTH);
           
             System.out.println(""); 
             System.out.println("Structure 1 Length:     " + grams1.getLength());
@@ -374,13 +374,17 @@ public class Main {
         if (hashes1 != null && hashes2 != null) {
 
             // lcs validated matching grams
-            double score = LCS.getLCSScoreContainment(grams1.getGramsAsList(), grams2.getGramsAsList()); 
+            double score = LCS.getLCSScore(grams1.getGramsAsList(), grams2.getGramsAsList(), SearchType.CONTAINED_IN); 
+            
+            // rough tm-score estimate
+            double rough_tm = LCS.getLCSPlusScore(grams1, grams2, SearchType.CONTAINED_IN);
           
             System.out.println(""); 
             System.out.println("Structure 1 Length:     " + grams1.getLength());
             System.out.println("Structure 2 Length:     " + grams2.getLength());
             System.out.println(""); 
             System.out.println("LCS Score:              " + score);
+            System.out.println("Tm-Score Estimate:      " + rough_tm);
 
             Map<Integer, String> codeMap = LCS.getCodeMap(grams1.getGramsAsList(), grams2.getGramsAsList());
             LCS.printLCSContainment(grams1.getGramsAsList(), grams2.getGramsAsList(), codeMap);

@@ -102,7 +102,7 @@ public abstract class Search {
 
                         if (map.containsKey(record.getDbId())) {
                             Grams grams2 = map.get(record.getDbId());
-                            double score = LCS.getLCSScoreFullLength(grams1.getGramsAsList(), grams2.getGramsAsList());
+                            double score = LCS.getLCSScore(grams1.getGramsAsList(), grams2.getGramsAsList(), criteria.searchType);
                             record.setSimilarity(score);
                         }
                     });
@@ -127,8 +127,7 @@ public abstract class Search {
             }
             else { // criteria.searchMode == SearchMode.ALL_ALIGNED
                 
-                // full-length and containment searches with LCS plus tm-align using descriptor alignments as initial alignments
-                // note: for containment search, the LCS plus parameter is still ignored
+                // full-length and containment searches with LCS plus tm-align using descriptor alignments 
 
                 // split grams and search in parallel on splits
                 records = IntStream.range(0, Constants.SPLIT_COUNT).boxed().parallel()
@@ -339,20 +338,30 @@ public abstract class Search {
                         continue;
                     }
                     if (lcsPlus) {
-                        similarity = LCS.getLCSPlusFullLength(grams1, grams2);
+                        similarity = LCS.getLCSPlusScore(grams1, grams2, criteria.searchType);
                     }
                     else {
-                        similarity = LCS.getLCSScoreFullLength(grams1.getGramsAsList(), grams2.getGramsAsList());
+                        similarity = LCS.getLCSScore(grams1.getGramsAsList(), grams2.getGramsAsList(), criteria.searchType);
                     }
                 }            
                 else if (criteria.searchType == SearchType.CONTAINED_IN) {
-                    similarity = LCS.getLCSScoreContainment(grams1.getGramsAsList(), grams2.getGramsAsList());
+                    if (lcsPlus) {
+                        similarity = LCS.getLCSPlusScore(grams1, grams2, criteria.searchType);
+                    }
+                    else {
+                        similarity = LCS.getLCSScore(grams1.getGramsAsList(), grams2.getGramsAsList(), criteria.searchType);
+                    }
                 }
                 else {
                     if (grams2.getLength() < Math.floorDiv(grams1.getLength(), 3)) {
                         continue;
                     }
-                    similarity = LCS.getLCSScoreContainment(grams2.getGramsAsList(), grams1.getGramsAsList());
+                    if (lcsPlus) {
+                        similarity = LCS.getLCSPlusScore(grams1, grams2, criteria.searchType);
+                    }
+                    else {
+                        similarity = LCS.getLCSScore(grams1.getGramsAsList(), grams2.getGramsAsList(), criteria.searchType);
+                    }
                 }
 
                 SearchRecord record = getSearchRecord();

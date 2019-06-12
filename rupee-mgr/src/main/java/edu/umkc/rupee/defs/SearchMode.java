@@ -32,8 +32,11 @@ public enum SearchMode {
         if (id == FAST.getId()) {
             return FAST;
         }
-        else {
+        else if (id == TOP_ALIGNED.getId()) {
             return TOP_ALIGNED;
+        }
+        else {
+            return ALL_ALIGNED;
         }
     }
 }
