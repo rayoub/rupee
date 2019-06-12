@@ -1525,6 +1525,8 @@ public class TmAlign {
                 int last_sat_indices[] = new int[align_len];
                 dist_th = params.getD0Bounded() + 1;
                 for (int it = 0; it < num_iters; it++) {
+
+                    // pack satisifed coords
                     ka = 0;
                     for (k = 0; k < num_sat; k++) {
                         m = sat_indices[k];
@@ -1540,7 +1542,7 @@ public class TmAlign {
                         ka++;
                     }
 
-                    // calculate rotation matrix based on the fragment
+                    // calculate rotation matrix based on the satisfied distances
                     Kabsch.execute(_r1, _r2, num_sat, 1, t, u);
                     
                     // peform rotation and store in xt
@@ -1639,6 +1641,93 @@ public class TmAlign {
         }
 
         return num_sat;
+    }
+    
+    // **********************************************************************************
+    // rupee specific
+    // **********************************************************************************
+   
+    public double dp_iteration_rupee(
+            double xa[][], double ya[][], 
+            int xlen, int ylen, 
+            double t[], double u[][], 
+            int invmap[],
+            int iteration_max,
+            boolean gapless,
+            Parameters params) {
+
+        int invmap_local[] = new int[ylen];
+
+        int iteration, i, j, k;
+        double tmscore, tmscore_max, tmscore_old = 0;
+        int score_sum_method = 0;
+        int simplify_step = 40;
+        tmscore_max = -1;
+
+        int g1 = 0; 
+        int g2 = 2;
+        if (gapless) 
+            g1 = 1;
+        double gap_open[] = { -0.6, 0 };
+
+        // try different gap open penalties
+        for (int g = g1; g < g2; g++) {
+
+            // iterate on NW dp algorithm
+            for (iteration = 0; iteration < iteration_max; iteration++) {
+
+                NW.dp_dist(_path, _val, xa, ya, xlen, ylen, t, u, params.getD02(), gap_open[g], invmap_local);
+
+                k = 0;
+                for (j = 0; j < ylen; j++) {
+
+                    i = invmap_local[j];
+                    if (i >= 0) {
+
+                        // pack alignment
+                        _xtm[k][0] = xa[i][0];
+                        _xtm[k][1] = xa[i][1];
+                        _xtm[k][2] = xa[i][2];
+
+                        _ytm[k][0] = ya[j][0];
+                        _ytm[k][1] = ya[j][1];
+                        _ytm[k][2] = ya[j][2];
+
+                        k++;
+                    }
+                }
+
+                // k is the length of the alignment stored densely in xtm and ytm
+                /* 
+                MutableDouble scoreRet = new MutableDouble(0.0);
+                int sat_indices[] = new int[k];
+                calculate_tm_score(_xtm, _ytm, k, params.getD0Bounded(), sat_indices, scoreRet, score_sum_method, false, params);
+                tmscore = scoreRet.getValue();
+                */
+                tmscore = detailed_search(_xtm, _ytm, k, t, u, simplify_step, score_sum_method, false, params);
+
+                // update the best
+                if (tmscore > tmscore_max) {
+                    tmscore_max = tmscore;
+                    for (i = 0; i < ylen; i++) {
+                        invmap[i] = invmap_local[i];
+                    }
+                }
+
+                // test for convergence to break early
+                if (iteration > 0) {
+                    if (Math.abs(tmscore_old - tmscore) < 0.000001) {
+                        break;
+                    }
+                }
+
+                tmscore_old = tmscore;
+
+            } // for dp iteration
+
+        } // for gap open
+
+        return tmscore_max;
     }
 }
 

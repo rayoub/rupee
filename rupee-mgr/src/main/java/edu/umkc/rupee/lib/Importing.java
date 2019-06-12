@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.biojava.nbio.structure.AminoAcid;
+import org.biojava.nbio.structure.Atom;
 import org.biojava.nbio.structure.Calc;
 import org.biojava.nbio.structure.Chain;
 import org.biojava.nbio.structure.Group;
@@ -78,6 +79,12 @@ public class Importing {
                     default:
                         sse = "Loop";
                 }
+
+                // get coordinates
+                Atom ca = g2.getAtom("CA");
+                float x = (float) ca.getX();
+                float y = (float) ca.getY();
+                float z = (float) ca.getZ();
                 
                 // calculate torsion angles
                 double phi = 360.0;
@@ -112,6 +119,9 @@ public class Importing {
                 residue.setResidueCode(residueCode);
                 residue.setSSA(ssa);
                 residue.setSSE(sse);
+                residue.setX(x);
+                residue.setY(y);
+                residue.setZ(z);
                 residue.setPhi(phi);
                 residue.setPsi(psi);
                 residue.setDescriptor(calculateRegion(phi,psi,sse));

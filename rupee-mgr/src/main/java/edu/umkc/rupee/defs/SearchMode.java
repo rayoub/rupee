@@ -3,7 +3,8 @@ package edu.umkc.rupee.defs;
 public enum SearchMode {
 
     FAST(1, "Fast", 40000),
-    TOP_ALIGNED(2, "Top-Aligned", 40000);
+    TOP_ALIGNED(2, "Top-Aligned", 80000),
+    ALL_ALIGNED(3, "All-Aligned", Integer.MAX_VALUE);
 
     private int id;
     private String name;

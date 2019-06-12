@@ -6,6 +6,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import org.apache.commons.lang3.mutable.MutableDouble;
+
+import edu.umkc.rupee.tm.Functions;
+import edu.umkc.rupee.tm.Parameters;
+import edu.umkc.rupee.tm.TmAlign;
+import edu.umkc.rupee.tm.TmMode;
+
 public class LCS {
     
     public static enum Direction { NONE, UP, LEFT, DIAGONAL_MATCH, DIAGONAL_MISMATCH };
@@ -388,5 +395,192 @@ public class LCS {
             map.put(grams.get(i), codes.get(i)); 
         }
         return map;
+    }
+
+    public static double getLCSPlusFullLength(Grams grams1, Grams grams2) {
+
+        if (!(grams1.getLength() > 0 && grams2.getLength() > 0))
+            return 0.0;
+
+        int[][] s = new int[grams1.getLength() + 1][grams2.getLength() + 1];
+        Direction[][] d = new Direction[grams1.getLength() + 1][grams2.getLength() + 1];
+
+        s[0][0] = 0;
+        d[0][0] = Direction.NONE;
+  
+        // initialize first column 
+        for (int i = 1; i <= grams1.getLength(); i++) {
+            s[i][0] = -1 * i;
+            d[i][0] = Direction.UP;
+        }
+
+        // initialize first row
+        for (int j = 1; j <= grams2.getLength(); j++) {
+            s[0][j] = -1 * j;
+            d[0][j] = Direction.LEFT;
+        }
+
+        // build cost and pointer matrices
+        for (int i = 1; i <= grams1.getLength(); i++) {
+            for (int j = 1; j <= grams2.getLength(); j++) {
+
+                int diagonal = s[i-1][j-1];
+                if (grams1.getGramsAsList().get(i-1).equals(grams2.getGramsAsList().get(j-1))) {
+                    diagonal += 1;
+                }
+                else {
+                    diagonal -= 1;
+                }
+
+                int up = s[i-1][j] - 1;
+                int left = s[i][j-1] - 1;
+
+                if (diagonal >= up && diagonal >= left) {
+                    s[i][j] = diagonal;
+                    if (grams1.getGramsAsList().get(i-1).equals(grams2.getGramsAsList().get(j-1))) {
+                        d[i][j] = Direction.DIAGONAL_MATCH;
+                    }
+                    else {
+                        d[i][j] = Direction.DIAGONAL_MISMATCH;
+                    }
+                }
+                else if (up >= left) {
+                    s[i][j] = up;
+                    d[i][j] = Direction.UP;
+                }
+                else {
+                    s[i][j] = left;
+                    d[i][j] = Direction.LEFT;
+                }
+            }
+        }
+       
+        // chain lengths 
+        int xlen = grams1.getLength();
+        int ylen = grams2.getLength();
+    
+        // initialize inverse map 
+        int invmap[] = new int[ylen];
+        for (int i = 0; i < ylen; i++) {
+            invmap[i] = -1;
+        }
+
+        // build inverse map
+        int i = xlen;
+        int j = ylen;
+        while (i != 0 || j != 0) {
+
+            if (d[i][j] == Direction.DIAGONAL_MATCH) {
+
+                //diagonal match
+                invmap[j-1] = i-1;
+                i = i - 1;
+                j = j - 1;
+            }
+            else if (d[i][j] == Direction.DIAGONAL_MISMATCH) {
+
+                //diagonal mismatch
+                i = i - 1;
+                j = j - 1;
+            }
+            else if (d[i][j] == Direction.UP) {
+
+                // up gap
+                i = i - 1;
+            }
+            else { // b[i][j] == Direction.LEFT
+
+                // left gap
+                j = j - 1;
+            }
+        }
+        
+        // get alignment length
+        int align_len = 0;
+        for (i = 0; i < ylen; i++) {
+            if (invmap[i] >= 0) {
+                align_len++;
+            }
+        }
+
+        // guard on minimum alignment length
+        if (align_len < 2) {
+            return 0.0;
+        }
+        
+        // pack coords
+        double xtm[][] = new double[align_len][3];
+        double ytm[][] = new double[align_len][3];
+        int k = 0;
+        for (j = 0; j < ylen; j++) {
+
+            i = invmap[j];
+            if (i >= 0) {
+                
+                xtm[k][0] = grams1.getCoordsAsList().get(i * 3);
+                xtm[k][1] = grams1.getCoordsAsList().get(i * 3 + 1); 
+                xtm[k][2] = grams1.getCoordsAsList().get(i * 3 + 2); 
+                ytm[k][0] = grams2.getCoordsAsList().get(j * 3);
+                ytm[k][1] = grams2.getCoordsAsList().get(j * 3 + 1); 
+                ytm[k][2] = grams2.getCoordsAsList().get(j * 3 + 2); 
+
+                k++;
+            }
+        }
+        
+        // initialize trivial inverse map
+        invmap = new int[align_len];
+        for (i = 0; i < align_len; i++) {
+            invmap[i] = i;
+        }
+        
+        // initialize dp inverse map 
+        int invmap_dp[] = new int[align_len];
+        for (i = 0; i < align_len; i++) {
+            invmap_dp[i] = -1;
+        }
+
+        // run tm-align for aligned grams
+        TmAlign tm = new TmAlign(align_len, align_len, TmMode.FAST);
+        double[][] xt = new double[align_len][3];
+        double[] t = new double[3];
+        double[][] u = new double[3][3];
+        
+        Parameters params = Parameters.getRupeeParameters(align_len);
+        int simplify_step = 1; 
+        int score_sum_method = 0; 
+        double score, max_score = -1.0;
+
+        // get the initial rotation matrix 
+        score = tm.detailed_search_wrapper(xtm, ytm, align_len, align_len, invmap, t, u, simplify_step, score_sum_method, false, params);
+
+        // improve the rotation matrix
+        MutableDouble scoreRet = new MutableDouble(0.0);
+        tm.dp_iteration_rupee(xtm, ytm, align_len, align_len, t, u, invmap_dp, TmMode.FAST.getDpIterations(), false, params);
+
+        if (score > max_score) {
+
+            // store the improved alignment in inverse map
+            max_score = score;
+
+            for (i = 0; i < align_len; i++) {
+                invmap[i] = invmap_dp[i];
+            }
+
+            // perform the rotation on the original coords
+            Functions.do_rotation(xtm, xt, align_len, t, u);
+
+            // init sat indices
+            int sat_indices[] = new int[align_len];
+            tm.calculate_tm_score(xt, ytm, align_len, params.getD0Bounded(), sat_indices, scoreRet, score_sum_method, false, params);
+        }
+        else {
+
+            // init sat indices
+            int sat_indices[] = new int[align_len];
+            tm.calculate_tm_score(xtm, ytm, align_len, params.getD0Bounded(), sat_indices, scoreRet, score_sum_method, false, params);
+        }
+
+        return scoreRet.getValue();
     }
 }

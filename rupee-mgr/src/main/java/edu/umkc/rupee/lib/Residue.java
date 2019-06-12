@@ -1,8 +1,7 @@
 package edu.umkc.rupee.lib;
 
-import org.postgresql.util.PGobject;
 
-public class Residue extends PGobject {
+public class Residue {
 
     private String pdbId;
     private String chainId;
@@ -12,6 +11,9 @@ public class Residue extends PGobject {
     private String residueCode;
     private String ssa;
     private String sse;
+    private float x;
+    private float y;
+    private float z;
     private double phi;
     private double psi;
     private int descriptor;
@@ -84,6 +86,30 @@ public class Residue extends PGobject {
         this.sse = sse;
     }
 
+    public float getX() {
+        return x;
+    }
+
+    public void setX(float x) {
+        this.x = x;
+    }
+
+    public float getY() {
+        return y;
+    }
+
+    public void setY(float y) {
+        this.y = y;
+    }
+
+    public float getZ() {
+        return z;
+    }
+
+    public void setZ(float z) {
+        this.z = z;
+    }
+
     public double getPhi() {
         return phi;
     }
@@ -154,18 +180,6 @@ public class Residue extends PGobject {
    
     public boolean isBridge() {
         return sse.equals("Bridge");
-    }
-
-    @Override
-    public String getValue() {
-        String row = "(" 
-            + pdbId + "," + chainId + "," + atomNumber + "," 
-            + residueNumber + "," + (insertCode == null || insertCode.equals("null") ? "" : insertCode) + "," + residueCode + "," 
-            + ssa + "," + sse + "," + phi + "," + psi + "," 
-            + descriptor + "," + runFactor + "," + gram + "," 
-            + (breakBefore ? 1 : 0) + "," + (breakAfter ? 1 : 0)
-            + ")";
-        return row;
     }
 }
 

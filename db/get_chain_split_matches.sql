@@ -10,7 +10,8 @@ RETURNS TABLE (
     db_id VARCHAR,
     pdb_id VARCHAR, 
     sort_key VARCHAR,
-    grams INTEGER ARRAY
+    grams INTEGER ARRAY,
+    coords REAL ARRAY
 )
 AS $$
 BEGIN
@@ -20,7 +21,8 @@ BEGIN
         c.chain_id AS db_id,
         c.pdb_id,
         c.sort_key,
-        g.grams
+        g.grams,
+        g.coords
     FROM
         chain c
         INNER JOIN chain_grams g

@@ -1,7 +1,7 @@
 
 DO $$
 
-    DECLARE p_benchmark VARCHAR := 'scop_d50';
+    DECLARE p_benchmark VARCHAR := 'scop_d360';
     DECLARE p_version VARCHAR := 'scop_v2_07';
     DECLARE p_limit INTEGER := 100; 
     DECLARE p_alg VARCHAR = 'TM_AVG'; 
@@ -13,11 +13,11 @@ BEGIN
     CREATE TABLE figure_table AS 
         WITH rupee_1 AS
         (
-            SELECT * FROM get_rupee_results(p_benchmark, p_version, 'similarity_1', p_limit)
+            SELECT * FROM get_rupee_results(p_benchmark, p_version, 'tm_score_1', p_limit)
         ),
         rupee_2 AS
         (
-            SELECT * FROM get_rupee_results(p_benchmark, p_version, 'similarity_2', p_limit)
+            SELECT * FROM get_rupee_results(p_benchmark, p_version, 'tm_score_2', p_limit)
         ),
         ranked AS
         (

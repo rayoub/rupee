@@ -66,16 +66,8 @@ public class Db {
         while(rs.next()) {
 
             String dbId = rs.getString("db_id");
-            Integer[] gramsAsArray = (Integer[])rs.getArray("grams").getArray();
-          
-            if (gramsAsArray != null && gramsAsArray.length > 0) {
-                
-                Grams grams = new Grams();
-                grams.setGramsAsArray(gramsAsArray);
-                grams.setGramsAsList(Arrays.asList(gramsAsArray));
-
-                map.put(dbId, grams);
-            } 
+            Grams grams = Grams.fromResultSet(rs);
+            map.put(dbId, grams);
         }
 
         rs.close();
@@ -100,14 +92,7 @@ public class Db {
         
         ResultSet rs = stmt.executeQuery();
         if(rs.next()) {
-
-            Integer[] gramsAsArray = (Integer[])rs.getArray("grams").getArray();
-            if (gramsAsArray != null && gramsAsArray.length > 0) {
-
-                grams = new Grams();
-                grams.setGramsAsArray(gramsAsArray);
-                grams.setGramsAsList(Arrays.asList(gramsAsArray));
-            }
+            grams = Grams.fromResultSet(rs);
         }
 
         rs.close();

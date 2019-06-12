@@ -11,3 +11,8 @@ COPY response_time (app, benchmark, db_id, timing) FROM '/home/ayoub/git/rupee/r
 COPY response_time (app, benchmark, db_id, timing) FROM '/home/ayoub/git/rupee/results/rupee/cath_d99_timing.txt' WITH (DELIMITER ',');
 COPY response_time (app, benchmark, db_id, timing) FROM '/home/ayoub/git/rupee/results/rupee/cath_d99_timing_fast.txt' WITH (DELIMITER ',');
 
+-- used for comparing rupee against rupee
+COPY response_time (app, benchmark, db_id, timing) FROM '/home/ayoub/git/rupee/results/rupee/scop_d62_timing_1.txt' WITH (DELIMITER ',');
+COPY response_time (app, benchmark, db_id, timing) FROM '/home/ayoub/git/rupee/results/rupee/scop_d62_timing_2.txt' WITH (DELIMITER ',');
+
+

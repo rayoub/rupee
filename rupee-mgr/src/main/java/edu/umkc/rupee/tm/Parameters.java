@@ -90,14 +90,14 @@ public class Parameters {
     public static Parameters getFinalParameters(double xlen, double ylen, double len) {
 
         Parameters params = new Parameters();
-
+        
         params.normalizeBy = len; 
 
         if (params.normalizeBy <= 21) {
             params.d0 = 0.5;
         } else {
             // equation (5) from Zhang, 2004
-            params.d0 = (1.24 * Math.pow((params.normalizeBy * 1.0 - 15), 1.0 / 3) - 1.8);
+            params.d0 = (1.24 * Math.pow((params.normalizeBy * 1.0 - 15), 1.0 / 3.0) - 1.8);
         }
 
         params.d0 = Math.max(params.d0, 0.5);
@@ -112,6 +112,26 @@ public class Parameters {
 
         params.scoreD8 = 1.5 * Math.pow(Math.min(xlen, ylen) * 1.0, 0.3) + 3.5;
         params.scoreD8Squared = params.scoreD8 * params.scoreD8;
+
+        return params;
+    }
+    
+    public static Parameters getRupeeParameters(double align_len) {
+
+        Parameters params = new Parameters();
+
+        params.normalizeBy = align_len; 
+
+        params.d0 = (1.24 * Math.pow((params.normalizeBy * 1.0), 1.0 / 3.0) - 1.8);
+        params.d0 = Math.max(params.d0, 0.5);
+        params.d02 = params.d0 * params.d0;
+
+        // set bounded d0 term 
+        params.d0Bounded = params.d0;
+        if (params.d0Bounded > 8)
+            params.d0Bounded = 8;
+        if (params.d0Bounded < 4.5)
+            params.d0Bounded = 4.5;
 
         return params;
     }

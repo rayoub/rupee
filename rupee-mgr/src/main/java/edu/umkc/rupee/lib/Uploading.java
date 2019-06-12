@@ -104,10 +104,11 @@ public class Uploading {
             conn = ds.getConnection();
             conn.setAutoCommit(false);
         
-            stmt = conn.prepareCall("{ ? = call insert_upload_grams(?) }");
+            stmt = conn.prepareCall("{ ? = call insert_upload_grams(?, ?) }");
 
             stmt.registerOutParameter(1, Types.INTEGER); 
             stmt.setArray(2, conn.createArrayOf("INTEGER", grams.getGramsAsArray()));
+            stmt.setArray(3, conn.createArrayOf("NUMERIC", grams.getCoordsAsArray()));
 
             stmt.execute();
 

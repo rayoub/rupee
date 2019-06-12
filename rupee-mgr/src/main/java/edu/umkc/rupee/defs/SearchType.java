@@ -4,8 +4,7 @@ public enum SearchType {
 
     FULL_LENGTH(1, "Full-Length"),
     CONTAINED_IN(2, "Contained In"),
-    CONTAINS(3, "Contains"),
-    ALIGN_ALL(4, "Align All");
+    CONTAINS(3, "Contains");
 
     private int id;
     private String name;
@@ -30,11 +29,8 @@ public enum SearchType {
         else if (id == CONTAINED_IN.getId()) {
             return CONTAINED_IN;
         }
-        else if (id == CONTAINS.getId()) {
-            return CONTAINS;
-        }
         else {
-            return ALIGN_ALL;
+            return CONTAINS;
         }
     }
 }

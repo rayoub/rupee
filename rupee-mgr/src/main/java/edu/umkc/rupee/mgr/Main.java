@@ -60,7 +60,6 @@ import edu.umkc.rupee.scop.ScopImport;
 import edu.umkc.rupee.scop.ScopSearch;
 import edu.umkc.rupee.scop.ScopSearchCriteria;
 import edu.umkc.rupee.scop.ScopSearchRecord;
-import edu.umkc.rupee.tm.Testing;
 import edu.umkc.rupee.tm.TmMode;
 import edu.umkc.rupee.tm.TmResults;
 
@@ -314,6 +313,9 @@ public class Main {
 
             // lcs validated matching grams
             double score = LCS.getLCSScoreFullLength(grams1.getGramsAsList(), grams2.getGramsAsList()); 
+
+            // rough tm-score estimate
+            double rough_tm = LCS.getLCSPlusFullLength(grams1, grams2);
           
             System.out.println(""); 
             System.out.println("Structure 1 Length:     " + grams1.getLength());
@@ -325,6 +327,7 @@ public class Main {
             System.out.println("Exact Similarity:       " + exact);
             System.out.println(""); 
             System.out.println("LCS Score:              " + score);
+            System.out.println("Tm-Score Estimate:      " + rough_tm);
 
             Map<Integer, String> codeMap = LCS.getCodeMap(grams1.getGramsAsList(), grams2.getGramsAsList());
             LCS.printLCSFullLength(grams1.getGramsAsList(), grams2.getGramsAsList(), codeMap);
@@ -485,7 +488,7 @@ public class Main {
         //***  OUTPUT
         //*************************************************************
 
-        SearchType searchType = SearchType.ALIGN_ALL;
+        SearchType searchType = SearchType.FULL_LENGTH;
 
         boolean verbose = true; 
         boolean timing = false;
@@ -761,7 +764,23 @@ public class Main {
 
     private static void option_d(CommandLine line) throws Exception {
 
-        Testing.test();
+
+
+/*
+        boolean[] indices = findIndices(31, 10);
+        for (int i = 0; i < indices.length; i++) {
+            System.out.print(indices[i] + " ");
+        }
+        System.out.print("\n");
+*/
+
+        double[] nums = new double[] { 15, 16, 17, 18, 19, 20, 21, 40, 60, 80, 100, 120, 140, 160 };
+
+        for (int i = 0; i < nums.length; i++) {
+            double d0 = (1.24 * Math.pow((nums[i] * 1.0 - 1), 1.0 / 3.0) - 1.8);
+            System.out.println(nums[i] + " = " + d0);
+        }
+        //Testing.test();
         /*
         List<Labels.Label> labels = Labels.getLabels("d2pf2a2", DbTypeCriteria.SCOP);
         for (Labels.Label label : labels) {

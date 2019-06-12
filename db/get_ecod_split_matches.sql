@@ -13,7 +13,8 @@ RETURNS TABLE (
     db_id VARCHAR,
     pdb_id VARCHAR,
     sort_key VARCHAR,
-    grams INTEGER ARRAY
+    grams INTEGER ARRAY,
+    coords REAL ARRAY
 )
 AS $$
     DECLARE q_x VARCHAR;
@@ -39,7 +40,8 @@ BEGIN
             d.ecod_id AS db_id,
             d.pdb_id,
             d.sort_key,
-            g.grams
+            g.grams,
+            g.coords
         FROM
             ecod_domain d
             INNER JOIN ecod_grams g
@@ -64,7 +66,8 @@ BEGIN
             d.ecod_id AS db_id,
             d.pdb_id,
             d.sort_key,
-            g.grams
+            g.grams,
+            g.coords
         FROM
             ecod_domain d
             INNER JOIN ecod_grams g

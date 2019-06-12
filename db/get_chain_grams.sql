@@ -2,7 +2,8 @@
 CREATE OR REPLACE FUNCTION get_chain_grams (p_chain_ids VARCHAR ARRAY)
 RETURNS TABLE (
     db_id VARCHAR,
-    grams INTEGER ARRAY
+    grams INTEGER ARRAY,
+    coords REAL ARRAY
 )
 AS $$
 BEGIN
@@ -10,7 +11,8 @@ BEGIN
     RETURN QUERY
     SELECT 
         g.chain_id AS db_id,
-        g.grams
+        g.grams,
+        g.coords
     FROM
         chain_grams g
         INNER JOIN UNNEST(p_chain_ids) AS ids (chain_id)

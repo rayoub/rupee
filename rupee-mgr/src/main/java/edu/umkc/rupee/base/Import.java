@@ -142,9 +142,10 @@ public abstract class Import {
 
     public void saveGrams(String dbId, Grams grams, Connection conn) throws SQLException {
         
-        PreparedStatement updt = conn.prepareStatement("SELECT insert_" + getDbType().getTableName() + "_grams(?, ?);");
+        PreparedStatement updt = conn.prepareStatement("SELECT insert_" + getDbType().getTableName() + "_grams(?, ?, ?);");
         updt.setString(1, dbId);
         updt.setArray(2, conn.createArrayOf("INTEGER", grams.getGramsAsArray()));
+        updt.setArray(3, conn.createArrayOf("NUMERIC", grams.getCoordsAsArray()));
         updt.execute();
         updt.close();
     }
