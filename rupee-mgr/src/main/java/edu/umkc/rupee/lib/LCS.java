@@ -549,38 +549,25 @@ public class LCS {
         Parameters params = Parameters.getRupeeParameters(align_len);
         int simplify_step = 1; 
         int score_sum_method = 0; 
-        double score, max_score = -1.0;
+        double max_score;
 
-        // get the initial rotation matrix 
-        score = tm.detailed_search_wrapper(xtm, ytm, align_len, align_len, invmap, t, u, simplify_step, score_sum_method, false, params);
+        // get the initial rotation matrix and score
+        max_score = tm.detailed_search_wrapper(xtm, ytm, align_len, align_len, invmap, t, u, simplify_step, score_sum_method, false, params);
 
-        // improve the rotation matrix
-        MutableDouble scoreRet = new MutableDouble(0.0);
+        // try to improve the rotation matrix
         tm.dp_iteration_rupee(xtm, ytm, align_len, align_len, t, u, invmap_dp, TmMode.FAST.getDpIterations(), false, params);
+           
+        // perform the rotation on the original coords
+        Functions.do_rotation(xtm, xt, align_len, t, u);
 
-        if (score > max_score) {
-
-            // store the improved alignment in inverse map
-            max_score = score;
-
-            for (i = 0; i < align_len; i++) {
-                invmap[i] = invmap_dp[i];
-            }
-
-            // perform the rotation on the original coords
-            Functions.do_rotation(xtm, xt, align_len, t, u);
-
-            // init sat indices
-            int sat_indices[] = new int[align_len];
-            tm.calculate_tm_score(xt, ytm, align_len, params.getD0Bounded(), sat_indices, scoreRet, score_sum_method, false, params);
-        }
-        else {
-
-            // init sat indices
-            int sat_indices[] = new int[align_len];
-            tm.calculate_tm_score(xtm, ytm, align_len, params.getD0Bounded(), sat_indices, scoreRet, score_sum_method, false, params);
+        // check the new score 
+        MutableDouble score = new MutableDouble(0.0);
+        int sat_indices[] = new int[align_len];
+        tm.calculate_tm_score(xt, ytm, align_len, params.getD0Bounded(), sat_indices, score, score_sum_method, false, params);
+        if (score.getValue() > max_score) {
+            max_score = score.getValue();
         }
 
-        return scoreRet.getValue();
+        return max_score;
     }
 }
