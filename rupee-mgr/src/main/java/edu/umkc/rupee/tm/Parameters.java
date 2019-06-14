@@ -115,24 +115,4 @@ public class Parameters {
 
         return params;
     }
-    
-    public static Parameters getRupeeParameters(double align_len) {
-
-        Parameters params = new Parameters();
-
-        params.normalizeBy = align_len; 
-
-        params.d0 = (1.24 * Math.pow((params.normalizeBy * 1.0), 1.0 / 3.0) - 1.8);
-        params.d0 = Math.max(params.d0, 0.5);
-        params.d02 = params.d0 * params.d0;
-
-        // set bounded d0 term 
-        params.d0Bounded = params.d0;
-        if (params.d0Bounded > 8)
-            params.d0Bounded = 8;
-        if (params.d0Bounded < 4.5)
-            params.d0Bounded = 4.5;
-
-        return params;
-    }
 }

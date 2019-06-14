@@ -14,6 +14,8 @@ import org.biojava.nbio.structure.Chain;
 import org.biojava.nbio.structure.Group;
 import org.biojava.nbio.structure.Structure;
 
+import edu.umkc.rupee.defs.SearchType;
+
 public class TmAlign {
 
     // globals 
@@ -133,14 +135,14 @@ public class TmAlign {
         this._mode = mode;
     }
 
-    public TmAlign(int xlen, int ylen) {
+    public TmAlign(double[][] xa, double[][] ya) {
 
         // default mode 
         _mode = TmMode.REGULAR; 
 
         // get number of residues
-        _xlen = xlen;
-        _ylen = ylen;
+        _xlen = xa.length;
+        _ylen = ya.length;
         _minlen = Math.min(_xlen, _ylen);
 
         // allocate storage
@@ -158,11 +160,15 @@ public class TmAlign {
         _r2 = new double[_minlen][3];
         _t = new double[3];
         _u = new double[3][3];
+
+        // atom coordinates
+        _xa = xa;
+        _ya = ya;        
     }
 
-    public TmAlign(int xlen, int ylen, TmMode mode) {
+    public TmAlign(double[][] xa, double[][] ya, TmMode mode) {
         
-        this(xlen, ylen);
+        this(xa, ya);
         this._mode = mode;
     }
 
@@ -240,7 +246,7 @@ public class TmAlign {
         // * get initial alignment based on local superposition *
         // ********************************************************************************** //
 
-        if (_mode == TmMode.REGULAR && get_initial5(_xa, _ya, _xlen, _ylen, invmap, params)) {
+        if (_mode != TmMode.FAST && get_initial5(_xa, _ya, _xlen, _ylen, invmap, params)) {
 
             tm = detailed_search_wrapper(_xa, _ya, _xlen, _ylen, invmap, _t, _u, simplify_step, score_sum_method, false, params);
 
@@ -699,6 +705,109 @@ public class TmAlign {
         }
         
         return results;
+    }
+    
+    public double alignDescriptors(int[] invmap, SearchType searchType, double normalizeBy) { 
+
+        // set d0 terms and normalization term
+        Parameters params = Parameters.getSearchParameters(_xlen, _ylen);
+       
+        // set scoring method 
+        int simplify_step = 40; 
+        int score_sum_method = 8; 
+        
+        // store the best initial alignment
+        int invmap_best[] = new int[_ylen];
+        for (int i = 0; i < _ylen; i++) {
+            invmap_best[i] = invmap[i];
+        }
+        
+        // temp store for alignment
+        int invmap_temp[] = new int[_ylen];
+        for (int i = 0; i < _ylen; i++) {
+            invmap_temp[i] = -1;
+        }
+        
+        double tm = 0;
+        double max_tm = -1;
+
+        // get rotation matrix for initial alignment and check score (out: _t, _u; in: invmap_best)
+        tm = detailed_search_wrapper(_xa, _ya, _xlen, _ylen, invmap_best, _t, _u, simplify_step, score_sum_method, false, params);
+        if (tm > max_tm) {
+            max_tm = tm;
+        }
+        
+        // try to improve the initial alignment (in/out: _t, _u; out: invmap_temp)
+        tm = dp_iteration(_xa, _ya, _xlen, _ylen, _t, _u, invmap_temp, _mode.getDpIterations(), false, params);
+        if (tm > max_tm) {
+            max_tm = tm;
+            for (int i = 0; i < _ylen; i++) {
+                invmap_best[i] = invmap_temp[i];
+            }
+        }
+        
+        // set scoring method 
+        simplify_step = 1;
+        score_sum_method = 8;
+
+        // update the rotation matrix with best alignment (out: _t, _u; in: invmap_best)
+        tm = detailed_search_wrapper(_xa, _ya, _xlen, _ylen, invmap_best, _t, _u, simplify_step, score_sum_method, true, params);
+
+        // select pairs with dis < d8 for final TMscore computation and output alignment
+        int align_len, k = 0;
+        double d;
+        Functions.do_rotation(_xa, _xt, _xlen, _t, _u);
+        k = 0;
+        for (int j = 0; j < _ylen; j++) {
+            int i = invmap_best[j];
+            if (i >= 0)
+            {
+                // aligned
+                d = Math.sqrt(Functions.dist(_xt[i], _ya[j]));
+                if (d <= params.getScoreD8()) {
+
+                    // densely packed - not transformed
+                    _xtm[k][0] = _xa[i][0];
+                    _xtm[k][1] = _xa[i][1];
+                    _xtm[k][2] = _xa[i][2];
+
+                    _ytm[k][0] = _ya[j][0];
+                    _ytm[k][1] = _ya[j][1];
+                    _ytm[k][2] = _ya[j][2];
+
+                    // densley packed - transformed
+                    _r1[k][0] = _xt[i][0];
+                    _r1[k][1] = _xt[i][1];
+                    _r1[k][2] = _xt[i][2];
+
+                    _r2[k][0] = _ya[j][0];
+                    _r2[k][1] = _ya[j][1];
+                    _r2[k][2] = _ya[j][2];
+
+                    k++;
+                }
+            }
+        }
+
+        // alignment length
+        align_len = k;
+
+        // minimize rmsd for the best rotation and translation matrices t and u
+        double rmsd = Kabsch.execute(_r1, _r2, align_len, 0, _t, _u); 
+        rmsd = Math.sqrt(rmsd / (double) align_len);
+
+        // ********************************************************************************* //
+        // * Final TMscore *
+        // ********************************************************************************* //
+        
+        // set score method 
+        simplify_step = 1;
+        score_sum_method = 0;
+    
+        params = Parameters.getFinalParameters(_xlen, _ylen, normalizeBy);
+        tm = detailed_search(_xtm, _ytm, align_len, _t, _u, simplify_step, score_sum_method, false, params);
+    
+        return tm;    
     }
 
     // **********************************************************************************
@@ -1178,7 +1287,7 @@ public class TmAlign {
     // **********************************************************************************
     // dynamic programming iteration
     // **********************************************************************************
-
+    
     public double dp_iteration(
             double xa[][], double ya[][], 
             int xlen, int ylen, 
@@ -1641,93 +1750,6 @@ public class TmAlign {
         }
 
         return num_sat;
-    }
-    
-    // **********************************************************************************
-    // rupee specific
-    // **********************************************************************************
-   
-    public double dp_iteration_rupee(
-            double xa[][], double ya[][], 
-            int xlen, int ylen, 
-            double t[], double u[][], 
-            int invmap[],
-            int iteration_max,
-            boolean gapless,
-            Parameters params) {
-
-        int invmap_local[] = new int[ylen];
-
-        int iteration, i, j, k;
-        double tmscore, tmscore_max, tmscore_old = 0;
-        int score_sum_method = 0;
-        int simplify_step = 40;
-        tmscore_max = -1;
-
-        int g1 = 0; 
-        int g2 = 2;
-        if (gapless) 
-            g1 = 1;
-        double gap_open[] = { -0.6, 0 };
-
-        // try different gap open penalties
-        for (int g = g1; g < g2; g++) {
-
-            // iterate on NW dp algorithm
-            for (iteration = 0; iteration < iteration_max; iteration++) {
-
-                NW.dp_dist(_path, _val, xa, ya, xlen, ylen, t, u, params.getD02(), gap_open[g], invmap_local);
-
-                k = 0;
-                for (j = 0; j < ylen; j++) {
-
-                    i = invmap_local[j];
-                    if (i >= 0) {
-
-                        // pack alignment
-                        _xtm[k][0] = xa[i][0];
-                        _xtm[k][1] = xa[i][1];
-                        _xtm[k][2] = xa[i][2];
-
-                        _ytm[k][0] = ya[j][0];
-                        _ytm[k][1] = ya[j][1];
-                        _ytm[k][2] = ya[j][2];
-
-                        k++;
-                    }
-                }
-
-                // k is the length of the alignment stored densely in xtm and ytm
-                /* 
-                MutableDouble scoreRet = new MutableDouble(0.0);
-                int sat_indices[] = new int[k];
-                calculate_tm_score(_xtm, _ytm, k, params.getD0Bounded(), sat_indices, scoreRet, score_sum_method, false, params);
-                tmscore = scoreRet.getValue();
-                */
-                tmscore = detailed_search(_xtm, _ytm, k, t, u, simplify_step, score_sum_method, false, params);
-
-                // update the best
-                if (tmscore > tmscore_max) {
-                    tmscore_max = tmscore;
-                    for (i = 0; i < ylen; i++) {
-                        invmap[i] = invmap_local[i];
-                    }
-                }
-
-                // test for convergence to break early
-                if (iteration > 0) {
-                    if (Math.abs(tmscore_old - tmscore) < 0.000001) {
-                        break;
-                    }
-                }
-
-                tmscore_old = tmscore;
-
-            } // for dp iteration
-
-        } // for gap open
-
-        return tmscore_max;
     }
 }
 

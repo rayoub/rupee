@@ -2,18 +2,16 @@ package edu.umkc.rupee.defs;
 
 public enum SearchMode {
 
-    FAST(1, "Fast", 40000),
-    TOP_ALIGNED(2, "Top-Aligned", 80000),
-    ALL_ALIGNED(3, "All-Aligned", Integer.MAX_VALUE);
+    FAST(1, "Fast"),
+    TOP_ALIGNED(2, "Top-Aligned"),
+    ALL_ALIGNED(3, "All-Aligned");
 
     private int id;
     private String name;
-    private int lshCandidateCount;
 
-    SearchMode(int id, String name, int lshCandidateCount) {
+    SearchMode(int id, String name) {
         this.id = id;
         this.name = name;
-        this.lshCandidateCount = lshCandidateCount;
     }
 
     public int getId() {
@@ -22,10 +20,6 @@ public enum SearchMode {
 
     public String getName() {
         return name;
-    }
-
-    public int getLshCandidateCount() {
-        return lshCandidateCount;
     }
 
     public static SearchMode fromId(int id) {

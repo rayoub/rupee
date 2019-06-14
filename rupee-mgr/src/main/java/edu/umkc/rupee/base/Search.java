@@ -39,6 +39,9 @@ import edu.umkc.rupee.tm.TmResults;
 
 public abstract class Search {
 
+    private static int MAX_FILTER = 8000;
+    private static int LEGACY_FILTER = 40000;
+
     // *********************************************************************
     // Abstract Methods 
     // *********************************************************************
@@ -89,7 +92,7 @@ public abstract class Search {
                 records = IntStream.range(0, Constants.BAND_CHECK_COUNT).boxed().parallel()
                     .flatMap(bandIndex -> searchBand(bandIndex, criteria, hashes1).stream())
                     .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
-                    .limit(criteria.searchMode.getLshCandidateCount()) 
+                    .limit(LEGACY_FILTER) 
                     .collect(Collectors.toList());
               
                 // cache map of residue grams
@@ -110,6 +113,7 @@ public abstract class Search {
                 // sort lcs candidates
                 records = records.stream()
                     .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
+                    .limit(MAX_FILTER) 
                     .collect(Collectors.toList());
 
             }
@@ -122,7 +126,7 @@ public abstract class Search {
                 records = IntStream.range(0, Constants.SPLIT_COUNT).boxed().parallel()
                     .flatMap(splitIndex -> gramsSplit(splitIndex, criteria, grams1, false).stream())
                     .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
-                    .limit(criteria.searchMode.getLshCandidateCount()) 
+                    .limit(MAX_FILTER) 
                     .collect(Collectors.toList());
             }
             else { // criteria.searchMode == SearchMode.ALL_ALIGNED
@@ -133,7 +137,7 @@ public abstract class Search {
                 records = IntStream.range(0, Constants.SPLIT_COUNT).boxed().parallel()
                     .flatMap(splitIndex -> gramsSplit(splitIndex, criteria, grams1, true).stream())
                     .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
-                    .limit(criteria.searchMode.getLshCandidateCount()) 
+                    .limit(MAX_FILTER) 
                     .collect(Collectors.toList());
             }
 
@@ -144,8 +148,8 @@ public abstract class Search {
             if (criteria.searchMode == SearchMode.ALL_ALIGNED || criteria.searchMode == SearchMode.TOP_ALIGNED) {
 
                 // *** parse query structure
-        
-                Parser parser = new Parser(Integer.MAX_VALUE);
+       
+                Parser parser = new Parser(Integer.MAX_VALUE); 
 
                 String fileName = "";
                 Structure structure = null;
@@ -278,7 +282,8 @@ public abstract class Search {
             FileInputStream targetFile = new FileInputStream(getDbType().getImportPath() + record.getDbId() + ".pdb.gz");
             GZIPInputStream targetFileGz = new GZIPInputStream(targetFile);
 
-            Parser parser = new Parser(Integer.MAX_VALUE);
+            Parser parser = new Parser(Integer.MAX_VALUE); 
+
             Structure targetStructure = parser.parsePDBFile(targetFileGz);
      
             TmAlign tm = new TmAlign(queryStructure, targetStructure, mode);

@@ -6,11 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import org.apache.commons.lang3.mutable.MutableDouble;
-
 import edu.umkc.rupee.defs.SearchType;
-import edu.umkc.rupee.tm.Functions;
-import edu.umkc.rupee.tm.Parameters;
 import edu.umkc.rupee.tm.TmAlign;
 import edu.umkc.rupee.tm.TmMode;
 
@@ -117,6 +113,10 @@ public class LCS {
         int[][] s = new int[grams1.getLength() + 1][grams2.getLength() + 1];
         Direction[][] d = new Direction[grams1.getLength() + 1][grams2.getLength() + 1];
 
+        // *****************************************************************************    
+        // *** run SW algorithm to get score and pointer matrices
+        // *****************************************************************************    
+        
         s[0][0] = 0;
         d[0][0] = Direction.NONE;
  
@@ -148,7 +148,7 @@ public class LCS {
             }
         }
 
-        // build cost and pointer matrices
+        // build score and pointer matrices
         for (int i = 1; i <= grams1.getLength(); i++) {
             for (int j = 1; j <= grams2.getLength(); j++) {
 
@@ -182,8 +182,11 @@ public class LCS {
                 }
             }
         }
-     
-        // chain lengths 
+
+        // *****************************************************************************    
+        // *** build the inverse map for tm-align descriptor alignment
+        // *****************************************************************************    
+
         int xlen = grams1.getLength();
         int ylen = grams2.getLength();
 
@@ -258,79 +261,81 @@ public class LCS {
         }
         
         // get alignment length
-        int align_len = 0;
+        int alignLen = 0;
         for (i = 0; i < ylen; i++) {
             if (invmap[i] >= 0) {
-                align_len++;
+                alignLen++;
             }
         }
 
         // guard on minimum alignment length
-        if (align_len < 2) {
+        if (alignLen < 2) {
             return 0.0;
         }
         
+        // *****************************************************************************    
+        // *** run the tm-align algorithm and return
+        // *****************************************************************************    
+
+/*
+        // get x atom coordinates
+        double xa[][] = new double[xlen][3];
+        for (i = 0; i < xlen; i++) {
+            xa[i][0] = grams1.getCoordsAsList().get(i * 3);
+            xa[i][1] = grams1.getCoordsAsList().get(i * 3 + 1); 
+            xa[i][2] = grams1.getCoordsAsList().get(i * 3 + 2); 
+        }
+
+        // get y atom coordinates
+        double ya[][] = new double[ylen][3];
+        for (i = 0; i < ylen; i++) {
+            ya[i][0] = grams2.getCoordsAsList().get(i * 3);
+            ya[i][1] = grams2.getCoordsAsList().get(i * 3 + 1); 
+            ya[i][2] = grams2.getCoordsAsList().get(i * 3 + 2); 
+        }
+*/
+
         // pack coords
-        double xtm[][] = new double[align_len][3];
-        double ytm[][] = new double[align_len][3];
+        double xa[][] = new double[alignLen][3];
+        double ya[][] = new double[alignLen][3];
         int k = 0;
         for (j = 0; j < ylen; j++) {
 
             i = invmap[j];
             if (i >= 0) {
-                
-                xtm[k][0] = grams1.getCoordsAsList().get(i * 3);
-                xtm[k][1] = grams1.getCoordsAsList().get(i * 3 + 1); 
-                xtm[k][2] = grams1.getCoordsAsList().get(i * 3 + 2); 
-                ytm[k][0] = grams2.getCoordsAsList().get(j * 3);
-                ytm[k][1] = grams2.getCoordsAsList().get(j * 3 + 1); 
-                ytm[k][2] = grams2.getCoordsAsList().get(j * 3 + 2); 
+               
+                xa[k][0] = grams1.getCoordsAsList().get(i * 3);
+                xa[k][1] = grams1.getCoordsAsList().get(i * 3 + 1); 
+                xa[k][2] = grams1.getCoordsAsList().get(i * 3 + 2); 
+                ya[k][0] = grams2.getCoordsAsList().get(j * 3);
+                ya[k][1] = grams2.getCoordsAsList().get(j * 3 + 1); 
+                ya[k][2] = grams2.getCoordsAsList().get(j * 3 + 2); 
 
                 k++;
             }
         }
         
-        // initialize trivial inverse map
-        invmap = new int[align_len];
-        for (i = 0; i < align_len; i++) {
-            invmap[i] = i;
-        }
-        
-        // initialize dp inverse map 
-        int invmap_dp[] = new int[align_len];
-        for (i = 0; i < align_len; i++) {
-            invmap_dp[i] = -1;
+        // initialize trivial inverse map 
+        int invmap_trivial[] = new int[alignLen];
+        for (i = 0; i < alignLen; i++) {
+            invmap_trivial[i] = i;
         }
 
-        // run tm-align for aligned grams
-        TmAlign tm = new TmAlign(align_len, align_len, TmMode.FAST);
-        double[][] xt = new double[align_len][3];
-        double[] t = new double[3];
-        double[][] u = new double[3][3];
-        
-        Parameters params = Parameters.getRupeeParameters(align_len);
-        int simplify_step = 1; 
-        int score_sum_method = 0; 
-        double max_score;
-
-        // get the initial rotation matrix and score
-        max_score = tm.detailed_search_wrapper(xtm, ytm, align_len, align_len, invmap, t, u, simplify_step, score_sum_method, false, params);
-
-        // try to improve the rotation matrix
-        tm.dp_iteration_rupee(xtm, ytm, align_len, align_len, t, u, invmap_dp, TmMode.FAST.getDpIterations(), false, params);
-           
-        // perform the rotation on the original coords
-        Functions.do_rotation(xtm, xt, align_len, t, u);
-
-        // check the new score 
-        MutableDouble score = new MutableDouble(0.0);
-        int sat_indices[] = new int[align_len];
-        tm.calculate_tm_score(xt, ytm, align_len, params.getD0Bounded(), sat_indices, score, score_sum_method, false, params);
-        if (score.getValue() > max_score) {
-            max_score = score.getValue();
+        double normalizeBy = 0;
+        if (searchType == SearchType.FULL_LENGTH) {
+            normalizeBy = alignLen;
+        }
+        else if (searchType == SearchType.CONTAINED_IN) {
+            normalizeBy = xlen;
+        }
+        else { // CONTAINS
+            normalizeBy = ylen;
         }
 
-        return max_score;
+        TmAlign tm = new TmAlign(xa, ya, TmMode.FAST);
+        double score = tm.alignDescriptors(invmap_trivial, searchType, normalizeBy);
+
+        return score;
     }
 
     public static void printLCSFullLength(List<Integer> grams1, List<Integer> grams2, Map<Integer, String> codeMap) {
