@@ -323,7 +323,7 @@ public class LCS {
 
         double normalizeBy = 0;
         if (searchType == SearchType.FULL_LENGTH) {
-            normalizeBy = alignLen;
+            normalizeBy = (xlen + ylen) * 0.5;
         }
         else if (searchType == SearchType.CONTAINED_IN) {
             normalizeBy = xlen;
