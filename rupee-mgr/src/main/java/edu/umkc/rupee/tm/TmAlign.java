@@ -1096,6 +1096,12 @@ public class TmAlign {
     
     public double get_initial_fgt(double xa[][], double ya[][], int xlen, int ylen, int invmap[], Parameters params) {
 
+        // TODO: 
+        // I think there is a bug here introduced in the original translation to C++
+        // My hunch is that the fragments generated in the loop below are not symmetric
+        // with respect to chain 1 and chain 2 so that when presented in reverse
+        // different results are obtained for the tm-score. 
+
         int fra_min = 4; // minimum fragment for search
         int fra_min1 = fra_min - 1; // cutoff for shift, save time
 
@@ -1418,7 +1424,7 @@ public class TmAlign {
             dis[k] = di;
             tmscore += 1 / (1 + di / d02);
         }
-
+       
         // second iteration
         double d002t = d002;
         while (true) {
@@ -1750,6 +1756,42 @@ public class TmAlign {
         }
 
         return num_sat;
+    }
+
+    public void printMap(int xlen, int ylen, int[] invmap) {
+
+        String map = "";
+        for (int j = 0; j < ylen; j++) {
+            if (invmap[j] >= 0) {
+                map += "1";
+            }
+            else {
+                map += "0";
+            }
+        }
+        System.out.println(map);
+    }
+    
+    public void printReverseMap(int xlen, int ylen, int[] invmap) {
+
+        String map = "";
+        for (int i = 0; i < xlen; i++) {
+
+            boolean mapped = false;
+            for (int j = 0; j < ylen; j++) {
+                if (invmap[j] == i) {
+                    mapped = true;
+                    break;
+                } 
+            }
+            if (mapped) {
+                map += "1";
+            }
+            else {
+                map += "0";
+            }
+        }
+        System.out.println(map);
     }
 }
 
