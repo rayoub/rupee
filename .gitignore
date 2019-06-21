@@ -9,6 +9,7 @@ data/cath/pdb_diverse/
 data/ecod/pdb/
 data/chain/pdb/
 data/upload/
+casp/target_preds/
 
 # big data files
 data/scop/dir.cla.scop.1.73.txt
