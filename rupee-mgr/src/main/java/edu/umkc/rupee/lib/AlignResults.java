@@ -106,9 +106,18 @@ public class AlignResults
             PDBFileReader reader = new PDBFileReader();
             reader.setFetchBehavior(FetchBehavior.LOCAL_ONLY);
 
-            FileInputStream queryFile = new FileInputStream(dbType.getImportPath() + dbId + ".pdb.gz");
-            GZIPInputStream queryFileGz = new GZIPInputStream(queryFile);
-            Structure queryStructure = reader.getStructure(queryFileGz);
+            Structure queryStructure = null;
+            if (dbId.startsWith("T0")) {
+                String path = Constants.CASP_PATH + dbId + ".pdb";
+                FileInputStream queryFile = new FileInputStream(path);
+                queryStructure = reader.getStructure(queryFile);
+            }
+            else {
+                String path = dbType.getImportPath() + dbId + ".pdb.gz";
+                FileInputStream queryFile = new FileInputStream(path);
+                GZIPInputStream queryFileGz = new GZIPInputStream(queryFile);
+                queryStructure = reader.getStructure(queryFileGz);
+            }
 
             while (rs.next()) {
 

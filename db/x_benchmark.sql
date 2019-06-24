@@ -14,6 +14,8 @@ COPY benchmark (name, db_id) FROM '/home/ayoub/git/rupee/results/benchmarks/scop
 COPY benchmark (name, db_id) FROM '/home/ayoub/git/rupee/results/benchmarks/cath_d100.txt' WITH (DELIMITER ',');
 COPY benchmark (name, db_id) FROM '/home/ayoub/git/rupee/results/benchmarks/cath_d99.txt' WITH (DELIMITER ',');
 
+COPY benchmark (name, db_id) FROM '/home/ayoub/git/rupee/results/benchmarks/casp_d150.txt' WITH (DELIMITER ',');
+
 
 
 

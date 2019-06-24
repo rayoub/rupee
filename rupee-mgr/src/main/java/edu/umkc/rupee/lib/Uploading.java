@@ -23,10 +23,10 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 import org.biojava.nbio.structure.Structure;
-import org.biojava.nbio.structure.io.PDBFileReader;
 import org.postgresql.ds.PGSimpleDataSource;
 
 import edu.umkc.rupee.base.Hash;
+import edu.umkc.rupee.bio.Parser;
 
 public class Uploading {
 
@@ -71,9 +71,9 @@ public class Uploading {
     private static Grams getGrams(String content) throws IOException {
         
         // get structure 
-        PDBFileReader reader = new PDBFileReader();
+        Parser parser = new Parser(Integer.MAX_VALUE); 
         InputStream stream = new ByteArrayInputStream(content.getBytes());
-        Structure structure = reader.getStructure(stream);
+        Structure structure = parser.parsePDBFile(stream);
 
         // get grams
         List<Residue> residues = Importing.parseStructure(structure);

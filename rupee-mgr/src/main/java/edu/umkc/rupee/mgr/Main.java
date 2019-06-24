@@ -2,6 +2,7 @@ package edu.umkc.rupee.mgr;
 
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.sql.SQLException;
 import java.util.Arrays;
@@ -46,6 +47,7 @@ import edu.umkc.rupee.ecod.EcodSearch;
 import edu.umkc.rupee.ecod.EcodSearchCriteria;
 import edu.umkc.rupee.ecod.EcodSearchRecord;
 import edu.umkc.rupee.lib.AlignRecord;
+import edu.umkc.rupee.lib.AlignResults;
 import edu.umkc.rupee.lib.Aligning;
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
@@ -487,14 +489,35 @@ public class Main {
         if (searchMode == SearchMode.FAST) {
             sortBy = SortBy.SIMILARITY;
         }
-              
+        
+        //*************************************************************
+        //***  UPLOAD
+        //*************************************************************
+
+        int uploadId = -1;
+        if (searchBy == SearchBy.UPLOAD) {
+
+            if (Files.notExists(Paths.get(id))) {
+                System.out.println("File Not Found: " + id);
+                return;
+            }
+
+            Path path = Paths.get(id);
+            byte[] bytes = Files.readAllBytes(path);
+            String content = new String(bytes);
+            uploadId = Uploading.upload(content);
+
+            id = path.getFileName().toString().replace(".pdb","");
+        }
+
+
         //*************************************************************
         //***  OUTPUT
         //*************************************************************
 
         SearchType searchType = SearchType.FULL_LENGTH;
 
-        boolean verbose = true; 
+        boolean verbose = false; 
         boolean timing = false;
 
         if (dbType == DbType.SCOP) { 
@@ -504,11 +527,9 @@ public class Main {
             criteria.searchBy = searchBy;
             criteria.idDbType = idDbType;
             criteria.searchDbType = dbType;
-            if (criteria.searchBy == SearchBy.DB_ID) {
-                criteria.dbId = id;
-            }
-            else {
-                criteria.uploadId = Integer.parseInt(id);
+            criteria.dbId = id;
+            if (criteria.searchBy == SearchBy.UPLOAD) {
+                criteria.uploadId = uploadId;
             }
 
             criteria.limit = limit;
@@ -572,11 +593,9 @@ public class Main {
             criteria.searchBy = searchBy;
             criteria.idDbType = idDbType;
             criteria.searchDbType = dbType;
-            if (criteria.searchBy == SearchBy.DB_ID) {
-                criteria.dbId = id;
-            }
-            else {
-                criteria.uploadId = Integer.parseInt(id);
+            criteria.dbId = id;
+            if (criteria.searchBy == SearchBy.UPLOAD) {
+                criteria.uploadId = uploadId;
             }
 
             criteria.limit = limit;
@@ -644,11 +663,9 @@ public class Main {
             criteria.searchBy = searchBy;
             criteria.idDbType = idDbType;
             criteria.searchDbType = dbType;
-            if (criteria.searchBy == SearchBy.DB_ID) {
-                criteria.dbId = id;
-            }
-            else {
-                criteria.uploadId = Integer.parseInt(id);
+            criteria.dbId = id;
+            if (criteria.searchBy == SearchBy.UPLOAD) {
+                criteria.uploadId = uploadId;
             }
 
             criteria.limit = limit;
@@ -702,11 +719,9 @@ public class Main {
             criteria.searchBy = searchBy;
             criteria.idDbType = idDbType;
             criteria.searchDbType = dbType;
-            if (criteria.searchBy == SearchBy.DB_ID) {
-                criteria.dbId = id;
-            }
-            else {
-                criteria.uploadId = Integer.parseInt(id);
+            criteria.dbId = id;
+            if (criteria.searchBy == SearchBy.UPLOAD) {
+                criteria.uploadId = uploadId;
             }
 
             criteria.limit = limit;
@@ -768,23 +783,6 @@ public class Main {
 
     private static void option_d(CommandLine line) throws Exception {
 
-
-
-/*
-        boolean[] indices = findIndices(31, 10);
-        for (int i = 0; i < indices.length; i++) {
-            System.out.print(indices[i] + " ");
-        }
-        System.out.print("\n");
-*/
-
-        double[] nums = new double[] { 15, 16, 17, 18, 19, 20, 21, 40, 60, 80, 100, 120, 140, 160 };
-
-        for (int i = 0; i < nums.length; i++) {
-            double d0 = (1.24 * Math.pow((nums[i] * 1.0 - 1), 1.0 / 3.0) - 1.8);
-            System.out.println(nums[i] + " = " + d0);
-        }
-        //Testing.test();
         /*
         List<Labels.Label> labels = Labels.getLabels("d2pf2a2", DbTypeCriteria.SCOP);
         for (Labels.Label label : labels) {
@@ -792,6 +790,7 @@ public class Main {
         }
         */
 
+        AlignResults.alignRupeeResults("casp_d150", "casp_12_scop_v2_07", "tm_score", DbType.SCOP, 100);
         /*
         AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "tm_score", DbType.SCOP, 100);
         AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "rmsd", DbType.SCOP, 100);

@@ -21,6 +21,19 @@ public class Testing {
             test(s, s.getTmQTmScore(), results.getTmScoreQ());
         });
     }
+    
+    public static void flipTest() {
+
+        List<AlignmentScores> list = Db.getAlignmentScores("scop_v2_07");
+
+        list.stream().limit(50000).forEach(s -> {
+
+            TmResults results1 = Aligning.tmAlign(s.getDbId1(), s.getDbId2(), TmMode.REGULAR);
+            TmResults results2 = Aligning.tmAlign(s.getDbId2(), s.getDbId1(), TmMode.REGULAR);
+
+            test(s, results1.getTmScoreT(), results2.getTmScoreQ());
+        });
+    }
 
     public static void test(AlignmentScores s, double score1, double score2) {
 
