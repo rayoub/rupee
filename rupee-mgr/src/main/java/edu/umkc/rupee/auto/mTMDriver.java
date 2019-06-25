@@ -14,9 +14,9 @@ import org.openqa.selenium.WebElement;
 import edu.umkc.rupee.lib.Benchmarks;
 import edu.umkc.rupee.lib.Constants;
 
-public class mTMSearchDriver extends DriverBase {
+public class mTMDriver extends DriverBase {
 
-    private final boolean TIMING = true;
+    private final boolean TIMING = false;
     private final int SUBMIT_TIMEOUT = 60;
     private final int SEARCH_TIMEOUT = 840;
 
@@ -32,7 +32,6 @@ public class mTMSearchDriver extends DriverBase {
         // commented: search pdbc
         // uncommented: search dom
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Select database (version 2018-10-12)'])[1]/following::input[2]")).click();
-       
 
         long start = 0, stop = 0;
         if (TIMING) {
@@ -115,7 +114,7 @@ public class mTMSearchDriver extends DriverBase {
                     System.out.println((i+1) + ": Processed " + scopId);
 
                 } catch (Exception e) {
-                    Logger.getLogger(SSMSearchDriver.class.getName()).log(Level.SEVERE, scopId, e);
+                    Logger.getLogger(mTMDriver.class.getName()).log(Level.SEVERE, scopId, e);
                 }
             }
         }

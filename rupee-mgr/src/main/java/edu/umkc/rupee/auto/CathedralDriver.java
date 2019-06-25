@@ -106,7 +106,7 @@ public class CathedralDriver extends DriverBase {
                     System.out.println((i+1) + ": Processed " + scopId);
 
                 } catch (Exception e) {
-                    Logger.getLogger(SSMSearchDriver.class.getName()).log(Level.SEVERE, scopId, e);
+                    Logger.getLogger(CathedralDriver.class.getName()).log(Level.SEVERE, scopId, e);
                 }
             }
         }

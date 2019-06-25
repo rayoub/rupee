@@ -16,7 +16,7 @@ import org.openqa.selenium.support.ui.Select;
 import edu.umkc.rupee.lib.Benchmarks;
 import edu.umkc.rupee.lib.Constants;
 
-public class SSMSearchDriver extends DriverBase {
+public class SSMDriver extends DriverBase {
 
     private final boolean TIMING = true;
     private final int SUBMIT_TIMEOUT = 60;
@@ -105,7 +105,7 @@ public class SSMSearchDriver extends DriverBase {
                     }
 
                 } catch (Exception e) {
-                    Logger.getLogger(SSMSearchDriver.class.getName()).log(Level.SEVERE, scopId, e);
+                    Logger.getLogger(SSMDriver.class.getName()).log(Level.SEVERE, scopId, e);
                 }
             }
         }

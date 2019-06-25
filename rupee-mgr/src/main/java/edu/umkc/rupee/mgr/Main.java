@@ -23,6 +23,7 @@ import org.apache.commons.cli.OptionGroup;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 
+import edu.umkc.rupee.auto.mTMUploadDriver;
 import edu.umkc.rupee.base.SearchRecord;
 import edu.umkc.rupee.cath.CathHash;
 import edu.umkc.rupee.cath.CathImport;
@@ -47,7 +48,6 @@ import edu.umkc.rupee.ecod.EcodSearch;
 import edu.umkc.rupee.ecod.EcodSearchCriteria;
 import edu.umkc.rupee.ecod.EcodSearchRecord;
 import edu.umkc.rupee.lib.AlignRecord;
-import edu.umkc.rupee.lib.AlignResults;
 import edu.umkc.rupee.lib.Aligning;
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
@@ -783,6 +783,12 @@ public class Main {
 
     private static void option_d(CommandLine line) throws Exception {
 
+        mTMUploadDriver driver = new mTMUploadDriver();
+
+        driver.setUp();
+        driver.doSearchBatch();
+        driver.tearDown();
+
         /*
         List<Labels.Label> labels = Labels.getLabels("d2pf2a2", DbTypeCriteria.SCOP);
         for (Labels.Label label : labels) {
@@ -790,8 +796,9 @@ public class Main {
         }
         */
 
-        AlignResults.alignRupeeResults("casp_d150", "casp_12_scop_v2_07", "tm_score", DbType.SCOP, 100);
         /*
+        AlignResults.alignRupeeResults("casp_d150", "casp_12_scop_v2_07", "tm_score", DbType.SCOP, 100);
+
         AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "tm_score", DbType.SCOP, 100);
         AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "rmsd", DbType.SCOP, 100);
         AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "similarity", DbType.SCOP, 100);
