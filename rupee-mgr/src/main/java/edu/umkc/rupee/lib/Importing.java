@@ -112,7 +112,7 @@ public class Importing {
                 Residue residue = new Residue();
 
                 residue.setPdbId(structure.getPDBCode());
-                residue.setChainId(chain.getId());
+                residue.setChainName(chain.getId());
                 residue.setAtomNumber(g2.getAtom("CA").getPDBserial());
                 residue.setResidueNumber(g2.getResidueNumber().getSeqNum());
                 residue.setInsertCode(String.valueOf(g2.getResidueNumber().getInsCode()));

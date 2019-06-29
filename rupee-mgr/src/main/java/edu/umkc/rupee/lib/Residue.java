@@ -4,7 +4,7 @@ package edu.umkc.rupee.lib;
 public class Residue {
 
     private String pdbId;
-    private String chainId;
+    private String chainName;
     private int atomNumber;
     private int residueNumber;
     private String insertCode;
@@ -30,12 +30,12 @@ public class Residue {
         this.pdbId = pdbId;
     }
     
-    public String getChainId() {
-        return chainId;
+    public String getChainName() {
+        return chainName;
     }
 
-    public void setChainId(String chainId) {
-        this.chainId = chainId;
+    public void setChainName(String chainName) {
+        this.chainName = chainName;
     }
 
     public int getAtomNumber() {

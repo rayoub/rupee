@@ -2,7 +2,7 @@
 CREATE TABLE residue
 (
     pdb_id VARCHAR NOT NULL,
-    chain_id VARCHAR NOT NULL,
+    chain_name VARCHAR NOT NULL,
     atom_number INTEGER NOT NULL,
     residue_number INTEGER NOT NULL,
     insert_code VARCHAR NULL,
@@ -18,4 +18,4 @@ CREATE TABLE residue
     break_after INTEGER NOT NULL
 );
 
-CREATE UNIQUE INDEX idx_residue_unique ON residue (pdb_id, chain_id, atom_number);
+CREATE UNIQUE INDEX idx_residue_unique ON residue (pdb_id, chain_name, atom_number);

@@ -1,9 +1,15 @@
 
-# parse definition files
-awk -f chains.awk chain_list_v07_18_2018.txt > chains.txt
+# delete output directories if it already exist
+[ -d ./pdb ] && rm -r pdb
+[ -d ./obsolete ] && rm -r obsolete
+
+# create output directory
+mkdir ./pdb
+mkdir ./obsolete
 
 # parse pdb files
-#xargs -a chains.txt -L1 ./chopper.sh
+xargs -a pdb_v06_26_2019.txt -L1 -P8 ./chopper.sh pdb
+xargs -a obsolete_v06_26_2019.txt -L1 -P8 ./chopper.sh obsolete
 
 # move to db directory
 cd ../../db

@@ -11,20 +11,21 @@ public class Constants {
 
     //public final static String DB_USER = "ec2-user";
     //public final static String DB_PASSWORD = "ec2-user";
-
-    public final static String PDB_PATH = "/home/ayoub/git/rupee/data/pdb/pdb/";
+    
     public final static String SCOP_PATH = "/home/ayoub/git/rupee/data/scop/pdb/";
     public final static String CATH_PATH = "/home/ayoub/git/rupee/data/cath/pdb/";
     public final static String ECOD_PATH = "/home/ayoub/git/rupee/data/ecod/pdb/";
     public final static String CHAIN_PATH = "/home/ayoub/git/rupee/data/chain/pdb/";
     public final static String UPLOAD_PATH = "/home/ayoub/git/rupee/data/upload/";
 
-    //public final static String PDB_PATH = "/home/ec2-user/data/pdb/pdb/";
     //public final static String SCOP_PATH = "/home/ec2-user/data/scop/pdb/";
     //public final static String CATH_PATH = "/home/ec2-user/data/cath/pdb/";
     //public final static String ECOD_PATH = "/home/ec2-user/data/ecod/pdb/";
     //public final static String CHAIN_PATH = "/home/ec2-user/data/chain/pdb/";
     //public final static String UPLOAD_PATH = "/home/ec2-user/data/upload/";
+
+    public final static String PDB_PATH = "/home/ayoub/git/rupee/data/pdb/pdb/";
+    public final static String OBSOLETE_PATH = "/home/ayoub/git/rupee/data/pdb/obsolete/";
     
     public final static String DOWNLOAD_PATH = "/home/ayoub/Downloads/";
     public final static String SSM_PATH = "/home/ayoub/git/rupee/results/ssm/temp/";

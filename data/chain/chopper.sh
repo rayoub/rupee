@@ -4,34 +4,28 @@
 
 # chops downloaded pdbs and copies to pdb directory
 
-# delete output directory if it already exist
-[ -d ./pdb ] && rm -r pdb
-
-# create output directory
-mkdir ./pdb
-
-pdb_id=$1
+dir=$1
 chain_id=$2
+pdb_id=$3
+chain_name=$4
+residue_count=$5
 
 # exit if file doesn't exist
-if [ -e "../pdb/pdb/pdb${pdb_id}.ent.gz" ]; then
-    dir="pdb"
-elif [ -e "../pdb/obsolete/pdb${pdb_id}.ent.gz" ]; then 
-    dir="obsolete"
-else
+if [ ! -e "../pdb/${dir}/pdb${pdb_id}.ent.gz" ]; then
     echo "Pdb file for ${chain_id} doesn't exist."
     exit 1
 fi
 
-echo "Processing ${pdb_id}${chain_id}"
+echo "Processing ${chain_id}"
 
 # 1. get ATOM and HETATM records only
 # 2. stop processing at the end of the first model 
 gunzip -c "../pdb/${dir}/pdb${pdb_id}.ent.gz" | sed -rn -e '/^(ATOM|HETATM)/p' -e '/^ENDMDL/q' |
 
-# 1. range pattern for the current range
-# 2. get the end as a distinct rule since 1. is not greedy
-# 3. CA should follow N within a residue
-awk -v chain=${chain_id} -f chopper.awk | gzip -c > ./pdb/${pdb_id}${chain_id}.pdb.gz
+# get records corresponding to the chain
+awk -v chain=${chain_name} -f chopper.awk | 
+
+# remove trailing HETATM records and save
+tac | awk -f trailing.awk | tac | gzip -c > ./${dir}/${chain_id}.pdb.gz
 
 

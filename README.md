@@ -104,9 +104,8 @@ The following directories, along with brief descriptions, are excluded from the 
 
 Excluded Directory | Description
 ------------------ | -----------
-data/pdb/pdb/      | From /pub/pdb/data/structures/all at ftp.wwpdb.org
-data/pdb/obsolete/ | From /pub/pdb/data/structures/obsolete at ftp.wwpdb.org
-data/pdb/index/    | From /pub/pdb/data/derived\_data/index at ftp.wwpdb.org
+data/pdb/pdb/      | From /pub/pdb/data/structures/all/pdb at ftp.wwpdb.org
+data/pdb/obsolete/ | From /pub/pdb/data/structures/obsolete/pdb at ftp.wwpdb.org
 data/scop/pdb/     | parsed pdb files based on scop definitions
 data/cath/pdb/     | parsed pdb files based on cath definitions
 data/ecod/pdb/     | parsed pdb files based on ecod definitions

@@ -1,4 +1,6 @@
-$0 !~ /#/ {
+
+# exclude comments, genetic domains and artifacts
+$0 !~ /^#/ && $1 !~ /d[0-9a-z]{4}(\.|_)/ && $4 !~ /l\.1\.1\.1/ {
    
     # get field values 
     scop_id = $1

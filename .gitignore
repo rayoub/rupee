@@ -1,13 +1,14 @@
 
 # data directories
+data/pdb/
 data/pdb/pdb/
 data/pdb/obsolete/
-data/pdb/index/
 data/scop/pdb/
 data/cath/pdb/
 data/cath/pdb_diverse/
 data/ecod/pdb/
 data/chain/pdb/
+data/chain/obsolete/
 data/upload/
 data/casp/target_preds/
 

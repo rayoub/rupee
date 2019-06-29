@@ -2,7 +2,8 @@
 BEGIN {
     seglen = 6
 }
-$0 !~ /^#/ { 
+# exclude comments, genetic domains and artifacts
+$0 !~ /^#/ && $1 !~ /d[0-9a-z]{4}(\.|_)/ && $4 !~ /l\.1\.1\.1/ {
 
     # get id field
     scop_id = $1
@@ -14,7 +15,7 @@ $0 !~ /^#/ {
        
         # chain and range
         split(segs[i],chain_range,":")
-        chain = chain_range[1]
+        chain = toupper(chain_range[1])
         range = chain_range[2]
 
         if (range == "") {
