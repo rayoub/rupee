@@ -5,12 +5,6 @@
 
 # chops downloaded pdbs and copies to pdb directory
 
-# delete output directory if it already exist
-[ -d ./pdb ] && rm -r pdb
-
-# create output directory
-mkdir ./pdb
-
 cath_id=$1
 seg_num=$2
 pdb_id=$3
@@ -21,9 +15,9 @@ eres=$7
 eins=$8
 
 # exit if file doesn't exist
-if [ -e "../pdb/pdb/pdb${pdb_id}.ent.gz" ]; then
+if [ -e "../chain/pdb/${pdb_id}${chain}.pdb.gz" ]; then
     dir="pdb"
-elif [ -e "../pdb/obsolete/pdb${pdb_id}.ent.gz" ]; then 
+elif [ -e "../chain/obsolete/${pdb_id}${chain}.pdb.gz" ]; then 
     dir="obsolete"
 else
     echo "Pdb file for ${cath_id} doesn't exist."
@@ -37,11 +31,10 @@ end=$eres${eins#NA}
 
 # 1. get ATOM and HETATM records only
 # 2. stop processing at the end of the first model 
-gunzip -c "../pdb/${dir}/pdb${pdb_id}.ent.gz" | sed -rn -e '/^(ATOM|HETATM)/p' -e '/^ENDMDL/q' |
+gunzip -c "../chain/${dir}/${pdb_id}${chain}.pdb.gz" | sed -rn -e '/^(ATOM|HETATM)/p' -e '/^ENDMDL/q' |
 
 # 1. range pattern for the current range
 # 2. get the end as a distinct rule since 1. is not greedy
-# 3. CA should follow N within a residue
-awk -v chain=$chain -v start=$start -v end=$end -f chopper.awk | gzip -c >> ./pdb/${cath_id}.pdb.gz
+awk -v start=$start -v end=$end -f chopper.awk | gzip -c >> ./pdb/${cath_id}.pdb.gz
 
 

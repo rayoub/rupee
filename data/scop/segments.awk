@@ -15,7 +15,7 @@ $0 !~ /^#/ && $1 !~ /d[0-9a-z]{4}(\.|_)/ && $4 !~ /l\.1\.1\.1/ {
        
         # chain and range
         split(segs[i],chain_range,":")
-        chain = toupper(chain_range[1])
+        chain = chain_range[1]
         range = chain_range[2]
 
         if (range == "") {

@@ -24,7 +24,7 @@ public class ChainDefs {
 
         public ChainDef(Chain chain) {
         
-            this.chainName = chain.getName().toUpperCase().trim();
+            this.chainName = chain.getName().trim();
             this.residueCount = (int)chain.getAtomGroups().stream().filter(group -> !group.isHetAtomInFile() && group.isAminoAcid() && group.hasAtom("CA")).count();
         }
 
