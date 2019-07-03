@@ -2,8 +2,8 @@
 BEGIN {
     seglen = 6
 }
-# exclude comments, genetic domains and artifacts
-$0 !~ /^#/ && $1 !~ /d[0-9a-z]{4}(\.|_)/ && $4 !~ /l\.1\.1\.1/ {
+# exclude comments and artifacts
+$0 !~ /^#/ && $1 !~ /d[0-9a-z]{4}_/ && $4 !~ /l\.1\.1\.1/ {
 
     # get id field
     scop_id = $1

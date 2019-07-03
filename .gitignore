@@ -26,10 +26,8 @@ data/cath/cath-names-v4_2_0.txt
 data/cath/domains.txt
 data/cath/names.txt
 data/cath/segments.txt
-data/ecod/ecod.develop210.domains.txt
 data/ecod/ecod.develop240.domains.txt
 data/ecod/domains.txt
-data/ecod/names.txt
 data/ecod/segments.txt
 
 # temp directories
