@@ -22,14 +22,14 @@ public class CathedralDriver extends DriverBase {
     private final String SCAN_XPATH = "//*[@id=\"content\"]/div[1]/div/div/table/tbody/tr/td[5]/div/a[contains(text(),'Submit Structure')]";
     //private final String VIEW_XPATH = "//*[@id=\"content\"]/div[1]/div/table/tbody/tr[last()]/td[5]/a[text()='View']";
 
-    public String doSearch(String scopId) throws Exception {
+    public String doSearch(String dbId) throws Exception {
 
         driver.manage().deleteAllCookies();
        
         driver.get("http://cathdb.info/search/by_structure");
 
         // initial form fill
-        driver.findElement(By.id("search-pdb-file")).sendKeys("/home/ayoub/git/rupee/data/cath/pdb_diverse/" + scopId + ".pdb");
+        driver.findElement(By.id("search-pdb-file")).sendKeys("/home/ayoub/git/rupee/data/casp/eu_preds/" + dbId + ".pdb");
 
         // submit search
         driver.findElement(By.xpath(SUBMIT_XPATH)).click();
@@ -58,7 +58,7 @@ public class CathedralDriver extends DriverBase {
         for (int second = 0;; second++) {
             
             if (second >= SUBMIT_TIMEOUT) {
-                fail("submit timed out for " + scopId);
+                fail("submit timed out for " + dbId);
             }
 
             try {
@@ -69,7 +69,7 @@ public class CathedralDriver extends DriverBase {
         }
 
         stop = System.currentTimeMillis();
-        System.out.println(scopId + "," + (stop - start));
+        System.out.println(dbId + "," + (stop - start));
 
         // click
         driver.findElement(By.linkText("View")).click();
@@ -84,17 +84,17 @@ public class CathedralDriver extends DriverBase {
 
     public void doSearchBatch() {
 
-        List<String> dbIds = Benchmarks.get("cath_d100");
+        List<String> dbIds = Benchmarks.get("casp_d150");
 
         for (int i = 0; i < dbIds.size(); i++) {
             
-            String scopId = dbIds.get(i);
-            String fileName = Constants.CATHEDRAL_PATH + scopId + ".txt";
+            String dbId = dbIds.get(i);
+            String fileName = Constants.CATHEDRAL_PATH + dbId + ".txt";
 
             if (Files.notExists(Paths.get(fileName))) {
                 try {
                     
-                    String source = doSearch(scopId);
+                    String source = doSearch(dbId);
 
                     FileOutputStream outputStream = new FileOutputStream(fileName);
                     OutputStreamWriter outputWriter = new OutputStreamWriter(outputStream);
@@ -103,10 +103,10 @@ public class CathedralDriver extends DriverBase {
                            bufferedWriter.write(source);
                     }
 
-                    System.out.println((i+1) + ": Processed " + scopId);
+                    System.out.println((i+1) + ": Processed " + dbId);
 
                 } catch (Exception e) {
-                    Logger.getLogger(CathedralDriver.class.getName()).log(Level.SEVERE, scopId, e);
+                    Logger.getLogger(CathedralDriver.class.getName()).log(Level.SEVERE, dbId, e);
                 }
             }
         }
