@@ -1,0 +1,1608 @@
+Time = 145894
+Domain Length
+(AA residues)
+Superfamily RMSD
+(Å)
+SSAP Score
+(0-100)
+Hits Actions
+2ztbA03
+48
+2.60.40.3040
+12.4 62.3
+0
+50
+103
+Show related domains
+1hp8A00
+68
+1.10.287.1130
+12.8 62.1
+0
+50
+103
+Show related domains
+4fw1A02
+54
+2.30.30.10
+12.6 61.6
+0
+50
+103
+Show related domains
+1iurA01
+63
+1.10.287.110
+15.5 61.3
+0
+50
+103
+Show related domains
+2vqeB02
+56
+1.10.287.610
+3.7 61.3
+0
+50
+103
+Show related domains
+1lr1A00
+57
+1.10.287.1050
+12.3 61.1
+0
+50
+103
+Show related domains
+1lvkA01
+48
+2.30.30.360
+13.2 61.1
+0
+50
+103
+Show related domains
+4e7sA01
+49
+2.30.30.360
+12.6 60.7
+0
+50
+103
+Show related domains
+2dfuA01
+44
+2.30.30.370
+12.6 60.1
+0
+50
+103
+Show related domains
+2l35A00
+62
+1.10.287.770
+8.5 59.3
+0
+50
+103
+Show related domains
+3gf5A01
+54
+2.30.30.570
+13.9 58.8
+0
+50
+103
+Show related domains
+4oifA03
+61
+2.60.40.1180
+10.5 58.6
+0
+50
+103
+Show related domains
+3udcA02
+50
+2.30.30.60
+13.4 57.7
+0
+50
+103
+Show related domains
+1b7tA02
+52
+2.30.30.360
+13.8 57.7
+0
+50
+103
+Show related domains
+3vkiA02
+60
+2.30.30.760
+11.3 56.9
+0
+50
+103
+Show related domains
+1pc0A00
+61
+2.30.30.210
+10.1 56.5
+0
+50
+103
+Show related domains
+1igqB00
+57
+2.30.30.150
+14.3 56.4
+0
+50
+103
+Show related domains
+2l5qA01
+50
+2.30.30.730
+13.4 56.2
+0
+50
+103
+Show related domains
+1vmgA00
+80
+1.10.287.1080
+7.9 55.9
+0
+50
+103
+Show related domains
+3urgA02
+63
+2.30.30.530
+10.7 55.8
+0
+50
+103
+Show related domains
+3ry0A00
+65
+3.30.429.10
+14.3 55.8
+0
+50
+103
+Show related domains
+3ucsC00
+73
+1.10.287.110
+9.9 55.5
+0
+50
+103
+Show related domains
+1pm3A00
+69
+2.30.30.240
+12.2 55.4
+0
+50
+103
+Show related domains
+4k35A03
+68
+1.10.287.1170
+13.3 55.4
+0
+50
+103
+Show related domains
+3bt3A02
+57
+3.30.720.110
+10.4 55.4
+0
+50
+103
+Show related domains
+4m4pA02
+59
+2.60.40.1770
+12.7 55.3
+0
+50
+103
+Show related domains
+1ztmA03
+53
+2.60.40.1690
+11.6 55.2
+0
+50
+103
+Show related domains
+3sk1A02
+58
+3.30.720.110
+14.4 55.2
+0
+50
+103
+Show related domains
+4h4nA00
+62
+2.60.40.3750
+13.3 55.0
+0
+50
+103
+Show related domains
+3n5bB01
+50
+2.30.30.660
+13.2 54.9
+0
+50
+103
+Show related domains
+2gboA00
+79
+1.10.287.750
+14.9 54.7
+0
+50
+103
+Show related domains
+2p4vA01
+76
+1.10.287.180
+10.1 54.4
+0
+50
+103
+Show related domains
+1grjA01
+74
+1.10.287.180
+9.4 54.3
+0
+50
+103
+Show related domains
+1r73A00
+66
+1.10.287.310
+15.9 54.3
+0
+50
+103
+Show related domains
+4fcaA04
+76
+2.60.40.3600
+13.4 54.1
+0
+50
+103
+Show related domains
+3r1xB01
+84
+3.30.420.300
+16.3 54.1
+0
+50
+103
+Show related domains
+4kbmB01
+55
+2.30.30.840
+12.7 54.0
+0
+50
+103
+Show related domains
+4jcwA02
+90
+2.60.40.760
+14.4 54.0
+0
+50
+103
+Show related domains
+4ncdA02
+88
+2.60.40.3970
+15.8 53.5
+0
+50
+103
+Show related domains
+3q4hD00
+74
+1.10.287.1060
+8.1 53.5
+0
+50
+103
+Show related domains
+3txsC01
+74
+1.10.287.1060
+9.2 53.4
+0
+50
+103
+Show related domains
+2w9jB00
+80
+3.30.720.10
+16.3 53.3
+0
+50
+103
+Show related domains
+1ss6A01
+65
+3.30.420.210
+15.4 53.2
+0
+50
+103
+Show related domains
+2hbpA00
+66
+2.30.30.700
+10.8 53.2
+0
+50
+103
+Show related domains
+3itwB01
+65
+3.30.720.120
+11.4 53.2
+0
+50
+103
+Show related domains
+2wtpA00
+93
+2.60.40.2280
+15.4 53.0
+0
+50
+103
+Show related domains
+3sk1C01
+54
+3.30.720.120
+15.5 52.9
+0
+50
+103
+Show related domains
+1ix9A01
+69
+1.10.287.990
+6.1 52.9
+0
+50
+103
+Show related domains
+2kjzA01
+54
+3.30.720.120
+15.6 52.9
+0
+50
+103
+Show related domains
+2wn3A02
+99
+2.60.40.2080
+21.9 52.7
+0
+50
+103
+Show related domains
+5ajiB02
+50
+2.30.30.60
+11.5 52.6
+0
+50
+103
+Show related domains
+1ycyA00
+60
+2.30.30.100
+11.6 52.6
+0
+50
+103
+Show related domains
+3c12A02
+87
+2.60.40.4070
+13.0 52.5
+0
+50
+103
+Show related domains
+4nn5B01
+93
+2.60.40.1870
+16.5 52.4
+0
+50
+103
+Show related domains
+1xakA00
+68
+2.60.40.1550
+7.0 52.3
+0
+50
+103
+Show related domains
+4dk0A04
+91
+1.10.287.470
+9.3 52.3
+0
+50
+103
+Show related domains
+2kafA00
+67
+2.30.30.590
+14.1 52.3
+0
+50
+103
+Show related domains
+4i9qA04
+55
+1.10.287.690
+6.3 52.0
+0
+50
+103
+Show related domains
+3rfzB03
+66
+2.60.40.3110
+15.8 51.9
+0
+50
+103
+Show related domains
+3hbzA01
+93
+2.60.40.2340
+18.0 51.9
+0
+50
+103
+Show related domains
+2l04A00
+91
+2.60.40.1080
+13.9 51.9
+0
+50
+103
+Show related domains
+4gx0A01
+103
+1.10.287.70
+14.3 51.7
+0
+50
+103
+Show related domains
+2p5oA04
+55
+1.10.287.690
+5.7 51.6
+0
+50
+103
+Show related domains
+2pfuA01
+70
+3.30.420.270
+15.1 51.6
+0
+50
+103
+Show related domains
+1qmoE01
+84
+3.30.720.30
+11.9 51.5
+0
+50
+103
+Show related domains
+3v3lB00
+82
+3.30.720.50
+13.6 51.5
+0
+50
+103
+Show related domains
+2ymoA01
+99
+2.60.40.2860
+16.2 51.5
+0
+50
+103
+Show related domains
+3d30A02
+89
+2.60.40.760
+13.1 51.5
+0
+50
+103
+Show related domains
+5dm6L01
+94
+3.30.420.100
+14.9 51.4
+0
+50
+103
+Show related domains
+1u7iA01
+64
+3.30.720.100
+13.7 51.4
+0
+50
+103
+Show related domains
+3bpzA01
+65
+1.10.287.630
+9.1 51.4
+0
+50
+103
+Show related domains
+3eeqB03
+107
+3.30.420.180
+15.7 51.4
+0
+50
+103
+Show related domains
+3g9vA02
+77
+2.60.40.10
+16.1 51.2
+0
+50
+103
+Show related domains
+3mlqH00
+42
+2.30.30.840
+14.4 51.1
+0
+50
+103
+Show related domains
+4hu2A01
+90
+2.60.40.3780
+14.1 51.1
+0
+50
+103
+Show related domains
+2kjzA02
+57
+3.30.720.110
+17.0 51.0
+0
+50
+103
+Show related domains
+3vtiA06
+105
+3.30.420.560
+13.9 50.7
+0
+50
+103
+Show related domains
+2d6fA01
+74
+2.30.30.520
+14.5 50.7
+0
+50
+103
+Show related domains
+3dkmA00
+79
+2.30.30.920
+13.1 50.7
+0
+50
+103
+Show related domains
+2nrhB01
+55
+3.30.420.40
+14.5 50.6
+0
+50
+103
+Show related domains
+3rfzB04
+91
+2.60.40.2610
+13.6 50.6
+0
+50
+103
+Show related domains
+2dk6A01
+94
+3.30.720.50
+16.5 50.4
+0
+50
+103
+Show related domains
+4es8B02
+97
+2.60.40.3580
+12.9 50.4
+0
+50
+103
+Show related domains
+1zl8B00
+54
+1.10.287.650
+12.0 50.4
+0
+50
+103
+Show related domains
+4ecnA01
+101
+2.60.40.3540
+10.6 50.4
+0
+50
+103
+Show related domains
+1cpyA02
+72
+1.10.287.410
+16.8 50.3
+0
+50
+103
+Show related domains
+4aq1A05
+110
+2.60.40.3460
+12.1 50.2
+0
+50
+103
+Show related domains
+5eo9B02
+95
+2.60.40.10
+13.8 50.1
+0
+50
+103
+Show related domains
+3tu3B01
+76
+3.30.720.80
+14.8 50.0
+0
+50
+103
+Show related domains
+1gjwA02
+68
+2.60.40.1180
+14.4 49.9
+0
+50
+103
+Show related domains
+2bh1A02
+75
+3.30.420.370
+14.4 49.9
+0
+50
+103
+Show related domains
+5aoxE00
+84
+3.30.720.10
+16.3 49.9
+0
+50
+103
+Show related domains
+4ojdH03
+104
+2.60.40.3980
+16.2 49.8
+0
+50
+103
+Show related domains
+1vziA02
+87
+2.60.40.730
+12.4 49.6
+0
+50
+103
+Show related domains
+2ro0A00
+92
+2.30.30.140
+12.5 49.6
+0
+50
+103
+Show related domains
+2odmA00
+76
+1.10.287.750
+17.1 49.5
+0
+50
+103
+Show related domains
+4wiwA02
+69
+3.10.50.10
+13.6 49.5
+0
+50
+103
+Show related domains
+4lbaA01
+95
+2.60.40.2410
+18.1 49.4
+0
+50
+103
+Show related domains
+2wyhA07
+77
+2.60.40.2220
+14.3 49.3
+0
+50
+103
+Show related domains
+3eh1A02
+64
+2.30.30.380
+11.4 49.3
+0
+50
+103
+Show related domains
+1r77B00
+103
+2.30.30.410
+14.8 49.1
+0
+50
+103
+Show related domains
+3e38A02
+78
+2.60.40.3090
+14.1 49.1
+0
+50
+103
+Show related domains
+1ydxA02
+89
+1.10.287.1120
+16.0 49.1
+0
+50
+103
+Show related domains
+3wajA04
+88
+2.60.40.3390
+11.9 48.9
+0
+50
+103
+Show related domains
+2p9iB01
+64
+3.30.420.520
+13.1 48.9
+0
+50
+103
+Show related domains
+1ib8A02
+67
+2.30.30.180
+14.9 48.9
+0
+50
+103
+Show related domains
+1xovA03
+72
+2.30.30.500
+11.8 48.8
+0
+50
+103
+Show related domains
+1s5jA04
+61
+1.10.287.690
+10.9 48.8
+0
+50
+103
+Show related domains
+1ok0A00
+74
+2.60.40.20
+14.6 48.8
+0
+50
+103
+Show related domains
+4gioA00
+96
+2.60.40.3230
+14.2 48.8
+0
+50
+103
+Show related domains
+1ohhG00
+94
+1.10.287.80
+10.5 48.8
+0
+50
+103
+Show related domains
+1r8oB01
+66
+2.30.30.480
+10.8 48.6
+0
+50
+103
+Show related domains
+3gf5B07
+54
+2.30.30.550
+14.3 48.6
+0
+50
+103
+Show related domains
+1o75A04
+82
+2.60.40.1270
+11.4 48.6
+0
+50
+103
+Show related domains
+2xskA00
+94
+2.60.40.2420
+14.0 48.6
+0
+50
+103
+Show related domains
+2o57A01
+103
+1.10.287.840
+18.3 48.5
+0
+50
+103
+Show related domains
+4dixA01
+86
+2.60.40.2700
+13.4 48.5
+0
+50
+103
+Show related domains
+2kkwA01
+105
+1.10.287.700
+18.6 48.5
+0
+50
+103
+Show related domains
+2yjlA00
+108
+2.60.40.2990
+15.6 48.5
+0
+50
+103
+Show related domains
+3mcaB01
+96
+2.30.30.870
+14.9 48.4
+0
+50
+103
+Show related domains
+4gczB02
+89
+1.10.287.130
+20.1 48.3
+0
+50
+103
+Show related domains
+2ffgA00
+77
+3.30.720.20
+14.5 48.2
+0
+50
+103
+Show related domains
+2wgnB01
+97
+2.60.40.2020
+14.4 48.2
+0
+50
+103
+Show related domains
+3htrB00
+88
+2.30.30.240
+12.8 48.2
+0
+50
+103
+Show related domains
+3rr6A01
+49
+2.30.30.370
+10.2 48.1
+0
+50
+103
+Show related domains
+2nnuA01
+102
+1.10.287.30
+14.3 48.1
+0
+50
+103
+Show related domains
+1grjA02
+77
+3.10.50.30
+16.8 48.0
+0
+50
+103
+Show related domains
+2ze7A02
+102
+1.10.287.890
+17.4 48.0
+0
+50
+103
+Show related domains
+1vbvA00
+77
+2.30.30.390
+16.0 47.9
+0
+50
+103
+Show related domains
+2covG00
+88
+2.60.40.2450
+10.1 47.8
+0
+50
+103
+Show related domains
+1akpA00
+114
+2.60.40.230
+18.1 47.8
+0
+50
+103
+Show related domains
+2f23A02
+74
+3.10.50.30
+13.3 47.8
+0
+50
+103
+Show related domains
+3oyyA01
+66
+2.30.30.30
+13.2 47.7
+0
+50
+103
+Show related domains
+2xg8F00
+78
+2.30.30.660
+15.3 47.6
+0
+50
+103
+Show related domains
+2rh2A00
+57
+2.30.30.60
+15.3 47.6
+0
+50
+103
+Show related domains
+1xhhA00
+91
+2.60.40.1900
+16.1 47.6
+0
+50
+103
+Show related domains
+1cwvA04
+91
+2.60.40.1080
+14.5 47.6
+0
+50
+103
+Show related domains
+3bvxA05
+96
+2.60.40.1360
+16.4 47.4
+0
+50
+103
+Show related domains
+1zq1A01
+76
+2.30.30.520
+17.1 47.4
+0
+50
+103
+Show related domains
+2p9rA00
+102
+2.60.40.1930
+12.7 47.2
+0
+50
+103
+Show related domains
+3nr7A00
+81
+1.10.287.1050
+20.6 47.2
+0
+50
+103
+Show related domains
+1c6vX00
+55
+2.30.30.10
+13.5 47.1
+0
+50
+103
+Show related domains
+5kbpA05
+77
+2.60.40.2220
+13.8 47.1
+0
+50
+103
+Show related domains
+1fftB01
+87
+1.10.287.90
+19.1 47.1
+0
+50
+103
+Show related domains
+1q6hA01
+105
+1.10.287.460
+17.9 47.1
+0
+50
+103
+Show related domains
+4bi3A01
+91
+2.30.30.1010
+16.6 47.0
+0
+50
+103
+Show related domains
+2mmpA00
+77
+2.30.30.860
+14.2 47.0
+0
+50
+103
+Show related domains
+3t69A01
+75
+3.30.420.300
+13.0 46.8
+0
+50
+103
+Show related domains
+3tvtA01
+71
+2.30.30.40
+16.2 46.8
+0
+50
+103
+Show related domains
+4hj1C03
+93
+2.60.40.3770
+13.8 46.8
+0
+50
+103
+Show related domains
+3hrgA02
+102
+3.30.420.260
+16.1 46.7
+0
+50
+103
+Show related domains
+5tkwA02
+65
+3.30.420.370
+14.6 46.7
+0
+50
+103
+Show related domains
+2blfA02
+114
+2.60.40.650
+17.3 46.6
+0
+50
+103
+Show related domains
+1wzoA01
+40
+2.30.30.370
+14.9 46.5
+0
+50
+103
+Show related domains
+2xetB00
+88
+2.60.40.2070
+14.3 46.5
+0
+50
+103
+Show related domains
+2k5fA01
+83
+2.30.30.90
+16.2 46.5
+0
+50
+103
+Show related domains
+3ossC00
+65
+2.30.30.830
+17.1 46.4
+0
+50
+103
+Show related domains
+4fe9A02
+114
+2.60.40.3620
+14.4 46.3
+0
+50
+103
+Show related domains
+4zi8A01
+96
+2.60.40.60
+16.2 46.2
+0
+50
+103
+Show related domains
+3p32A03
+67
+1.10.287.130
+12.8 46.2
+0
+50
+103
+Show related domains
+2a6aA02
+68
+3.30.420.200
+15.6 46.2
+0
+50
+103
+Show related domains
+1eaqB00
+122
+2.60.40.720
+13.4 46.2
+0
+50
+103
+Show related domains
+1whlA00
+95
+2.30.30.190
+16.3 46.2
+0
+50
+103
+Show related domains
+2nykA02
+87
+2.60.40.2530
+16.6 46.2
+0
+50
+103
+Show related domains
+2hsiA01
+81
+2.60.40.1590
+11.8 46.1
+0
+50
+103
+Show related domains
+1ts9A00
+93
+2.30.30.210
+15.6 46.1
+0
+50
+103
+Show related domains
+2az0B00
+71
+1.10.287.1060
+13.5 46.1
+0
+50
+103
+Show related domains
+2a9dA02
+123
+2.60.40.650
+17.2 46.0
+0
+50
+103
+Show related domains
+2qtdA00
+95
+3.30.420.130
+13.1 46.0
+0
+50
+103
+Show related domains
+4j8qA02
+115
+2.60.40.2370
+18.7 46.0
+0
+50
+103
+Show related domains
+2fhdA02
+71
+2.30.30.810
+12.4 45.8
+0
+50
+103
+Show related domains
+3d33B00
+88
+2.60.40.3080
+14.7 45.8
+0
+50
+103
+Show related domains
+4gipD03
+57
+2.60.40.1690
+15.2 45.8
+0
+50
+103
+Show related domains
+5gaeP00
+117
+3.30.420.100
+16.5 45.6
+0
+50
+103
+Show related domains
+4it6B00
+112
+3.10.50.60
+16.1 45.5
+0
+50
+103
+Show related domains
+2yeqA01
+109
+2.60.40.380
+14.3 45.4
+0
+50
+103
+Show related domains
+1vx7V01
+96
+2.30.30.70
+13.7 45.4
+0
+50
+103
+Show related domains
+2cnzA00
+123
+2.60.40.1950
+17.9 45.4
+0
+50
+103
+Show related domains
+4gc1A02
+99
+2.90.10.10
+13.7 45.3
+0
+50
+103
+Show related domains
+4j39A01
+111
+2.60.40.1810
+11.6 45.3
+0
+50
+103
+Show related domains
+4k73A01
+93
+2.60.40.3710
+13.7 45.2
+0
+50
+103
+Show related domains
+1l8dA00
+103
+1.10.287.510
+18.5 45.2
+0
+50
+103
+Show related domains
+3id6A01
+106
+3.30.420.220
+13.6 45.1
+0
+50
+103
+Show related domains
+3qc5X03
+79
+2.60.40.3270
+9.4 45.1
+0
+50
+103
+Show related domains
+1ix2A00
+97
+2.60.40.1220
+16.5 45.1
+0
+50
+103
+Show related domains
+3i33A03
+89
+3.30.420.40
+14.1 45.0
+0
+50
+103
+Show related domains
+1hyoA01
+113
+2.30.30.230
+15.6 45.0
+0
+50
+103
+Show related domains
+3n40P04
+73
+2.60.40.2400
+13.6 44.9
+0
+50
+103
+Show related domains
+1iv0A00
+98
+3.30.420.140
+16.3 44.9
+0
+50
+103
+Show related domains
+4aq1A03
+115
+2.60.40.3440
+14.8 44.9
+0
+50
+103
+Show related domains
+1dceA02
+103
+2.60.40.1130
+14.3 44.9
+0
+50
+103
+Show related domains
+3a8tA02
+111
+1.10.287.890
+13.8 44.9
+0
+50
+103
+Show related domains
+4aq1A01
+94
+2.60.40.1220
+18.1 44.8
+0
+50
+103
+Show related domains
+1sesA01
+102
+1.10.287.40
+22.1 44.8
+0
+50
+103
+Show related domains
+1o13A00
+105
+3.30.420.130
+16.1 44.7
+0
+50
+103
+Show related domains
+2fhfA02
+114
+2.60.40.1130
+15.1 44.7
+0
+50
+103
+Show related domains
+3hlkA01
+133
+2.60.40.2240
+12.9 44.6
+0
+50
+103
+Show related domains
+5cbgA00
+102
+1.10.287.70
+10.3 44.6
+0
+50
+103
+Show related domains
+1vx7d00
+72
+3.30.720.90
+12.7 44.6
+0
+50
+103
+Show related domains
+1whmA01
+72
+2.30.30.190
+14.0 44.4
+0
+50
+103
+Show related domains
