@@ -581,7 +581,7 @@ public class Main {
                         record.getDbId(),
                         record.getRmsd(),
                         record.getTmScore(),
-                        criteria.sortBy.name().toLowerCase()
+                        criteria.searchMode.name().toLowerCase()
                     );
                 }
             }
@@ -651,7 +651,7 @@ public class Main {
                         record.getDbId(),
                         record.getRmsd(),
                         record.getTmScore(),
-                        criteria.sortBy.name().toLowerCase()
+                        criteria.searchMode.name().toLowerCase()
                     );
                 }
             }
@@ -707,7 +707,7 @@ public class Main {
                         record.getDbId(),
                         record.getRmsd(),
                         record.getTmScore(),
-                        criteria.sortBy.name().toLowerCase()
+                        criteria.searchMode.name().toLowerCase()
                     );
                 }
             }
@@ -756,7 +756,7 @@ public class Main {
                         record.getDbId(),
                         record.getRmsd(),
                         record.getTmScore(),
-                        criteria.sortBy.name().toLowerCase()
+                        criteria.searchMode.name().toLowerCase()
                     );
                 }
             }
