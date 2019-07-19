@@ -1,13 +1,10 @@
 
 
-TRUNCATE TABLE mtm_dom_result;
-TRUNCATE TABLE mtm_dom_result_matched;
-TRUNCATE TABLE mtm_dom_result_unmatched;
+TRUNCATE TABLE mtm_result;
+TRUNCATE TABLE mtm_result_matched;
+TRUNCATE TABLE mtm_result_unmatched;
 
-COPY mtm_dom_result (version, n, db_id_1, db_id_2, mtm_rmsd, mtm_tm_score) FROM '/home/ayoub/git/rupee/results/mtm/mtm_dom_results.txt' WITH (DELIMITER ',');
-
--- normalize
-UPDATE mtm_dom_result SET db_id_2 = LOWER(db_id_2);
+COPY mtm_result (version, n, db_id_1, db_id_2, mtm_rmsd, mtm_tm_score) FROM '/home/ayoub/git/rupee/results/mtm/mtm_results.txt' WITH (DELIMITER ',');
 
 -- matched
 WITH structures AS
@@ -27,11 +24,11 @@ filtered AS
         r.mtm_rmsd,
         r.mtm_tm_score
     FROM 
-        mtm_dom_result r
+        mtm_result r
         INNER JOIN structures s
             ON s.scop_id = r.db_id_2
 )
-INSERT INTO mtm_dom_result_matched
+INSERT INTO mtm_result_matched
 SELECT
     version,
     ROW_NUMBER() OVER (PARTITION BY version, db_id_1 ORDER BY n) AS n,
@@ -50,11 +47,11 @@ WITH structures AS
     FROM
         scop_grams
 )
-INSERT INTO mtm_dom_result_unmatched
+INSERT INTO mtm_result_unmatched
 SELECT
     r.*
 FROM 
-    mtm_dom_result r
+    mtm_result r
     LEFT JOIN structures s
         ON s.scop_id = r.db_id_2
 WHERE

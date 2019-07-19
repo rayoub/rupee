@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE FUNCTION get_rupee_results (p_benchmark VARCHAR, p_version VARCHAR, p_sort_by VARCHAR, p_limit INTEGER)
+CREATE OR REPLACE FUNCTION get_rupee_results (p_benchmark VARCHAR, p_version VARCHAR, p_search_mode VARCHAR, p_limit INTEGER)
 RETURNS TABLE (
     n INTEGER, 
     db_id_1 VARCHAR,
@@ -47,7 +47,7 @@ BEGIN
                 AND s.version = p_version
         WHERE
             r.version = p_version 
-            AND r.sort_by = p_sort_by
+            AND r.search_mode = p_search_mode
     ),
     valid_results As
     (

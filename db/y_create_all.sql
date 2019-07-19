@@ -17,9 +17,9 @@
 \i ecod_hashes.sql
 \i fs_sims.sql
 \i log.sql
-\i mtm_dom_result_matched.sql
-\i mtm_dom_result.sql
-\i mtm_dom_result_unmatched.sql
+\i mtm_result_matched.sql
+\i mtm_result.sql
+\i mtm_result_unmatched.sql
 \i residue.sql
 \i response_time.sql
 \i rupee_result.sql
@@ -57,7 +57,7 @@
 \i get_ecod_split.sql
 \i get_fs_domains.sql
 \i get_fs_sims.sql
-\i get_mtm_dom_results.sql
+\i get_mtm_results.sql
 \i get_probabilities.sql
 \i get_rupee_results.sql
 \i get_scop_augmented_results.sql

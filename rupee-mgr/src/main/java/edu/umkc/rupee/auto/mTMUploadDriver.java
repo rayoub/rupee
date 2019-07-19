@@ -74,7 +74,7 @@ public class mTMUploadDriver extends DriverBase {
         driver.findElement(By.cssSelector("a[href='query.csv']")).click();
 
         // give it sometime to download
-        Thread.sleep(5000);
+        Thread.sleep(20000);
 
         // give it a good name
         Path from = Paths.get(Constants.DOWNLOAD_PATH + "query.csv");

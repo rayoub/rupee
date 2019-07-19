@@ -77,7 +77,7 @@ public class CathedralDriver extends DriverBase {
         Thread.sleep(5000);
 
         String source = driver.findElement(By.id("results-table")).getText();
-        source = "Time = " + (stop - start) + "\n" + source;
+        // source = "Time = " + (stop - start) + "\n" + source;
 
         return source;
     }

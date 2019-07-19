@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE FUNCTION get_mtm_dom_results (p_benchmark VARCHAR, p_version VARCHAR, p_limit INTEGER)
+CREATE OR REPLACE FUNCTION get_mtm_results (p_benchmark VARCHAR, p_version VARCHAR, p_limit INTEGER)
 RETURNS TABLE (
     n INTEGER, 
     db_id_1 VARCHAR,
@@ -37,7 +37,7 @@ BEGIN
             s.tm_avg_rmsd,
             s.tm_avg_tm_score
         FROM
-            mtm_dom_result_matched r
+            mtm_result_matched r
             INNER JOIN benchmark b
                 ON b.db_id = r.db_id_1
                 AND b.name = p_benchmark

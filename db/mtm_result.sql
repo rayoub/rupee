@@ -1,5 +1,5 @@
 
-CREATE TABLE mtm_dom_result
+CREATE TABLE mtm_result
 (
     version VARCHAR NOT NULL,
     n INTEGER NOT NULL,
@@ -9,4 +9,4 @@ CREATE TABLE mtm_dom_result
     mtm_tm_score NUMERIC NOT NULL
 ); 
 
-CREATE UNIQUE INDEX idx_mtm_dom_result_unique ON mtm_dom_result (version, n, db_id_1);
+CREATE UNIQUE INDEX idx_mtm_result_unique ON mtm_result (version, n, db_id_1);
