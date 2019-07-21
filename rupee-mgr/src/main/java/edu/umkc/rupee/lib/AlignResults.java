@@ -43,11 +43,11 @@ public class AlignResults
         dbIds.parallelStream().forEach(dbId -> alignResults(command, version, searchMode, dbType, dbId, maxN));
     }
 
-    public static void alignMtmDomResults(String benchmark, String version, DbType dbType, int maxN) {
+    public static void alignMtmResults(String benchmark, String version, DbType dbType, int maxN) {
 
         List<String> dbIds = Benchmarks.get(benchmark);
             
-        String command = "SELECT db_id_2 FROM mtm_dom_result_matched WHERE version = ? AND db_id_1 = ? AND n <= ? ORDER BY n;";
+        String command = "SELECT db_id_2 FROM mtm_result_matched WHERE version = ? AND db_id_1 = ? AND n <= ? ORDER BY n;";
 
         counter.set(0);
         dbIds.parallelStream().forEach(dbId -> alignResults(command, version, "", dbType, dbId, maxN));
