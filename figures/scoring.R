@@ -18,7 +18,7 @@ get_scoring_plot <- function(p_title, p_file, p_levels, p_limits, p_breaks, p_y_
 
     plot <- 
         
-        ggplot(df, aes(n, avg_cume_score, group = interaction(app, score_type), color = app, linetype = app)) +
+        ggplot(df, aes(n, avg_cume_score, group = app, color = app, linetype = app)) +
         
         # geoms
         geom_line(
@@ -27,21 +27,18 @@ get_scoring_plot <- function(p_title, p_file, p_levels, p_limits, p_breaks, p_y_
 
         # scales        
         scale_color_manual(
-            values = c("#e41a1c", "#377eb8", "#4daf4a", "#984ea3"),
-            labels = c("RUPEE TM-Score","RUPEE RMSD","RUPEE Fast","Compared To")
+            values = c("#e41a1c","#377eb8"),
+            labels = c("RUPEE All-Aligned","Compared To")
         ) + 
         scale_linetype_manual(
-            values = c("solid", "dashed", "dotted", "dotdash"),
-            labels = c("RUPEE TM-Score","RUPEE RMSD","RUPEE Fast","Compared To")
+            values = c("solid","dashed"),
+            labels = c("RUPEE All-Aligned","Compared To")
         ) + 
         scale_x_continuous(
             limits = p_limits,
             breaks = p_breaks
         ) + 
 
-        # faceting
-        facet_wrap(~score_type, ncol = 1, scales = 'free_y', strip.position = 'left') + 
-        
         # guides
         guides(linetype = guide_legend(override.aes = list(size = rel(0.5)))) + 
 
