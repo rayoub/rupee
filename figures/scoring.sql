@@ -1,11 +1,11 @@
 
 DO $$
 
-    DECLARE p_benchmark VARCHAR := 'casp_d34'; -- casp_d144, casp_d34
-    DECLARE p_version VARCHAR := 'casp_chain_v06_26_2019'; -- casp_cath_v4_2_0, casp_chain_v06_26_2019
+    DECLARE p_benchmark VARCHAR := 'casp_mtm_d34'; -- casp_mtm_d34, casp_mtm_d144, cathedral and ssm benchmarks to follow
+    DECLARE p_version VARCHAR := 'casp_chain_v06_26_2019'; -- casp_scop_v1_73, casp_cath_v4_2_0, casp_chain_v06_26_2019
     DECLARE p_limit INTEGER := 100; -- 10, 100
-    DECLARE p_other VARCHAR := 'mTM'; -- mTM, CATHEDRAL
-    DECLARE p_alg VARCHAR = 'TM_AVG'; -- TM_Q, TM_AVG
+    DECLARE p_other VARCHAR := 'mTM'; -- mTM, CATHEDRAL, SSM
+    DECLARE p_alg VARCHAR = 'TM_Q'; -- TM_Q, TM_AVG
 
     -- don't forget to change get_*_results as needed
 
