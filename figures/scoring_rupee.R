@@ -6,17 +6,17 @@ library(plyr)
 rm(list = ls())
 
 # read in data files
-df <- read.csv('scoring_rupee.txt')
+df <- read.csv('scoring_rupee_easy.txt')
 refs <- read.csv('scoring_refs.txt')
 
 # reorder factor levels 
-df$app <- factor(df$app, levels = c('RUPEE 1', 'RUPEE 2'))
+df$app <- factor(df$app, levels = c('RUPEE All-Aligned', 'RUPEE Top-Aligned'))
 
 # *** plot
 
 plot <- 
     
-    ggplot(df, aes(n, avg_cume_score, group = interaction(app, score_type), color = app, linetype = app)) +
+    ggplot(df, aes(n, avg_cume_score, group = interaction(app), color = app, linetype = app)) +
     
     # geoms
     geom_line(
@@ -26,11 +26,11 @@ plot <-
     # scales        
     scale_color_manual(
         values = c("#e41a1c", "#377eb8"),
-        labels = c("RUPEE 1","RUPEE 2")
+        labels = c("RUPEE All-Aligned","RUPEE Top-Aligned")
     ) + 
     scale_linetype_manual(
         values = c("solid", "dashed"),
-        labels = c("RUPEE 1","RUPEE 2")
+        labels = c("RUPEE All-Aligned","RUPEE Top-Aligned")
     ) + 
     scale_x_continuous(
         limits = c(1,100),
@@ -47,7 +47,7 @@ plot <-
     ) +
 
     # title
-    ggtitle('RUPEE 1 vs. RUPEE 2')
+    ggtitle('RUPEE All-Aligned vs. RUPEE Top-Aligned')
 
 # *** theme
 
@@ -81,5 +81,5 @@ theme <-
 
 combined <- plot + theme
 
-ggsave('scoring_rupee.eps', plot = combined)
+ggsave('scoring_rupee_easy.eps', plot = combined)
 
