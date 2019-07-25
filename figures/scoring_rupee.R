@@ -6,7 +6,7 @@ library(plyr)
 rm(list = ls())
 
 # read in data files
-df <- read.csv('scoring_rupee_easy.txt')
+df <- read.csv('scoring_rupee_scop_d360.txt')
 refs <- read.csv('scoring_refs.txt')
 
 # reorder factor levels 
@@ -81,5 +81,5 @@ theme <-
 
 combined <- plot + theme
 
-ggsave('scoring_rupee_easy.eps', plot = combined)
+ggsave('scoring_rupee_scop_d360.eps', plot = combined)
 
