@@ -1,8 +1,3 @@
-<html><head></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;"> PDBe Fold v2.59. (src3) 14 Apr 2014 result file.
-
-                   RESULT SUMMARY
-
-   ##      Q-score      P-score     Z-score   RMSD    Nalgn Nsse Ngaps Seq-%     Nmd Nres-Q Nsse-Q Nres-T Nsse-T Query Target
     1      0.8431          -0       3.951     0.000   101    2    2           1    0    110      7    110     10    T0892-D2-BAKER-ROSETTASERVER.pdb:A  SCOP d1ewxa_
     2      0.8431          -0       4.673     0.000   101    3    2           1    0    110      7    110     15    T0892-D2-BAKER-ROSETTASERVER.pdb:A  SCOP d1lj7a_
     3      0.8431    0.003742       3.979     0.000   101    2    2           1    0    110      7    110      5    T0892-D2-BAKER-ROSETTASERVER.pdb:A  SCOP d1ny9a_

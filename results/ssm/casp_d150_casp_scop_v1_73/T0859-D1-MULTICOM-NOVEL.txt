@@ -1,8 +1,3 @@
-<html><head></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;"> PDBe Fold v2.59. (src3) 14 Apr 2014 result file.
-
-                   RESULT SUMMARY
-
-   ##      Q-score      P-score     Z-score   RMSD    Nalgn Nsse Ngaps Seq-%     Nmd Nres-Q Nsse-Q Nres-T Nsse-T Query Target
     1           1      0.3043       6.249     0.000   129    3    0           1    0    129      8    129     14    T0859-D1-MULTICOM-NOVEL.pdb:A  SCOP d1iaea_
     2           1      0.3043       6.249     0.000   129    3    0           1    0    129      8    129     14    T0859-D1-MULTICOM-NOVEL.pdb:A  SCOP d1asta_
     3           1      0.7418       6.249     0.000   129    3    0           1    0    129      8    129     13    T0859-D1-MULTICOM-NOVEL.pdb:A  SCOP d1qjja_

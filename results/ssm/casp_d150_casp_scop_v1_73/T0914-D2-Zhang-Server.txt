@@ -1,8 +1,3 @@
-<html><head></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;"> PDBe Fold v2.59. (src3) 14 Apr 2014 result file.
-
-                   RESULT SUMMARY
-
-   ##      Q-score      P-score     Z-score   RMSD    Nalgn Nsse Ngaps Seq-%     Nmd Nres-Q Nsse-Q Nres-T Nsse-T Query Target
     1      0.6425   8.721e-07       4.495     0.000   122    2    4           1    0    162      8    143      8    T0914-D2-Zhang-Server.pdb:A  SCOP d1civa2
     2      0.6243     0.06134       4.109     0.000   128    2    6           1    0    162      8    162      8    T0914-D2-Zhang-Server.pdb:A  SCOP d1alwa_
     3      0.6243     0.02772       3.901     0.000   128    2    6           1    0    162      8    162      8    T0914-D2-Zhang-Server.pdb:A  SCOP d1alva_
