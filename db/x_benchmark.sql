@@ -25,6 +25,8 @@ COPY benchmark (name, db_id) FROM '/home/ayoub/git/rupee/results/benchmarks/casp
 -- cathedral specific
 COPY benchmark (name, db_id) FROM '/home/ayoub/git/rupee/results/benchmarks/casp_cathedral_d149.txt' WITH (DELIMITER ',');
 
+-- ssm specific
+COPY benchmark (name, db_id) FROM '/home/ayoub/git/rupee/results/benchmarks/casp_ssm_d149.txt' WITH (DELIMITER ',');
 
 
 

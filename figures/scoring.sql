@@ -1,10 +1,10 @@
 
 DO $$
 
-    DECLARE p_benchmark VARCHAR := 'casp_cathedral_d149'; -- casp_mtm_d34, casp_mtm_d144, casp_cathedral_d149, and ssm benchmark to follow
-    DECLARE p_version VARCHAR := 'casp_cath_v4_2_0'; -- casp_scop_v1_73, casp_cath_v4_2_0, casp_chain_v06_26_2019
+    DECLARE p_benchmark VARCHAR := 'casp_ssm_d149'; -- casp_mtm_d34, casp_mtm_d144, casp_cathedral_d149, casp_ssm_d149
+    DECLARE p_version VARCHAR := 'casp_scop_v1_73'; -- casp_chain_v06_26_2019, casp_cath_v4_2_0, casp_scop_v1_73
     DECLARE p_limit INTEGER := 100; -- 10, 100
-    DECLARE p_other VARCHAR := 'CATHEDRAL'; -- mTM, CATHEDRAL, SSM
+    DECLARE p_other VARCHAR := 'SSM'; -- mTM, CATHEDRAL, SSM
     DECLARE p_alg VARCHAR = 'TM_AVG'; -- TM_Q, TM_AVG
 
     -- don't forget to change get_*_results as needed
@@ -20,7 +20,7 @@ BEGIN
         ),
         all_other AS
         (   
-            SELECT * FROM get_cathedral_results(p_benchmark, p_version, p_limit)
+            SELECT * FROM get_ssm_results(p_benchmark, p_version, p_limit)
         ),
         valid_rupee_id AS
         (
