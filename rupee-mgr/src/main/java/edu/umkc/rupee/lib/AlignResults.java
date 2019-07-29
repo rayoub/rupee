@@ -15,12 +15,10 @@ import java.util.logging.Logger;
 import java.util.zip.GZIPInputStream;
 
 import org.biojava.nbio.structure.Structure;
-import org.biojava.nbio.structure.StructureException;
 import org.biojava.nbio.structure.io.LocalPDBDirectory.FetchBehavior;
 import org.biojava.nbio.structure.io.PDBFileReader;
 import org.postgresql.ds.PGSimpleDataSource;
 
-import edu.umkc.rupee.defs.AlignmentType;
 import edu.umkc.rupee.defs.DbType;
 import edu.umkc.rupee.tm.TmAlign;
 import edu.umkc.rupee.tm.TmResults;
@@ -135,15 +133,6 @@ public class AlignResults
                     score.setDbId1(dbId);
                     score.setDbId2(dbId2);
 
-                    // perform biojava alignments
-                    AlignRecord ce = Aligning.align(queryStructure, targetStructure, AlignmentType.CE);
-                    AlignRecord fatcat = Aligning.align(queryStructure, targetStructure, AlignmentType.FATCAT_FLEXIBLE);
-
-                    score.setCeRmsd(ce.afps.getTotalRmsdOpt());
-                    score.setCeTmScore(ce.afps.getTMScore());
-                    score.setFatCatRmsd(fatcat.afps.getTotalRmsdOpt());
-                    score.setFatCatTmScore(fatcat.afps.getTMScore());
-
                     // perform tm-align alignment
                     try {
                         TmAlign tm = new TmAlign(queryStructure, targetStructure);
@@ -177,8 +166,6 @@ public class AlignResults
         } catch (SQLException e) {
             Logger.getLogger(Aligning.class.getName()).log(Level.SEVERE, null, e);
         } catch (IOException e) {
-            Logger.getLogger(Aligning.class.getName()).log(Level.SEVERE, null, e);
-        } catch (StructureException e) {
             Logger.getLogger(Aligning.class.getName()).log(Level.SEVERE, null, e);
         }
     }

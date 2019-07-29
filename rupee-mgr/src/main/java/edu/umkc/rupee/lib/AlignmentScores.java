@@ -12,10 +12,6 @@ public class AlignmentScores extends PGobject {
     private String version;
     private String dbId1;
     private String dbId2;
-    private double ceRmsd = 0.0;
-    private double ceTmScore = -1.0;
-    private double fatCatRmsd = 0.0;
-    private double fatCatTmScore = -1.0;
     private double tmQRmsd = 0.0;
     private double tmQTmScore = -1.0;
     private double tmAvgRmsd = 0.0;
@@ -28,10 +24,6 @@ public class AlignmentScores extends PGobject {
         this.version = rs.getString("version"); 
         this.dbId1 = rs.getString("db_id_1");
         this.dbId2 = rs.getString("db_id_2");
-        this.ceRmsd = rs.getDouble("ce_rmsd");
-        this.ceTmScore = rs.getDouble("ce_tm_score");
-        this.fatCatRmsd = rs.getDouble("fatcat_rmsd");
-        this.fatCatTmScore = rs.getDouble("fatcat_tm_score");
         this.tmQRmsd = rs.getDouble("tm_q_rmsd");
         this.tmQTmScore = rs.getDouble("tm_q_tm_score");
         this.tmAvgRmsd = rs.getDouble("tm_avg_rmsd");
@@ -60,38 +52,6 @@ public class AlignmentScores extends PGobject {
 
     public void setDbId2(String dbId2) {
         this.dbId2 = dbId2;
-    }
-
-    public double getCeRmsd() {
-        return ceRmsd;
-    }
-
-    public void setCeRmsd(double ceRmsd) {
-        this.ceRmsd = ceRmsd;
-    }
-
-    public double getCeTmScore() {
-        return ceTmScore;
-    }
-
-    public void setCeTmScore(double ceTmScore) {
-        this.ceTmScore = ceTmScore;
-    }
-    
-    public double getFatCatRmsd() {
-        return fatCatRmsd;
-    }
-
-    public void setFatCatRmsd(double fatCatRmsd) {
-        this.fatCatRmsd = fatCatRmsd;
-    }
-
-    public double getFatCatTmScore() {
-        return fatCatTmScore;
-    }
-
-    public void setFatCatTmScore(double fatCatTmScore) {
-        this.fatCatTmScore = fatCatTmScore;
     }
 
     public double getTmQRmsd() {
@@ -131,13 +91,6 @@ public class AlignmentScores extends PGobject {
         double rmsd = 0.0;
 
         switch (align) {
-            
-            case CE:
-                rmsd = this.ceRmsd;
-                break;
-            case FATCAT_FLEXIBLE:
-                rmsd = this.fatCatRmsd;
-                break;
             case TM_Q_ALIGN:
                 rmsd = this.tmQRmsd;
                 break;
@@ -156,13 +109,6 @@ public class AlignmentScores extends PGobject {
         double tmScore = -1.0;
 
         switch (align) {
-            
-            case CE:
-                tmScore = this.ceTmScore;
-                break;
-            case FATCAT_FLEXIBLE:
-                tmScore = this.fatCatTmScore;
-                break;
             case TM_Q_ALIGN:
                 tmScore = this.tmQTmScore;
                 break;
@@ -181,8 +127,6 @@ public class AlignmentScores extends PGobject {
         String row = "(" 
             + version + ","
             + dbId1 + "," + dbId2 + ","
-            + ceRmsd + "," + ceTmScore + ","
-            + fatCatRmsd + "," + fatCatTmScore + ","
             + tmQRmsd + "," + tmQTmScore + ","
             + tmAvgRmsd + "," + tmAvgTmScore
             + ")";
