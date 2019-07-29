@@ -5,81 +5,82 @@ library(plyr)
 # clear environment
 rm(list = ls())
 
-# read in data files
-df <- read.csv('scoring_rupee_scop_d360.txt')
-refs <- read.csv('scoring_refs.txt')
+get_scoring_plot <- function(p_title, p_file, p_limits) {
 
-# reorder factor levels 
-df$app <- factor(df$app, levels = c('RUPEE All-Aligned', 'RUPEE Top-Aligned'))
+    # read in data files
+    df <- read.csv(p_file)
+    refs <- read.csv('scoring_refs.txt')
 
-# *** plot
+    # reorder factor levels 
+    df$app <- factor(df$app, levels = c('RUPEE All-Aligned', 'RUPEE Top-Aligned'))
 
-plot <- 
-    
-    ggplot(df, aes(n, avg_cume_score, group = interaction(app), color = app, linetype = app)) +
-    
-    # geoms
-    geom_line(
-        size = rel(0.5)
-    ) + 
+    # *** plot
 
-    # scales        
-    scale_color_manual(
-        values = c("#e41a1c", "#377eb8"),
-        labels = c("RUPEE All-Aligned","RUPEE Top-Aligned")
-    ) + 
-    scale_linetype_manual(
-        values = c("solid", "dashed"),
-        labels = c("RUPEE All-Aligned","RUPEE Top-Aligned")
-    ) + 
-    scale_x_continuous(
-        limits = c(1,100),
-        breaks = c(1, seq(10, 100, by = 10))
-    ) + 
-
-    # guides
-    guides(linetype = guide_legend(override.aes = list(size = rel(0.5)))) + 
-
-    # axis labels
-    labs(
-         x = 'rank', 
-         y = 'value'
-    ) +
-
-    # title
-    ggtitle('RUPEE All-Aligned vs. RUPEE Top-Aligned')
-
-# *** theme
-
-theme <-  
-
-    # default theme 
-    theme_bw() +
-
-    # default override
-    theme(
-        plot.title = element_text(size = 8, hjust = 0.5),
-        plot.margin = margin(5,15,0,0), 
-
-        panel.grid = element_blank(),
-        panel.spacing = unit(4,'mm'),
+    plot <- 
         
-        axis.text = element_text(size = 7), 
-        axis.title = element_text(size = 8), 
-        axis.title.y = element_blank(),
+        ggplot(df, aes(n, avg_cume_score, group = app, color = app, linetype = app)) +
         
-        legend.text = element_text(size = 7),
-        legend.title = element_blank(), 
-        legend.position = 'bottom',
-        legend.direction = 'horizontal',
-        legend.spacing = unit(0,'mm'),
-    ) 
+        # geoms
+        geom_line(
+            size = rel(0.5)
+        ) + 
+
+        # scales        
+        scale_color_manual(
+            values = c("#e41a1c", "#377eb8"),
+            labels = c("RUPEE All-Aligned","RUPEE Top-Aligned")
+        ) + 
+        scale_linetype_manual(
+            values = c("solid", "dashed"),
+            labels = c("RUPEE All-Aligned","RUPEE Top-Aligned")
+        ) + 
+        scale_x_continuous(
+            limits = c(1,100),
+            breaks = c(1, seq(10, 100, by = 10))
+        ) + 
+        scale_y_continuous(
+            limits = p_limits
+        ) + 
+
+        # guides
+        guides(linetype = guide_legend(override.aes = list(size = rel(0.5)))) + 
+
+        # axis labels
+        labs(
+             x = 'rank', 
+             y = 'value'
+        ) +
+
+        # title
+        ggtitle(p_title)
+
+    # *** theme
+
+    theme <-  
+
+        # default theme 
+        theme_bw() +
+
+        # default override
+        theme(
+            plot.title = element_text(size = 8, hjust = 0.5),
+            plot.margin = margin(5,15,0,0), 
+
+            panel.grid = element_blank(),
+            panel.spacing = unit(4,'mm'),
+            
+            axis.text = element_text(size = 7), 
+            axis.title = element_blank(),
+            
+            legend.text = element_text(size = 7, margin = margin(0,10,0,0)),
+            legend.title = element_blank(), 
+            legend.position = 'bottom',
+            legend.direction = 'horizontal',
+            legend.spacing = unit(0,'mm')
+        ) 
 
     theme <- theme + theme(strip.text = element_text(size = 8))
 
-# *** combined
-
-combined <- plot + theme
-
-ggsave('scoring_rupee_scop_d360.eps', plot = combined)
+    plot + theme
+}
 

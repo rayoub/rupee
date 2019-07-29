@@ -6,8 +6,8 @@ source('scoring.R')
 
 grid_arrange_shared_legend <-
   function(...,
-           ncol = length(list(...)),
-           nrow = 1,
+           ncol = 2,
+           nrow = 2,
            position = c("bottom", "right")) {
     
     plots <- list(...)
@@ -36,32 +36,36 @@ grid_arrange_shared_legend <-
     )
   }
 
-mtm_plot <- get_scoring_plot(
-        'vs. mTM (casp_d34)',
-        'scoring_mtm_tm_avg.txt',
+mtm_plot_d144 <- get_scoring_plot(
+        'vs. mTM (casp_mtm_d144)',
+        'scoring_mtm_d144.txt',
+        c('RUPEE All-Aligned','mTM'), 
+        c(1, 10),
+        seq(1,10)
+)
+mtm_plot_d34 <- get_scoring_plot(
+        'vs. mTM (casp_mtm_d34)',
+        'scoring_mtm_d34.txt',
         c('RUPEE All-Aligned','mTM'), 
         c(1, 100),
-        c(1, seq(10, 100, by = 10)),
-        TRUE
+        c(1, seq(10, 100, by = 10))
 )
 ssm_plot <- get_scoring_plot(
-        'vs. mTM (casp_d34)',
-        'scoring_mtm_tm_avg.txt',
-        c('RUPEE All-Aligned','mTM'), 
+        'vs. SSM (casp_ssm_d149)',
+        'scoring_ssm_d149.txt',
+        c('RUPEE All-Aligned','SSM'), 
         c(1, 100),
-        c(1, seq(10, 100, by = 10)),
-        TRUE
+        c(1, seq(10, 100, by = 10))
 )
 cathedral_plot <- get_scoring_plot(
-        'vs. mTM (casp_d34)',
-        'scoring_mtm_tm_avg.txt',
-        c('RUPEE All-Aligned','mTM'), 
+        'vs. CATHEDRAL (casp_cath_d149)',
+        'scoring_cathedral_d149.txt',
+        c('RUPEE All-Aligned','CATHEDRAL'), 
         c(1, 100),
-        c(1, seq(10, 100, by = 10)),
-        TRUE
+        c(1, seq(10, 100, by = 10))
 )
 
-combined <- grid_arrange_shared_legend(mtm_plot, ssm_plot, cathedral_plot)
+combined <- grid_arrange_shared_legend(mtm_plot_d144, mtm_plot_d34, ssm_plot, cathedral_plot)
 
-ggsave('combined_scoring_tm_avg.eps', plot = combined, width = 4, height = 3.5)
+ggsave('combined_scoring.eps', plot = combined, width = 4, height = 3.5)
 

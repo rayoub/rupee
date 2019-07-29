@@ -5,7 +5,7 @@ library(plyr)
 # clear environment
 rm(list = ls())
 
-get_scoring_plot <- function(p_title, p_file, p_levels, p_limits, p_breaks, p_y_axis) {
+get_scoring_plot <- function(p_title, p_file, p_levels, p_limits, p_breaks) {
 
     # read in data files
     df <- read.csv(p_file)
@@ -38,6 +38,9 @@ get_scoring_plot <- function(p_title, p_file, p_levels, p_limits, p_breaks, p_y_
             limits = p_limits,
             breaks = p_breaks
         ) + 
+        scale_y_continuous(
+            limits = c(0.25,0.75)
+        ) + 
 
         # guides
         guides(linetype = guide_legend(override.aes = list(size = rel(0.5)))) + 
@@ -67,25 +70,19 @@ get_scoring_plot <- function(p_title, p_file, p_levels, p_limits, p_breaks, p_y_
             panel.spacing = unit(4,'mm'),
             
             axis.text = element_text(size = 7), 
-            axis.title = element_text(size = 8), 
-            axis.title.y = element_blank(),
+            axis.title = element_blank(),
             
-            legend.text = element_text(size = 7),
+            legend.text = element_text(size = 7, margin = margin(0,10,0,0)),
             legend.title = element_blank(), 
             legend.position = 'bottom',
             legend.direction = 'horizontal',
-            legend.spacing = unit(0,'mm'),
+            legend.spacing = unit(0,'mm')
 
-            strip.background = element_blank(),
-            strip.placement = 'outside'
+#            strip.background = element_blank(),
+#            strip.placement = 'outside'
         ) 
 
-    if (p_y_axis) {
-        theme <- theme + theme(strip.text = element_text(size = 8))
-    }
-    else {
-        theme <- theme + theme(strip.text = element_blank())
-    }
+    theme <- theme + theme(strip.text = element_text(size = 8))
 
     plot + theme
 }
