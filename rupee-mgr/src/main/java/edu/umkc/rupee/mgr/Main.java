@@ -23,7 +23,6 @@ import org.apache.commons.cli.OptionGroup;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 
-import edu.umkc.rupee.auto.mTMUploadDriver;
 import edu.umkc.rupee.base.SearchRecord;
 import edu.umkc.rupee.cath.CathHash;
 import edu.umkc.rupee.cath.CathImport;
@@ -783,11 +782,13 @@ public class Main {
 
     private static void option_d(CommandLine line) throws Exception {
 
-        mTMUploadDriver driver = new mTMUploadDriver();
+        /*
+        SSMUploadDriver driver = new SSMUploadDriver();
 
         driver.setUp();
         driver.doSearchBatch();
         driver.tearDown();
+        */
 
         /*
         List<Labels.Label> labels = Labels.getLabels("d2pf2a2", DbTypeCriteria.SCOP);
@@ -797,29 +798,20 @@ public class Main {
         */
 
         /*
-        AlignResults.alignRupeeResults("casp_d150", "casp_12_scop_v2_07", "tm_score", DbType.SCOP, 100);
+        AlignResults.alignRupeeResults("casp_d150", "casp_scop_v2_07", "all_aligned", DbType.SCOP, 100);
+        AlignResults.alignRupeeResults("casp_d150", "casp_scop_v2_07", "top_aligned", DbType.SCOP, 100);
+        AlignResults.alignRupeeResults("casp_d150", "casp_scop_v1_73", "all_aligned", DbType.SCOP, 100);
+        AlignResults.alignRupeeResults("casp_d150", "casp_cath_v4_2_0", "all_aligned", DbType.CATH, 100);
+        AlignResults.alignRupeeResults("casp_d150", "casp_chain_v06_26_2019", "all_aligned", DbType.CHAIN, 100);
 
-        AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "tm_score", DbType.SCOP, 100);
-        AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "rmsd", DbType.SCOP, 100);
-        AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "similarity", DbType.SCOP, 100);
-        AlignResults.alignMtmDomResults("scop_d360", "scop_v2_07", DbType.SCOP, 100);
+        AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "top_aligned", DbType.SCOP, 100);
+        AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "all_aligned", DbType.SCOP, 100);
 
-        AlignResults.alignRupeeResults("cath_d99", "cath_v4_2_0", "tm_score", DbType.CATH, 100);
-        AlignResults.alignRupeeResults("cath_d99", "cath_v4_2_0", "rmsd", DbType.CATH, 100);
-        AlignResults.alignRupeeResults("cath_d99", "cath_v4_2_0", "similarity", DbType.CATH, 100);
-        AlignResults.alignCathedralResults("cath_d99", "cath_v4_2_0", DbType.CATH, 100);
-        */
-
-        /*
-        AlignResults.alignRupeeResults("scop_d62", "scop_v1_73", "tm_score", DbType.SCOP, 50);
-        AlignResults.alignRupeeResults("scop_d62", "scop_v1_73", "rmsd", DbType.SCOP, 50);
-        AlignResults.alignRupeeResults("scop_d62", "scop_v1_73", "similarity", DbType.SCOP, 50);
-        AlignResults.alignSsmResults("scop_d62", "scop_v1_73", DbType.SCOP, 50);
-        */
-       
-        /* 
-        AlignResults.alignRupeeResults("scop_d50", "scop_v2_07", "similarity_1", DbType.SCOP, 100);
-        AlignResults.alignRupeeResults("scop_d50", "scop_v2_07", "similarity_2", DbType.SCOP, 100);
+        AlignResults.alignMtmResults("casp_d150", "casp_chain_v06_26_2019", DbType.CHAIN, 100);
+        
+        AlignResults.alignCathedralResults("casp_d150", "casp_cath_v4_2_0", DbType.CATH, 100);
+        
+        AlignResults.alignSsmResults("casp_d150", "casp_scop_v1_73", DbType.SCOP, 100);
         */
     }
 
