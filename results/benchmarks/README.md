@@ -59,5 +59,9 @@ Subset of casp_mtm_d144 that includes all domains for which mTM returns greater 
 
 Subset of casp_d150 that includes all domains for which CATHEDRAL returns greater than or equal to 100 results. 
 
+#### casp_ssm_d149
+
+Subset of casp_d150 that includes all domains for which SSM returns greater than or equal to 100 results. 
+
 
 
