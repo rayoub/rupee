@@ -45,7 +45,8 @@ Subset of cath_d100 that includes all domains for which CATHEDRAL returns a resp
 
 #### casp_d150
 
-TODO
+Consist of selected predictions for all 30 single-range evaluation units from CASP12 free-modeling targets (FM).
+Predictions were selected from the best per evaluation unit of the top 5 performers who submitted predictions for all regular targets. These top 5 groups are: BAKER-ROSETTASERVER, Zhang-Server, QUARK, RaptorX and MULTICOM-NOVEL. 
 
 #### casp_mtm_d144
 
