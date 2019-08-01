@@ -15,7 +15,6 @@
 \i ecod_domain.sql
 \i ecod_grams.sql
 \i ecod_hashes.sql
-\i fs_sims.sql
 \i log.sql
 \i mtm_result_matched.sql
 \i mtm_result.sql
@@ -55,8 +54,6 @@
 \i get_ecod_hashes.sql
 \i get_ecod_split_matches.sql
 \i get_ecod_split.sql
-\i get_fs_domains.sql
-\i get_fs_sims.sql
 \i get_mtm_results.sql
 \i get_probabilities.sql
 \i get_rupee_results.sql
