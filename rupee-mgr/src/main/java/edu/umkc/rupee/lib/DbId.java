@@ -1,7 +1,14 @@
 package edu.umkc.rupee.lib;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import org.postgresql.ds.PGSimpleDataSource;
 
 import edu.umkc.rupee.defs.DbType;
 
@@ -47,8 +54,11 @@ public class DbId {
         else if (isEcodId(id)) {
             return DbType.ECOD;
         }
-        else {
+        else if (isChainId(id)) {
             return DbType.CHAIN;
+        }
+        else {
+            return DbType.INVALID;
         }
     }
     
@@ -69,5 +79,40 @@ public class DbId {
         else {
             return id;
         }
+    }
+
+    public static boolean doesIdExist(String id) {
+
+        String normalizeId = getNormalizedId(id);
+        DbType dbType = getIdDbType(id);
+
+        if (dbType == DbType.INVALID) {
+            return false; 
+        }
+
+        boolean exists = false;
+        PGSimpleDataSource ds = Db.getDataSource();
+        try {
+
+            Connection conn = ds.getConnection();
+            conn.setAutoCommit(true);
+                
+            PreparedStatement stmt = conn.prepareCall("SELECT db_id FROM " + dbType.getTableName() + "_hashes WHERE db_id = ?;");
+            stmt.setString(1, normalizeId);
+
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                exists = true;
+            }
+
+            rs.close();
+            stmt.close();
+            conn.close();
+        
+        } catch (Exception e) {
+            Logger.getLogger(DbId.class.getName()).log(Level.SEVERE, null, e);
+        }
+
+        return exists;
     }
 }

@@ -78,7 +78,6 @@ public abstract class Import {
             // *** iterate split
             
             List<Log> logs = new ArrayList<>();
-            String message = "Failed to import: %s";
 
             while (rs.next()) {
                
@@ -115,7 +114,6 @@ public abstract class Import {
                     gzipInputStream.close();
 
                 } catch (Exception e) {
-                    logs.add(new Log(Level.SEVERE, e.getClass().getName(), String.format(message, pdbId)));
                     Logger.getLogger(Import.class.getName()).log(Level.SEVERE, pdbId, e);
                 }
                 

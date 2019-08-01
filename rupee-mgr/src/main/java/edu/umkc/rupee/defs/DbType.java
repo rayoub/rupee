@@ -4,6 +4,7 @@ import edu.umkc.rupee.lib.Constants;
 
 public enum DbType {
     
+    INVALID(0, "Invalid", "invalid", ""),
     SCOP(1, "SCOPe", "scop", Constants.SCOP_PATH),
     CATH(2, "CATH", "cath", Constants.CATH_PATH),
     ECOD(3, "ECOD", "ecod", Constants.ECOD_PATH),
@@ -47,8 +48,11 @@ public enum DbType {
         else if (id == ECOD.getId()) {
             return ECOD;
         }
-        else {
+        else if (id == CHAIN.getId()) {
             return CHAIN;
+        }
+        else {
+            return INVALID;
         }
     }
 }
