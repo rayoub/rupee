@@ -1,0 +1,180 @@
+
+-[ RECORD 1 ]-+-----------------------------
+db_id_1       | T0859-D1-BAKER-ROSETTASERVER
+rm_diff       | 0.2763464511977784
+rc_diff       | 0.29612282132461544
+rs_diff       | 0.26468004704494624
+rm_best_match | 3kepA
+rm_best_score | 0.6963618523096428
+m_best_match  | 5ag3B
+m_best_score  | 0.4200154011118644
+rc_best_match | 3kepB00
+rc_best_score | 0.6600850236173449
+c_best_match  | 3or1A02
+c_best_score  | 0.36396220229272946
+rs_best_match | d1ko6.2
+rs_best_score | 0.5765419023698114
+s_best_match  | d1v3za_
+s_best_score  | 0.31186185532486516
+
+pdb entry:
+alignment text:
+
+	Name of Chain_1: upload
+	Name of Chain_2: 3kepA
+	Length of Chain_1: 129 residues
+	Length of Chain_2: 140 residues
+
+	Aligned length= 111, RMSD=   2.43, Seq_ID=n_identical/n_aligned= 0.162
+	TM-score= 0.69636 (if normalized by length of Chain_1)
+	TM-score= 0.65003 (if normalized by length of Chain_2)
+	TM-score= 0.67239 (if normalized by average length of chains)
+
+-[ RECORD 2 ]-+-----------------------------
+db_id_1       | T0863-D2-RaptorX
+rm_diff       | 0.3026839414103524
+rc_diff       | 0.11264642555364385
+rs_diff       | 0.13174491446632760
+rm_best_match | 6afxA
+rm_best_score | 0.6217818107575698
+m_best_match  | 5sy1B
+m_best_score  | 0.3190978693472174
+rc_best_match | 3pmcA00
+rc_best_score | 0.38848632941334005
+c_best_match  | 3rkgA02
+c_best_score  | 0.2758399038596962
+rs_best_match | d1qgwc_
+rs_best_score | 0.37080353716230696
+s_best_match  | d1xawa1
+s_best_score  | 0.23905862269597936
+
+pdb entry:
+alignment text:
+	Name of Chain_1: upload
+	Name of Chain_2: 6afxA
+	Length of Chain_1: 356 residues
+	Length of Chain_2: 740 residues
+
+	Aligned length= 245, RMSD=   3.02, Seq_ID=n_identical/n_aligned= 0.118
+	TM-score= 0.62178 (if normalized by length of Chain_1)
+	TM-score= 0.30930 (if normalized by length of Chain_2)
+	TM-score= 0.41254 (if normalized by average length of chains)
+
+-[ RECORD 3 ]-+-----------------------------
+db_id_1       | T0866-D1-RaptorX
+rm_diff       | 0.1624988241540111
+rc_diff       | 0.0987632743622391
+rs_diff       | 0.40231758386338145
+rm_best_match | 1v5vA
+rm_best_score | 0.7286209911391595
+m_best_match  | 4v0tB
+m_best_score  | 0.5661221669851484
+rc_best_match | 1v5vA03
+rc_best_score | 0.7622876663104038
+c_best_match  | 1v5vA03
+c_best_score  | 0.6635243919481647
+rs_best_match | d1v5va1
+rs_best_score | 0.772787360144493
+s_best_match  | d1ejfa_
+s_best_score  | 0.37046977628111155
+
+pdb entry:
+alignment text:
+	Name of Chain_1: upload
+	Name of Chain_2: 1v5vA
+	Length of Chain_1: 104 residues
+	Length of Chain_2: 399 residues
+
+	Aligned length= 85, RMSD=   1.65, Seq_ID=n_identical/n_aligned= 0.118
+	TM-score= 0.72862 (if normalized by length of Chain_1)
+	TM-score= 0.20419 (if normalized by length of Chain_2)
+	TM-score= 0.31859 (if normalized by average length of chains)
+
+	Name of Chain_1: upload
+	Name of Chain_2: 1v5vA03
+	Length of Chain_1: 104 residues
+	Length of Chain_2: 75 residues
+
+	Aligned length= 75, RMSD=   1.32, Seq_ID=n_identical/n_aligned= 0.120
+	TM-score= 0.66352 (if normalized by length of Chain_1)
+	TM-score= 0.89527 (if normalized by length of Chain_2)
+	TM-score= 0.76229 (if normalized by average length of chains)
+
+-[ RECORD 4 ]-+-----------------------------
+db_id_1       | T0918-D1-BAKER-ROSETTASERVER
+rm_diff       | 0.29007537706222925
+rc_diff       | 0.18255301101204285
+rs_diff       | 0.1924894458787487
+rm_best_match | 2vkzG
+rm_best_score | 0.6071588697259841
+m_best_match  | 5uvnF
+m_best_score  | 0.31708349266375485
+rc_best_match | 1pn2C01
+rc_best_score | 0.4908789790581175
+c_best_match  | 4hgzA02
+c_best_score  | 0.30832596804607465
+rs_best_match | d1pn2c1
+rs_best_score | 0.4926074374144167
+s_best_match  | d1v1qa_
+s_best_score  | 0.300117991535668
+
+pdb entry:
+alignment text:
+	Name of Chain_1: upload
+	Name of Chain_2: 2vkzG
+	Length of Chain_1: 108 residues
+	Length of Chain_2: 2033 residues
+
+	Aligned length= 82, RMSD=   2.37, Seq_ID=n_identical/n_aligned= 0.098
+	TM-score= 0.60716 (if normalized by length of Chain_1)
+	TM-score= 0.03924 (if normalized by length of Chain_2)
+	TM-score= 0.07336 (if normalized by average length of chains)
+
+
+-[ RECORD 5 ]-+-----------------------------
+db_id_1       | T0918-D3-MULTICOM-NOVEL
+rm_diff       | 0.56072638499770595
+rc_diff       | -0.02850928819440046
+rs_diff       | 0.09286872672760127
+rm_best_match | 3voiA
+rm_best_score | 0.8416353566277628
+m_best_match  | 5uvnF
+m_best_score  | 0.28090897163005685
+rc_best_match | 1oc7A00
+rc_best_score | 0.47116135305433354
+c_best_match  | 3slkA01
+c_best_score  | 0.499670641248734
+rs_best_match | d1c9kc_
+rs_best_score | 0.48687651369452933
+s_best_match  | d2iola1
+s_best_score  | 0.39400778696692806
+
+pdb entry:
+alignment text:
+	Name of Chain_1: upload
+	Name of Chain_2: 3voiA
+	Length of Chain_1: 139 residues
+	Length of Chain_2: 360 residues
+
+	Aligned length= 132, RMSD=   2.48, Seq_ID=n_identical/n_aligned= 0.136
+	TM-score= 0.84164 (if normalized by length of Chain_1)
+	TM-score= 0.34146 (if normalized by length of Chain_2)
+	TM-score= 0.48492 (if normalized by average length of chains)
+
+	Name of Chain_1: upload
+	Name of Chain_2: 3voiA00
+	Length of Chain_1: 139 residues
+	Length of Chain_2: 360 residues
+
+	Aligned length= 132, RMSD=   2.48, Seq_ID=n_identical/n_aligned= 0.136
+	TM-score= 0.84164 (if normalized by length of Chain_1)
+	TM-score= 0.34146 (if normalized by length of Chain_2)
+	TM-score= 0.48492 (if normalized by average length of chains)
+
+
+
+
+
+
+
+
