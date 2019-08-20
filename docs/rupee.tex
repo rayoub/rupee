@@ -257,25 +257,24 @@ To further illustrate the performance of RUPEE, we show top scoring alignments f
 
 [NOTE: this assumes we have introduced top-aligned mode and all-aligned mode in the introduction]
 
-We first provide an brief outline of our linear encoding of protein structures described in \cite{Ayoub2019}, which still remains at the core of the RUPEE protein structure search. 
-Then, we describe the addition of containment searches, changes to top-aligned mode, and the addition of all-aligned mode, in that order.
+We first provide a brief outline of our linear encoding of protein structures described in more detail in \cite{Ayoub2019}, which still remains at the core of the RUPEE protein structure search. 
+Then, we describe the similarity scores we use for the initial filtering of full-length and containment searches, changes to top-aligned mode, and the addition of all-aligned mode, in that order.
 
 \subsection*{Linear encoding of protein structure}
 
-[NOTE: get rid of the bags]
-
-In \cite{Ayoub2019}, we introduced a linear encoding of protein structures based on separable regions of permissible torsion angles. 
-For instance, a $\beta$-turn-$\beta$ motif may be represented as a sequence of residue descriptors similar to that shown below. 
+In \cite{Ayoub2019}, we introduced a linear encoding of protein structures.
+For each pair of torsion angles combined with their secondary structure assignment, we assign an integer we refer to as a residue descriptor.
+For instance, a $\beta$-turn-$\beta$ motif may be represented as a sequence of residue descriptors, similar to that shown below. 
 \begin{gather}\label{E:descrseq} 
     [\, 5, 5, 5, 5, 5, 5, 7, 5, 11, 11, 5, 5, 5, 5, 5, 5 \,]
 \end{gather}
 
 Next, we derive a multiset of overlapping 3-grams of residue descriptors. 
 This representation is often referred to as shingling and was developed in \cite{Broder1997a}. 
-The overlap between shingles ensures some of the order information within the original sequence is preserved in the bag. 
+The overlap between shingles ensures some of the order information within the original sequence is preserved in the multiset. 
 
-By shingling, we obtain a multiset of ordered lists from an ordered list of numbers. 
-As an example, the sequence in (\ref{E:descrseq}) becomes the following bag of shingles. 
+By shingling, we obtain a multiset of ordered lists from an ordered list of residue descriptors. 
+As an example, the sequence in (\ref{E:descrseq}) becomes the following multiset of shingles. 
 \begin{align}\label{E:shinglebag}
     \begin{split}
         \{\,&[5, 5, 5], [5, 5, 5], [5, 5, 5], [5, 5, 5], [5, 5, 7] \\
@@ -289,7 +288,7 @@ Next, each shingle $s$ is hashed to an integer as shown in~(\ref{E:hashdef}).
     s_{hash} = s_1 \times 13^2 + s_2 \times 13 + s_3
 \end{gather}
 
-After hashing, the multiset in (\ref{E:shinglebag}) becomes the following bag of integers.
+After hashing, the multiset in (\ref{E:shinglebag}) becomes the following multiset of integers.
 \begin{align}\label{E:hashbag}
     \begin{split}
     \{\,&915, 915, 915, 915, 917, 941, 1259 \\
@@ -297,12 +296,12 @@ After hashing, the multiset in (\ref{E:shinglebag}) becomes the following bag of
     \end{split}
 \end{align}
 
-The hashing completes the transformation of an ordered list of descriptors to a multiset of integers that still retains some of the order information present in the original list. 
+The hashing completes the transformation of an ordered list of residue descriptors to a multiset of integers that still retains some of the order information present in the original list. 
 
 Notice in (\ref{E:hashbag}) the value 915, corresponding to the shingle $[ 5, 5, 5 ]$, occurs frequently indicating the presence of $\beta$-strands. 
-To address this lack of specificity, we introduced a heuristic we called \emph{run position encoding} (RPE), where a run is a consecutive sequence of identical descriptors. 
+To address this lack of specificity, we introduced a heuristic we call \emph{run position encoding} (RPE), where a run is a consecutive sequence of identical descriptors. 
 To distinguish between short and long runs, thereby increasing the specificity of the shingles, we add a factor of $10^5$ to each shingle hash as a function of the first residue's position in a run. 
-Applied to the bag of integers in (\ref{E:hashbag}) gives
+Applied to the multiset of integers in (\ref{E:hashbag}) gives
 \begin{align}\label{E:rpebag}
     \begin{split}
     \{\,&00915, 10915, 20915, 20915, 10917, 00941, 01259 \\
@@ -313,26 +312,32 @@ where the leading zero run factors are shown for clarity.
 
 The pyramidal approach for the run factors preserves matches at the boundaries between secondary structure runs and loops that would not otherwise be preserved in the presence of differences in run lengths of one or more. 
 
+\subsection*{Similarity scores}
 
-\subsection*{Containment searches}
+In one case, RUPEE uses the multiset-of-integers representation of protein structures as shown in (\ref{E:rpebag}), and in another case RUPEE regards this multiset as an ordered list of integers.  
+We describe the context in which these cases occur in subsequent sections below, but first, we discuss the similarity scores that RUPEE uses for each representation. 
 
-Originally, the RUPEE protein structure search focused on full-length matches. 
-If you wanted to search for structures similar to a domain, you could search one of the protein domain classification databases such as SCOPe, CATH, or ECOD.
-On the other hand, if you wanted to search for structures similar to a whole chain, you could search whole chains from the PDB. 
-While the ability of RUPEE to search multiple databases for any given structure is flexible, adding the ability to execute containment searches extends this flexibility. 
-
-Introduce NW semiglobal algorithm here refering to list above.
-
-
-
-\subsection*{Top-aligned mode}
-
-Another comparison that is natural follows. Referring to list as bags above. 
-Similarity for a candidate pair of structures $a$ and $b$ can now naturally be defined as the Jaccard similarity \cite{Levan1971} for multisets,
+When representing each protein structure using a multiset of integers as shown in (\ref{E:rpebag}), full-length similarity for a candidate pair of structures $a$ and $b$ is defined using the Jaccard similarity \cite{Levan1971} for multisets,
 \begin{align}
     J(a,b) = \frac{\sum_i min(a_i, b_i)}{\sum_i max(a_i,b_i)}\text{,}
 \end{align}
 where $i$ ranges over all possible shingle hashes $s_i$ and $a_i$ and $b_i$ give the counts of shingle hash $s_i$ in structures $a$ and $b$, respectively. 
+In words, the Jaccard similarity is the proportion of matched shingles to the total number of shingles. 
+
+When regarding the multiset in (\ref{E:rpebag}) as an ordered list of integers, we assign a pair of protein structures a full-length similarity score using a simplified Needleman-Wunsch \cite{Needleman1970} algorithm where mismatches and gaps are penalized -1 points and matches are awarded +1 points.
+
+Originally, the RUPEE protein structure search focused on full-length matches. 
+If you wanted to search for structures similar to a domain, you could search one of the protein domain classification databases such as SCOPe, CATH, or ECOD.
+On the other hand, if you wanted to search for structures similar to a whole chain, you could search whole chains from the PDB. 
+While the ability of RUPEE to search multiple databases for any given structure is flexible, adding the ability to execute containment searches extends this flexibility.
+Therefore, in addition to searching for full-length matches, RUPEE now supports explicit containment searches for \emph{Contained-In} and \emph{Contains}  relationships.
+
+In the case where we regard the multiset in (\ref{E:rpebag}) as an ordered list of integers, we score containment using the same simplified Needleman-Wunsch \cite{Needleman1970} algorithm we use for full-length similarity with one small change. 
+For containment searches, depending on whether or not the search type is Contained-In or Contains, one of the sides of the dynamic programming matrix is not penalized for the opening gap and end gap.
+This is often referred to as semi-global alignment and was developed in \cite{Brudno2003}. 
+As it turns out, semi-global alignment is a natural fit for containment comparisons as long as the directionality of containment is explicit. 
+
+\subsection*{Top-aligned mode}
 
 Min-hashing \cite{Broder1998} and locality sensitive hashing (LSH) \cite{Indyk1998} are used by RUPEE as described in \cite{Rajaraman2012} to quickly estimate the Jaccard similarity of a query protein against all available structures in the searched database.  
 Min-hashing and LSH still provide the initial filtering for top-aligned mode, introduced in \cite{Ayoub2019}, but are not used in all-aligned mode, which we introduce below.
