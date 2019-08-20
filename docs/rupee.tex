@@ -239,25 +239,136 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget porta er
 
 % Use "Eq" instead of "Equation" for equation citations.
 \section*{Introduction}
-Lorem ipsum dolor sit~\cite{Crick1970} amet, consectetur adipiscing elit. Curabitur eget porta erat. Morbi consectetur est vel gravida pretium. Suspendisse ut dui eu ante cursus gravida non sed sem. Nullam Eq~(\ref{eq:schemeP}) sapien tellus, commodo id velit id, eleifend volutpat quam. Phasellus mauris velit, dapibus finibus elementum vel, pulvinar non tellus. Nunc pellentesque pretium diam, quis maximus dolor faucibus id.~\cite{Crick1970} Nunc convallis sodales ante, ut ullamcorper est egestas vitae. Nam sit amet enim ultrices, ultrices elit pulvinar, volutpat risus.
 
-\begin{eqnarray}
-\label{eq:schemeP}
-	\mathrm{P_Y} = \underbrace{H(Y_n) - H(Y_n|\mathbf{V}^{Y}_{n})}_{S_Y} + \underbrace{H(Y_n|\mathbf{V}^{Y}_{n})- H(Y_n|\mathbf{V}^{X,Y}_{n})}_{T_{X\rightarrow Y}},
-\end{eqnarray}
+[very rough outline of intro]Protein structure is strongly correlated to function. 
+Protein structure prediction is a central unsolved problem in science. 
+Recent advances by alphafold have refocused attention on this problem. 
+Nevertheless, more work has to be done and some thought can be put into tools to assist the process of prediction methods. 
+Protein structure search can be used to debug and guide. 
+Fold identification of prediction outputs. 
 
-\section*{Materials and methods}
-\subsection*{Etiam eget sapien nibh}
+[transition paragraph]We first discuss some related work to provide a context for our approach followed by a description of our method. 
+This is followed by a comparison of results against the mTM-align structure search \cite{Dong2018}, the secondary structure matching (SSM) search \cite{Krissinel2004}, and the CATHEDRAL structural scan \cite{Redfern2007} available at the CATH website.
+To further illustrate the performance of RUPEE, we show top scoring alignments found by RUPEE and not found by any of the other searches we compare against. 
+
+[do i need related work. there is no related work specifically for a search to assist protein structure prediction]
+
+\section*{Methods}
+
+[NOTE: this assumes we have introduced top-aligned mode and all-aligned mode in the introduction]
+
+We first provide an brief outline of our linear encoding of protein structures described in \cite{Ayoub2019}, which still remains at the core of the RUPEE protein structure search. 
+Then, we describe the addition of containment searches, changes to top-aligned mode, and the addition of all-aligned mode, in that order.
+
+\subsection*{Linear encoding of protein structure}
+
+[NOTE: get rid of the bags]
+
+In \cite{Ayoub2019}, we introduced a linear encoding of protein structures based on separable regions of permissible torsion angles. 
+For instance, a $\beta$-turn-$\beta$ motif may be represented as a sequence of residue descriptors similar to that shown below. 
+\begin{gather}\label{E:descrseq} 
+    [\, 5, 5, 5, 5, 5, 5, 7, 5, 11, 11, 5, 5, 5, 5, 5, 5 \,]
+\end{gather}
+
+Next, we derive a multiset of overlapping 3-grams of residue descriptors. 
+This representation is often referred to as shingling and was developed in \cite{Broder1997a}. 
+The overlap between shingles ensures some of the order information within the original sequence is preserved in the bag. 
+
+By shingling, we obtain a multiset of ordered lists from an ordered list of numbers. 
+As an example, the sequence in (\ref{E:descrseq}) becomes the following bag of shingles. 
+\begin{align}\label{E:shinglebag}
+    \begin{split}
+        \{\,&[5, 5, 5], [5, 5, 5], [5, 5, 5], [5, 5, 5], [5, 5, 7] \\
+            & [5, 7, 5], [7, 5, 11], [5, 11, 11], [11, 11, 5], [11, 5, 5] \\
+            & [5, 5, 5], [5, 5, 5], [5, 5, 5], [5, 5, 5] \,\}
+    \end{split}
+\end{align}
+
+Next, each shingle $s$ is hashed to an integer as shown in~(\ref{E:hashdef}). 
+\begin{gather}\label{E:hashdef}
+    s_{hash} = s_1 \times 13^2 + s_2 \times 13 + s_3
+\end{gather}
+
+After hashing, the multiset in (\ref{E:shinglebag}) becomes the following bag of integers.
+\begin{align}\label{E:hashbag}
+    \begin{split}
+    \{\,&915, 915, 915, 915, 917, 941, 1259 \\
+        &999, 2007, 1929, 915, 915, 915, 915 \,\}
+    \end{split}
+\end{align}
+
+The hashing completes the transformation of an ordered list of descriptors to a multiset of integers that still retains some of the order information present in the original list. 
+
+Notice in (\ref{E:hashbag}) the value 915, corresponding to the shingle $[ 5, 5, 5 ]$, occurs frequently indicating the presence of $\beta$-strands. 
+To address this lack of specificity, we introduced a heuristic we called \emph{run position encoding} (RPE), where a run is a consecutive sequence of identical descriptors. 
+To distinguish between short and long runs, thereby increasing the specificity of the shingles, we add a factor of $10^5$ to each shingle hash as a function of the first residue's position in a run. 
+Applied to the bag of integers in (\ref{E:hashbag}) gives
+\begin{align}\label{E:rpebag}
+    \begin{split}
+    \{\,&00915, 10915, 20915, 20915, 10917, 00941, 01259 \\
+        &00999, 02007, 01929, 00915, 10915, 20915, 20915 \,\}
+    \end{split}
+\end{align}
+where the leading zero run factors are shown for clarity. 
+
+The pyramidal approach for the run factors preserves matches at the boundaries between secondary structure runs and loops that would not otherwise be preserved in the presence of differences in run lengths of one or more. 
+
+
+\subsection*{Containment searches}
+
+Originally, the RUPEE protein structure search focused on full-length matches. 
+If you wanted to search for structures similar to a domain, you could search one of the protein domain classification databases such as SCOPe, CATH, or ECOD.
+On the other hand, if you wanted to search for structures similar to a whole chain, you could search whole chains from the PDB. 
+While the ability of RUPEE to search multiple databases for any given structure is flexible, adding the ability to execute containment searches extends this flexibility. 
+
+Introduce NW semiglobal algorithm here refering to list above.
+
+
+
+\subsection*{Top-aligned mode}
+
+Another comparison that is natural follows. Referring to list as bags above. 
+Similarity for a candidate pair of structures $a$ and $b$ can now naturally be defined as the Jaccard similarity \cite{Levan1971} for multisets,
+\begin{align}
+    J(a,b) = \frac{\sum_i min(a_i, b_i)}{\sum_i max(a_i,b_i)}\text{,}
+\end{align}
+where $i$ ranges over all possible shingle hashes $s_i$ and $a_i$ and $b_i$ give the counts of shingle hash $s_i$ in structures $a$ and $b$, respectively. 
+
+Min-hashing \cite{Broder1998} and locality sensitive hashing (LSH) \cite{Indyk1998} are used by RUPEE as described in \cite{Rajaraman2012} to quickly estimate the Jaccard similarity of a query protein against all available structures in the searched database.  
+Min-hashing and LSH still provide the initial filtering for top-aligned mode, introduced in \cite{Ayoub2019}, but are not used in all-aligned mode, which we introduce below.
+
+Since Jaccard similarity is measure of similarity for entire sets, in the context of protein structure search, it is more suitable for full-length searches rather than containment searches. 
+
+While Jaccard similarity is a good similarity score for full-length matches, it does not naturally lends itself to containment comparisons. 
+h
+
+
+Since Jaccard similarity is measure of similarity for entire sets, in the context of protein structure search, it is more suitable for full-length searches rather than containment searches. 
+
+Estimates of Jaccard similarity, a measure of similarity between 2 whole sets.  alone is not appropriate for performing containment searches 
+Given two sequences of run position encoded shingle hashes similar to the multiset shown in (\ref{E:rpebag}) but ordered, we perform a Needleman-Wunsh alignment 
+
+\subsection*{All-aligned mode}
+Nulla mi mi, venenatis sed ipsum varius, volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero.
+
+% Place figure captions after the first paragraph in which they are cited.
+\begin{figure*}[!h]
+\includegraphics{Fig5}
+\caption{{\bf Bold the figure title.}
+Figure caption text here, please use this space for the figure panel descriptions instead of using subfigure commands. A: Lorem ipsum dolor sit amet. B: Consectetur adipiscing elit.}
+\label{fig5}
+\end{figure*}
 
 % For figure citations, please use "Fig" instead of "Figure".
 Nulla mi mi, Fig~\ref{fig1} venenatis sed ipsum varius, volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, \nameref{S1_Video} vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero.
 
 % Place figure captions after the first paragraph in which they are cited.
-\begin{figure}[!h]
+\begin{figure*}[!h]
+\includegraphics{Fig1}
 \caption{{\bf Bold the figure title.}
 Figure caption text here, please use this space for the figure panel descriptions instead of using subfigure commands. A: Lorem ipsum dolor sit amet. B: Consectetur adipiscing elit.}
 \label{fig1}
-\end{figure}
+\end{figure*}
 
 % Results and Discussion can be combined.
 \section*{Results}
@@ -288,6 +399,16 @@ $cell1 row3$ & cell2 row 3 & cell3 row 3 & cell4 row 3 & cell5 row 3 & cell6 row
 \subsubsection*{3rd level heading} 
 Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque. Quisque augue sem, tincidunt sit amet feugiat eget, ullamcorper sed velit. Sed non aliquet felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo justo ac dui pretium imperdiet. Sed suscipit iaculis mi at feugiat. 
 
+% Place figure captions after the first paragraph in which they are cited.
+\begin{figure*}[!h]
+\begin{adjustwidth}{-2.25in}{0in} % Comment out/remove adjustwidth environment if table fits in text column.
+\includegraphics{Fig2}
+\caption{{\bf Bold the figure title.}
+Figure caption text here, please use this space for the figure panel descriptions instead of using subfigure commands. A: Lorem ipsum dolor sit amet. B: Consectetur adipiscing elit.}
+\label{fig2}
+\end{adjustwidth}
+\end{figure*}
+
 \begin{enumerate}
 	\item{react}
 	\item{diffuse free particles}
@@ -308,9 +429,29 @@ Nulla mi mi, venenatis sed ipsum varius, volutpat euismod diam. Proin rutrum vel
 \section*{Discussion}
 Nulla mi mi, venenatis sed ipsum varius, Table~\ref{table1} volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero~\cite{Crick1970}.
 
+% Place figure captions after the first paragraph in which they are cited.
+\begin{figure*}[!h]
+\begin{adjustwidth}{-2.25in}{0in} % Comment out/remove adjustwidth environment if table fits in text column.
+\includegraphics{Fig3}
+\caption{{\bf Bold the figure title.}
+Figure caption text here, please use this space for the figure panel descriptions instead of using subfigure commands. A: Lorem ipsum dolor sit amet. B: Consectetur adipiscing elit.}
+\label{fig3}
+\end{adjustwidth}
+\end{figure*}
+
 \section*{Conclusion}
 
 CO\textsubscript{2} Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque. Quisque augue sem, tincidunt sit amet feugiat eget, ullamcorper sed velit. 
+
+% Place figure captions after the first paragraph in which they are cited.
+\begin{figure*}[!h]
+\begin{adjustwidth}{-2.25in}{0in} % Comment out/remove adjustwidth environment if table fits in text column.
+\includegraphics{Fig4}
+\caption{{\bf Bold the figure title.}
+Figure caption text here, please use this space for the figure panel descriptions instead of using subfigure commands. A: Lorem ipsum dolor sit amet. B: Consectetur adipiscing elit.}
+\label{fig4}
+\end{adjustwidth}
+\end{figure*}
 
 Sed non aliquet felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo justo ac dui pretium imperdiet. Sed suscipit iaculis mi at feugiat. Ut neque ipsum, luctus id lacus ut, laoreet scelerisque urna. Phasellus venenatis, tortor nec vestibulum mattis, massa tortor interdum felis, nec pellentesque metus tortor nec nisl. Ut ornare mauris tellus, vel dapibus arcu suscipit sed. Nam condimentum sem eget mollis euismod. Nullam dui urna, gravida venenatis dui et, tincidunt sodales ex. Nunc est dui, sodales sed mauris nec, auctor sagittis leo. Aliquam tincidunt, ex in facilisis elementum, libero lectus luctus est, non vulputate nisl augue at dolor. For more information, see \nameref{S1_Appendix}.
 
