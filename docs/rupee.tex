@@ -258,7 +258,7 @@ To further illustrate the performance of RUPEE, we show top scoring alignments f
 [NOTE: this assumes we have introduced top-aligned mode and all-aligned mode in the introduction]
 
 We first provide a brief outline of our linear encoding of protein structures described in more detail in \cite{Ayoub2019}, which still remains at the core of the RUPEE protein structure search. 
-Then, we describe the similarity scores we use for the initial filtering of full-length and containment searches, changes to top-aligned mode, and the addition of all-aligned mode, in that order.
+Then, we describe the types of similarity scores used for the initial filtering in the different search modes, the addition of search types, changes to top-aligned mode, and the addition of all-aligned mode, in that order.
 
 \subsection*{Linear encoding of protein structure}
 
@@ -301,7 +301,7 @@ The hashing completes the transformation of an ordered list of residue descripto
 Notice in (\ref{E:hashbag}) the value 915, corresponding to the shingle $[ 5, 5, 5 ]$, occurs frequently indicating the presence of $\beta$-strands. 
 To address this lack of specificity, we introduced a heuristic we call \emph{run position encoding} (RPE), where a run is a consecutive sequence of identical descriptors. 
 To distinguish between short and long runs, thereby increasing the specificity of the shingles, we add a factor of $10^5$ to each shingle hash as a function of the first residue's position in a run. 
-Applied to the multiset of integers in (\ref{E:hashbag}) gives
+Applying to the multiset of integers in (\ref{E:hashbag}) gives
 \begin{align}\label{E:rpebag}
     \begin{split}
     \{\,&00915, 10915, 20915, 20915, 10917, 00941, 01259 \\
@@ -324,13 +324,15 @@ When representing each protein structure using a multiset of integers as shown i
 where $i$ ranges over all possible shingle hashes $s_i$ and $a_i$ and $b_i$ give the counts of shingle hash $s_i$ in structures $a$ and $b$, respectively. 
 In words, the Jaccard similarity is the proportion of matched shingles to the total number of shingles. 
 
-When regarding the multiset in (\ref{E:rpebag}) as an ordered list of integers, we assign a pair of protein structures a full-length similarity score using a simplified Needleman-Wunsch \cite{Needleman1970} algorithm where mismatches and gaps are penalized -1 points and matches are awarded +1 points.
+When regarding the multiset in (\ref{E:rpebag}) as an ordered list of integers, we assign a pair of protein structures a full-length similarity score using a simplified Needleman-Wunsch \cite{Needleman1970} dynamic programming algorithm where mismatches and gaps are penalized -1 points and matches are awarded +1 points.
+
+\subsection*{Search types}
 
 Originally, the RUPEE protein structure search focused on full-length matches. 
 If you wanted to search for structures similar to a domain, you could search one of the protein domain classification databases such as SCOPe, CATH, or ECOD.
 On the other hand, if you wanted to search for structures similar to a whole chain, you could search whole chains from the PDB. 
 While the ability of RUPEE to search multiple databases for any given structure is flexible, adding the ability to execute containment searches extends this flexibility.
-Therefore, in addition to searching for full-length matches, RUPEE now supports explicit containment searches for \emph{Contained-In} and \emph{Contains}  relationships.
+Therefore, RUPEE now supports explicit search types for \emph{Contained-In} and \emph{Contains} searches in addition to the \emph{Full-Length} search type.
 
 In the case where we regard the multiset in (\ref{E:rpebag}) as an ordered list of integers, we score containment using the same simplified Needleman-Wunsch \cite{Needleman1970} algorithm we use for full-length similarity with one small change. 
 For containment searches, depending on whether or not the search type is Contained-In or Contains, one of the sides of the dynamic programming matrix is not penalized for the opening gap and end gap.
@@ -339,9 +341,20 @@ As it turns out, semi-global alignment is a natural fit for containment comparis
 
 \subsection*{Top-aligned mode}
 
-Min-hashing \cite{Broder1998} and locality sensitive hashing (LSH) \cite{Indyk1998} are used by RUPEE as described in \cite{Rajaraman2012} to quickly estimate the Jaccard similarity of a query protein against all available structures in the searched database.  
-Min-hashing and LSH still provide the initial filtering for top-aligned mode, introduced in \cite{Ayoub2019}, but are not used in all-aligned mode, which we introduce below.
+For top-aligned mode, RUPEE uses min-hashing \cite{Broder1998} and locality sensitive hashing (LSH) \cite{Indyk1998} as described in detail in our previous work \cite{Ayoub2019} to quickly estimate the Jaccard similarity of a query protein against all available structures in the searched database.  
+Then, the top scoring 40000 protein structures are obtained based on the Jaccard similarity estimates to complete the initial filtering. 
 
+After the initial filtering, we obtain more accurate similarity scores for the filtered matches using the simplified Needleman-Wunsch algorithm. 
+Here, the dynamic programming matrix for Needleman-Wunsch is scored as described above based on the chosen search type, Contained-In, Contains, or Full-Length. 
+Then, we execute TM-align on the top scoring 8000 matches from Needleman-Wunsch using a reduced number of dynamic programming iterations in the TM-align algorithm. 
+We sort these initial alignments by TM-score and obtain the top 400 matches.
+Finally, we execute TM-align using the default number of dynamic programming iterations on the top 400 matches and return the results sorted by TM-score. 
+
+The filter sizes of 40000, 8000 and 400 have been chosen based on quality of results and speed. 
+We have found that increasing the size of either of these filters results in only marginal improvements in the quality of results. 
+Given that performing pairwise alignments is the most time-consuming aspect of the RUPEE structure search, the marginal improvements gained from larger filter sizes have to be balanced against the number of pairwise alignments performed. 
+
+\subsection*{All-aligned mode}
 Since Jaccard similarity is measure of similarity for entire sets, in the context of protein structure search, it is more suitable for full-length searches rather than containment searches. 
 
 While Jaccard similarity is a good similarity score for full-length matches, it does not naturally lends itself to containment comparisons. 
@@ -352,9 +365,6 @@ Since Jaccard similarity is measure of similarity for entire sets, in the contex
 
 Estimates of Jaccard similarity, a measure of similarity between 2 whole sets.  alone is not appropriate for performing containment searches 
 Given two sequences of run position encoded shingle hashes similar to the multiset shown in (\ref{E:rpebag}) but ordered, we perform a Needleman-Wunsh alignment 
-
-\subsection*{All-aligned mode}
-Nulla mi mi, venenatis sed ipsum varius, volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero.
 
 % Place figure captions after the first paragraph in which they are cited.
 \begin{figure*}[!h]
@@ -432,33 +442,12 @@ Nulla mi mi, venenatis sed ipsum varius, volutpat euismod diam. Proin rutrum vel
 \end{itemize}
 
 \section*{Discussion}
-Nulla mi mi, venenatis sed ipsum varius, Table~\ref{table1} volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero~\cite{Crick1970}.
 
-% Place figure captions after the first paragraph in which they are cited.
-\begin{figure*}[!h]
-\begin{adjustwidth}{-2.25in}{0in} % Comment out/remove adjustwidth environment if table fits in text column.
-\includegraphics{Fig3}
-\caption{{\bf Bold the figure title.}
-Figure caption text here, please use this space for the figure panel descriptions instead of using subfigure commands. A: Lorem ipsum dolor sit amet. B: Consectetur adipiscing elit.}
-\label{fig3}
-\end{adjustwidth}
-\end{figure*}
+Top-aligned is not ideal for containment searches. 
+
 
 \section*{Conclusion}
 
-CO\textsubscript{2} Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque. Quisque augue sem, tincidunt sit amet feugiat eget, ullamcorper sed velit. 
-
-% Place figure captions after the first paragraph in which they are cited.
-\begin{figure*}[!h]
-\begin{adjustwidth}{-2.25in}{0in} % Comment out/remove adjustwidth environment if table fits in text column.
-\includegraphics{Fig4}
-\caption{{\bf Bold the figure title.}
-Figure caption text here, please use this space for the figure panel descriptions instead of using subfigure commands. A: Lorem ipsum dolor sit amet. B: Consectetur adipiscing elit.}
-\label{fig4}
-\end{adjustwidth}
-\end{figure*}
-
-Sed non aliquet felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo justo ac dui pretium imperdiet. Sed suscipit iaculis mi at feugiat. Ut neque ipsum, luctus id lacus ut, laoreet scelerisque urna. Phasellus venenatis, tortor nec vestibulum mattis, massa tortor interdum felis, nec pellentesque metus tortor nec nisl. Ut ornare mauris tellus, vel dapibus arcu suscipit sed. Nam condimentum sem eget mollis euismod. Nullam dui urna, gravida venenatis dui et, tincidunt sodales ex. Nunc est dui, sodales sed mauris nec, auctor sagittis leo. Aliquam tincidunt, ex in facilisis elementum, libero lectus luctus est, non vulputate nisl augue at dolor. For more information, see \nameref{S1_Appendix}.
 
 \section*{Supporting information}
 
