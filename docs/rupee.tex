@@ -240,26 +240,27 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget porta er
 % Use "Eq" instead of "Equation" for equation citations.
 \section*{Introduction}
 
-Determining the structure of a protein is the key to understanding its function [cite]. 
-Current structure determination methods such as X-ray crystallography and nuclear magnetic resonance (NMR) are timing consuming methods. 
-Given the throughput of next gen sequencing methods, physical protein structure determination are unable to keep pace.
-The ability to predict a protein structure from its amino acid sequence would address this problem. 
+Determining the structure of a protein is an important step towards understanding its function.
+Current experimental structure determination methods such as X-ray crystallography and nuclear magnetic resonance (NMR) are resource intensive and timing consuming.
+Given the higher throughput of current sequencing methods, experimental protein structure determination is unable to keep pace.
+Being able to predict a protein structure from its amino acid sequence would address this problem. 
 However, protein structure prediction remains a central unsolved problem in molecular biology. 
 
-CASP is a biannual blind competition for protein structure prediction that started year x. 
-Progress has been slow until the success of coevolutionary methods in contact prediction in CASP11 [cite CASP eval paper].
-Additionally, the recent success of Alphabet's AlphaFold at CASP13 using deep learning combined with coevolutionary methods has refocused interest in the problem. 
-While AlphaFold's contribution was significant, the problem remains largely unsolved and more work remains to be done [cite alquarishi]. 
+CASP is a biannual blind competition for protein structure prediction that began in 1994 \cite{Moult1995}.
+Progress has been slow until the success of coevolutionary methods in contact prediction demonstrated in CASP11 \cite{Moult2016}.
+Now, the recent success of AlphaFold at CASP13 \cite{alq2019} using deep learning combined with coevolutionary methods has refocused interest on the problem. 
+While AlphaFold's performance was remarkable, the problem remains largely unsolved and more work remains to be done \cite{alq2019}. 
 
-In \cite{Ayoub2019} we introduced RUPEE, a purely geometric protein structure search with no dependence sequences, clustering, and precalculate results. 
-We compared our results with the mTM-align structure search \cite{Dong2018}, the secondary structure matching (SSM) search \cite{Krissinel2004}, and the CATHEDRAL structural scan \cite{Redfern2007}, and found RUPEE is equal to or better than the best available structure searches from a benchmark of known protein domains. 
-Additionally, we showed RUPEE on average is able to return results faster than mTM-align and CATHEDRAL. 
+In \cite{Ayoub2019} we introduced RUPEE, a purely geometric protein structure search with no dependence on sequences, clustering, and pre-calculated results. 
+We compared our results with the mTM-align structure search \cite{Dong2018}, the secondary structure matching (SSM) search \cite{Krissinel2004}, and the CATHEDRAL structural scan \cite{Redfern2007}, and found RUPEE is equal to or better than the best available structure searches on a benchmark of known protein domains. 
+Additionally, we showed RUPEE, on average, is able to return results faster than mTM-align and CATHEDRAL. 
 
-Since the release of RUPEE, we have observed that the primary usage pattern for RUPEE has been to upload protein structures that have a very low maximum similarity to other structures in the PDB or any of the domain classifications databases. 
+Since the release of RUPEE, we have observed that the primary usage pattern for RUPEE has been to upload protein structures that have a very low maximum similarity to other structures in the PDB.
 In most cases, these uploaded protein structures are the output of a protein structure prediction protocol. 
-While in \cite{Ayoub2019} we recognized the desirability of a purely geometric protein structure search, we did not anticipate the utility of such a search to aid in development of protein structure prediction protocols. 
-For instance, besides measuring the similarity of a predicted structure to a target structure, it is also natural to determine what known structure a predicted structure resembles most. 
+While in \cite{Ayoub2019} we recognized the desirability of a purely geometric protein structure search, we did not anticipate the utility of such a search to aid in the development of protein structure prediction methods.
+For instance, besides measuring the similarity of a predicted structure to a target structure in order to evaluate a protein structure prediction method in development, it is also natural to determine what known structure a predicted structure resembles most. 
 
+[got here in my second pass]
 Recognizing the need for being able to search on query structures with low maximum similarity to known structures, we have added an additional search mode to RUPEE with increased sensitivity. 
 While top-aligned mode, introduced in \cite{Ayoub2019}, is comparitively good for low similarity searches, the all-aligned mode we introduce below provides a significant improvement over top-aligned mode in that case.  
 In this paper, we again compare RUPEE's results mTM-align, SSM, and CATHEDRAL but this time we do so for all-aligned mode and we derive a benchmark from free-modelling predictions in CASP12. 
