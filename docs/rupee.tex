@@ -246,26 +246,26 @@ Given the higher throughput of current sequencing methods, experimental protein 
 Being able to predict a protein structure from its amino acid sequence would address this problem. 
 However, protein structure prediction remains a central unsolved problem in molecular biology. 
 
-CASP is a biannual blind competition for protein structure prediction that began in 1994 \cite{Moult1995}.
-Progress has been slow until the success of coevolutionary methods in contact prediction demonstrated in CASP11 \cite{Moult2016}.
-Now, the recent success of AlphaFold at CASP13 \cite{alq2019} using deep learning combined with coevolutionary methods has refocused interest on the problem. 
-While AlphaFold's performance was remarkable, the problem remains largely unsolved and more work remains to be done \cite{alq2019}. 
+CASP is a biannual blind competition for protein structure prediction that began in 1994~\cite{Moult1995}.
+Progress has been slow until the success of coevolutionary methods in contact prediction demonstrated in CASP11~\cite{Moult2016}.
+Now, the recent success of AlphaFold at CASP13~\cite{alq2019} using deep learning combined with coevolutionary methods has refocused interest on the problem. 
+While AlphaFold's performance was remarkable, the problem remains largely unsolved and more work remains to be done~\cite{alq2019}. 
 
-In \cite{Ayoub2019} we introduced RUPEE, a purely geometric protein structure search with no dependence on sequences, clustering, or pre-calculated results. 
-We compared our results with the mTM-align structure search \cite{Dong2018}, the secondary structure matching (SSM) search \cite{Krissinel2004}, and the CATHEDRAL structural scan \cite{Redfern2007}, and found RUPEE is equal to or better than the best available structure searches on a benchmark of known protein domains. 
+In~\cite{Ayoub2019} we introduced RUPEE, a purely geometric protein structure search with no dependence on sequences, clustering, or pre-calculated results. 
+We compared our results with the mTM-align structure search~\cite{Dong2018}, the secondary structure matching (SSM) search~\cite{Krissinel2004}, and the CATHEDRAL structural scan~\cite{Redfern2007}, and found RUPEE is equal to or better than the best available structure searches on a benchmark of known protein domains. 
 Additionally, we showed RUPEE, on average, is able to return results faster than mTM-align and CATHEDRAL. 
 
 Since the release of RUPEE, we have observed that the primary usage for RUPEE has been for uploaded protein structures that have a low maximum similarity to other structures in the PDB.
 In most cases, these uploaded protein structures are the output of a protein structure prediction method. 
-While in \cite{Ayoub2019} we recognized the desirability of a purely geometric protein structure search, we did not anticipate the utility of such a search to aid in the development of protein structure prediction methods.
+While in~\cite{Ayoub2019} we recognized the desirability of a purely geometric protein structure search, we did not anticipate the utility of such a search to aid in the development of protein structure prediction methods.
 For instance, besides measuring the similarity of a predicted structure to a target structure in order to evaluate a protein structure prediction method in development, it is also natural to determine what known structures a predicted structure resembles most. 
 
 Recognizing the need to search on structures with low maximum similarity to known structures, we have added an additional search mode to RUPEE with increased sensitivity. 
-While top-aligned mode, introduced in \cite{Ayoub2019}, is also good for low similarity searches, the all-aligned mode we introduce below is a significant improvement over top-aligned mode in that case.  
+While top-aligned mode, introduced in~\cite{Ayoub2019}, is also good for low similarity searches, the all-aligned mode we introduce below is a significant improvement over top-aligned mode in that case.  
 
 In this paper, we again compare the results of RUPEE against mTM-align, SSM, and CATHEDRAL, but this time we do so for all-aligned mode.
 Furthermore, we derive a new benchmark for comparisons from protein structure predictions for free-modelling targets in CASP12 available at the CASP web site. 
-Whereas in \cite{Ayoub2019} we showed that RUPEE is equal or better than those we compared to for a benchmark of known protein structures, here we show that RUPEE, in all-aligned mode, is clearly better than those we compare to using a benchmark drawn from the structures output by protein structure prediction methods. 
+Whereas in~\cite{Ayoub2019} we showed that RUPEE is equal or better than those we compared to for a benchmark of known protein structures, here we show that RUPEE, in all-aligned mode, is clearly better than those we compare to using a benchmark drawn from the structures output by protein structure prediction methods. 
 
 Originally, the RUPEE protein structure search focused on full-length matches. 
 If you wanted to search for structures similar to a domain, you could search one of the protein domain classification databases such as SCOPe, CATH, or ECOD.
@@ -275,66 +275,14 @@ Therefore, RUPEE now supports explicit search types for \emph{Contained-In} and 
 
 Together, all-aligned mode and containment searches are significant additions to RUPEE that increase its utility and further demonstrates the advantage of a purely geometric protein structure search with no dependence on sequences, clustering, or pre-calculated results.
 
-\section*{Related work}
-
-Pairwise alignment involves finding a set of spatial rotations and translations for two protein structures that minimizes a distance metric. 
-Traditionally, the root mean squared deviation (RMSD) between \cas of aligned residues is minimized.
-However, the RMSD score does not factor in the distance between unaligned residues nor does it consider the percentage of aligned residues, that is, alignment \emph{coverage}. 
-RMSD scores also have some dependence on the length of the aligned proteins. 
-On the other hand, the TM-score \cite{Zhang2004} takes all residues into account and normalizes for both coverage and length of the aligned proteins. 
-For this reason, TM-score is frequently used in the assessment of protein structure alignments. 
-
-Pairwise alignments often favor accuracy over speed because the typical use case of aligning one protein structure to another does not impose tight response time requirements. 
-On the other hand, a protein structure search can involve thousands of comparisons and accuracy is often balanced against speed. 
-In this case, pairwise alignment is still useful for evaluating the results of a search, and this is the approach we take. 
-
-For pairwise alignment, Combinatorial Extensions (CE) \cite{Shindyalov1998} and FATCAT \cite{Ye2003} are among the most popular tools, representing rigid and flexible protein alignments, respectively. 
-CE performs a rigid alignment in order to minimize RMSD and FATCAT allows for a constrained number of twists in the protein chain in order to find a more flexible alignment before minimizing RMSD.
-
-Besides CE and FATCAT, TM-align \cite{Zhang2005} and DALI \cite{Sander1995} are pairwise alignment tools also in wide use, both offering their own distinct approaches to structure alignment. 
-TM-align uses a rotation matrix designed to maximize the TM-score rather than minimizing the RMSD along with dynamic programming to find the best full-length alignment. 
-DALI compares intramolecular distance matrices between two proteins to find a consistent set of matched submatrices that is used to align the proteins. 
-
-Of the pairwise alignment tools, CE, FATCAT, TM-align and DALI, we have found TM-align is the fastest while also providing high-quality pairwise structure alignments. 
-It is for this reason that we use TM-align for RUPEE.
-
-Whereas pairwise structure alignments only depend on the sequence of \ca coordinates, protein structure searches often introduce a further dependence on the sequence order of amino acids.
-This approach often takes the form of clustering proteins based on sequences and pre-calculating results for pairwise alignments among cluster representatives. 
-Then, these pre-calculated results are used for filtering the number of structures used for comparisons against a query protein.
-The exact formula for combining the use of representatives and pre-calculated results varies from system to system.
-However, all systems using this approach share the same disadvantage, an indirect dependence on amino acid sequences. 
-In the absence of a reliance on sequence representatives and pre-calculated results, and without sacrificing accuracy, response times suffer greatly, often taking upwards of an hour for queries to complete. 
-
-For protein structure searches, VAST \cite{Gilbrat1996} and the FATCAT server \cite{Ye2004} are among the most popular. 
-Nonetheless, these searches are slow in comparison to the structure searches we compare to in this paper, mTM, SSM, and CATHEDRAL, when pre-calculated results are not used. 
-If given a known protein domain, VAST can return structural neighbors in seconds using pre-calculated results. 
-However, if uploading a PDB file where pre-calculated results are not used, response times for VAST can exceed 30 minutes. 
-Similarly, the FATCAT server, that does not use pre-calculated results, can take over an hour to send results for a search against PDB-90 representatives \cite{Prlic2010}. 
-
-DALI also provides a heuristic structure search \cite{Holm2010} of whole chains found in the PDB in addition to a tool for pairwise structure alignments using distance matrices as discussed above. 
-In the case of searching, DALI first identifies matched PDB-90 representatives and then walks a pre-calculated graph of structural similarities to identify further matches in the PDB to gradually build up the set of structures similar to the query structure. 
-DALI is slow in comparison to SSM, and mTM has shown better quality results than DALI \cite{Dong2018}.
-
-[Note: add how the need for protein structure prediction is needed extra accuracy. ]
-
-
-Given the above, there remains a need for a purely geometric protein structure search.
-For the serendipitous exploration of relations between protein structures performed in the trenches, this search should be fast. 
-Moreover, with a $~10\%$ yearly growth rate of solved structures deposited in the PDB \cite{gkw1000}, this search should be scalable. 
-At a minimum, RUPEE takes a significant step in this direction as will be shown below. 
-
-These requirements were satisifed in \cite{Ayoub2019}. However, this is also a need for higher sensitivity / greater accuracy when it comes to protein structure prediciton output and protein design.  
-
 \section*{Methods}
 
-[NOTE: this assumes we have introduced top-aligned mode and all-aligned mode in the introduction]
-
-We first give a brief outline of our linear encoding of protein structures described in more detail in \cite{Ayoub2019}, which still remains at the core of the RUPEE protein structure search. 
-Then, we describe the types of similarity scores used for the initial filtering in the different search modes, the addition of search types, changes to top-aligned mode, and the addition of all-aligned mode, in that order.
+We first give a brief outline of our linear encoding of protein structures described in more detail in~\cite{Ayoub2019}, which still remains at the core of the RUPEE protein structure search. 
+Then, we describe the types of similarity scores and pairwise alignments used by RUPEE, changes to top-aligned mode, and the addition of all-aligned mode, in that order.
 
 \subsection*{Linear encoding of protein structure}
 
-In \cite{Ayoub2019}, we introduced a linear encoding of protein structures.
+In~\cite{Ayoub2019}, we introduced a linear encoding of protein structures.
 For each pair of torsion angles combined with their secondary structure assignment, we assign an integer we refer to as a residue descriptor.
 For instance, a $\beta$-turn-$\beta$ motif may be represented as a sequence of residue descriptors, similar to that shown below. 
 \begin{gather}\label{E:descrseq} 
@@ -342,7 +290,7 @@ For instance, a $\beta$-turn-$\beta$ motif may be represented as a sequence of r
 \end{gather}
 
 Next, we derive a multiset of overlapping 3-grams of residue descriptors. 
-This representation is often referred to as shingling and was developed in \cite{Broder1997a}. 
+This representation is often referred to as shingling and was developed in~\cite{Broder1997a}. 
 The overlap between shingles ensures some of the order information within the original sequence is preserved in the multiset. 
 
 By shingling, we obtain a multiset of ordered lists from an ordered list of residue descriptors. 
@@ -384,36 +332,47 @@ where the leading zero run factors are shown for clarity.
 
 The pyramidal approach for the run factors preserves matches at the boundaries between secondary structure runs and loops that would not otherwise be preserved in the presence of differences in run lengths of one or more. 
 
-\subsection*{Similarity scores}
+\subsection*{Similarity scores and alignments}
 
-In one case, RUPEE uses the multiset-of-integers representation of protein structures as shown in (\ref{E:rpebag}), and in another case RUPEE regards this multiset as an ordered list of integers.  
-We describe the context in which these cases occur in subsequent sections below, but first, we discuss the similarity scores that RUPEE uses for each representation. 
+For both top-aligned mode and all-aligned mode, the final step in a structure search is to run pairwise structure alignments between the query structure and each matched result and return them in sorted order. 
+However, before this final step, a few different filtering methods are used to pick the candidates for pairwise structure alignments.
+Here, we describe the filtering methods in order of increasing complexity and end with a description of what alignment tool RUPEE uses for pairwise structure alignments. 
 
-When representing each protein structure using a multiset of integers as shown in (\ref{E:rpebag}), full-length similarity for a candidate pair of structures $a$ and $b$ is defined using the Jaccard similarity \cite{Levan1971} for multisets,
+When representing each protein structure using a multiset of integers as shown in (\ref{E:rpebag}), full-length similarity for a candidate pair of structures $a$ and $b$ is defined using the Jaccard similarity~\cite{Levan1971} for multisets,
 \begin{align}
     J(a,b) = \frac{\sum_i min(a_i, b_i)}{\sum_i max(a_i,b_i)}\text{,}
 \end{align}
 where $i$ ranges over all possible shingle hashes $s_i$ and $a_i$ and $b_i$ give the counts of shingle hash $s_i$ in structures $a$ and $b$, respectively. 
-In words, the Jaccard similarity is the proportion of matched shingles to the total number of shingles. 
+Determining the Jaccard similarity between two structures represented as multisets is very fast but is too coarse-grained a comparison to be of any greater use than as a first-pass filtering method. 
 
-When regarding the multiset in (\ref{E:rpebag}) as an ordered list of integers, we assign a pair of protein structures a full-length similarity score using a simplified Needleman-Wunsch \cite{Needleman1970} dynamic programming algorithm where mismatches and gaps are penalized -1 points and matches are awarded +1 points.
-
-\subsection*{Search types}
-
-Originally, the RUPEE protein structure search focused on full-length matches. 
-If you wanted to search for structures similar to a domain, you could search one of the protein domain classification databases such as SCOPe, CATH, or ECOD.
-On the other hand, if you wanted to search for structures similar to a whole chain, you could search whole chains from the PDB. 
-While the ability of RUPEE to search multiple databases for any given structure is flexible, adding the ability to execute containment searches extends this flexibility.
-Therefore, RUPEE now supports explicit search types for \emph{Contained-In} and \emph{Contains} searches in addition to the \emph{Full-Length} search type.
-
-In the case where we regard the multiset in (\ref{E:rpebag}) as an ordered list of integers, we score containment using the same simplified Needleman-Wunsch \cite{Needleman1970} algorithm we use for full-length similarity with one small change. 
+When regarding the multiset in (\ref{E:rpebag}) as an ordered list of integers, we assign a pair of protein structures a full-length similarity score using a simplified Needleman-Wunsch~\cite{Needleman1970} sequence alignment algorithm where mismatches and gaps are penalized -1 points and matches are awarded +1 points.
 For containment searches, depending on whether or not the search type is Contained-In or Contains, one of the sides of the dynamic programming matrix is not penalized for the opening gap and end gap.
-This is often referred to as semi-global alignment and was developed in \cite{Brudno2003}. 
-As it turns out, semi-global alignment is a natural fit for containment comparisons as long as the directionality of containment is explicit. 
+This is often referred to as semi-global sequence alignment and was developed in~\cite{Brudno2003}. 
+The relative order of scores for protein structure comparisons using this method is more accurate than the rough similarity estimates provided by the Jaccard similarity and are still very fast to perform. 
+However, they are still only suitable for coarse-grained filtering. 
+
+Pairwise structure alignment, the most accurate method for comparing protein structures, involves finding a set of spatial rotations and translations for two protein structures that minimizes a distance metric. 
+Traditionally, the root mean squared deviation (RMSD) between \cas of aligned residues is minimized.
+However, the RMSD score does not factor in the distance between unaligned residues nor does it consider the percentage of aligned residues, that is, alignment \emph{coverage}. 
+RMSD scores also have some dependence on the length of the aligned proteins. 
+On the other hand, the TM-score~\cite{Zhang2004} takes all residues into account and normalizes for both coverage and length of the aligned proteins. 
+For this reason, TM-score is frequently used in scoring protein structure alignments and accordingly, we use it for sorting the final results provided by RUPEE.
+
+RUPEE uses TM-align~\cite{Zhang2005} for performing pairwise structure alignments.
+TM-align uses a rotation matrix designed to maximize the TM-score rather than minimizing the RMSD along with dynamic programming to find the best alignment. 
+In addition to using global or semi-global sequence alignment with the Needleman-Wunsch algorithm, for full-length and containment search types respectively, we apply the same logic to how normalization is used in the TM-align algorithm in order for it to be compatible with the initial filtering methods.
+For the Full-Length searches we normalize by the average length of both structures, for Contained-In searches we normalize by the query structure and for Contains searches we normalize by the matched structure.
+The 3 types of normalization available in TM-align and how they affect searches are discussed in greater detail in the results section of~\cite{Ayoub2019}.
+
+RUPEE makes use of the TM-align algorithm in a few different context during a search depending on the search mode and type. 
+These differents usages of TM-align will be discussed below as they occur. 
+ed in more detail below in the context in which it is used. 
+
+[got here]
 
 \subsection*{Top-aligned mode}
 
-For top-aligned mode, RUPEE uses min-hashing \cite{Broder1998} and locality sensitive hashing (LSH) \cite{Indyk1998} as described in detail in our previous work \cite{Ayoub2019} to quickly estimate the Jaccard similarity of a query protein against all available structures in the searched database.  
+For top-aligned mode, RUPEE uses min-hashing~\cite{Broder1998} and locality sensitive hashing (LSH)~\cite{Indyk1998} as described in detail in our previous work~\cite{Ayoub2019} to quickly estimate the Jaccard similarity of a query protein against all available structures in the searched database.  
 Then, the top scoring 40000 protein structures are obtained based on the Jaccard similarity estimates to complete the initial filtering. 
 
 After the initial filtering, we obtain more accurate similarity scores for the filtered matches using the simplified Needleman-Wunsch algorithm. 
@@ -424,7 +383,7 @@ Finally, we execute TM-align using the default number of dynamic programming ite
 
 In addition to using global or semi-global alignment with the Needleman-Wunsch algorithm, for full-length and containment search types respectively, we also apply the same logic to how normalization is used in the TM-align algorithm. 
 For the Full-Length searches we normalize by the average length of both structures, for Contained-In searches we normalize by the query structure and for Contains searches we normalize by the matched structure.
-The 3 types of normalization available in TM-align and how they affect searches are discussed in greater detail in the results section of \cite{Ayoub2019}.
+The 3 types of normalization available in TM-align and how they affect searches are discussed in greater detail in the results section of~\cite{Ayoub2019}.
 
 The filter sizes of 40000, 8000 and 400 have been chosen based on quality of results and speed. 
 We have found that increasing the size of either of these filters results in only marginal improvements in the quality of results. 
@@ -432,7 +391,7 @@ Given that performing pairwise alignments is the most time-consuming aspect of t
 
 \subsection*{All-aligned mode}
 
-While top-aligned search mode may be sufficient for searching for known protein structures, as was shown in \cite{Ayoub2019} and will also be reinforced below, the need for greater sensitivity arises when searching with structures output from protein structure prediction protocols, where the resultant structure may only have a maximum TM-score of less than 0.50 when compared against all available structures.
+While top-aligned search mode may be sufficient for searching for known protein structures, as was shown in~\cite{Ayoub2019} and will also be reinforced below, the need for greater sensitivity arises when searching with structures output from protein structure prediction protocols, where the resultant structure may only have a maximum TM-score of less than 0.50 when compared against all available structures.
 Furthermore, for top-aligned mode, the initial filtering is based on full-length matches using the Jaccard similarities, which is not suitable for containment searches. We address both of these concerns by the addition of all-aligned mode. 
 
 The first difference between all-aligned and top-aligned modes is that all-aligned modes skips the min-hashing and LSH step. 
