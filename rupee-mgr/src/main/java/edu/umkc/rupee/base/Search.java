@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
@@ -31,6 +32,7 @@ import edu.umkc.rupee.lib.Db;
 import edu.umkc.rupee.lib.Grams;
 import edu.umkc.rupee.lib.Hashes;
 import edu.umkc.rupee.lib.LCS;
+import edu.umkc.rupee.lib.Similarity;
 import edu.umkc.rupee.tm.TmAlign;
 import edu.umkc.rupee.tm.TmMode;
 import edu.umkc.rupee.tm.TmResults;
@@ -38,6 +40,7 @@ import edu.umkc.rupee.tm.TmResults;
 public abstract class Search {
 
     private static int INITIAL_FILTER = 8000;
+    private static int FINAL_FILTER = 8000;
 
     // *********************************************************************
     // Abstract Methods 
@@ -82,20 +85,41 @@ public abstract class Search {
                
             if (criteria.searchMode != SearchMode.ALL_ALIGNED) {
 
-                // initial filtering based on simple LCS 
-                records = IntStream.range(0, Constants.SPLIT_COUNT).boxed().parallel()
-                    .flatMap(splitIndex -> gramsSplit(splitIndex, criteria, grams1, false).stream())
+                // parallel band match searches to gather lsh candidates
+                records = IntStream.range(0, Constants.BAND_CHECK_COUNT).boxed().parallel()
+                    .flatMap(bandIndex -> searchBand(bandIndex, criteria, hashes1).stream())
                     .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
                     .limit(INITIAL_FILTER) 
+                    .collect(Collectors.toList());
+              
+                // cache map of residue grams
+                List<String> dbIds = records.stream().map(SearchRecord::getDbId).collect(Collectors.toList());
+                Map<String, Grams> map = Db.getGrams(dbIds, criteria.searchDbType);
+
+                // parallel lcs algorithm
+                records.parallelStream()
+                    .forEach(record -> {
+
+                        if (map.containsKey(record.getDbId())) {
+                            Grams grams2 = map.get(record.getDbId());
+                            double score = LCS.getLCSScore(grams1.getGramsAsList(), grams2.getGramsAsList(), criteria.searchType);
+                            record.setSimilarity(score);
+                        }
+                    });
+
+                // sort lcs candidates
+                records = records.stream()
+                    .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
+                    .limit(FINAL_FILTER) 
                     .collect(Collectors.toList());
             } 
             else {
 
                 // initial filtering based on simple LCS plus tm-align on aligned descriptors
                 records = IntStream.range(0, Constants.SPLIT_COUNT).boxed().parallel()
-                    .flatMap(splitIndex -> gramsSplit(splitIndex, criteria, grams1, true).stream())
+                    .flatMap(splitIndex -> gramsSplit(splitIndex, criteria, grams1).stream())
                     .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
-                    .limit(INITIAL_FILTER) 
+                    .limit(FINAL_FILTER) 
                     .collect(Collectors.toList());
             }
 
@@ -271,7 +295,7 @@ public abstract class Search {
         }
     }
 
-    private List<SearchRecord> gramsSplit(int splitIndex, SearchCriteria criteria, Grams grams1, boolean lcsPlus) {
+    private List<SearchRecord> gramsSplit(int splitIndex, SearchCriteria criteria, Grams grams1) {
 
         List<SearchRecord> records = new ArrayList<>();
 
@@ -298,31 +322,16 @@ public abstract class Search {
                     if ((grams1.getLength() < Math.floorDiv(grams2.getLength(), 3)) || (grams2.getLength() < Math.floorDiv(grams1.getLength(), 3))) {
                         continue;
                     }
-                    if (lcsPlus) {
-                        similarity = LCS.getLCSPlusScore(grams1, grams2, criteria.searchType);
-                    }
-                    else {
-                        similarity = LCS.getLCSScore(grams1.getGramsAsList(), grams2.getGramsAsList(), criteria.searchType);
-                    }
+                    similarity = LCS.getLCSPlusScore(grams1, grams2, criteria.searchType);
                 }            
                 else if (criteria.searchType == SearchType.CONTAINED_IN) {
-                    if (lcsPlus) {
-                        similarity = LCS.getLCSPlusScore(grams1, grams2, criteria.searchType);
-                    }
-                    else {
-                        similarity = LCS.getLCSScore(grams1.getGramsAsList(), grams2.getGramsAsList(), criteria.searchType);
-                    }
+                    similarity = LCS.getLCSPlusScore(grams1, grams2, criteria.searchType);
                 }
                 else {
                     if (grams2.getLength() < Math.floorDiv(grams1.getLength(), 3)) {
                         continue;
                     }
-                    if (lcsPlus) {
-                        similarity = LCS.getLCSPlusScore(grams1, grams2, criteria.searchType);
-                    }
-                    else {
-                        similarity = LCS.getLCSScore(grams1.getGramsAsList(), grams2.getGramsAsList(), criteria.searchType);
-                    }
+                    similarity = LCS.getLCSPlusScore(grams1, grams2, criteria.searchType);
                 }
 
                 SearchRecord record = getSearchRecord();
@@ -331,6 +340,56 @@ public abstract class Search {
                 record.setSortKey(sortKey);
                 record.setSimilarity(similarity);
                 records.add(record);
+            }
+
+            rs.close();
+            stmt.close();
+            conn.close();
+
+        } catch (SQLException e) {
+            Logger.getLogger(Search.class.getName()).log(Level.SEVERE, null, e);
+        } 
+
+        return records;
+    }
+
+    private List<SearchRecord> searchBand(int bandIndex, SearchCriteria criteria, Hashes hashes1) {
+
+        List<SearchRecord> records = new ArrayList<>();
+
+        try {
+   
+            // *** LSH band matches
+            
+            PGSimpleDataSource ds = Db.getDataSource();
+
+            Connection conn = ds.getConnection();
+            conn.setAutoCommit(false);
+
+            PreparedStatement stmt = getBandSearchStatement(criteria, bandIndex, conn);
+            
+            ResultSet rs = stmt.executeQuery();
+            while(rs.next()) {
+
+                String dbId = rs.getString("db_id");
+                String pdbId = rs.getString("pdb_id");
+                String sortKey = rs.getString("sort_key");
+                Integer[] minHashes = (Integer[])rs.getArray("min_hashes").getArray();
+                Integer[] bandHashes = (Integer[])rs.getArray("band_hashes").getArray();
+                
+                if(!lowerBandMatch(hashes1.bandHashes, bandHashes, bandIndex)) {
+                   
+                    double similarity = Similarity.getEstimatedSimilarity(hashes1.minHashes, minHashes); 
+                    if (similarity >= Constants.SIMILARITY_THRESHOLD) {
+
+                        SearchRecord record = getSearchRecord();
+                        record.setDbId(dbId);
+                        record.setPdbId(pdbId);
+                        record.setSortKey(sortKey);
+                        record.setSimilarity(similarity);
+                        records.add(record);
+                    }
+                }
             }
 
             rs.close();
@@ -382,5 +441,23 @@ public abstract class Search {
         } catch (SQLException e) {
             Logger.getLogger(Search.class.getName()).log(Level.SEVERE, null, e);
         } 
+    }
+    
+    // *********************************************************************
+    // Static Methods
+    // *********************************************************************
+
+    private static boolean lowerBandMatch(Integer[] bands1, Integer[] bands2, int bandIndex) {
+
+        // use this function in case of distributed system to eliminate intermediate results up front
+
+        boolean match = false; 
+        for (int i = 0; i < bandIndex; i++) {
+           if (bands1[i].equals(bands2[i])) {
+                match = true;
+                break;
+           }
+        }
+        return match;
     }
 }
