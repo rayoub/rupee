@@ -6,8 +6,8 @@ source('scoring.R')
 
 grid_arrange_shared_legend <-
   function(...,
-           ncol = 2,
-           nrow = 2,
+           ncol = 3,
+           nrow = 1,
            position = c("bottom", "right")) {
     
     plots <- list(...)
@@ -43,13 +43,6 @@ mtm_plot_d144 <- get_scoring_plot(
         c(1, 10),
         seq(1,10)
 )
-mtm_plot_d34 <- get_scoring_plot(
-        'vs. mTM (casp_mtm_d34)',
-        'scoring_mtm_d34.txt',
-        c('RUPEE All-Aligned','mTM'), 
-        c(1, 100),
-        c(1, seq(10, 100, by = 10))
-)
 ssm_plot <- get_scoring_plot(
         'vs. SSM (casp_ssm_d149)',
         'scoring_ssm_d149.txt',
@@ -65,7 +58,7 @@ cathedral_plot <- get_scoring_plot(
         c(1, seq(10, 100, by = 10))
 )
 
-combined <- grid_arrange_shared_legend(mtm_plot_d144, mtm_plot_d34, ssm_plot, cathedral_plot)
+combined <- grid_arrange_shared_legend(mtm_plot_d144, ssm_plot, cathedral_plot)
 
-ggsave('combined_scoring.eps', plot = combined, width = 4, height = 3.5)
+ggsave('combined_scoring.eps', plot = combined, width = 7.5, height = 2.25, dpi = 300)
 

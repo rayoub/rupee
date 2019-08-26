@@ -49,5 +49,5 @@ plot_2 <- get_scoring_plot(
 
 combined <- grid_arrange_shared_legend(plot_1, plot_2)
 
-ggsave('combined_scoring_rupee.eps', plot = combined, width = 4, height = 2.5)
+ggsave('combined_scoring_rupee.eps', plot = combined, width = 5.2, height = 2.25, dpi = 300)
 
