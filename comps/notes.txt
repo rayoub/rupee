@@ -17,6 +17,8 @@ rs_best_score | 0.5765419023698114
 s_best_match  | d1v3za_
 s_best_score  | 0.31186185532486516
 
+description: 
+	Demonstrate one full-length match
 pdb entry:
 alignment text:
 
@@ -48,7 +50,11 @@ rs_best_score | 0.37080353716230696
 s_best_match  | d1xawa1
 s_best_score  | 0.23905862269597936
 
-pdb entry:
+description:
+	A large tangle of crossing alpha-helices that demonstrates containment search. 
+	This one demonstrates the lack of full-length matches as well but the containment
+	is not quite as strong as the last one below. 
+xpdb entry:
 alignment text:
 	Name of Chain_1: upload
 	Name of Chain_2: 6afxA
@@ -149,6 +155,10 @@ rs_best_score | 0.48687651369452933
 s_best_match  | d2iola1
 s_best_score  | 0.39400778696692806
 
+description:
+	This demonstrates containment. If I have to choose one that demonstrates
+	containment this one is more interesting because full-length matches don't appear
+	to exist in pdb or domain databases. I should verify this with SCOP 2.07
 pdb entry:
 alignment text:
 	Name of Chain_1: upload
@@ -170,7 +180,6 @@ alignment text:
 	TM-score= 0.84164 (if normalized by length of Chain_1)
 	TM-score= 0.34146 (if normalized by length of Chain_2)
 	TM-score= 0.48492 (if normalized by average length of chains)
-
 
 
 
