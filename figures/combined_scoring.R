@@ -51,7 +51,7 @@ ssm_plot <- get_scoring_plot(
         c(1, seq(10, 100, by = 10))
 )
 cathedral_plot <- get_scoring_plot(
-        'vs. CATHEDRAL (casp_cath_d149)',
+        'vs. CATHEDRAL (casp_cathedral_d149)',
         'scoring_cathedral_d149.txt',
         c('RUPEE All-Aligned','CATHEDRAL'), 
         c(1, 100),
