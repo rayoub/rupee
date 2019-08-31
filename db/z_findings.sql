@@ -126,11 +126,22 @@ SELECT
 FROM
     comps
 WHERE
+    (
+    rm_diff > 0.05
+    AND rc_diff > 0.05
+    AND rs_diff > 0.05
+    )
+    OR
+    (
+    rm_diff > 0.15
+    AND (m_best_score > (GREATEST(c_best_score, s_best_score) + 0.20))
+    )
+/*WHERE
     db_id_1 IN (
         'T0859-D1-BAKER-ROSETTASERVER',
         'T0866-D1-RaptorX',
         'T0918-D1-BAKER-ROSETTASERVER',
         'T0918-D3-MULTICOM-NOVEL'
-    )
+    )*/
 ORDER BY
     db_id_1;
