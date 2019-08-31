@@ -64,7 +64,7 @@ cath_res AS
     SELECT DISTINCT
         c.db_id_1 AS c_db_id_1,
         first_value(c.db_id_2) OVER (PARTITION BY c.db_id_1 ORDER BY s.tm_avg_tm_score DESC) AS c_best_match,
-        first_value(s.tm_q_tm_score) OVER (PARTITION BY c.db_id_1 ORDER BY s.tm_avg_tm_score DESC) AS c_best_score
+        first_value(s.tm_avg_tm_score) OVER (PARTITION BY c.db_id_1 ORDER BY s.tm_avg_tm_score DESC) AS c_best_score
     FROM
         cathedral_result c
         INNER JOIN alignment_scores s
@@ -79,7 +79,7 @@ ssm_res AS
     SELECT DISTINCT
         r.db_id_1 AS s_db_id_1,
         first_value(r.db_id_2) OVER (PARTITION BY r.db_id_1 ORDER BY s.tm_avg_tm_score DESC) AS s_best_match,
-        first_value(s.tm_q_tm_score) OVER (PARTITION BY r.db_id_1 ORDER BY s.tm_avg_tm_score DESC) AS s_best_score
+        first_value(s.tm_avg_tm_score) OVER (PARTITION BY r.db_id_1 ORDER BY s.tm_avg_tm_score DESC) AS s_best_score
     FROM
         ssm_result r
         INNER JOIN alignment_scores s
@@ -128,12 +128,7 @@ FROM
 WHERE
     db_id_1 IN (
         'T0859-D1-BAKER-ROSETTASERVER',
-        'T0863-D2-MULTICOM-NOVEL',
-        'T0863-D2-QUARK',
         'T0866-D1-RaptorX',
-        'T0870-D1-RaptorX',
-        'T0904-D1-RaptorX',
-        'T0904-D1-Zhang-Server',
         'T0918-D1-BAKER-ROSETTASERVER',
         'T0918-D3-MULTICOM-NOVEL'
     )
