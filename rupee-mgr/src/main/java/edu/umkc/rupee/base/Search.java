@@ -39,7 +39,7 @@ import edu.umkc.rupee.tm.TmResults;
 
 public abstract class Search {
 
-    private static int INITIAL_FILTER = 8000;
+    private static int INITIAL_FILTER = 40000;
     private static int FINAL_FILTER = 8000;
 
     // *********************************************************************
