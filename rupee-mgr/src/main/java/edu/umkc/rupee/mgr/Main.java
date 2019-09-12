@@ -51,6 +51,7 @@ import edu.umkc.rupee.lib.Aligning;
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
 import edu.umkc.rupee.lib.DbId;
+import edu.umkc.rupee.lib.Dump;
 import edu.umkc.rupee.lib.Grams;
 import edu.umkc.rupee.lib.Hashes;
 import edu.umkc.rupee.lib.LCS;
@@ -782,6 +783,7 @@ public class Main {
 
     private static void option_d(CommandLine line) throws Exception {
 
+        Dump.dumpCossackCoords();
         /*
         SSMUploadDriver driver = new SSMUploadDriver();
 

@@ -14,6 +14,9 @@ public class Residue {
     private float x;
     private float y;
     private float z;
+    private float nX;
+    private float nY;
+    private float nZ;
     private double phi;
     private double psi;
     private int descriptor;
@@ -108,6 +111,30 @@ public class Residue {
 
     public void setZ(float z) {
         this.z = z;
+    }
+
+    public float getNX() {
+        return nX;
+    }
+
+    public void setNX(float nX) {
+        this.nX = nX;
+    }
+
+    public float getNY() {
+        return nY;
+    }
+
+    public void setNY(float nY) {
+        this.nY = nY;
+    }
+
+    public float getNZ() {
+        return nZ;
+    }
+
+    public void setNZ(float nZ) {
+        this.nZ = nZ;
     }
 
     public double getPhi() {
