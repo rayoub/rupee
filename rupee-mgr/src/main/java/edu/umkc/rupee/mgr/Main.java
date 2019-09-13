@@ -138,6 +138,9 @@ public class Main {
             option_help(options);
             return;
         }
+
+        System.out.println("Press Enter to Continue");
+        System.console().readLine();
        
         // allow for debug 
         // System.console().readLine("Press Enter Before Continuing> ");
@@ -297,12 +300,12 @@ public class Main {
 
             DbType dbType1 = DbId.getIdDbType(dbId1);
             hashes1 = Db.getHashes(dbId1, dbType1);
-            grams1 = Db.getGrams(dbId1, dbType1);
+            grams1 = Db.getGrams(dbId1, dbType1, true);
         }
         
         DbType dbType2 = DbId.getIdDbType(dbId2);
         Hashes hashes2 = Db.getHashes(dbId2, dbType2);
-        Grams grams2 = Db.getGrams(dbId2, dbType2);
+        Grams grams2 = Db.getGrams(dbId2, dbType2, true);
 
         if (hashes1 != null && hashes2 != null) {
 
@@ -366,12 +369,12 @@ public class Main {
 
             DbType dbType1 = DbId.getIdDbType(dbId1);
             hashes1 = Db.getHashes(dbId1, dbType1);
-            grams1 = Db.getGrams(dbId1, dbType1);
+            grams1 = Db.getGrams(dbId1, dbType1, true);
         }
         
         DbType dbType2 = DbId.getIdDbType(dbId2);
         Hashes hashes2 = Db.getHashes(dbId2, dbType2);
-        Grams grams2 = Db.getGrams(dbId2, dbType2);
+        Grams grams2 = Db.getGrams(dbId2, dbType2, true);
 
         if (hashes1 != null && hashes2 != null) {
 
