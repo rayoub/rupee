@@ -21,6 +21,7 @@ import org.postgresql.ds.PGSimpleDataSource;
 
 import edu.umkc.rupee.defs.DbType;
 import edu.umkc.rupee.tm.TmAlign;
+import edu.umkc.rupee.tm.TmMode;
 import edu.umkc.rupee.tm.TmResults;
 
 public class AlignResults
@@ -135,7 +136,7 @@ public class AlignResults
 
                     // perform tm-align alignment
                     try {
-                        TmAlign tm = new TmAlign(queryStructure, targetStructure);
+                        TmAlign tm = new TmAlign(queryStructure, targetStructure, TmMode.REGULAR);
                         TmResults results = tm.align();
 
                         score.setTmQRmsd(results.getRmsd());

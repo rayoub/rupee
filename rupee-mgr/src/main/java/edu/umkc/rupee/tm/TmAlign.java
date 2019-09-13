@@ -48,10 +48,12 @@ public class TmAlign {
     private double _t[];                            // Kabsch translation vector and rotation matrix
     private double _u[][];
 
-    public TmAlign(Structure xstruct, Structure ystruct) {
+    // Kabsch
+    Kabsch _kabsch = new Kabsch();
 
-        // default mode
-        _mode = TmMode.REGULAR;
+    public TmAlign(Structure xstruct, Structure ystruct, TmMode mode) {
+
+        _mode = mode;
 
         // chain names
         _xname = xstruct.getName();
@@ -129,16 +131,9 @@ public class TmAlign {
         }
     }
 
-    public TmAlign(Structure xstruct, Structure ystruct, TmMode mode) {
-        
-        this(xstruct, ystruct);
-        this._mode = mode;
-    }
+    public TmAlign(double[][] xa, double[][] ya, TmMode mode) {
 
-    public TmAlign(double[][] xa, double[][] ya) {
-
-        // default mode 
-        _mode = TmMode.REGULAR; 
+        _mode = mode; 
 
         // get number of residues
         _xlen = xa.length;
@@ -164,12 +159,6 @@ public class TmAlign {
         // atom coordinates
         _xa = xa;
         _ya = ya;        
-    }
-
-    public TmAlign(double[][] xa, double[][] ya, TmMode mode) {
-        
-        this(xa, ya);
-        this._mode = mode;
     }
 
     public TmResults align() { 
@@ -385,7 +374,7 @@ public class TmAlign {
         align_len = k;
 
         // minimize rmsd for the best rotation and translation matrices t and u
-        double rmsd = Kabsch.execute(_r1, _r2, align_len, 0, _t, _u); 
+        double rmsd = _kabsch.execute(_r1, _r2, align_len, 0, _t, _u); 
         rmsd = Math.sqrt(rmsd / (double) align_len);
 
         // ********************************************************************************* //
@@ -793,7 +782,7 @@ public class TmAlign {
         align_len = k;
 
         // minimize rmsd for the best rotation and translation matrices t and u
-        double rmsd = Kabsch.execute(_r1, _r2, align_len, 0, _t, _u); 
+        double rmsd = _kabsch.execute(_r1, _r2, align_len, 0, _t, _u); 
         rmsd = Math.sqrt(rmsd / (double) align_len);
 
         // ********************************************************************************* //
@@ -987,7 +976,7 @@ public class TmAlign {
                 k++;
             }
         }
-        Kabsch.execute(_r1, _r2, k, 1, t, u);
+        _kabsch.execute(_r1, _r2, k, 1, t, u);
 
         for (int ii = 0; ii < xlen; ii++) {
             Functions.transform(t, u, xa[ii], xx);
@@ -1075,7 +1064,7 @@ public class TmAlign {
                     }
 
                     // superpose the two structures and rotate it
-                    Kabsch.execute(_r1, _r2, n_frag[i_frag], 1, t, u);
+                    _kabsch.execute(_r1, _r2, n_frag[i_frag], 1, t, u);
 
                     double gap_open = 0.0;
                     NW.dp_dist(_path, _val, xa, ya, xlen, ylen, t, u, d02, gap_open, invmap_local);
@@ -1405,7 +1394,7 @@ public class TmAlign {
                 throw new RuntimeException("Wrong map!");
             }
         }
-        Kabsch.execute(_r1, _r2, k, 1, _t, _u);
+        _kabsch.execute(_r1, _r2, k, 1, _t, _u);
 
         // evaluate score
         double di;
@@ -1451,7 +1440,7 @@ public class TmAlign {
         }
 
         if (n_ali != j) {
-            Kabsch.execute(_r1, _r2, j, 1, _t, _u);
+            _kabsch.execute(_r1, _r2, j, 1, _t, _u);
             tmscore1 = 0;
             for (k = 0; k < n_ali; k++) {
                 Functions.transform(_t, _u, _xtm[k], xrot);
@@ -1487,7 +1476,7 @@ public class TmAlign {
             }
 
             // evaluate the score
-            Kabsch.execute(_r1, _r2, j, 1, _t, _u);
+            _kabsch.execute(_r1, _r2, j, 1, _t, _u);
             tmscore2 = 0;
             for (k = 0; k < n_ali; k++) {
                 Functions.transform(_t, _u, _xtm[k], xrot);
@@ -1612,7 +1601,7 @@ public class TmAlign {
                 }
 
                 // calculate rotation matrix based on the fragment
-                Kabsch.execute(_r1, _r2, frag_len, 1, t, u);
+                _kabsch.execute(_r1, _r2, frag_len, 1, t, u);
                 
                 // peform rotation and store in xt
                 Functions.do_rotation(xtm, _xt, align_len, t, u);
@@ -1658,7 +1647,7 @@ public class TmAlign {
                     }
 
                     // calculate rotation matrix based on the satisfied distances
-                    Kabsch.execute(_r1, _r2, num_sat, 1, t, u);
+                    _kabsch.execute(_r1, _r2, num_sat, 1, t, u);
                     
                     // peform rotation and store in xt
                     Functions.do_rotation(xtm, _xt, align_len, t, u);

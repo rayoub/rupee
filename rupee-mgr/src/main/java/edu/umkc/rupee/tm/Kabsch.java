@@ -19,19 +19,27 @@ t    - t(i)   is translation vector for best superposition  (output)
 
 public class Kabsch {
 
-    public static double execute(double x[][], double y[][], int n, int mode, double t[], double u[][]) {
+    private double xc[] = new double[3];
+    private double yc[] = new double[3];
+    private double a[][] = new double[3][3];
+    private double b[][] = new double[3][3];
+    private double r[][] = new double[3][3];
+    private double e[] = new double[3];
+    private double rr[] = new double[6];
+    private double ss[] = new double[6];
+    private double c1[] = new double[3];
+    private double c2[] = new double[3];
+    private double s1[] = new double[3];
+    private double s2[] = new double[3];
+    private double sx[] = new double[3];
+    private double sy[] = new double[3];
+    private double sz[] = new double[3];
+
+    public double execute(double x[][], double y[][], int n, int mode, double t[], double u[][]) {
 
         int i, j, m, m1, l, k;
         double e0, rmsd, d, h, g;
         double cth, sth, sqrth, p, det, sigma;
-        double xc[] = new double[3];
-        double yc[] = new double[3];
-        double a[][] = new double[3][3];
-        double b[][] = new double[3][3];
-        double r[][] = new double[3][3];
-        double e[] = new double[3];
-        double rr[] = new double[6];
-        double ss[] = new double[6];
         double sqrt3 = 1.73205080756888, tol = 0.01;
         int ip[] = { 0, 1, 3, 1, 2, 4, 3, 4, 5 };
         int ip2312[] = { 1, 2, 0, 1 };
@@ -42,13 +50,6 @@ public class Kabsch {
         // initializtation
         rmsd = 0;
         e0 = 0;
-        double c1[] = new double[3];
-        double c2[] = new double[3];
-        double s1[] = new double[3];
-        double s2[] = new double[3];
-        double sx[] = new double[3];
-        double sy[] = new double[3];
-        double sz[] = new double[3];
         for (i = 0; i < 3; i++) {
             s1[i] = 0.0;
             s2[i] = 0.0;
