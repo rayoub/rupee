@@ -512,83 +512,6 @@ public class Parser {
     }
 
     /**
-     * Assign asym ids following the rules used by the PDB to assign asym ids in
-     * mmCIF files
-     *
-     * @param polys
-     * @param nonPolys
-     * @param waters
-     */
-    private void assignAsymIds(List<List<Chain>> polys, List<List<Chain>> nonPolys, List<List<Chain>> waters) {
-
-        for (int i = 0; i < polys.size(); i++) {
-            String asymId = "A";
-
-            for (Chain poly : polys.get(i)) {
-                poly.setId(asymId);
-                asymId = getNextAsymId(asymId);
-            }
-            for (Chain nonPoly : nonPolys.get(i)) {
-                nonPoly.setId(asymId);
-                asymId = getNextAsymId(asymId);
-            }
-            for (Chain water : waters.get(i)) {
-                water.setId(asymId);
-                asymId = getNextAsymId(asymId);
-            }
-        }
-    }
-
-    /**
-     * Gets the next asym id given an asymId, according to the convention
-     * followed by mmCIF files produced by the PDB i.e.:
-     * A,B,...,Z,AA,BA,CA,...,ZA,AB,BB,CB,...,ZB,.......,ZZ,AAA,BAA,CAA,...
-     *
-     * @param asymId
-     * @return
-     */
-    private String getNextAsymId(String asymId) {
-        if (asymId.length() == 1) {
-            if (!asymId.equals("Z")) {
-                return Character.toString(getNextChar(asymId.charAt(0)));
-            } else {
-                return "AA";
-            }
-        } else if (asymId.length() == 2) {
-            if (asymId.equals("ZZ")) {
-                return "AAA";
-            }
-            char[] c = new char[2];
-            asymId.getChars(0, 2, c, 0);
-            c[0] = getNextChar(c[0]);
-            if (c[0] == 'A') {
-                c[1] = getNextChar(c[1]);
-            }
-            return new String(c);
-        } else if (asymId.length() == 3) {
-            char[] c = new char[3];
-            asymId.getChars(0, 3, c, 0);
-            c[0] = getNextChar(c[0]);
-            if (c[0] == 'A') {
-                c[1] = getNextChar(c[1]);
-                if (c[1] == 'A') {
-                    c[2] = getNextChar(c[2]);
-                }
-            }
-            return new String(c);
-        }
-        return null;
-    }
-
-    private char getNextChar(char c) {
-        if (c != 'Z') {
-            return ((char) (c + 1));
-        } else {
-            return 'A';
-        }
-    }
-
-    /**
      * Here we assign chains following the mmCIF data model: one chain per
      * polymer, one chain per non-polymer group and several water chains.
      * <p>
@@ -643,10 +566,6 @@ public class Parser {
                 waterModel.addAll(splits.get(1));
             }
         }
-
-        // now we have all chains as in mmcif, let's assign ids following the
-        // mmcif rules
-        assignAsymIds(polyModels, splitNonPolyModels, waterModels);
 
         // find entities heuristically with EntityFinder
         entities = EntityFinder.findPolyEntities(polyModels);
