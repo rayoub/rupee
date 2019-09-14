@@ -96,7 +96,7 @@ public abstract class Search {
               
                 // cache map of residue grams
                 List<String> dbIds = records.stream().map(SearchRecord::getDbId).collect(Collectors.toList());
-                Map<String, Grams> map = Db.getGrams(dbIds, criteria.searchDbType, false);
+                Map<String, Grams> map = Db.getGrams(dbIds, criteria.searchDbType);
 
                 // parallel lcs algorithm
                 records.parallelStream()
@@ -318,7 +318,7 @@ public abstract class Search {
                 String pdbId = rs.getString("pdb_id");
                 String sortKey = rs.getString("sort_key");
 
-                Grams grams2 = Grams.fromResultSet(rs, true);                
+                Grams grams2 = Grams.fromResultSet(rs);                
 
                 double similarity = Integer.MIN_VALUE;
                 if (criteria.searchType == SearchType.FULL_LENGTH) {

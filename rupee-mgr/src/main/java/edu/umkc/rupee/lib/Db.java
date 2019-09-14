@@ -39,7 +39,7 @@ public class Db {
 
         List<String> dbIds = new ArrayList<>();
         dbIds.add(dbId);
-        Map<String, Grams> map = getGrams(dbIds, dbType, includeCoords);
+        Map<String, Grams> map = getGrams(dbIds, dbType);
         if (map.containsKey(dbId)) {
             grams = map.get(dbId);
         }
@@ -47,7 +47,7 @@ public class Db {
         return grams;
     }
 
-    public static Map<String, Grams> getGrams(List<String> dbIds, DbType dbType, boolean includeCoords) throws SQLException {
+    public static Map<String, Grams> getGrams(List<String> dbIds, DbType dbType) throws SQLException {
 
         Map<String, Grams> map = new HashMap<>();
 
@@ -56,23 +56,17 @@ public class Db {
         Connection conn = ds.getConnection();
         conn.setAutoCommit(false);
    
-        PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_" + dbType.getTableName() + "_grams(?,?);");
+        PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_" + dbType.getTableName() + "_grams(?);");
         
         Object[] objDbIds = dbIds.toArray();
         String[] stringDbIds = Arrays.copyOf(objDbIds, objDbIds.length, String[].class);
         stmt.setArray(1, conn.createArrayOf("VARCHAR", stringDbIds));
-        if (includeCoords) {
-            stmt.setInt(2, 1);
-        }
-        else {
-            stmt.setInt(2, 0);
-        }
         
         ResultSet rs = stmt.executeQuery();
         while(rs.next()) {
 
             String dbId = rs.getString("db_id");
-            Grams grams = Grams.fromResultSet(rs, includeCoords);
+            Grams grams = Grams.fromResultSet(rs);
             map.put(dbId, grams);
         }
 
@@ -98,7 +92,7 @@ public class Db {
         
         ResultSet rs = stmt.executeQuery();
         if(rs.next()) {
-            grams = Grams.fromResultSet(rs, true);
+            grams = Grams.fromResultSet(rs);
         }
 
         rs.close();

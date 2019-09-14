@@ -74,7 +74,7 @@ public class Grams {
         return grams;
     }
     
-    public static Grams fromResultSet(ResultSet rs, boolean includeCoords) throws SQLException {
+    public static Grams fromResultSet(ResultSet rs) throws SQLException {
 
         Grams grams = new Grams();
 
@@ -82,12 +82,9 @@ public class Grams {
         grams.setGramsAsArray(gramsAsArray);
         grams.setGramsAsList(Arrays.asList(gramsAsArray));
        
-        if (includeCoords) {
-
-            Float[] coordsAsArray = (Float[])rs.getArray("coords").getArray();
-            grams.setCoordsAsArray(coordsAsArray);
-            grams.setCoordsAsList(Arrays.asList(coordsAsArray));
-        }
+        Float[] coordsAsArray = (Float[])rs.getArray("coords").getArray();
+        grams.setCoordsAsArray(coordsAsArray);
+        grams.setCoordsAsList(Arrays.asList(coordsAsArray));
 
         return grams;
     }
