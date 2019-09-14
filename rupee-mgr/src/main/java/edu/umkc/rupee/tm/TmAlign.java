@@ -1546,6 +1546,7 @@ public class TmAlign {
         double t[] = new double[3];
         double u[][] = new double[3][3];
         double dist_th;
+        int last_sat_indices[] = new int[align_len];
 
         int num_iters = _mode.getScoreIterations(); 
         int max_num_frag_lens = 6; 
@@ -1626,7 +1627,7 @@ public class TmAlign {
                 }
 
                 // try to extend the alignment iteratively
-                int last_sat_indices[] = new int[align_len];
+                Arrays.fill(last_sat_indices, 0);
                 dist_th = params.getD0Bounded() + 1;
                 for (int it = 0; it < num_iters; it++) {
 
