@@ -7,6 +7,8 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 import edu.umkc.rupee.defs.SearchType;
+import edu.umkc.rupee.tm.Kabsch;
+import edu.umkc.rupee.tm.KabschTLS;
 import edu.umkc.rupee.tm.TmAlign;
 import edu.umkc.rupee.tm.TmMode;
 
@@ -332,7 +334,8 @@ public class LCS {
             normalizeBy = ylen;
         }
 
-        TmAlign tm = new TmAlign(xa, ya, TmMode.FAST);
+        Kabsch kabsch = KabschTLS.get();
+        TmAlign tm = new TmAlign(xa, ya, TmMode.FAST, kabsch);
         double score = tm.alignDescriptors(invmap_trivial, searchType, normalizeBy);
 
         return score;

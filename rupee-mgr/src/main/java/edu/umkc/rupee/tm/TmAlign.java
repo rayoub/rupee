@@ -130,9 +130,10 @@ public class TmAlign {
         }
     }
 
-    public TmAlign(double[][] xa, double[][] ya, TmMode mode) {
+    public TmAlign(double[][] xa, double[][] ya, TmMode mode, Kabsch kabsch) {
 
         _mode = mode; 
+        _kabsch = kabsch;
 
         // get number of residues
         _xlen = xa.length;
