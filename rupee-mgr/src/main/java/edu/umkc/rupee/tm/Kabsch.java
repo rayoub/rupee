@@ -35,17 +35,21 @@ public class Kabsch {
     private double sy[] = new double[3];
     private double sz[] = new double[3];
 
+    private int ip[] = { 0, 1, 3, 1, 2, 4, 3, 4, 5 };
+    private int ip2312[] = { 1, 2, 0, 1 };
+    private double sqrt3 = 1.73205080756888, tol = 0.01;
+    private int mm, nn;
+    private double spur, cof;
+
+    private int i, j, m, m1, l, k;
+    private double e0, rmsd, d, h, g;
+    private double cth, sth, sqrth, p, det, sigma;
+
+    private int a_failed = 0, b_failed = 0;
+    private double epsilon = 0.00000001;
+
     public double execute(double x[][], double y[][], int n, int mode, double t[], double u[][]) {
 
-        int i, j, m, m1, l, k;
-        double e0, rmsd, d, h, g;
-        double cth, sth, sqrth, p, det, sigma;
-        double sqrt3 = 1.73205080756888, tol = 0.01;
-        int ip[] = { 0, 1, 3, 1, 2, 4, 3, 4, 5 };
-        int ip2312[] = { 1, 2, 0, 1 };
-
-        int a_failed = 0, b_failed = 0;
-        double epsilon = 0.00000001;
 
         // initializtation
         rmsd = 0;
@@ -99,8 +103,8 @@ public class Kabsch {
             yc[i] = s2[i] / n;
         }
         if (mode == 2 || mode == 0) {
-            for (int mm = 0; mm < n; mm++) {
-                for (int nn = 0; nn < 3; nn++) {
+            for (mm = 0; mm < n; mm++) {
+                for (nn = 0; nn < 3; nn++) {
                     e0 += (x[mm][nn] - xc[nn]) * (x[mm][nn] - xc[nn]) + (y[mm][nn] - yc[nn]) * (y[mm][nn] - yc[nn]);
                 }
             }
@@ -126,8 +130,8 @@ public class Kabsch {
             }
         }
 
-        double spur = (rr[0] + rr[2] + rr[5]) / 3.0;
-        double cof = (((((rr[2] * rr[5] - rr[4] * rr[4]) + rr[0] * rr[5]) - rr[3] * rr[3]) + rr[0] * rr[2])
+        spur = (rr[0] + rr[2] + rr[5]) / 3.0;
+        cof = (((((rr[2] * rr[5] - rr[4] * rr[4]) + rr[0] * rr[5]) - rr[3] * rr[3]) + rr[0] * rr[2])
                 - rr[1] * rr[1]) / 3.0;
         det = det * det;
 
