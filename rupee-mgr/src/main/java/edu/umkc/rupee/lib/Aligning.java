@@ -19,6 +19,7 @@ import org.biojava.nbio.structure.io.PDBFileReader;
 
 import edu.umkc.rupee.defs.AlignmentType;
 import edu.umkc.rupee.defs.DbType;
+import edu.umkc.rupee.tm.Kabsch;
 import edu.umkc.rupee.tm.TmAlign;
 import edu.umkc.rupee.tm.TmMode;
 import edu.umkc.rupee.tm.TmResults;
@@ -131,7 +132,8 @@ public class Aligning
             queryStructure.setName(dbId1);
             targetStructure.setName(dbId2);
 
-            TmAlign tm = new TmAlign(queryStructure, targetStructure, mode);
+            Kabsch kabsch = new Kabsch();
+            TmAlign tm = new TmAlign(queryStructure, targetStructure, mode, kabsch);
             results = tm.align();
 
         } catch (IOException e) {
@@ -162,7 +164,8 @@ public class Aligning
             queryStructure.setName("upload");
             targetStructure.setName(dbId);
 
-            TmAlign tm = new TmAlign(queryStructure, targetStructure, mode);
+            Kabsch kabsch = new Kabsch();
+            TmAlign tm = new TmAlign(queryStructure, targetStructure, mode, kabsch);
             results = tm.align();
 
         } catch (IOException e) {

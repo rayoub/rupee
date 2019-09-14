@@ -20,6 +20,7 @@ import org.biojava.nbio.structure.io.PDBFileReader;
 import org.postgresql.ds.PGSimpleDataSource;
 
 import edu.umkc.rupee.defs.DbType;
+import edu.umkc.rupee.tm.Kabsch;
 import edu.umkc.rupee.tm.TmAlign;
 import edu.umkc.rupee.tm.TmMode;
 import edu.umkc.rupee.tm.TmResults;
@@ -136,7 +137,8 @@ public class AlignResults
 
                     // perform tm-align alignment
                     try {
-                        TmAlign tm = new TmAlign(queryStructure, targetStructure, TmMode.REGULAR);
+                        Kabsch kabsch = new Kabsch();
+                        TmAlign tm = new TmAlign(queryStructure, targetStructure, TmMode.REGULAR, kabsch);
                         TmResults results = tm.align();
 
                         score.setTmQRmsd(results.getRmsd());

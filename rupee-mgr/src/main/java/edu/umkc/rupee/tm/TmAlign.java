@@ -23,6 +23,7 @@ public class TmAlign {
 
     // privates
     private TmMode _mode;                           // regular, fast, ...
+    private Kabsch _kabsch; 
 
     // structure privates
     private String _xname;
@@ -48,12 +49,10 @@ public class TmAlign {
     private double _t[];                            // Kabsch translation vector and rotation matrix
     private double _u[][];
 
-    // Kabsch
-    Kabsch _kabsch = new Kabsch();
-
-    public TmAlign(Structure xstruct, Structure ystruct, TmMode mode) {
+    public TmAlign(Structure xstruct, Structure ystruct, TmMode mode, Kabsch kabsch) {
 
         _mode = mode;
+        _kabsch = kabsch;
 
         // chain names
         _xname = xstruct.getName();

@@ -33,6 +33,8 @@ import edu.umkc.rupee.lib.Grams;
 import edu.umkc.rupee.lib.Hashes;
 import edu.umkc.rupee.lib.LCS;
 import edu.umkc.rupee.lib.Similarity;
+import edu.umkc.rupee.tm.Kabsch;
+import edu.umkc.rupee.tm.KabschTLS;
 import edu.umkc.rupee.tm.TmAlign;
 import edu.umkc.rupee.tm.TmMode;
 import edu.umkc.rupee.tm.TmResults;
@@ -267,8 +269,9 @@ public abstract class Search {
             Parser parser = new Parser(Integer.MAX_VALUE); 
 
             Structure targetStructure = parser.parsePDBFile(targetFileGz);
-     
-            TmAlign tm = new TmAlign(queryStructure, targetStructure, mode);
+
+            Kabsch kabsch = KabschTLS.get();     
+            TmAlign tm = new TmAlign(queryStructure, targetStructure, mode, kabsch);
             TmResults results = tm.align();
 
             record.setRmsd(results.getRmsd());
