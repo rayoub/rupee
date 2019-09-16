@@ -145,6 +145,9 @@ public abstract class Search {
                     GZIPInputStream queryFileGz = new GZIPInputStream(queryFile);
 
                     structure = parser.parsePDBFile(queryFileGz);
+
+                    queryFileGz.close();
+                    queryFile.close();
                 }
                 else { // UPLOAD
                     
@@ -152,6 +155,8 @@ public abstract class Search {
                     FileInputStream queryFile = new FileInputStream(fileName);
 
                     structure = parser.parsePDBFile(queryFile);
+                    
+                    queryFile.close();
                 }
 
                 Structure queryStructure = structure;
@@ -269,6 +274,9 @@ public abstract class Search {
             Parser parser = new Parser(Integer.MAX_VALUE); 
 
             Structure targetStructure = parser.parsePDBFile(targetFileGz);
+
+            targetFileGz.close();
+            targetFile.close();
 
             Kabsch kabsch = KabschTLS.get();     
             TmAlign tm = new TmAlign(queryStructure, targetStructure, mode, kabsch);

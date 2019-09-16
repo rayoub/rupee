@@ -46,6 +46,11 @@ public class Aligning
             Structure queryStructure = reader.getStructure(queryFileGz);
             Structure targetStructure = reader.getStructure(targetFileGz);
 
+            queryFileGz.close();
+            queryFile.close();
+            targetFileGz.close();
+            targetFile.close();
+
             record = align(queryStructure, targetStructure, align);
 
         } catch (IOException e) {
@@ -74,6 +79,10 @@ public class Aligning
 
             Structure queryStructure = reader.getStructure(queryFile);
             Structure targetStructure = reader.getStructure(targetFileGz);
+
+            queryFile.close();
+            targetFileGz.close();
+            targetFile.close();
 
             record = align(queryStructure, targetStructure, align);
 
@@ -129,8 +138,10 @@ public class Aligning
             Structure queryStructure = reader.getStructure(queryFileGz);
             Structure targetStructure = reader.getStructure(targetFileGz);
 
-            queryStructure.setName(dbId1);
-            targetStructure.setName(dbId2);
+            queryFileGz.close();
+            queryFile.close();
+            targetFileGz.close();
+            targetFile.close();
 
             Kabsch kabsch = new Kabsch();
             TmAlign tm = new TmAlign(queryStructure, targetStructure, mode, kabsch);
@@ -160,6 +171,10 @@ public class Aligning
 
             Structure queryStructure = reader.getStructure(queryFile);
             Structure targetStructure = reader.getStructure(targetFileGz);
+            
+            queryFile.close();
+            targetFileGz.close();
+            targetFile.close();
 
             queryStructure.setName("upload");
             targetStructure.setName(dbId);
