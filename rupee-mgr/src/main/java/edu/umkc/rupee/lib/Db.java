@@ -57,6 +57,7 @@ public class Db {
         conn.setAutoCommit(false);
    
         PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_" + dbType.getTableName() + "_grams(?);");
+        stmt.setFetchSize(200);
         
         Object[] objDbIds = dbIds.toArray();
         String[] stringDbIds = Arrays.copyOf(objDbIds, objDbIds.length, String[].class);

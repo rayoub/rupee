@@ -318,6 +318,7 @@ public abstract class Search {
             conn.setAutoCommit(false);
 
             PreparedStatement stmt = getSplitSearchStatement(criteria, splitIndex, conn);
+            stmt.setFetchSize(200);
             
             ResultSet rs = stmt.executeQuery();
             while(rs.next()) {
@@ -378,6 +379,7 @@ public abstract class Search {
             conn.setAutoCommit(false);
 
             PreparedStatement stmt = getBandSearchStatement(criteria, bandIndex, conn);
+            stmt.setFetchSize(200);
             
             ResultSet rs = stmt.executeQuery();
             while(rs.next()) {

@@ -123,7 +123,6 @@ public class Dump {
             float y = (float) ca.getY();
             float z = (float) ca.getZ();
             
-            
             // calculate torsion angles
             double phi = 360.0;
             double psi = 360.0;
