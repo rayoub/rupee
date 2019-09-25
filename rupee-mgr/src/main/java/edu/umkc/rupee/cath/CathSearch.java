@@ -29,7 +29,7 @@ public class CathSearch extends Search {
         stmt.setString(2, cathCriteria.dbId);
         stmt.setInt(3, cathCriteria.uploadId);
         stmt.setInt(4, splitIndex);
-        stmt.setInt(5, Constants.SPLIT_COUNT);
+        stmt.setInt(5, Constants.SEARCH_SPLIT_COUNT);
         stmt.setBoolean(6, cathCriteria.topologyReps);
         stmt.setBoolean(7, cathCriteria.superfamilyReps);
         stmt.setBoolean(8, cathCriteria.s35Reps);

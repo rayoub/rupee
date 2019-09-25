@@ -29,7 +29,7 @@ public class ScopSearch extends Search {
         stmt.setString(2, scopCriteria.dbId);
         stmt.setInt(3, scopCriteria.uploadId);
         stmt.setInt(4, splitIndex);
-        stmt.setInt(5, Constants.SPLIT_COUNT);
+        stmt.setInt(5, Constants.SEARCH_SPLIT_COUNT);
         stmt.setBoolean(6, scopCriteria.differentFold);
         stmt.setBoolean(7, scopCriteria.differentSuperfamily);
         stmt.setBoolean(8, scopCriteria.differentFamily);

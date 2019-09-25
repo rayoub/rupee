@@ -29,7 +29,7 @@ public class ChainSearch extends Search {
         stmt.setString(2, chainCriteria.dbId);
         stmt.setInt(3, chainCriteria.uploadId);
         stmt.setInt(4, splitIndex);
-        stmt.setInt(5, Constants.SPLIT_COUNT);
+        stmt.setInt(5, Constants.SEARCH_SPLIT_COUNT);
 
         return stmt;
     }

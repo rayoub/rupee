@@ -42,7 +42,7 @@ public abstract class Import {
 
     public void importGrams() {
 
-        IntStream.range(0, Constants.SPLIT_COUNT)
+        IntStream.range(0, Constants.IMPORT_SPLIT_COUNT)
             .boxed()
             .parallel()
             .forEach(splitIndex -> importGramsSplit(splitIndex));
@@ -69,7 +69,7 @@ public abstract class Import {
                 
             PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_" + dbType.getTableName() + "_split(?,?);");
             stmt.setInt(1, splitIndex);
-            stmt.setInt(2, Constants.SPLIT_COUNT);
+            stmt.setInt(2, Constants.IMPORT_SPLIT_COUNT);
             
             ResultSet rs = stmt.executeQuery();
 

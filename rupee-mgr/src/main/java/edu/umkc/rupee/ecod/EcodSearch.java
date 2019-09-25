@@ -29,7 +29,7 @@ public class EcodSearch extends Search {
         stmt.setString(2, ecodCriteria.dbId);
         stmt.setInt(3, ecodCriteria.uploadId);
         stmt.setInt(4, splitIndex);
-        stmt.setInt(5, Constants.SPLIT_COUNT);
+        stmt.setInt(5, Constants.SEARCH_SPLIT_COUNT);
         stmt.setBoolean(6, ecodCriteria.differentH);
         stmt.setBoolean(7, ecodCriteria.differentT);
         stmt.setBoolean(8, ecodCriteria.differentF);

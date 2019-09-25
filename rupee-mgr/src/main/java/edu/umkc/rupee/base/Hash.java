@@ -32,7 +32,7 @@ public abstract class Hash {
 
     public void hash() {
             
-        IntStream.range(0, Constants.SPLIT_COUNT)
+        IntStream.range(0, Constants.IMPORT_SPLIT_COUNT)
             .boxed()
             .parallel()
             .forEach(splitIndex -> hashSplit(splitIndex));
@@ -57,7 +57,7 @@ public abstract class Hash {
                 
             PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_" + dbType.getTableName() + "_grams_split(?,?);");
             stmt.setInt(1, splitIndex);
-            stmt.setInt(2, Constants.SPLIT_COUNT);
+            stmt.setInt(2, Constants.IMPORT_SPLIT_COUNT);
             
             ResultSet rs = stmt.executeQuery();
 

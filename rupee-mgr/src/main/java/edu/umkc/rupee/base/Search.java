@@ -118,7 +118,7 @@ public abstract class Search {
             else {
 
                 // initial filtering based on simple LCS plus tm-align on aligned descriptors
-                records = IntStream.range(0, Constants.SPLIT_COUNT).boxed().parallel()
+                records = IntStream.range(0, Constants.SEARCH_SPLIT_COUNT).boxed().parallel()
                     .flatMap(splitIndex -> gramsSplit(splitIndex, criteria, grams1).stream())
                     .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
                     .limit(FINAL_FILTER) 
