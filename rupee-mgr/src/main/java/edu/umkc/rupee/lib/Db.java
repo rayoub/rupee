@@ -33,13 +33,13 @@ public class Db {
     // Getting Grams
     // *********************************************************************
 
-    public static Grams getGrams(String dbId, DbType dbType, boolean includeCoords) throws SQLException {
+    public static Grams getGrams(String dbId, DbType dbType, boolean storeCoords) throws SQLException {
 
         Grams grams = null;
 
         List<String> dbIds = new ArrayList<>();
         dbIds.add(dbId);
-        Map<String, Grams> map = getGrams(dbIds, dbType);
+        Map<String, Grams> map = getGrams(dbIds, dbType, storeCoords);
         if (map.containsKey(dbId)) {
             grams = map.get(dbId);
         }
@@ -47,7 +47,7 @@ public class Db {
         return grams;
     }
 
-    public static Map<String, Grams> getGrams(List<String> dbIds, DbType dbType) throws SQLException {
+    public static Map<String, Grams> getGrams(List<String> dbIds, DbType dbType, boolean storeCoords) throws SQLException {
 
         Map<String, Grams> map = new HashMap<>();
 
@@ -67,7 +67,7 @@ public class Db {
         while(rs.next()) {
 
             String dbId = rs.getString("db_id");
-            Grams grams = Grams.fromResultSet(rs);
+            Grams grams = Grams.fromResultSet(rs, storeCoords);
             map.put(dbId, grams);
         }
 
@@ -93,7 +93,7 @@ public class Db {
         
         ResultSet rs = stmt.executeQuery();
         if(rs.next()) {
-            grams = Grams.fromResultSet(rs);
+            grams = Grams.fromResultSet(rs, true);
         }
 
         rs.close();

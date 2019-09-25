@@ -74,17 +74,20 @@ public class Grams {
         return grams;
     }
     
-    public static Grams fromResultSet(ResultSet rs) throws SQLException {
+    public static Grams fromResultSet(ResultSet rs, boolean storeCoords) throws SQLException {
 
         Grams grams = new Grams();
 
         Integer[] gramsAsArray = (Integer[])rs.getArray("grams").getArray();
         grams.setGramsAsArray(gramsAsArray);
         grams.setGramsAsList(Arrays.asList(gramsAsArray));
-       
-        Float[] coordsAsArray = (Float[])rs.getArray("coords").getArray();
-        grams.setCoordsAsArray(coordsAsArray);
-        grams.setCoordsAsList(Arrays.asList(coordsAsArray));
+      
+        if (storeCoords) {
+
+            Float[] coordsAsArray = (Float[])rs.getArray("coords").getArray();
+            grams.setCoordsAsArray(coordsAsArray);
+            grams.setCoordsAsList(Arrays.asList(coordsAsArray));
+        }
 
         return grams;
     }
