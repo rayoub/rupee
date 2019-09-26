@@ -133,7 +133,7 @@ public abstract class Search {
 
                 // *** parse query structure
        
-                Parser parser = new Parser(Integer.MAX_VALUE); 
+                Parser parser = new Parser(); 
 
                 String fileName = "";
                 Structure structure = null;
@@ -144,7 +144,7 @@ public abstract class Search {
                     FileInputStream queryFile = new FileInputStream(fileName);
                     GZIPInputStream queryFileGz = new GZIPInputStream(queryFile);
 
-                    structure = parser.parsePDBFile(queryFileGz);
+                    structure = parser.parsePdbFile(queryFileGz);
 
                     queryFileGz.close();
                     queryFile.close();
@@ -154,7 +154,7 @@ public abstract class Search {
                     fileName = Constants.UPLOAD_PATH + criteria.uploadId + ".pdb";
                     FileInputStream queryFile = new FileInputStream(fileName);
 
-                    structure = parser.parsePDBFile(queryFile);
+                    structure = parser.parsePdbFile(queryFile);
                     
                     queryFile.close();
                 }
@@ -271,9 +271,9 @@ public abstract class Search {
             FileInputStream targetFile = new FileInputStream(getDbType().getImportPath() + record.getDbId() + ".pdb.gz");
             GZIPInputStream targetFileGz = new GZIPInputStream(targetFile);
 
-            Parser parser = new Parser(Integer.MAX_VALUE); 
+            Parser parser = new Parser(); 
 
-            Structure targetStructure = parser.parsePDBFile(targetFileGz);
+            Structure targetStructure = parser.parsePdbFile(targetFileGz);
 
             targetFileGz.close();
             targetFile.close();

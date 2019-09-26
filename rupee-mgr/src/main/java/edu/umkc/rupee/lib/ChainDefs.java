@@ -62,7 +62,7 @@ public class ChainDefs {
         Files.newDirectoryStream(Paths.get(path), "*.ent.gz")
             .forEach(fileName -> {
  
-                Parser parser = new Parser(Integer.MAX_VALUE); 
+                Parser parser = new Parser(); 
                 String pdbId = fileName.getFileName().toString().substring(3,7).toLowerCase();
     
                 try {
@@ -70,7 +70,7 @@ public class ChainDefs {
                     FileInputStream queryFile = new FileInputStream(fileName.toString());
                     GZIPInputStream queryFileGz = new GZIPInputStream(queryFile);
 
-                    Structure structure = parser.parsePDBFile(queryFileGz);
+                    Structure structure = parser.parsePdbFile(queryFileGz);
                     structure.setPDBCode(pdbId);
 
                     printChains(structure);
