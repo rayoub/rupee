@@ -18,6 +18,8 @@ import java.util.stream.IntStream;
 import java.util.zip.GZIPInputStream;
 
 import org.biojava.nbio.structure.Structure;
+import org.biojava.nbio.structure.io.LocalPDBDirectory.FetchBehavior;
+import org.biojava.nbio.structure.io.PDBFileReader;
 import org.postgresql.ds.PGSimpleDataSource;
 
 import edu.umkc.rupee.bio.Parser;
@@ -133,7 +135,8 @@ public abstract class Search {
 
                 // *** parse query structure
        
-                Parser parser = new Parser(); 
+                PDBFileReader reader = new PDBFileReader();
+                reader.setFetchBehavior(FetchBehavior.LOCAL_ONLY);
 
                 String fileName = "";
                 Structure structure = null;
@@ -144,7 +147,7 @@ public abstract class Search {
                     FileInputStream queryFile = new FileInputStream(fileName);
                     GZIPInputStream queryFileGz = new GZIPInputStream(queryFile);
 
-                    structure = parser.parsePdbFile(queryFileGz);
+                    structure = reader.getStructure(queryFileGz);
 
                     queryFileGz.close();
                     queryFile.close();
@@ -154,7 +157,7 @@ public abstract class Search {
                     fileName = Constants.UPLOAD_PATH + criteria.uploadId + ".pdb";
                     FileInputStream queryFile = new FileInputStream(fileName);
 
-                    structure = parser.parsePdbFile(queryFile);
+                    structure = reader.getStructure(queryFile);
                     
                     queryFile.close();
                 }
