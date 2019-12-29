@@ -24,7 +24,7 @@ The .gitignore file list the files and directories that have been explicitly exc
 
 ### db/
 
-The data directory contains SQL definitions files. 
+This directory contains SQL definitions files. 
 All files except files prefixed with x\_, y\_, or z\_ contain SQL definitions. 
 
 x\_ files are used for populating tables and should only be run when parsed data files are present.
@@ -113,7 +113,14 @@ data/chain/pdb/    | parsed pdb files containing whole chains
 data/upload/       | directory used for temporary storage of uploaded pdb files
 
 First, the data/pdb/ directory has to be populated with files downloaded from the wwpdb FTP site. 
-Then, the files can be parsed based on structure definitions to populate the data/scop/, data/cath/, data/ecod/ and data/chain/ directories. 
+If using FileZilla, you should set the connection timeout to at least 1000 seconds in the File-Edit-Settings dialog. 
+Click the local data/pdb directory to select the destination for the files. 
+Click the remote /pub/pdb/data/structures/all/pdb directory containing the files you want to download. 
+It will take a few minutes to obtain the directory listing. 
+Then right-click the remote pdb/ directory and select download. 
+This will also create the local pdb/ directory under the data/pdb/ directory. 
+
+Once downloaded, the files can be parsed based on structure definitions to populate the data/scop/, data/cath/, data/ecod/ and data/chain/ directories. 
 Each of these directories can be parsed and processed independently. 
 Since this can take a significant amount of time, consider starting with one initially, for instance data/scop/. 
 
