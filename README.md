@@ -112,13 +112,23 @@ data/ecod/pdb/     | parsed pdb files based on ecod definitions
 data/chain/pdb/    | parsed pdb files containing whole chains
 data/upload/       | directory used for temporary storage of uploaded pdb files
 
-First, the data/pdb/ directory has to be populated with files downloaded from the wwpdb FTP site. 
+First, the data/pdb/pdb/ directory has to be populated with files downloaded from the wwpdb FTP site. 
 If using FileZilla, you should set the connection timeout to at least 1000 seconds in the File-Edit-Settings dialog. 
 Click the local data/pdb directory to select the destination for the files. 
 Click the remote /pub/pdb/data/structures/all/pdb directory containing the files you want to download. 
 It will take a few minutes to obtain the directory listing. 
 Then right-click the remote pdb/ directory and select download. 
 This will also create the local pdb/ directory under the data/pdb/ directory. 
+
+To populate the data/pdb/obsolete/ directory, the actions are different from above because the remote files are organized into subdirectories. 
+If using FileZilla, go to the Server-Search Remote Files dialog. 
+For search conditions, add a filename ends with 'ent.gz' rule and click search and wait a few minutes for the search to complete. 
+If the local data/pdb/obsolete/ directory is not already created, then create it now. 
+In the Search dialog, select all files to be downloaded using Ctrl-A. 
+Right-click and choose download. 
+Choose to flatten remote paths and click OK.
+
+__NOTE: DO NOT UNZIP DOWNLOADED FILES__
 
 Once downloaded, the files can be parsed based on structure definitions to populate the data/scop/, data/cath/, data/ecod/ and data/chain/ directories. 
 Each of these directories can be parsed and processed independently. 
@@ -132,7 +142,7 @@ Before an initial run make sure all lines are uncommented.
 
 The do_all.sh bash script will also execute the above rupee-mgr application in order to import and hash structures once parsing is complete. 
 
-To execute the do_all.sh script, check the parameters required for each script and pass in the parameters based on the structure definitions files you want to process. In the .gitignore file you will find references to these files downloaded from the source sites, i.e. SCOP, CATH, and ECOD.  
+To execute the do_all.sh script, check the parameters required for each script by examining the code and pass in the parameters based on the structure definitions files you want to process. In the .gitignore file you will find references to these files downloaded from the source sites, i.e. SCOP, CATH, and ECOD.  
 
 As long as you have successfully parsed and processed one of these directories, you can now execute searches with the rupee-mgr application.  
 
