@@ -106,16 +106,16 @@ Excluded Directory | Description
 ------------------ | -----------
 data/pdb/pdb/      | From /pub/pdb/data/structures/all/pdb at ftp.wwpdb.org
 data/pdb/obsolete/ | From /pub/pdb/data/structures/obsolete/pdb at ftp.wwpdb.org
+data/chain/pdb/    | parsed pdb files containing whole chains
 data/scop/pdb/     | parsed pdb files based on scop definitions
 data/cath/pdb/     | parsed pdb files based on cath definitions
 data/ecod/pdb/     | parsed pdb files based on ecod definitions
-data/chain/pdb/    | parsed pdb files containing whole chains
 data/upload/       | directory used for temporary storage of uploaded pdb files
 
 First, the data/pdb/pdb/ directory has to be populated with files downloaded from the wwpdb FTP site. 
 If using FileZilla, you should set the connection timeout to at least 1000 seconds in the File-Edit-Settings dialog. 
-Click the local data/pdb directory to select the destination for the files. 
-Click the remote /pub/pdb/data/structures/all/pdb directory containing the files you want to download. 
+Click the local data/pdb/ directory to select the destination for the files. 
+Click the remote /pub/pdb/data/structures/all/pdb/ directory containing the files you want to download. 
 It will take a few minutes to obtain the directory listing. 
 Then right-click the remote pdb/ directory and select download. 
 This will also create the local pdb/ directory under the data/pdb/ directory. 
@@ -130,11 +130,11 @@ Choose to flatten remote paths and click OK.
 
 __NOTE: DO NOT UNZIP DOWNLOADED FILES__
 
-Once downloaded, the files can be parsed based on structure definitions to populate the data/scop/, data/cath/, data/ecod/ and data/chain/ directories. 
-Each of these directories can be parsed and processed independently. 
-Since this can take a significant amount of time, consider starting with one initially, for instance data/scop/. 
+Once downloaded, the files can be parsed based on structure definitions to populate the data/chain/, data/scop/, data/cath/ and data/ecod/ directories. 
+The data/chain/ directory must be processed first.
+Then the remaining directories can be parsed and processed independently. 
 
-Each of the directories, data/scop/, data/cath/, data/ecod/ and data/chain/ follow a similar pattern with some redundant code to keep things simple. 
+Each of the directories, data/chain/, data/scop/, data/cath/ and data/ecod/ follow a similar pattern with some redundant code to keep things simple. 
 The do_all.sh bash scripts can be used to parse structure definitions and subsequently parse pdb files based on the structure definitions.
 Look at the do_all.sh bash scripts for exact details. 
 Sometimes a modified script is checked in with some lines commented out. 
