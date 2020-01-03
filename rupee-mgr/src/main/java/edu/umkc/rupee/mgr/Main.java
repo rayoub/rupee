@@ -51,7 +51,6 @@ import edu.umkc.rupee.lib.Aligning;
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
 import edu.umkc.rupee.lib.DbId;
-import edu.umkc.rupee.lib.Dump;
 import edu.umkc.rupee.lib.Grams;
 import edu.umkc.rupee.lib.Hashes;
 import edu.umkc.rupee.lib.LCS;
@@ -139,9 +138,6 @@ public class Main {
             return;
         }
 
-        System.out.println("Press Enter to Continue");
-        System.console().readLine();
-       
         // allow for debug 
         // System.console().readLine("Press Enter Before Continuing> ");
         
@@ -786,8 +782,14 @@ public class Main {
 
     private static void option_d(CommandLine line) throws Exception {
 
-        Dump.dumpCossackCoords();
+        // get chain definitions
         /*
+        ChainDefs.printChains("/home/ayoub/git/rupee/data/pdb/pdb");
+        ChainDefs.printChains("/home/ayoub/git/rupee/data/pdb/obsolete");
+        */
+
+        /*
+        // web site automation
         SSMUploadDriver driver = new SSMUploadDriver();
 
         driver.setUp();
@@ -796,13 +798,7 @@ public class Main {
         */
 
         /*
-        List<Labels.Label> labels = Labels.getLabels("d2pf2a2", DbTypeCriteria.SCOP);
-        for (Labels.Label label : labels) {
-            System.out.println(label.getResidueNumber() + "," + label.getLabel());
-        }
-        */
-
-        /*
+        // gather alignment scores for running results
         AlignResults.alignRupeeResults("casp_d150", "casp_scop_v2_07", "all_aligned", DbType.SCOP, 100);
         AlignResults.alignRupeeResults("casp_d150", "casp_scop_v2_07", "top_aligned", DbType.SCOP, 100);
         AlignResults.alignRupeeResults("casp_d150", "casp_scop_v1_73", "all_aligned", DbType.SCOP, 100);
@@ -813,6 +809,8 @@ public class Main {
         AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "all_aligned", DbType.SCOP, 100);
 
         AlignResults.alignMtmResults("casp_d150", "casp_chain_v06_26_2019", DbType.CHAIN, 100);
+        
+        AlignResults.alignMtmResults("scop_d360", "scop_v2_07", DbType.SCOP, 100);
         
         AlignResults.alignCathedralResults("casp_d150", "casp_cath_v4_2_0", DbType.CATH, 100);
         

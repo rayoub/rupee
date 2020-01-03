@@ -142,6 +142,9 @@ public class Aligning
             queryFile.close();
             targetFileGz.close();
             targetFile.close();
+            
+            queryStructure.setName(dbId1);
+            targetStructure.setName(dbId2);
 
             Kabsch kabsch = new Kabsch();
             TmAlign tm = new TmAlign(queryStructure, targetStructure, mode, kabsch);

@@ -12,8 +12,8 @@ import java.util.zip.GZIPInputStream;
 
 import org.biojava.nbio.structure.Chain;
 import org.biojava.nbio.structure.Structure;
-
-import edu.umkc.rupee.bio.Parser;
+import org.biojava.nbio.structure.io.LocalPDBDirectory.FetchBehavior;
+import org.biojava.nbio.structure.io.PDBFileReader;
 
 public class ChainDefs {
 
@@ -62,7 +62,9 @@ public class ChainDefs {
         Files.newDirectoryStream(Paths.get(path), "*.ent.gz")
             .forEach(fileName -> {
  
-                Parser parser = new Parser(); 
+                PDBFileReader reader = new PDBFileReader();
+                reader.setFetchBehavior(FetchBehavior.LOCAL_ONLY);
+                
                 String pdbId = fileName.getFileName().toString().substring(3,7).toLowerCase();
     
                 try {
@@ -70,7 +72,7 @@ public class ChainDefs {
                     FileInputStream queryFile = new FileInputStream(fileName.toString());
                     GZIPInputStream queryFileGz = new GZIPInputStream(queryFile);
 
-                    Structure structure = parser.parsePdbFile(queryFileGz);
+                    Structure structure = reader.getStructure(queryFileGz);
                     structure.setPDBCode(pdbId);
 
                     printChains(structure);

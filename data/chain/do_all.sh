@@ -8,8 +8,8 @@ mkdir ./pdb
 mkdir ./obsolete
 
 # parse pdb files
-xargs -a pdb_v06_26_2019.txt -L1 -P8 ./chopper.sh pdb
-xargs -a obsolete_v06_26_2019.txt -L1 -P8 ./chopper.sh obsolete
+xargs -a pdb_v01_01_2020.txt -L1 -P8 ./chopper.sh pdb
+xargs -a obsolete_v01_01_2020.txt -L1 -P8 ./chopper.sh obsolete
 
 # move to db directory
 cd ../../db

@@ -100,9 +100,8 @@ public abstract class Import {
 
                     PDBFileReader reader = new PDBFileReader();
                     reader.setFetchBehavior(FetchBehavior.LOCAL_ONLY);
-                    reader.getStructure(gzipInputStream);
 
-                    Structure structure = reader.getStructure(fileName);
+                    Structure structure = reader.getStructure(gzipInputStream); 
                     structure.setPDBCode(pdbId);
                 
                     List<Residue> residues = Importing.parseStructure(structure);
