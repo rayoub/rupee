@@ -15,7 +15,6 @@
 \i ecod_domain.sql
 \i ecod_grams.sql
 \i ecod_hashes.sql
-\i log.sql
 \i mtm_result_matched.sql
 \i mtm_result.sql
 \i mtm_result_unmatched.sql
@@ -74,7 +73,6 @@
 \i insert_chain_hashes.sql
 \i insert_ecod_grams.sql
 \i insert_ecod_hashes.sql
-\i insert_logs.sql
 \i insert_scop_grams.sql
 \i insert_scop_hashes.sql
 \i insert_upload_grams.sql
