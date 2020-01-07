@@ -1,21 +1,24 @@
 #! /bin/bash
 
-# run like this 'xargs -a eus.txt -L1 ./chopper.sh'
-# do not use -P option since we are appending, i.e. >>, at end
+# run like this 'xargs -a eus.txt -L1 ./chopper.sh <group_id>'
 
 # chops target preds into eus and copies to eu_preds directory
 
-target=$1
-eu=$2
-sres=$3
-eres=$4
+grp=$1
+target=$2
+eu=$3
+sres=$4
+eres=$5
 
-for f in ./target_preds/${target}/* 
+for f in ./target_preds/${target}/*TS${grp}*
 do
-  
+
+    # in the event of null glob
+    [ -f "$f" ] || continue
+
     base=$(basename -- $f)
-    stripped=${base%_TS1}
-    name=${target}-${eu}-${stripped}
+    stripped=${base%_1}
+    name=${stripped}-${eu}
 
     # ATOM records only
     cat $f | sed -rn -e '/^(ATOM)/p' |
