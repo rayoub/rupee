@@ -19,7 +19,7 @@ COPY benchmark (name, db_id) FROM '/home/ayoub/git/rupee/results/benchmarks/cath
 COPY benchmark (name, db_id) FROM '/home/ayoub/git/rupee/results/benchmarks/casp_d229.txt' WITH (DELIMITER ',');
 
 -- mtm specific
---COPY benchmark (name, db_id) FROM '/home/ayoub/git/rupee/results/benchmarks/casp_mtm_d144.txt' WITH (DELIMITER ',');
+COPY benchmark (name, db_id) FROM '/home/ayoub/git/rupee/results/benchmarks/casp_mtm_d227.txt' WITH (DELIMITER ',');
 --COPY benchmark (name, db_id) FROM '/home/ayoub/git/rupee/results/benchmarks/casp_mtm_d34.txt' WITH (DELIMITER ',');
 
 -- cathedral specific
