@@ -15,9 +15,7 @@
 \i ecod_domain.sql
 \i ecod_grams.sql
 \i ecod_hashes.sql
-\i mtm_result_matched.sql
 \i mtm_result.sql
-\i mtm_result_unmatched.sql
 \i residue.sql
 \i response_time.sql
 \i rupee_result.sql

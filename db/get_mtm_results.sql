@@ -29,7 +29,7 @@ BEGIN
             s.tm_avg_rmsd,
             s.tm_avg_tm_score
         FROM
-            mtm_result_matched r
+            mtm_result r
             INNER JOIN benchmark b
                 ON b.db_id = r.db_id_1
                 AND b.name = p_benchmark
