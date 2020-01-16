@@ -107,7 +107,7 @@ public class AlignResults
             reader.setFetchBehavior(FetchBehavior.LOCAL_ONLY);
 
             Structure queryStructure = null;
-            if (dbId.startsWith("T0")) {
+            if (version.startsWith("casp")) {
                 String path = Constants.CASP_PATH + dbId + ".pdb";
                 FileInputStream queryFile = new FileInputStream(path);
                 queryStructure = reader.getStructure(queryFile);
