@@ -1,0 +1,4 @@
+Run this command in the eu_preds directory to add chain identifiers. 
+Chain identifiers are required in some cases. For example, uploading to CATHEDRAL.
+
+sed -i -e 's/./A/22' *.pdb
