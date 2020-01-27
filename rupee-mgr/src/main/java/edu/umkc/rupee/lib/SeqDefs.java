@@ -1,8 +1,12 @@
 package edu.umkc.rupee.lib;
 
 import java.io.FileInputStream;
+import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -16,9 +20,15 @@ import org.biojava.nbio.structure.io.PDBFileReader;
 public class SeqDefs {
 
     public static void printSeqs(String path) throws Exception {
-       
-        Files.newDirectoryStream(Paths.get(path), "*.pdb")
-            .forEach(fileName -> {
+      
+        // sort 
+        DirectoryStream<Path> stream = Files.newDirectoryStream(Paths.get(path), "*.pdb");
+        List<Path> list = new ArrayList<>();    
+        stream.forEach(list::add);
+        list.sort(Comparator.comparing(Path::toString));
+
+        // iterate
+        list.stream().forEach(fileName -> {
  
                 PDBFileReader reader = new PDBFileReader();
                 reader.setFetchBehavior(FetchBehavior.LOCAL_ONLY);
