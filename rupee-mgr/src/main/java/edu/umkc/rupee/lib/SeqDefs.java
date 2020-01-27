@@ -51,25 +51,29 @@ public class SeqDefs {
 
     public static void printSeq(String seqName, Structure structure) throws Exception {
 
-        StringBuilder builder = new StringBuilder();
-        builder.append(">");
-        builder.append(seqName);
-        builder.append("\n");
+        // casp group 089 has submitted for all evaluation units
+        if (seqName.contains("TS089")) {
 
-        // iterate first chain in first model
-        List<Group> groups = structure.getModel(0).get(0).getAtomGroups();
-        for (Group group : groups) {
-            if (!(group.isAminoAcid() && group.hasAminoAtoms())) {
-                throw new Exception("Invalid Atom Group");
+            seqName = seqName.replace("TS089","");
+            StringBuilder builder = new StringBuilder();
+            builder.append(">");
+            builder.append(seqName);
+            builder.append("\n");
+
+            // iterate first chain in first model
+            List<Group> groups = structure.getModel(0).get(0).getAtomGroups();
+            for (Group group : groups) {
+                if (!(group.isAminoAcid() && group.hasAminoAtoms())) {
+                    throw new Exception("Invalid Atom Group");
+                }
+                else {
+                    AminoAcid aa = (AminoAcid)group;
+                    builder.append(aa.getAminoType());
+                }
             }
-            else {
-                AminoAcid aa = (AminoAcid)group;
-                builder.append(aa.getAminoType());
-            }
+            
+            builder.append("\n");
+            Files.write(Paths.get("./" + seqName + ".seq"), builder.toString().getBytes());
         }
-        
-        builder.append("\n");
-
-        System.out.println(builder.toString());
     }
 }
