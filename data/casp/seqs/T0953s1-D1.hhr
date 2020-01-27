@@ -1,0 +1,2075 @@
+Query         T0953s1-D1
+Match_columns 67
+No_of_seqs    181 out of 761
+Neff          8.96739
+Searched_HMMs 252
+Date          Mon Jan 27 09:51:45 2020
+Command       hhblits -cpu 8 -i ./seqs/T0953s1-D1.seq -d /home/ayoub/git/hh-suite/databases/UniRef30_2020_01/UniRef30_2020_01 -o ./seqs/T0953s1-D1.hhr -n 3 -cov 60 
+
+ No Hit                             Prob E-value P-value  Score    SS Cols Query HMM  Template HMM
+  1 UniRef100_A0A2X8N8A7 Putative   99.5 1.2E-16   3E-22   99.2   0.0   62    1-62     95-170 (279)
+  2 UniRef100_A0A0L1BL30 Uncharact  99.4   7E-16 1.7E-21   85.8   0.0   62    1-62     31-106 (126)
+  3 UniRef100_A0A376RLV6 Phage tai  99.3 7.6E-15 1.9E-20   90.4   0.0   67    1-67    142-209 (264)
+  4 UniRef100_A0A061YA39 Phage tai  99.3 9.9E-15 2.5E-20   94.3   0.0   65    1-67    251-318 (373)
+  5 UniRef100_A0A3Y1F5V6 Uncharact  99.3 1.1E-14 2.6E-20   82.2   0.0   67    1-67     76-143 (147)
+  6 UniRef100_A0A2S8JMU1 Phage tai  99.2   8E-14 1.9E-19   82.2   0.0   63    1-63     87-163 (204)
+  7 UniRef100_A0A192CMK9 Tail fibe  99.2 8.8E-14 2.2E-19   82.5   0.0   65    1-67     42-109 (177)
+  8 UniRef100_A0A0A0GQ29 Putative   99.1 2.1E-13 5.1E-19   90.6   0.0   60    1-60    328-401 (524)
+  9 UniRef100_A0A1B0VFW4 Tail prot  99.1 5.6E-13 1.4E-18   90.2   0.0   60    1-60    378-451 (582)
+ 10 UniRef100_A0A0K3PMU1 Phage tai  99.1   8E-13 1.9E-18   89.5   0.0   67    1-67    540-607 (661)
+ 11 UniRef100_A0A0Q3D5W5 Phage tai  99.0 1.1E-12 2.8E-18   87.4   0.0   62    1-62    282-357 (473)
+ 12 UniRef100_A0A076LMU9 Tail fibe  99.0 2.9E-12 7.2E-18   85.0   0.0   65    1-67    367-434 (489)
+ 13 UniRef100_A0A2X1LNF0 Phage tai  99.0 3.1E-12 7.5E-18   87.5   0.0   67    1-67    701-768 (822)
+ 14 UniRef100_A0A376P2H3 Putative   98.9 7.4E-12 1.8E-17   81.8   0.0   63    1-63    311-387 (502)
+ 15 UniRef100_A0A0Q3APR8 Phage tai  98.9 8.1E-12   2E-17   76.5   0.0   62    1-62     24-99  (215)
+ 16 UniRef100_A0A3S4GUS9 Prophage   98.9 1.1E-11 2.6E-17   80.4   0.0   61    1-61    322-396 (403)
+ 17 UniRef100_UPI0007A04E23 hypoth  98.9 1.2E-11 2.7E-17   83.1   0.0   67    1-67    565-632 (694)
+ 18 UniRef100_A0A3L4Y2R2 Phage tai  98.8 2.4E-11 5.6E-17   80.6   0.0   67    1-67    452-519 (581)
+ 19 UniRef100_UPI000DE545CD phage   98.8 4.1E-11 9.8E-17   74.8   0.0   62    1-62    202-277 (308)
+ 20 UniRef100_A0A3U2A6G2 Phage tai  98.8 4.5E-11 1.1E-16   75.4   0.0   60    1-60     75-148 (281)
+ 21 UniRef100_A0A0B4L964 Long tail  98.8 4.6E-11 1.2E-16   84.8   0.0   67    1-67    678-749 (864)
+ 22 UniRef100_A0A376ZI61 Tail fibe  98.8 5.3E-11 1.3E-16   79.0   0.0   62    1-62    327-402 (501)
+ 23 UniRef100_A0A377A3Q7 Putative   98.7 8.1E-11 1.9E-16   59.9   0.0   38    1-38      6-43  (70)
+ 24 UniRef100_A0A3T5BX40 Phage tai  98.7 1.2E-10   3E-16   77.0   0.0   60    1-60    311-391 (465)
+ 25 UniRef100_A0A379VM21 Phage tai  98.7 1.3E-10 3.3E-16   71.8   0.0   58    1-60     26-91  (231)
+ 26 UniRef100_A0A160HRJ8 GpH domai  98.6 4.1E-10 9.8E-16   71.9   0.0   62    1-62    182-257 (365)
+ 27 UniRef100_A0A0C5EDG9 Phage tai  98.6 4.5E-10 1.1E-15   78.0   0.0   66    1-67    619-692 (747)
+ 28 UniRef100_UPI000DF720E8 Long t  98.6 5.5E-10 1.3E-15   66.9   0.0   65    2-66     27-91  (204)
+ 29 UniRef100_A0A023YYD9 Phage tai  98.5 1.3E-09 3.1E-15   73.9   0.0   64    1-64    321-397 (497)
+ 30 UniRef100_A0A2X1LCZ2 Tail fibe  98.4 1.8E-09 4.2E-15   65.2   0.0   61    2-62    102-176 (201)
+ 31 UniRef100_A0A0P8GJ16 Phage tai  98.4 3.4E-09   8E-15   52.3   0.0   29    1-29     28-56  (56)
+ 32 UniRef100_A0A3U2R0C2 Phage tai  98.4 4.3E-09   1E-14   69.8   0.0   61    1-61    309-383 (503)
+ 33 UniRef100_A0A098Y8H6 Uncharact  98.3 5.1E-09 1.2E-14   60.6   0.0   38    1-38     57-94  (141)
+ 34 UniRef100_UPI00098E35B5 hypoth  98.3 5.5E-09 1.3E-14   67.6   0.0   60    1-60    199-273 (393)
+ 35 UniRef100_A0A069XGI9 Putative   98.3 5.7E-09 1.4E-14   67.7   0.0   38    1-38    213-250 (348)
+ 36 UniRef100_A0A3X2V372 Phage tai  98.3 9.9E-09 2.3E-14   63.5   0.0   60    1-60    101-180 (255)
+ 37 UniRef100_A0A484VNY5 Putative   98.3   1E-08 2.4E-14   66.5   0.0   56    1-56    309-384 (391)
+ 38 UniRef100_A0A509BXI5 Phage tai  98.2 2.5E-08 5.9E-14   52.3   0.0   37    1-37     24-60  (78)
+ 39 UniRef100_A0A3U5NU57 gp37_C do  98.1   3E-08 7.3E-14   67.9   0.0   60    1-60    406-480 (592)
+ 40 UniRef100_A0A0D3RKJ8 Tail fibe  98.1   4E-08 9.7E-14   66.3   0.0   60    1-60    283-362 (478)
+ 41 UniRef100_A0A4C9ZN60 Phage tai  98.1 5.5E-08 1.3E-13   63.9   0.0   64    2-67    286-352 (406)
+ 42 UniRef100_A0A0D3RLX1 Tail fibe  98.0 8.2E-08 2.1E-13   70.6   0.0   60    1-60    713-786 (1013)
+ 43 UniRef100_A0A085JCX9 Tail fibe  98.0 8.3E-08 2.1E-13   65.3   0.0   67    1-67    273-364 (425)
+ 44 UniRef100_A0A2X2J8W1 Tail fibe  98.0 9.2E-08 2.2E-13   59.5   0.0   38    1-38    211-248 (256)
+ 45 UniRef100_UPI00098D4EFA phage   98.0 9.4E-08 2.2E-13   53.1   0.0   35    1-35     10-44  (110)
+ 46 UniRef100_A0A2S8D6J2 Phage tai  98.0   1E-07 2.5E-13   64.8   0.0   63    1-63    270-346 (461)
+ 47 UniRef100_A0A3V0HDQ4 Peptidase  97.9 1.6E-07 3.8E-13   61.8   0.0   37    1-37    138-174 (384)
+ 48 UniRef100_A0A3T0AIB6 Phage tai  97.9 2.6E-07 6.2E-13   60.1   0.0   35    1-35    181-215 (332)
+ 49 UniRef100_UPI0010214CB2 tail f  97.8   5E-07 1.2E-12   59.0   0.0   67    1-67    185-264 (379)
+ 50 UniRef100_A0A0A7HG91 Long tail  97.8 5.1E-07 1.3E-12   67.0   0.0   38    1-38   1102-1139(1251)
+ 51 UniRef100_UPI00117A8D25 tail f  97.7 5.8E-07 1.4E-12   59.7   0.0   37    1-37    202-238 (449)
+ 52 UniRef100_A0A0C5EAK3 Phage tai  97.7 8.9E-07 2.2E-12   58.5   0.0   36    1-36    158-193 (352)
+ 53 UniRef100_A0A1C9II89 Tail prot  97.7 9.3E-07 2.2E-12   57.8   0.0   32    1-32    198-229 (349)
+ 54 UniRef100_A0A0H2V1D6 Putative   97.6 1.1E-06 2.6E-12   58.5   0.0   37    1-37    275-311 (410)
+ 55 UniRef100_A0A0F3TBN3 Phage sid  97.6   1E-06 2.6E-12   63.9   0.0   60    1-60    523-601 (762)
+ 56 UniRef100_A0A3S4FZC0 Hypotheti  97.6 1.4E-06 3.3E-12   51.4   0.0   36    1-36    119-154 (157)
+ 57 UniRef100_A0A348ERI7 Phage tai  97.6 1.5E-06 3.7E-12   61.3   0.0   59    9-67    454-518 (574)
+ 58 UniRef100_A0A379UMQ6 Long tail  97.5 3.2E-06 7.7E-12   53.8   0.0   36    1-36    234-269 (275)
+ 59 UniRef100_A0A2I8TMP4 Uncharact  97.4 5.2E-06 1.2E-11   55.3   0.0   37    1-37    304-340 (424)
+ 60 UniRef100_A0A023ZVN8 Long tail  97.4 5.6E-06 1.4E-11   62.0   0.0   55    5-67   1049-1109(1222)
+ 61 UniRef100_A0A379R3M2 Gifsy-2 p  97.4   6E-06 1.4E-11   58.8   0.0   60    1-60    592-672 (793)
+ 62 UniRef100_A0A437IIP1 Phage tai  97.3 7.9E-06 1.9E-11   55.3   0.0   65    2-66    283-354 (403)
+ 63 UniRef100_A0A4U6JUV2 Phage tai  97.3 1.1E-05 2.5E-11   52.6   0.0   37    1-37    126-162 (335)
+ 64 UniRef100_A0A447JFG0 Probable   97.2 1.6E-05 3.8E-11   51.6   0.0   37    1-37    266-302 (321)
+ 65 UniRef100_A0A069XQY1 Phage tai  97.2 1.6E-05   4E-11   57.4   0.0   37    1-37    586-622 (765)
+ 66 UniRef100_A0A0T9PLU6 Tail fibe  97.2 1.8E-05 4.4E-11   54.4   0.0   59    2-60    216-288 (460)
+ 67 UniRef100_A0A2K9VLZ7 Peptidase  97.1 2.3E-05 5.3E-11   51.9   0.0   38    1-38    223-260 (377)
+ 68 UniRef100_UPI000DFDFFA4 hypoth  97.0 3.4E-05 8.1E-11   48.6   0.0   37    1-37    195-231 (240)
+ 69 UniRef100_A0A377AIT6 Phage tai  97.0 3.9E-05 9.2E-11   42.9   0.0   36    1-36     15-50  (102)
+ 70 UniRef100_A0A2X2RPY1 Caudovira  97.0 4.2E-05 9.9E-11   47.2   0.0   26    1-26    115-140 (201)
+ 71 UniRef100_A0A2Y0AAC8 Phage tai  96.9 6.6E-05 1.6E-10   48.1   0.0   33    1-33    117-149 (259)
+ 72 UniRef100_I2X4J4 Uncharacteriz  96.9 6.9E-05 1.6E-10   49.5   0.0   62    2-63    182-257 (358)
+ 73 UniRef100_A0A329ZKJ6 Phage tai  96.9 7.6E-05 1.8E-10   46.8   0.0   25    1-25    187-211 (211)
+ 74 UniRef100_A0A074HDQ8 Phage sid  96.8  0.0001 2.4E-10   43.4   0.0   36    1-36     84-119 (139)
+ 75 UniRef100_A0A193QH91 gp37_C do  96.7 0.00015 3.9E-10   52.9   0.0   56    1-57    388-461 (585)
+ 76 UniRef100_A0A2D0L1M6 Sulfurtra  96.5 0.00035 8.5E-10   50.5   0.0   37    1-37    472-508 (719)
+ 77 UniRef100_A0A0N7CA61 PblB-type  96.5 0.00036 8.9E-10   47.1   0.0   38    1-38     42-79  (320)
+ 78 UniRef100_A0A3V5WRH9 Uncharact  96.5 0.00038 8.9E-10   41.9   0.0   36    1-36     76-111 (153)
+ 79 UniRef100_UPI00044A7BED tail f  96.3  0.0007 1.7E-09   48.1   0.0   37    1-37    308-344 (586)
+ 80 UniRef100_A0A3Z9LQU8 Phage tai  96.2   0.001 2.5E-09   43.6   0.0   34    1-34    228-261 (262)
+ 81 UniRef100_A0A3Z9LEQ9 gp37_C do  96.2  0.0012 2.7E-09   40.5   0.0   37    1-37     14-50  (170)
+ 82 UniRef100_A0A0B4L964 Long tail  96.1  0.0014 3.7E-09   49.8   0.0   34    1-34    266-299 (864)
+ 83 UniRef100_A0A2C9P385 Uncharact  96.0  0.0016 3.9E-09   44.3   0.0   35    1-35     76-110 (359)
+ 84 UniRef100_A0A377A3R9 Phage tai  96.0  0.0017   4E-09   38.1   0.0   27    1-27     85-111 (118)
+ 85 UniRef100_A0A3X0BTR4 Phage tai  96.0  0.0017 4.2E-09   47.1   0.0   64    2-67    496-562 (617)
+ 86 UniRef100_A0A060AGT0 Putative   96.0  0.0018 4.3E-09   47.8   0.0   35    1-35    621-655 (928)
+ 87 UniRef100_E9CQE5 Putative phag  96.0  0.0019 4.5E-09   36.9   0.0   37    1-37     62-98  (105)
+ 88 UniRef100_UPI0011132520 hypoth  95.9  0.0021   5E-09   44.4   0.0   35    1-35    130-164 (464)
+ 89 UniRef100_A0A3T3L622 Uncharact  95.9  0.0022 5.2E-09   37.7   0.0   37    2-38     21-57  (117)
+ 90 UniRef100_UPI0006974001 hypoth  95.9  0.0023 5.6E-09   47.4   0.0   35    1-35    576-610 (912)
+ 91 UniRef100_A0A2X2RRW0 Uncharact  95.8  0.0027 6.5E-09   44.1   0.0   32    2-33    268-299 (423)
+ 92 UniRef100_A0A076YIH3 Large dis  95.8  0.0031 7.7E-09   47.7   0.0   35    1-35    620-654 (861)
+ 93 UniRef100_UPI000DA4ABEA hypoth  95.8  0.0034 8.2E-09   45.5   0.0   34    1-34    271-304 (770)
+ 94 UniRef100_UPI000940965D hypoth  95.7  0.0035 8.4E-09   43.9   0.0   35    1-35    278-312 (524)
+ 95 UniRef100_A0A3B7P4I0 Tail fibe  95.6  0.0046 1.1E-08   47.2   0.0   37    2-38    672-708 (949)
+ 96 UniRef100_A0A509BXF8 Phage tai  95.5  0.0057 1.3E-08   38.8   0.0   32    1-32    175-206 (209)
+ 97 UniRef100_A0A0A0Q2I1 Long tail  95.4   0.007 1.8E-08   46.7   0.0   35    1-35    303-337 (870)
+ 98 UniRef100_A0A447PAU2 Phage tai  95.3    0.01 2.4E-08   42.1   0.0   35    1-35    356-390 (483)
+ 99 UniRef100_A0A447JDY2 Phage tai  95.2    0.01 2.4E-08   39.0   0.0   36    1-36    168-203 (270)
+100 UniRef100_UPI001115C74E hypoth  95.2   0.011 2.6E-08   38.8   0.0   35    1-35     76-110 (267)
+101 UniRef100_A0A5B9N336 Large dis  95.2   0.012 2.9E-08   42.0   0.0   36    1-36    445-480 (594)
+102 UniRef100_A0A2X1N9E4 Putative   95.1   0.014 3.3E-08   33.5   0.0   18   50-67     21-39  (93)
+103 UniRef100_A0A2A2GZS0 Uncharact  95.0   0.014 3.6E-08   37.5   0.0   37    1-37     13-49  (183)
+104 UniRef100_A0A2X2ICV4 Tail fibe  94.8   0.021 5.1E-08   33.3   0.0   17    1-17     94-110 (110)
+105 UniRef100_A0A3S8X8T1 Phage tai  94.4   0.037 9.3E-08   44.0   0.0   37    1-37    952-988 (1199)
+106 UniRef100_A0A3T7AKF8 Phage tai  94.2   0.045 1.1E-07   38.8   0.0   36    1-36    308-343 (490)
+107 UniRef100_UPI0010181FE7 hypoth  94.2   0.049 1.1E-07   35.3   0.0   37    1-37    171-207 (221)
+108 UniRef100_A0A0J6MH53 Uncharact  93.8   0.065 1.7E-07   42.3   0.0   36    1-36    611-646 (875)
+109 UniRef100_A0A3U2TK90 Phage tai  93.7   0.082   2E-07   35.6   0.0   36    2-37    106-141 (296)
+110 UniRef100_UPI00122C7F21 hypoth  93.7   0.083   2E-07   28.0   0.0   31    2-32     22-52  (59)
+111 UniRef100_A0A379TS40 Gp19 n=1   93.5   0.098 2.3E-07   36.9   0.0   32    2-33    220-251 (439)
+112 UniRef100_A0A236MLE6 Phage tai  93.1    0.14 3.3E-07   36.2   0.0   37    2-38    324-360 (387)
+113 UniRef100_A0A5N9W0E3 Phage tai  92.5     0.2 4.7E-07   29.0   0.0   17   51-67     60-77  (96)
+114 UniRef100_A0A2T6FUJ7 Uncharact  92.3    0.23 5.5E-07   37.0   0.0   37    2-38    403-439 (561)
+115 UniRef100_A0A5A4TGZ1 Phage tai  92.2    0.24 5.7E-07   27.5   0.0   17   51-67     44-60  (74)
+116 UniRef100_A0A0A6ZX89 Tail fibe  92.2    0.25 5.9E-07   32.8   0.0   17    1-17    224-240 (240)
+117 UniRef100_A0A080GCX7 Phage tai  91.6    0.33 8.1E-07   38.6   0.0   62    2-67    970-1034(1091)
+118 UniRef100_UPI000248C566 hypoth  91.6    0.35 8.4E-07   33.8   0.0   37    2-38    207-243 (365)
+119 UniRef100_A0A236MWC4 Phage tai  89.0    0.98 2.3E-06   31.6   0.0   36    1-36    223-259 (300)
+120 UniRef100_A0A524QCI2 Uncharact  88.8       1 2.5E-06   31.9   0.0   35    3-37    215-249 (378)
+121 UniRef100_UPI0007932F88 tail f  88.7     1.1 2.6E-06   34.3   0.0   31    2-32    301-331 (797)
+122 UniRef100_UPI0009DFB402 hypoth  87.8     1.4 3.3E-06   32.3   0.0   33    3-35    232-264 (487)
+123 UniRef100_A0A0A0RTX7 L-shaped   87.4     1.4 3.7E-06   36.2   0.0   36    1-36    702-737 (982)
+124 UniRef100_A0A068QVC8 Uncharact  87.4     1.4 3.7E-06   35.3   0.0   35    1-35    425-459 (683)
+125 UniRef100_A0A3V1F619 gp37_C do  86.6     1.8 4.4E-06   33.0   0.0   35    1-35    191-225 (482)
+126 UniRef100_H6NDS7 Phage minor s  86.2     2.1 4.9E-06   31.6   0.0   34    2-35    342-375 (499)
+127 UniRef100_A0A3M7U6N5 Uncharact  85.6     2.3 5.6E-06   34.6   0.0   34    2-35   1017-1050(1239)
+128 UniRef100_A0A2E4ZEY3 Uncharact  85.0     2.6 6.2E-06   34.7   0.0   30    3-32    323-352 (1743)
+129 UniRef100_UPI0005788F26 hypoth  84.3       3 7.2E-06   29.3   0.0   17   51-67    262-279 (284)
+130 UniRef100_UPI00112F435F tail f  83.7     3.4   8E-06   31.3   0.0   36    1-36    330-365 (612)
+131 UniRef100_A0A2Z5ZCC8 Long tail  83.0     3.8 9.1E-06   32.4   0.0   34    3-36    452-485 (977)
+132 UniRef100_UPI00109262C3 hypoth  82.8       4 9.4E-06   28.4   0.0   34    2-35    160-193 (279)
+133 UniRef100_A0A2I9D9X9 Peptidase  82.7     3.9 9.6E-06   32.9   0.0   33    3-35    640-672 (833)
+134 UniRef100_A0A5B8JJV1 Uncharact  82.3     4.1   1E-05   31.9   0.0   35    2-36    394-428 (607)
+135 UniRef100_A0A381T8T0 Uncharact  81.6     4.8 1.1E-05   31.4   0.0   32    2-33    677-708 (797)
+136 UniRef100_A0A0G0BE00 Collagen   81.2       5 1.2E-05   27.3   0.0   33    4-36     75-107 (228)
+137 UniRef100_A0A484Z3Y9 Tail Fibe  80.8     5.3 1.3E-05   27.5   0.0   31    3-33    100-130 (252)
+138 UniRef100_A0A249XZF5 Tail fibe  80.6     5.4 1.3E-05   31.9   0.0   36    2-37    288-323 (794)
+139 UniRef100_A0A4Q6EIU5 Tail fibe  80.6     5.5 1.3E-05   30.5   0.0   33    2-34    398-430 (639)
+140 UniRef100_UPI000420AC9A hypoth  80.5     5.6 1.3E-05   27.3   0.0   30    3-32     83-112 (246)
+141 UniRef100_UPI000F439F5D hypoth  79.4     6.4 1.5E-05   28.4   0.0   34    3-36    182-215 (360)
+142 UniRef100_A0A3B0UPR2 Phage tai  79.1     6.7 1.6E-05   30.8   0.0   30    3-32    519-548 (824)
+143 UniRef100_A0A3B0UPR2 Phage tai  79.1     6.7 1.6E-05   30.8   0.0   30    3-32    588-617 (824)
+144 UniRef100_A0A015ZJQ6 Peptidase  78.6     7.1 1.7E-05   33.4   0.0   32    2-33   1371-1402(1957)
+145 UniRef100_A0A0A7HG91 Long tail  77.9     7.4 1.8E-05   33.2   0.0   35    3-37    300-334 (1251)
+146 UniRef100_A0A514A7D1 Chaperone  77.8     7.7 1.9E-05   31.2   0.0   35    2-36    668-702 (816)
+147 UniRef100_UPI00067661D8 hypoth  73.5      12   3E-05   29.6   0.0   36    2-37    666-701 (824)
+148 UniRef100_W0BVP4 Uncharacteriz  71.7      15 3.5E-05   27.4   0.0   35    3-37    312-346 (426)
+149 UniRef100_UPI000B20AD97 shuffl  71.3      15 3.6E-05   29.7   0.0   31    2-32    427-457 (1013)
+150 UniRef100_A0A060BN58 Long tail  67.4      21 5.1E-05   30.3   0.0   35    3-37    315-349 (1036)
+151 UniRef100_A0A0E3WJA3 Uncharact  66.9      22 5.2E-05   29.4   0.0   30    3-32    985-1014(1172)
+152 UniRef100_A0A344UCY3 Uncharact  58.8      40 9.4E-05   25.7   0.0   30    6-35    234-263 (454)
+153 UniRef100_UPI00039E472C hypoth  55.9      47 0.00011   26.2   0.0   31    6-36    262-292 (524)
+154 UniRef100_A0A0L6XVH2 Short-cha  52.3      58 0.00014   28.3   0.0   33    5-37    735-767 (1136)
+155 UniRef100_A0A2I9D9X9 Peptidase  50.4      65 0.00016   27.3   0.0   31    3-33    502-532 (833)
+156 UniRef100_A0A2E4ZEY3 Uncharact  50.0      69 0.00016   28.0   0.0   30    3-32   1199-1228(1743)
+157 UniRef100_A0A0V7ZVF3 Uncharact  21.6 4.2E+02   0.001   22.0   0.0   31    3-33    226-256 (615)
+
+No 1
+>UniRef100_A0A2X8N8A7 Putative phage tail protein n=2 Tax=Escherichia coli TaxID=562 RepID=A0A2X8N8A7_ECOLX
+Probab=99.46  E-value=1.2e-16  Score=99.18  Aligned_cols=62  Identities=35%  Similarity=0.579  Sum_probs=53.4  Template_Neff=2.100
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIF------TEAGKHIT--------SNGNLNQWGGGAIYCR   62 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~------~~~~~~~~--------~~~~~~~wg~~~~~v~   62 (67)
+                      +||+++|+||||||++||++++|+|++++++|+++..+      ++++|+++        .+..|+|||+.+|||.
+T Consensus        95 nSIvlGDNDTGfKQngDGiLdvYAN~q~VfRf~ng~~ial~~iqaGd~KkftLSS~NnStknA~FNLWG~ssRP~V  170 (279)
+T UniRef100_A0A2   95 NSIVLGDNDTGFKQNGDGILDVYANSQRVFRFQNGVAIALKNIQAGDGKKFTLSSSNNSTKNATFNLWGNSSRPVV  170 (279)
+Confidence            58999999999999999999999999999999998654      47788872        2335999999999964
+
+
+No 2
+>UniRef100_A0A0L1BL30 Uncharacterized protein (Fragment) n=2 Tax=Escherichia coli TaxID=562 RepID=A0A0L1BL30_ECOLX
+Probab=99.40  E-value=7e-16  Score=85.84  Aligned_cols=62  Identities=34%  Similarity=0.544  Sum_probs=52.4  Template_Neff=1.518
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIF------TEAGKHIT--------SNGNLNQWGGGAIYCR   62 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~------~~~~~~~~--------~~~~~~~wg~~~~~v~   62 (67)
+                      +||++||+||||||++||+++.|+|++++++++++..+      ++.+|.++        .+..|++||+.+||+.
+T Consensus        31 ~siv~gdndtgfkqngdgild~~an~~~~~r~~~g~~~~~~~i~ag~~k~~tlsssn~s~~na~fnlwg~~~rp~v  106 (126)
+T UniRef100_A0A0   31 NSIVLGDNDTGFKQNGDGILDTYANSQHVFRFQNGEAIVLKNIQAGNSKRFTLSSSNNSVRNAQFNLWGDSNRPTV  106 (126)
+Confidence            58999999999999999999999999999999988654      46667662        2345999999999964
+
+
+No 3
+>UniRef100_A0A376RLV6 Phage tail fiber protein H (GpH) n=1 Tax=Escherichia coli TaxID=562 RepID=A0A376RLV6_ECOLX
+Probab=99.30  E-value=7.6e-15  Score=90.38  Aligned_cols=67  Identities=33%  Similarity=0.535  Sum_probs=55.6  Template_Neff=1.699
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIFTEAGKHITSNGNLNQWGG-GAIYCRDLNVS   67 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~~~~~~~~~~~~~~~~wg~-~~~~v~dv~~~   67 (67)
+                      +||++||+||||||++||.+++|+++.++++|.++.+.......++-.-++..||+ ++||||||||.
+T Consensus       142 ~sivlgdndtg~kqngdg~ldvyan~v~v~rf~~~siqs~k~invtgrv~psdygnfdsryv~d~rlg  209 (264)
+T UniRef100_A0A3  142 SSIVLGDNDTGLKQNGDGNLDIYANGVQVFRFQNDTIESKKSINVTGRLNPTDYGNFDSRYVQDIRLG  209 (264)
+Confidence            48999999999999999999999999999999999887422222233345788998 79999999984
+
+
+No 4
+>UniRef100_A0A061YA39 Phage tail fiber protein n=2 Tax=Escherichia coli TaxID=562 RepID=A0A061YA39_ECOLX
+Probab=99.29  E-value=9.9e-15  Score=94.34  Aligned_cols=65  Identities=35%  Similarity=0.612  Sum_probs=55.5  Template_Neff=2.400
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIFTEAGKHITSNG--NLNQWGG-GAIYCRDLNVS   67 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~~~~~~~~~~~~--~~~~wg~-~~~~v~dv~~~   67 (67)
+                      +||+++|+||||||++||.+++|+|+.++.+|.++.+.  ..+.+...+  .++.||+ ++||||||||.
+T Consensus       251 nSivlGdnDTGfKqngDG~LdvYANn~~v~rf~ng~~~--~~k~inV~Grv~PSdygNFDsRYVrdvRlG  318 (373)
+T UniRef100_A0A0  251 NSIVLGDNDTGFKQNGDGNLDVYANNVHVMRFQNGSIQ--SNKTINVTGRVNPSDYGNFDSRYVQDVRLG  318 (373)
+Confidence            58999999999999999999999999999999988875  344444444  4788998 79999999984
+
+
+No 5
+>UniRef100_A0A3Y1F5V6 Uncharacterized protein (Fragment) n=11 Tax=Shigella sonnei TaxID=624 RepID=A0A3Y1F5V6_SHISO
+Probab=99.29  E-value=1.1e-14  Score=82.16  Aligned_cols=67  Identities=36%  Similarity=0.539  Sum_probs=54.8  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIFTEAGKHITSNGNLNQWGG-GAIYCRDLNVS   67 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~~~~~~~~~~~~~~~~wg~-~~~~v~dv~~~   67 (67)
+                      +||+++|+|+||+|.+||.+++|+|+.++.+|..+.+.......++-.-++..+|+ ++||||||||.
+T Consensus        76 nsivlgdndtgfkqkgdgnldvyannvhvmrfvsgsiqsnktinitgrvnpsdygnfdsryvrdvrlg  143 (147)
+T UniRef100_A0A3   76 NSIVLGDNDTGFKQKGDGNLDVYANNVHVMRFVSGSIQSNKTINITGRVNPSDYGNFDSRYVRDVRLG  143 (147)
+Confidence            58999999999999999999999999999999777766432233334445778898 79999999984
+
+
+No 6
+>UniRef100_A0A2S8JMU1 Phage tail protein (Fragment) n=1 Tax=Escherichia coli TaxID=562 RepID=A0A2S8JMU1_ECOLX
+Probab=99.19  E-value=8e-14  Score=82.24  Aligned_cols=63  Identities=35%  Similarity=0.541  Sum_probs=53.2  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIF------TEAGKHIT--------SNGNLNQWGGGAIYCRD   63 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~------~~~~~~~~--------~~~~~~~wg~~~~~v~d   63 (67)
+                      +||.++|+|||++|++||++++|++++++++|+++..+      +++.++++        .+..|++||+.+|||..
+T Consensus        87 nsiafgdndtgikqngdgildvyangqhvfrfqngvaialkniqagnakkftlssannstknatfnlwgnssrpvva  163 (204)
+T UniRef100_A0A2   87 NSIAFGDNDTGIKQNGDGILDVYANGQHVFRFQNGVAIALKNIQAGNAKKFTLSSANNSTKNATFNLWGNSSRPVVA  163 (204)
+Confidence            58999999999999999999999999999999988654      46777772        23359999999999753
+
+
+No 7
+>UniRef100_A0A192CMK9 Tail fiber protein n=1 Tax=Escherichia coli O25b:H4 TaxID=941280 RepID=A0A192CMK9_ECOLX
+Probab=99.18  E-value=8.8e-14  Score=82.52  Aligned_cols=65  Identities=35%  Similarity=0.599  Sum_probs=55.4  Template_Neff=2.200
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIFTEAGKHITSNG--NLNQWGG-GAIYCRDLNVS   67 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~~~~~~~~~~~~--~~~~wg~-~~~~v~dv~~~   67 (67)
+                      ++|+++++|++|++.+||.+++|++..++++|.++++.  +.+.+..++  .++.||+ +||||+||||.
+T Consensus        42 ~siv~~d~dt~fkq~gdg~~~vya~~~~v~r~~~gs~~--s~k~invtGrv~PsdYGNFDSRYVkDvRLG  109 (177)
+T UniRef100_A0A1   42 NSIVLGDNDTGFKQNGDGNLDVYANNVHVMRFVNGSIQ--SNKTINITGRVNPSDYGNFDSRYVKDVRLG  109 (177)
+Confidence            47889999999999999999999999999999888865  345554444  4788999 89999999984
+
+
+No 8
+>UniRef100_A0A0A0GQ29 Putative tail fiber protein n=1 Tax=Escherichia coli TaxID=562 RepID=A0A0A0GQ29_ECOLX
+Probab=99.13  E-value=2.1e-13  Score=90.57  Aligned_cols=60  Identities=42%  Similarity=0.712  Sum_probs=50.8  Template_Neff=1.800
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDI------FTEAGKHIT--------SNGNLNQWGGGAIY   60 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~------~~~~~~~~~--------~~~~~~~wg~~~~~   60 (67)
+                      +||++|||||||||++||++++|+|+++++++.++.+      .++++|+++        ++..|++||+.+||
+T Consensus       328 NSIV~GDNDTGfKq~gDGvL~iyANn~~v~~i~~~~~~~~g~irAG~~K~lsLtS~NnS~~~a~fnLWG~~nRP  401 (524)
+T UniRef100_A0A0  328 NSIVLGDNDTGFKQNGDGVLDIYANNAHVGRIDNGDVLTNGAIRAGNGKRLSLTSNNNSTMNATFNLWGDANRP  401 (524)
+Confidence            5899999999999999999999999999999987743      457777772        33458999998887
+
+
+No 9
+>UniRef100_A0A1B0VFW4 Tail protein n=1 Tax=Salmonella phage SJ46 TaxID=1815968 RepID=A0A1B0VFW4_9CAUD
+Probab=99.07  E-value=5.6e-13  Score=90.24  Aligned_cols=60  Identities=38%  Similarity=0.616  Sum_probs=51.0  Template_Neff=2.300
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTD------IFTEAGKHIT--------SNGNLNQWGGGAIY   60 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~------~~~~~~~~~~--------~~~~~~~wg~~~~~   60 (67)
+                      +||++|||||||||++||++++|+|++++.++.++.      +.+++.|+++        +...|++||+..||
+T Consensus       378 NSIVlGDNDTGfKQngDGvLdiyaN~~hv~ri~~~~~~~lg~irAG~~k~lsltS~Nns~~~a~fnlwGdanRP  451 (582)
+T UniRef100_A0A1  378 NSIVLGDNDTGFKQNGDGILDIYANNQHVVRVDPGEMLVLGAIRAGNGKKLSLTSNNNSTMTATFNLWGDANRP  451 (582)
+Confidence            689999999999999999999999999999997763      4467778772        23359999999888
+
+
+No 10
+>UniRef100_A0A0K3PMU1 Phage tail fiber protein n=2 Tax=Escherichia coli TaxID=562 RepID=A0A0K3PMU1_ECOLX
+Probab=99.05  E-value=8e-13  Score=89.45  Aligned_cols=67  Identities=36%  Similarity=0.547  Sum_probs=55.2  Template_Neff=1.661
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIFTEAGKHITSNGNLNQWGG-GAIYCRDLNVS   67 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~~~~~~~~~~~~~~~~wg~-~~~~v~dv~~~   67 (67)
+                      +||+++|+|+||||++||.+++|+|+.|+.+|..+.+.......++-.-++..||+ ++|||+||||.
+T Consensus       540 nsivlgdndtgfkqngdg~ldvyannvhvmrfvsgsiqsnktinitgrvnpsdygnfdsryv~d~rlg  607 (661)
+T UniRef100_A0A0  540 NSIVLGDNDTGFKQNGDGNLDVYANNVHVMRFVSGSIQSNKTINITGRVNPSDYGNFDSRYVRDVRLG  607 (661)
+Confidence            58999999999999999999999999999999777776422223344445788998 79999999984
+
+
+No 11
+>UniRef100_A0A0Q3D5W5 Phage tail protein n=1 Tax=Escherichia coli TaxID=562 RepID=A0A0Q3D5W5_ECOLX
+Probab=99.03  E-value=1.1e-12  Score=87.39  Aligned_cols=62  Identities=34%  Similarity=0.534  Sum_probs=52.8  Template_Neff=2.400
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIF------TEAGKHI--------TSNGNLNQWGGGAIYCR   62 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~------~~~~~~~--------~~~~~~~~wg~~~~~v~   62 (67)
+                      +||+++|+|||+||.+||++++|+|++++++|+++.+.      +++.+++        +.+..|++||+.+|||.
+T Consensus       282 nSI~~GDndTg~KqnGdG~ldvyaNgq~VFRfqng~~~al~~i~ag~~rkftlss~n~st~~a~~~lwGn~srPvV  357 (473)
+T UniRef100_A0A0  282 NSIAFGDNDTGIKQNGDGLLDVYANGQHVFRFQNGVAIALKNIQAGNAKKFTLSSANNSTKNAGFNLWGNPSRPVV  357 (473)
+Confidence            58999999999999999999999999999999998764      3566666        23345999999999975
+
+
+No 12
+>UniRef100_A0A076LMU9 Tail fiber n=1 Tax=Edwardsiella anguillarum ET080813 TaxID=667120 RepID=A0A076LMU9_9GAMM
+Probab=98.97  E-value=2.9e-12  Score=84.98  Aligned_cols=65  Identities=32%  Similarity=0.592  Sum_probs=53.2  Template_Neff=1.840
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIFTEAGKHITSNG--NLNQWGG-GAIYCRDLNVS   67 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~~~~~~~~~~~~--~~~~wg~-~~~~v~dv~~~   67 (67)
+                      +||++||+||||+|++||.+++|+|+..+++|++..+..  -+.+...+  .+..||+ ++|||+||||.
+T Consensus       367 ~sivlgdndtg~kqngdglldiyangvqvfrfqndtles--kksinvtgrltptdygnfdsryvqdirl~  434 (489)
+T UniRef100_A0A0  367 NSIVLGDNDTGFKQNGDGLLDIYANGVQVFRFQNDTLES--KKSINVTGRLTPTDYGNFDSRYVQDIRLG  434 (489)
+Confidence            489999999999999999999999999999998887663  22333333  3567888 79999999984
+
+
+No 13
+>UniRef100_A0A2X1LNF0 Phage tail fiber protein n=1 Tax=Escherichia coli TaxID=562 RepID=A0A2X1LNF0_ECOLX
+Probab=98.97  E-value=3.1e-12  Score=87.50  Aligned_cols=67  Identities=34%  Similarity=0.537  Sum_probs=55.1  Template_Neff=1.309
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIFTEAGKHITSNGNLNQWGG-GAIYCRDLNVS   67 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~~~~~~~~~~~~~~~~wg~-~~~~v~dv~~~   67 (67)
+                      +||+++|+|+||||++||.+++|+|+.|+.+|..+.+.......++-.-++..||+ ++|||+||||.
+T Consensus       701 nsivlgdndtgfkqngdg~ldvyannvhvmrfvsgsiqsnktinitgrvnpsdygnfdsryvkdvrlg  768 (822)
+T UniRef100_A0A2  701 NSIVLGDNDTGFKQNGDGNLDVYANNVHVMRFVSGSIQSNKTINITGRVNPSDYGNFDSRYVKDVRLG  768 (822)
+Confidence            58999999999999999999999999999999877776422223344446788998 79999999984
+
+
+No 14
+>UniRef100_A0A376P2H3 Putative tail fiber protein n=2 Tax=Enterobacteriaceae TaxID=543 RepID=A0A376P2H3_ECOLX
+Probab=98.91  E-value=7.4e-12  Score=81.77  Aligned_cols=63  Identities=33%  Similarity=0.499  Sum_probs=53.2  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIF------TEAGKHIT--------SNGNLNQWGGGAIYCRD   63 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~------~~~~~~~~--------~~~~~~~wg~~~~~v~d   63 (67)
+                      +||.++|+|+|++|++||++++|+|++++++|+++..+      ++++++++        .+..|.+||+.+|||..
+T Consensus       311 nsiafgdndtgikqngdgildvyangqhvfrfqngvaialkniqagnakkftlssannstknaafylwgnpsrpvva  387 (502)
+T UniRef100_A0A3  311 NSIAFGDNDTGIKQNGDGILDVYANGQHVFRFQNGVAIALKNIQAGNAKKFTLSSANNSTKNAAFYLWGNPSRPVVA  387 (502)
+Confidence            58999999999999999999999999999999988654      46777772        23358999999999753
+
+
+No 15
+>UniRef100_A0A0Q3APR8 Phage tail protein n=3 Tax=Escherichia coli TaxID=562 RepID=A0A0Q3APR8_ECOLX
+Probab=98.90  E-value=8.1e-12  Score=76.49  Aligned_cols=62  Identities=34%  Similarity=0.533  Sum_probs=52.4  Template_Neff=2.200
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIF------TEAGKHIT--------SNGNLNQWGGGAIYCR   62 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~------~~~~~~~~--------~~~~~~~wg~~~~~v~   62 (67)
+                      +||+++|+|+|++|.+||+++.++++++++++.++...      ++++++++        .+..|+|||+++|||.
+T Consensus        24 ~si~~gdNdtG~kqnGdgil~~~~~g~~~~~~~ng~a~~~~~i~agn~kkftlss~N~stkna~fnLwgn~sRpvV   99 (215)
+T UniRef100_A0A0   24 NSIAFGDNDTGIKQNGDGILDVYANGQHVFRFQNGMAIALKNIQAGNARKFTLSSSNNSTKNAAFNLWGNPSRPVV   99 (215)
+Confidence            47899999999999999999999999999999887553      46777772        3345999999999975
+
+
+No 16
+>UniRef100_A0A3S4GUS9 Prophage long tail fiber protein n=1 Tax=Salmonella enterica subsp. arizonae TaxID=59203 RepID=A0A3S4GUS9_SALER
+Probab=98.88  E-value=1.1e-11  Score=80.37  Aligned_cols=61  Identities=34%  Similarity=0.538  Sum_probs=50.7  Template_Neff=1.452
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDI------FTEAGKHIT--------SNGNLNQWGGGAIYC   61 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~------~~~~~~~~~--------~~~~~~~wg~~~~~v   61 (67)
+                      +||++||+|+||||++||+++.++|++|..+..++-+      .+++.+.++        .+..|++||+++||.
+T Consensus       322 ~siv~gdndtgfkqngdgildt~ansqhtvrvap~emqvlgairagnakrmtmtssnnsvlnaqfnlwgdgnrpt  396 (403)
+T UniRef100_A0A3  322 NSIVFGDNDTGFKQNGDGILDTFANSQHTVRVAPGEMQVLGAIRAGNAKRMTMTSSNNSVLNAQFNLWGDGNRPT  396 (403)
+Confidence            4899999999999999999999999999999877643      456777762        233599999999884
+
+
+No 17
+>UniRef100_UPI0007A04E23 hypothetical protein n=1 Tax=Escherichia coli TaxID=562 RepID=UPI0007A04E23
+Probab=98.88  E-value=1.2e-11  Score=83.12  Aligned_cols=67  Identities=33%  Similarity=0.536  Sum_probs=54.5  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIFTEAGKHITSNGNLNQWGG-GAIYCRDLNVS   67 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~~~~~~~~~~~~~~~~wg~-~~~~v~dv~~~   67 (67)
+                      +||+++|+|+||+|++||.+++|+|+.+..+|..+.+.......++-.-++..+|+ ++||||||||.
+T Consensus       565 nsivlgdndtgfkqngdgnldvyansvhimrfvsgsiqsnktinitgrvnpsdygnfdsryvrdirlg  632 (694)
+T UniRef100_UPI0  565 NSIVLGDNDTGFKQNGDGNLDVYANSVHIMRFVSGSIQSNKTINITGRVNPSDYGNFDSRYVRDIRLG  632 (694)
+Confidence            58999999999999999999999999999999777766322223333445778888 79999999984
+
+
+No 18
+>UniRef100_A0A3L4Y2R2 Phage tail protein n=1 Tax=Escherichia coli TaxID=562 RepID=A0A3L4Y2R2_ECOLX
+Probab=98.82  E-value=2.4e-11  Score=80.57  Aligned_cols=67  Identities=36%  Similarity=0.551  Sum_probs=54.4  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIFTEAGKHITSNGNLNQWGG-GAIYCRDLNVS   67 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~~~~~~~~~~~~~~~~wg~-~~~~v~dv~~~   67 (67)
+                      +||+++|+|+||+|++||.+++|+|+.++.+|..+.+.......++-.-++..+|+ ++|||||.||.
+T Consensus       452 nsivlgdndtgfkqngdgnldvyannvhvmrfvsgsiqsnktinitgrvnpsdygnfdsryvrdmrlg  519 (581)
+T UniRef100_A0A3  452 NSIVLGDNDTGFKQNGDGNLDVYANNVHVMRFVSGSIQSNKTINITGRVNPSDYGNFDSRYVRDMRLG  519 (581)
+Confidence            58999999999999999999999999999999777766322223333445778888 79999999984
+
+
+No 19
+>UniRef100_UPI000DE545CD phage tail protein n=1 Tax=Escherichia coli TaxID=562 RepID=UPI000DE545CD
+Probab=98.78  E-value=4.1e-11  Score=74.83  Aligned_cols=62  Identities=32%  Similarity=0.545  Sum_probs=51.4  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIF------TEAGKHIT--------SNGNLNQWGGGAIYCR   62 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~------~~~~~~~~--------~~~~~~~wg~~~~~v~   62 (67)
+                      .||+++|+|+||+|++||++++|++++.+++|+++..+      ++.+++++        .+..|++||...|||.
+T Consensus       202 ssivlgdndtgfkqngdgildvyansqrvfrfqngvaiafkniqagdskkfslsssntstknatfnlwgastrpvv  277 (308)
+T UniRef100_UPI0  202 SSIVLGDNDTGFKQNGDGILDVYANSQRVFRFQNGVAIAFKNIQAGDSKKFSLSSSNTSTKNATFNLWGASTRPVV  277 (308)
+Confidence            37899999999999999999999999999999988654      35666662        2335999999888865
+
+
+No 20
+>UniRef100_A0A3U2A6G2 Phage tail protein n=1 Tax=Salmonella enterica TaxID=28901 RepID=A0A3U2A6G2_SALER
+Probab=98.77  E-value=4.5e-11  Score=75.43  Aligned_cols=60  Identities=37%  Similarity=0.733  Sum_probs=50.4  Template_Neff=1.900
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIF------TEAGKHIT--S------NGNLNQWGGGAIY   60 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~------~~~~~~~~--~------~~~~~~wg~~~~~   60 (67)
+                      +||+++|+||||||.+||++.+|+|++.+++.+++.+.      ++++++++  +      +..|++||...||
+T Consensus        75 nsIv~gDnDtGfkq~~Dgvl~iYaNna~vg~id~~glh~~~di~agngk~l~Ltsnnns~l~a~f~LWg~~~rp  148 (281)
+T UniRef100_A0A3   75 NSIVLGDNDTGFKQNGDGVLDVYANNALVARLQPGKLYVVGDVLAGDGRKLSLTSDNNSSLNARFNLWGDANRP  148 (281)
+Confidence            58999999999999999999999999999999888653      36777772  2      2348999998887
+
+
+No 21
+>UniRef100_A0A0B4L964 Long tail fiber distal subunit n=1 Tax=Salmonella phage STP4-a TaxID=1445860 RepID=A0A0B4L964_9CAUD
+Probab=98.77  E-value=4.6e-11  Score=84.84  Aligned_cols=67  Identities=54%  Similarity=0.881  Sum_probs=61.9  Template_Neff=2.874
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIFTEAGKHITSNGNLNQWG-----GGAIYCRDLNVS   67 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~~~~~~~~~~~~~~~~wg-----~~~~~v~dv~~~   67 (67)
+                      +||++||+|||++|.+||.+.+.+|+.++..|.++++....++.+.+++....||     .++.||+|+|||
+T Consensus       678 ~sIaiGDnDTGirw~~DG~~~i~aNs~~vat~~~~g~~t~~g~~i~s~g~~v~wg~~~n~~~~~~~~dl~v~  749 (864)
+T UniRef100_A0A0  678 NSIAIGDNDTGIRWRGDGNLEIFANSQHVATFDPGGFNTEAGKSINSPGDSVQWGDQYNPAGSAYERDLHVR  749 (864)
+Confidence            4899999999999999999999999999999999999887888888888888899     579999999987
+
+
+No 22
+>UniRef100_A0A376ZI61 Tail fiber protein n=1 Tax=Escherichia coli TaxID=562 RepID=A0A376ZI61_ECOLX
+Probab=98.76  E-value=5.3e-11  Score=79.02  Aligned_cols=62  Identities=32%  Similarity=0.515  Sum_probs=50.7  Template_Neff=1.493
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIF------TEAGKHIT--------SNGNLNQWGGGAIYCR   62 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~------~~~~~~~~--------~~~~~~~wg~~~~~v~   62 (67)
+                      +||++||+|+||+|++||++++|+|++++++|+++..+      ++.++++.        ....|.+||+..|+|.
+T Consensus       327 ~sivlgdndtgfkqngdgild~yan~qrv~~~qn~~~~~fkniqa~~~~kf~l~s~~~~~~~~~~~lw~~~~r~~~  402 (501)
+T UniRef100_A0A3  327 NSIVLGDNDTGFKQNGDGILDVYANGQRVFRFQNGVAIAFKNIQAGTARKFTLSSANNSTKNFAFELWGGPTRPVV  402 (501)
+Confidence            48999999999999999999999999999999988654      35555552        2224789999988863
+
+
+No 23
+>UniRef100_A0A377A3Q7 Putative phage tail protein n=1 Tax=Escherichia coli TaxID=562 RepID=A0A377A3Q7_ECOLX
+Probab=98.73  E-value=8.1e-11  Score=59.95  Aligned_cols=38  Identities=39%  Similarity=0.625  Sum_probs=35.2  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIF   38 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~   38 (67)
+                      .||++||+||||++++||++++|+|++.+++|+++..+
+T Consensus         6 ssivlgdndtgfkqngdgildvyansqrvfrfqngvai   43 (70)
+T UniRef100_A0A3    6 SSIVLGDNDTGFKQNGDGILDVYANSQRVFRFQNGVAI   43 (70)
+Confidence            37999999999999999999999999999999988654
+
+
+No 24
+>UniRef100_A0A3T5BX40 Phage tail protein (Fragment) n=6 Tax=Salmonella enterica TaxID=28901 RepID=A0A3T5BX40_SALET
+Probab=98.69  E-value=1.2e-10  Score=77.02  Aligned_cols=60  Identities=40%  Similarity=0.716  Sum_probs=48.5  Template_Neff=1.589
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDI------------FTEAGKHIT--------SNGNLNQWGGG-AI   59 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~------------~~~~~~~~~--------~~~~~~~wg~~-~~   59 (67)
+                      +||+++|+||||||.+||++++|+|++++.+..++++            .++++++++        .+..|++||++ +|
+T Consensus       311 nsiv~gdndtg~kq~gdgvl~~yan~~~~~~i~~~~l~~~~~~~~~g~iragn~k~ls~ts~nns~~~a~fnlwgd~~nr  390 (465)
+T UniRef100_A0A3  311 NSIVLGDNDTGFKQNGDGVLDIYANNQHVGRIDNSGLHMSVDMLANGAIRAGNGKRLSLTSNNNSILNAQFNLWGDGGNR  390 (465)
+Confidence            5899999999999999999999999999999977643            246777662        23348999985 66
+
+
+Q T0953s1-D1       60 Y   60 (67)
+Q Consensus        60 ~   60 (67)
+                      |
+T Consensus       391 p  391 (465)
+T UniRef100_A0A3  391 P  391 (465)
+Confidence            5
+
+
+No 25
+>UniRef100_A0A379VM21 Phage tail fiber n=1 Tax=Salmonella enterica I TaxID=59201 RepID=A0A379VM21_SALET
+Probab=98.68  E-value=1.3e-10  Score=71.75  Aligned_cols=58  Identities=34%  Similarity=0.552  Sum_probs=48.7  Template_Neff=1.891
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIFTEAGKHI--------TSNGNLNQWGGGAIY   60 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~~~~~~~~--------~~~~~~~~wg~~~~~   60 (67)
+                      +||+++|+||||||.+||+++.+.++.++.++  +.+.++..+++        ++++.|++||+..||
+T Consensus        26 ~si~~gdndtg~kqngdg~~~~~~~s~~~~r~--g~i~a~~~~~lsLtsn~Ns~~ta~~nlwg~a~rp   91 (231)
+T UniRef100_A0A3   26 NSIVLGDNDTGFKQNGDGVLDTYANSQHVLRF--GAIRAGVEKKLSLTSNNNSTMTATFNLWGDANRP   91 (231)
+Confidence            48999999999999999999999999999986  66666666666        233459999999888
+
+
+No 26
+>UniRef100_A0A160HRJ8 GpH domain protein n=2 Tax=Escherichia coli TaxID=562 RepID=A0A160HRJ8_ECOLX
+Probab=98.59  E-value=4.1e-10  Score=71.90  Aligned_cols=62  Identities=34%  Similarity=0.561  Sum_probs=49.3  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIF------TEAGKHIT--------SNGNLNQWGGGAIYCR   62 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~------~~~~~~~~--------~~~~~~~wg~~~~~v~   62 (67)
+                      +||+++|+|+||+|++||++++|+|++.+++|++....      .+..+.++        .+-.|++||...|||.
+T Consensus       182 nsivlgdndtgfkqngdgildvyansqrvfrfqndaafslkkllvgdsktfslsssntstknvtfnlwgastrpvv  257 (365)
+T UniRef100_A0A1  182 NSIVLGDNDTGFKQNGDGILDVYANSQRVFRFQNDAAFSLKKLLVGDSKTFSLSSSNTSTKNVTFNLWGASTRPVV  257 (365)
+Confidence            58999999999999999999999999999999876432      24555551        1224899999888864
+
+
+No 27
+>UniRef100_A0A0C5EDG9 Phage tail fibre repeat n=2 Tax=Escherichia coli TaxID=562 RepID=A0A0C5EDG9_ECOLX
+Probab=98.57  E-value=4.5e-10  Score=77.99  Aligned_cols=66  Identities=35%  Similarity=0.570  Sum_probs=53.0  Template_Neff=1.800
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIFTEAGKHITSNG--NLNQWGG------GAIYCRDLNVS   67 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~~~~~~~~~~~~--~~~~wg~------~~~~v~dv~~~   67 (67)
+                      ++|+++|++++|+|+++|.+.+|+|+.++.+|.++..+ +.++.+..++  ..+.||+      ++||||||||.
+T Consensus       619 n~i~l~d~~tgfkq~G~g~~~~~~n~vh~~~Fv~G~~i-~s~~~in~~G~i~~s~~gn~ls~~~~s~~VrDvRLG  692 (747)
+T UniRef100_A0A0  619 NSIVLGDNDTGFKQNGDGNLDVYANNVHVMRFVPGFSI-QSNKTINITGRVNPSDYGNWLSTWFDSRYVRDVRLG  692 (747)
+Confidence            47899999999999999999999999999999877443 3344444443  3567887      69999999984
+
+
+No 28
+>UniRef100_UPI000DF720E8 Long tail fiber distal subunit n=1 Tax=Salmonella phage vB_SenM-S16 TaxID=1087482 RepID=UPI000DF720E8
+Probab=98.56  E-value=5.5e-10  Score=66.85  Aligned_cols=65  Identities=100%  Similarity=1.617  Sum_probs=59.3  Template_Neff=1.000
+
+Q T0953s1-D1        2 SIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIFTEAGKHITSNGNLNQWGGGAIYCRDLNV   66 (67)
+Q Consensus         2 si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~~~~~~~~~~~~~~~~wg~~~~~v~dv~~   66 (67)
+                      ||.+||+|+|++|.+||+..+.+|+..++.|....+.+..++.++++++++.||++.-||||+.+
+T Consensus        27 siaigdndtglrwggdgivqivannaivggwnstdifteagkhitsngnlnqwgggaiycrdlnv   91 (204)
+T UniRef100_UPI0   27 SIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIFTEAGKHITSNGNLNQWGGGAIYCRDLNV   91 (204)
+Confidence            78999999999999999999999999999997777776778888999999999999999999865
+
+
+No 29
+>UniRef100_A0A023YYD9 Phage tail fiber protein n=2 Tax=Escherichia coli O145:H28 TaxID=1078034 RepID=A0A023YYD9_ECOLX
+Probab=98.48  E-value=1.3e-09  Score=73.88  Aligned_cols=64  Identities=31%  Similarity=0.460  Sum_probs=51.7  Template_Neff=2.200
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIFT------E-AGKHIT------SNGNLNQWGGGAIYCRDL   64 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~~------~-~~~~~~------~~~~~~~wg~~~~~v~dv   64 (67)
+                      .||++|++++||+|.+||++++|++++++++|.++..++      + ..+.+.      .+..|++||+.+||+.++
+T Consensus       321 ~Si~~G~n~tGfkqngdg~ldiyan~~~v~rf~ng~ai~~kni~a~ds~qaL~~~n~a~rn~~~~~~Gn~~~~~~~~  397 (497)
+T UniRef100_A0A0  321 VSIVLGDNDTGFKQNGDGRLDIYANNGMVFRFRNGNAIFGKNIQAGDSKQALSSQNHADRNFMFNGWGNSQRPIYME  397 (497)
+Confidence            489999999999999999999999999999998886542      2 223332      233489999999998876
+
+
+No 30
+>UniRef100_A0A2X1LCZ2 Tail fiber protein n=1 Tax=Escherichia coli TaxID=562 RepID=A0A2X1LCZ2_ECOLX
+Probab=98.45  E-value=1.8e-09  Score=65.15  Aligned_cols=61  Identities=34%  Similarity=0.516  Sum_probs=49.2  Template_Neff=1.273
+
+Q T0953s1-D1        2 SIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIFT------EAGKHI--------TSNGNLNQWGGGAIYCR   62 (67)
+Q Consensus         2 si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~~------~~~~~~--------~~~~~~~~wg~~~~~v~   62 (67)
+                      +|++++++++|++++||++++|++++.+++|+++..++      +.++.+        +.+-.|++||...|||.
+T Consensus       102 si~lgdndtgfkqngdgildvyansqrvfrfqngvai~f~~i~~~~s~~~~~s~~~~~tknv~fnlwgastrpvv  176 (201)
+T UniRef100_A0A2  102 SIVLGDNDTGFKQNGDGILDVYANSQRVFRFQNGVAITFRQVIVKKSRYPAPTPPQRMTKNVTFNLWGASTRPVV  176 (201)
+Confidence            78899999999999999999999999999999886542      333333        22335899999888865
+
+
+No 31
+>UniRef100_A0A0P8GJ16 Phage tail protein (Fragment) n=1 Tax=Citrobacter freundii TaxID=546 RepID=A0A0P8GJ16_CITFR
+Probab=98.38  E-value=3.4e-09  Score=52.27  Aligned_cols=29  Identities=55%  Similarity=0.889  Sum_probs=26.7  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIV   29 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~   29 (67)
+                      +||+++|+|+||+|++||++++|+|+.++
+T Consensus        28 nsivlgdndtgfkqngdgildvyansahv   56 (56)
+T UniRef100_A0A0   28 NSIVLGDNDTGFKQNGDGILDVYANSAHV   56 (56)
+Confidence            58999999999999999999999998763
+
+
+No 32
+>UniRef100_A0A3U2R0C2 Phage tail protein n=2 Tax=Salmonella enterica I TaxID=59201 RepID=A0A3U2R0C2_SALET
+Probab=98.35  E-value=4.3e-09  Score=69.85  Aligned_cols=61  Identities=33%  Similarity=0.537  Sum_probs=49.9  Template_Neff=1.081
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIF------TEAGKHIT--------SNGNLNQWGGGAIYC   61 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~------~~~~~~~~--------~~~~~~~wg~~~~~v   61 (67)
+                      +||+++|+|+||+|.+||++++++|++++.+..++.+.      +++.+.++        .+..|.+||+++||.
+T Consensus       309 nsiv~gdndtg~k~~~dgil~~~an~~~~~~v~~~~~~~~g~~rag~~k~~t~~s~nns~lna~f~lwgdgnrpt  383 (503)
+T UniRef100_A0A3  309 NSIVLGDNDTGFKQNGDGILDTFANSQHTVRVAPGEMQVLGAIRAGDAKRMTMTSSNNSVLNAQFHLWGDGNRPT  383 (503)
+Confidence            58999999999999999999999999999999877543      45666662        233489999998883
+
+
+No 33
+>UniRef100_A0A098Y8H6 Uncharacterized protein (Fragment) n=1 Tax=Acinetobacter idrijaensis TaxID=1507807 RepID=A0A098Y8H6_9GAMM
+Probab=98.33  E-value=5.1e-09  Score=60.61  Aligned_cols=38  Identities=39%  Similarity=0.625  Sum_probs=35.5  Template_Neff=1.454
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIF   38 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~   38 (67)
+                      +||++||+||||||++||+++.|+|+..++++.++...
+T Consensus        57 ~si~lgdndtgfkqngdg~ld~y~ns~~v~r~~~~~~~   94 (141)
+T UniRef100_A0A0   57 SSIVLGDNDTGFKQNGDGILDVYANSQRVFRFQNGVAI   94 (141)
+Confidence            48999999999999999999999999999999988664
+
+
+No 34
+>UniRef100_UPI00098E35B5 hypothetical protein n=1 Tax=Salmonella enterica TaxID=28901 RepID=UPI00098E35B5
+Probab=98.33  E-value=5.5e-09  Score=67.62  Aligned_cols=60  Identities=38%  Similarity=0.718  Sum_probs=48.8  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIF------TEAGKHI--TSN------GNLNQWGGG-AIY   60 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~------~~~~~~~--~~~------~~~~~wg~~-~~~   60 (67)
+                      +||+++|+|+|++|+.||++++|+|++.+.+++++.+.      ++.++++  +++      .+|++||++ .||
+T Consensus       199 nsivlgdndtgikqnadgvldfyangqlvariqpgtlfvinavqagdgkklalssnnnsalganfnlwgnggdrp  273 (393)
+T UniRef100_UPI0  199 NSIVLGDNDTGIKQNADGVLDFYANGQLVARIQPGTLFVINAVQAGDGKKLALSSNNNSALGANFNLWGNGGDRP  273 (393)
+Confidence            58999999999999999999999999999999998654      3566666  232      248999984 555
+
+
+No 35
+>UniRef100_A0A069XGI9 Putative tail fiber protein n=1 Tax=Escherichia coli 3-373-03_S4_C2 TaxID=1444252 RepID=A0A069XGI9_ECOLX
+Probab=98.32  E-value=5.7e-09  Score=67.73  Aligned_cols=38  Identities=45%  Similarity=0.638  Sum_probs=35.7  Template_Neff=1.600
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIF   38 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~   38 (67)
+                      +||.+||+|||++|++||.+++|+|++++++|+++.+.
+T Consensus       213 NsiafGdNdtglkqngdgLldvyAn~~hv~rFq~g~~~  250 (348)
+T UniRef100_A0A0  213 NSIAFGDNDTGLKQNGDGLLDVYANGQHVLRFQNGMIQ  250 (348)
+Confidence            58999999999999999999999999999999888765
+
+
+No 36
+>UniRef100_A0A3X2V372 Phage tail protein (Fragment) n=1 Tax=Salmonella enterica TaxID=28901 RepID=A0A3X2V372_SALER
+Probab=98.26  E-value=9.9e-09  Score=63.49  Aligned_cols=60  Identities=45%  Similarity=0.787  Sum_probs=48.3  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIF------------TEAGKHIT--------SNGNLNQWGGGAIY   60 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~------------~~~~~~~~--------~~~~~~~wg~~~~~   60 (67)
+                      +||+++|+|+||++..||++.+|+|+..+++++++++.            +++++.++        .+..+.+||.+.||
+T Consensus       101 nsivfgdndtgfkwhsdgvlgiyansaqvgyidnsglhmladiratgvvrtgngktltlssgnnsalnaglslwgggerp  180 (255)
+T UniRef100_A0A3  101 NSIVFGDNDTGFKWHSDGVLGIYANSAQVGYIDNSGLHMLADIRATGVVRTGNGKTLTLSSGNNSALNAGLSLWGGGERP  180 (255)
+Confidence            58999999999999999999999999999998776542            35566552        23347899998887
+
+
+No 37
+>UniRef100_A0A484VNY5 Putative phage tail fibre protein n=1 Tax=Salmonella typhimurium TaxID=90371 RepID=A0A484VNY5_SALTM
+Probab=98.26  E-value=1e-08  Score=66.45  Aligned_cols=56  Identities=43%  Similarity=0.728  Sum_probs=44.5  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDI------------FTEAGKHI--T------SNGNLNQWGG   56 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~------------~~~~~~~~--~------~~~~~~~wg~   56 (67)
+                      +||+++|+|+||+|.+||++.+|+|+..+++++++++            .++.++.+  +      +...|++||.
+T Consensus       309 nsivlgdndtgfkqdgdgvlgiyannarvgyidnsglhmsvdvltnggiragdgkrlsltsnnnstmtatfnlwgr  384 (391)
+T UniRef100_A0A4  309 NSIVLGDNDTGFKQDGDGVLGIYANNARVGYIDNSGLHMSVDVLTNGGIRAGDGKRLSLTSNNNSTMTATFNLWGR  384 (391)
+Confidence            5899999999999999999999999999999876644            23455555  2      2335899985
+
+
+No 38
+>UniRef100_A0A509BXI5 Phage tail-like protein n=1 Tax=Salmonella sp. NCTC 11881 TaxID=2583579 RepID=A0A509BXI5_9ENTR
+Probab=98.16  E-value=2.5e-08  Score=52.32  Aligned_cols=37  Identities=43%  Similarity=0.641  Sum_probs=33.3  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDI   37 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~   37 (67)
+                      .||.++|+|+||+|++||+++.++|+++..+..++-+
+T Consensus        24 ssiaigdndtgfkqngdgildtfansqhtvrvapgem   60 (78)
+T UniRef100_A0A5   24 SSIAIGDNDTGFKQNGDGILDTFANSQHTVRVAPGEM   60 (78)
+Confidence            3789999999999999999999999999999877643
+
+
+No 39
+>UniRef100_A0A3U5NU57 gp37_C domain-containing protein (Fragment) n=1 Tax=Salmonella diarizonae TaxID=59204 RepID=A0A3U5NU57_SALDZ
+Probab=98.13  E-value=3e-08  Score=67.90  Aligned_cols=60  Identities=38%  Similarity=0.696  Sum_probs=47.0  Template_Neff=1.518
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIF------TEAGKHI--------TSNGNLNQWGGG-AIY   60 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~------~~~~~~~--------~~~~~~~~wg~~-~~~   60 (67)
+                      +||++||+|+||++.+||++++|+|++.+++++++.+.      ++..+.+        ..++.|++||++ .|+
+T Consensus       406 ~si~~gd~dtg~~~~~dgvldvy~n~~~v~~i~~~~l~~~~~v~~~~~~~l~~~~~~~~~~~~~~nlw~dg~~r~  480 (592)
+T UniRef100_A0A3  406 SSIAIGDNDTGIKQNADGVLDFYANGQLVARIQPGTLFVINAVQAGDGKKLALSSNNNSALNAGFNLWGDGGNRP  480 (592)
+Confidence            58999999999999999999999999999999888654      2334444        223358999974 444
+
+
+No 40
+>UniRef100_A0A0D3RKJ8 Tail fiber protein n=1 Tax=Salmonella typhimurium TaxID=90371 RepID=A0A0D3RKJ8_SALTM
+Probab=98.10  E-value=4e-08  Score=66.33  Aligned_cols=60  Identities=38%  Similarity=0.651  Sum_probs=47.3  Template_Neff=1.700
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDI------------FTEAGKHIT--------SNGNLNQWGGGAIY   60 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~------------~~~~~~~~~--------~~~~~~~wg~~~~~   60 (67)
+                      ++|.++|+|++||+.+++++.++.|+..+++.....+            .++.+++++        +.+.|++||+..||
+T Consensus       283 ~~~~lgdndtgfK~~g~~vlgv~~NN~~~g~i~~~~l~~~~~v~y~~~vRAG~gkklsltS~NNStm~atFNLWg~a~Rp  362 (478)
+T UniRef100_A0A0  283 NSIVLGDNDTGFKQDGDGVLGIYANNARVGYIDNSGLHMSVDVFTNGGIRAGDGKRLSLTSNNNSTMTATFNLWGDANRP  362 (478)
+Confidence            4789999999999999999999999999998654432            245556552        33459999998887
+
+
+No 41
+>UniRef100_A0A4C9ZN60 Phage tail protein n=2 Tax=Escherichia coli TaxID=562 RepID=A0A4C9ZN60_ECOLX
+Probab=98.06  E-value=5.5e-08  Score=63.88  Aligned_cols=64  Identities=31%  Similarity=0.497  Sum_probs=51.1  Template_Neff=1.192
+
+Q T0953s1-D1        2 SIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIFTEAGKHITS--NGNLNQWGG-GAIYCRDLNVS   67 (67)
+Q Consensus         2 si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~~~~~~~~~~--~~~~~~wg~-~~~~v~dv~~~   67 (67)
+                      |+.++..|+|++|++||.+++|+.+..+.+|.++.+..  ++.+..  .-+++.|.+ +.||||||||.
+T Consensus       286 slalgrgdtglkqngdgnldvyagnarvmrftn~siqv--skglnvsgrvnpsdysnfdiryvrdirlg  352 (406)
+T UniRef100_A0A4  286 SLALGRGDTGLKQNGDGNLDVYAGNARVMRFTNGSIQV--SKGLNVSGRVNPSDYSNFDIRYVRDIRLG  352 (406)
+Confidence            67789999999999999999999999999998887763  343422  224556666 79999999984
+
+
+No 42
+>UniRef100_A0A0D3RLX1 Tail fiber protein n=3 Tax=Salmonella enterica TaxID=28901 RepID=A0A0D3RLX1_SALTM
+Probab=98.00  E-value=8.2e-08  Score=70.57  Aligned_cols=60  Identities=40%  Similarity=0.624  Sum_probs=48.5  Template_Neff=3.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDI------FTEAGKHI--------TSNGNLNQWGGGAIY   60 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~------~~~~~~~~--------~~~~~~~~wg~~~~~   60 (67)
+                      +||+++|+|+||+|++||++++|+|++++.++.++..      .+++.+.+        .++..|++||++.|+
+T Consensus       713 nsivlGdndTG~kq~gdGild~yaN~~~~~~i~~~~~~~~g~i~aG~gk~lslts~nns~~~a~FnlWgd~nrp  786 (1013)
+T UniRef100_A0A0  713 NSIVFGDNDTGFKQNGDGILDIYANNQHTVRIAPGDMYVLGAIRAGNGKKLTLTSNNNSALNATFNLWGDGNRP  786 (1013)
+Confidence            5899999999999999999999999999999977632      34566655        233459999998666
+
+
+No 43
+>UniRef100_A0A085JCX9 Tail fiber protein n=2 Tax=Tatumella ptyseos TaxID=82987 RepID=A0A085JCX9_9GAMM
+Probab=98.00  E-value=8.3e-08  Score=65.29  Aligned_cols=67  Identities=34%  Similarity=0.571  Sum_probs=50.5  Template_Neff=2.800
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIFT----EAGKHITSNGN--------------LNQWGG-GAIY-   60 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~~----~~~~~~~~~~~--------------~~~wg~-~~~~-   60 (67)
+                      ++|+++++|+|.|+++||.++++++++++++|+++.+.+    .+.+.+.....              +..||+ +.|| 
+T Consensus       273 nsia~gdndtGlkqnGdG~ldv~~~g~~vfr~~nG~l~~~~~~~~~~~~~lss~lwg~LGdtv~G~~~ps~ygnfdarYq  352 (425)
+T UniRef100_A0A0  273 NSIAFGDNDTGLKQNGDGILDVYANGQHVFRFQNGALQSNRAVNNAKKFTLSSSLWGNLGDTVSGRVTPSDYGNFDARYQ  352 (425)
+Confidence            478999999999999999999999999999999887653    34444422222              345555 5666 
+
+
+Q T0953s1-D1       61 -----CRDLNVS   67 (67)
+Q Consensus        61 -----v~dv~~~   67 (67)
+                           |+|||+.
+T Consensus       353 ~~~~gVqdiRlG  364 (425)
+T UniRef100_A0A0  353 QKTGGVQDIRLG  364 (425)
+Confidence                 9999873
+
+
+No 44
+>UniRef100_A0A2X2J8W1 Tail fiber protein n=1 Tax=Shigella boydii TaxID=621 RepID=A0A2X2J8W1_SHIBO
+Probab=98.00  E-value=9.2e-08  Score=59.52  Aligned_cols=38  Identities=39%  Similarity=0.608  Sum_probs=35.7  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIF   38 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~   38 (67)
+                      +||.++|.|+||+|++||.+++|+|++++++|+++.+.
+T Consensus       211 nsiaigdsdtgfkqngdglldvyangqhvfrfqngalq  248 (256)
+T UniRef100_A0A2  211 NSIAFGDNDTGFKQNGDGMTDVYANGQHVFRFQNGALQ  248 (256)
+Confidence            58999999999999999999999999999999988765
+
+
+No 45
+>UniRef100_UPI00098D4EFA phage tail protein n=1 Tax=Salmonella enterica TaxID=28901 RepID=UPI00098D4EFA
+Probab=97.99  E-value=9.4e-08  Score=53.11  Aligned_cols=35  Identities=49%  Similarity=0.736  Sum_probs=32.3  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNST   35 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~   35 (67)
+                      +||+++|+|+|++|++||++++|+++.++-+|..+
+T Consensus        10 nsivlgdndtgikqngdgvldiyansahvlrfiss   44 (110)
+T UniRef100_UPI0   10 NSIVLGDNDTGIKQNGDGVLDIYANSAHVLRFISS   44 (110)
+Confidence            58999999999999999999999999999998544
+
+
+No 46
+>UniRef100_A0A2S8D6J2 Phage tail protein n=1 Tax=Shigella dysenteriae TaxID=622 RepID=A0A2S8D6J2_SHIDY
+Probab=97.98  E-value=1e-07  Score=64.76  Aligned_cols=63  Identities=30%  Similarity=0.493  Sum_probs=50.7  Template_Neff=2.088
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIF------TEAGKHIT--------SNGNLNQWGGGAIYCRD   63 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~------~~~~~~~~--------~~~~~~~wg~~~~~v~d   63 (67)
+                      ++|+++++++||++++|+++++|++.+++++|+++..+      ++..+.++        .+..|.+||+.+|+|..
+T Consensus       270 ~~i~~~~n~~G~k~ng~~~ld~ya~~~~~~r~~~~~~i~f~~i~AG~~~~f~~ss~~ns~~~~~~~lwG~~t~~~~a  346 (461)
+T UniRef100_A0A2  270 NSIVLGDNDTGFKQNGDGILDVYANGQRVFRFQNGVAIAFKNIQAGTARKFTLSSANNSTKNAAFYLWGNPSRPVVA  346 (461)
+Confidence            47889999999999999999999999999999988665      34455551        22347899998888653
+
+
+No 47
+>UniRef100_A0A3V0HDQ4 Peptidase S74 domain-containing protein n=1 Tax=Salmonella enterica I TaxID=59201 RepID=A0A3V0HDQ4_SALET
+Probab=97.92  E-value=1.6e-07  Score=61.82  Aligned_cols=37  Identities=49%  Similarity=0.746  Sum_probs=34.3  Template_Neff=1.365
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDI   37 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~   37 (67)
+                      +||++||+||||+|++||++++|+|+.|+.+|.++.+
+T Consensus       138 nsivlgdndtg~kqngdg~ldvyannahv~rf~~g~~  174 (384)
+T UniRef100_A0A3  138 NSIVLGDNDTGLKQNGDGILDVYANNAHVFRFTNGTL  174 (384)
+Confidence            5899999999999999999999999999999977644
+
+
+No 48
+>UniRef100_A0A3T0AIB6 Phage tail protein n=2 Tax=Salmonella enterica TaxID=28901 RepID=A0A3T0AIB6_SALET
+Probab=97.86  E-value=2.6e-07  Score=60.05  Aligned_cols=35  Identities=49%  Similarity=0.736  Sum_probs=32.5  Template_Neff=1.400
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNST   35 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~   35 (67)
+                      +||++||+||||||++||++++|+|..++.+|...
+T Consensus       181 nsivlgdndtg~kqngdgvldiyan~~hv~rfi~~  215 (332)
+T UniRef100_A0A3  181 NSIVLGDNDTGIKQNGDGVLDIYANSAHVLRFISS  215 (332)
+Confidence            58999999999999999999999999999999544
+
+
+No 49
+>UniRef100_UPI0010214CB2 tail fiber domain-containing protein n=1 Tax=Escherichia coli TaxID=562 RepID=UPI0010214CB2
+Probab=97.77  E-value=5e-07  Score=59.00  Aligned_cols=67  Identities=45%  Similarity=0.715  Sum_probs=47.2  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNS------TDIF------TEAGKHITSNGNLNQW-GGGAIYCRDLNVS   67 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~------~~~~------~~~~~~~~~~~~~~~w-g~~~~~v~dv~~~   67 (67)
+                      +||.++|+|+|+.+.+||.++..+|+++...|..      +.|-      +...+.+.+.+++..- .+-+.||||||||
+T Consensus       185 psiaigdndtglmwggdgrinllangqhiaswgtmyqehsglwgshgglwtevdkaiishghlvqandnystyvrdiyir  264 (379)
+T UniRef100_UPI0  185 PSIAIGDNDTGLMWGGDGRINLLANGQHIASWGTMYQEHSGLWGSHGGLWTEVDKAIISHGHLVQANDNYSTYVRDIYIR  264 (379)
+Confidence            4899999999999999999999999999998821      1111      1234444444432211 1248899999987
+
+
+No 50
+>UniRef100_A0A0A7HG91 Long tail fiber protein n=1 Tax=Escherichia phage vB_EcoM_VR20 TaxID=1567027 RepID=A0A0A7HG91_9CAUD
+Probab=97.75  E-value=5.1e-07  Score=67.02  Aligned_cols=38  Identities=42%  Similarity=0.747  Sum_probs=35.8  Template_Neff=2.178
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIF   38 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~   38 (67)
+                      +||.+||+|||+||++||.+++|+|+..+++|+++.+.
+T Consensus      1102 NSItfGDsDTGIKQnGDGLLDIyaN~vqvfRFQnGDlY 1139 (1251)
+T UniRef100_A0A0 1102 NSITFGDSDTGIKQNGDGLLDIYANNVQVFRFQNGDLY 1139 (1251)
+Confidence            58999999999999999999999999999999988765
+
+
+No 51
+>UniRef100_UPI00117A8D25 tail fiber domain-containing protein n=2 Tax=Escherichia coli TaxID=562 RepID=UPI00117A8D25
+Probab=97.74  E-value=5.8e-07  Score=59.71  Aligned_cols=37  Identities=43%  Similarity=0.701  Sum_probs=33.8  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDI   37 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~   37 (67)
+                      +||+++|+|+||+|++||++++|+|+.++++|.++.+
+T Consensus       202 nsivlgdndtgfkqngdgildvyansahvfrfvnstl  238 (449)
+T UniRef100_UPI0  202 NSIVLGDNDTGFKQNGDGILDVYANSAHVFRFVNSTL  238 (449)
+Confidence            5899999999999999999999999999999976543
+
+
+No 52
+>UniRef100_A0A0C5EAK3 Phage tail protein n=9 Tax=Escherichia coli TaxID=562 RepID=A0A0C5EAK3_ECOLX
+Probab=97.67  E-value=8.9e-07  Score=58.52  Aligned_cols=36  Identities=39%  Similarity=0.765  Sum_probs=33.3  Template_Neff=1.700
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTD   36 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~   36 (67)
+                      +||+++||||||+|.+||++.+|+|++.++.+++..
+T Consensus       158 NSItLGDNDTGikQgGDGvllFYSNGql~f~lq~as  193 (352)
+T UniRef100_A0A0  158 NSITLGDNDTGIKQGGDGVLLFYSNGQLIFGLQPAS  193 (352)
+Confidence            589999999999999999999999999999987653
+
+
+No 53
+>UniRef100_A0A1C9II89 Tail protein n=4 Tax=root TaxID=1 RepID=A0A1C9II89_9CAUD
+Probab=97.67  E-value=9.3e-07  Score=57.84  Aligned_cols=32  Identities=41%  Similarity=0.722  Sum_probs=30.0  Template_Neff=1.300
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGW   32 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~   32 (67)
+                      +||++||+||||||++||++++|+|.+++..+
+T Consensus       198 nSivlGDNDTGFKQ~GDGvLd~yaN~~hv~~~  229 (349)
+T UniRef100_A0A1  198 NSIVLGDNDTGFKQNGDGVLDVYSNYTHVLRF  229 (349)
+Confidence            58999999999999999999999999998775
+
+
+No 54
+>UniRef100_A0A0H2V1D6 Putative tail fiber protein n=1 Tax=Shigella flexneri TaxID=623 RepID=A0A0H2V1D6_SHIFL
+Probab=97.65  E-value=1.1e-06  Score=58.49  Aligned_cols=37  Identities=41%  Similarity=0.691  Sum_probs=33.9  Template_Neff=1.279
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDI   37 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~   37 (67)
+                      +||++||+||||+|++||.+++|+|++.++++..+.+
+T Consensus       275 ~sivlgdndtgfkqngdg~ldvyan~qrvfr~~~~~~  311 (410)
+T UniRef100_A0A0  275 SSIVLGDNDTGFKQNGDGLLDVYANGQRVFRFQNGSI  311 (410)
+Confidence            4899999999999999999999999999999876654
+
+
+No 55
+>UniRef100_A0A0F3TBN3 Phage side tail fiber protein n=2 Tax=Escherichia coli TaxID=562 RepID=A0A0F3TBN3_ECOLX
+Probab=97.64  E-value=1e-06  Score=63.85  Aligned_cols=60  Identities=42%  Similarity=0.673  Sum_probs=47.1  Template_Neff=2.900
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDI-----------FTEAGKHI--------TSNGNLNQWGGGAIY   60 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~-----------~~~~~~~~--------~~~~~~~~wg~~~~~   60 (67)
+                      +||+++|+|++|++.+||++++|+++++++++.++++           .+++.+.+        .++..|++||+.+|+
+T Consensus       523 ~sI~~gdndtg~k~~~dgvl~i~an~~~~g~~~~sg~~~~~~~~~~~i~ag~~~~~sl~s~~~s~~~a~f~l~g~~~r~  601 (762)
+T UniRef100_A0A0  523 NSIVFGDNDTGFKQHGDGVLGIYANNAHVGYIDNSGLHMSVDVLTNAVRAGNGKKLSLTSNNNSTMTATFNLWGDGNRP  601 (762)
+Confidence            5899999999999999999999999999999844422           23455555        234458999987776
+
+
+No 56
+>UniRef100_A0A3S4FZC0 Hypothetical prophage protein n=1 Tax=Salmonella enterica I TaxID=59201 RepID=A0A3S4FZC0_SALET
+Probab=97.61  E-value=1.4e-06  Score=51.36  Aligned_cols=36  Identities=44%  Similarity=0.713  Sum_probs=32.7  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTD   36 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~   36 (67)
+                      .||+++|+|+|++|++||.+++|+|+..+++|++..
+T Consensus       119 ssivlgdndtglkqngdglldiyangvqvfrfqndt  154 (157)
+T UniRef100_A0A3  119 SSIVLGDNDTGLKQNGDGLLDIYANGVQVFRFQNDT  154 (157)
+Confidence            378999999999999999999999999999987643
+
+
+No 57
+>UniRef100_A0A348ERI7 Phage tail fiber n=2 Tax=Escherichia coli TaxID=562 RepID=A0A348ERI7_ECOLX
+Probab=97.59  E-value=1.5e-06  Score=61.30  Aligned_cols=59  Identities=17%  Similarity=0.210  Sum_probs=45.0  Template_Neff=2.535
+
+Q T0953s1-D1        9 DTGLRWGGDGIVQIVANNAIVGGWNSTD---IFTEAGKHITSNG--NLNQWGG-GAIYCRDLNVS   67 (67)
+Q Consensus         9 dtg~~~~gdg~~~~~~n~~~~~~~~~~~---~~~~~~~~~~~~~--~~~~wg~-~~~~v~dv~~~   67 (67)
+                      |+.|++.++|...++...-+..++.++.   ....+.+.+...+  .+..||+ ++||||||||.
+T Consensus       454 D~kF~~gGlGn~qfg~ymi~n~Rt~nGtd~~a~m~~ng~w~c~~~viP~nYgNFDsRYVrDvRLg  518 (574)
+T UniRef100_A0A3  454 DRKFMIGGLGNKQFGIYMINNSRTANGTDGQAYMDNNGNWLCGGQVIPGNYGNFDSRYVRDVRLG  518 (574)
+Confidence            9999999999999999999999876553   1123444444333  3677888 79999999984
+
+
+No 58
+>UniRef100_A0A379UMQ6 Long tail fiber protein p37 Protein Gp37 Receptor-recognizing protein n=1 Tax=Salmonella enterica I TaxID=59201 RepID=A0A379UMQ6_SALET
+Probab=97.47  E-value=3.2e-06  Score=53.84  Aligned_cols=36  Identities=42%  Similarity=0.648  Sum_probs=32.6  Template_Neff=1.139
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTD   36 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~   36 (67)
+                      .||+++|+|+||+|++||++++++|+++..+..++-
+T Consensus       234 ssivfgdndtgfkqngdgildvfannqhtvrvapge  269 (275)
+T UniRef100_A0A3  234 SSIVFGDNDTGFKQNGDGILDVFANNQHTVRVAPGE  269 (275)
+Confidence            378999999999999999999999999998876654
+
+
+No 59
+>UniRef100_A0A2I8TMP4 Uncharacterized protein n=1 Tax=Citrobacter freundii complex sp. CFNIH9 TaxID=2077149 RepID=A0A2I8TMP4_9ENTR
+Probab=97.40  E-value=5.2e-06  Score=55.26  Aligned_cols=37  Identities=49%  Similarity=0.695  Sum_probs=33.3  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDI   37 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~   37 (67)
+                      +||.++|+|+||+|++||++++|+++.++++|--+.+
+T Consensus       304 nsialgdndtgfkqngdgildvyannvhvfrflhgai  340 (424)
+T UniRef100_A0A2  304 NSIALGDNDTGFKQNGDGILDVYANNVHVFRFLHGAI  340 (424)
+Confidence            5899999999999999999999999999999965543
+
+
+No 60
+>UniRef100_A0A023ZVN8 Long tail fiber distal subunit n=1 Tax=Escherichia phage vB_EcoM_112 TaxID=1495285 RepID=A0A023ZVN8_9CAUD
+Probab=97.37  E-value=5.6e-06  Score=62.02  Aligned_cols=55  Identities=47%  Similarity=0.733  Sum_probs=44.7  Template_Neff=2.200
+
+Q T0953s1-D1        5 IGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIFT------EAGKHITSNGNLNQWGGGAIYCRDLNVS   67 (67)
+Q Consensus         5 ~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~~------~~~~~~~~~~~~~~wg~~~~~v~dv~~~   67 (67)
+                      ++|+|||+.+.+||.++.++|+++++.|+++.+..      +..+.+.+.++.        .|||||||
+T Consensus      1049 igDndtGl~~~gdG~~N~~ang~~i~sw~~Gl~~~~~~~~~~~~~ai~s~~~l--------~v~DVYIR 1109 (1222)
+T UniRef100_A0A0 1049 IGDNDTGLVHGGDGRFNMVANGQHIASWHPGLWDTGGALWTEVGKAIISHGHL--------VVRDVYIR 1109 (1222)
+Confidence            68999999999999999999999999999987764      233444444444        49999997
+
+
+No 61
+>UniRef100_A0A379R3M2 Gifsy-2 prophage tail fiber protein n=1 Tax=Salmonella enterica TaxID=28901 RepID=A0A379R3M2_SALER
+Probab=97.37  E-value=6e-06  Score=58.84  Aligned_cols=60  Identities=40%  Similarity=0.762  Sum_probs=47.0  Template_Neff=1.401
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIF------------TEAGKHIT--------SNGNLNQWGGG-AI   59 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~------------~~~~~~~~--------~~~~~~~wg~~-~~   59 (67)
+                      ++|++|++|+||++..++++.++.+++.+.++++.++.            ++..+++.        .+..|++||++ +|
+T Consensus       592 ~si~~g~~dtg~~~~~~~~l~~~~~~~~v~~i~~~~~~~~~~~~~~~av~a~~~~~l~~~s~~~sa~~~~~nlwgdg~~~  671 (793)
+T UniRef100_A0A3  592 NSIVLGDNDTGFKWHSDGVLGIYANNALVGYIDNSGLHMSVDVLTNGAVRAGNAKKLSLTSNNNSALNAGFNLWGDGGNR  671 (793)
+Confidence            47899999999999999999999999999999887653            24445442        22348999974 65
+
+
+Q T0953s1-D1       60 Y   60 (67)
+Q Consensus        60 ~   60 (67)
+                      +
+T Consensus       672 ~  672 (793)
+T UniRef100_A0A3  672 P  672 (793)
+Confidence            5
+
+
+No 62
+>UniRef100_A0A437IIP1 Phage tail protein (Fragment) n=1 Tax=Citrobacter freundii TaxID=546 RepID=A0A437IIP1_CITFR
+Probab=97.31  E-value=7.9e-06  Score=55.27  Aligned_cols=65  Identities=25%  Similarity=0.424  Sum_probs=47.4  Template_Neff=1.741
+
+Q T0953s1-D1        2 SIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIFTEAGKHITSNGNLNQWGG-GAIY------CRDLNV   66 (67)
+Q Consensus         2 si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~~~~~~~~~~~~~~~~wg~-~~~~------v~dv~~   66 (67)
+                      .+..++.++|+++.++|.++.+.+..++++|++++........++..-.+..||+ +.||      |+||||
+T Consensus       283 ~v~~~~~~~g~~~~g~g~~~~~~~~~~v~~~~~~~~~~~~~~~~~~~v~~~~y~~~~~~~~~~~~~~~~~~~  354 (403)
+T UniRef100_A0A4  283 WVAAGSWDTGIKQNGDGLLDVYANGQHVFRFQNGGLQSNRAVNVTTPVMPPDYGNFDARYQTKTGGVQDVRL  354 (403)
+Confidence            4667899999999999999999999999999998776322223333334555665 3444      777776
+
+
+No 63
+>UniRef100_A0A4U6JUV2 Phage tail protein n=2 Tax=unclassified Citrobacter TaxID=2644389 RepID=A0A4U6JUV2_9ENTR
+Probab=97.27  E-value=1.1e-05  Score=52.61  Aligned_cols=37  Identities=38%  Similarity=0.582  Sum_probs=33.7  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDI   37 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~   37 (67)
+                      +||.++|+|+||+|++||++++|+|+-.+.++.++.+
+T Consensus       126 nsialgdndtgfkqngdgvldvysnsrqvmrivpgav  162 (335)
+T UniRef100_A0A4  126 NSIALGDNDTGFKQNGDGVLDAYSNSRQVMRIVPGAV  162 (335)
+Confidence            5899999999999999999999999999999877754
+
+
+No 64
+>UniRef100_A0A447JFG0 Probable tail fiber protein GpH n=1 Tax=Salmonella enterica subsp. enterica serovar Daytona TaxID=1962639 RepID=A0A447JFG0_SALET
+Probab=97.19  E-value=1.6e-05  Score=51.60  Aligned_cols=37  Identities=49%  Similarity=0.792  Sum_probs=32.9  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDI   37 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~   37 (67)
+                      +||+++|+|+||+|..||++.+|+|+..+++++-+++
+T Consensus       266 nsivfgdndtgfkwhsdgvlgiyannaqvgyidisgy  302 (321)
+T UniRef100_A0A4  266 NSIVFGDNDTGFKWHSDGVLGIYANNAQVGYIDISGY  302 (321)
+Confidence            5899999999999999999999999999998755543
+
+
+No 65
+>UniRef100_A0A069XQY1 Phage tail fiber repeat family protein n=3 Tax=Escherichia coli TaxID=562 RepID=A0A069XQY1_ECOLX
+Probab=97.18  E-value=1.6e-05  Score=57.41  Aligned_cols=37  Identities=41%  Similarity=0.572  Sum_probs=33.5  Template_Neff=1.900
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDI   37 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~   37 (67)
+                      ++|.+++++++|++.++|.+..+++..++++|..+.+
+T Consensus       586 ~~i~~~~n~~g~~~~g~g~~~~~an~~~~~~~~~g~~  622 (765)
+T UniRef100_A0A0  586 NSIVLGDNDTGFKQNGDGGLDVYANGVHVWRFVSGSY  622 (765)
+Confidence            4788999999999999999999999999999977654
+
+
+No 66
+>UniRef100_A0A0T9PLU6 Tail fiber repeat 2-containing protein n=1 Tax=Yersinia kristensenii TaxID=28152 RepID=A0A0T9PLU6_YERKR
+Probab=97.16  E-value=1.8e-05  Score=54.44  Aligned_cols=59  Identities=37%  Similarity=0.709  Sum_probs=46.3  Template_Neff=1.751
+
+Q T0953s1-D1        2 SIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIF------TEAGKHIT--S------NGNLNQWGGGAIY   60 (67)
+Q Consensus         2 si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~------~~~~~~~~--~------~~~~~~wg~~~~~   60 (67)
+                      ++..|++++||++.+|+++++|++++-+.+..++.+.      ++.++++.  +      +..|++||+.+..
+T Consensus       216 ~~~~g~~~~g~~~~~~~i~~f~~~~~~~~~~~p~~l~~~~av~ag~~~~~~~ss~~~a~~~~~~~~wgn~~~~  288 (460)
+T UniRef100_A0A0  216 SVTFGDNDTGIKQNGDGILDFYANGQLVARIAPGVLYALNAVRAGDGKKLAVSSSNNAALNAGFNLWGNGSDR  288 (460)
+Confidence            5678999999999999999999999999999888664      35566662  2      2248999986443
+
+
+No 67
+>UniRef100_A0A2K9VLZ7 Peptidase S74 domain-containing protein n=1 Tax=Shigella phage Sf25 TaxID=2024310 RepID=A0A2K9VLZ7_9CAUD
+Probab=97.13  E-value=2.3e-05  Score=51.87  Aligned_cols=38  Identities=42%  Similarity=0.728  Sum_probs=35.1  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIF   38 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~   38 (67)
+                      +||.+||+|+|++|++||.+++|+++...++|+++.+.
+T Consensus       223 nsiafgdndtgikqngdglldiyangvqtfrfqngdly  260 (377)
+T UniRef100_A0A2  223 NSIAFGDNDTGIKQNGDGLLDIYANGVQTFRFQNGDLY  260 (377)
+Confidence            57899999999999999999999999999999888654
+
+
+No 68
+>UniRef100_UPI000DFDFFA4 hypothetical protein n=1 Tax=Salmonella enterica TaxID=28901 RepID=UPI000DFDFFA4
+Probab=97.04  E-value=3.4e-05  Score=48.56  Aligned_cols=37  Identities=41%  Similarity=0.757  Sum_probs=33.5  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDI   37 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~   37 (67)
+                      .||+++|.|+|++|++||++++|+|+..+.+.+++-+
+T Consensus       195 ssivfgdsdtgikqngdgvldvyannalvarlqpgkl  231 (240)
+T UniRef100_UPI0  195 SSIVFGDSDTGIKQNGDGVLDVYANNALVARLQPGKL  231 (240)
+Confidence            3789999999999999999999999999999877644
+
+
+No 69
+>UniRef100_A0A377AIT6 Phage tail fiber protein n=1 Tax=Escherichia coli TaxID=562 RepID=A0A377AIT6_ECOLX
+Probab=97.02  E-value=3.9e-05  Score=42.92  Aligned_cols=36  Identities=39%  Similarity=0.716  Sum_probs=32.2  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTD   36 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~   36 (67)
+                      +||.++|+|+|++|.+||++-+|.|++..+..++..
+T Consensus        15 nsitlgdndtgikqggdgvllfylngqlafglqpas   50 (102)
+T UniRef100_A0A3   15 NSITLGDNDTGIKQGGDGVLLFYLNGQLAFGLQPAS   50 (102)
+Confidence            589999999999999999999999999888776653
+
+
+No 70
+>UniRef100_A0A2X2RPY1 Caudovirales tail fibre assembly protein n=1 Tax=Citrobacter freundii TaxID=546 RepID=A0A2X2RPY1_CITFR
+Probab=97.00  E-value=4.2e-05  Score=47.16  Aligned_cols=26  Identities=50%  Similarity=0.946  Sum_probs=24.1  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANN   26 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~   26 (67)
+                      +||.++++|+||+|++||++++|+|-
+T Consensus       115 nsialgdndtgfkqngdgvldvysnk  140 (201)
+T UniRef100_A0A2  115 NSIALGDNDTGFKQNGDGVLDVYSNK  140 (201)
+Confidence            58999999999999999999999874
+
+
+No 71
+>UniRef100_A0A2Y0AAC8 Phage tail fiber protein n=1 Tax=Escherichia coli TaxID=562 RepID=A0A2Y0AAC8_ECOLX
+Probab=96.90  E-value=6.6e-05  Score=48.12  Aligned_cols=33  Identities=45%  Similarity=0.804  Sum_probs=30.4  Template_Neff=1.184
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWN   33 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~   33 (67)
+                      +||+++|+||||+|++||.+.+|+|+...+.++
+T Consensus       117 nsivlgdndtgfrqdgdg~is~~sngsrighid  149 (259)
+T UniRef100_A0A2  117 NSIVLGDNDTGFRQDGDGIISFYSNGSRIGHID  149 (259)
+Confidence            589999999999999999999999999888764
+
+
+No 72
+>UniRef100_I2X4J4 Uncharacterized protein n=2 Tax=Escherichia coli TaxID=562 RepID=I2X4J4_ECOLX
+Probab=96.90  E-value=6.9e-05  Score=49.52  Aligned_cols=62  Identities=24%  Similarity=0.558  Sum_probs=47.4  Template_Neff=1.000
+
+Q T0953s1-D1        2 SIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIF------TEAGKHI--------TSNGNLNQWGGGAIYCRD   63 (67)
+Q Consensus         2 si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~------~~~~~~~--------~~~~~~~~wg~~~~~v~d   63 (67)
+                      |+.+.|..+||+|.+.|++++++.+-.+++|...++.      +++-+++        +....|++||+.+|||..
+T Consensus       182 sltlcdsntgfkwggrgvinvfaeghnvfrftkngvlalenlstgnlrkftlscdssstksarfnlwgnssrpvva  257 (358)
+T UniRef100_I2X4  182 SLTLCDSNTGFKWGGRGVINVFAEGHNVFRFTKNGVLALENLSTGNLRKFTLSCDSSSTKSARFNLWGNSSRPVVA  257 (358)
+Confidence            5667789999999999999999999999999755443      2344444        122349999999999753
+
+
+No 73
+>UniRef100_A0A329ZKJ6 Phage tail protein (Fragment) n=3 Tax=Escherichia coli TaxID=562 RepID=A0A329ZKJ6_ECOLX
+Probab=96.87  E-value=7.6e-05  Score=46.82  Aligned_cols=25  Identities=52%  Similarity=0.881  Sum_probs=23.1  Template_Neff=1.301
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVAN   25 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n   25 (67)
+                      +||+++|+||||+|++||.+++|+|
+T Consensus       187 ~sivlgdndtg~kqngdg~ldvyan  211 (211)
+T UniRef100_A0A3  187 NSIVLGDNDTGFKQNGDGNLDVYAN  211 (211)
+Confidence            4899999999999999999999875
+
+
+No 74
+>UniRef100_A0A074HDQ8 Phage side tail fiber domain protein (Fragment) n=3 Tax=Escherichia coli TaxID=562 RepID=A0A074HDQ8_ECOLX
+Probab=96.81  E-value=0.0001  Score=43.38  Aligned_cols=36  Identities=39%  Similarity=0.737  Sum_probs=32.0  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTD   36 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~   36 (67)
+                      +||.++|+|+|++|.+||++-+|+|.+..+..++..
+T Consensus        84 nsitlgdndtgikqggdgvllfysngqlafglqpas  119 (139)
+T UniRef100_A0A0   84 NSITLGDNDTGIKQGGDGVLLFYSNGQLAFGLQPAS  119 (139)
+Confidence            589999999999999999999999999888776553
+
+
+No 75
+>UniRef100_A0A193QH91 gp37_C domain-containing protein n=1 Tax=Sodalis glossinidius (strain morsitans) TaxID=343509 RepID=A0A193QH91_SODGM
+Probab=96.70  E-value=0.00015  Score=52.85  Aligned_cols=56  Identities=46%  Similarity=0.847  Sum_probs=42.6  Template_Neff=3.600
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDI------F----TEAGKHI--------TSNGNLNQWGGG   57 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~------~----~~~~~~~--------~~~~~~~~wg~~   57 (67)
+                      ++|+.++++++|++.+||++.+|+++..+.+ ++..+      .    +++++.+        ..+..|++||++
+T Consensus       388 ~~iv~gdndt~F~~~~dG~lgiyann~~~g~-~n~~l~~~~~vlt~g~ag~gk~lsl~s~nNS~l~a~fnLWG~~  461 (585)
+T UniRef100_A0A1  388 NSIVLGDNDTGFKQNGDGVLGIYANNAGVGY-DNSGLHMSGDVLTNGGAGNGKRLSLTSNNNSALNAGFNLWGGG  461 (585)
+Confidence            4788999999999999999999999999998 55544      1    3445555        123348889876
+
+
+No 76
+>UniRef100_A0A2D0L1M6 Sulfurtransferase n=1 Tax=Xenorhabdus sp. KJ12.1 TaxID=1851571 RepID=A0A2D0L1M6_9GAMM
+Probab=96.50  E-value=0.00035  Score=50.54  Aligned_cols=37  Identities=41%  Similarity=0.717  Sum_probs=33.8  Template_Neff=1.510
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDI   37 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~   37 (67)
+                      +||+.+++|++|+++++|++++|+++.++++|.+..+
+T Consensus       472 ~s~~~g~~d~~~~~~~~g~ldvyansahvfrftnstl  508 (719)
+T UniRef100_A0A2  472 NSIVLGDNDTGFKQNGDGVLDVYANSAHVFRFTNSTL  508 (719)
+Confidence            4789999999999999999999999999999976644
+
+
+No 77
+>UniRef100_A0A0N7CA61 PblB-type antireceptor n=1 Tax=Salmonella phage 36 TaxID=1654889 RepID=A0A0N7CA61_9CAUD
+Probab=96.49  E-value=0.00036  Score=47.12  Aligned_cols=38  Identities=37%  Similarity=0.594  Sum_probs=35.3  Template_Neff=2.016
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIF   38 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~   38 (67)
+                      +||++||.|||++|..||++.+++++.+++.|.++++.
+T Consensus        42 ~si~~gd~dtgl~~~sdg~~~~~t~~~~~~~~~psgl~   79 (320)
+T UniRef100_A0A0   42 NSIAIGDSDTGLRQRSDGVLDAITDSIHVFTFTPSGLT   79 (320)
+Confidence            58999999999999999999999999999999888664
+
+
+No 78
+>UniRef100_A0A3V5WRH9 Uncharacterized protein (Fragment) n=1 Tax=Salmonella enterica TaxID=28901 RepID=A0A3V5WRH9_SALER
+Probab=96.49  E-value=0.00038  Score=41.89  Aligned_cols=36  Identities=50%  Similarity=0.834  Sum_probs=31.9  Template_Neff=1.091
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTD   36 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~   36 (67)
+                      .||.+||+|+||+.++||.+.+++|+...++|...-
+T Consensus        76 ssiaigdndtg~k~ngdgnlafmannvlagyfnene  111 (153)
+T UniRef100_A0A3   76 SSIAIGDNDTGFKSNGDGNLAFMANNVLAGYFNENE  111 (153)
+Confidence            379999999999999999999999999888885543
+
+
+No 79
+>UniRef100_UPI00044A7BED tail fiber protein n=3 Tax=Enterobacter TaxID=547 RepID=UPI00044A7BED
+Probab=96.30  E-value=0.0007  Score=48.12  Aligned_cols=37  Identities=43%  Similarity=0.711  Sum_probs=33.7  Template_Neff=1.398
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDI   37 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~   37 (67)
+                      ++|.+++++|+|++++||++++|+++..+.+|-+.++
+T Consensus       308 ~~ia~g~~~t~~~~~gdgvldvyanskqvmrflnsgi  344 (586)
+T UniRef100_UPI0  308 NSIALGDNDTGFKQNGDGVLDVYANSKQVMRFLNSGI  344 (586)
+Confidence            4789999999999999999999999999999977654
+
+
+No 80
+>UniRef100_A0A3Z9LQU8 Phage tail protein (Fragment) n=2 Tax=Salmonella enterica TaxID=28901 RepID=A0A3Z9LQU8_SALER
+Probab=96.18  E-value=0.001  Score=43.64  Aligned_cols=34  Identities=47%  Similarity=0.883  Sum_probs=30.3  Template_Neff=1.530
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNS   34 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~   34 (67)
+                      ++|+.||+|+|+++..||++..|+|+..++++++
+T Consensus       228 ~~i~~gdndtgikwhsdgvlglyannalvgyidn  261 (262)
+T UniRef100_A0A3  228 NSIVFGDNDTGIKWHQNGVLGLYANNALVGYIDN  261 (262)
+Confidence            4789999999999999999999999988887643
+
+
+No 81
+>UniRef100_A0A3Z9LEQ9 gp37_C domain-containing protein n=2 Tax=Salmonella enterica TaxID=28901 RepID=A0A3Z9LEQ9_SALER
+Probab=96.15  E-value=0.0012  Score=40.46  Aligned_cols=37  Identities=43%  Similarity=0.673  Sum_probs=33.6  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDI   37 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~   37 (67)
+                      +||.++|.|.||....||++++|.|+..++++.++++
+T Consensus        14 psinigdsdsgfigsadgvidiycnnakvgyinnsgl   50 (170)
+T UniRef100_A0A3   14 PSINIGDSDSGFIGSADGVIDIYCNNAKVGYINNSGL   50 (170)
+Confidence            4789999999999999999999999999999877654
+
+
+No 82
+>UniRef100_A0A0B4L964 Long tail fiber distal subunit n=1 Tax=Salmonella phage STP4-a TaxID=1445860 RepID=A0A0B4L964_9CAUD
+Probab=96.06  E-value=0.0014  Score=49.77  Aligned_cols=34  Identities=41%  Similarity=0.721  Sum_probs=30.5  Template_Neff=2.874
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNS   34 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~   34 (67)
+                      +||.+||+||||||..||.++.++|+..+.++..
+T Consensus       266 ~SIaIGD~DTGfKW~~DG~~~~~SN~~~v~~~~~  299 (864)
+T UniRef100_A0A0  266 NSIAIGDSDTGFKWRSDGWLNTYSNGVVVYSIAG  299 (864)
+Confidence            5899999999999999999999999988777643
+
+
+No 83
+>UniRef100_A0A2C9P385 Uncharacterized protein n=1 Tax=Salmonella enterica subsp. enterica serovar Macclesfield str. S-1643 TaxID=1242107 RepID=A0A2C9P385_SALET
+Probab=96.04  E-value=0.0016  Score=44.27  Aligned_cols=35  Identities=54%  Similarity=0.844  Sum_probs=31.7  Template_Neff=1.400
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNST   35 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~   35 (67)
+                      +||.+||+|+|||.++||.+..++|+...++|...
+T Consensus        76 ~siaigdndsgfksngdgnialman~vlagyfsen  110 (359)
+T UniRef100_A0A2   76 SSIAIGDNDTGLKGNGDGNLAFMANNVLAGYFNEN  110 (359)
+Confidence            58999999999999999999999999988888544
+
+
+No 84
+>UniRef100_A0A377A3R9 Phage tail fiber protein n=1 Tax=Escherichia coli TaxID=562 RepID=A0A377A3R9_ECOLX
+Probab=96.02  E-value=0.0017  Score=38.12  Aligned_cols=27  Identities=33%  Similarity=0.386  Sum_probs=24.6  Template_Neff=1.305
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNA   27 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~   27 (67)
+                      +||+++|+||||++.+++.++.+.+..
+T Consensus        85 nsivlgdndtg~~~~~~~~l~~~~~~~  111 (118)
+T UniRef100_A0A3   85 NSIVLGDNDTGFKQMEMVILDSYQMSQ  111 (118)
+Confidence            589999999999999999999998764
+
+
+No 85
+>UniRef100_A0A3X0BTR4 Phage tail protein n=1 Tax=Salmonella enterica TaxID=28901 RepID=A0A3X0BTR4_SALER
+Probab=96.01  E-value=0.0017  Score=47.15  Aligned_cols=64  Identities=36%  Similarity=0.548  Sum_probs=46.9  Template_Neff=1.837
+
+Q T0953s1-D1        2 SIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIFTEAGKHITSNGN--LNQWGG-GAIYCRDLNVS   67 (67)
+Q Consensus         2 si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~~~~~~~~~~~~~--~~~wg~-~~~~v~dv~~~   67 (67)
+                      +|.+++++.||++++++-+.+++++....++......  ..+.+..++.  .+.+++ .++||+||||.
+T Consensus       496 ~i~~~~~~~g~~~~g~~~l~~~a~g~~~~~~~~d~~~--~~~~~~v~g~~t~~~~~~~~~~yv~dirlg  562 (617)
+T UniRef100_A0A3  496 SIVLGDNDTGFKQDGDGPLAIYANGSKVLAVRSDNND--GSISFTVNGDITPNDYGNFDSRYVQDIRLG  562 (617)
+Confidence            5788999999999999999999999888877544332  1223334332  456676 59999999984
+
+
+No 86
+>UniRef100_A0A060AGT0 Putative large distal tail fiber subunit 1 n=1 Tax=Cronobacter phage S13 TaxID=1327935 RepID=A0A060AGT0_9CAUD
+Probab=96.00  E-value=0.0018  Score=47.76  Aligned_cols=35  Identities=57%  Similarity=0.874  Sum_probs=32.6  Template_Neff=1.153
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNST   35 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~   35 (67)
+                      +||.++|+|+||+|.+||++.+.+|++.++.|..+
+T Consensus       621 nsiaigdndtgfrqvgdgilevvansqrvgqfttg  655 (928)
+T UniRef100_A0A0  621 NSIAIGDNDTGFRQVGDGILEVVANSQRVGQFTTG  655 (928)
+Confidence            58999999999999999999999999999998655
+
+
+No 87
+>UniRef100_E9CQE5 Putative phage tail protein (Fragment) n=1 Tax=Serratia symbiotica str. Tucson TaxID=914128 RepID=E9CQE5_9GAMM
+Probab=95.98  E-value=0.0019  Score=36.90  Aligned_cols=37  Identities=54%  Similarity=0.902  Sum_probs=32.4  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDI   37 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~   37 (67)
+                      .|+.+||+|.|++.++||...+|+++..++.|.+..+
+T Consensus        62 qsvhigdndsglrangdgnvafyannakvgdwsnasl   98 (105)
+T UniRef100_E9CQ   62 QSVHIGDNDSGLRANGDGNVAFYANNAKVGDWSNASL   98 (105)
+Confidence            3677999999999999999999999999999866543
+
+
+No 88
+>UniRef100_UPI0011132520 hypothetical protein n=1 Tax=Enterobacter hormaechei TaxID=158836 RepID=UPI0011132520
+Probab=95.95  E-value=0.0021  Score=44.37  Aligned_cols=35  Identities=51%  Similarity=0.807  Sum_probs=32.3  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNST   35 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~   35 (67)
+                      +||.++|+|+||+|..||++.+.+|++.++.|..+
+T Consensus       130 nsiaigdndtgfrqvsdgvlevvansqrvgqfttg  164 (464)
+T UniRef100_UPI0  130 NSIAIGDNDTGFRQVSDGVLEVVANSQRVGQFTTG  164 (464)
+Confidence            58999999999999999999999999999988655
+
+
+No 89
+>UniRef100_A0A3T3L622 Uncharacterized protein (Fragment) n=1 Tax=Salmonella diarizonae TaxID=59204 RepID=A0A3T3L622_SALDZ
+Probab=95.93  E-value=0.0022  Score=37.68  Aligned_cols=37  Identities=38%  Similarity=0.595  Sum_probs=32.8  Template_Neff=1.323
+
+Q T0953s1-D1        2 SIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIF   38 (67)
+Q Consensus         2 si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~   38 (67)
+                      .|.+||.|.||....||++++|.|+..+++....++.
+T Consensus        21 cinigdsdsgfigsadgvldiycn~akvgyi~~~glh   57 (117)
+T UniRef100_A0A3   21 CINIGDSDSGFIGSADGVLDIYCNGAKVGYINGNGLH   57 (117)
+Confidence            5789999999999999999999999999998766543
+
+
+No 90
+>UniRef100_UPI0006974001 hypothetical protein n=1 Tax=Enterobacter hormaechei TaxID=158836 RepID=UPI0006974001
+Probab=95.91  E-value=0.0023  Score=47.39  Aligned_cols=35  Identities=51%  Similarity=0.807  Sum_probs=32.5  Template_Neff=1.276
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNST   35 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~   35 (67)
+                      +||.+||+|+||+|.+||++.+.+|++.++.|..+
+T Consensus       576 nsiaigdndtgfrqv~dg~levvansqrvgqfttg  610 (912)
+T UniRef100_UPI0  576 NSIAIGDNDTGFRQVSDGVLEVVANSQRVGQFTTG  610 (912)
+Confidence            58999999999999999999999999999998655
+
+
+No 91
+>UniRef100_A0A2X2RRW0 Uncharacterized protein n=1 Tax=Citrobacter freundii TaxID=546 RepID=A0A2X2RRW0_CITFR
+Probab=95.85  E-value=0.0027  Score=44.09  Aligned_cols=32  Identities=50%  Similarity=0.756  Sum_probs=30.1  Template_Neff=1.405
+
+Q T0953s1-D1        2 SIAIGDNDTGLRWGGDGIVQIVANNAIVGGWN   33 (67)
+Q Consensus         2 si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~   33 (67)
+                      ||..+|+|+||+|++++++++|.|+.|++++-
+T Consensus       268 siavgdndtg~~q~~~~ildvyvnsah~~~~~  299 (423)
+T UniRef100_A0A2  268 SIAVGDNDTGFKQNGDGILDVYVNSAHVFRFI  299 (423)
+Confidence            78899999999999999999999999999873
+
+
+No 92
+>UniRef100_A0A076YIH3 Large distal tail fiber subunit n=1 Tax=Citrobacter phage Miller TaxID=1527524 RepID=A0A076YIH3_9CAUD
+Probab=95.78  E-value=0.0031  Score=47.72  Aligned_cols=35  Identities=34%  Similarity=0.490  Sum_probs=31.2  Template_Neff=2.192
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNST   35 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~   35 (67)
+                      ++|.+|+++++|++.+||++++++++++..+|.++
+T Consensus       620 n~i~lGd~dt~f~qegdG~l~~~ansq~~~~~~~g  654 (861)
+T UniRef100_A0A0  620 NGISLGDEDTGFYQEGDGILDAYANSQRYFRFVDG  654 (861)
+Confidence            46889999999999999999999999999777544
+
+
+No 93
+>UniRef100_UPI000DA4ABEA hypothetical protein n=1 Tax=Escherichia coli TaxID=562 RepID=UPI000DA4ABEA
+Probab=95.76  E-value=0.0034  Score=45.50  Aligned_cols=34  Identities=56%  Similarity=0.774  Sum_probs=31.7  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNS   34 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~   34 (67)
+                      +||.++|+|+|+++++||++-+-+|++.+++|..
+T Consensus       271 nsiaigdndtglkqngdgilivcangqtvfrfas  304 (770)
+T UniRef100_UPI0  271 NSIAIGDNDTGLKQNGDGILIVCANGQTVFRFAS  304 (770)
+Confidence            5899999999999999999999999999999953
+
+
+No 94
+>UniRef100_UPI000940965D hypothetical protein n=2 Tax=Escherichia coli TaxID=562 RepID=UPI000940965D
+Probab=95.75  E-value=0.0035  Score=43.92  Aligned_cols=35  Identities=40%  Similarity=0.753  Sum_probs=31.5  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNST   35 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~   35 (67)
+                      +||.++|+|+|++|.+||++-+|+|.+..+..++.
+T Consensus       278 nsitlgdndtgikqggdgvllfysngqlafglqpa  312 (524)
+T UniRef100_UPI0  278 NSITLGDNDTGIKQGGDGVLLFYSNGQLAFGLQPA  312 (524)
+Confidence            58999999999999999999999999988877654
+
+
+No 95
+>UniRef100_A0A3B7P4I0 Tail fiber domain-containing protein n=1 Tax=Citrobacter freundii TaxID=546 RepID=A0A3B7P4I0_CITFR
+Probab=95.62  E-value=0.0046  Score=47.23  Aligned_cols=37  Identities=32%  Similarity=0.537  Sum_probs=34.2  Template_Neff=2.100
+
+Q T0953s1-D1        2 SIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIF   38 (67)
+Q Consensus         2 si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~   38 (67)
+                      ||+++|+|+||.|..||+++.|.++.....|.++++.
+T Consensus       672 siaigd~dtG~aQrsdgvldvytd~~~~~Tfttsg~~  708 (949)
+T UniRef100_A0A3  672 SIAIGDSDTGLAQRSDGLLDVYQDGVNKTTFRTSNFE  708 (949)
+Confidence            7899999999999999999999999999999877764
+
+
+No 96
+>UniRef100_A0A509BXF8 Phage tail-like protein n=1 Tax=Salmonella sp. NCTC 11881 TaxID=2583579 RepID=A0A509BXF8_9ENTR
+Probab=95.55  E-value=0.0057  Score=38.81  Aligned_cols=32  Identities=56%  Similarity=0.877  Sum_probs=28.8  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGW   32 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~   32 (67)
+                      .||.+||+|+|++.++||.+.+++|+...++|
+T Consensus       175 ssiaigdndtglkgngdgnlafmannvlagyf  206 (209)
+T UniRef100_A0A5  175 SSIAIGDNDTGLKGNGDGNLAFMANNVLAGYF  206 (209)
+Confidence            37899999999999999999999998777766
+
+
+No 97
+>UniRef100_A0A0A0Q2I1 Long tail fiber distal subunit n=1 Tax=Pectobacterium bacteriophage PM2 TaxID=1429794 RepID=A0A0A0Q2I1_9CAUD
+Probab=95.40  E-value=0.007  Score=46.72  Aligned_cols=35  Identities=46%  Similarity=0.758  Sum_probs=31.9  Template_Neff=3.208
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNST   35 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~   35 (67)
+                      +||++||+||||++..||.+++++++....++...
+T Consensus       303 nSIaiGdndTG~R~~sdG~~s~~an~~~~~~~sa~  337 (870)
+T UniRef100_A0A0  303 NSIAIGDNDTGFRNDSDGNFSVMANSRMIIGFSAS  337 (870)
+Confidence            58999999999999999999999999999888543
+
+
+No 98
+>UniRef100_A0A447PAU2 Phage tail-like protein n=1 Tax=Salmonella enterica I TaxID=59201 RepID=A0A447PAU2_SALET
+Probab=95.26  E-value=0.01  Score=42.11  Aligned_cols=35  Identities=40%  Similarity=0.751  Sum_probs=31.8  Template_Neff=1.348
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNST   35 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~   35 (67)
+                      +||.+||+|+||+.++||.+.+++|+...++|...
+T Consensus       356 ~siaigd~d~g~k~ngdgn~a~man~vlagyf~en  390 (483)
+T UniRef100_A0A4  356 NSIAIGDSDSGFKSNGDGNIALMANGVLAGYFSEN  390 (483)
+Confidence            48999999999999999999999999998888544
+
+
+No 99
+>UniRef100_A0A447JDY2 Phage tail-like protein n=1 Tax=Salmonella enterica subsp. enterica serovar Daytona TaxID=1962639 RepID=A0A447JDY2_SALET
+Probab=95.25  E-value=0.01  Score=38.99  Aligned_cols=36  Identities=53%  Similarity=0.846  Sum_probs=31.8  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTD   36 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~   36 (67)
+                      .||.+||+|+|++.++||.+.+++|+...++|...-
+T Consensus       168 ssiaigdndtglkgngdgnlafmannvlagyfnene  203 (270)
+T UniRef100_A0A4  168 SSIAIGDNDTGLKGNGDGNLAFMANNVLAGYFNENE  203 (270)
+Confidence            378999999999999999999999999888885443
+
+
+No 100
+>UniRef100_UPI001115C74E hypothetical protein n=1 Tax=Salmonella enterica TaxID=28901 RepID=UPI001115C74E
+Probab=95.21  E-value=0.011  Score=38.80  Aligned_cols=35  Identities=54%  Similarity=0.844  Sum_probs=31.3  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNST   35 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~   35 (67)
+                      .||.++|+|+|++.++||.+.+++++...++|...
+T Consensus        76 ssiaigdndtglkgngdgnlafmannvlagyfnen  110 (267)
+T UniRef100_UPI0   76 SSIAIGDNDTGLKGNGDGNLAFMANNVLAGYFNEN  110 (267)
+Confidence            37899999999999999999999999888888544
+
+
+No 101
+>UniRef100_A0A5B9N336 Large distal tail fiber subunit n=1 Tax=Shigella phage JK38 TaxID=2591061 RepID=A0A5B9N336_9CAUD
+Probab=95.15  E-value=0.012  Score=42.02  Aligned_cols=36  Identities=44%  Similarity=0.731  Sum_probs=32.4  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTD   36 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~   36 (67)
+                      +||.+||+|+|++|.+||.+++..+...-.+|+.+.
+T Consensus       445 nsiafgdndtgikqsgdglldiitnaarrmrfqtgd  480 (594)
+T UniRef100_A0A5  445 NSIAFGDNDTGIKQSGDGLLDIITNAARRMRFQTGD  480 (594)
+Confidence            578999999999999999999999999888887663
+
+
+No 102
+>UniRef100_A0A2X1N9E4 Putative phage tail protein n=1 Tax=Escherichia coli TaxID=562 RepID=A0A2X1N9E4_ECOLX
+Probab=95.08  E-value=0.014  Score=33.46  Aligned_cols=18  Identities=22%  Similarity=0.673  Sum_probs=15.5  Template_Neff=1.353
+
+Q T0953s1-D1       50 NLNQWGG-GAIYCRDLNVS   67 (67)
+Q Consensus        50 ~~~~wg~-~~~~v~dv~~~   67 (67)
+                      +++.|++ ++|||+||||.
+T Consensus        21 ~ps~~~nfd~ryv~dirlg   39 (93)
+T UniRef100_A0A2   21 QPSNWSNFDSRYVRDIRLG   39 (93)
+Confidence            4788998 79999999984
+
+
+No 103
+>UniRef100_A0A2A2GZS0 Uncharacterized protein n=1 Tax=Arsenophonus sp. ENCA TaxID=1987579 RepID=A0A2A2GZS0_9GAMM
+Probab=95.03  E-value=0.014  Score=37.49  Aligned_cols=37  Identities=51%  Similarity=0.810  Sum_probs=33.2  Template_Neff=2.027
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDI   37 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~   37 (67)
+                      ++|.++++|++|++..+++++++.+...++..+++.+
+T Consensus        13 ~~i~~~~~~~~~~~~~~~v~~i~~~~~~vg~~~~~~l   49 (183)
+T UniRef100_A0A2   13 PSIVIGDNDTGFKQDGDGVLDIYANNARVGYIDNSGL   49 (183)
+Confidence            4689999999999999999999999999988877654
+
+
+No 104
+>UniRef100_A0A2X2ICV4 Tail fiber protein n=1 Tax=Shigella dysenteriae TaxID=622 RepID=A0A2X2ICV4_SHIDY
+Probab=94.81  E-value=0.021  Score=33.29  Aligned_cols=17  Identities=59%  Similarity=1.034  Sum_probs=15.0  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGD   17 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gd   17 (67)
+                      .||++|++|+||+|++|
+T Consensus        94 ssivlgdndtgfkqngd  110 (110)
+T UniRef100_A0A2   94 SSIVLGDNDTGFKQNGD  110 (110)
+Confidence            37899999999999875
+
+
+No 105
+>UniRef100_A0A3S8X8T1 Phage tail fiber protein n=1 Tax=Escherichia coli TaxID=562 RepID=A0A3S8X8T1_ECOLX
+Probab=94.36  E-value=0.037  Score=44.01  Aligned_cols=37  Identities=43%  Similarity=0.678  Sum_probs=33.0  Template_Neff=2.339
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDI   37 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~   37 (67)
+                      ++|..+++++||++.+||.++.+.+..+..+|.++.+
+T Consensus       952 N~l~~~~~n~GF~~~~DG~~~~~~~ta~~~kfvn~s~  988 (1199)
+T UniRef100_A0A3  952 NSIVLGDNDTGFKQNGDGILDVYANSAHVFRFVNGTL  988 (1199)
+Confidence            4688999999999999999999999999999966644
+
+
+No 106
+>UniRef100_A0A3T7AKF8 Phage tail protein (Fragment) n=1 Tax=Salmonella enterica I TaxID=59201 RepID=A0A3T7AKF8_SALET
+Probab=94.25  E-value=0.045  Score=38.79  Aligned_cols=36  Identities=33%  Similarity=0.576  Sum_probs=31.8  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTD   36 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~   36 (67)
+                      +|+.+||.|+|++|.+||.+.+++|++.++-|....
+T Consensus       308 nsltlgdddtgikqegdgalsvfangqrvflfters  343 (490)
+T UniRef100_A0A3  308 NSLTLGDDDTGIKQEGDGALSVFANGQRVFLFTERS  343 (490)
+Confidence            477899999999999999999999999999885543
+
+
+No 107
+>UniRef100_UPI0010181FE7 hypothetical protein n=1 Tax=Enterobacter roggenkampii TaxID=1812935 RepID=UPI0010181FE7
+Probab=94.19  E-value=0.049  Score=35.31  Aligned_cols=37  Identities=41%  Similarity=0.678  Sum_probs=31.4  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDI   37 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~   37 (67)
+                      +||.++|.|.||....||++.+|+|++...-..+.++
+T Consensus       171 psinigdsdsgfifesdgvigiyannqkiaeltntgi  207 (221)
+T UniRef100_UPI0  171 PSINIGDSDSGFIFESDGVIGIYANNQKIAELTNTGI  207 (221)
+Confidence            4789999999999999999999999988776554443
+
+
+No 108
+>UniRef100_A0A0J6MH53 Uncharacterized protein n=1 Tax=Leclercia sp. LK8 TaxID=1628210 RepID=A0A0J6MH53_9ENTR
+Probab=93.80  E-value=0.065  Score=42.33  Aligned_cols=36  Identities=39%  Similarity=0.682  Sum_probs=31.8  Template_Neff=3.700
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTD   36 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~   36 (67)
+                      ++|.++++|+||++.+||+++.|+++..+.++...+
+T Consensus       611 nsi~~GdndtG~~q~gdgv~~~yans~~v~~~~~~G  646 (875)
+T UniRef100_A0A0  611 NSISLGDNDTGFKQNGDGVLDVYANSKQVMRFLNSG  646 (875)
+Confidence            468899999999999999999999999888886555
+
+
+No 109
+>UniRef100_A0A3U2TK90 Phage tail protein (Fragment) n=1 Tax=Salmonella enterica I TaxID=59201 RepID=A0A3U2TK90_SALET
+Probab=93.67  E-value=0.082  Score=35.64  Aligned_cols=36  Identities=36%  Similarity=0.621  Sum_probs=31.4  Template_Neff=1.000
+
+Q T0953s1-D1        2 SIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDI   37 (67)
+Q Consensus         2 si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~   37 (67)
+                      .|.+||.|.||....||++++|.++..+++++..++
+T Consensus       106 cinigdsdsgfigsadgvidiycnngrvgyidgngl  141 (296)
+T UniRef100_A0A3  106 CINIGDSDSGFIGSADGVIDIYCNNGRVGYIDGNGL  141 (296)
+Confidence            578999999999999999999999999998754443
+
+
+No 110
+>UniRef100_UPI00122C7F21 hypothetical protein n=1 Tax=Serratia symbiotica TaxID=138074 RepID=UPI00122C7F21
+Probab=93.67  E-value=0.083  Score=27.97  Aligned_cols=31  Identities=48%  Similarity=0.854  Sum_probs=24.8  Template_Neff=1.000
+
+Q T0953s1-D1        2 SIAIGDNDTGLRWGGDGIVQIVANNAIVGGW   32 (67)
+Q Consensus         2 si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~   32 (67)
+                      |+.+||+|.|+..++||...+-..-..+..|
+T Consensus        22 svhigdndsglqangdgnvafdtdhatvasw   52 (59)
+T UniRef100_UPI0   22 SVHIGDNDSGLQANGDGNVAFDTDHATVASW   52 (59)
+Confidence            6778999999999999987776665555555
+
+
+No 111
+>UniRef100_A0A379TS40 Gp19 n=1 Tax=Salmonella diarizonae TaxID=59204 RepID=A0A379TS40_SALDZ
+Probab=93.48  E-value=0.098  Score=36.90  Aligned_cols=32  Identities=41%  Similarity=0.723  Sum_probs=29.9  Template_Neff=1.000
+
+Q T0953s1-D1        2 SIAIGDNDTGLRWGGDGIVQIVANNAIVGGWN   33 (67)
+Q Consensus         2 si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~   33 (67)
+                      .|.++|.|.||....||++++|+.++.+++|.
+T Consensus       220 cinigdsdsgfigsadgvidiyadnqrvgrfg  251 (439)
+T UniRef100_A0A3  220 CINIGDSDSGFIGSADGVIDIYADNQRVGRFG  251 (439)
+Confidence            57899999999999999999999999999984
+
+
+No 112
+>UniRef100_A0A236MLE6 Phage tail protein (Fragment) n=1 Tax=Escherichia coli TaxID=562 RepID=A0A236MLE6_ECOLX
+Probab=93.05  E-value=0.14  Score=36.19  Aligned_cols=37  Identities=43%  Similarity=0.679  Sum_probs=33.2  Template_Neff=1.307
+
+Q T0953s1-D1        2 SIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIF   38 (67)
+Q Consensus         2 si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~   38 (67)
+                      ++..+++++|+++.++|++++++++.+++++..++..
+T Consensus       324 ~~~~~~~~~g~~~~~~g~i~v~~~g~~~~~~~~~~~~  360 (387)
+T UniRef100_A0A2  324 SIAFGDNDTGFKQNGDGIINVYANGNHVFRFQNSGVD  360 (387)
+Confidence            5778899999999999999999999999999877654
+
+
+No 113
+>UniRef100_A0A5N9W0E3 Phage tail protein (Fragment) n=9 Tax=Escherichia TaxID=561 RepID=A0A5N9W0E3_ECOLX
+Probab=92.54  E-value=0.2  Score=29.05  Aligned_cols=17  Identities=18%  Similarity=0.554  Sum_probs=13.5  Template_Neff=1.000
+
+Q T0953s1-D1       51 LNQWGG-GAIYCRDLNVS   67 (67)
+Q Consensus        51 ~~~wg~-~~~~v~dv~~~   67 (67)
+                      +..+|+ ++|||+||||.
+T Consensus        60 pgnygnfdsryvkdvrlg   77 (96)
+T UniRef100_A0A5   60 PGNYGNFDSRYVKDVRLG   77 (96)
+Confidence            456676 79999999984
+
+
+No 114
+>UniRef100_A0A2T6FUJ7 Uncharacterized protein n=1 Tax=Paenibacillus elgii TaxID=189691 RepID=A0A2T6FUJ7_9BACL
+Probab=92.31  E-value=0.23  Score=36.96  Aligned_cols=37  Identities=51%  Similarity=0.923  Sum_probs=32.8  Template_Neff=1.562
+
+Q T0953s1-D1        2 SIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIF   38 (67)
+Q Consensus         2 si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~   38 (67)
+                      ++.+||+|||+.|.+|+.+.++++++...+|+.-++.
+T Consensus       403 ~l~igd~dtgl~w~~d~~i~m~a~~~~saywd~~g~r  439 (561)
+T UniRef100_A0A2  403 SLAIGDNDTGLNWATDGKIEMWANNGVSAYWDTTGIR  439 (561)
+Confidence            5678999999999999999999999999999766553
+
+
+No 115
+>UniRef100_A0A5A4TGZ1 Phage tail fiber n=1 Tax=Escherichia coli O145:H28 TaxID=1078034 RepID=A0A5A4TGZ1_ECOLX
+Probab=92.24  E-value=0.24  Score=27.51  Aligned_cols=17  Identities=24%  Similarity=0.497  Sum_probs=14.6  Template_Neff=1.000
+
+Q T0953s1-D1       51 LNQWGGGAIYCRDLNVS   67 (67)
+Q Consensus        51 ~~~wg~~~~~v~dv~~~   67 (67)
+                      +.+|--++||||||||.
+T Consensus        44 pelwqfdsryvrdvrlg   60 (74)
+T UniRef100_A0A5   44 PELWQFDSRYVRDVRLG   60 (74)
+Confidence            56888899999999973
+
+
+No 116
+>UniRef100_A0A0A6ZX89 Tail fiber protein n=1 Tax=Shigella dysenteriae 1617 TaxID=754093 RepID=A0A0A6ZX89_SHIDY
+Probab=92.18  E-value=0.25  Score=32.77  Aligned_cols=17  Identities=59%  Similarity=1.034  Sum_probs=15.0  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGD   17 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gd   17 (67)
+                      .||+++++|+||+|++|
+T Consensus       224 ssivlgdndtgfkqngd  240 (240)
+T UniRef100_A0A0  224 SSIVLGDNDTGFKQNGD  240 (240)
+Confidence            37999999999999875
+
+
+No 117
+>UniRef100_A0A080GCX7 Phage tail fiber repeat family protein (Fragment) n=2 Tax=Escherichia coli TaxID=562 RepID=A0A080GCX7_ECOLX
+Probab=91.61  E-value=0.33  Score=38.62  Aligned_cols=62  Identities=34%  Similarity=0.535  Sum_probs=43.4  Template_Neff=1.700
+
+Q T0953s1-D1        2 SIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIFTEAGKHI--TSNGNLNQWGG-GAIYCRDLNVS   67 (67)
+Q Consensus         2 si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~~~~~~~~--~~~~~~~~wg~-~~~~v~dv~~~   67 (67)
+                      ++..++.+++|++.++|.++.+.+..+..++..+..    ...+  .....+..+|+ +.+++++|+|.
+T Consensus       970 t~~~~~~d~g~~~ng~G~~~~~~n~~ht~r~~~g~~----n~~~~~~g~~~p~~~g~~~~~~~~~V~~G 1034 (1091)
+T UniRef100_A0A0  970 SIVLGDNDTGFKQNGDGNLDVYANHVHTMRFVSGSS----NKTINITGRVNPSDYGNFDGRYVHDVRLG 1034 (1091)
+Confidence            356678899999999999999999999888765542    1222  22223444554 57888888863
+
+
+No 118
+>UniRef100_UPI000248C566 hypothetical protein n=1 Tax=Paenibacillus elgii TaxID=189691 RepID=UPI000248C566
+Probab=91.56  E-value=0.35  Score=33.81  Aligned_cols=37  Identities=51%  Similarity=0.923  Sum_probs=32.6  Template_Neff=1.000
+
+Q T0953s1-D1        2 SIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDIF   38 (67)
+Q Consensus         2 si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~~   38 (67)
+                      |+.+||+|+|+.+..||.+.+.+|+....+|+..++.
+T Consensus       207 slaigdndtglnwatdgkiemwanngvsaywdttgir  243 (365)
+T UniRef100_UPI0  207 SLAIGDNDTGLNWATDGKIEMWANNGVSAYWDTTGIR  243 (365)
+Confidence            5679999999999999999999999999999766553
+
+
+No 119
+>UniRef100_A0A236MWC4 Phage tail protein (Fragment) n=1 Tax=Escherichia coli TaxID=562 RepID=A0A236MWC4_ECOLX
+Probab=88.99  E-value=0.98  Score=31.57  Aligned_cols=36  Identities=17%  Similarity=0.187  Sum_probs=32.5  Template_Neff=1.312
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGD-GIVQIVANNAIVGGWNSTD   36 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gd-g~~~~~~n~~~~~~~~~~~   36 (67)
+                      ++|.++++++|.++++| |.+..|+++.++++++++.
+T Consensus       223 ~~~~l~~~~~g~~~ngdig~l~~~~~~~~~~~~~~~~  259 (300)
+T UniRef100_A0A2  223 ECLHLIPTSEGQGENGDIGPLRPFTINLRTGEIQMSH  259 (300)
+Confidence            36788999999999999 9999999999999997764
+
+
+No 120
+>UniRef100_A0A524QCI2 Uncharacterized protein (Fragment) n=1 Tax=ANME-2 cluster archaeon TaxID=2056317 RepID=A0A524QCI2_9EURY
+Probab=88.80  E-value=1  Score=31.91  Aligned_cols=35  Identities=40%  Similarity=0.596  Sum_probs=29.6  Template_Neff=1.000
+
+Q T0953s1-D1        3 IAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDI   37 (67)
+Q Consensus         3 i~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~   37 (67)
+                      +.++|.|+|++|.+||.+.+..+++.-.+++.+++
+T Consensus       215 laigdsdtglkqqgdgelaiitnnqervridksgy  249 (378)
+T UniRef100_A0A5  215 LAIGDSDTGLKQQGDGELAIITNNQERVRIDKSGY  249 (378)
+Confidence            46899999999999999999999988777765543
+
+
+No 121
+>UniRef100_UPI0007932F88 tail fiber domain-containing protein n=1 Tax=Enterobacter cloacae TaxID=550 RepID=UPI0007932F88
+Probab=88.70  E-value=1.1  Score=34.32  Aligned_cols=31  Identities=45%  Similarity=0.820  Sum_probs=27.1  Template_Neff=1.000
+
+Q T0953s1-D1        2 SIAIGDNDTGLRWGGDGIVQIVANNAIVGGW   32 (67)
+Q Consensus         2 si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~   32 (67)
+                      ||.++|+|+||+|..||.++++.|+-....|
+T Consensus       301 sialgdndtgfrwvrdgefdvmnnsrvsvkf  331 (797)
+T UniRef100_UPI0  301 SIALGDNDTGFRWVRDGEFDVMNNSRVSVKF  331 (797)
+Confidence            7899999999999999999999987655554
+
+
+No 122
+>UniRef100_UPI0009DFB402 hypothetical protein n=1 Tax=Paenibacillus sp. 1-49 TaxID=1155954 RepID=UPI0009DFB402
+Probab=87.82  E-value=1.4  Score=32.26  Aligned_cols=33  Identities=33%  Similarity=0.680  Sum_probs=28.1  Template_Neff=1.000
+
+Q T0953s1-D1        3 IAIGDNDTGLRWGGDGIVQIVANNAIVGGWNST   35 (67)
+Q Consensus         3 i~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~   35 (67)
+                      +-+||+|+||.+..||.++.|+|++...+...+
+T Consensus       232 vpigdndtgfdwvadgqidlysnsqvparlvgg  264 (487)
+T UniRef100_UPI0  232 VPIGDNDTGFDWVADGQIDLYSNSQVPARLVGG  264 (487)
+Confidence            347899999999999999999999887776444
+
+
+No 123
+>UniRef100_A0A0A0RTX7 L-shaped tail fiber protein n=1 Tax=Salmonella virus Stitch TaxID=1540099 RepID=A0A0A0RTX7_9CAUD
+Probab=87.39  E-value=1.4  Score=36.19  Aligned_cols=36  Identities=44%  Similarity=0.906  Sum_probs=31.4  Template_Neff=3.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTD   36 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~   36 (67)
+                      .+|.+|+.|+|+++.+|+.+..+.+....+.|.+..
+T Consensus       702 ~si~lGd~dtG~~~~~dg~i~~~~~~~~~~~~~~~~  737 (982)
+T UniRef100_A0A0  702 YSIAIGDSDTGFKWGGDGHISAYRDSANIFAWDPSG  737 (982)
+Confidence            378899999999999999999999998888876543
+
+
+No 124
+>UniRef100_A0A068QVC8 Uncharacterized protein n=1 Tax=Xenorhabdus doucetiae TaxID=351671 RepID=A0A068QVC8_9GAMM
+Probab=87.39  E-value=1.4  Score=35.26  Aligned_cols=35  Identities=54%  Similarity=0.779  Sum_probs=29.8  Template_Neff=4.500
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNST   35 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~   35 (67)
+                      .+|.+++++++|++.+||.+.+++|+....++...
+T Consensus       425 ~~i~~g~~dtgf~~~~dg~~~~~an~~~~gy~~~~  459 (683)
+T UniRef100_A0A0  425 NSIVIGDNDTGFKQNGDGNLGIYANSALVGYINNN  459 (683)
+Confidence            36889999999999999999999999877765443
+
+
+No 125
+>UniRef100_A0A3V1F619 gp37_C domain-containing protein n=2 Tax=Salmonella enterica I TaxID=59201 RepID=A0A3V1F619_SALET
+Probab=86.64  E-value=1.8  Score=32.95  Aligned_cols=35  Identities=40%  Similarity=0.631  Sum_probs=31.0  Template_Neff=2.247
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNST   35 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~   35 (67)
+                      ++|.+++.|.||....+|++++|.+...+++..+.
+T Consensus       191 P~inigdsdsgfigsa~Gvldiy~nn~kvGyidN~  225 (482)
+T UniRef100_A0A3  191 PPINIGDSDSGFIGSADGVLDIYCNNAKVGYIDNA  225 (482)
+Confidence            36789999999999999999999999998888654
+
+
+No 126
+>UniRef100_H6NDS7 Phage minor structural protein, region n=1 Tax=Paenibacillus mucilaginosus 3016 TaxID=1116391 RepID=H6NDS7_9BACL
+Probab=86.22  E-value=2.1  Score=31.59  Aligned_cols=34  Identities=53%  Similarity=1.014  Sum_probs=29.4  Template_Neff=1.000
+
+Q T0953s1-D1        2 SIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNST   35 (67)
+Q Consensus         2 si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~   35 (67)
+                      |+.++|-|+||.++.||...+++|++...-|...
+T Consensus       342 svaigdhdtgfnwnsdgqmeifannqvtawwntt  375 (499)
+T UniRef100_H6ND  342 SVAIGDHDTGFNWNSDGQMEIFANNQVTAWWNTT  375 (499)
+Confidence            5779999999999999999999999877766443
+
+
+No 127
+>UniRef100_A0A3M7U6N5 Uncharacterized protein n=1 Tax=[Curtobacterium] plantarum TaxID=221276 RepID=A0A3M7U6N5_9GAMM
+Probab=85.61  E-value=2.3  Score=34.61  Aligned_cols=34  Identities=38%  Similarity=0.591  Sum_probs=30.4  Template_Neff=1.336
+
+Q T0953s1-D1        2 SIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNST   35 (67)
+Q Consensus         2 si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~   35 (67)
+                      ||.++|.|+|+.--+||.+++|+|+...+++.+.
+T Consensus      1017 sinigdsdtgl~cp~dg~ldfy~nn~~~~~l~~n 1050 (1239)
+T UniRef100_A0A3 1017 SINIGDSDTGLVCPSDGTLDFYSNNVKTARFTPN 1050 (1239)
+Confidence            7889999999999999999999999988887543
+
+
+No 128
+>UniRef100_A0A2E4ZEY3 Uncharacterized protein n=1 Tax=Idiomarinaceae bacterium TaxID=1898113 RepID=A0A2E4ZEY3_9GAMM
+Probab=85.04  E-value=2.6  Score=34.68  Aligned_cols=30  Identities=47%  Similarity=0.938  Sum_probs=26.4  Template_Neff=1.000
+
+Q T0953s1-D1        3 IAIGDNDTGLRWGGDGIVQIVANNAIVGGW   32 (67)
+Q Consensus         3 i~~gd~dtg~~~~gdg~~~~~~n~~~~~~~   32 (67)
+                      +.+++.|+||+++.||.+++++|++.+...
+T Consensus       323 lalgdsdtgfrwnsdgdidimansqvvanv  352 (1743)
+T UniRef100_A0A2  323 LALGDSDTGFRWNSDGDIDIMANSQVVANV  352 (1743)
+Confidence            457899999999999999999999876654
+
+
+No 129
+>UniRef100_UPI0005788F26 hypothetical protein n=1 Tax=Escherichia sp. TW15838 TaxID=910237 RepID=UPI0005788F26
+Probab=84.31  E-value=3  Score=29.28  Aligned_cols=17  Identities=18%  Similarity=0.554  Sum_probs=13.2  Template_Neff=1.266
+
+Q T0953s1-D1       51 LNQWGG-GAIYCRDLNVS   67 (67)
+Q Consensus        51 ~~~wg~-~~~~v~dv~~~   67 (67)
+                      +..+|+ ++|||+||||.
+T Consensus       262 pgnygnfdsryvkdvrlg  279 (284)
+T UniRef100_UPI0  262 PGNYGNFDSRYVKDVRLG  279 (284)
+Confidence            355666 79999999984
+
+
+No 130
+>UniRef100_UPI00112F435F tail fiber domain-containing protein n=1 Tax=Salmonella enterica TaxID=28901 RepID=UPI00112F435F
+Probab=83.74  E-value=3.4  Score=31.30  Aligned_cols=36  Identities=50%  Similarity=0.962  Sum_probs=31.6  Template_Neff=1.000
+
+Q T0953s1-D1        1 ASIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTD   36 (67)
+Q Consensus         1 ~si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~   36 (67)
+                      +|++.+|-|+|+++..||++...+|.+.++.|+...
+T Consensus       330 nslvmgdadtglkwqsdgiikaianatevfgwdsta  365 (612)
+T UniRef100_UPI0  330 NSLVMGDADTGLKWQSDGIIKAIANATEVFGWDSTA  365 (612)
+Confidence            467889999999999999999999999999986543
+
+
+No 131
+>UniRef100_A0A2Z5ZCC8 Long tail fiber distal subunit n=1 Tax=Escherichia phage EcS1 TaxID=2083276 RepID=A0A2Z5ZCC8_9CAUD
+Probab=82.96  E-value=3.8  Score=32.41  Aligned_cols=34  Identities=41%  Similarity=0.643  Sum_probs=28.7  Template_Neff=1.000
+
+Q T0953s1-D1        3 IAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTD   36 (67)
+Q Consensus         3 i~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~   36 (67)
+                      +.++|+|+||...+||+++.-+++.....|+-..
+T Consensus       452 lnigdndtgftsggdgilnlransvntmqfqynv  485 (977)
+T UniRef100_A0A2  452 LNIGDNDTGFTSGGDGILNLRANSVNTMQFQYNV  485 (977)
+Confidence            4689999999999999999999988777775443
+
+
+No 132
+>UniRef100_UPI00109262C3 hypothetical protein n=1 Tax=Hafnia paralvei TaxID=546367 RepID=UPI00109262C3
+Probab=82.79  E-value=4  Score=28.40  Aligned_cols=34  Identities=53%  Similarity=0.849  Sum_probs=29.8  Template_Neff=1.000
+
+Q T0953s1-D1        2 SIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNST   35 (67)
+Q Consensus         2 si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~   35 (67)
+                      .|.++|+|.|++..-||..+.|+++-.-++|...
+T Consensus       160 ainigdndsglrssvdgqvdlyangrmygywntt  193 (279)
+T UniRef100_UPI0  160 AINIGDNDSGLRSSVDGQVDLYANGRMYGYWNTT  193 (279)
+Confidence            4778999999999999999999999888888544
+
+
+No 133
+>UniRef100_A0A2I9D9X9 Peptidase S74 domain-containing protein n=1 Tax=Microcystis aeruginosa NIES-298 TaxID=449468 RepID=A0A2I9D9X9_MICAE
+Probab=82.65  E-value=3.9  Score=32.90  Aligned_cols=33  Identities=45%  Similarity=0.681  Sum_probs=28.3  Template_Neff=1.784
+
+Q T0953s1-D1        3 IAIGDNDTGLRWGGDGIVQIVANNAIVGGWNST   35 (67)
+Q Consensus         3 i~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~   35 (67)
+                      +.+++.|||+++.+||++.+|.++..-.++...
+T Consensus       640 laigdddtglqqqgdgvlaiyt~n~e~vr~~~~  672 (833)
+T UniRef100_A0A2  640 LAIGDDDTGLQQQGDGVLAIYTNNTERVRVNAS  672 (833)
+Confidence            457899999999999999999999887777544
+
+
+No 134
+>UniRef100_A0A5B8JJV1 Uncharacterized protein n=1 Tax=Paenibacillus polymyxa TaxID=1406 RepID=A0A5B8JJV1_PAEPO
+Probab=82.32  E-value=4.1  Score=31.90  Aligned_cols=35  Identities=40%  Similarity=0.661  Sum_probs=29.5  Template_Neff=1.911
+
+Q T0953s1-D1        2 SIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTD   36 (67)
+Q Consensus         2 si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~   36 (67)
+                      ++.+++.|++|++.+||.+++|.|++.......+.
+T Consensus       394 ~~~ig~~d~~f~w~~dg~v~fysn~~~~val~~g~  428 (607)
+T UniRef100_A0A5  394 SLPIGDADTGFNWYGDGNVDFYSNNSKPVALKDGQ  428 (607)
+Confidence            35578999999999999999999998877765553
+
+
+No 135
+>UniRef100_A0A381T8T0 Uncharacterized protein (Fragment) n=1 Tax=marine metagenome TaxID=408172 RepID=A0A381T8T0_9ZZZZ
+Probab=81.62  E-value=4.8  Score=31.41  Aligned_cols=32  Identities=38%  Similarity=0.676  Sum_probs=28.9  Template_Neff=1.000
+
+Q T0953s1-D1        2 SIAIGDNDTGLRWGGDGIVQIVANNAIVGGWN   33 (67)
+Q Consensus         2 si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~   33 (67)
+                      |+.+++.|+||.|..||.+..|.|.+.-.+|.
+T Consensus       677 slaigdsdtgfewiadgklslytngtermrfd  708 (797)
+T UniRef100_A0A3  677 SLAIGDSDTGFEWIADGKLSLYTNGTERMRFD  708 (797)
+Confidence            57799999999999999999999998877773
+
+
+No 136
+>UniRef100_A0A0G0BE00 Collagen triple helix repeat (20 copies) protein n=1 Tax=candidate division TM6 bacterium GW2011_GWF2_30_66 TaxID=1619078 RepID=A0A0G0BE00_9BACT
+Probab=81.21  E-value=5  Score=27.25  Aligned_cols=33  Identities=33%  Similarity=0.450  Sum_probs=26.9  Template_Neff=1.000
+
+Q T0953s1-D1        4 AIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTD   36 (67)
+Q Consensus         4 ~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~   36 (67)
+                      .++|.|+||..++||+....+|....+...+..
+T Consensus        75 figdtdtgffrdgdgimgvtsngttqfsvspnl  107 (228)
+T UniRef100_A0A0   75 FIGDTDTGFFRDGDGIMGVTSNGTTQFSVSPNL  107 (228)
+Confidence            378999999999999999999887766654443
+
+
+No 137
+>UniRef100_A0A484Z3Y9 Tail Fiber protein n=1 Tax=Enterobacter cancerogenus TaxID=69218 RepID=A0A484Z3Y9_9ENTR
+Probab=80.83  E-value=5.3  Score=27.51  Aligned_cols=31  Identities=55%  Similarity=0.888  Sum_probs=28.2  Template_Neff=1.000
+
+Q T0953s1-D1        3 IAIGDNDTGLRWGGDGIVQIVANNAIVGGWN   33 (67)
+Q Consensus         3 i~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~   33 (67)
+                      +.++|+|.|++...||..+..+++..+++|.
+T Consensus       100 lnigdndsglrnskdgqvdlwanskavgywn  130 (252)
+T UniRef100_A0A4  100 LNIGDNDSGLRNSKDGQVDLWANSKAVGYWN  130 (252)
+Confidence            4589999999999999999999999999984
+
+
+No 138
+>UniRef100_A0A249XZF5 Tail fiber protein (Fragment) n=1 Tax=Escherichia phage ECO4 TaxID=2025816 RepID=A0A249XZF5_9CAUD
+Probab=80.60  E-value=5.4  Score=31.92  Aligned_cols=36  Identities=42%  Similarity=0.586  Sum_probs=31.3  Template_Neff=1.576
+
+Q T0953s1-D1        2 SIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDI   37 (67)
+Q Consensus         2 si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~   37 (67)
+                      +|++||++|||++..+|.+....++..++.+.|..+
+T Consensus       288 ~i~lgd~~tgl~~~q~g~~~~v~~g~~~~~~~p~~~  323 (794)
+T UniRef100_A0A2  288 SIALGDNDTGLAWKQDGYYFLVNNGTSTFLITPDET  323 (794)
+Confidence            689999999999999999999998888888766543
+
+
+No 139
+>UniRef100_A0A4Q6EIU5 Tail fiber domain-containing protein (Fragment) n=1 Tax=Proteobacteria bacterium TaxID=1977087 RepID=A0A4Q6EIU5_9PROT
+Probab=80.57  E-value=5.5  Score=30.47  Aligned_cols=33  Identities=39%  Similarity=0.582  Sum_probs=28.6  Template_Neff=1.000
+
+Q T0953s1-D1        2 SIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNS   34 (67)
+Q Consensus         2 si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~   34 (67)
+                      |+..+|+|+|+....||.+++.+|+-....|.+
+T Consensus       398 slavgdndtglnstsdgaldiwsnserpmsfrn  430 (639)
+T UniRef100_A0A4  398 SLAVGDNDTGLNSTSDGALDIWSNSERPMSFRN  430 (639)
+Confidence            567899999999999999999999887777744
+
+
+No 140
+>UniRef100_UPI000420AC9A hypothetical protein n=1 Tax=Paenibacillus assamensis TaxID=311244 RepID=UPI000420AC9A
+Probab=80.51  E-value=5.6  Score=27.35  Aligned_cols=30  Identities=43%  Similarity=0.773  Sum_probs=26.0  Template_Neff=1.000
+
+Q T0953s1-D1        3 IAIGDNDTGLRWGGDGIVQIVANNAIVGGW   32 (67)
+Q Consensus         3 i~~gd~dtg~~~~gdg~~~~~~n~~~~~~~   32 (67)
+                      +-+||.|+|+-+.+||.+.+|+|+....+.
+T Consensus        83 lpigdsdtglhwtgdgglefysnniaamrl  112 (246)
+T UniRef100_UPI0   83 LPIGDSDTGLHWTGDGGLEFYSNNIAAMRL  112 (246)
+Confidence            347899999999999999999998776665
+
+
+No 141
+>UniRef100_UPI000F439F5D hypothetical protein n=1 Tax=Enterobacter genomosp. O TaxID=2364150 RepID=UPI000F439F5D
+Probab=79.42  E-value=6.4  Score=28.38  Aligned_cols=34  Identities=50%  Similarity=0.858  Sum_probs=30.0  Template_Neff=1.000
+
+Q T0953s1-D1        3 IAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTD   36 (67)
+Q Consensus         3 i~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~   36 (67)
+                      +.++|+|.|++..-||.++..+|+..+++|....
+T Consensus       182 lnigdndsglrnsvdgqidlwsnsamvgywnktt  215 (360)
+T UniRef100_UPI0  182 LNIGDNDSGLRNSVDGQIDLWSNSAMVGYWNKTT  215 (360)
+Confidence            5689999999999999999999999999996543
+
+
+No 142
+>UniRef100_A0A3B0UPR2 Phage tail fibers n=1 Tax=hydrothermal vent metagenome TaxID=652676 RepID=A0A3B0UPR2_9ZZZZ
+Probab=79.14  E-value=6.7  Score=30.84  Aligned_cols=30  Identities=47%  Similarity=0.613  Sum_probs=25.3  Template_Neff=1.000
+
+Q T0953s1-D1        3 IAIGDNDTGLRWGGDGIVQIVANNAIVGGW   32 (67)
+Q Consensus         3 i~~gd~dtg~~~~gdg~~~~~~n~~~~~~~   32 (67)
+                      +.++|+|+|++|.+.|.+.+|..+..-.+.
+T Consensus       519 laigdndtglkqqgngklaiytdnaerirv  548 (824)
+T UniRef100_A0A3  519 LAIGDNDTGLKQQGNGKLAIYTDNAERIRV  548 (824)
+Confidence            468999999999999999999987655444
+
+
+No 143
+>UniRef100_A0A3B0UPR2 Phage tail fibers n=1 Tax=hydrothermal vent metagenome TaxID=652676 RepID=A0A3B0UPR2_9ZZZZ
+Probab=79.14  E-value=6.7  Score=30.84  Aligned_cols=30  Identities=47%  Similarity=0.613  Sum_probs=25.2  Template_Neff=1.000
+
+Q T0953s1-D1        3 IAIGDNDTGLRWGGDGIVQIVANNAIVGGW   32 (67)
+Q Consensus         3 i~~gd~dtg~~~~gdg~~~~~~n~~~~~~~   32 (67)
+                      +.++|+|+|++|.+.|.+.+|..+..-.+.
+T Consensus       588 laigdndtglkqqgngklaiytdnaerirv  617 (824)
+T UniRef100_A0A3  588 LAIGDNDTGLKQQGNGKLAIYTDNAERIRV  617 (824)
+Confidence            468999999999999999999887655444
+
+
+No 144
+>UniRef100_A0A015ZJQ6 Peptidase S74 domain-containing protein n=2 Tax=Bacteroides fragilis TaxID=817 RepID=A0A015ZJQ6_BACFG
+Probab=78.57  E-value=7.1  Score=33.40  Aligned_cols=32  Identities=53%  Similarity=1.017  Sum_probs=29.5  Template_Neff=1.255
+
+Q T0953s1-D1        2 SIAIGDNDTGLRWGGDGIVQIVANNAIVGGWN   33 (67)
+Q Consensus         2 si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~   33 (67)
+                      |+.+||+|+|+.+..||++.+++|...+++|.
+T Consensus      1371 sl~igd~dtglh~~~dg~i~~~sn~k~vg~~g 1402 (1957)
+T UniRef100_A0A0 1371 SLAIGDSDTGLHWQADGIIEFRSNAKQVGYWG 1402 (1957)
+Confidence            67899999999999999999999999998883
+
+
+No 145
+>UniRef100_A0A0A7HG91 Long tail fiber protein n=1 Tax=Escherichia phage vB_EcoM_VR20 TaxID=1567027 RepID=A0A0A7HG91_9CAUD
+Probab=77.94  E-value=7.4  Score=33.16  Aligned_cols=35  Identities=34%  Similarity=0.568  Sum_probs=30.9  Template_Neff=2.178
+
+Q T0953s1-D1        3 IAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDI   37 (67)
+Q Consensus         3 i~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~   37 (67)
+                      |++||++||+++..+|+++.+.+.-.++.+.+.++
+T Consensus       300 ialGD~~TGlky~k~GV~DLv~ng~S~AsIt~d~f  334 (1251)
+T UniRef100_A0A0  300 IALGDNATGLKYIKTGVYDLVGNGYSVASITPDSF  334 (1251)
+Confidence            67999999999999999999999988888766654
+
+
+No 146
+>UniRef100_A0A514A7D1 Chaperone of endosialidase n=1 Tax=Panteoa phage Phynn TaxID=2589666 RepID=A0A514A7D1_9CAUD
+Probab=77.78  E-value=7.7  Score=31.19  Aligned_cols=35  Identities=51%  Similarity=0.714  Sum_probs=29.5  Template_Neff=1.491
+
+Q T0953s1-D1        2 SIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTD   36 (67)
+Q Consensus         2 si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~   36 (67)
+                      +|.+++++.||++.+++.+....++..+.+-+.+-
+T Consensus       668 ~ia~~~n~~g~~~g~~~~i~~w~~~~~~~~~~~gq  702 (816)
+T UniRef100_A0A5  668 SIAIGDNDSGFTSGGDGIIQLWCNSGRVWHGDSGQ  702 (816)
+Confidence            68899999999999999999999888777654443
+
+
+No 147
+>UniRef100_UPI00067661D8 hypothetical protein n=1 Tax=Paenibacillus sp. D9 TaxID=665792 RepID=UPI00067661D8
+Probab=73.51  E-value=12  Score=29.61  Aligned_cols=36  Identities=44%  Similarity=0.875  Sum_probs=31.1  Template_Neff=1.000
+
+Q T0953s1-D1        2 SIAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDI   37 (67)
+Q Consensus         2 si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~   37 (67)
+                      |+.+||+|+|+.+..||-+.-++|++....|....+
+T Consensus       666 slaigdndtglnwvrdgfikgfsngqeiwgwednsl  701 (824)
+T UniRef100_UPI0  666 SLAIGDNDTGLNWVRDGFIKGFSNGQEIWGWEDNSL  701 (824)
+Confidence            577999999999999999999999999888865543
+
+
+No 148
+>UniRef100_W0BVP4 Uncharacterized protein n=1 Tax=Enterobacter ludwigii TaxID=299767 RepID=W0BVP4_9ENTR
+Probab=71.75  E-value=15  Score=27.38  Aligned_cols=35  Identities=49%  Similarity=0.851  Sum_probs=29.8  Template_Neff=1.000
+
+Q T0953s1-D1        3 IAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDI   37 (67)
+Q Consensus         3 i~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~   37 (67)
+                      +.++|+|.|++...||..+..+|+..-++|....+
+T Consensus       312 lnigdndsglrsskdgqvdlwanskmmgywntttf  346 (426)
+T UniRef100_W0BV  312 LNIGDNDSGLRSSKDGQVDLWANSKMMGYWNTTTF  346 (426)
+Confidence            45899999999999999999999998888865433
+
+
+No 149
+>UniRef100_UPI000B20AD97 shufflon system plasmid conjugative transfer pilus tip adhesin PilV n=1 Tax=Bacteroides fragilis TaxID=817 RepID=UPI000B20AD97
+Probab=71.28  E-value=15  Score=29.75  Aligned_cols=31  Identities=55%  Similarity=1.045  Sum_probs=28.6  Template_Neff=1.000
+
+Q T0953s1-D1        2 SIAIGDNDTGLRWGGDGIVQIVANNAIVGGW   32 (67)
+Q Consensus         2 si~~gd~dtg~~~~gdg~~~~~~n~~~~~~~   32 (67)
+                      |+.++|.|+|+-+..||++.+-+|...+++|
+T Consensus       427 slaigdsdtglhwqadgiiefrsnakqvgyw  457 (1013)
+T UniRef100_UPI0  427 SLAIGDSDTGLHWQADGIIEFRSNAKQVGYW  457 (1013)
+Confidence            6789999999999999999999999888887
+
+
+No 150
+>UniRef100_A0A060BN58 Long tail fiber distal subunit n=1 Tax=Escherichia phage vB_EcoM_JS09 TaxID=1430444 RepID=A0A060BN58_9CAUD
+Probab=67.37  E-value=21  Score=30.31  Aligned_cols=35  Identities=34%  Similarity=0.595  Sum_probs=31.1  Template_Neff=1.900
+
+Q T0953s1-D1        3 IAIGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDI   37 (67)
+Q Consensus         3 i~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~   37 (67)
+                      |+++|+++|+++..+|+++...+...++++.+..+
+T Consensus       315 ialGD~~TGlky~k~Gv~Dlvgng~SvasItpdsf  349 (1036)
+T UniRef100_A0A0  315 IALGDNATGLKYIKQGVYDLVGNGNSVASITPDSF  349 (1036)
+Confidence            78899999999999999999999988888876655
+
+
+No 151
+>UniRef100_A0A0E3WJA3 Uncharacterized protein n=1 Tax=Paenibacillus riograndensis SBR5 TaxID=1073571 RepID=A0A0E3WJA3_9BACL
+Probab=66.93  E-value=22  Score=29.39  Aligned_cols=30  Identities=33%  Similarity=0.630  Sum_probs=26.2  Template_Neff=1.000
+
+Q T0953s1-D1        3 IAIGDNDTGLRWGGDGIVQIVANNAIVGGW   32 (67)
+Q Consensus         3 i~~gd~dtg~~~~gdg~~~~~~n~~~~~~~   32 (67)
+                      +-++|.|+|+.+..||.+++|+|++..+..
+T Consensus       985 lpigdsdtginwvtdgrldfysngqlpfql 1014 (1172)
+T UniRef100_A0A0  985 LPIGDSDTGINWVTDGRLDFYSNGQLPFQL 1014 (1172)
+Confidence            347899999999999999999999877664
+
+
+No 152
+>UniRef100_A0A344UCY3 Uncharacterized protein n=1 Tax=Chromobacterium sp. IIBBL 274-1 TaxID=2202142 RepID=A0A344UCY3_9NEIS
+Probab=58.75  E-value=40  Score=25.69  Aligned_cols=30  Identities=33%  Similarity=0.578  Sum_probs=27.2  Template_Neff=1.000
+
+Q T0953s1-D1        6 GDNDTGLRWGGDGIVQIVANNAIVGGWNST   35 (67)
+Q Consensus         6 gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~   35 (67)
+                      ++.|+||..-+||...+..|+..+.+|.++
+T Consensus       234 gngdtgffhpgdgsvgvtcngvevarftps  263 (454)
+T UniRef100_A0A3  234 GNGDTGFFHPGDGSVGVTCNGVEVARFTPS  263 (454)
+Confidence            578899999999999999999999999765
+
+
+No 153
+>UniRef100_UPI00039E472C hypothetical protein n=1 Tax=Burkholderia glumae TaxID=337 RepID=UPI00039E472C
+Probab=55.95  E-value=47  Score=26.22  Aligned_cols=31  Identities=35%  Similarity=0.511  Sum_probs=27.1  Template_Neff=1.366
+
+Q T0953s1-D1        6 GDNDTGLRWGGDGIVQIVANNAIVGGWNSTD   36 (67)
+Q Consensus         6 gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~   36 (67)
+                      +.-||||...+||++.+..|.+.+.++.+++
+T Consensus       262 gspdtg~fhigdgvfgiscnt~evvryspsg  292 (524)
+T UniRef100_UPI0  262 GSPDTGLFHIGDGVFGISCNTTEVVRYSPSG  292 (524)
+Confidence            4568999999999999999999999987664
+
+
+No 154
+>UniRef100_A0A0L6XVH2 Short-chain fatty acid transporter (Fragment) n=1 Tax=Escherichia coli TaxID=562 RepID=A0A0L6XVH2_ECOLX
+Probab=52.31  E-value=58  Score=28.27  Aligned_cols=33  Identities=39%  Similarity=0.585  Sum_probs=24.7  Template_Neff=1.700
+
+Q T0953s1-D1        5 IGDNDTGLRWGGDGIVQIVANNAIVGGWNSTDI   37 (67)
+Q Consensus         5 ~gd~dtg~~~~gdg~~~~~~n~~~~~~~~~~~~   37 (67)
+                      .+..+++.++.+++.+..+......+++.++..
+T Consensus       735 ~~~~~t~~~~~~~~~~~~~a~~~~~~~~~~~~~  767 (1136)
+T UniRef100_A0A0  735 NGGGDTGLKQNGDGNLDVYAGNARVMRFDNGSI  767 (1136)
+Confidence            455677888888888888888888887755543
+
+
+No 155
+>UniRef100_A0A2I9D9X9 Peptidase S74 domain-containing protein n=1 Tax=Microcystis aeruginosa NIES-298 TaxID=449468 RepID=A0A2I9D9X9_MICAE
+Probab=50.44  E-value=65  Score=27.28  Aligned_cols=31  Identities=52%  Similarity=0.662  Sum_probs=26.4  Template_Neff=1.784
+
+Q T0953s1-D1        3 IAIGDNDTGLRWGGDGIVQIVANNAIVGGWN   33 (67)
+Q Consensus         3 i~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~   33 (67)
+                      +.++++++|+++.+||.+.+++++..-.++.
+T Consensus       502 ~~igd~~tgl~~~~dg~l~i~t~~~~rv~~~  532 (833)
+T UniRef100_A0A2  502 LAIGDNDTGLKQQGDGELAICTNNIERVRVN  532 (833)
+Confidence            4578999999999999999999887666654
+
+
+No 156
+>UniRef100_A0A2E4ZEY3 Uncharacterized protein n=1 Tax=Idiomarinaceae bacterium TaxID=1898113 RepID=A0A2E4ZEY3_9GAMM
+Probab=49.95  E-value=69  Score=28.01  Aligned_cols=30  Identities=47%  Similarity=0.772  Sum_probs=26.1  Template_Neff=1.000
+
+Q T0953s1-D1        3 IAIGDNDTGLRWGGDGIVQIVANNAIVGGW   32 (67)
+Q Consensus         3 i~~gd~dtg~~~~gdg~~~~~~n~~~~~~~   32 (67)
+                      +.+++-|+||.+.+||.+.+.+|++.+..+
+T Consensus      1199 lalgdadtgfswigdgnfeitanstsvvdi 1228 (1743)
+T UniRef100_A0A2 1199 LALGDADTGFSWIGDGNFEITANSTSVVDI 1228 (1743)
+Confidence            457899999999999999999998876654
+
+
+No 157
+>UniRef100_A0A0V7ZVF3 Uncharacterized protein n=1 Tax=Mastigocoleus testarum BC008 TaxID=371196 RepID=A0A0V7ZVF3_9CYAN
+Probab=21.62  E-value=4.2e+02  Score=21.99  Aligned_cols=31  Identities=35%  Similarity=0.488  Sum_probs=25.2  Template_Neff=1.000
+
+Q T0953s1-D1        3 IAIGDNDTGLRWGGDGIVQIVANNAIVGGWN   33 (67)
+Q Consensus         3 i~~gd~dtg~~~~gdg~~~~~~n~~~~~~~~   33 (67)
+                      +.+||.|+|+.|.+...+.+|..+..--+++
+T Consensus       226 laigdddtglnqegenelaiytdnkerlrid  256 (615)
+T UniRef100_A0A0  226 LAIGDDDTGLNQEGENELAIYTDNKERLRID  256 (615)
+Confidence            4688999999999999999998876555543
+
+
