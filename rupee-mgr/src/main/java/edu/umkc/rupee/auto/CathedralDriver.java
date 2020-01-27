@@ -29,7 +29,7 @@ public class CathedralDriver extends DriverBase {
         driver.get("http://cathdb.info/search/by_structure");
 
         // initial form fill
-        driver.findElement(By.id("search-pdb-file")).sendKeys("/home/ayoub/git/rupee/data/casp/eu_preds/" + dbId + ".pdb");
+        driver.findElement(By.id("search-pdb-file")).sendKeys(Constants.CASP_PATH + dbId + ".pdb");
 
         // submit search
         driver.findElement(By.xpath(SUBMIT_XPATH)).click();
@@ -74,7 +74,7 @@ public class CathedralDriver extends DriverBase {
         // click
         driver.findElement(By.linkText("View")).click();
 
-        Thread.sleep(5000);
+        Thread.sleep(20000);
 
         String source = driver.findElement(By.id("results-table")).getText();
         // source = "Time = " + (stop - start) + "\n" + source;
@@ -84,7 +84,7 @@ public class CathedralDriver extends DriverBase {
 
     public void doSearchBatch() {
 
-        List<String> dbIds = Benchmarks.get("casp_d150");
+        List<String> dbIds = Benchmarks.get("casp_d250");
 
         for (int i = 0; i < dbIds.size(); i++) {
             

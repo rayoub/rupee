@@ -67,7 +67,7 @@ public class SSMUploadDriver extends DriverBase {
 
     public void doSearchBatch() {
 
-        List<String> dbIds = Benchmarks.get("casp_d150");
+        List<String> dbIds = Benchmarks.get("casp_d250");
 
         for (int i = 0; i < dbIds.size(); i++) {
             

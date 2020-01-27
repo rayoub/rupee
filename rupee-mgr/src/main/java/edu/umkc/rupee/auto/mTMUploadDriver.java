@@ -84,7 +84,7 @@ public class mTMUploadDriver extends DriverBase {
     
     public void doSearchBatch() {
 
-        List<String> dbIds = Benchmarks.get("casp_d150");
+        List<String> dbIds = Benchmarks.get("casp_d229");
 
         for (int i = 0; i < dbIds.size(); i++) {
             
