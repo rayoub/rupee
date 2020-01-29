@@ -67,10 +67,12 @@ public abstract class Search {
     public List<SearchRecord> search(SearchCriteria criteria, SearchFrom searchFrom) throws Exception {
 
         List<SearchRecord> records = new ArrayList<>();
-        
+       
+        // guard
+        criteria.limit = Math.min(criteria.limit, 1000); 
+
         Grams grams = null;
         Hashes hashes = null;
-
         if (criteria.searchBy == SearchBy.DB_ID) {
             
             grams = Db.getGrams(criteria.dbId, criteria.idDbType, true);
@@ -177,7 +179,7 @@ public abstract class Search {
                 // sort and filter for regular alignments
                 records = records.stream()
                     .sorted(comparator)
-                    .limit(alignmentFilter(TmMode.REGULAR, grams1.getLength())) 
+                    .limit(criteria.limit) 
                     .collect(Collectors.toList());
                 
                 // regular alignments
@@ -222,27 +224,20 @@ public abstract class Search {
 
     private int alignmentFilter(TmMode mode, int gramCount) {
 
-        if (mode == TmMode.FAST) {
-
-            if (gramCount <= 200) {
-                return 8000; 
-            }
-            else if (gramCount <= 300) {
-                return 6000;
-            }
-            else if (gramCount <= 400) {
-                return 4000;
-            }
-            else if (gramCount <= 500) {
-                return 2000;
-            }
-            else {
-                return 1000;
-            }
+        if (gramCount <= 200) {
+            return 8000; 
         }
-        else { // mode == Mode.REGULAR
-            
-            return 400;
+        else if (gramCount <= 300) {
+            return 6000;
+        }
+        else if (gramCount <= 400) {
+            return 4000;
+        }
+        else if (gramCount <= 500) {
+            return 2000;
+        }
+        else {
+            return 1000;
         }
     }
 
