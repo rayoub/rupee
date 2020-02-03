@@ -781,7 +781,7 @@ public class Main {
     }
 
     private static void option_d(CommandLine line) throws Exception {
-
+        
         // get chain definitions
         /*
         ChainDefs.printChains("/home/ayoub/git/rupee/data/pdb/pdb");
@@ -790,7 +790,7 @@ public class Main {
 
         /*
         // web site automation
-        SSMUploadDriver driver = new SSMUploadDriver();
+        CathedralDriver driver = new CathedralDriver();
 
         driver.setUp();
         driver.doSearchBatch();
@@ -799,22 +799,18 @@ public class Main {
 
         /*
         // gather alignment scores for running results
-        AlignResults.alignRupeeResults("casp_d150", "casp_scop_v2_07", "all_aligned", DbType.SCOP, 100);
-        AlignResults.alignRupeeResults("casp_d150", "casp_scop_v2_07", "top_aligned", DbType.SCOP, 100);
-        AlignResults.alignRupeeResults("casp_d150", "casp_scop_v1_73", "all_aligned", DbType.SCOP, 100);
-        AlignResults.alignRupeeResults("casp_d150", "casp_cath_v4_2_0", "all_aligned", DbType.CATH, 100);
-        AlignResults.alignRupeeResults("casp_d150", "casp_chain_v06_26_2019", "all_aligned", DbType.CHAIN, 100);
-
-        AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "top_aligned", DbType.SCOP, 100);
+        AlignResults.alignRupeeResults("casp_d250", "casp_cath_v4_2_0", "all_aligned", DbType.CATH, 100);
+        AlignResults.alignRupeeResults("casp_d250", "casp_cath_v4_2_0", "top_aligned", DbType.CATH, 100);
+        AlignResults.alignRupeeResults("casp_d250", "casp_chain_v01_01_2020", "all_aligned", DbType.CHAIN, 100);
+        AlignResults.alignRupeeResults("casp_d250", "casp_chain_v01_01_2020", "top_aligned", DbType.CHAIN, 100);
+        AlignResults.alignRupeeResults("casp_d250", "casp_scop_v1_73", "all_aligned", DbType.SCOP, 100);
+        AlignResults.alignRupeeResults("casp_d250", "casp_scop_v1_73", "top_aligned", DbType.SCOP, 100);
         AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "all_aligned", DbType.SCOP, 100);
+        AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "top_aligned", DbType.SCOP, 100);
 
-        AlignResults.alignMtmResults("casp_d150", "casp_chain_v06_26_2019", DbType.CHAIN, 100);
+        AlignResults.alignCathedralResults("casp_d250", "casp_cath_v4_2_0", DbType.CATH, 100);
         
-        AlignResults.alignMtmResults("scop_d360", "scop_v2_07", DbType.SCOP, 100);
-        
-        AlignResults.alignCathedralResults("casp_d150", "casp_cath_v4_2_0", DbType.CATH, 100);
-        
-        AlignResults.alignSsmResults("casp_d150", "casp_scop_v1_73", DbType.SCOP, 100);
+        AlignResults.alignSsmResults("casp_d250", "casp_scop_v1_73", DbType.SCOP, 100);
         */
     }
 
