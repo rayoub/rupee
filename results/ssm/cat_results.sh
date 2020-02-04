@@ -5,6 +5,6 @@ ver=$2
 dir=${bm}_${ver}
 
 for id in $(find ${dir} -name '*.txt' -printf '%f\n'); do
-   awk -v ver=${ver} -v db_id=${id%.txt} -e 'BEGIN { OFS = ","; } $0 ~ "SCOP" { print ver, $1, db_id, $18 }' ${dir}/${id}
+   awk -v ver=${ver} -v db_id=${id%.txt} -e 'BEGIN { OFS = ","; } $0 ~ "SCOP" { print ver, $1, db_id, $17 }' ${dir}/${id}
 done;
 
