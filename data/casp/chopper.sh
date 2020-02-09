@@ -1,6 +1,6 @@
 #! /bin/bash
 
-# run like this 'xargs -a eus.txt -L1 ./chopper.sh <group_id>'
+# run like this 'xargs -a eus_*.txt -L1 ./chopper.sh <group_id>'
 
 # chops target preds into eus and copies to eu_preds directory
 

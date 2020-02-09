@@ -1,3 +1,8 @@
+To clear the target_preds directory of unnecessary files 
+
+find . -type f -regextype posix-egrep -regex '.*_(2|3|4|5)' -delete
+find . -type f -regextype posix-egrep -not -regex '.*TS(043|089|145|196|197|224|261|322|354|498).*' -delete
+
 Run this command in the eu_preds directory to add chain identifiers. 
 Chain identifiers are required in some cases. For example, uploading to CATHEDRAL.
 
