@@ -70,21 +70,27 @@ public class mTMUploadDriver extends DriverBase {
             Thread.sleep(1000);
         }
 
+        // give it sometime to download
+        Thread.sleep(5000);
+
+        // delete if already present
+        Path from = Paths.get(Constants.DOWNLOAD_PATH + "query.csv");
+        Files.deleteIfExists(from);
+
         // click it
         driver.findElement(By.cssSelector("a[href='query.csv']")).click();
 
         // give it sometime to download
-        Thread.sleep(20000);
+        Thread.sleep(5000);
 
         // give it a good name
-        Path from = Paths.get(Constants.DOWNLOAD_PATH + "query.csv");
         Path to = Paths.get(Constants.MTM_PATH + dbId + ".txt");
         Files.move(from, to, StandardCopyOption.REPLACE_EXISTING);
     }
     
     public void doSearchBatch() {
 
-        List<String> dbIds = Benchmarks.get("casp_d229");
+        List<String> dbIds = Benchmarks.get("casp_d373");
 
         for (int i = 0; i < dbIds.size(); i++) {
             

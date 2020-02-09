@@ -4,6 +4,9 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.zip.GZIPInputStream;
@@ -19,8 +22,13 @@ import org.biojava.nbio.structure.io.LocalPDBDirectory.FetchBehavior;
 import org.biojava.nbio.structure.io.PDBFileReader;
 import org.biojava.nbio.structure.secstruc.SecStrucCalc;
 import org.biojava.nbio.structure.secstruc.SecStrucInfo;
+import org.postgresql.ds.PGSimpleDataSource;
 
 import edu.umkc.rupee.defs.DbType;
+import edu.umkc.rupee.tm.Kabsch;
+import edu.umkc.rupee.tm.TmAlign;
+import edu.umkc.rupee.tm.TmMode;
+import edu.umkc.rupee.tm.TmResults;
 
 public class Dump {
 
@@ -403,4 +411,61 @@ public class Dump {
             (Math.abs(coords[2][3]) < 0.01? 0.0 : coords[2][3])
         );           
     }
+
+    public static void checkResults() {
+
+        // iterate through the mtm results and find mismatches on scores
+        
+        PGSimpleDataSource ds = Db.getDataSource();
+
+        try {
+
+            Connection conn = ds.getConnection();
+            conn.setAutoCommit(false);
+
+            String command = "SELECT db_id_1, db_id_2, mtm_tm_score FROM mtm_result WHERE n <= 10";
+                
+            PreparedStatement stmt = conn.prepareCall(command);
+            
+            PDBFileReader reader = new PDBFileReader();
+            reader.setFetchBehavior(FetchBehavior.LOCAL_ONLY);
+
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+
+                String dbId1 = rs.getString("db_id_1");
+                String dbId2 = rs.getString("db_id_2");
+                double mtmScore = rs.getDouble("mtm_tm_score");
+                
+                String path = Constants.CASP_PATH + dbId1 + ".pdb";
+                FileInputStream queryFile = new FileInputStream(path);
+                Structure queryStructure = reader.getStructure(queryFile);
+                   
+                String targetFileName = DbType.CHAIN.getImportPath() + dbId2 + ".pdb.gz";
+                if (!Files.exists(Paths.get(targetFileName))) {
+                    continue;
+                }
+
+                FileInputStream targetFile = new FileInputStream(targetFileName);
+                GZIPInputStream targetFileGz = new GZIPInputStream(targetFile);
+                Structure targetStructure = reader.getStructure(targetFileGz);
+
+                Kabsch kabsch = new Kabsch();
+                TmAlign tm = new TmAlign(queryStructure, targetStructure, TmMode.REGULAR, kabsch);
+                TmResults results = tm.align();
+            
+                double diff = Math.abs(results.getTmScoreQ() - mtmScore);
+                if (diff > 0.001) {
+                    System.out.println(dbId1 + ", " + diff);
+                }
+            }
+        } 
+        catch (Exception e) {
+            System.out.println("an error occurred: " + e.getMessage());
+        }
+    }
+
+
+
+
 }
