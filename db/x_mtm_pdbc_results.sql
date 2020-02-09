@@ -3,7 +3,7 @@
 -- mTM does a better job of parsing therefore they will have some pdb entries that are missing from RUPEE.
 -- To be fair to mTM we need to take the matches they found and enter them into the alignment_scores table. 
 -- mTM should be awarded for good parsing rather than inadvertantly filtering out unmatched data. 
--- When correctly normalized, I have not found a case where their TM-align score does not match RUPEE so this should be safe. 
+-- When correctly normalized, I have not found a case where their TM-align score does not match RUPEE.
 
 TRUNCATE TABLE mtm_result;
 
