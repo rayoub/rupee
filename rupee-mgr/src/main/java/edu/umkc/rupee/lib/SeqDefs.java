@@ -52,9 +52,9 @@ public class SeqDefs {
     public static void printSeq(String seqName, Structure structure) throws Exception {
 
         // casp group 089 has submitted for all evaluation units
-        if (seqName.contains("TS089")) {
+        if (seqName.contains("TS498")) {
 
-            seqName = seqName.replace("TS089","");
+            seqName = seqName.replace("TS498","");
             StringBuilder builder = new StringBuilder();
             builder.append(">");
             builder.append(seqName);

@@ -509,12 +509,11 @@ public class Main {
             id = path.getFileName().toString().replace(".pdb","");
         }
 
-
         //*************************************************************
         //***  OUTPUT
         //*************************************************************
 
-        SearchType searchType = SearchType.FULL_LENGTH;
+        SearchType searchType = SearchType.CONTAINED_IN;
 
         boolean verbose = false; 
         boolean timing = false;
@@ -781,8 +780,7 @@ public class Main {
     }
 
     private static void option_d(CommandLine line) throws Exception {
-        
-        // get chain definitions
+    
         /*
         ChainDefs.printChains("/home/ayoub/git/rupee/data/pdb/pdb");
         ChainDefs.printChains("/home/ayoub/git/rupee/data/pdb/obsolete");
@@ -799,12 +797,12 @@ public class Main {
 
         /*
         // gather alignment scores for running results
-        AlignResults.alignRupeeResults("casp_d250", "casp_cath_v4_2_0", "all_aligned", DbType.CATH, 100);
-        AlignResults.alignRupeeResults("casp_d250", "casp_cath_v4_2_0", "top_aligned", DbType.CATH, 100);
         AlignResults.alignRupeeResults("casp_d250", "casp_chain_v01_01_2020", "all_aligned", DbType.CHAIN, 100);
         AlignResults.alignRupeeResults("casp_d250", "casp_chain_v01_01_2020", "top_aligned", DbType.CHAIN, 100);
         AlignResults.alignRupeeResults("casp_d250", "casp_scop_v1_73", "all_aligned", DbType.SCOP, 100);
         AlignResults.alignRupeeResults("casp_d250", "casp_scop_v1_73", "top_aligned", DbType.SCOP, 100);
+        AlignResults.alignRupeeResults("casp_d250", "casp_cath_v4_2_0", "all_aligned", DbType.CATH, 100);
+        AlignResults.alignRupeeResults("casp_d250", "casp_cath_v4_2_0", "top_aligned", DbType.CATH, 100);
         AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "all_aligned", DbType.SCOP, 100);
         AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "top_aligned", DbType.SCOP, 100);
 
