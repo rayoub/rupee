@@ -5,12 +5,12 @@ ver=$2
 dir=${bm}_${ver}
 
 for id in $(find ${dir} -name '*.txt' -printf '%f\n'); do
-    awk -v ver=${ver} -v id=${id%.txt} \
+    tail ${dir}/${id} -n+8 | awk -v ver=${ver} -v id=${id%.txt} \
         'BEGIN { 
             FS = "\n"; 
             RS = "Show related domains\n"; 
             OFS = "," 
         } 
-        { print ver, NR, id, $1 }' ${dir}/${id}
+        { print ver, NR, id, $1 }'
 done;
 

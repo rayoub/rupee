@@ -15,10 +15,22 @@ AS $$
 BEGIN
 
     RETURN QUERY
-    WITH results AS
+    WITH gen AS
     (
         SELECT
-            COUNT(*) OVER (PARTITION BY r.db_id_1) AS tot,
+            n.n,
+            b.db_id AS db_id_1
+        FROM
+            benchmark b
+            CROSS JOIN generate_series(1, p_limit) n
+        WHERE
+            b.name = 'casp_mtm_d246'
+        ORDER BY
+            b.db_id
+    ),
+    results AS
+    (
+        SELECT
             r.n,
             r.db_id_1,
             r.db_id_2,
@@ -39,51 +51,25 @@ BEGIN
                 AND s.version = p_version
         WHERE
             r.version = p_version 
-    ),
-    valid_results As
-    (
-        -- at least limit number of results
-        SELECT
-            r.db_id_1 AS db_id
-        FROM
-            results r
-        WHERE
-            r.n = 1 AND r.tot >= p_limit
-    ),
-    filtered_results AS
-    (
-        SELECT
-            r.n, 
-            r.db_id_1,
-            r.db_id_2,
-            r.mtm_rmsd,
-            r.mtm_tm_score,
-            r.tm_q_rmsd,
-            r.tm_q_tm_score,
-            r.tm_avg_rmsd,
-            r.tm_avg_tm_score
-        FROM 
-            results r
-            INNER JOIN valid_results v
-                ON v.db_id = r.db_id_1
-        WHERE
-            r.n <= p_limit
+            AND r.n <= p_limit
     )
     SELECT
-        r.n,
-        r.db_id_1,
+        g.n,
+        g.db_id_1,
         r.db_id_2,
         r.mtm_rmsd,
         r.mtm_tm_score,
         r.tm_q_rmsd,
-        r.tm_q_tm_score,
+        COALESCE(r.tm_q_tm_score,0) AS tm_q_tm_score,
         r.tm_avg_rmsd,
-        r.tm_avg_tm_score
+        COALESCE(r.tm_avg_tm_score,0) AS tm_avg_tm_score
     FROM 
-        filtered_results r
+        gen g
+        LEFT JOIN results r
+            ON r.db_id_1 = g.db_id_1 AND r.n = g.n
     ORDER BY
-        r.db_id_1,
-        r.n;
+        g.db_id_1,
+        g.n;
 
 END;
 $$LANGUAGE plpgsql;
