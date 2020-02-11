@@ -1,10 +1,13 @@
 
-WITH rupee_res_m AS
+-- this only looks at the top 1 for each query
+
+WITH 
+rupee_res_m AS
 (
     SELECT DISTINCT
         r.db_id_1 AS rm_db_id_1,
         first_value(r.db_id_2) OVER (PARTITION BY r.db_id_1 ORDER BY s.tm_q_tm_score DESC) AS rm_best_match,
-        first_value(s.tm_q_tm_score) OVER (PARTITION BY r.db_id_1 ORDER BY s.tm_q_tm_score DESC) AS rm_best_score
+        first_value(s.tm_q_tm_score) OVER (PARTITION BY r.db_id_1 ORDER BY s.tm_q_tm_score DESC)::REAL AS rm_best_score
     FROM
         rupee_result r
         INNER JOIN alignment_scores s
@@ -12,14 +15,14 @@ WITH rupee_res_m AS
             AND r.db_id_2 = s.db_id_2
             AND r.version = s.version
     WHERE
-        r.version = 'casp_chain_v06_26_2019'
+        r.version = 'casp_chain_v01_01_2020'
 ),
 rupee_res_c AS
 (
     SELECT DISTINCT
         r.db_id_1 AS rc_db_id_1,
         first_value(r.db_id_2) OVER (PARTITION BY r.db_id_1 ORDER BY s.tm_avg_tm_score DESC) AS rc_best_match,
-        first_value(s.tm_avg_tm_score) OVER (PARTITION BY r.db_id_1 ORDER BY s.tm_avg_tm_score DESC) AS rc_best_score
+        first_value(s.tm_avg_tm_score) OVER (PARTITION BY r.db_id_1 ORDER BY s.tm_avg_tm_score DESC)::REAL AS rc_best_score
     FROM
         rupee_result r
         INNER JOIN alignment_scores s
@@ -34,7 +37,7 @@ rupee_res_s AS
     SELECT DISTINCT
         r.db_id_1 AS rs_db_id_1,
         first_value(r.db_id_2) OVER (PARTITION BY r.db_id_1 ORDER BY s.tm_avg_tm_score DESC) AS rs_best_match,
-        first_value(s.tm_avg_tm_score) OVER (PARTITION BY r.db_id_1 ORDER BY s.tm_avg_tm_score DESC) AS rs_best_score
+        first_value(s.tm_avg_tm_score) OVER (PARTITION BY r.db_id_1 ORDER BY s.tm_avg_tm_score DESC)::REAL AS rs_best_score
     FROM
         rupee_result r
         INNER JOIN alignment_scores s
@@ -49,7 +52,7 @@ mtm_res AS
     SELECT DISTINCT
         m.db_id_1 AS m_db_id_1,
         first_value(m.db_id_2) OVER (PARTITION BY m.db_id_1 ORDER BY s.tm_q_tm_score DESC) AS m_best_match,
-        first_value(s.tm_q_tm_score) OVER (PARTITION BY m.db_id_1 ORDER BY s.tm_q_tm_score DESC) AS m_best_score
+        first_value(s.tm_q_tm_score) OVER (PARTITION BY m.db_id_1 ORDER BY s.tm_q_tm_score DESC)::REAL AS m_best_score
     FROM
         mtm_result m
         INNER JOIN alignment_scores s
@@ -57,14 +60,14 @@ mtm_res AS
             AND m.db_id_2 = s.db_id_2
             AND m.version = s.version
     WHERE
-        m.version = 'casp_chain_v06_26_2019'
+        m.version = 'casp_chain_v01_01_2020'
 ),
 cath_res AS
 (
     SELECT DISTINCT
         c.db_id_1 AS c_db_id_1,
         first_value(c.db_id_2) OVER (PARTITION BY c.db_id_1 ORDER BY s.tm_avg_tm_score DESC) AS c_best_match,
-        first_value(s.tm_avg_tm_score) OVER (PARTITION BY c.db_id_1 ORDER BY s.tm_avg_tm_score DESC) AS c_best_score
+        first_value(s.tm_avg_tm_score) OVER (PARTITION BY c.db_id_1 ORDER BY s.tm_avg_tm_score DESC)::REAL AS c_best_score
     FROM
         cathedral_result c
         INNER JOIN alignment_scores s
@@ -79,7 +82,7 @@ ssm_res AS
     SELECT DISTINCT
         r.db_id_1 AS s_db_id_1,
         first_value(r.db_id_2) OVER (PARTITION BY r.db_id_1 ORDER BY s.tm_avg_tm_score DESC) AS s_best_match,
-        first_value(s.tm_avg_tm_score) OVER (PARTITION BY r.db_id_1 ORDER BY s.tm_avg_tm_score DESC) AS s_best_score
+        first_value(s.tm_avg_tm_score) OVER (PARTITION BY r.db_id_1 ORDER BY s.tm_avg_tm_score DESC)::REAL AS s_best_score
     FROM
         ssm_result r
         INNER JOIN alignment_scores s
@@ -93,9 +96,9 @@ comps AS
 (
     SELECT
         rm.rm_db_id_1 AS db_id_1,
-        rm.rm_best_score - m.m_best_score AS rm_diff,
-        rc.rc_best_score - c.c_best_score AS rc_diff,
-        rs.rs_best_score - s.s_best_score AS rs_diff,
+        (rm.rm_best_score - m.m_best_score)::REAL AS rm_diff,
+        (rc.rc_best_score - c.c_best_score)::REAL AS rc_diff,
+        (rs.rs_best_score - s.s_best_score)::REAL AS rs_diff,
         rm.rm_best_match,
         rm.rm_best_score,
         m.m_best_match,
@@ -126,11 +129,12 @@ SELECT
 FROM
     comps
 WHERE
-    db_id_1 IN (
-        'T0859-D1-BAKER-ROSETTASERVER',
-        'T0863-D1-Zhang-Server',
-        'T0900-D1-RaptorX',
-        'T0918-D1-BAKER-ROSETTASERVER'
-    )
+    1 = 1
+    AND rm_diff > 0.04
+    AND rc_diff > 0.04
+    AND rs_diff > 0.04
+
 ORDER BY
     db_id_1;
+
+
