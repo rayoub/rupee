@@ -17,7 +17,7 @@ BEGIN
     (
         SELECT
             COUNT(*) OVER (PARTITION BY r.db_id_1) AS tot,
-            r.n,
+            RANK(*) OVER (PARTITION BY r.db_id_1 ORDER BY s.tm_avg_tm_score DESC) AS n,
             r.db_id_1,
             r.db_id_2,
             s.tm_q_rmsd,
@@ -62,7 +62,7 @@ BEGIN
             r.n <= p_limit
     )
     SELECT
-        r.n,
+        r.n::INTEGER AS n,
         r.db_id_1,
         r.db_id_2,
         r.tm_q_rmsd,
