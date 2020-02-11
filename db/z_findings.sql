@@ -110,7 +110,8 @@ comps AS
         rs.rs_best_match,
         rs.rs_best_score,
         s.s_best_match,
-        s.s_best_score
+        s.s_best_score,
+        GREATEST(m.m_best_score, c.c_best_score, s.s_best_score) AS vs_best_score
     FROM
         rupee_res_m rm
         INNER JOIN rupee_res_c rc
@@ -133,7 +134,7 @@ WHERE
     AND rm_diff > 0.04
     AND rc_diff > 0.04
     AND rs_diff > 0.04
-
+    AND db_id_1 NOT IN ('T0960TS261-D2','T0963TS196-D2','T0980s1TS196-D1')
 ORDER BY
     db_id_1;
 
