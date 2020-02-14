@@ -1,7 +1,7 @@
 
 DO $$
 
-    DECLARE p_benchmark VARCHAR := 'casp_cathedral_d233'; 
+    DECLARE p_benchmark VARCHAR := 'casp_cathedral_d247'; 
     DECLARE p_version VARCHAR := 'casp_cath_v4_2_0'; -- casp_chain_v01_01_2020, casp_scop_v1_73, casp_cath_v4_2_0
     DECLARE p_limit INTEGER := 100; 
     DECLARE p_other VARCHAR := 'CATHEDRAL'; -- mTM, SSM, CATHEDRAL
