@@ -17,6 +17,7 @@ This excludes *d4pwvb_*, which is defined in SCOP 2.06 but not SCOP 2.07.
 #### scop_d360
 
 Subset of scop_d499 that includes all domains for which mTM returns greater than or equal to 100 SCOP 2.07 domain results. 
+In the PLOS ONE 2019 paper we eliminated 139 benchmark structures on behalf of mTM, which in retrospect, was unfair to RUPEE.
 
 #### scop_d204
 
@@ -30,6 +31,7 @@ In some cases, a domain may not have enough secondary structures for SSM to work
 #### scop_d62
 
 Subset of scop_d193 that includes all domains for which SSM returns greater than or equal to 50 results.
+In the PLOS ONE 2019 paper we eliminated 131 benchmark structures on behalf of SSM, which in retrospect, was unfair to RUPEE.
 
 ### CATH benchmarks
 
@@ -43,26 +45,20 @@ Subset of cath_d100 that includes all domains for which CATHEDRAL returns a resp
 
 ### CASP-derived benchmarks
 
-#### casp_d150
+#### casp_d250
 
-Consist of selected predictions for all 30 single-range evaluation units from CASP12 free-modeling targets (FM).
-Predictions were selected from the best per evaluation unit of the top 5 performers who submitted predictions for all regular targets. These top 5 groups are: BAKER-ROSETTASERVER, Zhang-Server, QUARK, RaptorX and MULTICOM-NOVEL. 
+Consist of all model 1 predictions submitted by 10 selected groups for all 25 single-range evaluation units for CASP13 free-modeling (FM) targets.
+The selected groups consist of the top 10 ranked groups by the Assessors' formula (GDT TS + QCS) applied to free-modeling targets.  
 
-#### casp_mtm_d144
+#### casp_mtm_d246
 
-Subset of casp_d150 that includes all domains for which mTM returns greater than or equal to 10 results. 
+Subset of casp_d250 that includes all domains for which mTM returned results. 
+For all benchmark structure, mTM returned 10 or more results. 
 
-#### casp_mtm_d34
+#### casp_cathedral_d247
 
-Subset of casp_mtm_d144 that includes all domains for which mTM returns greater than or equal to 100 results. 
-
-#### casp_cathedral_d149
-
-Subset of casp_d150 that includes all domains for which CATHEDRAL returns greater than or equal to 100 results. 
-
-#### casp_ssm_d149
-
-Subset of casp_d150 that includes all domains for which SSM returns greater than or equal to 100 results. 
+Subset of casp_d250 that includes all domains for which CATHEDRAL returned results.
+For all benchmark structure, CATHEDRAL returned 100 or more results. 
 
 
 
