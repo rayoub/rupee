@@ -50,15 +50,15 @@ ssm_plot_d250 <- get_scoring_plot(
         c(1, 100),
         c(1,10,20,30,40,50,60,70,80,90,100)
 )
-mtm_plot_d50 <- get_scoring_plot(
-        'vs. CATHEDRAL (casp_cathedral_d233)',
-        'scoring_at_cathedral_d233.txt',
+cathedral_plot_d247 <- get_scoring_plot(
+        'vs. CATHEDRAL (casp_cathedral_d247)',
+        'scoring_at_cathedral_d247.txt',
         c('RUPEE All-Aligned','RUPEE Top-Aligned','CATHEDRAL'), 
         c(1, 100),
         c(1,10,20,30,40,50,60,70,80,90,100)
 )
 
-combined <- grid_arrange_shared_legend(mtm_plot_d246, ssm_plot_d250, mtm_plot_d50)
+combined <- grid_arrange_shared_legend(mtm_plot_d246, ssm_plot_d250, cathedral_plot_d247)
 
 ggsave('combined_scoring_at.eps', plot = combined, width = 7.5, height = 2.25, dpi = 300)
 

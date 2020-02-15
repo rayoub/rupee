@@ -42,8 +42,8 @@ plot_1 <- get_scoring_plot(
         c(0.85, 1.00)
 )
 plot_2 <- get_scoring_plot(
-        'casp_d150 benchmark',
-        'scoring_rupee_casp_d150.txt',
+        'casp_d250 benchmark',
+        'scoring_rupee_casp_d250.txt',
         c(0.40, 0.55)
 )
 

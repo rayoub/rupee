@@ -1,7 +1,7 @@
 
 DO $$
 
-    DECLARE p_benchmark VARCHAR := 'casp_d150'; -- scop_d360, casp_d150
+    DECLARE p_benchmark VARCHAR := 'casp_d250'; -- scop_d360, casp_d250
     DECLARE p_version VARCHAR := 'casp_scop_v2_07'; -- scop_v2_07, casp_scop_v2_07
     DECLARE p_limit INTEGER := 100; 
 
