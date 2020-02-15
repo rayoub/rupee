@@ -513,7 +513,7 @@ public class Main {
         //***  OUTPUT
         //*************************************************************
 
-        SearchType searchType = SearchType.CONTAINED_IN;
+        SearchType searchType = SearchType.FULL_LENGTH;
 
         boolean verbose = false; 
         boolean timing = false;
@@ -799,6 +799,8 @@ public class Main {
         // gather alignment scores for running results
         AlignResults.alignRupeeResults("casp_d250", "casp_chain_v01_01_2020", "all_aligned", DbType.CHAIN, 100);
         AlignResults.alignRupeeResults("casp_d250", "casp_chain_v01_01_2020", "top_aligned", DbType.CHAIN, 100);
+        AlignResults.alignRupeeResults("casp_d250", "casp_scop_v2_07", "all_aligned", DbType.SCOP, 100);
+        AlignResults.alignRupeeResults("casp_d250", "casp_scop_v2_07", "top_aligned", DbType.SCOP, 100);
         AlignResults.alignRupeeResults("casp_d250", "casp_scop_v1_73", "all_aligned", DbType.SCOP, 100);
         AlignResults.alignRupeeResults("casp_d250", "casp_scop_v1_73", "top_aligned", DbType.SCOP, 100);
         AlignResults.alignRupeeResults("casp_d250", "casp_cath_v4_2_0", "all_aligned", DbType.CATH, 100);
