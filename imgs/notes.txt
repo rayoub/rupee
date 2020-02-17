@@ -1,9 +1,9 @@
--[ RECORD 1 ]-+----------------
+-[ RECORD 1 ]-+---------------- CONTAINED IN
 db_id_1       | T0960TS261-D2
 rm_diff       | 0.216117
 rc_diff       | 0.0714895
 rs_diff       | 0.141601
-rm_best_match | 5o8oA
+rm_best_match | 5o8oA *
 rm_best_score | 0.676317
 m_best_match  | 6cl6D
 m_best_score  | 0.4602
@@ -16,7 +16,7 @@ rs_best_score | 0.491168
 s_best_match  | d1ioxa_
 s_best_score  | 0.349567
 vs_best_score | 0.4602
--[ RECORD 2 ]-+----------------
+-[ RECORD 2 ]-+---------------- FULL LENGTH
 db_id_1       | T0960TS354-D2
 rm_diff       | 0.102594
 rc_diff       | 0.0428074
@@ -27,19 +27,19 @@ m_best_match  | 4xzzA
 m_best_score  | 0.5142
 rc_best_match | 2lyxA00
 rc_best_score | 0.532396
-c_best_match  | 3n5bB01
+c_best_match  | 3n5bB01 *
 c_best_score  | 0.489589
 rs_best_match | d2h0ia2
 rs_best_score | 0.49479
 s_best_match  | d1omaa_
 s_best_score  | 0.306074
 vs_best_score | 0.5142
--[ RECORD 3 ]-+----------------
+-[ RECORD 3 ]-+---------------- CONTAINED IN
 db_id_1       | T0963TS196-D2
 rm_diff       | 0.311455
 rc_diff       | 0.0558896
 rs_diff       | 0.277853
-rm_best_match | 2ffsB
+rm_best_match | 2ffsB *
 rm_best_score | 0.768455
 m_best_match  | 4m1zB
 m_best_score  | 0.457
@@ -52,12 +52,12 @@ rs_best_score | 0.584223
 s_best_match  | d1mkga_
 s_best_score  | 0.30637
 vs_best_score | 0.524785
--[ RECORD 4 ]-+----------------
-db_id_1       | T0980s1TS196-D1
+-[ RECORD 4 ]-+---------------- CONTAINED IN
+db_id_1       | T0980s1TS196-D1 
 rm_diff       | 0.224162
 rc_diff       | 0.0905256
 rs_diff       | 0.120578
-rm_best_match | 5o8kA
+rm_best_match | 5o8kA * 
 rm_best_score | 0.641062
 m_best_match  | 5vitE
 m_best_score  | 0.4169
@@ -70,7 +70,7 @@ rs_best_score | 0.478592
 s_best_match  | d1f7la_
 s_best_score  | 0.358013
 vs_best_score | 0.4169
--[ RECORD 5 ]-+----------------
+-[ RECORD 5 ]-+---------------- FULL LENGTH
 db_id_1       | T0990TS197-D1
 rm_diff       | 0.101715
 rc_diff       | 0.0802273
@@ -79,7 +79,7 @@ rm_best_match | 4qfnB
 rm_best_score | 0.600315
 m_best_match  | 4wj0A
 m_best_score  | 0.4986
-rc_best_match | 3qwoC00
+rc_best_match | 3qwoC00 *
 rc_best_score | 0.551925
 c_best_match  | 2ahmA00
 c_best_score  | 0.471698
