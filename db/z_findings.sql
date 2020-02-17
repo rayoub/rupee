@@ -131,10 +131,10 @@ FROM
     comps
 WHERE
     1 = 1
-    AND rm_diff > 0.04
-    AND rc_diff > 0.04
-    AND rs_diff > 0.04
-    AND db_id_1 IN ('T0960TS261-D2','T0963TS196-D2','T0980s1TS196-D1','T0990TS197-D1','T0960TS354-D2')
+    AND rm_diff > 0.05
+    AND rc_diff > 0.05
+    AND rs_diff > 0.05
+--    AND db_id_1 IN ('T0960TS261-D2','T0963TS196-D2','T0980s1TS196-D1','T0990TS197-D1','T0960TS354-D2')
 ORDER BY
     db_id_1;
 
