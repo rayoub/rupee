@@ -1,5 +1,5 @@
 
--[ RECORD 2 ]-+---------------- FULL LENGTH
+-[ RECORD 1 ]-+---------------- FULL LENGTH
 db_id_1       | T0960TS354-D2
 rm_diff       | 0.102594
 rc_diff       | 0.0428074
@@ -23,31 +23,8 @@ TM-score= 0.53837 (if normalized by length of Chain_1)
 TM-score= 0.52653 (if normalized by length of Chain_2)
 TM-score= 0.53240 (if normalized by average length of chains)
 
--[ RECORD 3 ]-+---------------- CONTAINED IN
-db_id_1       | T0963TS196-D2
-rm_diff       | 0.311455
-rc_diff       | 0.0558896
-rs_diff       | 0.277853
-rm_best_match | 2ffsB *
-rm_best_score | 0.768455
-m_best_match  | 4m1zB
-m_best_score  | 0.457
-rc_best_match | 2ffsA00
-rc_best_score | 0.580675
-c_best_match  | 3pqhA01
-c_best_score  | 0.524785
-rs_best_match | d2ffsb1
-rs_best_score | 0.584223
-s_best_match  | d1mkga_
-s_best_score  | 0.30637
-vs_best_score | 0.524785
 
-Aligned length= 74, RMSD=   1.70, Seq_ID=n_identical/n_aligned= 0.122
-TM-score= 0.76845 (if normalized by length of Chain_1)
-TM-score= 0.47083 (if normalized by length of Chain_2)
-TM-score= 0.58422 (if normalized by average length of chains)
-
--[ RECORD 4 ]-+---------------- CONTAINED IN
+-[ RECORD 2 ]-+---------------- CONTAINED IN
 db_id_1       | T0980s1TS196-D1 
 rm_diff       | 0.224162
 rc_diff       | 0.0905256
@@ -71,7 +48,7 @@ TM-score= 0.64106 (if normalized by length of Chain_1)
 TM-score= 0.38596 (if normalized by length of Chain_2)
 TM-score= 0.48164 (if normalized by average length of chains)
 
--[ RECORD 5 ]-+---------------- FULL LENGTH
+-[ RECORD 3 ]-+---------------- FULL LENGTH
 db_id_1       | T0990TS197-D1
 rm_diff       | 0.101715
 rc_diff       | 0.0802273
@@ -94,6 +71,34 @@ Aligned length= 48, RMSD=   2.18, Seq_ID=n_identical/n_aligned= 0.104
 TM-score= 0.48779 (if normalized by length of Chain_1)
 TM-score= 0.63160 (if normalized by length of Chain_2)
 TM-score= 0.55193 (if normalized by average length of chains)
+
+-[ RECORD 4 ]-+---------------- CONTAINED IN
+db_id_1       | T1000TS145-D2
+rm_diff       | 0.308735
+rc_diff       | 0.0609378
+rs_diff       | 0.0566447
+rm_best_match | 6u7lA *
+rm_best_score | 0.737835
+m_best_match  | 2g25A
+m_best_score  | 0.4291
+rc_best_match | 5lqdA02
+rc_best_score | 0.435242
+c_best_match  | 1f0kA01
+c_best_score  | 0.374304
+rs_best_match | d1xnja3
+rs_best_score | 0.3876
+s_best_match  | d1thta_
+s_best_score  | 0.330955
+vs_best_score | 0.4291
+
+Aligned length= 359, RMSD=   3.15, Seq_ID=n_identical/n_aligned= 0.894
+TM-score= 0.73784 (if normalized by length of Chain_1)
+TM-score= 0.70903 (if normalized by length of Chain_2)
+TM-score= 0.72313 (if normalized by average length of chains)
+
+
+
+
 
 
 
