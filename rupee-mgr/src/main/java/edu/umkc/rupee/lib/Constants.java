@@ -49,7 +49,7 @@ public class Constants {
     public final static int DEC_POW_6 = DEC_POW_1 * DEC_POW_5;
 
     public final static int IMPORT_SPLIT_COUNT = 8;
-    public final static int SEARCH_SPLIT_COUNT = 4;
+    public final static int SEARCH_SPLIT_COUNT = 8;
     public final static int PROCESSED_INCREMENT = 500;
 
     public final static int FETCH_SIZE = 1000;
