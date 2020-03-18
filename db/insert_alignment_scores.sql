@@ -26,19 +26,17 @@ BEGIN
         version,
         db_id_1,
         db_id_2,
-        tm_q_rmsd,
         tm_q_tm_score,
-        tm_avg_rmsd,
-        tm_avg_tm_score
+        tm_avg_tm_score,
+        tm_rmsd
     )
     SELECT
         version,
         db_id_1,
         db_id_2,
-        tm_q_rmsd,
         tm_q_tm_score,
-        tm_avg_rmsd,
-        tm_avg_tm_score
+        tm_avg_tm_score,
+        tm_rmsd
     FROM
         UNNEST(p_tab) s
         LEFT JOIN ids

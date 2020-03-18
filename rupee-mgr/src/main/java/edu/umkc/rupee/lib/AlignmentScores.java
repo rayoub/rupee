@@ -12,10 +12,9 @@ public class AlignmentScores extends PGobject {
     private String version;
     private String dbId1;
     private String dbId2;
-    private double tmQRmsd = 0.0;
     private double tmQTmScore = -1.0;
-    private double tmAvgRmsd = 0.0;
     private double tmAvgTmScore = -1.0;
+    private double tmRmsd = 0.0;
 
     public AlignmentScores() { }
 
@@ -24,10 +23,9 @@ public class AlignmentScores extends PGobject {
         this.version = rs.getString("version"); 
         this.dbId1 = rs.getString("db_id_1");
         this.dbId2 = rs.getString("db_id_2");
-        this.tmQRmsd = rs.getDouble("tm_q_rmsd");
         this.tmQTmScore = rs.getDouble("tm_q_tm_score");
-        this.tmAvgRmsd = rs.getDouble("tm_avg_rmsd");
         this.tmAvgTmScore = rs.getDouble("tm_avg_tm_score");
+        this.tmRmsd = rs.getDouble("tm_rmsd");
     }
 
     public String getVersion() {
@@ -54,28 +52,12 @@ public class AlignmentScores extends PGobject {
         this.dbId2 = dbId2;
     }
 
-    public double getTmQRmsd() {
-        return tmQRmsd;
-    }
-
-    public void setTmQRmsd(double tmRmsd) {
-        this.tmQRmsd = tmRmsd;
-    }
-
     public double getTmQTmScore() {
         return tmQTmScore;
     }
 
     public void setTmQTmScore(double tmTmScore) {
         this.tmQTmScore = tmTmScore;
-    }
-
-    public double getTmAvgRmsd() {
-        return tmAvgRmsd;
-    }
-
-    public void setTmAvgRmsd(double tmAvgRmsd) {
-        this.tmAvgRmsd = tmAvgRmsd;
     }
 
     public double getTmAvgTmScore() {
@@ -86,16 +68,24 @@ public class AlignmentScores extends PGobject {
         this.tmAvgTmScore = tmAvgTmScore;
     }
 
+    public double getTmRmsd() {
+        return tmRmsd;
+    }
+
+    public void setTmRmsd(double tmRmsd) {
+        this.tmRmsd = tmRmsd;
+    }
+
     public double getRmsd(AlignmentType align) {
 
         double rmsd = 0.0;
 
         switch (align) {
             case TM_Q_ALIGN:
-                rmsd = this.tmQRmsd;
+                rmsd = this.tmRmsd;
                 break;
             case TM_AVG_ALIGN:
-                rmsd = this.tmAvgRmsd;
+                rmsd = this.tmRmsd;
                 break;
             default:
                 rmsd = 0.0;
@@ -127,8 +117,8 @@ public class AlignmentScores extends PGobject {
         String row = "(" 
             + version + ","
             + dbId1 + "," + dbId2 + ","
-            + tmQRmsd + "," + tmQTmScore + ","
-            + tmAvgRmsd + "," + tmAvgTmScore
+            + tmQTmScore + "," + tmAvgTmScore + ","
+            + tmRmsd 
             + ")";
         return row;
     }

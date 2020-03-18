@@ -6,10 +6,9 @@ RETURNS TABLE (
     db_id_2 VARCHAR,
     rupee_rmsd NUMERIC,
     rupee_tm_score NUMERIC,
-    tm_q_rmsd NUMERIC,
     tm_q_tm_score NUMERIC,
-    tm_avg_rmsd NUMERIC,
-    tm_avg_tm_score NUMERIC
+    tm_avg_tm_score NUMERIC,
+    tm_rmsd NUMERIC
 )
 AS $$
 BEGIN
@@ -24,10 +23,9 @@ BEGIN
             r.db_id_2,
             r.rupee_rmsd,
             r.rupee_tm_score,
-            s.tm_q_rmsd,
             s.tm_q_tm_score,
-            s.tm_avg_rmsd,
-            s.tm_avg_tm_score
+            s.tm_avg_tm_score,
+            s.tm_rmsd
         FROM
             rupee_result r
             INNER JOIN benchmark b
@@ -59,10 +57,9 @@ BEGIN
             r.db_id_2,
             r.rupee_rmsd,
             r.rupee_tm_score,
-            r.tm_q_rmsd,
             r.tm_q_tm_score,
-            r.tm_avg_rmsd,
-            r.tm_avg_tm_score
+            r.tm_avg_tm_score,
+            r.tm_rmsd
         FROM 
             results r
             INNER JOIN valid_results v
@@ -76,10 +73,9 @@ BEGIN
         r.db_id_2,
         r.rupee_rmsd,
         r.rupee_tm_score,
-        r.tm_q_rmsd,
         r.tm_q_tm_score,
-        r.tm_avg_rmsd,
-        r.tm_avg_tm_score
+        r.tm_avg_tm_score,
+        r.tm_rmsd
     FROM 
         filtered_results r
     ORDER BY

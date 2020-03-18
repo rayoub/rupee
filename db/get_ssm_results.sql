@@ -4,10 +4,9 @@ RETURNS TABLE (
     n INTEGER, 
     db_id_1 VARCHAR,
     db_id_2 VARCHAR,
-    tm_q_rmsd NUMERIC,
     tm_q_tm_score NUMERIC,
-    tm_avg_rmsd NUMERIC,
-    tm_avg_tm_score NUMERIC
+    tm_avg_tm_score NUMERIC,
+    tm_rmsd NUMERIC
 )
 AS $$
 BEGIN
@@ -20,10 +19,9 @@ BEGIN
             RANK(*) OVER (PARTITION BY r.db_id_1 ORDER BY s.tm_avg_tm_score DESC) AS n,
             r.db_id_1,
             r.db_id_2,
-            s.tm_q_rmsd,
             s.tm_q_tm_score,
-            s.tm_avg_rmsd,
-            s.tm_avg_tm_score
+            s.tm_avg_tm_score,
+            s.tm_rmsd
         FROM
             ssm_result r
             INNER JOIN benchmark b
@@ -50,10 +48,9 @@ BEGIN
             r.n,
             r.db_id_1,
             r.db_id_2,
-            r.tm_q_rmsd,
             r.tm_q_tm_score,
-            r.tm_avg_rmsd,
-            r.tm_avg_tm_score
+            r.tm_avg_tm_score,
+            r.tm_rmsd
         FROM
             results r
             INNER JOIN valid_results v
@@ -65,10 +62,9 @@ BEGIN
         r.n::INTEGER,
         r.db_id_1,
         r.db_id_2,
-        r.tm_q_rmsd,
         r.tm_q_tm_score,
-        r.tm_avg_rmsd,
-        r.tm_avg_tm_score
+        r.tm_avg_tm_score,
+        r.tm_rmsd
     FROM 
         filtered_results r
     ORDER BY

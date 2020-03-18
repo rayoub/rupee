@@ -9,7 +9,7 @@ TRUNCATE TABLE mtm_result;
 
 COPY mtm_result (version, n, db_id_1, db_id_2, mtm_rmsd, mtm_tm_score) FROM '/home/ayoub/git/rupee/results/mtm/mtm_results.txt' WITH (DELIMITER ',');
 
-INSERT INTO alignment_scores (version, db_id_1, db_id_2, tm_q_rmsd, tm_q_tm_score)
+INSERT INTO alignment_scores (version, db_id_1, db_id_2, tm_q_tm_score, tm_rmsd)
 WITH filtered AS
 (
     SELECT
@@ -28,8 +28,8 @@ SELECT
     version,
     db_id_1,
     db_id_2,
-    mtm_rmsd,
-    mtm_tm_score
+    mtm_tm_score,
+    mtm_rmsd
 FROM
     filtered;
 

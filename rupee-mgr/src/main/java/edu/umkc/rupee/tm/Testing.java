@@ -16,7 +16,6 @@ public class Testing {
 
             TmResults results = Aligning.tmAlign(s.getDbId1(), s.getDbId2(), TmMode.REGULAR);
 
-            test(s, s.getTmAvgRmsd(), results.getRmsd());
             test(s, s.getTmAvgTmScore(), results.getTmScoreAvg());
             test(s, s.getTmQTmScore(), results.getTmScoreQ());
         });

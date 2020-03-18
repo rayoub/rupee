@@ -6,10 +6,9 @@ RETURNS TABLE (
     db_id_2 VARCHAR,
     mtm_rmsd NUMERIC,
     mtm_tm_score NUMERIC,
-    tm_q_rmsd NUMERIC,
     tm_q_tm_score NUMERIC,
-    tm_avg_rmsd NUMERIC,
-    tm_avg_tm_score NUMERIC
+    tm_avg_tm_score NUMERIC,
+    tm_rmsd NUMERIC
 )
 AS $$
 BEGIN
@@ -36,10 +35,9 @@ BEGIN
             r.db_id_2,
             r.mtm_rmsd,
             r.mtm_tm_score,
-            s.tm_q_rmsd,
             s.tm_q_tm_score,
-            s.tm_avg_rmsd,
-            s.tm_avg_tm_score
+            s.tm_avg_tm_score,
+            s.tm_rmsd
         FROM
             mtm_result r
             INNER JOIN benchmark b
@@ -59,10 +57,9 @@ BEGIN
         r.db_id_2,
         r.mtm_rmsd,
         r.mtm_tm_score,
-        r.tm_q_rmsd,
         COALESCE(r.tm_q_tm_score,0) AS tm_q_tm_score,
-        r.tm_avg_rmsd,
-        COALESCE(r.tm_avg_tm_score,0) AS tm_avg_tm_score
+        COALESCE(r.tm_avg_tm_score,0) AS tm_avg_tm_score,
+        r.tm_rmsd
     FROM 
         gen g
         LEFT JOIN results r
