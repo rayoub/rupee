@@ -15,6 +15,7 @@ import org.biojava.nbio.structure.Group;
 import org.biojava.nbio.structure.Structure;
 
 import edu.umkc.rupee.defs.SearchType;
+import edu.umkc.rupee.lib.QScore;
 
 public class TmAlign {
 
@@ -378,7 +379,7 @@ public class TmAlign {
         rmsd = Math.sqrt(rmsd / (double) align_len);
 
         // Q-score compatible with SSM
-        double qScore = Math.pow(k, 2.0) / ((1 + Math.pow(rmsd/3.0, 2.0)) * _xlen * _ylen);
+        double qScore = QScore.getQScore(rmsd, _xlen, _ylen, align_len); 
 
         // ********************************************************************************* //
         // * Final TMscore *
