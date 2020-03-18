@@ -107,15 +107,13 @@ public class Calc {
      * @param atomSet2     atom array 2
      * @param len1         The full length of the protein supplying atomSet1
      * @param len2         The full length of the protein supplying atomSet2
-     * @param normalizeMin Whether to normalize by the
-     *                     <strong>minimum</strong>-length structure, that is,
-     *                     {@code min\{len1,len2\}}. If false, normalized by the
-     *                     {@code max\{len1,len2\}}).
+     * @param normalizeAvg Whether to normalize by the
+     *                     <strong>average</strong>-length of structures
      *
      * @return The TM-Score
      * @throws StructureException
      */
-    public static double getTMScore(Atom[] atomSet1, Atom[] atomSet2, int len1, int len2, boolean normalizeMin)
+    public static double getTMScore(Atom[] atomSet1, Atom[] atomSet2, int len1, int len2, boolean normalizeAvg)
             throws StructureException {
         if (atomSet1.length != atomSet2.length) {
             throw new StructureException("The two atom sets are not of same length!");
@@ -127,16 +125,16 @@ public class Calc {
             throw new StructureException("len2 must be greater or equal to the alignment length!");
         }
 
-        int Lnorm;
-        if (normalizeMin) {
-            Lnorm = Math.min(len1, len2);
+        double Lnorm;
+        if (normalizeAvg) {
+            Lnorm = ((double)len1 + len2) / 2.0;
         } else {
-            Lnorm = Math.max(len1, len2);
+            Lnorm = len1; // default to query protein 
         }
 
         int Laln = atomSet1.length;
 
-        double d0 = 1.24 * Math.cbrt(Lnorm - 15.) - 1.8;
+        double d0 = 1.24 * Math.cbrt(Lnorm - 15.0) - 1.8;
         double d0sq = d0 * d0;
 
         double sum = 0;

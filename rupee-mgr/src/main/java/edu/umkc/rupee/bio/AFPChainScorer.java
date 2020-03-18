@@ -32,11 +32,7 @@ import org.biojava.nbio.structure.geometry.SuperPositions;
 
 public class AFPChainScorer {
 
-    public static double getTMScore(AFPChain align, Atom[] ca1, Atom[] ca2) throws StructureException {
-        return getTMScore(align, ca1, ca2, true);
-    }
-
-    public static double getTMScore(AFPChain align, Atom[] ca1, Atom[] ca2, boolean normalizeMin)
+    public static double getTMScore(AFPChain align, Atom[] ca1, Atom[] ca2, boolean normalizeAvg)
             throws StructureException {
         if (align.getNrEQR() == 0)
             return -1;
@@ -67,6 +63,6 @@ public class AFPChainScorer {
 
         Calc.transform(ca2aligned, trans);
 
-        return Calc.getTMScore(ca1aligned, ca2aligned, ca1.length, ca2.length, normalizeMin);
+        return Calc.getTMScore(ca1aligned, ca2aligned, ca1.length, ca2.length, normalizeAvg);
     }
 }
