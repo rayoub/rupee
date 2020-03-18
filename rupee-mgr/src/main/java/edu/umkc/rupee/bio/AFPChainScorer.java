@@ -26,7 +26,6 @@ package edu.umkc.rupee.bio;
 import javax.vecmath.Matrix4d;
 
 import org.biojava.nbio.structure.Atom;
-import org.biojava.nbio.structure.Calc;
 import org.biojava.nbio.structure.StructureException;
 import org.biojava.nbio.structure.align.model.AFPChain;
 import org.biojava.nbio.structure.geometry.SuperPositions;

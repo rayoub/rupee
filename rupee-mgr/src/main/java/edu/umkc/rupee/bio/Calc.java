@@ -22,10 +22,59 @@
  */
 package edu.umkc.rupee.bio;
 
+import javax.vecmath.Matrix4d;
+import javax.vecmath.Point3d;
+
 import org.biojava.nbio.structure.Atom;
 import org.biojava.nbio.structure.StructureException;
 
 public class Calc {
+
+    /**
+     * Convert an array of atoms into an array of vecmath points
+     *
+     * @param atoms list of atoms
+     * @return list of Point3ds storing the x,y,z coordinates of each atom
+     */
+    public static Point3d[] atomsToPoints(Atom[] atoms) {
+        Point3d[] points = new Point3d[atoms.length];
+        for (int i = 0; i < atoms.length; i++) {
+            points[i] = atoms[i].getCoordsAsPoint3d();
+        }
+        return points;
+    }
+
+    /**
+         * Transform an array of atoms at once. The transformation Matrix must be a
+         * post-multiplication Matrix.
+         *
+         * @param ca
+         *            array of Atoms to shift
+         * @param t
+         *            transformation Matrix4d
+         */
+        public static void transform(Atom[] ca, Matrix4d t) {
+                for (Atom atom : ca)
+                        Calc.transform(atom, t);
+        }
+
+        /**
+         * Transforms an atom object, given a Matrix4d (i.e. the vecmath library
+         * double-precision 4x4 rotation+translation matrix). The transformation
+         * Matrix must be a post-multiplication Matrix.
+         *
+         * @param atom
+         * @param m
+         */
+        public static final void transform(Atom atom, Matrix4d m) {
+
+                Point3d p = new Point3d(atom.getX(), atom.getY(), atom.getZ());
+                m.transform(p);
+
+                atom.setX(p.x);
+                atom.setY(p.y);
+                atom.setZ(p.z);
+        }
 
     /**
      * calculate distance between two atoms.
