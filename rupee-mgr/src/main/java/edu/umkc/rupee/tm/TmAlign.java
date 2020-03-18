@@ -377,6 +377,9 @@ public class TmAlign {
         double rmsd = _kabsch.execute(_r1, _r2, align_len, 0, _t, _u); 
         rmsd = Math.sqrt(rmsd / (double) align_len);
 
+        // Q-score compatible with SSM
+        double qScore = Math.pow(k, 2.0) / ((1 + Math.pow(rmsd/3.0, 2.0)) * _xlen * _ylen);
+
         // ********************************************************************************* //
         // * Final TMscore *
         // ********************************************************************************* //
@@ -412,6 +415,7 @@ public class TmAlign {
         results.setTmScoreT(tmT);
         results.setTmScoreAvg(tmAvg);
         results.setRmsd(rmsd);
+        results.setQScore(qScore);
 
         if (this._mode == TmMode.ALIGN_TEXT) {
 

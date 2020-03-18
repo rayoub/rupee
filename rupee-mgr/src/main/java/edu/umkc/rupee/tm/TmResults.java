@@ -9,6 +9,7 @@ public class TmResults {
     private double tmScoreT;
     private double tmScoreAvg;
     private double rmsd;
+    private double qScore;
     private String output;
 
     public int getChainLength1() {
@@ -65,6 +66,14 @@ public class TmResults {
 
     public void setRmsd(double rmsd) {
         this.rmsd = rmsd;
+    }
+
+    public double getQScore() {
+        return qScore;
+    }
+
+    public void setQScore(double qScore) {
+        this.qScore = qScore;
     }
 
     public String getOutput() {
