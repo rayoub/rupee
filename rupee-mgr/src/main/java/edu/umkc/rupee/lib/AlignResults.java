@@ -2,6 +2,8 @@ package edu.umkc.rupee.lib;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -19,6 +21,7 @@ import org.biojava.nbio.structure.io.LocalPDBDirectory.FetchBehavior;
 import org.biojava.nbio.structure.io.PDBFileReader;
 import org.postgresql.ds.PGSimpleDataSource;
 
+import edu.umkc.rupee.defs.AlignmentType;
 import edu.umkc.rupee.defs.DbType;
 import edu.umkc.rupee.tm.Kabsch;
 import edu.umkc.rupee.tm.TmAlign;
@@ -47,7 +50,7 @@ public class AlignResults
 
         List<String> dbIds = Benchmarks.get(benchmark);
             
-        String command = "SELECT db_id_2 FROM mtm_result_matched WHERE version = ? AND db_id_1 = ? AND n <= ? ORDER BY n;";
+        String command = "SELECT db_id_2 FROM mtm_result WHERE version = ? AND db_id_1 = ? AND n <= ? ORDER BY n;";
 
         counter.set(0);
         dbIds.parallelStream().forEach(dbId -> alignResults(command, version, "", dbType, dbId, maxN));
@@ -125,7 +128,11 @@ public class AlignResults
             
                 if (!map.containsKey(dbId2)) {
 
-                    FileInputStream targetFile = new FileInputStream(dbType.getImportPath() + dbId2 + ".pdb.gz");
+                    String path = dbType.getImportPath() + dbId2 + ".pdb.gz";
+                    if (!Files.exists(Paths.get(path))) {
+                        continue;
+                    }
+                    FileInputStream targetFile = new FileInputStream(path);
                     GZIPInputStream targetFileGz = new GZIPInputStream(targetFile);
                     Structure targetStructure = reader.getStructure(targetFileGz);
                     
@@ -144,9 +151,33 @@ public class AlignResults
                         score.setTmQTmScore(results.getTmScoreQ());
                         score.setTmAvgTmScore(results.getTmScoreAvg());
                         score.setTmRmsd(results.getRmsd());
+                        score.setTmQScore(results.getQScore());
                     }
                     catch (RuntimeException e) {
-                        System.out.println("error comparing: " + dbId + ", " + dbId2);
+                        System.out.println("TM-align error comparing: " + dbId + ", " + dbId2);
+                        System.out.println(e.getMessage());
+                    }
+
+                    // perform CE alignments
+                    try {
+
+                        AlignRecord result = Aligning.align(queryStructure, targetStructure, AlignmentType.CE);
+                        score.setCeRmsd(result.afps.getTotalRmsdOpt());
+                    }
+                    catch (Exception e) {
+                        System.out.println("CE error comparing: " + dbId + ", " + dbId2);
+                        System.out.println(e.getMessage());
+                    }
+                    
+                    // perform FATCAT RIGID alignments
+                    try {
+
+                        AlignRecord result = Aligning.align(queryStructure, targetStructure, AlignmentType.FATCAT_RIGID);
+                        score.setFatcatRigidRmsd(result.afps.getTotalRmsdOpt());
+                    }
+                    catch (Exception e) {
+                        System.out.println("FATCAT RIGID error comparing: " + dbId + ", " + dbId2);
+                        System.out.println(e.getMessage());
                     }
 
                     scores.add(score);

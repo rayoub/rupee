@@ -14,7 +14,11 @@ public class AlignmentScores extends PGobject {
     private String dbId2;
     private double tmQTmScore = -1.0;
     private double tmAvgTmScore = -1.0;
-    private double tmRmsd = 0.0;
+    private double tmRmsd = -1.0;
+    private double tmQScore = -1.0;
+    private double ceRmsd = -1.0;
+    private double fatcatRigidRmsd = -1.0;
+    private double cathSsap = -1.0;
 
     public AlignmentScores() { }
 
@@ -26,6 +30,10 @@ public class AlignmentScores extends PGobject {
         this.tmQTmScore = rs.getDouble("tm_q_tm_score");
         this.tmAvgTmScore = rs.getDouble("tm_avg_tm_score");
         this.tmRmsd = rs.getDouble("tm_rmsd");
+        this.tmQScore = rs.getDouble("tm_q_score");
+        this.ceRmsd = rs.getDouble("ce_rmsd");
+        this.fatcatRigidRmsd = rs.getDouble("fatcat_rigid_rmsd");
+        this.cathSsap = rs.getDouble("cath_ssap");
     }
 
     public String getVersion() {
@@ -76,6 +84,38 @@ public class AlignmentScores extends PGobject {
         this.tmRmsd = tmRmsd;
     }
 
+    public double getTmQScore() {
+        return tmQScore;
+    }
+
+    public void setTmQScore(double tmQScore) {
+        this.tmQScore = tmQScore;
+    }
+
+    public double getCeRmsd() {
+        return ceRmsd;
+    }
+
+    public void setCeRmsd(double ceRmsd) {
+        this.ceRmsd = ceRmsd;
+    }
+
+    public double getFatcatRigidRmsd() {
+        return fatcatRigidRmsd;
+    }
+
+    public void setFatcatRigidRmsd(double fatcatRigidRmsd) {
+        this.fatcatRigidRmsd = fatcatRigidRmsd;
+    }
+
+    public double getCathSsap() {
+        return cathSsap;
+    }
+
+    public void setCathSsap(double cathSsap) {
+        this.cathSsap = cathSsap;
+    }
+
     public double getRmsd(AlignmentType align) {
 
         double rmsd = 0.0;
@@ -118,7 +158,9 @@ public class AlignmentScores extends PGobject {
             + version + ","
             + dbId1 + "," + dbId2 + ","
             + tmQTmScore + "," + tmAvgTmScore + ","
-            + tmRmsd 
+            + tmRmsd + "," + tmQScore + ","
+            + ceRmsd + "," + fatcatRigidRmsd + ","
+            + cathSsap 
             + ")";
         return row;
     }
