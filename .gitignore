@@ -62,3 +62,6 @@ rupee-mgr/.classpath
 rupee-mgr/.project
 rupee-mgr/.gitignore
 
+# ssap
+results/ssap/cath-ssap
+
