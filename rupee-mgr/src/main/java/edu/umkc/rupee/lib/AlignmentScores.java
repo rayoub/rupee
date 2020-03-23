@@ -18,7 +18,7 @@ public class AlignmentScores extends PGobject {
     private double tmQScore = -1.0;
     private double ceRmsd = -1.0;
     private double fatcatRigidRmsd = -1.0;
-    private double cathSsap = -1.0;
+    private double ssapScore = -1.0;
 
     public AlignmentScores() { }
 
@@ -33,7 +33,7 @@ public class AlignmentScores extends PGobject {
         this.tmQScore = rs.getDouble("tm_q_score");
         this.ceRmsd = rs.getDouble("ce_rmsd");
         this.fatcatRigidRmsd = rs.getDouble("fatcat_rigid_rmsd");
-        this.cathSsap = rs.getDouble("cath_ssap");
+        this.ssapScore = rs.getDouble("ssap_score");
     }
 
     public String getVersion() {
@@ -108,12 +108,12 @@ public class AlignmentScores extends PGobject {
         this.fatcatRigidRmsd = fatcatRigidRmsd;
     }
 
-    public double getCathSsap() {
-        return cathSsap;
+    public double getSsapScore() {
+        return ssapScore;
     }
 
-    public void setCathSsap(double cathSsap) {
-        this.cathSsap = cathSsap;
+    public void setSsapScore(double cathSsap) {
+        this.ssapScore = cathSsap;
     }
 
     public double getRmsd(AlignmentType align) {
@@ -160,7 +160,7 @@ public class AlignmentScores extends PGobject {
             + tmQTmScore + "," + tmAvgTmScore + ","
             + tmRmsd + "," + tmQScore + ","
             + ceRmsd + "," + fatcatRigidRmsd + ","
-            + cathSsap 
+            + ssapScore 
             + ")";
         return row;
     }
