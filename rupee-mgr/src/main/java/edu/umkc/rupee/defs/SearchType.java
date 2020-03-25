@@ -4,7 +4,8 @@ public enum SearchType {
 
     FULL_LENGTH(1, "Full-Length"),
     CONTAINED_IN(2, "Contained In"),
-    CONTAINS(3, "Contains");
+    CONTAINS(3, "Contains"),
+    RMSD(4, "RMSD");
 
     private int id;
     private String name;
@@ -29,8 +30,11 @@ public enum SearchType {
         else if (id == CONTAINED_IN.getId()) {
             return CONTAINED_IN;
         }
-        else {
+        else if (id == CONTAINS.getId()) {
             return CONTAINS;
+        }
+        else {
+            return RMSD;
         }
     }
 }

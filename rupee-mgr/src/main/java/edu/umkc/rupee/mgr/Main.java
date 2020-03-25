@@ -109,7 +109,7 @@ public class Main {
         group.addOption(Option.builder("s")
                 .longOpt("search")
                 .numberOfArgs(12)
-                .argName("SEARCH_BY>,<DB_TYPE>,<DB_ID>,<LIMIT>,<REP1>,<REP2>,<REP3>,<DIFF1>,<DIFF2>,<DIFF3>,<SEARCH_MODE>,<SORT_BY")
+                .argName("SEARCH_BY>,<DB_TYPE>,<DB_ID>,<LIMIT>,<REP1>,<REP2>,<REP3>,<DIFF1>,<DIFF2>,<DIFF3>,<SEARCH_MODE>,<SEARCH_TYPE")
                 .valueSeparator(',')
                 .build());
         group.addOption(Option.builder("u")
@@ -237,6 +237,8 @@ public class Main {
 
     private static void option_a(CommandLine line) throws SQLException {
 
+        // only for aligning with CE and FATCAT from CLI
+        
         Set<String> alignNames = new HashSet<>(Arrays.stream(AlignmentType.values()).map(v -> v.name()).collect(Collectors.toList()));
         
         String[] args = line.getOptionValues("a");
@@ -407,11 +409,10 @@ public class Main {
         Set<String> searchByNames = new HashSet<>(Arrays.stream(SearchBy.values()).map(v -> v.name()).collect(Collectors.toList()));
         Set<String> dbTypeNames = new HashSet<>(Arrays.stream(DbType.values()).map(v -> v.name()).collect(Collectors.toList()));
         Set<String> searchModeNames = new HashSet<>(Arrays.stream(SearchMode.values()).map(v -> v.name()).collect(Collectors.toList()));
-        Set<String> sortByNames = new HashSet<>(Arrays.stream(SortBy.values()).map(v -> v.name()).collect(Collectors.toList()));
+        Set<String> searchTypeNames = new HashSet<>(Arrays.stream(SearchType.values()).map(v -> v.name()).collect(Collectors.toList()));
 
         String[] args = line.getOptionValues("s");
        
-        // types 
         if (!searchByNames.contains(args[0])) {
             System.err.println("The <SEARCH_BY> argument must be one of " + searchByNames.toString());
             return;
@@ -475,18 +476,25 @@ public class Main {
         }
 
         SearchMode searchMode = SearchMode.valueOf(args[10]);
-       
-        // sort by
-        if (!sortByNames.contains(args[11])) {
-            System.err.println("The <SORT_BY> argument must be one of " + sortByNames.toString());
+
+        // search type 
+        if (!searchTypeNames.contains(args[11])) {
+            System.err.println("The <SEARCH_TYPE> argument must be one of " + searchTypeNames.toString());
             return;
         }
 
-        SortBy sortBy = SortBy.valueOf(args[11]);
+        SearchType searchType = SearchType.valueOf(args[11]);
 
-        // consistency rule
+        // enforce assumptions
+        SortBy sortBy;
         if (searchMode == SearchMode.FAST) {
             sortBy = SortBy.SIMILARITY;
+        } 
+        else if (searchType == SearchType.RMSD) {
+            sortBy = SortBy.RMSD;
+        }
+        else {
+            sortBy = SortBy.TM_SCORE;
         }
         
         //*************************************************************
@@ -513,9 +521,6 @@ public class Main {
         //***  OUTPUT
         //*************************************************************
 
-        SearchType searchType = SearchType.FULL_LENGTH;
-
-        boolean verbose = false; 
         boolean timing = false;
 
         if (dbType == DbType.SCOP) { 
@@ -555,33 +560,16 @@ public class Main {
            
                 ScopSearchRecord record = (ScopSearchRecord) baseRecord;
 
-                if (verbose) {
-
-                    // verbose 
-                    System.out.printf("%-10d %-10s %-24s %-24s %-24s %-16s %-10.2f %-10.2f %-10.2f\n", 
-                        record.getN(),
-                        record.getDbId(),
-                        record.getCfDescription().substring(0,Math.min(record.getCfDescription().length(),23)),
-                        record.getSfDescription().substring(0,Math.min(record.getSfDescription().length(),23)),
-                        record.getFaDescription().substring(0,Math.min(record.getFaDescription().length(),23)),
-                        record.getCl() + "." + record.getCf() + "." + record.getSf() + "." + record.getFa(), 
-                        record.getSimilarity(),
-                        record.getRmsd(),
-                        record.getTmScore()
-                    );
-                }
-                else {
-           
-                    // gathering results
-                    System.out.printf("%d,%s,%s,%.4f,%.4f,%s\n",
-                        record.getN(),
-                        criteria.dbId,
-                        record.getDbId(),
-                        record.getRmsd(),
-                        record.getTmScore(),
-                        criteria.searchMode.name().toLowerCase()
-                    );
-                }
+                // gathering results
+                System.out.printf("%d,%s,%s,%.4f,%.4f,%s,%s\n",
+                    record.getN(),
+                    criteria.dbId,
+                    record.getDbId(),
+                    record.getRmsd(),
+                    record.getTmScore(),
+                    criteria.searchMode.name().toLowerCase(),
+                    criteria.searchType.name().toLowerCase()
+                );
             }
         }
         else if (dbType == DbType.CATH) {
@@ -624,34 +612,16 @@ public class Main {
              
                 CathSearchRecord record = (CathSearchRecord) baseRecord; 
 
-                if (verbose) {
-
-                    // verbose 
-                    System.out.printf("%-10d %-10s %-24s %-24s %-24s %-16s %-16s %-10.2f %-10.2f %-10.2f\n", 
-                        record.getN(),
-                        record.getDbId(),
-                        record.getADescription().substring(0,Math.min(record.getADescription().length(),23)),
-                        record.getTDescription().substring(0,Math.min(record.getTDescription().length(),23)),
-                        record.getHDescription().substring(0,Math.min(record.getHDescription().length(),23)),
-                        record.getC() + "." + record.getA() + "." + record.getT() + "." + record.getH(), 
-                        record.getS() + "." + record.getO() + "." + record.getL() + "." + record.getI() + "." + record.getD(),
-                        record.getSimilarity(),
-                        record.getRmsd(),
-                        record.getTmScore()
-                    );
-                }
-                else {
-           
-                    // gathering results
-                    System.out.printf("%d,%s,%s,%.4f,%.4f,%s\n",
-                        record.getN(),
-                        criteria.dbId,
-                        record.getDbId(),
-                        record.getRmsd(),
-                        record.getTmScore(),
-                        criteria.searchMode.name().toLowerCase()
-                    );
-                }
+                // gathering results
+                System.out.printf("%d,%s,%s,%.4f,%.4f,%s,%s\n",
+                    record.getN(),
+                    criteria.dbId,
+                    record.getDbId(),
+                    record.getRmsd(),
+                    record.getTmScore(),
+                    criteria.searchMode.name().toLowerCase(),
+                    criteria.searchType.name().toLowerCase()
+                );
             }
         }
         else if (dbType == DbType.ECOD) {
@@ -681,33 +651,16 @@ public class Main {
            
                 EcodSearchRecord record = (EcodSearchRecord) baseRecord;
 
-                if (verbose) {
-
-                    // verbose 
-                    System.out.printf("%-10d %-10s %-24s %-24s %-24s %-16s %-10.2f %-10.2f %-10.2f\n", 
-                        record.getN(),
-                        record.getDbId(),
-                        record.getHDescription().substring(0,Math.min(record.getHDescription().length(),23)),
-                        record.getTDescription().substring(0,Math.min(record.getTDescription().length(),23)),
-                        record.getFDescription().substring(0,Math.min(record.getFDescription().length(),23)),
-                        record.getX() + "." + record.getH() + "." + record.getT() + (record.getF().isEmpty()?"":".") + record.getF(), 
-                        record.getSimilarity(),
-                        record.getRmsd(),
-                        record.getTmScore()
-                    );
-                }
-                else {
-           
-                    // gathering results
-                    System.out.printf("%d,%s,%s,%.4f,%.4f,%s\n",
-                        record.getN(),
-                        criteria.dbId,
-                        record.getDbId(),
-                        record.getRmsd(),
-                        record.getTmScore(),
-                        criteria.searchMode.name().toLowerCase()
-                    );
-                }
+                // gathering results
+                System.out.printf("%d,%s,%s,%.4f,%.4f,%s,%s\n",
+                    record.getN(),
+                    criteria.dbId,
+                    record.getDbId(),
+                    record.getRmsd(),
+                    record.getTmScore(),
+                    criteria.searchMode.name().toLowerCase(),
+                    criteria.searchType.name().toLowerCase()
+                );
             }
         }
         else { // CHAIN
@@ -734,29 +687,16 @@ public class Main {
            
                 ChainSearchRecord record = (ChainSearchRecord) baseRecord;
 
-                if (verbose) {
-
-                    // verbose 
-                    System.out.printf("%-10d %-10s %-10.2f %-10.2f %-10.2f\n", 
-                        record.getN(),
-                        record.getDbId(),
-                        record.getSimilarity(),
-                        record.getRmsd(),
-                        record.getTmScore()
-                    );
-                }
-                else {
-           
-                    // gathering results
-                    System.out.printf("%d,%s,%s,%.4f,%.4f,%s\n",
-                        record.getN(),
-                        criteria.dbId,
-                        record.getDbId(),
-                        record.getRmsd(),
-                        record.getTmScore(),
-                        criteria.searchMode.name().toLowerCase()
-                    );
-                }
+                // gathering results
+                System.out.printf("%d,%s,%s,%.4f,%.4f,%s,%s\n",
+                    record.getN(),
+                    criteria.dbId,
+                    record.getDbId(),
+                    record.getRmsd(),
+                    record.getTmScore(),
+                    criteria.searchMode.name().toLowerCase(),
+                    criteria.searchType.name().toLowerCase()
+                );
             }
         }
     }
@@ -797,20 +737,17 @@ public class Main {
 
         /*
         // gather alignment scores for running results
-        AlignResults.alignRupeeResults("casp_d250", "casp_chain_v01_01_2020", "all_aligned", DbType.CHAIN, 100);
-        AlignResults.alignRupeeResults("casp_d250", "casp_chain_v01_01_2020", "top_aligned", DbType.CHAIN, 100);
-        AlignResults.alignRupeeResults("casp_d250", "casp_scop_v2_07", "all_aligned", DbType.SCOP, 100);
-        AlignResults.alignRupeeResults("casp_d250", "casp_scop_v2_07", "top_aligned", DbType.SCOP, 100);
-        AlignResults.alignRupeeResults("casp_d250", "casp_scop_v1_73", "all_aligned", DbType.SCOP, 100);
-        AlignResults.alignRupeeResults("casp_d250", "casp_scop_v1_73", "top_aligned", DbType.SCOP, 100);
-        AlignResults.alignRupeeResults("casp_d250", "casp_cath_v4_2_0", "all_aligned", DbType.CATH, 100);
-        AlignResults.alignRupeeResults("casp_d250", "casp_cath_v4_2_0", "top_aligned", DbType.CATH, 100);
-        AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "all_aligned", DbType.SCOP, 100);
-        AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", "top_aligned", DbType.SCOP, 100);
+        AlignResults.alignRupeeResults("casp_d250", "casp_chain_v01_01_2020", DbType.CHAIN, 100);
+        AlignResults.alignRupeeResults("casp_d250", "casp_scop_v2_07", DbType.SCOP, 100);
+        AlignResults.alignRupeeResults("casp_d250", "casp_scop_v1_73", DbType.SCOP, 100);
+        AlignResults.alignRupeeResults("casp_d250", "casp_cath_v4_2_0", DbType.CATH, 100);
+        AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", DbType.SCOP, 100);
 
         AlignResults.alignCathedralResults("casp_d250", "casp_cath_v4_2_0", DbType.CATH, 100);
         
         AlignResults.alignSsmResults("casp_d250", "casp_scop_v1_73", DbType.SCOP, 100);
+        
+        AlignResults.alignMtmResults("casp_d250", "casp_chain_v01_01_2020", DbType.CHAIN, 100);
         */
     }
 

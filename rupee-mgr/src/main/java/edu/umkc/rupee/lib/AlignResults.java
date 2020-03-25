@@ -36,14 +36,14 @@ public class AlignResults
         counter = new AtomicInteger();
     }
 
-    public static void alignRupeeResults(String benchmark, String version, String searchMode, DbType dbType, int maxN) {
+    public static void alignRupeeResults(String benchmark, String version, DbType dbType, int maxN) {
 
         List<String> dbIds = Benchmarks.get(benchmark);
             
-        String command = "SELECT db_id_2 FROM rupee_result WHERE version = ? AND search_mode = ? AND db_id_1 = ? AND n <= ? ORDER BY n;";
+        String command = "SELECT db_id_2 FROM rupee_result WHERE version = ? AND db_id_1 = ? AND n <= ? ORDER BY n;";
 
         counter.set(0);
-        dbIds.parallelStream().forEach(dbId -> alignResults(command, version, searchMode, dbType, dbId, maxN));
+        dbIds.parallelStream().forEach(dbId -> alignResults(command, version, dbType, dbId, maxN));
     }
 
     public static void alignMtmResults(String benchmark, String version, DbType dbType, int maxN) {
@@ -53,7 +53,7 @@ public class AlignResults
         String command = "SELECT db_id_2 FROM mtm_result WHERE version = ? AND db_id_1 = ? AND n <= ? ORDER BY n;";
 
         counter.set(0);
-        dbIds.parallelStream().forEach(dbId -> alignResults(command, version, "", dbType, dbId, maxN));
+        dbIds.parallelStream().forEach(dbId -> alignResults(command, version, dbType, dbId, maxN));
     }
 
     public static void alignCathedralResults(String benchmark, String version, DbType dbType, int maxN) {
@@ -63,7 +63,7 @@ public class AlignResults
         String command = "SELECT db_id_2 FROM cathedral_result WHERE version = ? AND db_id_1 = ? AND n <= ? ORDER BY n;";
 
         counter.set(0);
-        dbIds.parallelStream().forEach(dbId -> alignResults(command, version, "", dbType, dbId, maxN));
+        dbIds.parallelStream().forEach(dbId -> alignResults(command, version, dbType, dbId, maxN));
     }
     
     public static void alignSsmResults(String benchmark, String version, DbType dbType, int maxN) {
@@ -73,10 +73,10 @@ public class AlignResults
         String command = "SELECT db_id_2 FROM ssm_result WHERE version = ? AND db_id_1 = ? AND n <= ? ORDER BY n;";
 
         counter.set(0);
-        dbIds.parallelStream().forEach(dbId -> alignResults(command, version, "", dbType, dbId, maxN));
+        dbIds.parallelStream().forEach(dbId -> alignResults(command, version, dbType, dbId, maxN));
     }
 
-    private static void alignResults(String command, String version, String searchMode, DbType dbType, String dbId, int maxN) {
+    private static void alignResults(String command, String version, DbType dbType, String dbId, int maxN) {
 
         try {
             
@@ -90,19 +90,9 @@ public class AlignResults
 
             PreparedStatement stmt = conn.prepareCall(command);
 
-            if (searchMode.isEmpty()) {
-
-                stmt.setString(1, version);
-                stmt.setString(2, dbId);
-                stmt.setInt(3, maxN);
-            }
-            else {
-
-                stmt.setString(1, version);
-                stmt.setString(2, searchMode);
-                stmt.setString(3, dbId);
-                stmt.setInt(4, maxN);
-            }
+            stmt.setString(1, version);
+            stmt.setString(2, dbId);
+            stmt.setInt(3, maxN);
 
             ResultSet rs = stmt.executeQuery();
 

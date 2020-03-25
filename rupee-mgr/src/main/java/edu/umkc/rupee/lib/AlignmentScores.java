@@ -5,8 +5,6 @@ import java.sql.SQLException;
 
 import org.postgresql.util.PGobject;
 
-import edu.umkc.rupee.defs.AlignmentType;
-
 public class AlignmentScores extends PGobject {
 
     private String version;
@@ -114,42 +112,6 @@ public class AlignmentScores extends PGobject {
 
     public void setSsapScore(double cathSsap) {
         this.ssapScore = cathSsap;
-    }
-
-    public double getRmsd(AlignmentType align) {
-
-        double rmsd = 0.0;
-
-        switch (align) {
-            case TM_Q_ALIGN:
-                rmsd = this.tmRmsd;
-                break;
-            case TM_AVG_ALIGN:
-                rmsd = this.tmRmsd;
-                break;
-            default:
-                rmsd = 0.0;
-        }
-
-        return rmsd;
-    }
-    
-    public double getTmScore(AlignmentType align) {
-
-        double tmScore = -1.0;
-
-        switch (align) {
-            case TM_Q_ALIGN:
-                tmScore = this.tmQTmScore;
-                break;
-            case TM_AVG_ALIGN:
-                tmScore = this.tmAvgTmScore;
-                break;
-            default:
-                tmScore = -1.0;
-        }
-
-        return tmScore;
     }
 
     @Override

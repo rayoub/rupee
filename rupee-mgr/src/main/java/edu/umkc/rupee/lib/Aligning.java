@@ -28,6 +28,8 @@ public class Aligning
 {
     public static AlignRecord align(String dbId1, String dbId2, AlignmentType align) {
 
+        // only for aligning with CE and FATCAT from CLI
+    
         AlignRecord record = null;
 
         try {
@@ -61,43 +63,12 @@ public class Aligning
 
         return record;
     }
-
-    public static AlignRecord align(int uploadId, String dbId, AlignmentType align) {
-
-        AlignRecord record = null;
-
-        try {
-
-            PDBFileReader reader = new PDBFileReader();
-            reader.setFetchBehavior(FetchBehavior.LOCAL_ONLY);
-
-            DbType dbType = DbId.getIdDbType(dbId);
-
-            FileInputStream queryFile = new FileInputStream(Constants.UPLOAD_PATH + uploadId + ".pdb");
-            FileInputStream targetFile = new FileInputStream(dbType.getImportPath() + dbId + ".pdb.gz");
-            GZIPInputStream targetFileGz = new GZIPInputStream(targetFile);
-
-            Structure queryStructure = reader.getStructure(queryFile);
-            Structure targetStructure = reader.getStructure(targetFileGz);
-
-            queryFile.close();
-            targetFileGz.close();
-            targetFile.close();
-
-            record = align(queryStructure, targetStructure, align);
-
-        } catch (IOException e) {
-            Logger.getLogger(Aligning.class.getName()).log(Level.SEVERE, null, e);
-        } catch (StructureException e) {
-            Logger.getLogger(Aligning.class.getName()).log(Level.SEVERE, null, e);
-        } 
-
-        return record;
-    }
     
     public static AlignRecord align(Structure queryStructure, Structure targetStructure, AlignmentType align) 
         throws IOException, StructureException {
 
+        // only for aligning with CE and FATCAT from CLI and when aligning results
+    
         Atom[] atoms1 = StructureTools.getAtomCAArray(queryStructure);
         Atom[] atoms2 = StructureTools.getAtomCAArray(targetStructure);
 

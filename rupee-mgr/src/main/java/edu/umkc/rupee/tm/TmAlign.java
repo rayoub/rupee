@@ -14,7 +14,6 @@ import org.biojava.nbio.structure.Chain;
 import org.biojava.nbio.structure.Group;
 import org.biojava.nbio.structure.Structure;
 
-import edu.umkc.rupee.defs.SearchType;
 import edu.umkc.rupee.lib.QScore;
 
 public class TmAlign {
@@ -701,7 +700,7 @@ public class TmAlign {
         return results;
     }
     
-    public double alignDescriptors(int[] invmap, SearchType searchType, double normalizeBy) { 
+    public double alignDescriptors(int[] invmap, double normalizeBy) { 
 
         // set d0 terms and normalization term
         Parameters params = Parameters.getSearchParameters(_xlen, _ylen);

@@ -41,6 +41,11 @@ import edu.umkc.rupee.tm.TmAlign;
 import edu.umkc.rupee.tm.TmMode;
 import edu.umkc.rupee.tm.TmResults;
 
+// ASSUMPTIONS: 
+// 1. if search mode == FAST sort by must be SIMILARITY
+// 2. if search mode != FAST and search type == RMSD sort by must be RMSD
+// 3. if search mode != FAST and search type != RMSD sort by must be TM_SCORE
+
 public abstract class Search {
 
     private static int INITIAL_FILTER = 40000;
@@ -67,8 +72,19 @@ public abstract class Search {
     public List<SearchRecord> search(SearchCriteria criteria, SearchFrom searchFrom) throws Exception {
 
         List<SearchRecord> records = new ArrayList<>();
+
+        // enforce assumptions
+        if (criteria.searchMode == SearchMode.FAST) {
+            criteria.sortBy = SortBy.SIMILARITY;
+        } 
+        else if (criteria.searchType == SearchType.RMSD) {
+            criteria.sortBy = SortBy.RMSD;
+        }
+        else {
+            criteria.sortBy = SortBy.TM_SCORE;
+        }
        
-        // guard
+        // limit
         criteria.limit = Math.min(criteria.limit, 1000); 
 
         Grams grams = null;
@@ -88,6 +104,10 @@ public abstract class Search {
         final Hashes hashes1 = hashes;
 
         if (grams1 != null && hashes1 != null) {
+
+            // ***
+            // for now the initial filtering treats FULL_LENGTH and RMSD the same
+            // ***
                
             if (criteria.searchMode != SearchMode.ALL_ALIGNED) {
 
@@ -280,6 +300,7 @@ public abstract class Search {
             TmAlign tm = new TmAlign(queryStructure, targetStructure, mode, kabsch);
             TmResults results = tm.align();
 
+            // always get the RMSD because it's there
             record.setRmsd(results.getRmsd());
 
             if (criteria.searchType == SearchType.FULL_LENGTH) {
@@ -288,19 +309,22 @@ public abstract class Search {
             else if (criteria.searchType == SearchType.CONTAINED_IN) {
                 record.setTmScore(results.getTmScoreQ());    
             }
-            else {
+            else if (criteria.searchType == SearchType.CONTAINS) {
                 record.setTmScore(results.getTmScoreT());
+            }
+            else {
+                record.setTmScore(results.getTmScoreAvg());
             }
         }
         catch (IOException e) {
            
             record.setRmsd(Double.MAX_VALUE);
-            record.setTmScore(0);
+            record.setTmScore(-1);
         }
         catch (RuntimeException e) {
             
             record.setRmsd(Double.MAX_VALUE);
-            record.setTmScore(0);
+            record.setTmScore(-1);
         }
     }
 
@@ -328,7 +352,7 @@ public abstract class Search {
                 Grams grams2 = Grams.fromResultSet(rs, true);                
 
                 double similarity = Integer.MIN_VALUE;
-                if (criteria.searchType == SearchType.FULL_LENGTH) {
+                if (criteria.searchType == SearchType.FULL_LENGTH || criteria.searchType == SearchType.RMSD) {
                     if ((grams1.getLength() < Math.floorDiv(grams2.getLength(), 3)) || (grams2.getLength() < Math.floorDiv(grams1.getLength(), 3))) {
                         continue;
                     }

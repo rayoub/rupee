@@ -78,52 +78,6 @@ public class Similarity {
         
         return ((double) intersection.size()) / ((double) union.size());
     }
-
-    public static double getAdjustedSimilarity(List<Integer> grams1, List<Integer> grams2, int length) {
-
-        // get maps of gram counts
-    
-        Map<Integer, Integer> map1 = new HashMap<>();
-        for (Integer gram : grams1) {
-            if (map1.containsKey(gram)) {
-                map1.replace(gram, map1.get(gram) + 1);
-            } else {
-                map1.put(gram, 1);
-            }
-        }
-        
-        Map<Integer, Integer> map2 = new HashMap<>();
-        for (Integer gram : grams2) {
-            if (map2.containsKey(gram)) {
-                map2.replace(gram, map2.get(gram) + 1);
-            } else {
-                map2.put(gram, 1);
-            }
-        }
-
-        // create sets from multisets
-       
-        Set<Integer> set1 = new HashSet<Integer>(); 
-        for (Entry<Integer,Integer> entry : map1.entrySet()) {
-            for (int i = 0; i < entry.getValue(); i++) {
-                set1.add(entry.getKey() + (i * Constants.DEC_POW_6));
-            }    
-        }
-        
-        Set<Integer> set2 = new HashSet<Integer>(); 
-        for (Entry<Integer,Integer> entry : map2.entrySet()) {
-            for (int i = 0; i < entry.getValue(); i++) {
-                set2.add(entry.getKey() + (i * Constants.DEC_POW_6));
-            }    
-        }
-
-        // union
-        
-        Set<Integer> union = new HashSet<>(set1);
-        union.addAll(set2);
-        
-        return ((double) length) / ((double) union.size());
-    }
     
     public static String getBandMatches(Integer[] bandHashes1, Integer[] bandHashes2) {
 

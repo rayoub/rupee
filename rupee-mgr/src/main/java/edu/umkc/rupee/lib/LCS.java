@@ -26,24 +26,24 @@ public class LCS {
         s[0][0] = 0;
   
         // initialize first column 
-        if (searchType == SearchType.FULL_LENGTH || searchType == SearchType.CONTAINED_IN) {
+        if (searchType != SearchType.CONTAINS) {  // FULL-LENGTH, CONTAINED_IN, RMSD
             for (int i = 1; i <= grams1.size(); i++) {
                 s[i][0] = -1 * i;
             }
         }
-        else { // CONTAINS
+        else { // CONTAINS (putting RMSD down here would return some pretty crappy stuff)
             for (int i = 1; i <= grams1.size(); i++) {
                 s[i][0] = 0;
             }
         }
 
         // initialize first row
-        if (searchType == SearchType.FULL_LENGTH || searchType == SearchType.CONTAINS) {
+        if (searchType != SearchType.CONTAINED_IN) {  // FULL-LENGTH, CONTAINS, RMSD
             for (int j = 1; j <= grams2.size(); j++) {
                 s[0][j] = -1 * j;
             }
         }
-        else { // CONTAINED_IN
+        else { // CONTAINED_IN (ditto on RMSD)
             for (int j = 1; j <= grams2.size(); j++) {
                 s[0][j] = 0;
             }
@@ -123,13 +123,13 @@ public class LCS {
         d[0][0] = Direction.NONE;
  
         // initialize first column 
-        if (searchType == SearchType.FULL_LENGTH || searchType == SearchType.CONTAINED_IN) {
+        if (searchType != SearchType.CONTAINS) {  // FULL-LENGTH, CONTAINED_IN, RMSD
             for (int i = 1; i <= grams1.getLength(); i++) {
                 s[i][0] = -1 * i;
                 d[i][0] = Direction.UP;
             }
         }
-        else { // CONTAINS
+        else { // CONTAINS (putting RMSD down here would return some pretty crappy stuff)
             for (int i = 1; i <= grams1.getLength(); i++) {
                 s[i][0] = 0;
                 d[i][0] = Direction.UP;
@@ -137,13 +137,13 @@ public class LCS {
         }
 
         // initialize first row
-        if (searchType == SearchType.FULL_LENGTH || searchType == SearchType.CONTAINS) {
+        if (searchType != SearchType.CONTAINED_IN) {  // FULL-LENGTH, CONTAINS, RMSD
             for (int j = 1; j <= grams2.getLength(); j++) {
                 s[0][j] = -1 * j;
                 d[0][j] = Direction.LEFT;
             }
         }
-        else { // CONTAINED_IN
+        else { // CONTAINED_IN (ditto on RMSD)
             for (int j = 1; j <= grams2.getLength(); j++) {
                 s[0][j] = 0;
                 d[0][j] = Direction.LEFT;
@@ -230,7 +230,7 @@ public class LCS {
         int i = maxI;
         int j = maxJ;
         while (
-                (searchType == SearchType.FULL_LENGTH && i != 0 && j != 0)
+                ((searchType == SearchType.FULL_LENGTH || searchType == SearchType.RMSD) && i != 0 && j != 0)
                 ||
                 (searchType == SearchType.CONTAINED_IN && i != 0)
                 ||
@@ -324,7 +324,7 @@ public class LCS {
         }
 
         double normalizeBy = 0;
-        if (searchType == SearchType.FULL_LENGTH) {
+        if (searchType == SearchType.FULL_LENGTH || searchType == SearchType.RMSD) {
             normalizeBy = (xlen + ylen) * 0.5;
         }
         else if (searchType == SearchType.CONTAINED_IN) {
@@ -336,7 +336,7 @@ public class LCS {
 
         Kabsch kabsch = KabschTLS.get();
         TmAlign tm = new TmAlign(xa, ya, TmMode.FAST, kabsch);
-        double score = tm.alignDescriptors(invmap_trivial, searchType, normalizeBy);
+        double score = tm.alignDescriptors(invmap_trivial, normalizeBy);
 
         return score;
     }
