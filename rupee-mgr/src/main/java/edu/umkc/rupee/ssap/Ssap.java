@@ -1,16 +1,5 @@
 package edu.umkc.rupee.ssap;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
-import org.biojava.nbio.structure.Atom;
-import org.biojava.nbio.structure.Chain;
-import org.biojava.nbio.structure.Group;
-import org.biojava.nbio.structure.Structure;
-
-// TODO:
-// 1. need to figure out representation of alignment
-
 public class Ssap {
 
     // constants
@@ -20,46 +9,27 @@ public class Ssap {
     private static double GAP_PENALTY = RESIDUE_A_VALUE / RESIDUE_B_VALUE;
     private static int NUM_EXCLUDED = 5;
     private static double INTEGER_SCALING = 10.0;
-    private static double DIST_CUTOFF = 10.0;
+    private static double MIN_SCORE_CUTOFF = 10.0;
+    private static double MAX_SCORE_CUTOFF = (RESIDUE_A_VALUE / MIN_SCORE_CUTOFF) - RESIDUE_B_VALUE;
 
     // natural log
     private static double MAX_LOG = Math.log((RESIDUE_A_VALUE / RESIDUE_B_VALUE) * FINAL_SCORE_SCALING);
 
     // structure privates
+    private double[][]  _aatoms;
+    private double[][]  _batoms;
     private int _alen, _blen;
-    private Chain _achain;
-    private Chain _bchain;
-    private List<Group> _agroups;
-    private List<Group> _bgroups;
-    private List<Atom> _aatoms;
-    private List<Atom> _batoms;
 
-    public Ssap(Structure astruct, Structure bstruct) {
+    public Ssap(double[][] aatoms, double[][] batoms) { 
 
-        // get first chain in each structure
-        _achain = astruct.getChains().get(0);
-        _bchain = bstruct.getChains().get(0);
+        _aatoms = aatoms; 
+        _batoms = batoms; 
 
-        // get groups of atoms per residue
-        _agroups = _achain.getAtomGroups().stream().filter(g -> !g.isHetAtomInFile() && g.hasAtom("CA")).collect(Collectors.toList());
-        _bgroups = _bchain.getAtomGroups().stream().filter(g -> !g.isHetAtomInFile() && g.hasAtom("CA")).collect(Collectors.toList());
-
-        // get carbon alpha atoms per residue
-        _aatoms = _agroups.stream().map(g -> g.getAtom("CA")).collect(Collectors.toList());
-        _batoms = _bgroups.stream().map(g -> g.getAtom("CA")).collect(Collectors.toList());
-
-        // get number of residues
-        _alen = _aatoms.size();
-        _blen = _batoms.size();
+        _alen = _aatoms.length;
+        _blen = _batoms.length;
     }
 
     public double getScore(Alignment alignment) {
-
-        /* NOTES:
-            since 0 is used as an empty position the positions are offset by 1 with respect to the actual residues. 
-            however, the indices for the alignment are not.
-            Offset this and offset that was copied over and I chose not to change to avoid indexing errors.
-        */
 
         // score matrix
         int maxAlignLen = _alen + _blen + 10;
@@ -70,24 +40,24 @@ public class Ssap {
 
             if (alignment.hasBothPositions(i)) {
 
-                int iaPos = alignment.getAPositionOffset1(i);
-                int ibPos = alignment.getBPositionOffset1(i);
+                int iaPos = alignment.getAPosition(i);
+                int ibPos = alignment.getBPosition(i);
 
                 for (int j = 0; j < alignment.getLength(); j++) {
 
                     if (alignment.hasBothPositions(j)) {
 
-                        int jaPos = alignment.getAPositionOffset1(j);
-                        int jbPos = alignment.getBPositionOffset1(j);
+                        int jaPos = alignment.getAPosition(j);
+                        int jbPos = alignment.getBPosition(j);
 
-                        boolean comparable = isPairComparableOffset1(iaPos, ibPos, jaPos, jbPos);
+                        boolean comparable = isPairComparable(iaPos, ibPos, jaPos, jbPos);
 
                         if (comparable) {
                            
-                            double[] fromAtomA = _aatoms.get(iaPos - 1).getCoords();
-                            double[] fromAtomB = _batoms.get(ibPos - 1).getCoords();
-                            double[] toAtomA = _aatoms.get(jaPos - 1).getCoords();
-                            double[] toAtomB = _batoms.get(jbPos - 1).getCoords();
+                            double[] fromAtomA = _aatoms[iaPos];
+                            double[] fromAtomB = _batoms[ibPos];
+                            double[] toAtomA = _aatoms[jaPos];
+                            double[] toAtomB = _batoms[jbPos]; 
 
                             double ax = (toAtomA[0] - fromAtomA[0]) * INTEGER_SCALING;
                             double ay = (toAtomA[1] - fromAtomA[1]) * INTEGER_SCALING;
@@ -97,17 +67,17 @@ public class Ssap {
                             double by = (toAtomB[1] - fromAtomB[1]) * INTEGER_SCALING;
                             double bz = (toAtomB[2] - fromAtomB[2]) * INTEGER_SCALING;
 
-                            double sumOfSquares =  Math.pow(ax - bx, 2) + Math.pow(ay - by, 2) + Math.pow(az - bz, 2);
+                            double sumOfSquares = Math.pow(ax - bx, 2) + Math.pow(ay - by, 2) + Math.pow(az - bz, 2);
 
                             double scaledA = RESIDUE_A_VALUE * INTEGER_SCALING * INTEGER_SCALING;
                             double scaledB = RESIDUE_B_VALUE * INTEGER_SCALING * INTEGER_SCALING;
 
                             double score = 0.0;
-                            if (sumOfSquares <= DIST_CUTOFF * INTEGER_SCALING * INTEGER_SCALING) {
+                            if (sumOfSquares < MAX_SCORE_CUTOFF * INTEGER_SCALING * INTEGER_SCALING) {
                                 score = scaledA / (sumOfSquares + scaledB);
                             }
 
-                            scoreMatrix[jbPos][jaPos] = score;
+                            scoreMatrix[jbPos][jaPos] += score;
                         }
                     }
                 }
@@ -126,8 +96,8 @@ public class Ssap {
             boolean hasBothPos = alignment.hasBothPositions(i);
             if (hasBothPos) {
 
-                int aPos = alignment.getAPositionOffset1(i);
-                int bPos = alignment.getBPositionOffset1(i);
+                int aPos = alignment.getAPosition(i);
+                int bPos = alignment.getBPosition(i);
 
                 double gap = 0;
                 if (!isFirstWithBothPos) {
@@ -135,16 +105,18 @@ public class Ssap {
                         gap = GAP_PENALTY;
                     }
                 }
-                maxScore = scoreMatrix[bPos][aPos] - gap;
+                maxScore += scoreMatrix[bPos][aPos] - gap;
                 isFirstWithBothPos = false;
             }
 
             prevHadBothPos = hasBothPos;
             if (prevHadBothPos) {
-                aPosPrev = alignment.getAPositionOffset1(i);
-                bPosPrev = alignment.getBPositionOffset1(i);
+                aPosPrev = alignment.getAPosition(i);
+                bPosPrev = alignment.getBPosition(i);
             }
         }
+
+        System.out.println("max score = " + maxScore);
 
         // nonnegative
         maxScore = Math.max(maxScore, 0.0);
@@ -164,9 +136,9 @@ public class Ssap {
 
     /* STATIC HELPER FUNCTIONS COPIED OVER AND NOT DECOUPLED TO THE NTH DEGREE */
 
-    private static boolean isPairComparableOffset1(int fromIndexA, int fromIndexB, int toIndexA, int toIndexB) {
+    private static boolean isPairComparable(int fromIndexA, int fromIndexB, int toIndexA, int toIndexB) {
 
-		if (!isPairNotExcluded(fromIndexA, toIndexA) || !isPairNotExcluded(fromIndexB, toIndexB)) {
+		if (isPairExcluded(fromIndexA, toIndexA) || isPairExcluded(fromIndexB, toIndexB)) {
 			return false;
 		}
         else {
@@ -174,13 +146,13 @@ public class Ssap {
         }
     }
 
-    private static boolean isPairNotExcluded(int index1, int index2) {
+    private static boolean isPairExcluded(int fromIndex, int toIndex) {
 
-        int max = Math.max(index1, index2);
-        int min = Math.min(index1, index2);
+        int max = Math.max(fromIndex, toIndex);
+        int min = Math.min(fromIndex, toIndex);
         int diff = max - min; 
         
-        return diff > 5;
+        return diff <= NUM_EXCLUDED;
     }
 }
 

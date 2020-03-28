@@ -1,29 +1,49 @@
 package edu.umkc.rupee.ssap;
 
+import java.util.ArrayList;
+import java.util.List;
 
 public class Alignment {
 
-    private int _length = 0;
-    private int[] _apositions = new int[_length];
-    private int[] _bpositions = new int[_length];
+    public static int NULL_POS = -1;
+
+    private List<Integer> _apositions = new ArrayList<>();
+    private List<Integer> _bpositions = new ArrayList<>();
 
     public int getLength() {
 
-        return 0;
+        // they both should be the same
+        return _apositions.size();
+    }
+
+    public void add(int apos, int bpos) {
+
+        _apositions.add(apos);
+        _bpositions.add(bpos);
     }
 
     public boolean hasBothPositions(int index) {
         
-        return _apositions[index] != 0 && _bpositions[index] != 0;
+        return _apositions.get(index) != NULL_POS && _bpositions.get(index) != NULL_POS;
     }
 
-    public int getAPositionOffset1(int index) {
+    public int getAPosition(int index) {
         
-        return _apositions[index] + 1;
+        return _apositions.get(index);
     }
     
-    public int getBPositionOffset1(int index) {
+    public int getBPosition(int index) {
         
-        return _bpositions[index] + 1;
+        return _bpositions.get(index);
+    }
+
+    public String toString() {
+       
+        StringBuilder builder = new StringBuilder(); 
+        for (int i = 0; i < _apositions.size(); i++) {
+
+            builder.append(String.format("%d %d\n", _apositions.get(i), _bpositions.get(i)));
+        }
+        return builder.toString();
     }
 }
