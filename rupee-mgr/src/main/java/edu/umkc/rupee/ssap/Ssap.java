@@ -76,7 +76,6 @@ public class Ssap {
                             if (sumOfSquares < MAX_SCORE_CUTOFF * INTEGER_SCALING * INTEGER_SCALING) {
                                 score = scaledA / (sumOfSquares + scaledB);
                             }
-
                             scoreMatrix[jbPos][jaPos] += score;
                         }
                     }
@@ -115,8 +114,6 @@ public class Ssap {
                 bPosPrev = alignment.getBPosition(i);
             }
         }
-
-        System.out.println("max score = " + maxScore);
 
         // nonnegative
         maxScore = Math.max(maxScore, 0.0);
