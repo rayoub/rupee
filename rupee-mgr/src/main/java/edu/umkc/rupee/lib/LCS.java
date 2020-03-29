@@ -26,24 +26,24 @@ public class LCS {
         s[0][0] = 0;
   
         // initialize first column 
-        if (searchType != SearchType.CONTAINS) {  // FULL-LENGTH, CONTAINED_IN, RMSD
+        if (searchType != SearchType.CONTAINS) {  // FULL-LENGTH, CONTAINED_IN, RMSD, Q_SCORE, SSAP_SCORE
             for (int i = 1; i <= grams1.size(); i++) {
                 s[i][0] = -1 * i;
             }
         }
-        else { // CONTAINS (putting RMSD down here would return some pretty crappy stuff)
+        else { // CONTAINS
             for (int i = 1; i <= grams1.size(); i++) {
                 s[i][0] = 0;
             }
         }
 
         // initialize first row
-        if (searchType != SearchType.CONTAINED_IN) {  // FULL-LENGTH, CONTAINS, RMSD
+        if (searchType != SearchType.CONTAINED_IN) {  // FULL-LENGTH, CONTAINS, RMSD, Q_SCORE, SSAP_SCORE
             for (int j = 1; j <= grams2.size(); j++) {
                 s[0][j] = -1 * j;
             }
         }
-        else { // CONTAINED_IN (ditto on RMSD)
+        else { // CONTAINED_IN
             for (int j = 1; j <= grams2.size(); j++) {
                 s[0][j] = 0;
             }
@@ -123,13 +123,13 @@ public class LCS {
         d[0][0] = Direction.NONE;
  
         // initialize first column 
-        if (searchType != SearchType.CONTAINS) {  // FULL-LENGTH, CONTAINED_IN, RMSD
+        if (searchType != SearchType.CONTAINS) {  // FULL-LENGTH, CONTAINED_IN, RMSD, Q_SCORE, SSAP_SCORE
             for (int i = 1; i <= grams1.getLength(); i++) {
                 s[i][0] = -1 * i;
                 d[i][0] = Direction.UP;
             }
         }
-        else { // CONTAINS (putting RMSD down here would return some pretty crappy stuff)
+        else { // CONTAINS
             for (int i = 1; i <= grams1.getLength(); i++) {
                 s[i][0] = 0;
                 d[i][0] = Direction.UP;
@@ -137,13 +137,13 @@ public class LCS {
         }
 
         // initialize first row
-        if (searchType != SearchType.CONTAINED_IN) {  // FULL-LENGTH, CONTAINS, RMSD
+        if (searchType != SearchType.CONTAINED_IN) {  // FULL-LENGTH, CONTAINS, RMSD, Q_SCORE, SSAP_SCORE
             for (int j = 1; j <= grams2.getLength(); j++) {
                 s[0][j] = -1 * j;
                 d[0][j] = Direction.LEFT;
             }
         }
-        else { // CONTAINED_IN (ditto on RMSD)
+        else { // CONTAINED_IN
             for (int j = 1; j <= grams2.getLength(); j++) {
                 s[0][j] = 0;
                 d[0][j] = Direction.LEFT;
@@ -230,7 +230,10 @@ public class LCS {
         int i = maxI;
         int j = maxJ;
         while (
-                ((searchType == SearchType.FULL_LENGTH || searchType == SearchType.RMSD) && i != 0 && j != 0)
+                ((searchType == SearchType.FULL_LENGTH 
+                  || searchType == SearchType.RMSD
+                  || searchType == SearchType.Q_SCORE
+                  || searchType == SearchType.SSAP_SCORE) && i != 0 && j != 0)
                 ||
                 (searchType == SearchType.CONTAINED_IN && i != 0)
                 ||
@@ -324,7 +327,10 @@ public class LCS {
         }
 
         double normalizeBy = 0;
-        if (searchType == SearchType.FULL_LENGTH || searchType == SearchType.RMSD) {
+        if (searchType == SearchType.FULL_LENGTH 
+                || searchType == SearchType.RMSD
+                || searchType == SearchType.Q_SCORE
+                || searchType == SearchType.SSAP_SCORE) {
             normalizeBy = (xlen + ylen) * 0.5;
         }
         else if (searchType == SearchType.CONTAINED_IN) {

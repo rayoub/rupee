@@ -7,8 +7,10 @@ public class SearchRecord {
     private String pdbId;
     private String sortKey;
     private double similarity;
-    private double rmsd;
     private double tmScore;
+    private double rmsd;
+    private double qScore;
+    private double ssapScore;
     
     public int getN() {
         return n;
@@ -50,6 +52,14 @@ public class SearchRecord {
         this.similarity = similarity;
     }
 
+    public double getTmScore() {
+        return tmScore;
+    }
+
+    public void setTmScore(double tmScore) {
+        this.tmScore = tmScore;
+    }
+
     public double getRmsd() {
         return rmsd;
     }
@@ -58,11 +68,19 @@ public class SearchRecord {
         this.rmsd = rmsd;
     }
 
-    public double getTmScore() {
-        return tmScore;
+    public double getQScore() {
+        return qScore;
     }
 
-    public void setTmScore(double tmScore) {
-        this.tmScore = tmScore;
+    public void setQScore(double qScore) {
+        this.qScore = qScore;
+    }
+
+    public double getSsapScore() {
+        return ssapScore;
+    }
+
+    public void setSsapScore(double ssapScore) {
+        this.ssapScore = ssapScore;
     }
 }

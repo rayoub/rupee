@@ -80,7 +80,13 @@ public abstract class Search {
         else if (criteria.searchType == SearchType.RMSD) {
             criteria.sortBy = SortBy.RMSD;
         }
-        else {
+        else if (criteria.searchType == SearchType.Q_SCORE) {
+            criteria.sortBy = SortBy.Q_SCORE;
+        }
+        else if (criteria.searchType == SearchType.SSAP_SCORE) {
+            criteria.sortBy = SortBy.SSAP_SCORE;
+        }
+        else { 
             criteria.sortBy = SortBy.TM_SCORE;
         }
        
@@ -271,6 +277,12 @@ public abstract class Search {
         else if (criteria.sortBy == SortBy.RMSD) {
             comparator = Comparator.comparingDouble(SearchRecord::getRmsd);
         }
+        else if (criteria.sortBy == SortBy.Q_SCORE) {
+            comparator = Comparator.comparingDouble(SearchRecord::getQScore);
+        }
+        else if (criteria.sortBy == SortBy.SSAP_SCORE) {
+            comparator = Comparator.comparingDouble(SearchRecord::getSsapScore);
+        }
         else {
             comparator = Comparator.comparingDouble(SearchRecord::getTmScore);
         }
@@ -300,8 +312,10 @@ public abstract class Search {
             TmAlign tm = new TmAlign(queryStructure, targetStructure, mode, kabsch);
             TmResults results = tm.align();
 
-            // always get the RMSD because it's there
+            // always get these because they're there
             record.setRmsd(results.getRmsd());
+            record.setQScore(results.getQScore());
+            record.setSsapScore(results.getSsapScore());
 
             if (criteria.searchType == SearchType.FULL_LENGTH) {
                 record.setTmScore(results.getTmScoreAvg());    
@@ -313,6 +327,8 @@ public abstract class Search {
                 record.setTmScore(results.getTmScoreT());
             }
             else {
+
+                // just get the average for other search types
                 record.setTmScore(results.getTmScoreAvg());
             }
         }
@@ -352,7 +368,7 @@ public abstract class Search {
                 Grams grams2 = Grams.fromResultSet(rs, true);                
 
                 double similarity = Integer.MIN_VALUE;
-                if (criteria.searchType == SearchType.FULL_LENGTH || criteria.searchType == SearchType.RMSD) {
+                if (criteria.searchType == SearchType.FULL_LENGTH) {
                     if ((grams1.getLength() < Math.floorDiv(grams2.getLength(), 3)) || (grams2.getLength() < Math.floorDiv(grams1.getLength(), 3))) {
                         continue;
                     }
@@ -361,10 +377,15 @@ public abstract class Search {
                 else if (criteria.searchType == SearchType.CONTAINED_IN) {
                     similarity = LCS.getLCSPlusScore(grams1, grams2, criteria.searchType);
                 }
-                else {
+                else if (criteria.searchType == SearchType.CONTAINS) { 
                     if (grams2.getLength() < Math.floorDiv(grams1.getLength(), 3)) {
                         continue;
                     }
+                    similarity = LCS.getLCSPlusScore(grams1, grams2, criteria.searchType);
+                }
+                else {
+
+                    // no filtering for RMSD, Q-Score, and SSAP-Score
                     similarity = LCS.getLCSPlusScore(grams1, grams2, criteria.searchType);
                 }
 

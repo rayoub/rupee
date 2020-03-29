@@ -2,9 +2,11 @@ package edu.umkc.rupee.defs;
 
 public enum SortBy {
 
-    RMSD(1, "RMSD", false),
-    TM_SCORE(2, "TM-Score", true),
-    SIMILARITY(3, "Similarity", true);
+    SIMILARITY(1, "Similarity", true),
+    RMSD(2, "RMSD", false),
+    TM_SCORE(3, "TM-Score", true),
+    Q_SCORE(4, "Q-Score", true),
+    SSAP_SCORE(5, "SSAP-Score", true);
 
     private int id;
     private String name;
@@ -29,14 +31,20 @@ public enum SortBy {
     }
     
     public static SortBy fromId(int id) {
-        if (id == RMSD.getId()) {
-            return RMSD;
+        if (id == SIMILARITY.getId()) {
+            return SIMILARITY;
         }
         else if (id == TM_SCORE.getId()) {
             return TM_SCORE;
         }
+        else if (id == RMSD.getId()) {
+            return RMSD;
+        }
+        else if (id == Q_SCORE.getId()) {
+            return Q_SCORE;
+        }
         else {
-            return SIMILARITY;
+            return SSAP_SCORE;
         }
     }
 }

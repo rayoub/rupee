@@ -5,7 +5,9 @@ public enum SearchType {
     FULL_LENGTH(1, "Full-Length"),
     CONTAINED_IN(2, "Contained In"),
     CONTAINS(3, "Contains"),
-    RMSD(4, "RMSD");
+    RMSD(4, "RMSD"),
+    Q_SCORE(5, "Q-Score"),
+    SSAP_SCORE(6, "SSAP-Score");
 
     private int id;
     private String name;
@@ -33,8 +35,14 @@ public enum SearchType {
         else if (id == CONTAINS.getId()) {
             return CONTAINS;
         }
-        else {
+        else if (id == RMSD.getId()) {
             return RMSD;
+        }
+        else if (id == Q_SCORE.getId()) {
+            return Q_SCORE;
+        }
+        else {
+            return SSAP_SCORE;
         }
     }
 }
