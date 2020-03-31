@@ -1,12 +1,19 @@
 
-CREATE OR REPLACE FUNCTION get_cathedral_results (p_benchmark VARCHAR, p_version VARCHAR, p_limit INTEGER)
+-- we need to sort by
+-- 1. ce_rmsd
+-- 2. fatcat_rigid_rmsd
+-- 3. tm_avg_tm_score
+-- 4. tm_q_tm_score
+-- else. ssap_score
+
+CREATE OR REPLACE FUNCTION get_cathedral_results (p_benchmark VARCHAR, p_version VARCHAR, p_sort_by INTEGER, p_limit INTEGER)
 RETURNS TABLE (
     n INTEGER, 
     db_id_1 VARCHAR,
     db_id_2 VARCHAR,
-    tm_q_tm_score NUMERIC,
-    tm_avg_tm_score NUMERIC,
-    tm_rmsd NUMERIC
+    ce_rmsd NUMERIC,
+    fatcat_rigid_rmsd NUMERIC,
+    ssap_score NUMERIC
 )
 AS $$
 BEGIN
@@ -16,17 +23,29 @@ BEGIN
     (
         SELECT
             COUNT(*) OVER (PARTITION BY r.db_id_1) AS tot,
-            RANK(*) OVER (PARTITION BY r.db_id_1 ORDER BY s.tm_avg_tm_score DESC) AS n,
+            CASE 
+                WHEN p_sort_by = 1 THEN
+                    RANK(*) OVER (PARTITION BY r.db_id_1 ORDER BY s.ce_rmsd, r.db_id_2) 
+                WHEN p_sort_by = 2 THEN
+                    RANK(*) OVER (PARTITION BY r.db_id_1 ORDER BY s.fatcat_rigid_rmsd, r.db_id_2) 
+                WHEN p_sort_by = 3 THEN
+                    RANK(*) OVER (PARTITION BY r.db_id_1 ORDER BY s.tm_avg_tm_score, r.db_id_2) 
+                WHEN p_sort_by = 4 THEN
+                    RANK(*) OVER (PARTITION BY r.db_id_1 ORDER BY s.tm_q_tm_score, r.db_id_2) 
+                ELSE -- 5
+                    RANK(*) OVER (PARTITION BY r.db_id_1 ORDER BY s.ssap_score DESC, r.db_id_2) 
+            END AS n,
             r.db_id_1,
             r.db_id_2,
-            s.tm_q_tm_score,
-            s.tm_avg_tm_score,
-            s.tm_rmsd
+            s.ce_rmsd,
+            s.fatcat_rigid_rmsd,
+            s.ssap_score
         FROM
             cathedral_result r
             INNER JOIN benchmark b
                 ON b.db_id = r.db_id_1
                 AND b.name = p_benchmark
+                AND r.n <= 100 -- filter the original n from cathedral
             INNER JOIN alignment_scores s
                 ON s.db_id_1 = r.db_id_1
                 AND s.db_id_2 = r.db_id_2
@@ -48,9 +67,9 @@ BEGIN
             r.n,
             r.db_id_1,
             r.db_id_2,
-            r.tm_q_tm_score,
-            r.tm_avg_tm_score,
-            r.tm_rmsd
+            r.ce_rmsd,
+            r.fatcat_rigid_rmsd,
+            r.ssap_score
         FROM
             results r
             INNER JOIN valid_results v
@@ -62,9 +81,9 @@ BEGIN
         r.n::INTEGER AS n,
         r.db_id_1,
         r.db_id_2,
-        r.tm_q_tm_score,
-        r.tm_avg_tm_score,
-        r.tm_rmsd
+        r.ce_rmsd,
+        r.fatcat_rigid_rmsd,
+        r.ssap_score
     FROM 
         filtered_results r
     ORDER BY

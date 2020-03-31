@@ -35,13 +35,18 @@ public class Ssap {
         int maxAlignLen = _alen + _blen + 10;
         double[][] scoreMatrix = new double[maxAlignLen][maxAlignLen];
 
-	    // distance calculations
+        // distance calculations
+        int aligned = 0;
+        int comparable = 0;
+        int nonzero = 0;
         for (int i = 0; i < alignment.getLength(); i++) {
 
             if (alignment.hasBothPositions(i)) {
 
                 int iaPos = alignment.getAPosition(i);
                 int ibPos = alignment.getBPosition(i);
+                        
+                aligned++;
 
                 for (int j = 0; j < alignment.getLength(); j++) {
 
@@ -50,10 +55,10 @@ public class Ssap {
                         int jaPos = alignment.getAPosition(j);
                         int jbPos = alignment.getBPosition(j);
 
-                        boolean comparable = isPairComparable(iaPos, ibPos, jaPos, jbPos);
+                        if (isComparable(iaPos, jaPos) && isComparable(ibPos, jbPos)) {
 
-                        if (comparable) {
-                           
+                            comparable++;
+
                             double[] fromAtomA = _aatoms[iaPos];
                             double[] fromAtomB = _batoms[ibPos];
                             double[] toAtomA = _aatoms[jaPos];
@@ -73,16 +78,23 @@ public class Ssap {
                             double scaledB = RESIDUE_B_VALUE * INTEGER_SCALING * INTEGER_SCALING;
 
                             double score = 0.0;
-                            if (sumOfSquares < MAX_SCORE_CUTOFF * INTEGER_SCALING * INTEGER_SCALING) {
+                            if (sumOfSquares < (MAX_SCORE_CUTOFF * INTEGER_SCALING * INTEGER_SCALING)) {
                                 score = scaledA / (sumOfSquares + scaledB);
                             }
                             scoreMatrix[jbPos][jaPos] += score;
+                            if (score > 0) {
+                                nonzero++;
+                            }
                         }
                     }
                 }
             }
         }
-	    
+
+        //System.out.println("aligned = " + aligned);
+        //System.out.println("comparable = " + comparable);
+        //System.out.println("nonzero = " + nonzero);
+
         boolean isFirstWithBothPos = true;
         boolean prevHadBothPos = false;
         int aPosPrev = 0;
@@ -133,23 +145,13 @@ public class Ssap {
 
     /* STATIC HELPER FUNCTIONS COPIED OVER AND NOT DECOUPLED TO THE NTH DEGREE */
 
-    private static boolean isPairComparable(int fromIndexA, int fromIndexB, int toIndexA, int toIndexB) {
+    private static boolean isComparable(int fromPos, int toPos) {
 
-		if (isPairExcluded(fromIndexA, toIndexA) || isPairExcluded(fromIndexB, toIndexB)) {
-			return false;
-		}
-        else {
-            return true;
-        }
-    }
-
-    private static boolean isPairExcluded(int fromIndex, int toIndex) {
-
-        int max = Math.max(fromIndex, toIndex);
-        int min = Math.min(fromIndex, toIndex);
+        int max = Math.max(fromPos, toPos);
+        int min = Math.min(fromPos, toPos);
         int diff = max - min; 
         
-        return diff <= NUM_EXCLUDED;
+        return diff > NUM_EXCLUDED;
     }
 }
 
