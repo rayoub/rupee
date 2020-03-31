@@ -13,6 +13,8 @@ RETURNS TABLE (
     db_id_2 VARCHAR,
     ce_rmsd NUMERIC,
     fatcat_rigid_rmsd NUMERIC,
+    tm_avg_tm_score NUMERIC,
+    tm_q_tm_score NUMERIC,
     ssap_score NUMERIC
 )
 AS $$
@@ -29,9 +31,9 @@ BEGIN
                 WHEN p_sort_by = 2 THEN
                     RANK(*) OVER (PARTITION BY r.db_id_1 ORDER BY s.fatcat_rigid_rmsd, r.db_id_2) 
                 WHEN p_sort_by = 3 THEN
-                    RANK(*) OVER (PARTITION BY r.db_id_1 ORDER BY s.tm_avg_tm_score, r.db_id_2) 
+                    RANK(*) OVER (PARTITION BY r.db_id_1 ORDER BY s.tm_avg_tm_score DESC, r.db_id_2) 
                 WHEN p_sort_by = 4 THEN
-                    RANK(*) OVER (PARTITION BY r.db_id_1 ORDER BY s.tm_q_tm_score, r.db_id_2) 
+                    RANK(*) OVER (PARTITION BY r.db_id_1 ORDER BY s.tm_q_tm_score DESC, r.db_id_2) 
                 ELSE -- 5
                     RANK(*) OVER (PARTITION BY r.db_id_1 ORDER BY s.ssap_score DESC, r.db_id_2) 
             END AS n,
@@ -39,6 +41,8 @@ BEGIN
             r.db_id_2,
             s.ce_rmsd,
             s.fatcat_rigid_rmsd,
+            s.tm_avg_tm_score,
+            s.tm_q_tm_score,
             s.ssap_score
         FROM
             cathedral_result r
@@ -69,6 +73,8 @@ BEGIN
             r.db_id_2,
             r.ce_rmsd,
             r.fatcat_rigid_rmsd,
+            r.tm_avg_tm_score,
+            r.tm_q_tm_score,
             r.ssap_score
         FROM
             results r
@@ -83,6 +89,8 @@ BEGIN
         r.db_id_2,
         r.ce_rmsd,
         r.fatcat_rigid_rmsd,
+        r.tm_avg_tm_score,
+        r.tm_q_tm_score,
         r.ssap_score
     FROM 
         filtered_results r
