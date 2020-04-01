@@ -35,15 +35,25 @@ public class AlignResults
     static {
         counter = new AtomicInteger();
     }
-
+    
     public static void alignRupeeResults(String benchmark, String version, DbType dbType, int maxN) {
+
+        alignRupeeResults(benchmark, version, dbType, maxN, "all_aligned", "rmsd");
+        alignRupeeResults(benchmark, version, dbType, maxN, "top_aligned", "rmsd");
+        alignRupeeResults(benchmark, version, dbType, maxN, "all_aligned", "ssap_score");
+        alignRupeeResults(benchmark, version, dbType, maxN, "top_aligned", "ssap_score");
+        alignRupeeResults(benchmark, version, dbType, maxN, "all_aligned", "full_length");
+        alignRupeeResults(benchmark, version, dbType, maxN, "top_aligned", "full_length");
+    }
+
+    public static void alignRupeeResults(String benchmark, String version, DbType dbType, int maxN, String searchMode, String searchType) {
 
         List<String> dbIds = Benchmarks.get(benchmark);
             
-        String command = "SELECT db_id_2 FROM rupee_result WHERE version = ? AND db_id_1 = ? AND n <= ? ORDER BY n;";
+        String command = "SELECT db_id_2 FROM rupee_result WHERE version = ? AND db_id_1 = ? AND n <= ? AND search_mode = ? AND search_type = ? ORDER BY n;";
 
         counter.set(0);
-        dbIds.parallelStream().forEach(dbId -> alignResults(command, version, dbType, dbId, maxN));
+        dbIds.parallelStream().forEach(dbId -> alignResults(command, version, dbType, dbId, maxN, searchMode, searchType));
     }
 
     public static void alignMtmResults(String benchmark, String version, DbType dbType, int maxN) {
@@ -53,7 +63,7 @@ public class AlignResults
         String command = "SELECT db_id_2 FROM mtm_result WHERE version = ? AND db_id_1 = ? AND n <= ? ORDER BY n;";
 
         counter.set(0);
-        dbIds.parallelStream().forEach(dbId -> alignResults(command, version, dbType, dbId, maxN));
+        dbIds.parallelStream().forEach(dbId -> alignResults(command, version, dbType, dbId, maxN, "", ""));
     }
 
     public static void alignCathedralResults(String benchmark, String version, DbType dbType, int maxN) {
@@ -63,7 +73,7 @@ public class AlignResults
         String command = "SELECT db_id_2 FROM cathedral_result WHERE version = ? AND db_id_1 = ? AND n <= ? ORDER BY n;";
 
         counter.set(0);
-        dbIds.parallelStream().forEach(dbId -> alignResults(command, version, dbType, dbId, maxN));
+        dbIds.parallelStream().forEach(dbId -> alignResults(command, version, dbType, dbId, maxN, "", ""));
     }
     
     public static void alignSsmResults(String benchmark, String version, DbType dbType, int maxN) {
@@ -73,10 +83,10 @@ public class AlignResults
         String command = "SELECT db_id_2 FROM ssm_result WHERE version = ? AND db_id_1 = ? AND n <= ? ORDER BY n;";
 
         counter.set(0);
-        dbIds.parallelStream().forEach(dbId -> alignResults(command, version, dbType, dbId, maxN));
+        dbIds.parallelStream().forEach(dbId -> alignResults(command, version, dbType, dbId, maxN, "", ""));
     }
 
-    private static void alignResults(String command, String version, DbType dbType, String dbId, int maxN) {
+    private static void alignResults(String command, String version, DbType dbType, String dbId, int maxN, String searchMode, String searchType) {
 
         try {
             
@@ -93,6 +103,10 @@ public class AlignResults
             stmt.setString(1, version);
             stmt.setString(2, dbId);
             stmt.setInt(3, maxN);
+            if (!searchMode.isEmpty() && !searchType.isEmpty()) {
+                stmt.setString(4, searchMode);
+                stmt.setString(5, searchType);
+            }
 
             ResultSet rs = stmt.executeQuery();
 
