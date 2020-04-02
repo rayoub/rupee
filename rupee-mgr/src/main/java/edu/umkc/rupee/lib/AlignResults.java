@@ -35,8 +35,28 @@ public class AlignResults
     static {
         counter = new AtomicInteger();
     }
-    
-    public static void alignRupeeResults(String benchmark, String version, DbType dbType, int maxN) {
+   
+    public static void alignRupeeVsMtmResults() {
+
+        String benchmark = "casp_d250";
+        String version = "casp_chain_v01_01_2020";
+        DbType dbType = DbType.CHAIN;
+        int maxN = 100;
+
+        alignRupeeResults(benchmark, version, dbType, maxN, "all_aligned", "rmsd");
+        alignRupeeResults(benchmark, version, dbType, maxN, "top_aligned", "rmsd");
+        alignRupeeResults(benchmark, version, dbType, maxN, "all_aligned", "contained_in");
+        alignRupeeResults(benchmark, version, dbType, maxN, "top_aligned", "contained_in");
+        
+        alignMtmResults(benchmark, version, dbType, maxN); 
+    }
+
+    public static void alignRupeeVsCathedralResults() {
+
+        String benchmark = "casp_d250";
+        String version = "casp_cath_v4_2_0";
+        DbType dbType = DbType.CATH;
+        int maxN = 100;
 
         alignRupeeResults(benchmark, version, dbType, maxN, "all_aligned", "rmsd");
         alignRupeeResults(benchmark, version, dbType, maxN, "top_aligned", "rmsd");
@@ -44,6 +64,25 @@ public class AlignResults
         alignRupeeResults(benchmark, version, dbType, maxN, "top_aligned", "ssap_score");
         alignRupeeResults(benchmark, version, dbType, maxN, "all_aligned", "full_length");
         alignRupeeResults(benchmark, version, dbType, maxN, "top_aligned", "full_length");
+        
+        alignCathedralResults(benchmark, version, dbType, maxN); 
+    }
+    
+    public static void alignRupeeVsSsmResults() {
+
+        String benchmark = "casp_d250";
+        String version = "casp_scop_v1_73";
+        DbType dbType = DbType.SCOP;
+        int maxN = 100;
+
+        alignRupeeResults(benchmark, version, dbType, maxN, "all_aligned", "rmsd");
+        alignRupeeResults(benchmark, version, dbType, maxN, "top_aligned", "rmsd");
+        alignRupeeResults(benchmark, version, dbType, maxN, "all_aligned", "q_score");
+        alignRupeeResults(benchmark, version, dbType, maxN, "top_aligned", "q_score");
+        alignRupeeResults(benchmark, version, dbType, maxN, "all_aligned", "full_length");
+        alignRupeeResults(benchmark, version, dbType, maxN, "top_aligned", "full_length");
+        
+        alignSsmResults(benchmark, version, dbType, maxN); 
     }
 
     public static void alignRupeeResults(String benchmark, String version, DbType dbType, int maxN, String searchMode, String searchType) {

@@ -734,7 +734,7 @@ public class Main {
     }
 
     private static void option_d(CommandLine line) throws Exception {
-    
+       
         /*
         ChainDefs.printChains("/home/ayoub/git/rupee/data/pdb/pdb");
         ChainDefs.printChains("/home/ayoub/git/rupee/data/pdb/obsolete");
@@ -751,17 +751,8 @@ public class Main {
 
         /*
         // gather alignment scores for running results
-        AlignResults.alignRupeeResults("casp_d250", "casp_chain_v01_01_2020", DbType.CHAIN, 100);
         AlignResults.alignRupeeResults("casp_d250", "casp_scop_v2_07", DbType.SCOP, 100);
-        AlignResults.alignRupeeResults("casp_d250", "casp_scop_v1_73", DbType.SCOP, 100);
-        AlignResults.alignRupeeResults("casp_d250", "casp_cath_v4_2_0", DbType.CATH, 100);
         AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", DbType.SCOP, 100);
-
-        AlignResults.alignCathedralResults("casp_d250", "casp_cath_v4_2_0", DbType.CATH, 100);
-        
-        AlignResults.alignSsmResults("casp_d250", "casp_scop_v1_73", DbType.SCOP, 100);
-        
-        AlignResults.alignMtmResults("casp_d250", "casp_chain_v01_01_2020", DbType.CHAIN, 100);
         */
     }
 
