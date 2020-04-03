@@ -1,0 +1,1056 @@
+<html class=" js flexbox canvas canvastext no-touch rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent applicationcache" lang="en"><!--<![endif]--><head>
+        <meta charset="utf-8">
+
+        <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+             More info: h5bp.com/b/378 -->
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> --> <!-- Not yet implemented -->
+
+        <title>PDBe &lt; Fold &lt; EMBL-EBI</title>
+        <meta name="description" content="EMBL-EBI"><!-- Describe what this page is about -->
+        <meta name="keywords" content="bioinformatics, europe, institute"><!-- A few keywords that relate to the content of THIS PAGE (not the whol project) -->
+        <meta name="author" content="EMBL-EBI"><!-- Your [project-name] here -->
+
+        <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+<!--MSDMETA-->
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+        <!-- CSS: implied media=all -->
+        <!-- CSS concatenated and minified via ant build script-->
+        <link rel="stylesheet" href="/web_guidelines/css/compliance/develop/boilerplate-style.css">
+        <link rel="stylesheet" href="/web_guidelines/css/compliance/develop/ebi-global.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="/web_guidelines/css/compliance/develop/ebi-visual.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="/web_guidelines/css/compliance/develop/984-24-col-fluid.css" type="text/css" media="screen">
+
+        <!-- you can replace this with [projectname]-colours.css. See http://frontier.ebi.ac.uk/web/style/colour for details of how to do this -->
+        <!-- also inform ES so we can host your colour palette file -->
+
+        <link type="text/css" rel="stylesheet" href="/web_guidelines/css/mitigation/develop/ebi-mitigation.css">
+        <link rel="stylesheet" href="/pdbe/static/frontier/css/pdbe-green-colours.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="/pdbe/static/frontier/css/local-service.css" type="text/css" media="screen">
+
+        <!-- for production the above can be replaced with -->
+        <!--
+        <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/css/compliance/mini/ebi-fluid-embl.css">
+        -->
+        <style type="text/css">
+            /* You have the option of setting a maximum width for your page, and making sure everything is centered */
+            /* body { max-width: 1600px; margin: 0 auto; } */
+        </style>
+
+ <style type="text/css">
+ 
+table * > table {
+	border: none;
+ }
+
+table.tablewide {
+	width: 75%;
+}
+
+table * > table td {
+	border: none;
+ }
+
+table.tborder {
+		border: 1px solid #AFD9A2;			
+}
+table.noborder {
+	border: 0px solid #ffffff;	
+	padding: 0px, 5px;
+}
+table.inputtable {
+	margin: 0 auto;			
+}
+div.dhead {
+	text-align: center;
+	font-size: large;
+	font-weight: bold;
+}
+div.dbody {
+	text-align: center;
+	font-size: medium;
+	font-weight: normal;
+}
+div.dbutton {
+	text-align: center;
+	font-weight: bold;
+}
+div.dsection {
+	text-align: left;
+	font-size: large;
+	font-weight: bold;
+}
+div.phead {
+	text-align: center;
+	font-size: x-large;
+	font-weight: bold;
+}
+td, code  {
+	background: none;
+}
+td, th {
+	text-align: center;
+}
+th {
+	background: #F0FAED;
+}
+td.theader, th.theader {
+	font-weight: bold;
+	text-align: center;
+	font-size: large;
+}
+td.data-left, th.data-left {
+	text-align: left;
+}
+td.data-center, th.data-center {
+	text-align: center;
+}
+td.data-right, th.data-right {
+	text-align: right;
+}
+td.data-bold {
+	font-weight: bold;
+}
+td.data-italic {
+	font-style: italic;
+}
+td.data-small {
+	padding: 1px 0px 1px 0px;
+	border: 0px solid #ffffff;
+	font-size: small;
+}
+
+.residueAlignment {
+	width: 0;
+}
+.standard {
+	width: 0;
+}
+.standard75 {
+	width: 75%;
+}
+.submission {
+	font-size: 90%;
+}
+.form-90 {
+	font-size: 90%;
+}
+.thintable {
+	border: none none;
+	border: 0px solid #ffffff;
+	width: 0;
+	margin: 0px auto;
+}
+		.data-gray {
+		    background-color: #aaa;
+		    color: white;
+		}
+
+		.data-black {
+		    background-color: #666;
+		    color: white;
+		}
+		.data-red {
+		    background-color: #C96C79;
+		    color: white;
+		}
+		.data-green {
+		    background-color: #638658;
+		    color: black;
+		}
+		.data-cyan {
+		    background-color: #9BA3C7;
+		    color: black;
+		}
+		.data-fred {
+		    background-color: #ffffff;
+		    color: red;
+		}
+		.data-fblue {
+		    background-color: #ffffff;
+		    color: blue;
+		}
+		.data-fblack {
+		    background-color: #ffffff;
+		    color: black;
+		}
+
+pre.plain {
+	font-size: small;
+	text-align: center; 
+	padding:0; 
+	background-color:white; 
+	border-width:0;
+}
+
+
+ </style>
+
+<!--MSDSTYLE-->
+
+        <!-- end CSS-->
+
+        <!-- All JavaScript at the bottom, except for Modernizr / Respond.
+             Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
+             For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
+<script type="text/javascript">
+function JSRepeat ( f ) {
+  f.action_key.value = "act_repeat";
+  f.submit();
+}
+
+function JSChangeChain ( f ) {
+  f.action_key.value = "change_chain";
+  f.submit();
+}
+
+function JSToQuery ( f ) {
+  f.action_key.value = "go_to_query";
+  f.submit();
+}
+
+function JSToFirstPage ( f ) {
+  f.action_key.value = "go_to_first";
+  f.submit();
+}
+
+function JSToPrevPage ( f ) {
+  f.action_key.value = "go_to_previous";
+  f.submit();
+}
+
+function JSToNextPage ( f ) {
+  f.action_key.value = "go_to_next";
+  f.submit();
+}
+
+function JSToLastPage ( f ) {
+  f.action_key.value = "go_to_last";
+  f.submit();
+}
+
+function JSResort ( f ) {
+  f.action_key.value = "resort_results";
+  f.submit();
+}
+
+function JSDetails ( f,matchNo ) {
+  f.action_key.value = "show_details";
+  f.match_key.value = matchNo;
+  f.submit();
+  return false;
+}
+
+function JSToMatch ( f ) {
+  f.action_key.value = "go_to_match";
+  f.submit();
+}
+
+function JSToSCOP ( sel ) {
+  selIndex = sel.selectedIndex;
+  sel.form.edt_match_no.value = sel.options[selIndex].value;
+  JSToMatch ( sel.form );
+}
+
+function JSToSCOPNeighbour ( f,n ) {
+  f.edt_match_no.value = n;
+  JSToMatch ( f );
+}
+
+function JSDownloadRList ( f ) {
+  f.action = "reslist.dat";
+  f.action_key.value = "download_rlist";
+  f.submit();
+}
+
+function JSDownloadXML ( f ) {
+  f.action = "ssmresults.xml";
+  f.action_key.value = "download_xml";
+  f.submit();
+}
+
+function JSDownloadSeqs ( f,checked ) {
+  f.action = "fasta.seq";
+  if (checked==0)  f.action_key.value="download_seqs";
+             else  f.action_key.value="download_ckd_seqs";
+  f.submit();
+}
+
+function JSDownloadAlgns ( f,checked ) {
+  f.action = "fasta.seq";
+  if (checked==0) f.action_key.value="download_algns";
+             else f.action_key.value="download_ckd_algns";
+  f.submit();
+}
+
+function JSSubmitMA ( f ) {
+  f.action_key.value = "submit_for_ma";
+  f.submit();
+}
+
+function JSBringOnTop ( f ) {
+  f.action_key.value = "bring_on_top";
+  f.submit();
+}
+
+function JSUncheckAll ( f ) {
+  f.action_key.value = "uncheck_all_matches";
+  f.submit();
+}
+
+function JSCheckAll ( f ) {
+  f.action_key.value = "check_all_matches";
+  f.submit();
+}
+
+function openWindow ( url,w,h )  {
+var options = "toolbar=no,scrollbars=yes,width="+w+
+              ",height="+h+
+              ",screenX="+(window.screenX+80)+
+              ",screenY="+(window.screenY+80);
+  window.open ( url,"",options );
+}
+
+</script>
+<!--MSDSCRIPT-->
+        <!-- Full build -->
+        <!-- <script src="//www.ebi.ac.uk/web_guidelines/js/libs/modernizr.minified.2.1.6.js"></script> -->
+
+        <!-- custom build (lacks most of the "advanced" HTML5 support -->
+        <script src="/web_guidelines/js/libs/modernizr.custom.49274.js"></script>
+
+    <style type="text/css">  #cookie-banner {position:absolute;top:-9999px;background-color:#444;width:100%;border-bottom:5px solid #444;left:0;}  #cookie-banner .container_24 {max-width:800px;margin:0 auto;}  #cookie-banner h1 {font-size:medium;color:#ddd;margin:5px 0;font-family:Verdana,sans-serif;}  #cookie-banner p {margin:5px 0;color:#eee;font-size:smaller;font-family:Verdana,sans-serif;line-height:1.538;}  #cookie-banner a {color:#fff;}  #cookie-banner a#cookie-dismiss {float:right;margin:0.5em 0 0.5em 0.5em;padding:3px 9px;-moz-border-radius:5px;-khtml-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;font-size:108%;border-width:1px;box-shadow:0px 2px 2px #adadad;-moz-box-shadow:0px 2px 2px #adadad;-khtml-box-shadow:0px 2px 2px #adadad;-webkit-box-shadow:0px 2px 2px #adadad;width:auto;*padding-top:0px;*padding-bottom:0px;border-color:#295c5c;background-color:#207a7a;background-image:-moz-linear-gradient(top, #54bdbd, #207a7a);background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0, #54bdbd),color-stop(1, #207a7a));background-image:-webkit-linear-gradient(#54bdbd, #207a7a);background-image:linear-gradient(top, #54bdbd, #207a7a);filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#54bdbd', EndColorStr='#207a7a');color:#f8f8f8;text-shadow:#145251 0 1px 1px;display:inline;text-decoration:none;}</style></head>
+
+    <body class="level2 section-pdbe no-global-search" onunload="JSUnloadPage();" style="padding-top: 46px;"> <!-- add any of your classes or IDs -->
+        <div id="skip-to">
+            <ul>
+                <li><a href="#content">Skip to main content</a></li>
+                <li><a href="#local-nav">Skip to local navigation</a></li>
+                <li><a href="#global-nav">Skip to EBI global navigation menu</a></li>
+
+                <li><a href="#global-nav-expanded">Skip to expanded EBI global navigation menu (includes all sub-sections)</a></li>
+            </ul>
+        </div>
+
+        <div id="wrapper" class="container_24">
+        <div class="headerdiv" id="headerdiv">
+            <div class="header">
+               <div id="global-masthead" class="masthead grid_24">
+                    <!--This has to be one line and no newline characters-->
+                    <a href="//www.ebi.ac.uk/" title="Go to the EMBL-EBI homepage"><img src="//www.ebi.ac.uk/web_guidelines/images/logos/EMBL-EBI/EMBL_EBI_Logo_white.png" alt="EMBL European Bioinformatics Institute"></a>
+
+                    <nav>
+                        <ul id="global-nav">
+                            <!-- set active class as appropriate -->
+                            <li class="first active" id="services"><a href="//www.ebi.ac.uk/services">Services</a></li>
+                            <li id="research"><a href="//www.ebi.ac.uk/research">Research</a></li>
+                            <li id="training"><a href="//www.ebi.ac.uk/training">Training</a></li>
+                            <li id="industry"><a href="//www.ebi.ac.uk/industry">Industry</a></li>
+
+                            <li id="about" class="last"><a href="//www.ebi.ac.uk/about">About us</a></li>
+                        </ul>
+                    </nav>
+
+                </div>
+
+		<div id="local-masthead" class="masthead grid_24">
+
+                    <!-- CHOOSE -->
+                    <div id="local-logo" class="grid_8 alpha">
+                        <div class="grid_24">
+                            <h1 class="float-l heading">
+                                <a href="/pdbe" style="border-bottom-width: 0px;">
+
+                                    <img alt="Protein Data Bank in Europe" title="Go to the Protein Data Bank in Europe homepage" class="logo" src="/pdbe/static/frontier/images/logos/PDBe/logo.png">
+                                </a>
+                                <span>Protein Data Bank <br>in Europe</span>
+
+                            </h1>
+                        </div>
+                        <div class="grid_24">
+                            <h1 class="float-l strapline">Bringing Structure to Biology</h1>
+
+                        </div>
+                    </div>
+                    <div id="local-service" class="grid_16 alpha omega">
+                        <div class="grid_12 omega" style="margin-top: 1em; text-align: center;">
+                            <h1 class="heading">PDBeFold</h1>
+                            <a class="tinyURL" href="http://pdbe.org/ssm">pdbe.org/ssm</a>
+                        </div>
+                        <div class="grid_12 omega" style="float: right; text-align: center;">
+
+                            <div class="affiliate-list omega" style="float: right">
+                                <div class="affiliate" style="background: none;">
+                                    <a href="http://www.wwpdb.org" title="Go to the wwPDB homepage" target="_wwpdb">
+                                        <img alt="wwPDB" src="/pdbe/static/frontier/images/logos/wwPDB/wwpdb.png">
+                                    </a>
+                                </div>
+                                <div class="affiliate" style="background: none;">
+                                    <a href="http://emdatabank.org/" title="Go to EMDataBank homepage" target="_empdb">
+                                        <img style="padding-top: 0;" alt="EMDataBank" src="/pdbe/static/frontier/images/logos/EMDataBank/EMDataBank.png">
+
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <nav>
+                        <ul id="local-nav" class="grid_24">
+                            <li class="action first">
+
+                                <div>
+                                    <a onclick="window.open('/pdbe/resources/popups/feedback.html',
+                                        'mywindow',
+                                        'width=600,height=400,toolbar=no,location=no,\n\
+                                                 directories=no,status=no,menubar=no,scrollbars=no, \n\
+                                                 copyhistory=no,resizable=no');return false;" href="">
+                                        <img height="16" style="border:none; text-decoration: none;" alt="" src="/pdbe/static/frontier/images/icons/feedback_w_16.png">
+                                        <span>Feedback</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="action last">
+
+                                <div>
+                                    <!-- AddThis Button BEGIN -->
+                                    <a href="http://www.addthis.com/bookmark.php?v=250&amp;pubid=ra-5017dfbd59a8b9f0" class="addthis_button">
+                                        <img height="16" style="border:0" alt="" src="/pdbe/static/frontier/images/icons/share_w_16.png">
+                                        <span>Share</span>
+                                    </a>
+                                    <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5017dfbd59a8b9f0"></script>
+                                    <!-- AddThis Button END -->
+
+                                </div><!-- do not delete this --><!-- it fixes the IE duplicate characters -->
+                            </li>
+                        </ul>
+                    </nav>
+
+                   <!-- /local-nav -->
+
+                </div>
+            </div>
+        </div>
+
+            <div id="content" role="main" class="grid_24">
+
+                <!-- If you require a breadcrumb trail, its root should be your service.
+                       You don't need a breadcrumb trail on the homepage of your service... -->
+
+                <!--
+                <nav id="breadcrumb">
+                    <p>
+                        <a href="#/link_1">Link 1</a> &gt;
+                        <a href="#/link_2">Link 2</a> &gt;
+                        Link 3
+                    </p>
+                </nav>
+                -->
+
+                <!-- Example layout containers -->
+                <div class="pdbe-content">
+  <form name="res_list_form" method="post" action="/msd-srv/ssm/cgi-bin/ssmserver" class="form-90">
+<input name="page_key" type="hidden" value="res_list_page">
+<input name="action_key" type="hidden" value="none">
+<input name="dir_key" type="hidden" value="735-32-649">
+<input name="match_key" type="hidden" value="0">
+<div class="phead">Structure Alignment Results. &nbsp;<sup><a href="javascript:openWindow('/msd-srv/ssm/ssmresults.html',800,700);" class="help_link"><img style="border:0px" src="/msd-srv/prot_int/images/help.png" alt="help"></a></sup></div>
+<div class="dsection">Query: <b>T0989TS261-D1.pdb:A</b></div>
+<hr align="LEFT" size="2" width="100%">
+<div class="dsection"> Examined&nbsp;94476&nbsp;entries, 
+<small>(95481&nbsp;chains).</small>&nbsp;&nbsp;Displaying Matches&nbsp;1-20&nbsp;of&nbsp;75258.</div>
+<input type="button" name="btn_go_to_query_1" value="Back to query" onclick="JSToQuery(this.form)">&nbsp;&nbsp;<input type="button" name="btn_go_to_next_1" value="next" onclick="JSToNextPage(this.form)"><input type="button" name="btn_go_to_last_1" value="last page" onclick="JSToLastPage(this.form)"><a name="resort">Sort by &nbsp;</a>
+<select name="sel_sorting" onchange="JSResort(this.form)">
+<option style="background-color: DarkGray;" value="rmsd_inc" selected="selected">rmsd</option>
+<option style="background-color: DarkGray;" value="align_length_dec">align length</option>
+<option style="background-color: DarkGray;" value="qscore_dec">Q-score</option>
+<option style="background-color: DarkGray;" value="pscore_inc">P-score</option>
+<option style="background-color: DarkGray;" value="zscore_dec">Z-score</option>
+<option style="background-color: DarkGray;" value="seqident_dec">Seq %</option>
+<option style="background-color: DarkGray;" value="matched_SSEs_dec">matched SSEs</option>
+<option style="background-color: DarkGray;" value="ngaps_inc">number of gaps</option>
+
+</select>
+
+&nbsp;&nbsp;&nbsp;&nbsp;arrange by SCOP family <input name="ckb_scop_sorting" type="checkbox" onclick="JSResort(this.form)">
+&nbsp;&nbsp;&nbsp;&nbsp;match &nbsp;<input name="edt_match_no" type="text" size="6" value="1" maxlength="10"><input type="button" name="btn_go_to_match" value="jump" onclick="JSToMatch(document.res_list_form)">
+&nbsp;<p>
+</p><table class="data-table-b tborder"><tbody><tr>
+<th rowspan="2" nowrap="nowrap">&nbsp;##&nbsp;</th>
+<th colspan="3" nowrap="nowrap">&nbsp;Scoring&nbsp;&nbsp;<sup><a href="javascript:openWindow('/msd-srv/ssm/ssmresults.html',800,700);" class="help_link"><img style="border:0px" src="/msd-srv/prot_int/images/help.png" alt="help"></a></sup></th>
+<th rowspan="2" nowrap="nowrap"><a href="javascript:openWindow('/msd-srv/ssm/rl_rmsd.html',500,300);" class="help_link">RMSD</a></th>
+<th rowspan="2" nowrap="nowrap"><a href="javascript:openWindow('/msd-srv/ssm/rl_nalgn.html',500,300);" class="help_link">N<sub>align</sub></a></th>
+<th rowspan="2" nowrap="nowrap"><a href="javascript:openWindow('/msd-srv/ssm/rl_ngaps.html',500,300);" class="help_link">N<sub>g</sub></a></th>
+<th rowspan="2" nowrap="nowrap"><a href="javascript:openWindow('/msd-srv/ssm/rl_seqid.html',500,300);" class="help_link">%<sub>seq</sub></a></th>
+<th colspan="3" nowrap="nowrap">Query</th>
+<th colspan="5" nowrap="nowrap">Target (SCOP domain)</th>
+</tr><tr>
+<th nowrap="nowrap"><a href="javascript:openWindow('/msd-srv/ssm/rl_qscore.html',500,300);" class="help_link">Q</a></th>
+<th nowrap="nowrap"><a href="javascript:openWindow('/msd-srv/ssm/rl_zscore.html',500,300);" class="help_link">P</a></th>
+<th nowrap="nowrap"><a href="javascript:openWindow('/msd-srv/ssm/rl_zscore.html',500,300);" class="help_link">Z</a></th>
+<th nowrap="nowrap"><a href="javascript:openWindow('/msd-srv/ssm/rl_chain.html',500,300);" class="help_link">Ch</a></th>
+<th nowrap="nowrap"><a href="javascript:openWindow('/msd-srv/ssm/rl_nresq.html',500,300);" class="help_link">N<sub>res</sub></a></th>
+<th nowrap="nowrap"><a href="javascript:openWindow('/msd-srv/ssm/rl_psseq.html',500,300);" class="help_link">%<sub>sse</sub></a></th>
+<th nowrap="nowrap"><a href="javascript:openWindow('/msd-srv/ssm/rl_match.html',500,300);" class="help_link">Match</a></th>
+<th nowrap="nowrap"><a href="javascript:openWindow('/msd-srv/ssm/rl_psset.html',500,300);" class="help_link">%<sub>sse</sub></a></th>
+<th nowrap="nowrap"><a href="javascript:openWindow('/msd-srv/ssm/rl_nrest.html',500,300);" class="help_link">N<sub>res</sub></a></th>
+<th nowrap="nowrap">×</th>
+<th nowrap="nowrap">Title</th>
+</tr><tr>
+<td nowrap="nowrap"><font color="blue"> <big> <a href="javascript:JSDetails(document.res_list_form,1)">1</a>  </big> </font>
+</td>
+<td nowrap="nowrap"><code>  0.42</code></td>
+<td nowrap="nowrap"><code>     0.0</code></td>
+<td nowrap="nowrap"><code>     2.5</code></td>
+<td nowrap="nowrap"><code>      0.00</code></td>
+<td nowrap="nowrap"><code>75</code></td>
+<td nowrap="nowrap"><code>4</code></td>
+<td nowrap="nowrap"><code>100</code></td>
+<td nowrap="nowrap"><code>A</code></td>
+<td nowrap="nowrap"><code>134</code></td>
+<td nowrap="nowrap"><code>33</code></td>
+<td nowrap="nowrap"><code> d2cm0a1</code></td>
+<td nowrap="nowrap"><code>29</code></td>
+<td nowrap="nowrap"><code>99</code></td>
+<td><input name="ckb_rowcheck_2_0" type="checkbox">
+</td>
+<td class="data-left"><font size="-1">THE PUB DOMAIN FUNCTIONS AS A P97 BINDING MODULE IN HUMAN PEPTIDE N-GLYCANASE.</font></td>
+</tr><tr>
+<td nowrap="nowrap"><font color="blue"> <big> <a href="javascript:JSDetails(document.res_list_form,2)">2</a>  </big> </font>
+</td>
+<td nowrap="nowrap"><code>  0.51</code></td>
+<td nowrap="nowrap"><code>     0.0</code></td>
+<td nowrap="nowrap"><code>     4.5</code></td>
+<td nowrap="nowrap"><code>      0.00</code></td>
+<td nowrap="nowrap"><code>80</code></td>
+<td nowrap="nowrap"><code>2</code></td>
+<td nowrap="nowrap"><code>100</code></td>
+<td nowrap="nowrap"><code>A</code></td>
+<td nowrap="nowrap"><code>134</code></td>
+<td nowrap="nowrap"><code>33</code></td>
+<td nowrap="nowrap"><code> d1an8a1</code></td>
+<td nowrap="nowrap"><code>22</code></td>
+<td nowrap="nowrap"><code>93</code></td>
+<td><input name="ckb_rowcheck_2_1" type="checkbox">
+</td>
+<td class="data-left"><font size="-1">CRYSTAL STRUCTURE OF THE STREPTOCOCCAL SUPERANTIGEN SPE-C</font></td>
+</tr><tr>
+<td nowrap="nowrap"><font color="blue"> <big> <a href="javascript:JSDetails(document.res_list_form,3)">3</a>  </big> </font>
+</td>
+<td nowrap="nowrap"><code>  0.76</code></td>
+<td nowrap="nowrap"><code>     0.0</code></td>
+<td nowrap="nowrap"><code>     2.8</code></td>
+<td nowrap="nowrap"><code>      0.00</code></td>
+<td nowrap="nowrap"><code>117</code></td>
+<td nowrap="nowrap"><code>3</code></td>
+<td nowrap="nowrap"><code>100</code></td>
+<td nowrap="nowrap"><code>A</code></td>
+<td nowrap="nowrap"><code>134</code></td>
+<td nowrap="nowrap"><code>33</code></td>
+<td nowrap="nowrap"><code> d2bl5a1</code></td>
+<td nowrap="nowrap"><code>20</code></td>
+<td nowrap="nowrap"><code>134</code></td>
+<td><input name="ckb_rowcheck_2_2" type="checkbox">
+</td>
+<td class="data-left"><font size="-1">SOLUTION STRUCTURE OF THE KH-QUA2 REGION OF THE XENOPUS STAR-GSG QUAKING PROTEIN.</font></td>
+</tr><tr>
+<td nowrap="nowrap"><font color="blue"> <big> <a href="javascript:JSDetails(document.res_list_form,4)">4</a>  </big> </font>
+</td>
+<td nowrap="nowrap"><code>  0.87</code></td>
+<td nowrap="nowrap"><code>     0.0</code></td>
+<td nowrap="nowrap"><code>     3.1</code></td>
+<td nowrap="nowrap"><code>      0.00</code></td>
+<td nowrap="nowrap"><code>125</code></td>
+<td nowrap="nowrap"><code>1</code></td>
+<td nowrap="nowrap"><code>100</code></td>
+<td nowrap="nowrap"><code>A</code></td>
+<td nowrap="nowrap"><code>134</code></td>
+<td nowrap="nowrap"><code>33</code></td>
+<td nowrap="nowrap"><code> d1y9wa1</code></td>
+<td nowrap="nowrap"><code>20</code></td>
+<td nowrap="nowrap"><code>134</code></td>
+<td><input name="ckb_rowcheck_2_3" type="checkbox">
+</td>
+<td class="data-left"><font size="-1">STRUCTURAL GENOMICS, 1.9A CRYSTAL STRUCTURE OF AN ACETYLTRANSFERASE FROM BACILLUS CEREUS ATCC 14579</font></td>
+</tr><tr>
+<td nowrap="nowrap"><font color="blue"> <big> <a href="javascript:JSDetails(document.res_list_form,5)">5</a>  </big> </font>
+</td>
+<td nowrap="nowrap"><code>  0.63</code></td>
+<td nowrap="nowrap"><code>     0.0</code></td>
+<td nowrap="nowrap"><code>     4.5</code></td>
+<td nowrap="nowrap"><code>      0.00</code></td>
+<td nowrap="nowrap"><code>101</code></td>
+<td nowrap="nowrap"><code>4</code></td>
+<td nowrap="nowrap"><code>100</code></td>
+<td nowrap="nowrap"><code>A</code></td>
+<td nowrap="nowrap"><code>134</code></td>
+<td nowrap="nowrap"><code>33</code></td>
+<td nowrap="nowrap"><code> d1jkja1</code></td>
+<td nowrap="nowrap"><code>20</code></td>
+<td nowrap="nowrap"><code>121</code></td>
+<td><input name="ckb_rowcheck_2_4" type="checkbox">
+</td>
+<td class="data-left"><font size="-1">E. COLI SCS</font></td>
+</tr><tr>
+<td nowrap="nowrap"><font color="blue"> <big> <a href="javascript:JSDetails(document.res_list_form,6)">6</a>  </big> </font>
+</td>
+<td nowrap="nowrap"><code>  0.80</code></td>
+<td nowrap="nowrap"><code>     0.0</code></td>
+<td nowrap="nowrap"><code>     3.4</code></td>
+<td nowrap="nowrap"><code>      0.00</code></td>
+<td nowrap="nowrap"><code>120</code></td>
+<td nowrap="nowrap"><code>2</code></td>
+<td nowrap="nowrap"><code>100</code></td>
+<td nowrap="nowrap"><code>A</code></td>
+<td nowrap="nowrap"><code>134</code></td>
+<td nowrap="nowrap"><code>33</code></td>
+<td nowrap="nowrap"><code> d1ut7a_</code></td>
+<td nowrap="nowrap"><code>22</code></td>
+<td nowrap="nowrap"><code>134</code></td>
+<td><input name="ckb_rowcheck_2_5" type="checkbox">
+</td>
+<td class="data-left"><font size="-1">STRUCTURE OF THE CONSERVED DOMAIN OF ANAC, A MEMBER OF THE NAC FAMILY OF TRANSCRIPTION FACTORS</font></td>
+</tr><tr>
+<td nowrap="nowrap"><font color="blue"> <big> <a href="javascript:JSDetails(document.res_list_form,7)">7</a>  </big> </font>
+</td>
+<td nowrap="nowrap"><code>  0.80</code></td>
+<td nowrap="nowrap"><code>     0.0</code></td>
+<td nowrap="nowrap"><code>     3.4</code></td>
+<td nowrap="nowrap"><code>      0.00</code></td>
+<td nowrap="nowrap"><code>120</code></td>
+<td nowrap="nowrap"><code>2</code></td>
+<td nowrap="nowrap"><code>100</code></td>
+<td nowrap="nowrap"><code>A</code></td>
+<td nowrap="nowrap"><code>134</code></td>
+<td nowrap="nowrap"><code>33</code></td>
+<td nowrap="nowrap"><code> d1ut4a_</code></td>
+<td nowrap="nowrap"><code>22</code></td>
+<td nowrap="nowrap"><code>134</code></td>
+<td><input name="ckb_rowcheck_2_6" type="checkbox">
+</td>
+<td class="data-left"><font size="-1">STRUCTURE OF THE CONSERVED DOMAIN OF ANAC, A MEMBER OF THE NAC FAMILY OF TRANSCRIPTION FACTORS</font></td>
+</tr><tr>
+<td nowrap="nowrap"><font color="blue"> <big> <a href="javascript:JSDetails(document.res_list_form,8)">8</a>  </big> </font>
+</td>
+<td nowrap="nowrap"><code>  0.58</code></td>
+<td nowrap="nowrap"><code>     0.4</code></td>
+<td nowrap="nowrap"><code>     3.6</code></td>
+<td nowrap="nowrap"><code>      0.00</code></td>
+<td nowrap="nowrap"><code>87</code></td>
+<td nowrap="nowrap"><code>2</code></td>
+<td nowrap="nowrap"><code>100</code></td>
+<td nowrap="nowrap"><code>A</code></td>
+<td nowrap="nowrap"><code>134</code></td>
+<td nowrap="nowrap"><code>33</code></td>
+<td nowrap="nowrap"><code> d1x5qa1</code></td>
+<td nowrap="nowrap"><code>29</code></td>
+<td nowrap="nowrap"><code>97</code></td>
+<td><input name="ckb_rowcheck_2_7" type="checkbox">
+</td>
+<td class="data-left"><font size="-1">SOLUTION STRUCTURE OF THE FIRST PDZ DOMAIN OF SCRIBBLE HOMOLOG PROTEIN (HSCRIB)</font></td>
+</tr><tr>
+<td nowrap="nowrap"><font color="blue"> <big> <a href="javascript:JSDetails(document.res_list_form,9)">9</a>  </big> </font>
+</td>
+<td nowrap="nowrap"><code>  0.78</code></td>
+<td nowrap="nowrap"><code>     0.0</code></td>
+<td nowrap="nowrap"><code>     2.5</code></td>
+<td nowrap="nowrap"><code>      0.00</code></td>
+<td nowrap="nowrap"><code>118</code></td>
+<td nowrap="nowrap"><code>3</code></td>
+<td nowrap="nowrap"><code>100</code></td>
+<td nowrap="nowrap"><code>A</code></td>
+<td nowrap="nowrap"><code>134</code></td>
+<td nowrap="nowrap"><code>33</code></td>
+<td nowrap="nowrap"><code> d1d6ta_</code></td>
+<td nowrap="nowrap"><code>33</code></td>
+<td nowrap="nowrap"><code>134</code></td>
+<td><input name="ckb_rowcheck_2_8" type="checkbox">
+</td>
+<td class="data-left"><font size="-1">RNASE P PROTEIN FROM STAPHYLOCOCCUS AUREUS</font></td>
+</tr><tr>
+<td nowrap="nowrap"><font color="blue"> <big> <a href="javascript:JSDetails(document.res_list_form,10)">10</a>  </big> </font>
+</td>
+<td nowrap="nowrap"><code>  0.96</code></td>
+<td nowrap="nowrap"><code>     0.4</code></td>
+<td nowrap="nowrap"><code>     4.0</code></td>
+<td nowrap="nowrap"><code>      0.00</code></td>
+<td nowrap="nowrap"><code>131</code></td>
+<td nowrap="nowrap"><code>1</code></td>
+<td nowrap="nowrap"><code>100</code></td>
+<td nowrap="nowrap"><code>A</code></td>
+<td nowrap="nowrap"><code>134</code></td>
+<td nowrap="nowrap"><code>33</code></td>
+<td nowrap="nowrap"><code> d1xhoa_</code></td>
+<td nowrap="nowrap"><code>25</code></td>
+<td nowrap="nowrap"><code>134</code></td>
+<td><input name="ckb_rowcheck_2_9" type="checkbox">
+</td>
+<td class="data-left"><font size="-1">CHORISMATE MUTASE FROM CLOSTRIDIUM THERMOCELLUM CTH-682</font></td>
+</tr><tr>
+<td nowrap="nowrap"><font color="blue"> <big> <a href="javascript:JSDetails(document.res_list_form,11)">11</a>  </big> </font>
+</td>
+<td nowrap="nowrap"><code>  0.96</code></td>
+<td nowrap="nowrap"><code>     0.1</code></td>
+<td nowrap="nowrap"><code>     3.2</code></td>
+<td nowrap="nowrap"><code>      0.00</code></td>
+<td nowrap="nowrap"><code>131</code></td>
+<td nowrap="nowrap"><code>1</code></td>
+<td nowrap="nowrap"><code>100</code></td>
+<td nowrap="nowrap"><code>A</code></td>
+<td nowrap="nowrap"><code>134</code></td>
+<td nowrap="nowrap"><code>33</code></td>
+<td nowrap="nowrap"><code> d1odea_</code></td>
+<td nowrap="nowrap"><code>25</code></td>
+<td nowrap="nowrap"><code>134</code></td>
+<td><input name="ckb_rowcheck_2_10" type="checkbox">
+</td>
+<td class="data-left"><font size="-1">CRYSTAL ANALYSIS OF CHORISMATE MUTASE FROM THERMUS THERMOPHILUS.</font></td>
+</tr><tr>
+<td nowrap="nowrap"><font color="blue"> <big> <a href="javascript:JSDetails(document.res_list_form,12)">12</a>  </big> </font>
+</td>
+<td nowrap="nowrap"><code>  0.44</code></td>
+<td nowrap="nowrap"><code>     0.0</code></td>
+<td nowrap="nowrap"><code>     2.5</code></td>
+<td nowrap="nowrap"><code>      0.00</code></td>
+<td nowrap="nowrap"><code>71</code></td>
+<td nowrap="nowrap"><code>3</code></td>
+<td nowrap="nowrap"><code>100</code></td>
+<td nowrap="nowrap"><code>A</code></td>
+<td nowrap="nowrap"><code>134</code></td>
+<td nowrap="nowrap"><code>33</code></td>
+<td nowrap="nowrap"><code> d1tw2a1</code></td>
+<td nowrap="nowrap"><code>29</code></td>
+<td nowrap="nowrap"><code>85</code></td>
+<td><input name="ckb_rowcheck_2_11" type="checkbox">
+</td>
+<td class="data-left"><font size="-1">CRYSTAL STRUCTURE OF CARMINOMYCIN-4-O-METHYLTRANSFERASE (DNRK) IN COMPLEX WITH S-ADENOSYL-L-HOMOCYSTEIN (SAH) AND 4-METHOXY-E-RHODOMYCIN T (M-ET)</font></td>
+</tr><tr>
+<td nowrap="nowrap"><font color="blue"> <big> <a href="javascript:JSDetails(document.res_list_form,13)">13</a>  </big> </font>
+</td>
+<td nowrap="nowrap"><code>  0.44</code></td>
+<td nowrap="nowrap"><code>     0.0</code></td>
+<td nowrap="nowrap"><code>     2.7</code></td>
+<td nowrap="nowrap"><code>      0.00</code></td>
+<td nowrap="nowrap"><code>71</code></td>
+<td nowrap="nowrap"><code>3</code></td>
+<td nowrap="nowrap"><code>100</code></td>
+<td nowrap="nowrap"><code>A</code></td>
+<td nowrap="nowrap"><code>134</code></td>
+<td nowrap="nowrap"><code>33</code></td>
+<td nowrap="nowrap"><code> d1tw3a1</code></td>
+<td nowrap="nowrap"><code>29</code></td>
+<td nowrap="nowrap"><code>85</code></td>
+<td><input name="ckb_rowcheck_2_12" type="checkbox">
+</td>
+<td class="data-left"><font size="-1">CRYSTAL STRUCTURE OF CARMINOMYCIN-4-O-METHYLTRANSFERASE (DNRK) IN COMPLEX WITH S-ADENOSYL-L-HOMOCYSTEIN (SAH) AND 4-METHOXY-E-RHODOMYCIN T (M-ET)</font></td>
+</tr><tr>
+<td nowrap="nowrap"><font color="blue"> <big> <a href="javascript:JSDetails(document.res_list_form,14)">14</a>  </big> </font>
+</td>
+<td nowrap="nowrap"><code>  0.69</code></td>
+<td nowrap="nowrap"><code>    -0.0</code></td>
+<td nowrap="nowrap"><code>     2.3</code></td>
+<td nowrap="nowrap"><code>      0.00</code></td>
+<td nowrap="nowrap"><code>95</code></td>
+<td nowrap="nowrap"><code>2</code></td>
+<td nowrap="nowrap"><code>100</code></td>
+<td nowrap="nowrap"><code>A</code></td>
+<td nowrap="nowrap"><code>134</code></td>
+<td nowrap="nowrap"><code>33</code></td>
+<td nowrap="nowrap"><code> d1rkia1</code></td>
+<td nowrap="nowrap"><code>20</code></td>
+<td nowrap="nowrap"><code>98</code></td>
+<td><input name="ckb_rowcheck_2_13" type="checkbox">
+</td>
+<td class="data-left"><font size="-1">STRUCTURE OF PAG5_736 FROM P. AEROPHILUM WITH THREE DISULPHIDE BONDS</font></td>
+</tr><tr>
+<td nowrap="nowrap"><font color="blue"> <big> <a href="javascript:JSDetails(document.res_list_form,15)">15</a>  </big> </font>
+</td>
+<td nowrap="nowrap"><code>  0.40</code></td>
+<td nowrap="nowrap"><code>     0.3</code></td>
+<td nowrap="nowrap"><code>     2.4</code></td>
+<td nowrap="nowrap"><code>      0.00</code></td>
+<td nowrap="nowrap"><code>85</code></td>
+<td nowrap="nowrap"><code>8</code></td>
+<td nowrap="nowrap"><code>100</code></td>
+<td nowrap="nowrap"><code>A</code></td>
+<td nowrap="nowrap"><code>134</code></td>
+<td nowrap="nowrap"><code>33</code></td>
+<td nowrap="nowrap"><code> d1kn1a_</code></td>
+<td nowrap="nowrap"><code>25</code></td>
+<td nowrap="nowrap"><code>134</code></td>
+<td><input name="ckb_rowcheck_2_14" type="checkbox">
+</td>
+<td class="data-left"><font size="-1">CRYSTAL STRUCTURE OF ALLOPHYCOCYANIN</font></td>
+</tr><tr>
+<td nowrap="nowrap"><font color="blue"> <big> <a href="javascript:JSDetails(document.res_list_form,16)">16</a>  </big> </font>
+</td>
+<td nowrap="nowrap"><code>  0.64</code></td>
+<td nowrap="nowrap"><code>    -0.0</code></td>
+<td nowrap="nowrap"><code>     3.1</code></td>
+<td nowrap="nowrap"><code>      0.00</code></td>
+<td nowrap="nowrap"><code>107</code></td>
+<td nowrap="nowrap"><code>5</code></td>
+<td nowrap="nowrap"><code>100</code></td>
+<td nowrap="nowrap"><code>A</code></td>
+<td nowrap="nowrap"><code>134</code></td>
+<td nowrap="nowrap"><code>33</code></td>
+<td nowrap="nowrap"><code> d1k0za_</code></td>
+<td nowrap="nowrap"><code>22</code></td>
+<td nowrap="nowrap"><code>134</code></td>
+<td><input name="ckb_rowcheck_2_15" type="checkbox">
+</td>
+<td class="data-left"><font size="-1">CRYSTAL STRUCTURE OF THE PVUII ENDONUCLEASE WITH PR3+ AND SO4 IONS BOUND IN THE ACTIVE SITE AT 2.05A.</font></td>
+</tr><tr>
+<td nowrap="nowrap"><font color="blue"> <big> <a href="javascript:JSDetails(document.res_list_form,17)">17</a>  </big> </font>
+</td>
+<td nowrap="nowrap"><code>  0.73</code></td>
+<td nowrap="nowrap"><code>     0.0</code></td>
+<td nowrap="nowrap"><code>     2.4</code></td>
+<td nowrap="nowrap"><code>      0.00</code></td>
+<td nowrap="nowrap"><code>114</code></td>
+<td nowrap="nowrap"><code>2</code></td>
+<td nowrap="nowrap"><code>100</code></td>
+<td nowrap="nowrap"><code>A</code></td>
+<td nowrap="nowrap"><code>134</code></td>
+<td nowrap="nowrap"><code>33</code></td>
+<td nowrap="nowrap"><code> d1e3ha2</code></td>
+<td nowrap="nowrap"><code>22</code></td>
+<td nowrap="nowrap"><code>132</code></td>
+<td><input name="ckb_rowcheck_2_16" type="checkbox">
+</td>
+<td class="data-left"><font size="-1">SEMET DERIVATIVE OF STREPTOMYCES ANTIBIOTICUS PNPASE/GPSI ENZYME</font></td>
+</tr><tr>
+<td nowrap="nowrap"><font color="blue"> <big> <a href="javascript:JSDetails(document.res_list_form,18)">18</a>  </big> </font>
+</td>
+<td nowrap="nowrap"><code>  0.59</code></td>
+<td nowrap="nowrap"><code>     0.0</code></td>
+<td nowrap="nowrap"><code>     4.5</code></td>
+<td nowrap="nowrap"><code>      0.00</code></td>
+<td nowrap="nowrap"><code>89</code></td>
+<td nowrap="nowrap"><code>2</code></td>
+<td nowrap="nowrap"><code>100</code></td>
+<td nowrap="nowrap"><code>A</code></td>
+<td nowrap="nowrap"><code>134</code></td>
+<td nowrap="nowrap"><code>33</code></td>
+<td nowrap="nowrap"><code> d2bvca1</code></td>
+<td nowrap="nowrap"><code>29</code></td>
+<td nowrap="nowrap"><code>100</code></td>
+<td><input name="ckb_rowcheck_2_17" type="checkbox">
+</td>
+<td class="data-left"><font size="-1">CRYSTAL STRUCTURE OF MYCOBACTERIUM TUBERCULOSIS GLUTAMINE SYNTHETASE IN COMPLEX WITH A TRANSITION STATE MIMIC</font></td>
+</tr><tr>
+<td nowrap="nowrap"><font color="blue"> <big> <a href="javascript:JSDetails(document.res_list_form,19)">19</a>  </big> </font>
+</td>
+<td nowrap="nowrap"><code>  0.37</code></td>
+<td nowrap="nowrap"><code>     0.1</code></td>
+<td nowrap="nowrap"><code>     2.2</code></td>
+<td nowrap="nowrap"><code>      0.00</code></td>
+<td nowrap="nowrap"><code>82</code></td>
+<td nowrap="nowrap"><code>6</code></td>
+<td nowrap="nowrap"><code>100</code></td>
+<td nowrap="nowrap"><code>A</code></td>
+<td nowrap="nowrap"><code>134</code></td>
+<td nowrap="nowrap"><code>33</code></td>
+<td nowrap="nowrap"><code> d1ezya_</code></td>
+<td nowrap="nowrap"><code>29</code></td>
+<td nowrap="nowrap"><code>134</code></td>
+<td><input name="ckb_rowcheck_2_18" type="checkbox">
+</td>
+<td class="data-left"><font size="-1">HIGH-RESOLUTION SOLUTION STRUCTURE OF FREE RGS4 BY NMR</font></td>
+</tr><tr>
+<td nowrap="nowrap"><font color="blue"> <big> <a href="javascript:JSDetails(document.res_list_form,20)">20</a>  </big> </font>
+</td>
+<td nowrap="nowrap"><code>  0.93</code></td>
+<td nowrap="nowrap"><code>     0.0</code></td>
+<td nowrap="nowrap"><code>     3.4</code></td>
+<td nowrap="nowrap"><code>      0.00</code></td>
+<td nowrap="nowrap"><code>129</code></td>
+<td nowrap="nowrap"><code>2</code></td>
+<td nowrap="nowrap"><code>100</code></td>
+<td nowrap="nowrap"><code>A</code></td>
+<td nowrap="nowrap"><code>134</code></td>
+<td nowrap="nowrap"><code>33</code></td>
+<td nowrap="nowrap"><code> d1gnua_</code></td>
+<td nowrap="nowrap"><code>25</code></td>
+<td nowrap="nowrap"><code>134</code></td>
+<td><input name="ckb_rowcheck_2_19" type="checkbox">
+</td>
+<td class="data-left"><font size="-1">GABA(A) RECEPTOR ASSOCIATED PROTEIN GABARAP</font></td>
+</tr></tbody></table>
+<div class="dsection"> Examined&nbsp;94476&nbsp;entries, 
+<small>(95481&nbsp;chains).</small>&nbsp;&nbsp;Displaying Matches&nbsp;1-20&nbsp;of&nbsp;75258.</div>
+<input type="button" name="btn_go_to_query_2" value="Back to query" onclick="JSToQuery(this.form)">&nbsp;&nbsp;<input type="button" name="btn_go_to_next_2" value="next" onclick="JSToNextPage(this.form)"><input type="button" name="btn_go_to_last_2" value="last page" onclick="JSToLastPage(this.form)"><a name="resort">Sort by &nbsp;</a>
+<select name="sel_sorting" onchange="JSResort(this.form)">
+<option style="background-color: DarkGray;" value="rmsd_inc" selected="selected">rmsd</option>
+<option style="background-color: DarkGray;" value="align_length_dec">align length</option>
+<option style="background-color: DarkGray;" value="qscore_dec">Q-score</option>
+<option style="background-color: DarkGray;" value="pscore_inc">P-score</option>
+<option style="background-color: DarkGray;" value="zscore_dec">Z-score</option>
+<option style="background-color: DarkGray;" value="seqident_dec">Seq %</option>
+<option style="background-color: DarkGray;" value="matched_SSEs_dec">matched SSEs</option>
+<option style="background-color: DarkGray;" value="ngaps_inc">number of gaps</option>
+
+</select>
+
+&nbsp;&nbsp;&nbsp;&nbsp;arrange by SCOP family <input name="ckb_scop_sorting" type="checkbox" onclick="JSResort(this.form)">
+&nbsp;&nbsp;&nbsp;&nbsp;match &nbsp;<input name="edt_match_no" type="text" size="6" value="1" maxlength="10"><input type="button" name="btn_go_to_match" value="jump" onclick="JSToMatch(document.res_list_form)">
+&nbsp;<p>
+</p><hr align="LEFT" size="2" width="100%">
+<table class="standard tborder"><tbody><tr>
+<td nowrap="nowrap"><table class="standard"><tbody><tr>
+<td colspan="2" nowrap="nowrap"><b>DOWNLOAD:</b></td>
+</tr><tr>
+<td nowrap="nowrap"><input type="button" name="download_rlist" value="summary" onclick="JSDownloadRList(this.form)"></td>
+<td nowrap="nowrap">Summary of all results as a plain text file&nbsp;&nbsp;&nbsp;</td>
+</tr><tr>
+<td nowrap="nowrap"><input type="button" name="download_xml" value="all results" onclick="JSDownloadXML(this.form)"></td>
+<td nowrap="nowrap">All results as XML file</td>
+</tr><tr>
+<td colspan="2" nowrap="nowrap"><font size="-2">&nbsp;</font></td>
+</tr></tbody></table>
+</td>
+<td rowspan="2" nowrap="nowrap"><table class="standard"><tbody><tr>
+<td colspan="2" nowrap="nowrap"><b>FOR ALL CHECKED MATCHES</b></td>
+</tr><tr>
+<td nowrap="nowrap"><input type="button" name="download_ckd_seqs" value="target seq." onclick="JSDownloadSeqs(this.form,1)"></td>
+<td nowrap="nowrap">Download target sequences (FASTA format)</td>
+</tr><tr>
+<td nowrap="nowrap"><input type="button" name="download_ckd_algns" value="aligned seq." onclick="JSDownloadAlgns(this.form,1)"></td>
+<td nowrap="nowrap">Download aligned sequences (FASTA format)</td>
+</tr><tr>
+<td nowrap="nowrap"><input type="button" name="submit_ma" value="submit" onclick="JSSubmitMA(this.form)"></td>
+<td nowrap="nowrap">Submit for Multiple Alignment&nbsp;&nbsp;&nbsp;<input name="ckb_include_query" type="checkbox" checked="checked">
+include query</td>
+</tr><tr>
+<td nowrap="nowrap"><input type="button" name="bring_on_top" value="move to top" onclick="JSBringOnTop(this.form)"></td>
+<td nowrap="nowrap">Bring on top of results</td>
+</tr><tr>
+<td nowrap="nowrap"><input type="button" name="clear_all_checks" value="uncheck all" onclick="JSUncheckAll(this.form)"></td>
+<td nowrap="nowrap">Uncheck all</td>
+</tr><tr>
+<td nowrap="nowrap"><input type="button" name="check_all_checks" value="check all" onclick="JSCheckAll(this.form)"></td>
+<td nowrap="nowrap">Check all</td>
+</tr><tr>
+<td colspan="2" nowrap="nowrap">&nbsp;<p>&nbsp;</p></td>
+</tr></tbody></table>
+</td>
+</tr><tr>
+<td nowrap="nowrap"><table class="standard"><tbody><tr>
+<td nowrap="nowrap">&nbsp;<b>DOWNLOAD</b>&nbsp; in match range from &nbsp;&nbsp;<input name="edt_match_1" type="text" size="6" value="1" maxlength="10">&nbsp;&nbsp;to&nbsp;&nbsp;<input name="edt_match_2" type="text" size="6" value="20" maxlength="10">&nbsp;&nbsp;:
+</td>
+</tr><tr>
+<td nowrap="nowrap"><table class="standard"><tbody><tr>
+<td nowrap="nowrap"><input type="button" name="download_seqs" value="target seq." onclick="JSDownloadSeqs(this.form,0)"></td>
+<td nowrap="nowrap">Target sequences (FASTA format)
+</td>
+</tr><tr>
+<td nowrap="nowrap"><input type="button" name="download_algns" value="aligned seq." onclick="JSDownloadAlgns(this.form,0)"></td>
+<td nowrap="nowrap">Aligned sequences (FASTA format)
+</td>
+</tr></tbody></table>
+</td>
+</tr></tbody></table>
+</td>
+</tr></tbody></table>
+
+</form>
+
+PDBe Fold v2.59. (src3) 14 Apr 2014<!--MSDSSM-->
+                    <!-- End example layout containers -->
+
+                </div><!--<div class="pdbe-content">-->
+            </div>
+
+
+            <footer>
+
+                <!-- Optional local footer (insert citation / project-specific copyright / etc here -->
+                <div id="local-footer" class="grid_24 clearfix"><div class="nav" id="local-nav-expanded">
+    <div class="grid_23">
+        <a class="" href="//pdbe.org" title="Protein Data Bank in Europe (PDBe)">
+            <div class="logo">
+                <img src="http://wwwdev.ebi.ac.uk/pdbe/frontier/images/logos/PDBe/pdbe-logo-2013.png" alt="Protein Data Bank in Europe (PDBe)">
+            </div>
+        </a>
+        <div class="" style="line-height: 2;text-align: center;padding: 0 12px; font-size: 138.5%; color: #666;"> is a member of </div>
+        <div class="">
+            <a href="http://www.wwpdb.org" title="Go to the wwPDB homepage" target="_wwpdb">
+                <img alt="wwPDB" src="http://wwwdev.ebi.ac.uk/pdbe/frontier/images/logos/wwPDB/wwpdb.png" style="margin: 9px;">
+            </a>
+        </div>
+        <div class="">
+            <a href="http://emdatabank.org/" title="Go to EMDataBank homepage" target="_empdb">
+                <img alt="EMDataBank" src="http://wwwdev.ebi.ac.uk/pdbe/frontier/images/logos/EMDataBank/EMDataBank.png">
+            </a>
+        </div>
+    </div>
+</div></div>
+                <script type="text/javascript" src="/pdbe/js/pdbe-script.js"></script>
+                <!-- End optional local footer -->
+
+                <div id="global-footer" class="grid_24">
+
+                    <nav id="global-nav-expanded"><div class="grid_4 alpha">  <a href="//www.ebi.ac.uk" title="EMBL-EBI"><img src="//www.ebi.ac.uk/web_guidelines/images/logos/EMBL-EBI/EMBL_EBI_Logo_black.png" alt="EMBL European Bioinformatics Institute"></a>  <ul>  <li class="first"><a href="//www.ebi.ac.uk/about/news">News</a></li>  <li><a href="//www.ebi.ac.uk/about/our-impact">Our impact</a></li>  <li><a href="//www.ebi.ac.uk/about/contact">Contact us</a>  </li><li class="last"><a href="http://intranet.ebi.ac.uk">Intranet</a></li>  </ul>  </div>   <div class="grid_4">  <h3 class="services"><a href="//www.ebi.ac.uk/services">Services</a></h3>  <ul>  <li class="first"><a href="//www.ebi.ac.uk/services">By topic</a></li>  <li><a href="//www.ebi.ac.uk/services/all">By name (A-Z)</a></li>  <li class="last"><a href="//www.ebi.ac.uk/support">Help &amp; Support</a></li>  </ul>  </div>   <div class="grid_4">  <h3 class="research"><a href="//www.ebi.ac.uk/research">Research</a></h3>  <ul>  <li class="first"><a href="//www.ebi.ac.uk/research">Overview</a></li>  <li><a href="//www.ebi.ac.uk/research/publications">Publications</a></li>  <li><a href="//www.ebi.ac.uk/research/groups">Research groups</a></li>  <li class="last"><a href="//www.ebi.ac.uk/research/postdocs">Postdocs</a> &amp; <a href="//www.ebi.ac.uk/research/eipp">PhDs</a></li>  </ul>  </div>   <div class="grid_4">  <h3 class="training"><a href="//www.ebi.ac.uk/training">Training</a></h3>  <ul>  <li class="first"><a href="//www.ebi.ac.uk/training">Overview</a></li>  <li><a href="//www.ebi.ac.uk/training/handson">Train at EBI</a></li>  <li><a href="//www.ebi.ac.uk/training/roadshow">Train outside EBI</a></li>  <li><a href="//www.ebi.ac.uk/training/online">Train online</a></li>  <li class="last"><a href="//www.ebi.ac.uk/training/contact-us">Contact organisers</a></li>  </ul>  </div>   <div class="grid_4">  <h3 class="industry"><a href="//www.ebi.ac.uk/industry">Industry</a></h3>  <ul>  <li class="first"><a href="//www.ebi.ac.uk/industry">Overview</a></li>  <li><a href="//www.ebi.ac.uk/industry/private">Members Area</a></li>  <li><a href="//www.ebi.ac.uk/industry/workshops">Workshops</a></li>  <li><a href="//www.ebi.ac.uk/industry/sme-forum"><abbr title="Small Medium Enterprise">SME</abbr> Forum</a></li>  <li class="last"><a href="//www.ebi.ac.uk/industry/contact">Contact Industry programme</a></li>  </ul>  </div>   <div class="grid_4 omega">  <h3 class="about"><a href="//www.ebi.ac.uk/about">About us</a></h3>  <ul>  <li class="first"><a href="//www.ebi.ac.uk/about">Overview</a></li>  <li><a href="//www.ebi.ac.uk/about/leadership">Leadership</a></li>  <li><a href="//www.ebi.ac.uk/about/funding">Funding</a></li>  <li><a href="//www.ebi.ac.uk/about/background">Background</a></li>  <li><a href="//www.ebi.ac.uk/about/partnerships">Collaboration</a></li>  <li><a href="//www.ebi.ac.uk/about/jobs" title="Jobs, postdocs, PhDs...">Jobs</a></li>  <li><a href="//www.ebi.ac.uk/about/people">People &amp; groups</a></li>  <li><a href="//www.ebi.ac.uk/about/news">News</a></li>  <li><a href="//www.ebi.ac.uk/about/events">Events</a></li>  <li><a href="//www.ebi.ac.uk/about/travel">Visit us</a></li>  <li class="last"><a href="//www.ebi.ac.uk/about/contact">Contact us</a></li>  </ul>  </div></nav>
+
+                    <section id="ebi-footer-meta"><p class="address">EMBL-EBI, Wellcome Genome Campus, Hinxton, Cambridgeshire, CB10 1SD, UK &nbsp; &nbsp; +44 (0)1223 49 44 44</p><p>Copyright © EMBL-EBI 2020 | EBI is an outstation of the <a href="http://www.embl.org">European Molecular Biology Laboratory</a> | <a href="//www.ebi.ac.uk/about/terms-of-use">Terms of use</a></p></section>
+
+                </div>
+
+            </footer>
+        </div> <!--! end of #wrapper -->
+
+
+        <!-- JavaScript at the bottom for fast page loading -->
+
+        <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+
+        <script>window.jQuery || document.write('<script src="./js/libs/jquery-1.7.2.min.js"><\/script>')</script><script src="./js/libs/jquery-1.7.2.min.js"></script>
+
+
+
+        <!-- Your custom JavaScript file scan go here... change names accordingly -->
+        <!--
+        <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/plugins.js"></script>
+        <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/script.js"></script>
+        -->
+        <script defer="defer" src="./js/pdbe-script.js"></script>
+
+
+        <!--<script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/cookiebanner.js"></script>-->
+
+        <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/foot.js"></script>
+        <!-- end scripts-->
+
+        <!-- Google Analytics details... -->
+        <!-- Change UA-XXXXX-X to be your site's ID -->
+        <!--
+        <script>
+          window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
+          Modernizr.load({
+            load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+          });
+        </script>
+        -->
+
+
+        <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+             chromium.org/developers/how-tos/chrome-frame-getting-started -->
+
+        <!--[if lt IE 7 ]>
+          <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+          <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+        <![endif]-->
+
+    
+
+
+
+
+
+
+
+
+
+<!--//www.ebi.ac.uk/web_guidelines/js/cookiebanner.js automatically inserted--><script type="text/javascript" src="//www.ebi.ac.uk/web_guidelines/js/cookiebanner.js"></script><!--//www.ebi.ac.uk/web_guidelines/js/script.js automatically inserted--><script type="text/javascript" src="//www.ebi.ac.uk/web_guidelines/js/script.js"></script><!--//www.ebi.ac.uk/web_guidelines/js/responsify.js automatically inserted--><script type="text/javascript" src="//www.ebi.ac.uk/web_guidelines/js/responsify.js"></script><!--//www.ebi.ac.uk/web_guidelines/js/downtime.js?440520 automatically inserted--><script type="text/javascript" src="//www.ebi.ac.uk/web_guidelines/js/downtime.js?440520"></script><div id="cookie-banner" style="top: 0px;"><div class="container_24"><div class="grid_24">  <p><a id="cookie-dismiss" href="#">OK</a>  This website uses cookies. By continuing to browse this site, you are agreeing to the use of our site cookies.   To find out more, see our <a href="//www.ebi.ac.uk/about/terms-of-use">Terms of Use</a>.</p></div></div></div></body></html>
