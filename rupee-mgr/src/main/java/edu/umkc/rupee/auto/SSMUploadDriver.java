@@ -33,10 +33,20 @@ public class SSMUploadDriver extends DriverBase {
         driver.findElement(By.name("sel_struct2")).click();
         driver.findElement(By.name("edt_percent1")).clear();
         driver.findElement(By.name("edt_percent1")).sendKeys("20");
+        driver.findElement(By.name("edt_percent1")).clear();
+        driver.findElement(By.name("edt_percent1")).sendKeys("20");
         driver.findElement(By.name("edt_percent2")).clear();
         driver.findElement(By.name("edt_percent2")).sendKeys("20");
         driver.findElement(By.name("file1")).clear();
         driver.findElement(By.name("file1")).sendKeys(Constants.CASP_PATH + dbId + ".pdb");
+        driver.findElement(By.name("ckb_best_match")).click(); // uncheck the default of checked
+        driver.findElement(By.name("ckb_unique_match")).click(); // uncheck the default of checked
+
+        // switch this up based on "rmsd" or "Q-score"
+        new Select(driver.findElement(By.name("sel_sorting"))).selectByVisibleText("rmsd");
+        driver.findElement(By.name("sel_sorting")).click();
+
+        // click submit
         driver.findElement(By.name("btn_submit_query")).click();
         
         // wait for submit response
@@ -53,14 +63,14 @@ public class SSMUploadDriver extends DriverBase {
                 throw new WebDriverException("Server low on disk space");
             }
             
-            Thread.sleep(1000);
+            Thread.sleep(5000);
         }
 
         // download the data
         driver.findElement(By.name("download_rlist")).click();
 
         // give it some time to load
-        Thread.sleep(10000);
+        Thread.sleep(30000);
   
         return driver.getPageSource(); 
     }
