@@ -20,18 +20,25 @@ public class VastUploadDriver extends DriverBase {
         driver.findElement(By.name("pdbfile")).clear();
         driver.findElement(By.name("pdbfile")).sendKeys(filePath);
 
-
         // all pdb
         driver.findElement(By.xpath("//input[@value='All']")).click();
    
-        // submit 
+        // submit to upload
         driver.findElement(By.name("cmdVSMmdb")).click();
 
         // wait for page to load
-        Thread.sleep(10000);
+        Thread.sleep(5000);
 
+        // get request id
         String requestId = driver.findElement(By.xpath("/html/body/table[2]/tbody/tr[4]/td/b")).getText();
-       
+     
+        // submit to search
+        driver.findElement(By.xpath("/html/body/table[2]/tbody/tr[17]/td/table/tbody/tr/td[1]/input[2]")).click();
+        
+        // wait for page to load
+        Thread.sleep(5000);
+
+        // output to a file  
         System.out.println(dbId + "," + requestId); 
     }
 
