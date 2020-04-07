@@ -1,0 +1,122 @@
+
+1NEX B 5,18,5.2,0.0308,1.0,5.6,Crystal Structure Of Scskp1-Sccdc4-Cpd Peptide Complex
+3GRE A 2,20,5.2,0.0308,1.1,5.0,Crystal Structure Of Saccharomyces Cerevisiae Vps15 Wd Repeat Domainÿ
+2W5S A 1,21,5.2,0.0308,1.1,4.8,Structure-Based Mechanism Of Lipoteichoic Acid Synthesis By Staphylococcus Aureus Ltasÿ
+2W5R A 1,21,5.2,0.0323,1.1,4.8,Structure-Based Mechanism Of Lipoteichoic Acid Synthesis By Staphylococcus Aureus Ltasÿ
+2W5T A 1,21,5.2,0.0308,1.1,4.8,Structure-Based Mechanism Of Lipoteichoic Acid Synthesis By Staphylococcus Aureus Ltasÿ
+3NVQ F 3,22,5.2,0.0389,1.2,4.5,Molecular Mechanism Of Guidance Cue Recognitionÿ
+3ED4 A 2,22,5.2,0.0409,1.3,0.0,Crystal Structure Of Putative Arylsulfatase From Escherichia Coli
+2GID G 2,22,5.2,0.0308,1.3,4.5,Crystal Structures Of Trypanosoma Bruciei Mrp1MRP2
+3WSX A 5,20,5.2,0.0308,1.3,10.0,Sorla Vps10p Domain In Ligand-free Form
+3NVQ F 2,27,5.2,0.0308,1.3,0.0,Molecular Mechanism Of Guidance Cue Recognitionÿ
+3DWL K ,25,5.2,0.0308,1.4,8.0,Crystal Structure Of Fission Yeast Arp23 COMPLEX LACKING The Arp2 Subunit
+2GID P 2,21,5.2,0.0308,1.4,4.8,Crystal Structures Of Trypanosoma Bruciei Mrp1MRP2
+4V16 A 3,20,5.2,0.0499,1.4,20.0,Klhsv2 With Loop 6cd Replaced By A Gly-ser Linker
+2D0V A 6,20,5.2,0.0308,1.4,0.0,Crystal Structure Of Methanol Dehydrogenase From Hyphomicrobium Denitrificans
+2R72 A 5,22,5.2,0.0377,1.4,13.6,Crystal Structure Of Infectious Bursal Disease Virus Vp1 Polymerase, Incubated With Mg2+ Ion
+2PUS A 4,22,5.2,0.0308,1.4,13.6,Unprecedented Activation Mechanism Of A Non-Canonical Rna- Dependent Rna Polymerase
+3DJN B ,19,5.2,0.0308,1.4,5.3,Crystal Structure Of Mouse Tis21
+2R70 A 5,22,5.2,0.0336,1.4,13.6,Crystal Structure Of Infectious Bursal Disease Virus Vp1 Polymerase, Cocrystallized With An Oligopeptide Mimicking The Vp3 C-Terminus
+4FHN D 4,21,5.2,0.0308,1.5,9.5,Nup37-Nup120 Full-Length Complex From Schizosaccharomyces Pombe
+1W5R B 1,29,6.9,0.0001,1.5,13.8,X-Ray Crystallographic Strcuture Of A C70q Mycobacterium Smegmatis N-Arylamine Acetyltransferase
+4FHN B 4,21,5.2,0.0308,1.5,9.5,Nup37-Nup120 Full-Length Complex From Schizosaccharomyces Pombe
+2PGG A 4,22,5.2,0.0308,1.5,13.6,Crystal Structure Of A Birnavirus (Ibdv) Rna-Dependent Rna Polymerase Vp1
+2Z15 D ,19,5.2,0.0308,1.5,0.0,Crystal Structure Of Human Tob1 Protein
+1W6F A 1,29,6.9,0.0002,1.5,13.8,Arylamine N-Acetyltransferase From Mycobacterium Smegmatis With The Anti-Tubercular Drug Isoniazid Bound In The Active Site
+1GX3 A 1,29,6.9,0.0003,1.5,13.8,M. Smegmatis Arylamine N-Acetyl Transferase
+1W6F B 1,29,7.0,10e-4.1,1.5,13.8,Arylamine N-Acetyltransferase From Mycobacterium Smegmatis With The Anti-Tubercular Drug Isoniazid Bound In The Active Site
+4MEY C 2,26,5.2,0.0308,1.5,7.7,Crystal Structure Of Escherichia Coli Rna Polymerase Holoenzyme
+1TUY B 1,32,6.9,0.0232,1.5,9.4,Acetate Kinase Complexed With Adp, Alf3 And Acetate
+2E50 A ,21,5.2,0.0427,1.5,4.8,Crystal Structure Of SetTAF-1betaINHAT
+2E50 A 1,21,5.2,0.0427,1.5,4.8,Crystal Structure Of SetTAF-1betaINHAT
+1W5R A 1,29,7.0,0.0001,1.5,13.8,X-Ray Crystallographic Strcuture Of A C70q Mycobacterium Smegmatis N-Arylamine Acetyltransferase
+1W6F C 1,29,6.8,0.0008,1.5,13.8,Arylamine N-Acetyltransferase From Mycobacterium Smegmatis With The Anti-Tubercular Drug Isoniazid Bound In The Active Site
+1GX3 C 1,29,6.8,0.0006,1.5,13.8,M. Smegmatis Arylamine N-Acetyl Transferase
+1GX3 D 1,29,7.0,10e-4.1,1.5,13.8,M. Smegmatis Arylamine N-Acetyl Transferase
+5CI8 A ,26,5.2,0.0327,1.5,7.7,Crystal Structure Of Human Tob In Complex With Inhibitor Fragment 1
+5CI9 A ,26,5.2,0.0435,1.5,7.7,Crystal Structure Of Human Tob In Complex With Inhibitor Fragment 6
+2BKL A 4,19,5.2,0.0472,1.6,10.5,Structural And Mechanistic Analysis Of Two Prolyl Endopeptidases: Role Of Inter-Domain Dynamics In Catalysis And Specificity
+4EXV A 3,20,5.2,0.0308,1.6,20.0,Structure Of Kluyveromyces Lactis Hsv2p
+3DJU B ,26,5.2,0.0308,1.6,11.5,Crystal Structure Of Human Btg2
+3LTI A 1,27,5.2,0.0454,1.6,7.4,Crystal Structure Of The Escherichia Coli Rna Polymerase Beta Subunit Beta2-Betai4 Domainsÿ
+2CMH A 1,23,5.2,0.0308,1.6,0.0,Crystal Structure Of Spermidine Synthase From Helicobacter Pylori
+3E9V A ,26,5.2,0.0393,1.6,11.5,Crystal Structure Of Human B-Cell Translocation Gene 2 (Btg2)
+4BGF D 1,28,7.0,0.0001,1.6,7.1,The 3d-structure Of Arylamine-n-acetyltransferase From M. Tuberculosis
+1GX3 B 1,29,7.0,10e-4.1,1.6,13.8,M. Smegmatis Arylamine N-Acetyl Transferase
+1W6F D 1,29,7.0,10e-4.1,1.6,13.8,Arylamine N-Acetyltransferase From Mycobacterium Smegmatis With The Anti-Tubercular Drug Isoniazid Bound In The Active Site
+4BGF H 1,29,6.9,0.0003,1.6,6.9,The 3d-structure Of Arylamine-n-acetyltransferase From M. Tuberculosis
+4JKR C 4,28,5.2,0.0308,1.6,7.1,Crystal Structure Of E. Coli Rna Polymerase In Complex With Ppgpp
+4BGF E 1,29,7.0,10e-4.1,1.6,6.9,The 3d-structure Of Arylamine-n-acetyltransferase From M. Tuberculosis
+2GIA D 1,20,5.2,0.0316,1.6,0.0,Crystal Structures Of Trypanosoma Bruciei Mrp1MRP2
+3LTW A 1,28,7.0,10e-4.1,1.6,10.7,The Structure Of Mycobacterium Marinum Arylamine N-Acetyltransferase In Complex With Hydralazineÿ
+4NF9 A 1,19,5.2,0.0412,1.6,5.3,Structure Of The Knl1/nsl1 Complex
+4YFX C 3,28,5.2,0.0308,1.6,7.1,Escherichia Coli Rna Polymerase In Complex With Myxopyronin B
+4YFN C 3,28,5.2,0.0323,1.6,7.1,Escherichia Coli Rna Polymerase In Complex With Squaramide Compound 14 (n-[3,4-dioxo-2-(4-{[4-(trifluoromethyl)benzyl]amino}piperidin-1-yl) Cyclobut-1-en-1-yl]-3,5-dimethyl-1,2-oxazole-4-sulfonamide)
+4B55 A 1,28,6.9,0.0003,1.6,10.7,Crystal Structure Of The Covalent Adduct Formed Between Mycobacterium Marinum Aryalamine N-acetyltransferase And Phenyl Vinyl Ketone A Derivative Of Piperidinols
+5A9Q 1 3,22,5.2,0.0308,1.6,4.5,Human Nuclear Pore Complex
+5A9Q S 3,22,5.2,0.0308,1.6,4.5,Human Nuclear Pore Complex
+5A9Q a 3,22,5.2,0.0308,1.6,4.5,Human Nuclear Pore Complex
+5A9Q J 3,22,5.2,0.0308,1.6,4.5,Human Nuclear Pore Complex
+4BGF F 1,29,6.9,0.0001,1.7,6.9,The 3d-structure Of Arylamine-n-acetyltransferase From M. Tuberculosis
+4YFX I 3,28,5.2,0.0314,1.7,7.1,Escherichia Coli Rna Polymerase In Complex With Myxopyronin B
+
+2LEZ A ,25,5.2,0.0493,1.7,4.0,Solution Nmr Structure Of N-Terminal Domain Of Salmonella Effector Protein Pipb2. Northeast Structural Genomics Consortium (Nesg) Target Stt318aÿ
+2LEZ A 1,25,5.2,0.0493,1.7,4.0,Solution Nmr Structure Of N-Terminal Domain Of Salmonella Effector Protein Pipb2. Northeast Structural Genomics Consortium (Nesg) Target Stt318aÿ
+3Q9S A 2,22,5.2,0.0308,1.7,4.5,Crystal Structure Of Rra(1-215) From Deinococcus Radioduransÿ
+4MEX C 3,28,5.2,0.0308,1.7,7.1,Crystal Structure Of Escherichia Coli Rna Polymerase In Complex With Salinamide A
+2BSZ A 1,27,7.0,10e-4.1,1.7,7.4,Structure Of Mesorhizobium Loti Arylamine N- Acetyltransferase 1
+4BGF B 1,30,6.9,0.0002,1.7,6.7,The 3d-structure Of Arylamine-n-acetyltransferase From M. Tuberculosis
+4JKR I 3,29,5.2,0.0308,1.7,10.3,Crystal Structure Of E. Coli Rna Polymerase In Complex With Ppgpp
+4BGF G 1,32,7.0,0.0001,1.7,6.2,The 3d-structure Of Arylamine-n-acetyltransferase From M. Tuberculosis
+2VFB A 1,33,7.0,10e-4.0,1.7,9.1,The Structure Of Mycobacterium Marinum Arylamine N- Acetyltransferase
+4RGI A ,27,5.8,0.0495,1.7,3.7,Crystal Structure Of Ktsc Domain Protein Ypo2434 From Yersinia Pestis
+4BGF A 1,29,7.0,10e-4.0,1.8,6.9,The 3d-structure Of Arylamine-n-acetyltransferase From M. Tuberculosis
+2BSZ B 1,27,7.0,10e-4.1,1.8,3.7,Structure Of Mesorhizobium Loti Arylamine N- Acetyltransferase 1
+4NV8 B 1,28,7.0,10e-4.1,1.8,7.1,Crystal Structure Of Mesorhizobium Loti Arylamine N-acetyltransferase F42w Mutant
+4JK2 H 3,30,5.2,0.0308,1.8,10.0,X-ray Crystal Structure Of Escherichia Coli Sigma70 Holoenzyme In Complex With Guanosine Pentaphosphate (pppgpp)
+4NV7 B 1,27,7.0,10e-4.1,1.8,3.7,Crystal Structure Of Mesorhizobium Loti Arylamine N-acetyltransferase 1 In Complex With Coa
+4KN7 H 3,30,5.2,0.0308,1.8,10.0,X-ray Crystal Structure Of The Escherichia Coli Rna Polymerase In Complex With Benzoxazinorifamycin-2c
+2K4V A ,30,6.4,0.0053,1.8,3.3,Solution Structure Of Uncharacterized Protein Pa1076 From Pseudomonas Aeruginosa. Northeast Structural Genomics Consortium (Nesg) Target Pat3, Ontario Center For Structural Proteomics Target Pa1076
+2JPB A 1,20,5.2,0.0384,1.8,0.0,Solution Structure Of Ompr-C Dna Binding Protein
+4KN4 H 3,30,5.2,0.0308,1.8,10.0,X-ray Crystal Structure Of The Escherichia Coli Rna Polymerase In Complex With Benzoxazinorifamycin-2b
+4NV7 A 1,27,7.0,0.0001,1.8,3.7,Crystal Structure Of Mesorhizobium Loti Arylamine N-acetyltransferase 1 In Complex With Coa
+4BGF C 1,30,6.9,0.0001,1.8,6.7,The 3d-structure Of Arylamine-n-acetyltransferase From M. Tuberculosis
+1E2T G 1,31,6.4,0.0073,1.8,0.0,Arylamine N-Acetyltransferase (Nat) From Salmonella Typhimurium
+1E2T H 1,31,6.3,0.0085,1.8,0.0,Arylamine N-Acetyltransferase (Nat) From Salmonella Typhimurium
+1E2T D 1,31,6.3,0.0082,1.8,0.0,Arylamine N-Acetyltransferase (Nat) From Salmonella Typhimurium
+1E2T A 1,31,6.4,0.0072,1.8,0.0,Arylamine N-Acetyltransferase (Nat) From Salmonella Typhimurium
+1E2T B 1,31,6.3,0.0080,1.8,0.0,Arylamine N-Acetyltransferase (Nat) From Salmonella Typhimurium
+1E2T C 1,31,6.3,0.0079,1.8,0.0,Arylamine N-Acetyltransferase (Nat) From Salmonella Typhimurium
+1E2T F 1,31,6.3,0.0085,1.8,0.0,Arylamine N-Acetyltransferase (Nat) From Salmonella Typhimurium
+3D9W A 1,30,6.9,0.0002,1.8,10.0,Crystal Structure Analysis Of Nocardia Farcinica Arylamine N-Acetyltransferase
+4NV8 A 1,27,7.0,10e-4.1,1.8,3.7,Crystal Structure Of Mesorhizobium Loti Arylamine N-acetyltransferase F42w Mutant
+1E2T E 1,31,6.3,0.0082,1.8,0.0,Arylamine N-Acetyltransferase (Nat) From Salmonella Typhimurium
+3D9W C 1,30,7.0,0.0001,1.8,10.0,Crystal Structure Analysis Of Nocardia Farcinica Arylamine N-Acetyltransferase
+5EZK C 4,30,5.2,0.0308,1.8,10.0,Rna Polymerase Model Placed By Molecular Replacement Into X-ray Diffraction Map Of Dna-bound Rna Polymerase-sigma 54 Holoenzyme Complex
+4JK2 C 3,30,5.2,0.0308,1.8,10.0,X-ray Crystal Structure Of Escherichia Coli Sigma70 Holoenzyme In Complex With Guanosine Pentaphosphate (pppgpp)
+4KN4 C 3,30,5.2,0.0308,1.8,10.0,X-ray Crystal Structure Of The Escherichia Coli Rna Polymerase In Complex With Benzoxazinorifamycin-2b
+4KN7 C 3,30,5.2,0.0308,1.8,10.0,X-ray Crystal Structure Of The Escherichia Coli Rna Polymerase In Complex With Benzoxazinorifamycin-2c
+4LK8 B ,32,6.4,0.0370,1.9,9.4,Crystal Structure Of Cyay Protein From Psychromonas Ingrahamii In Complex With Co(ii)
+2B8E A 2,33,6.9,0.0030,1.9,21.2,Copa Atp Binding Domain
+2VOY J ,33,6.9,0.0030,1.9,21.2,Cryoem Model Of Copa, The Copper Transporting Atpase From Archaeoglobus Fulgidusÿ
+3D9W D 1,30,6.9,0.0001,1.9,10.0,Crystal Structure Analysis Of Nocardia Farcinica Arylamine N-Acetyltransferase
+3A1C A 2,31,6.8,0.0069,1.9,19.4,Crystal Structure Of The P- And N-Domains Of Copa, A Copper- Transporting P-Type Atpase, Bound With Amppcp-Mgÿ
+2B8E B 2,33,6.9,0.0036,1.9,21.2,Copa Atp Binding Domain
+1YMP B ,16,5.8,0.0240,1.9,0.0,The Crystal Structure Of A Partial Mouse Notch-1 Ankyrin Domain: Repeats 4 Through 7 Preserve An Ankyrin Fold
+3GOB C 2,32,6.8,0.0403,1.9,18.8,Crystal Structure Of Dicamba Monooxygenase With Non-Heme Cobalt And Dcsaÿ
+3S29 B 1,28,6.6,0.0027,1.9,10.7,The Crystal Structure Of Sucrose Synthase-1 From Arabidopsis Thaliana And Its Functional Implicationsÿ
+3A1D A 2,31,6.7,0.0093,1.9,19.4,Crystal Structure Of The P- And N-Domains Of Copa, A Copper- Transporting P-Type Atpase, Bound With Adp-Mgÿ
+3S27 B 1,28,6.6,0.0030,1.9,10.7,The Crystal Structure Of Sucrose Synthase-1 From Arabidopsis Thaliana And Its Functional Implicationsÿ
+2B8E C 2,33,6.8,0.0053,1.9,21.2,Copa Atp Binding Domain
+3D9W B 1,30,6.9,0.0002,1.9,10.0,Crystal Structure Analysis Of Nocardia Farcinica Arylamine N-Acetyltransferase
+2XQY A 1,30,6.2,0.0132,1.9,3.3,Crystal Structure Of Pseudorabies Core Fragment Of Glycoprotein H In Complex With Fab D6.3ÿ
+4FMD C 1,30,6.0,0.0270,1.9,10.0,Espg-Rab1 Complex Structure At 3.05 A
+2PLD A ,32,6.5,0.0346,1.9,6.2,Phospholipase C-Gamma-1 (E.C.3.1.4.11) (C-Terminal Sh2 Domain Comprising Residues 663 - 759) Complexed With A Phosphopeptide From The Platelet-Derived Growth Factor Receptor (Residues 1018 - 1029: Asp-Asn-Asp-Ptyr-Ile-Ile- Pro-Leu-Pro-Asp-Pro-Lys) (Nmr, Minimized Average Structure)
+4GUZ A 1,32,6.9,0.0028,1.9,9.4,Structure Of The Arylamine N-acetyltransferase From Mycobacterium Abscessus
+4GUZ C 1,32,6.9,0.0029,1.9,9.4,Structure Of The Arylamine N-acetyltransferase From Mycobacterium Abscessus
+1LUI A ,29,5.8,0.0470,1.9,6.9,Nmr Structures Of Itk Sh2 Domain, Pro287cis Isoform, Ensemble Of 20 Low Energy Structuresÿ
+3HDJ A 1,33,6.7,0.0137,1.9,9.1,The Crystal Structure Of Probable Ornithine Cyclodeaminase From Bordetella Pertussis Tohama Iÿ
+3A1E A 2,34,6.8,0.0083,2.0,20.6,Crystal Structure Of The P- And N-Domains Of His462gln Mutant Copa, A Copper-Transporting P-Type Atpase, Bound With Amppcp-Mgÿ
+3GKE B 3,32,6.8,0.0398,2.0,18.8,Crystal Structure Of Dicamba Monooxygenaseÿ
+3A1C B 2,32,6.9,0.0042,2.0,21.9,Crystal Structure Of The P- And N-Domains Of Copa, A Copper- Transporting P-Type Atpase, Bound With Amppcp-Mgÿ
+3GL2 B 3,35,6.8,0.0372,2.0,17.1,Crystal Structure Of Dicamba Monooxygenase Bound To Dicambaÿ

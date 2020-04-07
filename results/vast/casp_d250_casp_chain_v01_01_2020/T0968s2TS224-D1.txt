@@ -1,0 +1,122 @@
+
+1R7A B 4,39,6.3,0.0364,1.7,12.8,Sucrose Phosphorylase From Bifidobacterium Adolescentis
+2GDU B 3,41,6.3,0.0408,1.8,12.2,E232q Mutant Of Sucrose Phosphorylase From Bifidobacterium Adolescentis In Complex With Sucrose
+2GDU A 4,42,6.6,0.0133,1.9,14.3,E232q Mutant Of Sucrose Phosphorylase From Bifidobacterium Adolescentis In Complex With Sucrose
+4LGO C 2,30,6.3,0.0424,1.9,3.3,Crystal Structure Of N-terminal Domain 1 Of Vompd From Bartonella Quintana
+4LGO A 2,30,6.5,0.0205,1.9,3.3,Crystal Structure Of N-terminal Domain 1 Of Vompd From Bartonella Quintana
+4LGO B 2,30,6.4,0.0310,1.9,3.3,Crystal Structure Of N-terminal Domain 1 Of Vompd From Bartonella Quintana
+2O05 B 1,33,8.0,0.0007,1.9,9.1,Human Spermidine Synthase
+2O05 A 1,33,8.0,0.0007,1.9,9.1,Human Spermidine Synthase
+2O0L A 1,34,8.0,0.0007,2.0,8.8,Human Spermidine Synthase
+2O07 B 1,34,8.1,0.0006,2.0,8.8,Human Spermidine Synthase
+2O0L B 1,34,8.0,0.0007,2.0,8.8,Human Spermidine Synthase
+3RW9 B 1,33,8.1,0.0006,2.0,9.1,Crystal Structure Of Human Spermidine Synthase In Complex With Decarboxylated S-Adenosylhomocysteineÿ
+3RW9 A 1,33,8.1,0.0006,2.0,9.1,Crystal Structure Of Human Spermidine Synthase In Complex With Decarboxylated S-Adenosylhomocysteineÿ
+2O07 A 1,34,8.1,0.0007,2.0,8.8,Human Spermidine Synthase
+2HTE B 1,33,8.0,0.0007,2.0,6.1,The Crystal Structure Of Spermidine Synthase From P. Falciparum In Complex With 5'-Methylthioadenosine
+2I7C B 1,33,8.1,0.0006,2.0,6.1,The Crystal Structure Of Spermidine Synthase From P. Falciparum In Complex With Adodato
+4CWA B 1,33,8.0,0.0007,2.0,6.1,Structure Of Plasmodium Falciparum Spermidine Synthase In Complex With 1h-benzimidazole-2-pentanamine
+2PWP B 1,33,7.9,0.0012,2.0,6.1,Crystal Structure Of Spermidine Synthase From Plasmodium Falciparum In Complex With Spermidine
+2PSS B 1,33,8.0,0.0008,2.0,3.0,The Structure Of Plasmodium Falciparum Spermidine Synthase In Its Apo-Form
+2PT6 B 1,33,8.0,0.0010,2.0,6.1,The Structure Of Plasmodium Falciparum Spermidine Synthase In Complex With Decarboxylated S-Adenosylmethionine
+4BP3 B 1,33,8.1,0.0006,2.0,6.1,Crystal Structure Of Plasmodium Falciparum Spermidine Synthase In Complex With Decarboxylated S- Adenosylmethionine5' And 4-methylaniline
+1XJ5 D 1,34,7.9,0.0012,2.0,8.8,X-Ray Structure Of Spermidine Synthase From Arabidopsis Thaliana Gene At1g23820
+4XOH C 3,41,8.2,0.0205,2.0,7.3,Mechanistic Insights Into Anchorage Of The Contractile Ring From Yeast To Humans
+2I7C C 1,34,8.0,0.0007,2.0,5.9,The Crystal Structure Of Spermidine Synthase From P. Falciparum In Complex With Adodato
+2PSS C 1,33,8.0,0.0008,2.0,6.1,The Structure Of Plasmodium Falciparum Spermidine Synthase In Its Apo-Form
+3D9X C 2,28,6.5,0.0151,2.0,3.6,Structure Of The Head Of The Bartonella Adhesin Bada
+3HW2 A 1,35,6.6,0.0086,2.0,5.7,Crystal Structure Of The Sifa-Skip(Ph) Complexÿ
+2Q41 B 1,34,7.9,0.0013,2.0,8.8,Ensemble Refinement Of The Protein Crystal Structure Of Spermidine Synthase From Arabidopsis Thaliana Gene At1g23820ÿ
+2PWP C 1,33,8.0,0.0008,2.0,6.1,Crystal Structure Of Spermidine Synthase From Plasmodium Falciparum In Complex With Spermidine
+4BP3 C 1,33,8.0,0.0007,2.0,6.1,Crystal Structure Of Plasmodium Falciparum Spermidine Synthase In Complex With Decarboxylated S- Adenosylmethionine5' And 4-methylaniline
+4CWA C 1,34,7.9,0.0016,2.0,5.9,Structure Of Plasmodium Falciparum Spermidine Synthase In Complex With 1h-benzimidazole-2-pentanamine
+2PT6 C 1,33,8.0,0.0008,2.1,6.1,The Structure Of Plasmodium Falciparum Spermidine Synthase In Complex With Decarboxylated S-Adenosylmethionine
+1MI1 B 1,45,8.7,0.0120,2.1,2.2,Crystal Structure Of The Ph-Beach Domain Of Human Neurobeachin
+2I7C A 1,34,8.1,0.0007,2.1,5.9,The Crystal Structure Of Spermidine Synthase From P. Falciparum In Complex With Adodato
+4UOE B 1,34,7.9,0.0012,2.1,5.9,Crystal Structure Of Plasmodium Falciparum Spermidine Synthase In Complex With 5'-deoxy-5'-methylioadenosine And 4-aminomethylaniline
+4CWA A 1,33,8.1,0.0006,2.1,6.1,Structure Of Plasmodium Falciparum Spermidine Synthase In Complex With 1h-benzimidazole-2-pentanamine
+2PT9 B 1,33,8.0,0.0010,2.1,6.1,The Structure Of Plasmodium Falciparum Spermidine Synthase In Complex With Decarboxylated S-Adenosylmethionine And The Inhibitor Cis-4-Methylcyclohexylamine (4mcha)
+2PT9 C 1,33,8.1,0.0006,2.1,6.1,The Structure Of Plasmodium Falciparum Spermidine Synthase In Complex With Decarboxylated S-Adenosylmethionine And The Inhibitor Cis-4-Methylcyclohexylamine (4mcha)
+2PWP A 1,34,8.1,0.0006,2.1,5.9,Crystal Structure Of Spermidine Synthase From Plasmodium Falciparum In Complex With Spermidine
+2HTE C 1,34,8.0,0.0009,2.1,5.9,The Crystal Structure Of Spermidine Synthase From P. Falciparum In Complex With 5'-Methylthioadenosine
+4UOE A 1,34,8.1,0.0005,2.1,5.9,Crystal Structure Of Plasmodium Falciparum Spermidine Synthase In Complex With 5'-deoxy-5'-methylioadenosine And 4-aminomethylaniline
+3B7P B 1,34,7.9,0.0012,2.1,5.9,Crystal Structure Of Spermidine Synthase From Plasmodium Falciparum In Complex With Spermine
+3B7P C 1,34,8.0,0.0008,2.1,5.9,Crystal Structure Of Spermidine Synthase From Plasmodium Falciparum In Complex With Spermine
+4UOE C 1,34,8.0,0.0008,2.1,5.9,Crystal Structure Of Plasmodium Falciparum Spermidine Synthase In Complex With 5'-deoxy-5'-methylioadenosine And 4-aminomethylaniline
+2BSZ A 1,35,6.5,0.0148,2.1,2.9,Structure Of Mesorhizobium Loti Arylamine N- Acetyltransferase 1
+4DX9 i ,39,8.8,0.0018,2.1,7.7,Icap1 In Complex With Integrin Beta 1 Cytoplasmic Tail
+4CXM B 1,34,8.0,0.0007,2.1,5.9,Crystal Structure Of Plasmodium Falciparum Spermidine Synthase In Complex With Methylthioadenosin And Spermidine After Catalysis In Crystal
+4BP1 B 1,33,7.7,0.0031,2.1,6.1,Crystal Structure Of Plasmodium Falciparum Spermidine Synthase In Complex With 5'-methylthioadenosine And Putrescine
+3CXB A 1,35,6.6,0.0109,2.1,5.7,Crystal Structure Of Sifa And Skip
+2HTE A 1,34,8.1,0.0005,2.1,5.9,The Crystal Structure Of Spermidine Synthase From P. Falciparum In Complex With 5'-Methylthioadenosine
+4CXM C 1,34,8.0,0.0009,2.1,5.9,Crystal Structure Of Plasmodium Falciparum Spermidine Synthase In Complex With Methylthioadenosin And Spermidine After Catalysis In Crystal
+2PT6 A 1,33,8.0,0.0009,2.1,6.1,The Structure Of Plasmodium Falciparum Spermidine Synthase In Complex With Decarboxylated S-Adenosylmethionine
+4BP1 C 1,34,8.0,0.0007,2.1,5.9,Crystal Structure Of Plasmodium Falciparum Spermidine Synthase In Complex With 5'-methylthioadenosine And Putrescine
+3B7P A 1,34,8.1,0.0007,2.1,5.9,Crystal Structure Of Spermidine Synthase From Plasmodium Falciparum In Complex With Spermine
+2PSS A 1,33,8.0,0.0009,2.1,6.1,The Structure Of Plasmodium Falciparum Spermidine Synthase In Its Apo-Form
+4BP3 A 1,34,8.1,0.0005,2.1,8.8,Crystal Structure Of Plasmodium Falciparum Spermidine Synthase In Complex With Decarboxylated S- Adenosylmethionine5' And 4-methylaniline
+2PT9 A 1,34,8.0,0.0008,2.1,5.9,The Structure Of Plasmodium Falciparum Spermidine Synthase In Complex With Decarboxylated S-Adenosylmethionine And The Inhibitor Cis-4-Methylcyclohexylamine (4mcha)
+4CXM A 1,34,8.0,0.0008,2.1,5.9,Crystal Structure Of Plasmodium Falciparum Spermidine Synthase In Complex With Methylthioadenosin And Spermidine After Catalysis In Crystal
+4BP1 A 1,34,8.0,0.0009,2.1,5.9,Crystal Structure Of Plasmodium Falciparum Spermidine Synthase In Complex With 5'-methylthioadenosine And Putrescine
+1TQZ A ,52,8.5,0.0232,2.1,11.5,Solution Structure Of Necap1 Protein
+
+2Q41 C 1,34,8.0,0.0010,2.1,8.8,Ensemble Refinement Of The Protein Crystal Structure Of Spermidine Synthase From Arabidopsis Thaliana Gene At1g23820ÿ
+2BSZ B 1,34,6.4,0.0310,2.1,2.9,Structure Of Mesorhizobium Loti Arylamine N- Acetyltransferase 1
+4YUV A 1,31,7.9,0.0014,2.1,3.2,Crystal Structure Of Trypanosoma Cruzi Spermidine Synthase In Complex With Decarboxylated S-adenosylmethionine
+1XJ5 A 1,34,7.9,0.0011,2.1,8.8,X-Ray Structure Of Spermidine Synthase From Arabidopsis Thaliana Gene At1g23820
+2Q41 A 1,34,8.0,0.0009,2.2,8.8,Ensemble Refinement Of The Protein Crystal Structure Of Spermidine Synthase From Arabidopsis Thaliana Gene At1g23820ÿ
+5C8B B 4,43,6.3,0.0350,2.2,7.0,Structural Insights Into The Redesign Of A Sucrose Phosphorylase By Induced Loop Repositioning
+1R7A A 4,43,6.7,0.0059,2.2,7.0,Sucrose Phosphorylase From Bifidobacterium Adolescentis
+1XJ5 C 1,36,7.9,0.0012,2.2,11.1,X-Ray Structure Of Spermidine Synthase From Arabidopsis Thaliana Gene At1g23820
+3HRA A 1,16,6.0,0.0247,2.2,0.0,Crystal Structure Of Ef0377 An Ankyrin Repeat Proteinÿ
+2GDV A 4,41,6.3,0.0466,2.2,7.3,Sucrose Phosphorylase From Bifidobacterium Adolescentis Reacted With Sucrose
+4TUM C ,23,6.3,0.0493,2.2,13.0,Crystal Structure Of Ankyrin Repeat Domain Of Akr2
+3EU9 A ,21,7.3,0.0255,2.2,0.0,The Ankyrin Repeat Domain Of Huntingtin Interacting Protein 14ÿ
+3UTM B 2,22,7.5,0.0012,2.2,9.1,Crystal Structure Of A Mouse Tankyrase-Axin Complexÿ
+2Q41 D 1,39,8.0,0.0010,2.2,7.7,Ensemble Refinement Of The Protein Crystal Structure Of Spermidine Synthase From Arabidopsis Thaliana Gene At1g23820ÿ
+4NSW B 2,47,9.0,0.0169,2.2,2.1,Crystal Structure Of The Bar-ph Domain Of Acap1
+2BKK B ,16,5.9,0.0499,2.3,6.2,Crystal Structure Of Aminoglycoside Phosphotransferase Aph (3')-Iiia In Complex With The Inhibitor Ar_3a
+4YUZ C 1,34,7.0,0.0277,2.3,0.0,Crystal Structure Of Trypanosoma Cruzi Spermidine Synthase In Complex With 5-[(4-methylbenzyl)oxy]quinazoline-2,4-diamine
+4KHB H 1,48,8.5,0.0215,2.3,4.2,Structure Of The Spt16d Pob3n Heterodimer
+4O60 A 1,23,7.2,0.0052,2.3,4.3,Structure Of Ankyrin Repeat Protein
+2ZSU C 1,35,7.6,0.0044,2.3,2.9,Crystal Structure Of Spermidine Synthase From Pyrococcus Horikoshii Ot3, P1 Form
+1T77 B 1,42,8.3,0.0458,2.3,2.4,Crystal Structure Of The Ph-Beach Domains Of Human LrbaBGL
+4YV1 C 1,31,7.7,0.0032,2.3,0.0,Crystal Structure Of Trypanosoma Cruzi Spermidine Synthase In Complex With Quinolin-8-yl Piperidine-1-carboxylate
+2ZSU E 1,35,7.8,0.0022,2.3,2.9,Crystal Structure Of Spermidine Synthase From Pyrococcus Horikoshii Ot3, P1 Form
+2E5W C 1,35,7.8,0.0021,2.3,2.9,Crystal Structure Of Spermidine Synthase From Pyrococcus Horikoshii Ot3
+1XJ5 B 1,38,7.9,0.0012,2.3,7.9,X-Ray Structure Of Spermidine Synthase From Arabidopsis Thaliana Gene At1g23820
+2R1A H ,63,10.7,0.0177,2.3,4.8,Crystal Structure Of The Periplasmic Lipopolysaccharide Transport Protein Lpta (Yhbn), Trigonal Form
+4YV1 A 1,33,7.7,0.0026,2.3,3.0,Crystal Structure Of Trypanosoma Cruzi Spermidine Synthase In Complex With Quinolin-8-yl Piperidine-1-carboxylate
+4HRL A ,16,5.9,0.0486,2.3,6.2,Structural Basis For Driving Her2-addicted Cancer Cells Into Apoptosis
+1K3Z D ,25,7.2,0.0051,2.3,8.0,X-Ray Crystal Structure Of The IkbbNF-Kb P65 Homodimer Complex
+1K3Z D 1,25,7.2,0.0051,2.3,8.0,X-Ray Crystal Structure Of The IkbbNF-Kb P65 Homodimer Complex
+2ETA B 2,16,5.9,0.0481,2.3,12.5,Crystal Structure Of The Ankyrin Repeat Domain Of The Trpv2
+2E5W A 1,35,7.8,0.0021,2.3,2.9,Crystal Structure Of Spermidine Synthase From Pyrococcus Horikoshii Ot3
+4DX9 U ,46,8.1,0.0274,2.3,6.5,Icap1 In Complex With Integrin Beta 1 Cytoplasmic Tail
+4YUZ A 1,34,7.8,0.0022,2.3,0.0,Crystal Structure Of Trypanosoma Cruzi Spermidine Synthase In Complex With 5-[(4-methylbenzyl)oxy]quinazoline-2,4-diamine
+2V4H C ,23,6.6,0.0098,2.3,0.0,Nemo Cc2-Lz Domain - 1d5 Darpin Complexÿ
+1OT8 C 1,23,6.6,0.0123,2.3,4.3,Structure Of The Ankyrin Domain Of The Drosophila Notch Receptor
+4C48 B ,23,6.8,0.0163,2.3,8.7,Crystal Structure Of Acrb-acrz Complex
+1OT8 B 1,23,6.6,0.0109,2.3,4.3,Structure Of The Ankyrin Domain Of The Drosophila Notch Receptor
+2V4H D ,24,7.5,0.0012,2.3,4.2,Nemo Cc2-Lz Domain - 1d5 Darpin Complexÿ
+2CMG B 1,36,7.2,0.0169,2.3,8.3,Crystal Structure Of Spermidine Synthase From Helicobacter Pylori
+2Y1L F ,21,7.4,0.0018,2.3,9.5,Caspase-8 In Complex With Darpin-8.4ÿ
+2O06 A 1,42,9.5,10e-4.7,2.3,9.5,Human Spermidine Synthase
+3EU9 C 2,17,5.9,0.0349,2.3,5.9,The Ankyrin Repeat Domain Of Huntingtin Interacting Protein 14ÿ
+3V79 K 1,23,7.7,0.0005,2.3,4.3,Structure Of Human Notch1 Transcription Complex Including Csl, Ram, Ank, And Maml-1 On Hes-1 Promoter Dna Sequenceÿ
+1OT8 A 1,23,6.6,0.0122,2.3,4.3,Structure Of The Ankyrin Domain Of The Drosophila Notch Receptor
+2R1A D ,61,10.7,0.0164,2.3,1.6,Crystal Structure Of The Periplasmic Lipopolysaccharide Transport Protein Lpta (Yhbn), Trigonal Form
+1T77 A 1,47,8.5,0.0281,2.3,4.3,Crystal Structure Of The Ph-Beach Domains Of Human LrbaBGL
+4OT9 A 2,17,6.0,0.0247,2.3,5.9,Crystal Structure Of The C-terminal Domain Of P100/nf-kb2
+5D66 B ,23,6.7,0.0216,2.3,4.3,Crystal Structure Of An Ankyrin Repeat Domain (abaye2397) From Acinetobacter Baumannii Aye At 1.00 A Resolution
+1IY9 A 1,34,7.6,0.0041,2.4,5.9,Crystal Structure Of Spermidine Synthase
+1IY9 C 1,34,7.6,0.0043,2.4,5.9,Crystal Structure Of Spermidine Synthase
+1IY9 D 1,34,7.6,0.0043,2.4,5.9,Crystal Structure Of Spermidine Synthase
+2NYJ A ,16,5.9,0.0471,2.4,6.2,Crystal Structure Of The Ankyrin Repeat Domain Of Trpv1
+2ETA A 2,16,5.9,0.0380,2.4,12.5,Crystal Structure Of The Ankyrin Repeat Domain Of The Trpv2
+2F8Y B 1,23,6.5,0.0182,2.4,4.3,Crystal Structure Of Human Notch1 Ankyrin Repeats To 1.55a Resolution
+1MJF A 1,33,7.9,0.0011,2.4,6.1,Putative Spermidine Synthetase From Pyrococcus Furiosus Pfu- 132382
+2QC9 A 1,23,6.5,0.0171,2.4,4.3,Mouse Notch 1 Ankyrin Repeat Intracellular Domain
+2RNR B ,51,7.6,0.0296,2.4,5.9,Solution Structure Of The Complex Between Tfiie Alpha C- Terminal Acidic Domain And Tfiih P62 Ph Domain
+1MI1 B ,49,8.7,0.0120,2.4,4.1,Crystal Structure Of The Ph-Beach Domain Of Human Neurobeachin
+2ETC B 2,16,5.9,0.0381,2.4,12.5,Crystal Structure Of The Ankyrin Repeat Domain Of Trpv2
