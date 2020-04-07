@@ -38,7 +38,8 @@ results/vast/temp/
 # result import files
 results/cathedral/cathedral_results.txt
 results/mtm/mtm_results.txt
-results/ssm/ssm_results.txt
+results/ssm/ssm_results_q_score.txt
+results/ssm/ssm_results_rmsd.txt
 
 # build ignores
 rupee-mgr/target/

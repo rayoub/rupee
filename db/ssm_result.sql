@@ -2,6 +2,7 @@
 CREATE TABLE ssm_result
 (
     version VARCHAR NOT NULL,
+    search_type VARCHAR NOT NULL,
     n INTEGER NOT NULL,
     db_id_1 VARCHAR NOT NULL,
     db_id_2 VARCHAR NOT NULL,
@@ -9,4 +10,4 @@ CREATE TABLE ssm_result
     ssm_q_score NUMERIC NOT NULL
 ); 
 
-CREATE UNIQUE INDEX idx_ssm_result_unique ON ssm_result (version, n, db_id_1);
+CREATE UNIQUE INDEX idx_ssm_result_unique ON ssm_result (version, search_type, n, db_id_1);
