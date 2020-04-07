@@ -82,7 +82,8 @@ public class AlignResults
         alignRupeeResults(benchmark, version, dbType, maxN, "all_aligned", "full_length");
         alignRupeeResults(benchmark, version, dbType, maxN, "top_aligned", "full_length");
         
-        alignSsmResults(benchmark, version, dbType, maxN); 
+        alignSsmResults(benchmark, version, dbType, maxN, "rmsd"); 
+        alignSsmResults(benchmark, version, dbType, maxN, "q_score"); 
     }
 
     public static void alignRupeeResults(String benchmark, String version, DbType dbType, int maxN, String searchMode, String searchType) {
@@ -115,14 +116,14 @@ public class AlignResults
         dbIds.parallelStream().forEach(dbId -> alignResults(command, version, dbType, dbId, maxN, "", ""));
     }
     
-    public static void alignSsmResults(String benchmark, String version, DbType dbType, int maxN) {
+    public static void alignSsmResults(String benchmark, String version, DbType dbType, int maxN, String searchType) {
 
         List<String> dbIds = Benchmarks.get(benchmark);
 
-        String command = "SELECT db_id_2 FROM ssm_result WHERE version = ? AND db_id_1 = ? AND n <= ? ORDER BY n;";
+        String command = "SELECT db_id_2 FROM ssm_result WHERE version = ? AND db_id_1 = ? AND n <= ? AND search_type = ? ORDER BY n;";
 
         counter.set(0);
-        dbIds.parallelStream().forEach(dbId -> alignResults(command, version, dbType, dbId, maxN, "", ""));
+        dbIds.parallelStream().forEach(dbId -> alignResults(command, version, dbType, dbId, maxN, "", searchType));
     }
 
     private static void alignResults(String command, String version, DbType dbType, String dbId, int maxN, String searchMode, String searchType) {
@@ -142,9 +143,12 @@ public class AlignResults
             stmt.setString(1, version);
             stmt.setString(2, dbId);
             stmt.setInt(3, maxN);
-            if (!searchMode.isEmpty() && !searchType.isEmpty()) {
+            if (!searchMode.isEmpty()) { // RUPEE
                 stmt.setString(4, searchMode);
                 stmt.setString(5, searchType);
+            }
+            else if (!searchType.isEmpty()) { // SSM
+                stmt.setString(4, searchType);
             }
 
             ResultSet rs = stmt.executeQuery();
