@@ -1,4 +1,3 @@
-
 4QN7 A 4,24,4.8,0.0305,1.0,4.2,Crystal Structure Of Neuramnidase N7 Complexed With Oseltamivir
 4QN7 B 4,24,4.8,0.0353,1.0,4.2,Crystal Structure Of Neuramnidase N7 Complexed With Oseltamivir
 2BKL B 6,24,5.0,0.0102,1.0,4.2,Structural And Mechanistic Analysis Of Two Prolyl Endopeptidases: Role Of Inter-Domain Dynamics In Catalysis And Specificity
@@ -59,7 +58,6 @@
 2HJB A 4,24,4.8,0.0376,1.4,8.3,Crystal Structure Of Alcaligenes Faecalis Aadh In Complex With P-Methoxybenzylamine
 2HJ4 A 4,24,4.7,0.0430,1.4,8.3,Crystal Structure Of Alcaligenes Faecalis Aadh Complex With P-Nitrobenzylamine
 6NN9 A 4,28,4.9,0.0234,1.4,0.0,Refined Atomic Structures Of N9 Subtype Influenza Virus Neuraminidase And Escape Mutants
-
 4QN3 B 4,28,4.9,0.0196,1.4,3.6,Crystal Structure Of Neuraminidase N7
 1NNA A 4,28,4.7,0.0433,1.4,0.0,Three-Dimensional Structure Of Influenza A N9 Neuraminidase And Its Complex With The Inhibitor 2-Deoxy 2,3-Dehydro-N- Acetyl Neuraminic Acid
 3NN9 A 4,28,5.0,0.0121,1.4,0.0,Refined Atomic Structures Of N9 Subtype Influenza Virus Neuraminidase And Escape Mutants

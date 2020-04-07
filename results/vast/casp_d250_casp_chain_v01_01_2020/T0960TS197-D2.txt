@@ -1,4 +1,3 @@
-
 4P1C I 2,16,5.1,0.0206,0.7,6.2,Crystal Structure Of The Toluene 4-monooxygenase Hydroxylase- Ferredoxin C7s, C84a, C85a Variant Electron-transfer Complex
 4P1B H 2,16,5.2,0.0122,0.7,6.2,Crystal Structure Of The Toluene 4-monooxygenase Hydroxylase- Ferredoxin C7s E16c C84a C85a Variant Electron-transfer Complex
 4P1C H 2,16,5.1,0.0201,0.7,6.2,Crystal Structure Of The Toluene 4-monooxygenase Hydroxylase- Ferredoxin C7s, C84a, C85a Variant Electron-transfer Complex
@@ -59,7 +58,6 @@
 4NBD E 3,16,5.0,0.0411,1.2,0.0,Carbazole-bound Oxygenase With Phe275 Replaced By Trp And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase (form2)
 2DE6 E 3,16,5.0,0.0394,1.2,0.0,The Reduced Complex Between Oxygenase And Ferredoxin In Carbazole 1,9a-Dioxygenase
 2D9U A ,25,5.2,0.0066,1.2,12.0,Solution Structure Of The Chromo Domain Of Chromobox Homolog 2 From Human
-
 4NBE D 2,16,5.0,0.0326,1.2,0.0,Fluorene-bound Oxygenase With Phe275 Replaced By Trp And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase (form2)
 2DE7 E 3,16,5.0,0.0480,1.2,0.0,The Substrate-Bound Complex Between Oxygenase And Ferredoxin In Carbazole 1,9a-Dioxygenase
 4NST A 1,30,5.9,0.0222,1.2,10.0,Crystal Structure Of Human Cdk12/cyclin K In Complex With Adp-aluminum Fluoride

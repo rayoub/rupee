@@ -1,4 +1,3 @@
-
 2W5S A 1,17,5.1,0.0065,0.9,17.6,Structure-Based Mechanism Of Lipoteichoic Acid Synthesis By Staphylococcus Aureus Ltasÿ
 2W5Q A 1,17,5.1,0.0375,1.0,17.6,Structure-Based Mechanism Of Lipoteichoic Acid Synthesis By Staphylococcus Aureus Ltasÿ
 3PQH A 2,16,5.2,0.0024,1.0,6.2,Crystal Structure Of The C-Terminal Fragment Of The Bacteriophage Phi92 Membrane-Piercing Protein Gp138ÿ
@@ -59,7 +58,6 @@
 3BDM W ,34,6.5,0.0310,1.4,0.0,Yeast 20s Proteasome:glidobactin A-Complex
 3TDD I ,34,6.5,0.0395,1.4,0.0,Crystal Structure Of Yeast Cp In Complex With Belactosin Cÿ
 3BDM I ,34,6.5,0.0327,1.4,0.0,Yeast 20s Proteasome:glidobactin A-Complex
-
 5AHJ W ,35,6.7,0.0125,1.4,0.0,Yeast 20s Proteasome In Complex With Macyranone A
 4QWL W ,35,6.7,0.0146,1.4,0.0,Ycp Beta5-a50v Mutant In Complex With Carfilzomib
 3WXR X ,32,6.5,0.0251,1.4,0.0,Yeast 20s Proteasome With A Mutation Of Alpha7 Subunit

@@ -1,4 +1,3 @@
-
 5C2M A 3,17,5.2,0.0022,1.1,0.0,The De Novo Evolutionary Emergence Of A Symmetrical Protein Is Shaped By Folding Constraints
 1JLE A 2,19,5.0,0.0147,1.1,0.0,Crystal Structure Of Y188c Mutant Hiv-1 Reverse Transcriptase
 4V16 A 3,20,5.0,0.0095,1.1,5.0,Klhsv2 With Loop 6cd Replaced By A Gly-ser Linker
@@ -59,7 +58,6 @@
 3WSY A 3,17,5.1,0.0094,1.4,17.6,Sorla Vps10p Domain In Complex With Its Own Propeptide Fragment
 1S1X A 2,17,5.1,0.0061,1.4,0.0,Crystal Structure Of V108i Mutant Hiv-1 Reverse Transcriptase In Complex With Nevirapine
 1GWX B ,16,4.9,0.0367,1.4,6.2,Molecular Recognition Of Fatty Acids By Peroxisome Proliferator-Activated Receptors
-
 4KFC A 2,16,4.7,0.0487,1.4,6.2,Crystal Structure Of A Hyperactive Mutant Of Response Regulator Kdpe Complexed To Its Promoter Dna
 1GOG A 5,22,5.2,0.0022,1.4,0.0,Novel Thioether Bond Revealed By A 1.7 Angstroms Crystal Structure Of Galactose Oxidase
 1DAR A 3,21,4.8,0.0294,1.4,14.3,Elongation Factor G In Complex With Gdp

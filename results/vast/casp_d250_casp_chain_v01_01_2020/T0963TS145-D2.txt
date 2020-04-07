@@ -1,4 +1,3 @@
-
 1F37 B ,17,5.2,0.0152,1.1,0.0,Structure Of A Thioredoxin-Like [2fe-2s] Ferredoxin From Aquifex Aeolicus
 3MKQ C 5,20,5.2,0.0042,1.2,5.0,Crystal Structure Of Yeast AlphaBETAPRIME-Cop Subcomplex Of The Copi Vesicular Coatя
 1D0Q B ,17,5.2,0.0152,1.2,11.8,Structure Of The Zinc-Binding Domain Of Bacillus Stearothermophilus Dna Primase
@@ -59,7 +58,6 @@
 3J2T D 13,24,5.2,0.0044,1.4,4.2,An Improved Model Of The Human Apoptosome
 3J2T G 13,24,5.2,0.0044,1.4,4.2,An Improved Model Of The Human Apoptosome
 3J2T B 13,24,5.2,0.0044,1.4,4.2,An Improved Model Of The Human Apoptosome
-
 1MU2 A 2,17,5.2,0.0022,1.4,0.0,Crystal Structure Of Hiv-2 Reverse Transcriptase
 3Q7O A 5,23,5.1,0.0069,1.4,4.3,The Crystal Structure Of Bamb From The Bam Complex In Spacegroup P213ÿ
 2YH3 A 4,22,5.0,0.0134,1.4,4.5,The Structure Of Bamb From E. Coliÿ

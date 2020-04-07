@@ -1,4 +1,3 @@
-
 5DLL A 7,46,5.7,0.0039,1.5,6.5,Aminopeptidase N (pepn) From Francisella Tularensis Subsp. Tularensis Schu S4
 3HVE A 2,42,5.2,0.0203,1.5,9.5,Structures Of Spop-Substrate Complexes: Insights Into Molecular Architectures Of Btb-Cul3 Ubiquitin Ligases: Gigaxoninbtb3-Boxÿ
 4N5Q B 2,28,5.2,0.0255,1.5,7.1,Crystal Structure Of The N-terminal Ankyrin Repeat Domain Of Trpv3
@@ -59,7 +58,6 @@
 3FTZ A 5,47,5.5,0.0075,1.7,6.4,Leukotriene A4 Hydrolase In Complex With Fragment 2- (Pyridin-3-Ylmethoxy)anilineÿ
 3B7R L 5,47,5.5,0.0066,1.7,6.4,Leukotriene A4 Hydrolase Complexed With Inhibitor Rb3040
 4RSY A 5,48,5.5,0.0088,1.7,6.2,Crystal Structures Of The Human Leukotriene A4 Hydrolase Complex With A Potential Inhibitor H7
-
 4UQI B 4,49,5.9,0.0017,1.7,10.2,Ap2 Controls Clathrin Polymerization With A Membrane- Activated Switch
 3FTU A 5,48,5.5,0.0076,1.7,6.2,Leukotriene A4 Hydrolase In Complex With Dihydroresveratrolÿ
 3B7S A 5,47,5.4,0.0122,1.7,6.4,[e296q]lta4h In Complex With Rsr Substrate

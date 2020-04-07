@@ -1,4 +1,3 @@
-
 3VR1 C 3,17,5.2,0.0022,1.1,0.0,Crystal Structure Analysis Of The Translation Factor Rf3
 3VR1 A 3,17,5.2,0.0022,1.1,0.0,Crystal Structure Analysis Of The Translation Factor Rf3
 3VR1 B 3,17,5.2,0.0022,1.1,0.0,Crystal Structure Analysis Of The Translation Factor Rf3
@@ -59,7 +58,6 @@
 1KG0 A 1,19,5.1,0.0086,1.3,10.5,Structure Of The Epstein-Barr Virus Gp42 Protein Bound To The Mhc Class Ii Receptor Hla-Dr1
 1JLA A 2,16,5.1,0.0056,1.3,6.2,Crystal Structure Of Y181c Mutant Hiv-1 Reverse Transcriptase In Complex With Tnk-651
 3AZQ B 2,24,5.0,0.0161,1.3,4.2,Crystal Structure Of Puromycin Hydrolase S511a Mutant Complexed With Pggÿ
-
 1G0T B 1,19,5.2,0.0022,1.3,5.3,Dsbc Mutant C101s
 2AJL J 4,20,5.2,0.0048,1.3,20.0,X-Ray Structure Of Novel Biaryl-Based Dipeptidyl Peptidase Iv Inhibitorÿ
 3F6K A 10,17,4.9,0.0163,1.3,17.6,Crystal Structure Of The Vps10p Domain Of Human SortilinNTS3 IN COMPLEX WITH NEUROTENSINÿ

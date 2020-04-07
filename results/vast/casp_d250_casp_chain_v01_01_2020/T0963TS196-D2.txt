@@ -1,4 +1,3 @@
-
 4TQO D 3,23,5.0,0.0366,1.0,4.3,The Crystal Structure Of Methanol Dehydrogenase From Methylococcus Capsulatus (bath)
 3TR5 D 2,19,5.0,0.0396,1.0,5.3,Structure Of A Peptide Chain Release Factor 3 (Prfc) From Coxiella Burnetiiÿ
 4TQO B 4,23,5.0,0.0396,1.0,4.3,The Crystal Structure Of Methanol Dehydrogenase From Methylococcus Capsulatus (bath)
@@ -59,7 +58,6 @@
 4A63 F 2,16,5.0,0.0449,1.5,0.0,Crystal Structure Of The P73-Aspp2 Complex At 2.6a Resolutionÿ
 4YTX N ,55,7.0,0.0021,1.5,5.5,Crystal Structure Of Ups1-mdm35 Complex With Pa
 4XIZ B ,55,7.0,0.0016,1.5,5.5,Structure Of A Phospholipid Trafficking Complex With Substrate
-
 4NK7 A 2,35,6.3,0.0244,1.5,5.7,Crystal Structure Of The D. Melanogaster Plk4 Cryptic Polo Box (cpb)
 4RS6 B 1,39,6.1,0.0140,1.5,10.3,Crystal Structure Of The C Domain Of Polo Like Kinase Ii In Homo Sapiens
 4XZV H ,47,6.1,0.0476,1.5,4.3,Crystal Structure Of Slmo1-triap1 Complex

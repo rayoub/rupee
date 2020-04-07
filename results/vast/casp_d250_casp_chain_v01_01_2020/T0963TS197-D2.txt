@@ -1,4 +1,3 @@
-
 2W5R A 1,18,5.2,0.0077,0.8,16.7,Structure-Based Mechanism Of Lipoteichoic Acid Synthesis By Staphylococcus Aureus Ltasÿ
 2W5S A 1,18,5.2,0.0075,0.8,16.7,Structure-Based Mechanism Of Lipoteichoic Acid Synthesis By Staphylococcus Aureus Ltasÿ
 2RV8 A 1,17,5.1,0.0281,0.8,17.6,Solution Structure Of The Phop Dna-binding Domain From Mycobacterium Tuberculosis
@@ -59,7 +58,6 @@
 4NKB A 1,39,6.4,0.0037,1.5,0.0,Crystal Structure Of The Cryptic Polo Box (cpb)of Zyg-1
 2P9K F ,39,5.1,0.0156,1.5,7.7,Crystal Structure Of Bovine Arp23 COMPLEX CO-Crystallized With Atp And Crosslinked With Glutaraldehyde
 2P9L F ,39,5.1,0.0164,1.5,7.7,Crystal Structure Of Bovine Arp23 COMPLEX
-
 2P9S F ,39,5.1,0.0160,1.5,7.7,Structure Of Bovine Arp23 COMPLEX CO-Crystallized With AtpMG2+
 3DXK F ,38,5.2,0.0138,1.5,7.9,Structure Of Bos Taurus Arp23 COMPLEX WITH BOUND INHIBITOR Ck0944636ÿ
 4JKR I 3,31,5.2,0.0066,1.5,6.5,Crystal Structure Of E. Coli Rna Polymerase In Complex With Ppgpp

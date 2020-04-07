@@ -1,4 +1,3 @@
-
 4HAB C 2,36,6.9,0.0203,1.2,5.6,Crystal Structure Of Plk1 Polo-box Domain In Complex With Pl-49
 1K1X A 4,34,6.9,0.0009,1.3,0.0,Crystal Structure Of 4-Alpha-Glucanotransferase From Thermococcus Litoralis
 1K1W A 4,34,6.5,0.0166,1.4,0.0,Crystal Structure Of 4-Alpha-Glucanotransferase From Thermococcus Litoralis
@@ -59,7 +58,6 @@
 1XOD A ,52,8.4,0.0156,2.3,3.8,Crystal Structure Of X. Tropicalis Spred1 Evh-1 Domain
 2ZSU A 1,46,7.5,0.0031,2.3,6.5,Crystal Structure Of Spermidine Synthase From Pyrococcus Horikoshii Ot3, P1 Form
 4YV1 D 1,42,7.3,0.0341,2.3,7.1,Crystal Structure Of Trypanosoma Cruzi Spermidine Synthase In Complex With Quinolin-8-yl Piperidine-1-carboxylate
-
 4YV2 A 1,42,7.4,0.0256,2.4,7.1,Crystal Structure Of Trypanosoma Cruzi Spermidine Synthase In Complex With 2-phenyl-1,2-thiazol-3(2h)-one
 4YV0 D 1,41,7.2,0.0480,2.4,7.3,Crystal Structure Of Trypanosoma Cruzi Spermidine Synthase In Complex With Trans-4-methylcyclohexylamine
 4YUV A 1,42,7.1,0.0109,2.4,7.1,Crystal Structure Of Trypanosoma Cruzi Spermidine Synthase In Complex With Decarboxylated S-adenosylmethionine

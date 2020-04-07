@@ -1,4 +1,3 @@
-
 1UTC A 3,31,5.2,0.0308,0.7,3.2,Clathrin Terminal Domain Complexed With Tlpwdlwtt
 1BPO A 3,32,5.2,0.0308,0.7,3.1,Clathrin Heavy-Chain Terminal Domain And Linker
 1BPO C 3,32,5.2,0.0308,0.7,3.1,Clathrin Heavy-Chain Terminal Domain And Linker
@@ -59,7 +58,6 @@
 4UUY B 3,23,5.2,0.0308,0.9,4.3,Structural Identification Of The Vps18 Beta-propeller Reveals A Critical Role In The Hops Complex Stability And Function
 3P1L A 4,29,5.2,0.0412,0.9,3.4,Crystal Structure Of Escherichia Coli Bamb, A Lipoprotein Component Of The Beta-Barrel Assembly Machinery Complex, Native Crystalsÿ
 4UUY A 3,23,5.2,0.0318,0.9,4.3,Structural Identification Of The Vps18 Beta-propeller Reveals A Critical Role In The Hops Complex Stability And Function
-
 3KIF F 1,26,5.2,0.0308,0.9,15.4,The Crystal Structures Of Two Fragments Truncated From 5-Bla Propeller Lectin, Tachylectin-2 (Lib1-B7-18 And Lib2-D2-15)ÿ
 3PRW A 4,30,5.2,0.0437,1.0,3.3,Crystal Structure Of The Lipoprotein Bambÿ
 3KVP D ,33,5.2,0.0308,1.0,3.0,Crystal Structure Of Uncharacterized Protein Ymzc Precursor From Bacillus Subtilis, Northeast Structural Genomics Consortium Target Sr378aÿ

@@ -1,4 +1,3 @@
-
 3CJQ B 1,24,5.1,0.0263,0.9,12.5,Ribosomal Protein L11 Methyltransferase (Prma) In Complex With Dimethylated Ribosomal Protein L11 In Space Group P212121
 2I7F A 2,18,5.1,0.0057,1.0,5.6,Sphingomonas Yanoikuyae B1 Ferredoxin
 3RR1 B 1,24,5.2,0.0152,1.0,4.2,Crystal Structure Of Enolase Prk14017 (Target Efi-500653) From Ralstonia Pickettii 12jÿ
@@ -59,7 +58,6 @@
 1C9L A 6,26,5.1,0.0052,1.1,3.8,Peptide-In-Groove Interactions Link Target Proteins To The B-Propeller Of Clathrin
 4PXW B 5,21,5.1,0.0372,1.1,28.6,Crystal Structure Of Human Dcaf1 Wd40 Repeats (q1250l)
 4K8X A 1,22,4.9,0.0183,1.1,4.5,Binary Complex Of 9n Dna Polymerase In The Replicative State
-
 4TQO E 3,25,4.8,0.0291,1.1,0.0,The Crystal Structure Of Methanol Dehydrogenase From Methylococcus Capsulatus (bath)
 4KFC B 2,20,5.2,0.0025,1.1,5.0,Crystal Structure Of A Hyperactive Mutant Of Response Regulator Kdpe Complexed To Its Promoter Dna
 3RFH D 4,29,5.2,0.0022,1.1,3.4,Crystal Structure Of The Yeast Rack1 Dimer In Space Group P21ÿ

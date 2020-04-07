@@ -1,4 +1,3 @@
-
 1M5Q V 2,23,6.4,0.0129,1.1,13.0,Crystal Structure Of A Novel Sm-Like Archaeal Protein From Pyrobaculum Aerophilum
 1M5Q H 2,23,6.4,0.0148,1.1,13.0,Crystal Structure Of A Novel Sm-Like Archaeal Protein From Pyrobaculum Aerophilum
 1M5Q L 2,23,6.3,0.0172,1.1,17.4,Crystal Structure Of A Novel Sm-Like Archaeal Protein From Pyrobaculum Aerophilum
@@ -59,7 +58,6 @@
 2GDV B 4,40,6.2,0.0365,1.4,7.5,Sucrose Phosphorylase From Bifidobacterium Adolescentis Reacted With Sucrose
 4H5X B 1,40,6.9,0.0076,1.4,7.5,Human Plk1-Pbd With A Glycerol Bound At The Phophopeptide Binding Site
 4LKL A 1,40,6.8,0.0173,1.4,7.5,Crystal Structure Of Plk1 Polo-box Domain In Complex With Pl-55
-
 4RCP A 1,40,6.8,0.0153,1.4,7.5,Crystal Structure Of Plk1 Polo-box Domain In Complex With Pl-2
 4FMA F 1,39,6.1,0.0449,1.4,23.1,Espg Structure
 5DNJ A 1,39,6.8,0.0161,1.4,2.6,Mouse Polo-box Domain And Peptide Analog 702

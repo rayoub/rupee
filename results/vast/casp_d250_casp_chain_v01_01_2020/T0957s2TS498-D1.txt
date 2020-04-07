@@ -1,4 +1,3 @@
-
 3CIA A 4,38,5.1,0.0353,1.2,5.3,Crystal Structure Of Cold-Aminopeptidase From Colwellia Psychrerythraea
 5DLL A 7,37,5.0,0.0434,1.3,16.2,Aminopeptidase N (pepn) From Francisella Tularensis Subsp. Tularensis Schu S4
 3UZD A 1,39,5.2,0.0249,1.5,15.4,Crystal Structure Of 14-3-3 Gammaÿ
@@ -59,7 +58,6 @@
 4PWX E 1,49,5.3,0.0164,1.7,16.3,Crystal Structure Of An Atp-bound Get3-get4-get5 Complex From S.cerevisiae
 3Q79 A 2,44,5.8,0.0021,1.7,6.8,Cryptococcus Neoformans Protein Farnesyltransferase In Complex With Farnesyl-Ddptasacniq Productÿ
 3DSS A 3,43,5.2,0.0244,1.7,9.3,Crystal Structure Of Rabggtase(Delta Lrr; Delta Ig)
-
 4PWX C 1,48,5.5,0.0071,1.7,14.6,Crystal Structure Of An Atp-bound Get3-get4-get5 Complex From S.cerevisiae
 2BQ0 B 1,40,5.1,0.0313,1.7,12.5,14-3-3 Protein Beta (Human)
 3S4W A 7,46,5.3,0.0183,1.7,4.3,Structure Of The Fanci-Fancd2 Complexÿ

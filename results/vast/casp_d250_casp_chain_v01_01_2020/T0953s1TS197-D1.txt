@@ -1,4 +1,3 @@
-
 1RTI A 2,18,5.2,0.0308,0.8,5.6,Hiv-1 Reverse Transcriptase Mol_id: 1; Molecule: Hiv-1 Reverse Transcriptase; Chain: A, B; Synonym: Hiv-1 Rt; Ec: 2.7.7.49; Engineered: Yes
 1GXQ A 1,16,5.2,0.0308,0.8,6.2,Crystal Structure Of The Phob Effector Domain
 4NHJ B 1,19,5.2,0.0336,0.9,10.5,Crystal Structure Of Klebsiella Pneumoniae Rsta Dna-binding Domain In Complex With Rsta Box
@@ -59,7 +58,6 @@
 1PFQ B 4,23,5.2,0.0308,1.1,8.7,Crystal Structure Of Human Apo Dipeptidyl Peptidase Iv Cd26
 3G0G C 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Dipeptidyl Peptidase Iv In Complex With A Pyrimidinone Inhibitor 3˙
 4N8D B 4,22,5.2,0.0308,1.1,9.1,Dpp4 Complexed With Syn-7aa
-
 4PNZ B 4,22,5.2,0.0308,1.1,9.1,Human Dipeptidyl Peptidase Iv/cd26 In Complex With The Long-acting Inhibitor Omarigliptin (mk-3102)
 3SWW A 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dpp-Iv In Complex With Sa-(+)-3- (Aminomethyl)-4-(2,4-Dichlorophenyl)-6-(2-Methoxyphenyl)- 2-Methyl- 5h-Pyrrolo[3,4-B]pyridin-7(6h)-Oneÿ
 3SX4 A 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dpp-Iv In Complex With Sa-(+)-3- (Aminomethyl)-4-(2,4-Dichlorophenyl)-6-(2-Methoxyphenyl)- 2-Methyl- 5h-Pyrrolo[3,4-B]pyridin-7(6h)-Oneÿ

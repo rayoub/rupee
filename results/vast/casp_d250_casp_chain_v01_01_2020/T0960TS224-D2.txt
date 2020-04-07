@@ -1,4 +1,3 @@
-
 3JBT I 13,18,4.3,0.0385,1.4,0.0,Atomic Structure Of The Apaf-1 Apoptosome
 1D5M A 1,17,4.3,0.0401,1.4,17.6,X-Ray Crystal Structure Of Hla-Dr4 Complexed With Peptide And Sebя
 1AQD J 1,19,4.2,0.0476,1.4,15.8,Hla-Dr1 (Dra, Drb1 0101) Human Class Ii Histocompatibility Protein (Extracellular Domain) Complexed With Endogenous Peptide
@@ -59,7 +58,6 @@
 2D5R B ,19,5.1,0.0015,1.5,5.3,Crystal Structure Of A Tob-Hcaf1 Complex
 2AYU A 3,21,4.9,0.0036,1.5,4.8,The Structure Of Nucleosome Assembly Protein Suggests A Mechanism For Histone Binding And Shuttling
 4FJ6 B 3,20,4.8,0.0054,1.5,10.0,Crystal Structure Of A Glycoside Hydrolase Family 33, Candidate Sialidase (Bdi_2946) From Parabacteroides Distasonis Atcc 8503 At 1.90 A Resolution
-
 3UKU D 2,24,4.8,0.0353,1.6,8.3,Structure Of Arp2/3 Complex With Bound Inhibitor Ck-869
 3DXK D 2,24,4.8,0.0358,1.6,8.3,Structure Of Bos Taurus Arp23 COMPLEX WITH BOUND INHIBITOR Ck0944636ÿ
 2P9L D 2,24,4.8,0.0303,1.6,8.3,Crystal Structure Of Bovine Arp23 COMPLEX

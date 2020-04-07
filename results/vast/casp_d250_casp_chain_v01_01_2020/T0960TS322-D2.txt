@@ -1,4 +1,3 @@
-
 1M5Q M 2,17,5.0,0.0153,0.6,0.0,Crystal Structure Of A Novel Sm-Like Archaeal Protein From Pyrobaculum Aerophilum
 1M5Q J 2,17,4.9,0.0192,0.6,0.0,Crystal Structure Of A Novel Sm-Like Archaeal Protein From Pyrobaculum Aerophilum
 1M5Q Z 2,17,5.2,0.0038,0.6,0.0,Crystal Structure Of A Novel Sm-Like Archaeal Protein From Pyrobaculum Aerophilum
@@ -59,7 +58,6 @@
 4X6L C 2,31,6.5,0.0303,0.9,3.2,Crystal Structure Of S. Aureus Tarm In Complex With Udp
 4WAC A 2,31,6.8,0.0037,0.9,3.2,Crystal Structure Of Tarm
 4X7M B 2,31,6.9,0.0014,0.9,3.2,Crystal Structure Of S. Aureus Tarm G117r Mutant In Complex With Udp And Udp-glcnac
-
 2KB3 A 2,28,5.2,0.0181,1.0,7.1,Nmr Structure Of The Phosphorylated Form Of Odhi, Podhiя
 4BY2 B ,33,6.9,0.0120,1.0,6.1,Sas-4 (dcpap) Tcp Domain In Complex With A Proline Rich Motif Of Ana2 (dstil) Of Drosophila Melanogaster
 4KNY B 2,18,4.8,0.0365,1.0,5.6,Crystal Structure Of The Response Regulator Kdpe Complexed To Dna In An Active-like Conformation

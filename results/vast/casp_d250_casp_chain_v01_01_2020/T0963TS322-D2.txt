@@ -1,4 +1,3 @@
-
 1M5Q Z 2,18,5.0,0.0136,0.7,0.0,Crystal Structure Of A Novel Sm-Like Archaeal Protein From Pyrobaculum Aerophilum
 1M5Q J 2,19,4.8,0.0318,0.7,0.0,Crystal Structure Of A Novel Sm-Like Archaeal Protein From Pyrobaculum Aerophilum
 1M5Q N 2,19,4.9,0.0230,0.7,0.0,Crystal Structure Of A Novel Sm-Like Archaeal Protein From Pyrobaculum Aerophilum
@@ -59,7 +58,6 @@
 3A0F A 6,19,4.7,0.0481,1.0,10.5,The Crystal Structure Of Geotrichum Sp. M128 Xyloglucanaseÿ
 4QMK B 1,24,5.2,0.0042,1.0,12.5,Crystal Structure Of Type Iii Effector Protein Exou (exou)
 4I0P G 1,26,4.9,0.0229,1.0,3.8,Hla-Do In Complex With Hla-Dm
-
 3GYO A 2,22,4.8,0.0308,1.0,4.5,Se-Met Rtt106pÿ
 4UP4 A 3,23,5.1,0.0326,1.0,13.0,Structure Of The Recombinant Lectin Pvl From Psathyrella Velutina In Complex With Glcnacb-d-1,3galactoside
 4QMK A 1,24,5.2,0.0049,1.0,12.5,Crystal Structure Of Type Iii Effector Protein Exou (exou)
