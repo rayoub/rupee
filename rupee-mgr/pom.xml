@@ -74,6 +74,11 @@
             <artifactId>vecmath</artifactId>
             <version>1.5.2</version>
         </dependency>
+        <dependency>
+            <groupId>org.javatuples</groupId>
+            <artifactId>javatuples</artifactId>
+            <version>1.2</version>
+        </dependency>
     </dependencies>
 
 	<build>

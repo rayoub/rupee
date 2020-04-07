@@ -31,6 +31,7 @@ public class Constants {
     public final static String SSM_PATH = "/home/ayoub/git/rupee/results/ssm/temp/";
     public final static String MTM_PATH = "/home/ayoub/git/rupee/results/mtm/temp/";
     public final static String CATHEDRAL_PATH = "/home/ayoub/git/rupee/results/cathedral/temp/";
+    public final static String VAST_PATH = "/home/ayoub/git/rupee/results/vast/temp/";
     
     public final static String CASP_PATH = "/home/ayoub/git/rupee/data/casp/eu_preds/";
     

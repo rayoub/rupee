@@ -20,20 +20,11 @@ import edu.umkc.rupee.lib.Db;
 
 public class VastDriver extends DriverBase {
 
-    public String doSearch(String dbId, String requestId) throws Exception {
+    public String doSearch(String dbId, String request) throws Exception {
         
         StringBuilder builder = new StringBuilder("");
 
-        driver.get("https://www.ncbi.nlm.nih.gov/Structure/VAST/");
-       
-        // set request id
-        WebElement ele1 = driver.findElement(By.name("grpid"));
-        ele1.click();
-        ele1.clear();
-        ele1.sendKeys(requestId);
-   
-        // submit 
-        driver.findElement(By.name("submit")).click();
+        driver.get(request);
 
         // wait for page to load
         Thread.sleep(5000);
@@ -42,7 +33,7 @@ public class VastDriver extends DriverBase {
         List<WebElement> eles = driver.findElements(By.xpath("/html/body/table[2]/tbody/tr[2]/td"));
         if (eles.size() > 0) {
 
-            System.out.println("found in the status text");
+            System.out.println("found status text");
             
             WebElement ele2 = eles.get(0);
             if (ele2.getText().equals("VAST Search Done")) {
@@ -141,7 +132,7 @@ public class VastDriver extends DriverBase {
 
             if (!isExcluded(excludes, dbId) && Files.notExists(Paths.get(fileName))) {
             
-                System.out.println("Processing request for: " + dbId + " with request id " + requestId);
+                System.out.println("Processing request for: " + dbId);
 
                 try {
 

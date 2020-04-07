@@ -12,6 +12,7 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import org.javatuples.Pair;
 import org.postgresql.PGConnection;
 import org.postgresql.ds.PGSimpleDataSource;
 
@@ -245,6 +246,35 @@ public class Db {
         }
 
         return map;
+    }
+
+    public static List<Pair<String,String>> getVastRequestIds() {
+
+        List<Pair<String, String>> pairs = new ArrayList<>();
+
+        try {
+
+            PGSimpleDataSource ds = Db.getDataSource();
+            Connection conn = ds.getConnection();
+
+            PreparedStatement stmt = conn.prepareCall("SELECT db_id, request_id FROM vast_request ORDER BY db_id");
+
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+
+                Pair<String, String> pair = Pair.with(rs.getString("db_id") , rs.getString("request_id"));
+                pairs.add(pair);
+            }
+
+            rs.close();
+            stmt.close();
+            conn.close();
+        
+        } catch (SQLException e) {
+            Logger.getLogger(Db.class.getName()).log(Level.WARNING, null, e);
+        }
+
+        return pairs;
     }
 
     // *********************************************************************
