@@ -1,10 +1,15 @@
 
--- we need to sort by
+-- sort by parameter
+-- THRID PARTY
 -- 1. ce_rmsd
 -- 2. fatcat_rigid_rmsd
--- 3. tm_avg_tm_score
--- 4. tm_q_tm_score
--- else. ssap_score
+-- RUPEE
+-- 3. tm_q_tm_score
+-- 4. tm_avg_tm_score
+-- 5. tm_rmsd
+-- 6. tm_q_score (vs. SSM only)
+-- OTHER
+-- 7. ssap_score (vs. CATHEDRAL only)
 
 CREATE OR REPLACE FUNCTION get_rupee_results (
     p_benchmark VARCHAR, 
@@ -19,8 +24,10 @@ RETURNS TABLE (
     db_id_2 VARCHAR,
     ce_rmsd NUMERIC,
     fatcat_rigid_rmsd NUMERIC,
-    tm_avg_tm_score NUMERIC,
     tm_q_tm_score NUMERIC,
+    tm_avg_tm_score NUMERIC,
+    tm_rmsd NUMERIC,
+    tm_q_score NUMERIC,
     ssap_score NUMERIC
 )
 AS $$
@@ -37,25 +44,30 @@ BEGIN
                 WHEN p_sort_by = 2 THEN
                     RANK(*) OVER (PARTITION BY r.db_id_1 ORDER BY s.fatcat_rigid_rmsd, r.db_id_2) 
                 WHEN p_sort_by = 3 THEN
-                    RANK(*) OVER (PARTITION BY r.db_id_1 ORDER BY s.tm_avg_tm_score DESC, r.db_id_2) 
-                WHEN p_sort_by = 4 THEN
                     RANK(*) OVER (PARTITION BY r.db_id_1 ORDER BY s.tm_q_tm_score DESC, r.db_id_2) 
-                ELSE -- 5
+                WHEN p_sort_by = 4 THEN
+                    RANK(*) OVER (PARTITION BY r.db_id_1 ORDER BY s.tm_avg_tm_score DESC, r.db_id_2) 
+                WHEN p_sort_by = 5 THEN
+                    RANK(*) OVER (PARTITION BY r.db_id_1 ORDER BY s.tm_rmsd, r.db_id_2) 
+                WHEN p_sort_by = 6 THEN
+                    RANK(*) OVER (PARTITION BY r.db_id_1 ORDER BY s.tm_q_score DESC, r.db_id_2) 
+                ELSE -- 7
                     RANK(*) OVER (PARTITION BY r.db_id_1 ORDER BY s.ssap_score DESC, r.db_id_2) 
             END AS n,
             r.db_id_1,
             r.db_id_2,
             s.ce_rmsd,
             s.fatcat_rigid_rmsd,
-            s.tm_avg_tm_score,
             s.tm_q_tm_score,
+            s.tm_avg_tm_score,
+            s.tm_rmsd,
+            s.tm_q_score,
             s.ssap_score
         FROM
             rupee_result r
             INNER JOIN benchmark b
                 ON b.db_id = r.db_id_1
                 AND b.name = p_benchmark
-                AND r.n <= 100 -- filter the original n from rupee
             INNER JOIN alignment_scores s
                 ON s.db_id_1 = r.db_id_1
                 AND s.db_id_2 = r.db_id_2
@@ -83,8 +95,10 @@ BEGIN
             r.db_id_2,
             r.ce_rmsd,
             r.fatcat_rigid_rmsd,
-            r.tm_avg_tm_score,
             r.tm_q_tm_score,
+            r.tm_avg_tm_score,
+            r.tm_rmsd,
+            r.tm_q_score,
             r.ssap_score
         FROM 
             results r
@@ -99,8 +113,10 @@ BEGIN
         r.db_id_2,
         r.ce_rmsd,
         r.fatcat_rigid_rmsd,
-        r.tm_avg_tm_score,
         r.tm_q_tm_score,
+        r.tm_avg_tm_score,
+        r.tm_rmsd,
+        r.tm_q_score,
         r.ssap_score
     FROM 
         filtered_results r
