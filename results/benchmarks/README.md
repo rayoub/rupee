@@ -1,7 +1,7 @@
 
 ## Benchmarks 
 
-Following is a list of the benchmarks used to evaluate the performance of RUPEE.
+Benchmarks from the 2019 PLoS ONE paper and hopefully a future paper.
 
 ### SCOP benchmarks
 
@@ -17,7 +17,7 @@ This excludes *d4pwvb_*, which is defined in SCOP 2.06 but not SCOP 2.07.
 #### scop_d360
 
 Subset of scop_d499 that includes all domains for which mTM returns greater than or equal to 100 SCOP 2.07 domain results. 
-In the PLOS ONE 2019 paper we eliminated 139 benchmark structures on behalf of mTM, which in retrospect, was unfair to RUPEE.
+In the PLoS ONE 2019 paper we eliminated 139 benchmark structures on behalf of mTM, which in retrospect, was unfair to RUPEE.
 
 #### scop_d204
 
@@ -31,7 +31,7 @@ In some cases, a domain may not have enough secondary structures for SSM to work
 #### scop_d62
 
 Subset of scop_d193 that includes all domains for which SSM returns greater than or equal to 50 results.
-In the PLOS ONE 2019 paper we eliminated 131 benchmark structures on behalf of SSM, which in retrospect, was unfair to RUPEE.
+In the PLoS ONE 2019 paper we eliminated 131 benchmark structures on behalf of SSM, which in retrospect, was unfair to RUPEE.
 
 ### CATH benchmarks
 
@@ -55,10 +55,17 @@ The selected groups consist of the top 10 groups ranked by the Assessors' formul
 Subset of casp_d250 that includes all domains for which mTM returned results. 
 For all benchmark structures, mTM returned 10 or more results. 
 
+#### casp_ssm_d240
+
+Subset of casp_d250 that includes all domains for which SSM, based on Q-score, returned 100 or more results.
+
+#### casp_ssm_d233
+
+Subset of casp_d250 that includes all domains for which SSM, based on RMSD, returned 100 or more results.
+
 #### casp_cathedral_d247
 
-Subset of casp_d250 that includes all domains for which CATHEDRAL returned results.
-For all benchmark structures, CATHEDRAL returned 100 or more results. 
+Subset of casp_d250 that includes all domains for which CATHEDRAL returned 100 or more results.
 
 
 
