@@ -1,10 +1,10 @@
 
 DO $$
 
-    DECLARE p_benchmark VARCHAR := 'casp_ssm_d240'; -- casp_ssm_d233 (for search_type = rmsd), casp_ssm_d240 (for search_type = q_score)
+    DECLARE p_benchmark VARCHAR := 'casp_ssm_d240'; -- casp_ssm_d233 (for search_type = rmsd), casp_ssm_d240 (for search_type = q_score and full_length)
     DECLARE p_version VARCHAR := 'casp_scop_v1_73'; 
-    DECLARE p_search_type VARCHAR := 'q_score'; -- rmsd, q_score
-    DECLARE p_sort_by INTEGER := 6; -- 1 (ce_rmsd), 2 (fatcat_rigid_rmsd), 6 (tm_q_score)
+    DECLARE p_search_type VARCHAR := 'full_length'; -- rmsd, full_length, q_score
+    DECLARE p_sort_by INTEGER := 4; -- 1 (ce_rmsd), 2 (fatcat_rigid_rmsd), 4 (tm_avg_tm_score), 6 (tm_q_score)
     DECLARE p_limit INTEGER := 100; 
 
 BEGIN
@@ -22,7 +22,8 @@ BEGIN
         ),
         ssm AS
         (   
-            SELECT * FROM get_ssm_results(p_benchmark, p_version, p_search_type, p_sort_by, p_limit) 
+            -- p_search_type = 'q_score' when doing full_length for rupee
+            SELECT * FROM get_ssm_results(p_benchmark, p_version, 'q_score', p_sort_by, p_limit) 
         ),
         ranked AS
         (
@@ -33,7 +34,8 @@ BEGIN
                 CASE 
                     WHEN p_sort_by = 1 THEN ce_rmsd 
                     WHEN p_sort_by = 2 THEN fatcat_rigid_rmsd
-                    ELSE tm_q_score
+                    WHEN p_sort_by = 4 THEN tm_avg_tm_score
+                    WHEN p_sort_by = 6 THEN tm_q_score
                 END AS score
             FROM
                 rupee_all_aligned
@@ -45,7 +47,8 @@ BEGIN
                 CASE 
                     WHEN p_sort_by = 1 THEN ce_rmsd 
                     WHEN p_sort_by = 2 THEN fatcat_rigid_rmsd
-                    ELSE tm_q_score
+                    WHEN p_sort_by = 4 THEN tm_avg_tm_score
+                    WHEN p_sort_by = 6 THEN tm_q_score
                 END AS score
             FROM
                 rupee_top_aligned
@@ -57,7 +60,8 @@ BEGIN
                 CASE 
                     WHEN p_sort_by = 1 THEN ce_rmsd 
                     WHEN p_sort_by = 2 THEN fatcat_rigid_rmsd
-                    ELSE tm_q_score
+                    WHEN p_sort_by = 4 THEN tm_avg_tm_score
+                    WHEN p_sort_by = 6 THEN tm_q_score
                 END AS score
             FROM
                 ssm

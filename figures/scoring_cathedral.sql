@@ -3,8 +3,8 @@ DO $$
 
     DECLARE p_benchmark VARCHAR := 'casp_cathedral_d247'; 
     DECLARE p_version VARCHAR := 'casp_cath_v4_2_0'; 
-    DECLARE p_search_type VARCHAR := 'rmsd'; -- rmsd, ssap_score
-    DECLARE p_sort_by INTEGER := 1; -- 1 (ce_rmsd), 2 (fatcat_rigid_rmsd), 7 (ssap_score)
+    DECLARE p_search_type VARCHAR := 'full_length'; -- rmsd, full_length, ssap_score
+    DECLARE p_sort_by INTEGER := 4; -- 1 (ce_rmsd), 2 (fatcat_rigid_rmsd), 4 (tm_avg_tm_score), 7 (ssap_score)
     DECLARE p_limit INTEGER := 100; 
 
 BEGIN
@@ -33,6 +33,7 @@ BEGIN
                 CASE 
                     WHEN p_sort_by = 1 THEN ce_rmsd 
                     WHEN p_sort_by = 2 THEN fatcat_rigid_rmsd
+                    WHEN p_sort_by = 4 THEN tm_avg_tm_score
                     WHEN p_sort_by = 7 THEN ssap_score
                 END AS score
             FROM
@@ -45,6 +46,7 @@ BEGIN
                 CASE 
                     WHEN p_sort_by = 1 THEN ce_rmsd 
                     WHEN p_sort_by = 2 THEN fatcat_rigid_rmsd
+                    WHEN p_sort_by = 4 THEN tm_avg_tm_score
                     WHEN p_sort_by = 7 THEN ssap_score
                 END AS score
             FROM
@@ -57,6 +59,7 @@ BEGIN
                 CASE 
                     WHEN p_sort_by = 1 THEN ce_rmsd 
                     WHEN p_sort_by = 2 THEN fatcat_rigid_rmsd
+                    WHEN p_sort_by = 4 THEN tm_avg_tm_score
                     WHEN p_sort_by = 7 THEN ssap_score
                 END AS score
             FROM
