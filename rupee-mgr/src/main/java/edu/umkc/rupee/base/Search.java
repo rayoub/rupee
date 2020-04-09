@@ -111,11 +111,9 @@ public abstract class Search {
 
         if (grams1 != null && hashes1 != null) {
 
-            // ***
-            // for now the initial filtering treats FULL_LENGTH and RMSD the same
-            // ***
-               
             if (criteria.searchMode != SearchMode.ALL_ALIGNED) {
+
+                // TOP_ALIGNED and FAST
 
                 // parallel band match searches to gather lsh candidates
                 records = IntStream.range(0, Constants.BAND_CHECK_COUNT).boxed().parallel()
