@@ -5,7 +5,7 @@ library(plyr)
 # clear environment
 rm(list = ls())
 
-get_scoring_plot <- function(p_title, p_file, p_levels, p_limits, p_breaks) {
+get_scoring_plot <- function(p_title, p_file, p_levels, p_xlimits, p_xbreaks, p_ylimits) {
 
     # read in data files
     df <- read.csv(p_file)
@@ -35,11 +35,11 @@ get_scoring_plot <- function(p_title, p_file, p_levels, p_limits, p_breaks) {
             labels = c("RUPEE All-Aligned","RUPEE Top-Aligned", "Compared To")
         ) + 
         scale_x_continuous(
-            limits = p_limits,
-            breaks = p_breaks
+            limits = p_xlimits,
+            breaks = p_xbreaks
         ) + 
         scale_y_continuous(
-            limits = c(0.25,0.65)
+            limits = p_ylimits
         ) + 
 
         # guides
