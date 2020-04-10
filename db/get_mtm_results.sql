@@ -13,6 +13,7 @@
 
 -- valid sort by parameters (others are invalid due to non-matches)
 -- 3, 5
+-- 3, 5 are valid because in the case of a mismatch we can rely on mtm values
 
 CREATE OR REPLACE FUNCTION get_mtm_results (p_benchmark VARCHAR, p_version VARCHAR, p_sort_by INTEGER, p_limit INTEGER)
 RETURNS TABLE (

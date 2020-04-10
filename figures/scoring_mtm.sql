@@ -3,8 +3,8 @@ DO $$
 
     DECLARE p_benchmark VARCHAR := 'casp_mtm_d246'; 
     DECLARE p_version VARCHAR := 'casp_chain_v01_01_2020'; 
-    DECLARE p_search_type VARCHAR := 'contained_in'; -- contained_in, rmsd (NOTE: I have not collected this data for rmsd)
-    DECLARE p_sort_by INTEGER := 3; -- 3 (tm_q_tm_score), 5 (tm_rmsd)
+    DECLARE p_search_type VARCHAR := 'rmsd'; -- contained_in, rmsd 
+    DECLARE p_sort_by INTEGER := 5; -- 3 (tm_q_tm_score), 5 (tm_rmsd)
     DECLARE p_limit INTEGER := 100; 
 
 BEGIN
