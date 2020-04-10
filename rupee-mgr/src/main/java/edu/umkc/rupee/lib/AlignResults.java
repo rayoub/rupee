@@ -85,8 +85,19 @@ public class AlignResults
         alignSsmResults(benchmark, version, dbType, maxN, "rmsd"); 
         alignSsmResults(benchmark, version, dbType, maxN, "q_score"); 
     }
+   
+    // RUPEE is already done for this vs. mTM above
+    public static void alignVastResults() {
 
-    public static void alignRupeeResults(String benchmark, String version, DbType dbType, int maxN, String searchMode, String searchType) {
+        String benchmark = "casp_vast_d55";
+        String version = "casp_chain_v01_01_2020";
+        DbType dbType = DbType.CHAIN;
+        int maxN = 50;
+        
+        alignVastResults(benchmark, version, dbType, maxN); 
+    }
+
+    private static void alignRupeeResults(String benchmark, String version, DbType dbType, int maxN, String searchMode, String searchType) {
 
         List<String> dbIds = Benchmarks.get(benchmark);
             
@@ -96,7 +107,7 @@ public class AlignResults
         dbIds.parallelStream().forEach(dbId -> alignResults(command, version, dbType, dbId, maxN, searchMode, searchType));
     }
 
-    public static void alignMtmResults(String benchmark, String version, DbType dbType, int maxN) {
+    private static void alignMtmResults(String benchmark, String version, DbType dbType, int maxN) {
 
         List<String> dbIds = Benchmarks.get(benchmark);
             
@@ -106,7 +117,7 @@ public class AlignResults
         dbIds.parallelStream().forEach(dbId -> alignResults(command, version, dbType, dbId, maxN, "", ""));
     }
 
-    public static void alignCathedralResults(String benchmark, String version, DbType dbType, int maxN) {
+    private static void alignCathedralResults(String benchmark, String version, DbType dbType, int maxN) {
 
         List<String> dbIds = Benchmarks.get(benchmark);
 
@@ -116,7 +127,7 @@ public class AlignResults
         dbIds.parallelStream().forEach(dbId -> alignResults(command, version, dbType, dbId, maxN, "", ""));
     }
     
-    public static void alignSsmResults(String benchmark, String version, DbType dbType, int maxN, String searchType) {
+    private static void alignSsmResults(String benchmark, String version, DbType dbType, int maxN, String searchType) {
 
         List<String> dbIds = Benchmarks.get(benchmark);
 
@@ -124,6 +135,16 @@ public class AlignResults
 
         counter.set(0);
         dbIds.parallelStream().forEach(dbId -> alignResults(command, version, dbType, dbId, maxN, "", searchType));
+    }
+
+    private static void alignVastResults(String benchmark, String version, DbType dbType, int maxN) {
+
+        List<String> dbIds = Benchmarks.get(benchmark);
+
+        String command = "SELECT db_id_2 FROM vast_result WHERE version = ? AND db_id_1 = ? AND n <= ? ORDER BY n;";
+
+        counter.set(0);
+        dbIds.parallelStream().forEach(dbId -> alignResults(command, version, dbType, dbId, maxN, "", ""));
     }
 
     private static void alignResults(String command, String version, DbType dbType, String dbId, int maxN, String searchMode, String searchType) {
