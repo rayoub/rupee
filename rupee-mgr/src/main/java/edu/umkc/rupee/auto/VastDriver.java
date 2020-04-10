@@ -128,7 +128,7 @@ public class VastDriver extends DriverBase {
             Pair<String,String> pair = pairs.get(i);
             String dbId = pair.getValue0();
             String requestId = pair.getValue1();
-            String fileName = Constants.VAST_PATH + dbId + ".txt";
+            String fileName = Constants.VAST_PATH + "temp/" + dbId + ".txt";
 
             if (!isExcluded(excludes, dbId) && Files.notExists(Paths.get(fileName))) {
             
