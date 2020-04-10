@@ -37,10 +37,23 @@
 -- this needs to be taken care of in the get_mtm_results function
 
 -- mtm non-matches
+--SELECT  
+--    r.*
+--FROM
+--    mtm_result r
+--    LEFT JOIN chain_grams g
+--        ON g.chain_id = r.db_id_2
+--WHERE
+--    1 = 1
+--    AND g.chain_id IS NULL
+--    AND r.n <= 100
+--;
+
+-- vast non-matches
 SELECT  
     r.*
 FROM
-    mtm_result r
+    vast_result r
     LEFT JOIN chain_grams g
         ON g.chain_id = r.db_id_2
 WHERE
@@ -48,4 +61,7 @@ WHERE
     AND g.chain_id IS NULL
     AND r.n <= 100
 ;
-    
+
+
+
+
