@@ -18,6 +18,8 @@ import org.openqa.selenium.support.ui.Select;
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
 
+// this whole things will be deprecated
+
 public class VastDriver extends DriverBase {
 
     public String doSearch(String dbId, String request) throws Exception {
@@ -78,11 +80,38 @@ public class VastDriver extends DriverBase {
                     builder.append(System.lineSeparator());
                 }
 
-                // changing to second page
+                // change to second page
                 new Select(driver.findElement(By.name("doclistpage"))).selectByIndex(1);
                 driver.findElement(By.name("doclistpage")).click();
 
                 // display the second page
+                driver.findElement(By.name("dispsub")).click();
+
+                // wait for page to load
+                Thread.sleep(5000);
+
+                baseTable = driver.findElement(By.xpath("/html/body/table[3]"));
+                rows = baseTable.findElements(By.tagName("tr"));
+                for (WebElement row : rows) {
+                    
+                    List<WebElement> items = row.findElements(By.tagName("td"));
+                    for (int j = 0; j < items.size(); j++) {
+
+                        WebElement item = items.get(j);
+                        String output = item.getText();
+                        if (j > 0 && j < items.size() - 1) {
+                            output += ",";
+                        }
+                        builder.append(output);
+                    }
+                    builder.append(System.lineSeparator());
+                }
+
+                // change to third page
+                new Select(driver.findElement(By.name("doclistpage"))).selectByIndex(2);
+                driver.findElement(By.name("doclistpage")).click();
+
+                // display the third page
                 driver.findElement(By.name("dispsub")).click();
 
                 // wait for page to load
@@ -128,7 +157,7 @@ public class VastDriver extends DriverBase {
             Pair<String,String> pair = pairs.get(i);
             String dbId = pair.getValue0();
             String requestId = pair.getValue1();
-            String fileName = Constants.VAST_PATH + "temp/" + dbId + ".txt";
+            String fileName = Constants.VAST_PATH + dbId + ".txt";
 
             if (!isExcluded(excludes, dbId) && Files.notExists(Paths.get(fileName))) {
             
