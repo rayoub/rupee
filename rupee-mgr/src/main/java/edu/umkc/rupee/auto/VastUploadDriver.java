@@ -2,6 +2,7 @@ package edu.umkc.rupee.auto;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -15,7 +16,11 @@ import edu.umkc.rupee.lib.Constants;
 public class VastUploadDriver extends DriverBase {
 
     public void doSearch(String dbId) throws Exception {
-        
+
+        // so they don't remember us
+        driver.manage().deleteAllCookies();
+
+        // go to the search page
         driver.get("https://www.ncbi.nlm.nih.gov/Structure/VAST/");
         
         // file upload
@@ -51,16 +56,24 @@ public class VastUploadDriver extends DriverBase {
 
     public void doSearchBatch() {
 
+        List<String> excludes = new ArrayList<>();
+        excludes.add("T0957s2TS145-D1");
+
+        int EARLY_EXIT = 5;
+
         List<String> dbIds = Benchmarks.get("casp_d250");
 
+        int count = 0;
         for (int i = 0; i < dbIds.size(); i++) {
             
             String dbId = dbIds.get(i);
-            String fileName = Constants.VAST_PATH + "casp_d250_casp_chain_v01_01_2020/" + dbId + ".txt";
+            String fileName = Constants.VAST_PATH + dbId + ".txt";
 
             try {
 
-                if (Files.notExists(Paths.get(fileName))) {
+                if (!isExcluded(excludes, dbId) && Files.notExists(Paths.get(fileName))) {
+                    
+                    count++;
                     doSearch(dbId);
                 }
             } 
@@ -68,7 +81,24 @@ public class VastUploadDriver extends DriverBase {
 
                 Logger.getLogger(VastUploadDriver.class.getName()).log(Level.SEVERE, dbId, e);
             }
+            
+            // early exit
+            if (count >= EARLY_EXIT) {
+                break;
+            }
         }
+    }
+
+    private boolean isExcluded(List<String> excludes, String dbId) {
+
+        boolean excluded = false;
+        for (String exclude : excludes) {
+            if (dbId.startsWith(exclude)) {
+                excluded = true;
+                break;
+            }
+        }
+        return excluded;
     }
 }
 

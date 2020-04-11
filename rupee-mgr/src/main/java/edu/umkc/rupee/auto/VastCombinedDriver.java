@@ -5,25 +5,115 @@ import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.javatuples.Pair;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+import edu.umkc.rupee.lib.Benchmarks;
 import edu.umkc.rupee.lib.Constants;
-import edu.umkc.rupee.lib.Db;
 
-public class VastDownloadDriver extends DriverBase {
+public class VastCombinedDriver extends DriverBase {
 
-    public String doSearch(String dbId, String request) throws Exception {
+    private static int ONE_MINUTE = 60 * 1000; // in seconds
+
+    public String doSearch(String dbId) {
+
+        String link = "";
+        String results = "";
+
+        try {
+            link = doSearchUpload(dbId);
+        }
+        catch (InterruptedException e) {
+            link = "";
+            System.out.println("Interrupted while uploading structure for db_id: " + dbId);
+        }
+
+        if (!link.isEmpty()) {
+
+            for (int i = 0; i < 18; i++) {
+
+                try {
+                    results = doSearchDownload(dbId, link);
+                }
+                catch (InterruptedException e) {
+
+                    System.out.println("Interrupted while getting results for db_id: " + dbId);
+                    break;
+                }
+
+                if (!results.isEmpty()) {
+
+                    // jump to return results
+                    break;
+                }
+                else {
+
+                    // continue waiting
+                    try {
+                        Thread.sleep(5 * ONE_MINUTE);
+                    }
+                    catch( InterruptedException e) {
+                        System.out.println("Interrupted while waiting for results for db_id: " + dbId);
+                        break;
+                    }
+                }
+            }
+
+            if (results.isEmpty()) {
+                System.out.println("No results for db_id: " + dbId);
+            }
+        }
+        else {
+            System.out.println("No upload link for db_id: " + dbId); 
+        }
+
+        return results;
+    }
+
+    public String doSearchUpload(String dbId) throws InterruptedException {
+        
+        driver.get("https://www.ncbi.nlm.nih.gov/Structure/VAST/");
+        
+        // file upload
+        String filePath = Constants.CASP_PATH + dbId + ".pdb"; 
+        driver.findElement(By.name("pdbfile")).clear();
+        driver.findElement(By.name("pdbfile")).sendKeys(filePath);
+
+        // all pdb
+        driver.findElement(By.xpath("//input[@value='All']")).click();
+   
+        // submit to upload
+        driver.findElement(By.name("cmdVSMmdb")).click();
+
+        // wait for page to load
+        Thread.sleep(5000);
+     
+        // submit to search
+        driver.findElement(By.xpath("/html/body/table[2]/tbody/tr[17]/td/table/tbody/tr/td[1]/input[2]")).click();
+        
+        // wait for page to load
+        Thread.sleep(5000);
+
+        // get the link of return page
+        WebElement ele = driver.findElement(By.xpath("/html/body/table[2]/tbody/tr[7]/td/a"));
+        String link = ele.getAttribute("href");
+
+        return link;
+    }
+
+    public String doSearchDownload(String dbId, String link) throws InterruptedException {
         
         StringBuilder builder = new StringBuilder("");
 
-        driver.get(request);
+        System.out.println("results link: " + link);
+
+        driver.get(link);
 
         // wait for page to load
         Thread.sleep(5000);
@@ -32,7 +122,7 @@ public class VastDownloadDriver extends DriverBase {
         List<WebElement> eles = driver.findElements(By.xpath("/html/body/table[2]/tbody/tr[2]/td"));
         if (eles.size() > 0) {
 
-            System.out.println("found status text");
+            System.out.println("checking status");
             
             WebElement ele2 = eles.get(0);
             if (ele2.getText().equals("VAST Search Done")) {
@@ -132,48 +222,68 @@ public class VastDownloadDriver extends DriverBase {
                 }
             }
         }
-
         return builder.toString();
     }
 
     public void doSearchBatch() {
 
-        List<Pair<String,String>> pairs = Db.getVastRequestIds(); 
+        List<String> excludes = new ArrayList<>();
+        excludes.add("T0957s2TS145-D1");
 
-        int processed = 0;
-        for (int i = 0; i < pairs.size(); i++) {
+        int EARLY_EXIT = 5;
 
-            Pair<String,String> pair = pairs.get(i);
-            String dbId = pair.getValue0();
-            String requestId = pair.getValue1();
+        List<String> dbIds = Benchmarks.get("casp_d250");
+
+        int count = 0;
+        for (int i = 0; i < dbIds.size(); i++) {
+            
+            String dbId = dbIds.get(i);
             String fileName = Constants.VAST_PATH + dbId + ".txt";
 
-            if (Files.notExists(Paths.get(fileName))) {
+            try {
+
+                if (!isExcluded(excludes, dbId) && Files.notExists(Paths.get(fileName))) {
             
-                System.out.println("Processing request for: " + dbId);
+                    count++;
+                    System.out.println(count + ":Processing request for " + dbId);
 
-                try {
+                    String results = doSearch(dbId);
 
-                    String source = doSearch(dbId, requestId);
-
-                    if (!source.isEmpty()) {
+                    if (!results.isEmpty()) {
+                        
                         FileOutputStream outputStream = new FileOutputStream(fileName);
                         OutputStreamWriter outputWriter = new OutputStreamWriter(outputStream);
 
                         try (BufferedWriter bufferedWriter = new BufferedWriter(outputWriter);) {
-                               bufferedWriter.write(source);
+                               bufferedWriter.write(results);
                         }
-                   
-                        processed++;
-                        System.out.println(processed + ": Processed request for: " + dbId);
                     }
-                } 
-                catch (Exception e) { 
 
-                    Logger.getLogger(VastDownloadDriver.class.getName()).log(Level.SEVERE, dbId, e);
+                    System.out.println(count + ": Processed request for: " + dbId);
                 }
+            } 
+            catch (Exception e) { 
+
+                Logger.getLogger(VastCombinedDriver.class.getName()).log(Level.SEVERE, dbId, e);
+            }
+
+            // early exit
+            if (count >= EARLY_EXIT) {
+                break;
             }
         }
+    }
+
+    private boolean isExcluded(List<String> excludes, String dbId) {
+
+        boolean excluded = false;
+        for (String exclude : excludes) {
+            if (dbId.startsWith(exclude)) {
+                excluded = true;
+                break;
+            }
+        }
+        return excluded;
     }
 }
 
