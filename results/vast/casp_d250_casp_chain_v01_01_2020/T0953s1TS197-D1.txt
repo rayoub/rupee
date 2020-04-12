@@ -1,0 +1,183 @@
+
+1RTI A 2,18,5.2,0.0308,0.8,5.6,Hiv-1 Reverse Transcriptase Mol_id: 1; Molecule: Hiv-1 Reverse Transcriptase; Chain: A, B; Synonym: Hiv-1 Rt; Ec: 2.7.7.49; Engineered: Yes
+1GXQ A 1,16,5.2,0.0308,0.8,6.2,Crystal Structure Of The Phob Effector Domain
+4NHJ B 1,19,5.2,0.0336,0.9,10.5,Crystal Structure Of Klebsiella Pneumoniae Rsta Dna-binding Domain In Complex With Rsta Box
+1GXP F 1,16,5.2,0.0308,0.9,6.2,Phob Effector Domain In Complex With Pho Box Dna˙
+3S94 A 3,17,5.2,0.0308,0.9,5.9,Crystal Structure Of Lrp6-E1e2˙
+1GXP A 1,16,5.2,0.0308,0.9,6.2,Phob Effector Domain In Complex With Pho Box Dna˙
+1S1V A 2,20,5.2,0.0308,0.9,5.0,Crystal Structure Of L100i Mutant Hiv-1 Reverse Transcriptase In Complex With Tnk-651
+2YWW A 2,18,5.2,0.0308,1.0,16.7,Crystal Structure Of Aspartate Carbamoyltransferase Regulatory Chain From Methanocaldococcus Jannaschii
+2DCM A 3,19,5.2,0.0308,1.0,10.5,The Crystal Structure Of S603a Mutated Prolyl Tripeptidyl Aminopeptidase Complexed With Substrate
+4S05 A 2,19,5.2,0.0308,1.0,10.5,Crystal Structure Of Klebsiella Pneumoniae Pmra In Complex With Pmra Box Dna
+1JLA A 2,19,5.2,0.0327,1.0,5.3,Crystal Structure Of Y181c Mutant Hiv-1 Reverse Transcriptase In Complex With Tnk-651
+2VDW G 2,20,5.2,0.0313,1.0,5.0,Guanosine N7 Methyl-Transferase Sub-Complex (D1-D12) Of The Vaccinia Virus Mrna Capping Enzyme
+2WOZ A 2,23,5.2,0.0308,1.0,8.7,The Novel Beta-Propeller Of The Btb-Kelch Protein Krp1 Provides The Binding Site For Lasp-1 That Is Necessary For Pseudopodia Extension˙
+2YWW B 2,19,5.2,0.0308,1.0,15.8,Crystal Structure Of Aspartate Carbamoyltransferase Regulatory Chain From Methanocaldococcus Jannaschii
+4KFC B 2,19,5.2,0.0308,1.0,10.5,Crystal Structure Of A Hyperactive Mutant Of Response Regulator Kdpe Complexed To Its Promoter Dna
+1LWF A 2,16,5.2,0.0359,1.0,6.2,Crystal Structure Of A Mutant Hiv-1 Reverse Transcriptase (Rtmq+m184v: M41lD67NK70RM184VT215Y) IN COMPLEX WITH Nevirapine
+1FBV C ,17,5.2,0.0308,1.0,11.8,Structure Of A Cbl-Ubch7 Complex: Ring Domain Function In Ubiquitin-Protein Ligases
+1FBV C 1,17,5.2,0.0308,1.0,11.8,Structure Of A Cbl-Ubch7 Complex: Ring Domain Function In Ubiquitin-Protein Ligases
+4NPB A 1,18,5.2,0.0308,1.1,11.1,The Crystal Structure Of Thiol:disulfide Interchange Protein Dsbc From Yersinia Pestis Co92
+3VA6 B 7,24,5.2,0.0308,1.1,4.2,Crystal Structure Of The Extracellular Domain Of The Putative Hybrid Two Component System Bt4673 From B. Thetaiotaomicron
+2KKL A 2,19,5.2,0.0436,1.1,5.3,Solution Nmr Structure Of Fha Domain Of Mb1858 From Mycobacterium Bovis. Northeast Structural Genomics Consortium Target Mbr243c (24-155)˙
+2AJD B 4,22,5.2,0.0308,1.1,13.6,Porcine Dipeptidyl Peptidase Iv (Cd26) In Complex With L- Pro-Boro-L-Pro (Boropro)
+4UOP A 1,30,6.5,0.0042,1.1,3.3,Crystal Structure Of The Lipoteichoic Acid Synthase Ltap From Listeria Monocytogenes
+2FVU A 1,19,5.2,0.0492,1.1,5.3,Structure Of The Yeast Sir3 Bah Domain
+1ORV A 4,22,5.2,0.0308,1.1,13.6,Crystal Structure Of Porcine Dipeptidyl Peptidase Iv (Cd26)
+1ORV C 4,22,5.2,0.0308,1.1,13.6,Crystal Structure Of Porcine Dipeptidyl Peptidase Iv (Cd26)
+3VR1 C 3,21,5.2,0.0430,1.1,4.8,Crystal Structure Analysis Of The Translation Factor Rf3
+3CCC A 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dpp4 In Complex With A Benzimidazole Derivative
+2AJB C 4,21,5.2,0.0308,1.1,9.5,Porcine Dipeptidyl Peptidase Iv (Cd26) In Complex With The Tripeptide Tert-Butyl-Gly-L-Pro-L-Ile (Tbu-Gpi)
+2OQV A 4,22,5.2,0.0308,1.1,9.1,Human Dipeptidyl Peptidase Iv (Dpp4) With Piperidine- Constrained Phenethylamine
+2G5T B 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dipeptidyl Peptidase Iv (Dppiv) Complexed With Cyanopyrrolidine (C5-Pro-Pro) Inhibitor 21ag
+2AJC B 4,22,5.2,0.0308,1.1,13.6,Porcine Dipeptidyl Peptidase Iv (Cd26) In Complex With 4-(2- Aminoethyl)-Benzene Sulphonyl Fluoride (Aebsf)
+1ORV D 4,22,5.2,0.0308,1.1,13.6,Crystal Structure Of Porcine Dipeptidyl Peptidase Iv (Cd26)
+2BUC D 4,22,5.2,0.0308,1.1,13.6,Crystal Structure Of Porcine Dipeptidyl Pepdidase Iv (Cd26) In Complex With A Tetrahydroisoquinoline Inhibitor
+3OTT B 8,25,5.2,0.0308,1.1,4.0,Crystal Structure Of The Extracellular Domain Of The Putative One Component System Bt4673 From B. Thetaiotaomicron˙
+2BGR B 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Hiv-1 Tat Derived Nonapeptides Tat(1-9) Bound To The Active Site Of Dipeptidyl Peptidase Iv (Cd26)
+2G5P A 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dipeptidyl Peptidase Iv (Dppiv) Complexed With Cyanopyrrolidine (C5-Pro-Pro) Inhibitor 21ac
+2I03 C 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dipeptidyl Peptidase 4 (Dpp Iv) With Potent Alkynyl Cyanopyrrolidine (Abt-279)
+1ORW D 4,22,5.2,0.0308,1.1,13.6,Crystal Structure Of Porcine Dipeptidyl Peptidase Iv (Cd26) In Complex With A Peptidomimetic Inhibitor
+1J2E B 4,21,5.2,0.0308,1.1,9.5,Crystal Structure Of Human Dipeptidyl Peptidase Iv
+3HAC B 4,22,5.2,0.0308,1.1,9.1,The Structure Of Dpp-4 In Complex With Piperidine Fused Imidazopyridine 34˙
+2AJD A 4,22,5.2,0.0308,1.1,13.6,Porcine Dipeptidyl Peptidase Iv (Cd26) In Complex With L- Pro-Boro-L-Pro (Boropro)
+2G5P B 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dipeptidyl Peptidase Iv (Dppiv) Complexed With Cyanopyrrolidine (C5-Pro-Pro) Inhibitor 21ac
+4A5S B 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dpp4 In Complex With A Noval Heterocyclic Dpp4 Inhibitor˙
+2AJ8 B 4,22,5.2,0.0308,1.1,13.6,Porcine Dipeptidyl Peptidase Iv (Cd26) In Complex With 7- Benzyl-1,3-Dimethyl-8-Piperazin-1-Yl-3,7-Dihydro-Purine-2, 6-Dione (Bdpx)
+2AJC C 4,22,5.2,0.0308,1.1,13.6,Porcine Dipeptidyl Peptidase Iv (Cd26) In Complex With 4-(2- Aminoethyl)-Benzene Sulphonyl Fluoride (Aebsf)
+3EIO B 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Analysis Of Dppiv Inhibitor
+1R9M A 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dipeptidyl Peptidase Iv At 2.1 Ang. Resolution
+3HAB B 4,22,5.2,0.0308,1.1,9.1,The Structure Of Dpp4 In Complex With Piperidine Fused Benzimidazole 25˙
+3CCB B 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dpp4 In Complex With A Benzimidazole Derivative
+2G5T A 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dipeptidyl Peptidase Iv (Dppiv) Complexed With Cyanopyrrolidine (C5-Pro-Pro) Inhibitor 21ag
+4QZV C 4,22,5.2,0.0308,1.1,9.1,Bat-derived Coronavirus Hku4 Uses Mers-cov Receptor Human Cd26 For Cell Entry
+4N8E B 4,22,5.2,0.0308,1.1,9.1,Dpp4 Complexed With Compound 12a
+3G0B A 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Dipeptidyl Peptidase Iv In Complex With Tak-322˙
+2P8S B 4,22,5.2,0.0308,1.1,9.1,Human Dipeptidyl Peptidase IvCD26 IN COMPLEX WITH A Cyclohexalamine Inhibitor
+3D4L B 4,22,5.2,0.0308,1.1,9.1,Human Dipeptidyl Peptidase IvCD26 IN COMPLEX WITH A NOVEL Inhibitor
+1X70 B 4,22,5.2,0.0308,1.1,9.1,Human Dipeptidyl Peptidase Iv In Complex With A Beta Amino Acid Inhibitor
+1PFQ B 4,23,5.2,0.0308,1.1,8.7,Crystal Structure Of Human Apo Dipeptidyl Peptidase Iv Cd26
+3G0G C 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Dipeptidyl Peptidase Iv In Complex With A Pyrimidinone Inhibitor 3˙
+4N8D B 4,22,5.2,0.0308,1.1,9.1,Dpp4 Complexed With Syn-7aa
+
+4PNZ B 4,22,5.2,0.0308,1.1,9.1,Human Dipeptidyl Peptidase Iv/cd26 In Complex With The Long-acting Inhibitor Omarigliptin (mk-3102)
+3SWW A 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dpp-Iv In Complex With Sa-(+)-3- (Aminomethyl)-4-(2,4-Dichlorophenyl)-6-(2-Methoxyphenyl)- 2-Methyl- 5h-Pyrrolo[3,4-B]pyridin-7(6h)-Oneÿ
+3SX4 A 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dpp-Iv In Complex With Sa-(+)-3- (Aminomethyl)-4-(2,4-Dichlorophenyl)-6-(2-Methoxyphenyl)- 2-Methyl- 5h-Pyrrolo[3,4-B]pyridin-7(6h)-Oneÿ
+2QT9 B 4,22,5.2,0.0308,1.1,9.1,Human Dipeptidyl Peptidase IvCD26 IN COMPLEX WITH A 4-Aryl Cyclohexylalanine Inhibitor
+3W2T A 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Depiptidyl Peptidase Iv (dpp-4) In Complex With Vildagliptin
+4DSA A 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Dpp-iv With Compound C1
+4PV7 A 4,22,5.2,0.0308,1.1,9.1,Cocrystal Structure Of Dipeptidyl-peptidase 4 With An Indole Scaffold Inhibitor
+2QJR A 4,22,5.2,0.0308,1.1,9.1,Dipepdyl Peptidase Iv In Complex With Inhibitor Pzf
+3EIO A 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Analysis Of Dppiv Inhibitor
+3C45 B 4,22,5.2,0.0308,1.1,9.1,Human Dipeptidyl Peptidase IvCD26 IN COMPLEX WITH A Fluoroolefin Inhibitor
+1ORW B 4,22,5.2,0.0308,1.1,13.6,Crystal Structure Of Porcine Dipeptidyl Peptidase Iv (Cd26) In Complex With A Peptidomimetic Inhibitor
+2OAG C 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dipeptidyl Peptidase Iv (Dppiv) With Pyrrolidine-Constrained Phenethylamine 29g
+2OAG D 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dipeptidyl Peptidase Iv (Dppiv) With Pyrrolidine-Constrained Phenethylamine 29g
+1NU8 A 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dipeptidyl Peptidase Iv (Dpp-Iv) In Complex With Diprotin A (Ili)
+2G63 C 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dipeptidyl Peptidase Iv (Dppiv) Complexed With Cyanopyrrolidine (C5-Pro-Pro) Inhibitor 24b
+4N8E A 4,22,5.2,0.0308,1.1,9.1,Dpp4 Complexed With Compound 12a
+3BJM A 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dpp-Iv In Complex With (1s,3s, 5s)-2-[(2s)-2-Amino-2-(3-Hydroxytricyclo[3.3.1.13,7]dec-1- Yl)acetyl]-2-Azabicyclo[3.1.0]hexane-3-Carbonitrile (Cas), (1s,3s,5s)-2-((2s)-2-Amino-2-(3-Hydroxyadamantan-1- Yl) Acetyl)-2-Azabicyclo[3.
+3G0G B 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Dipeptidyl Peptidase Iv In Complex With A Pyrimidinone Inhibitor 3ÿ
+4L72 A 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Mers-cov Complexed With Human Dpp4
+2G63 D 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dipeptidyl Peptidase Iv (Dppiv) Complexed With Cyanopyrrolidine (C5-Pro-Pro) Inhibitor 24b
+3SY2 D ,23,5.2,0.0308,1.1,13.0,Crystal Structure Of The Salmonella E3 Ubiquitin Ligase Sopa In Complex With The Human E2 Ubch7ÿ
+3SY2 D 1,23,5.2,0.0308,1.1,13.0,Crystal Structure Of The Salmonella E3 Ubiquitin Ligase Sopa In Complex With The Human E2 Ubch7ÿ
+3C45 A 4,22,5.2,0.0308,1.1,9.1,Human Dipeptidyl Peptidase IvCD26 IN COMPLEX WITH A Fluoroolefin Inhibitor
+3VJK A 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Depiptidyl Peptidase Iv (Dpp-4) In Complex With Mp-513
+2QKY C 4,22,5.2,0.0308,1.1,9.1,Complex Structure Of Dipeptidyl Peptidase Iv And A Oxadiazolyl Ketone
+3KWF B 4,22,5.2,0.0308,1.1,9.1,Human Dpp-Iv With Carmegliptin (S)-1-((2s,3s,11bs)-2-Amino- 9,10-Dimethoxy-1,3,4,6,7,11b-Hexahydro-2h-Pyrido[2,1- A]isoquinolin-3-Yl)-4-Fluoromethyl-Pyrrolidin-2-Oneÿ
+2RIP A 3,22,5.2,0.0308,1.1,9.1,Structure Of Dppiv In Complex With An Inhibitor
+1U8E A 4,22,5.2,0.0308,1.1,9.1,Human Dipeptidyl Peptidase IvCD26 MUTANT Y547F
+1WCY A 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dipeptidyl Peptidase Iv (Dppiv) Complex With Diprotin A
+2I78 C 4,23,5.2,0.0308,1.1,8.7,Crystal Structure Of Human Dipeptidyl Peptidase Iv (Dpp Iv) Complexed With Abt-341, A Cyclohexene-Constrained Phenethylamine Inhibitor
+3VR1 A 3,22,5.2,0.0364,1.1,4.5,Crystal Structure Analysis Of The Translation Factor Rf3
+1R9M B 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dipeptidyl Peptidase Iv At 2.1 Ang. Resolution
+3VJM A 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Depiptidyl Peptidase Iv (Dpp-4) In Complex With A Prolylthiazolidine Inhibitor #1
+3VJM B 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Depiptidyl Peptidase Iv (Dpp-4) In Complex With A Prolylthiazolidine Inhibitor #1
+3QBJ A 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Dipeptidyl Peptidase Iv In Complex With Inhibitorÿ
+3HAC A 4,22,5.2,0.0308,1.1,9.1,The Structure Of Dpp-4 In Complex With Piperidine Fused Imidazopyridine 34ÿ
+3G0C B 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Dipeptidyl Peptidase Iv In Complex With A Pyrimidinedione Inhibitor 1ÿ
+4PV7 B 4,22,5.2,0.0308,1.1,9.1,Cocrystal Structure Of Dipeptidyl-peptidase 4 With An Indole Scaffold Inhibitor
+4KR0 A 4,22,5.2,0.0308,1.1,9.1,Complex Structure Of Mers-cov Spike Rbd Bound To Cd26
+3CCC D 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dpp4 In Complex With A Benzimidazole Derivative
+2IIV B 4,22,5.2,0.0308,1.1,9.1,Human Dipeptidyl Peptidase 4 In Complex With A Diazepan-2- One Inhibitor
+2QTB A 4,22,5.2,0.0308,1.1,9.1,Human Dipeptidyl Peptidase IvCD26 IN COMPLEX WITH A 4-Aryl Cyclohexylalanine Inhibitor
+3NOX A 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dpp-Iv In Complex With Sa-(+)-(6- (Aminomethyl)-5-(2,4-Dichlorophenyl)-7-Methylimidazo[1,2-A]pyrimidin- 2-Yl)(Morpholino)methanoneÿ
+2G63 B 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dipeptidyl Peptidase Iv (Dppiv) Complexed With Cyanopyrrolidine (C5-Pro-Pro) Inhibitor 24b
+1R9M D 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dipeptidyl Peptidase Iv At 2.1 Ang. Resolution
+4N8D A 4,22,5.2,0.0308,1.1,9.1,Dpp4 Complexed With Syn-7aa
+4PNZ A 4,22,5.2,0.0308,1.1,9.1,Human Dipeptidyl Peptidase Iv/cd26 In Complex With The Long-acting Inhibitor Omarigliptin (mk-3102)
+2LUE A ,20,5.2,0.0308,1.1,10.0,Lc3b Optn-lir Ptot Complex Structure
+3G0B C 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Dipeptidyl Peptidase Iv In Complex With Tak-322ÿ
+4DSA B 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Dpp-iv With Compound C1
+2BGR A 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Hiv-1 Tat Derived Nonapeptides Tat(1-9) Bound To The Active Site Of Dipeptidyl Peptidase Iv (Cd26)
+2G63 A 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dipeptidyl Peptidase Iv (Dppiv) Complexed With Cyanopyrrolidine (C5-Pro-Pro) Inhibitor 24b
+3QBJ B 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Dipeptidyl Peptidase Iv In Complex With Inhibitorÿ
+3G0D B 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Dipeptidyl Peptidase Iv In Complex With A Pyrimidinedione Inhibitor 2ÿ
+2HHA B 4,22,5.2,0.0308,1.1,9.1,The Structure Of Dpp4 In Complex With An Oxadiazole Inhibitor
+3BJM B 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dpp-Iv In Complex With (1s,3s, 5s)-2-[(2s)-2-Amino-2-(3-Hydroxytricyclo[3.3.1.13,7]dec-1- Yl)acetyl]-2-Azabicyclo[3.1.0]hexane-3-Carbonitrile (Cas), (1s,3s,5s)-2-((2s)-2-Amino-2-(3-Hydroxyadamantan-1- Yl) Acetyl)-2-Azabicyclo[3.
+3O95 B 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dpp4 Bound To Tak-100ÿ
+3O95 C 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dpp4 Bound To Tak-100ÿ
+4LKO A 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dpp-iv In Complex With Bms-744891
+3Q0T A 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dpp-Iv In Complex Withsa-(+)- Methyl2-(3- (Aminomethyl)-4-(2,4-Dichlorophenyl)-2-Methyl- 7-Oxo-5h-Pyrrolo[3,4- B]pyridin-6(7h)-Yl)acetateÿ
+
+2QOE A 4,22,5.2,0.0308,1.1,9.1,Human Dipeptidyl Peptidase Iv In Complex With A Triazolopiperazine-Based Beta Amino Acid Inhibitor
+3G0C C 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Dipeptidyl Peptidase Iv In Complex With A Pyrimidinedione Inhibitor 1ÿ
+3OPM C 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dpp4 Bound To Tak-294ÿ
+3VJL A 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Depiptidyl Peptidase Iv (Dpp-4) In Complex With A Prolylthiazolidine Inhibitor #2
+2IIT B 4,22,5.2,0.0308,1.1,9.1,Human Dipeptidyl Peptidase 4 In Complex With A Diazepan-2- One Inhibitor
+2QOE B 4,22,5.2,0.0308,1.1,9.1,Human Dipeptidyl Peptidase Iv In Complex With A Triazolopiperazine-Based Beta Amino Acid Inhibitor
+2QJR B 4,22,5.2,0.0308,1.1,9.1,Dipepdyl Peptidase Iv In Complex With Inhibitor Pzf
+1J2E A 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dipeptidyl Peptidase Iv
+3HAB A 4,22,5.2,0.0308,1.1,9.1,The Structure Of Dpp4 In Complex With Piperidine Fused Benzimidazole 25ÿ
+2I03 D 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dipeptidyl Peptidase 4 (Dpp Iv) With Potent Alkynyl Cyanopyrrolidine (Abt-279)
+3W2T B 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Depiptidyl Peptidase Iv (dpp-4) In Complex With Vildagliptin
+1W1I C 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Dipeptidyl Peptidase Iv (Dppiv Or Cd26) In Complex With Adenosine Deaminase
+2IIT A 4,22,5.2,0.0308,1.1,9.1,Human Dipeptidyl Peptidase 4 In Complex With A Diazepan-2- One Inhibitor
+3D4L A 4,22,5.2,0.0308,1.1,9.1,Human Dipeptidyl Peptidase IvCD26 IN COMPLEX WITH A NOVEL Inhibitor
+2OGZ B 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Dpp-Iv Complexed With Lilly Aryl Ketone Inhibitor
+3VJK B 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Depiptidyl Peptidase Iv (Dpp-4) In Complex With Mp-513
+3KWF A 4,22,5.2,0.0308,1.1,9.1,Human Dpp-Iv With Carmegliptin (S)-1-((2s,3s,11bs)-2-Amino- 9,10-Dimethoxy-1,3,4,6,7,11b-Hexahydro-2h-Pyrido[2,1- A]isoquinolin-3-Yl)-4-Fluoromethyl-Pyrrolidin-2-Oneÿ
+2OAG A 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dipeptidyl Peptidase Iv (Dppiv) With Pyrrolidine-Constrained Phenethylamine 29g
+2OAG B 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dipeptidyl Peptidase Iv (Dppiv) With Pyrrolidine-Constrained Phenethylamine 29g
+2QKY A 4,21,5.2,0.0308,1.1,9.5,Complex Structure Of Dipeptidyl Peptidase Iv And A Oxadiazolyl Ketone
+2FVU B 1,23,5.2,0.0308,1.1,26.1,Structure Of The Yeast Sir3 Bah Domain
+3VJL B 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Depiptidyl Peptidase Iv (Dpp-4) In Complex With A Prolylthiazolidine Inhibitor #2
+1TK3 A 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Apo Dipeptidyl Peptidase IvCD26
+1TK3 B 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Apo Dipeptidyl Peptidase IvCD26
+2HHA A 4,22,5.2,0.0308,1.1,9.1,The Structure Of Dpp4 In Complex With An Oxadiazole Inhibitor
+1W1I D 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Dipeptidyl Peptidase Iv (Dppiv Or Cd26) In Complex With Adenosine Deaminase
+1W1I B 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Dipeptidyl Peptidase Iv (Dppiv Or Cd26) In Complex With Adenosine Deaminase
+1W1I A 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Dipeptidyl Peptidase Iv (Dppiv Or Cd26) In Complex With Adenosine Deaminase
+3S28 E 1,24,5.9,0.0366,1.1,4.2,The Crystal Structure Of Sucrose Synthase-1 In Complex With A Breakdown Product Of The Udp-Glucoseÿ
+2I03 A 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dipeptidyl Peptidase 4 (Dpp Iv) With Potent Alkynyl Cyanopyrrolidine (Abt-279)
+3OPM D 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dpp4 Bound To Tak-294ÿ
+1RWQ A 4,22,5.2,0.0308,1.1,9.1,Human Dipeptidyl Peptidase Iv In Complex With 5-Aminomethyl- 6-(2,4-Dichloro-Phenyl)-2-(3,5-Dimethoxy-Phenyl)-Pyrimidin- 4-Ylamine
+3H0C B 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dipeptidyl Peptidase Iv (Cd26) In Complex With A Reversed Amide Inhibitorÿ
+2BUC C 4,22,5.2,0.0308,1.1,13.6,Crystal Structure Of Porcine Dipeptidyl Pepdidase Iv (Cd26) In Complex With A Tetrahydroisoquinoline Inhibitor
+3CCB A 4,22,5.2,0.0308,1.1,9.1,Crystal Structure Of Human Dpp4 In Complex With A Benzimidazole Derivative
+1R9N C 4,23,5.2,0.0308,1.2,8.7,Crystal Structure Of Human Dipeptidyl Peptidase Iv In Complex With A Decapeptide (Tnpy) At 2.3 Ang. Resolution
+2FJP B 4,22,5.2,0.0308,1.2,9.1,Human Dipeptidyl Peptidase IvCD26 IN COMPLEX WITH AN Inhibitor
+3O9V D 4,22,5.2,0.0308,1.2,9.1,Crystal Structure Of Human Dpp4 Bound To Tak-986ÿ
+2QT9 A 4,22,5.2,0.0308,1.2,9.1,Human Dipeptidyl Peptidase IvCD26 IN COMPLEX WITH A 4-Aryl Cyclohexylalanine Inhibitor
+1X9Z A 1,19,5.2,0.0445,1.2,5.3,Crystal Structure Of The Mutl C-Terminal Domain
+2JID B 4,22,5.2,0.0308,1.2,9.1,Human Dipeptidyl Peptidase Iv In Complex With 1-(3,4- Dimethoxy-Phenyl)-3-M-Tolyl-Piperidine-4-Ylamine
+3G0D C 4,22,5.2,0.0308,1.2,9.1,Crystal Structure Of Dipeptidyl Peptidase Iv In Complex With A Pyrimidinedione Inhibitor 2ÿ
+2P8S A 4,22,5.2,0.0308,1.2,9.1,Human Dipeptidyl Peptidase IvCD26 IN COMPLEX WITH A Cyclohexalamine Inhibitor
+1TKR A 4,23,5.2,0.0308,1.2,8.7,Human Dipeptidyl Peptidase IvCD26 INHIBITED WITH Diisopropyl Fluorophosphate
+3C43 A 4,22,5.2,0.0308,1.2,9.1,Human Dipeptidyl Peptidase IvCD26 IN COMPLEX WITH A Flouroolefin Inhibitor
+2IIV A 4,22,5.2,0.0308,1.2,9.1,Human Dipeptidyl Peptidase 4 In Complex With A Diazepan-2- One Inhibitor
+2OQI A 4,22,5.2,0.0308,1.2,9.1,Human Dipeptidyl Peptidase Iv (Dpp4) With Piperidinone- Constrained Phenethylamine
+1Z1A A 1,21,5.2,0.0308,1.2,14.3,S. Cerevisiae Sir1 Orc-Interaction Domain
+3G0D A 4,22,5.2,0.0308,1.2,9.1,Crystal Structure Of Dipeptidyl Peptidase Iv In Complex With A Pyrimidinedione Inhibitor 2ÿ
+2OQV B 4,24,5.2,0.0308,1.2,8.3,Human Dipeptidyl Peptidase Iv (Dpp4) With Piperidine- Constrained Phenethylamine
+2ONC D 4,22,5.2,0.0308,1.2,9.1,Crystal Structure Of Human Dpp-4
+4G1F C 4,22,5.2,0.0308,1.2,9.1,Crystal Structure Of Human Dipeptidyl Peptidase Iv In Complex With A Pyridopyrimidinedione Analogue
+2AJL J 4,23,5.2,0.0308,1.2,8.7,X-Ray Structure Of Novel Biaryl-Based Dipeptidyl Peptidase Iv Inhibitorÿ
+1R9N D 4,22,5.2,0.0308,1.2,9.1,Crystal Structure Of Human Dipeptidyl Peptidase Iv In Complex With A Decapeptide (Tnpy) At 2.3 Ang. Resolution
+2ONC C 4,22,5.2,0.0308,1.2,9.1,Crystal Structure Of Human Dpp-4
+3O9V A 4,22,5.2,0.0308,1.2,9.1,Crystal Structure Of Human Dpp4 Bound To Tak-986ÿ
+1R9N A 4,22,5.2,0.0308,1.2,9.1,Crystal Structure Of Human Dipeptidyl Peptidase Iv In Complex With A Decapeptide (Tnpy) At 2.3 Ang. Resolution
+2FJP A 4,22,5.2,0.0308,1.2,9.1,Human Dipeptidyl Peptidase IvCD26 IN COMPLEX WITH AN Inhibitor
+3H0C A 4,22,5.2,0.0308,1.2,9.1,Crystal Structure Of Human Dipeptidyl Peptidase Iv (Cd26) In Complex With A Reversed Amide Inhibitorÿ
+2OPH A 4,23,5.2,0.0308,1.2,8.7,Human Dipeptidyl Peptidase Iv In Complex With An Alpha Amino Acid Inhibitor
