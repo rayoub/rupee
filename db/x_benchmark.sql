@@ -26,6 +26,7 @@ COPY benchmark (name, db_id) FROM '/home/ayoub/git/rupee/results/benchmarks/cath
 -- ****************************************************************
 
 COPY benchmark (name, db_id) FROM '/home/ayoub/git/rupee/results/benchmarks/casp_d250.txt' WITH (DELIMITER ',');
+COPY benchmark (name, db_id) FROM '/home/ayoub/git/rupee/results/benchmarks/casp_d190.txt' WITH (DELIMITER ',');
 
 -- mtm specific
 COPY benchmark (name, db_id) FROM '/home/ayoub/git/rupee/results/benchmarks/casp_mtm_d246.txt' WITH (DELIMITER ',');
@@ -38,5 +39,5 @@ COPY benchmark (name, db_id) FROM '/home/ayoub/git/rupee/results/benchmarks/casp
 COPY benchmark (name, db_id) FROM '/home/ayoub/git/rupee/results/benchmarks/casp_cathedral_d247.txt' WITH (DELIMITER ',');
 
 -- vast specific
-COPY benchmark (name, db_id) FROM '/home/ayoub/git/rupee/results/benchmarks/casp_vast_d55.txt' WITH (DELIMITER ',');
+COPY benchmark (name, db_id) FROM '/home/ayoub/git/rupee/results/benchmarks/casp_vast_d65.txt' WITH (DELIMITER ',');
 
