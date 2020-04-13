@@ -1,4 +1,3 @@
-
 2XSS A 2,30,5.1,0.0365,1.4,10.0,Crystal Structure Of Gafb From The Human Phosphodiesterase 5ÿ
 5CYR B 5,22,5.2,0.0308,1.5,4.5,Crystal Structure Of Thosea Asigna Virus Rna-dependent Rna Polymerase (rdrp) Complexed With Atp And Ssrna
 3ZYV D 4,23,5.2,0.0255,1.6,17.4,Crystal Structure Of The Mouse Liver Aldehyde Oxydase 3 (Maox3)
@@ -59,7 +58,6 @@
 2PMU A 1,20,5.2,0.0154,2.0,5.0,Crystal Structure Of The Dna-Binding Domain Of Phopÿ
 3R0J A 2,21,5.1,0.0378,2.0,4.8,Structure Of Phop From Mycobacterium Tuberculosisÿ
 2OK6 B 4,25,5.2,0.0165,2.0,4.0,Crystal Structure Of Aromatic Amine Dehydrogenase Ttq- Formamide Adduct Oxidized With Ferricyanide
-
 4YFX C 3,28,5.2,0.0154,2.0,14.3,Escherichia Coli Rna Polymerase In Complex With Myxopyronin B
 1RS4 A ,34,5.9,0.0403,2.0,5.9,Dhna, 7,8-Dihydroneopterin Aldolase Complexed With 3-(5- Amino-7-Hydroxy-[1,2,3]triazolo[4,5-D]pyrimidin-2-Yl)-N-(3, 5-Dichlorobenzyl)-Benzamide
 1GQ1 B 4,42,7.6,0.0053,2.1,4.8,Cytochrome Cd1 Nitrite Reductase, Y25s Mutant, Oxidised Form
@@ -120,7 +118,6 @@
 3SBQ B 2,41,7.4,0.0142,2.2,4.9,Pseudomonas Stutzeri Nitrous Oxide Reductase, P65 Crystal Formÿ
 3J2T A 9,36,7.6,0.0016,2.2,2.8,An Improved Model Of The Human Apoptosome
 3J2T B 9,36,7.6,0.0016,2.2,2.8,An Improved Model Of The Human Apoptosome
-
 3J2T D 9,36,7.6,0.0016,2.2,2.8,An Improved Model Of The Human Apoptosome
 3J2T E 9,36,7.6,0.0016,2.2,2.8,An Improved Model Of The Human Apoptosome
 3J2T F 9,36,7.6,0.0016,2.2,2.8,An Improved Model Of The Human Apoptosome

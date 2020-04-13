@@ -1,4 +1,3 @@
-
 2RV8 A 1,17,5.2,0.0308,1.2,0.0,Solution Structure Of The Phop Dna-binding Domain From Mycobacterium Tuberculosis
 3EE1 B 2,35,7.0,10e-4.1,1.2,14.3,Novel Fold Of Vira, A Type Iii Secretion System Effector Protein From Shigella Flexneriÿ
 3EE1 A 2,35,7.0,10e-4.1,1.2,14.3,Novel Fold Of Vira, A Type Iii Secretion System Effector Protein From Shigella Flexneriÿ
@@ -59,7 +58,6 @@
 2P7K B 1,33,5.6,0.0471,1.6,6.1,Crystal Structure Of Genomically Encoded Fosfomycin Resistance Protein, Fosx, From Listeria Monocytogenes (Hexagonal Form)
 3P2Z A 2,35,6.9,0.0168,1.6,5.7,Polo-Like Kinase I Polo-Box Domain In Complex With Plhspta Phosphopeptide From Pbip1ÿ
 2ZW5 A 2,30,5.9,0.0182,1.6,3.3,Crystal Structure Of Bleomycin N-Acetyltransferase Complexed With Coenzyme A In The Trigonal Crystalÿ
-
 1MDA J 2,31,5.2,0.0308,1.6,3.2,Crystal Structure Of An Electron-Transfer Complex Between Methylamine Dehydrogenase And Amicyanin
 4YYP A ,30,6.8,0.0298,1.6,10.0,Crystal Structure Of Human Plk4-pb3 In Complex With Stil-cc
 4E7X A 2,46,7.3,0.0057,1.6,13.0,Structural Basis For The Activity Of A Cytoplasmic Rna Terminal U- Transferase
@@ -120,7 +118,6 @@
 4FMC E 1,39,6.9,0.0119,1.7,20.5,Espg-Rab1 Complex
 3ITW A 1,34,5.7,0.0339,1.7,8.8,Crystal Structure Of Tiox From Micromonospora Sp. Ml1ÿ
 4NB1 A 1,32,5.8,0.0307,1.7,21.9,Crystal Structure Of Fosb From Staphylococcus Aureus At 1.80 Angstrom Resolution With L-cysteine-cys9 Disulfide
-
 5F6Q A 1,37,5.6,0.0492,1.7,21.6,Crystal Structure Of Metallothiol Transferase From Bacillus Anthracis Str. Ames
 3RC1 A 2,46,8.1,0.0369,1.7,6.5,Crystal Structure Of Kijd10, A 3-Ketoreductase From Actinomadura Kijaniata Incomplex With Nadp And Tdp-Benzeneя
 4CR4 5 2,37,6.9,0.0049,1.7,10.8,Deep Classification Of A Large Cryo-em Dataset Defines The Conformational Landscape Of The 26s Proteasome

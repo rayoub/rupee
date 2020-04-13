@@ -1,4 +1,3 @@
-
 2V6J A 3,15,3.4,0.0371,0.9,6.7,Kokobera Virus Helicase: Mutant Met47thr
 5A7Y B 3,31,4.0,0.0413,1.0,12.9,Crystal Structure Of Sulfolobus Acidocaldarius Trm10 In Complex With S-adenosylhomocysteine
 3AA6 B 1,25,4.0,0.0390,1.1,4.0,Crystal Structure Of Actin Capping Protein In Complex With The Cp- Binding Motif Derived From Cd2apÿ
@@ -59,7 +58,6 @@
 4A2I C 1,31,4.7,0.0436,1.6,0.0,Cryo-Electron Microscopy Structure Of The 30s Subunit In Complex With The Yjeq Biogenesis Factorÿ
 4DOF B 1,26,3.5,0.0092,1.6,11.5,Structures Of Vaccinia Virus Uracil-dna Glycosylase In New Crystal Forms
 4LZB B 1,27,3.5,0.0092,1.6,11.1,Uracil Binding Pocket In Vaccinia Virus Uracil Dna Glycosylase
-
 3AAA B 1,33,4.0,0.0390,1.6,3.0,Crystal Structure Of Actin Capping Protein In Complex With V-1ÿ
 4GW9 D 2,46,6.2,0.0354,1.6,15.2,Structure Of A Bacteriophytochrome And Light-Stimulated Protomer Swapping With A Gene Repressor
 4LZB K 1,27,3.5,0.0092,1.6,11.1,Uracil Binding Pocket In Vaccinia Virus Uracil Dna Glycosylase
@@ -120,7 +118,6 @@
 4ETZ A ,63,7.9,0.0435,1.8,9.5,Crystal Structure Of Peld 158-Ct From Pseudomonas Aeruginosa Pao1
 2ZL1 B ,45,6.5,0.0160,1.8,4.4,Mp1-P14 Scaffolding Complex
 2JEA I 3,26,4.6,0.0281,1.8,0.0,Structure Of A 9-Subunit Archaeal Exosome Bound To Rnaÿ
-
 2Z0S A 2,31,4.7,0.0473,1.8,12.9,Crystal Structure Of Putative Exosome Complex Rna-Binding Protein
 3CPT B ,44,7.0,0.0019,1.8,4.5,Mp1-P14 Scaffolding Complex
 3N4D A 2,15,3.5,0.0436,1.8,0.0,Crystal Structure Of Cg10062 Inactivated By(R)-Oxirane-2-Carboxylateÿ

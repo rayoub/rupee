@@ -1,4 +1,3 @@
-
 3DAE B 1,28,7.0,0.0421,1.4,10.7,Crystal Structure Of Phosphorylated Snf1 Kinase Domainÿ
 4IIR B 1,26,6.6,0.0383,1.4,0.0,Crystal Structure Of Amppnp-bound Human Prpf4b Kinase Domain
 5CHS A ,29,6.6,0.0168,1.5,6.9,N-terminal Domain Of The Vesicular Stomatitis Virus L Protein
@@ -59,7 +58,6 @@
 1J7D B ,31,6.3,0.0221,1.5,16.1,Crystal Structure Of Hmms2-Hubc13
 1J7D B 1,31,6.3,0.0221,1.5,16.1,Crystal Structure Of Hmms2-Hubc13
 3G0C A 3,22,6.8,0.0157,1.5,4.5,Crystal Structure Of Dipeptidyl Peptidase Iv In Complex With A Pyrimidinedione Inhibitor 1ÿ
-
 3O9V D 3,22,6.8,0.0209,1.5,4.5,Crystal Structure Of Human Dpp4 Bound To Tak-986ÿ
 1ORW D 3,22,6.8,0.0207,1.5,4.5,Crystal Structure Of Porcine Dipeptidyl Peptidase Iv (Cd26) In Complex With A Peptidomimetic Inhibitor
 1ORV A 3,22,6.8,0.0217,1.5,4.5,Crystal Structure Of Porcine Dipeptidyl Peptidase Iv (Cd26)
@@ -120,7 +118,6 @@
 2BGR A 3,22,6.7,0.0232,1.6,4.5,Crystal Structure Of Hiv-1 Tat Derived Nonapeptides Tat(1-9) Bound To The Active Site Of Dipeptidyl Peptidase Iv (Cd26)
 2AJD B 3,22,6.8,0.0189,1.6,4.5,Porcine Dipeptidyl Peptidase Iv (Cd26) In Complex With L- Pro-Boro-L-Pro (Boropro)
 2OPH B 3,22,6.8,0.0226,1.6,4.5,Human Dipeptidyl Peptidase Iv In Complex With An Alpha Amino Acid Inhibitor
-
 3G0G D 3,22,6.6,0.0047,1.6,4.5,Crystal Structure Of Dipeptidyl Peptidase Iv In Complex With A Pyrimidinone Inhibitor 3ÿ
 3WQH A 3,22,6.6,0.0495,1.6,4.5,Crystal Structure Of Human Dpp-iv In Complex With Anagliptin
 4DSA A 3,22,6.7,0.0350,1.6,4.5,Crystal Structure Of Dpp-iv With Compound C1

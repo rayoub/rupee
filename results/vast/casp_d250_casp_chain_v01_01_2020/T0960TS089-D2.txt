@@ -1,4 +1,3 @@
-
 1M5Q Z 2,18,4.8,0.0319,0.7,0.0,Crystal Structure Of A Novel Sm-Like Archaeal Protein From Pyrobaculum Aerophilum
 1M5Q I 2,18,4.8,0.0368,0.8,0.0,Crystal Structure Of A Novel Sm-Like Archaeal Protein From Pyrobaculum Aerophilum
 1M5Q Y 2,18,4.8,0.0270,0.8,0.0,Crystal Structure Of A Novel Sm-Like Archaeal Protein From Pyrobaculum Aerophilum
@@ -59,7 +58,6 @@
 4XF2 F ,33,5.2,0.0022,1.4,3.0,Tetragonal Structure Of Arp2/3 Complex
 4XF2 F 2,33,5.2,0.0022,1.4,3.0,Tetragonal Structure Of Arp2/3 Complex
 3NVX A 3,18,4.7,0.0474,1.4,5.6,Molecular Mechanism Of Guidance Cue Recognitionÿ
-
 3UBM D 2,20,4.8,0.0370,1.4,0.0,Formyl-Coa:oxalate Coa-Transferase From Acetobacter Acetiÿ
 1W6F A 1,30,6.7,10e-4.7,1.4,6.7,Arylamine N-Acetyltransferase From Mycobacterium Smegmatis With The Anti-Tubercular Drug Isoniazid Bound In The Active Site
 3X29 C ,27,4.9,0.0226,1.4,3.7,Crystal Structure Of Mouse Claudin-19 In Complex With C-terminal Fragment Of Clostridium Perfringens Enterotoxin
@@ -120,7 +118,6 @@
 4WHK A 2,43,6.3,0.0010,1.7,2.3,A New Class Of Peptidomimetics Targeting The Polo-box Domain Of Polo- Like Kinase 1
 3P37 C 1,44,6.3,0.0009,1.7,4.5,Polo-Like Kinase I Polo-Box Domain In Complex With Fdpplhspta Phosphopeptide From Pbip1ÿ
 1Q4O A ,43,6.7,0.0250,1.7,2.3,The Structure Of The Polo Box Domain Of Human Plk1
-
 3A5P A ,37,6.7,0.0033,1.7,2.7,Crystal Structure Of Hemagglutininÿ
 3A5P A 2,37,6.7,10e-4.6,1.7,2.7,Crystal Structure Of Hemagglutininÿ
 1Q4O A ,43,6.7,0.0250,1.7,2.3,The Structure Of The Polo Box Domain Of Human Plk1

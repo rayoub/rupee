@@ -1,4 +1,3 @@
-
 4Q7J D 1,21,5.1,0.0464,1.4,9.5,Complex Structure Of Viral Rna Polymerase
 4R71 E 1,23,5.2,0.0152,1.4,8.7,Structure Of The Qbeta Holoenzyme Complex In The P1211 Crystal Form
 5A1H D 3,25,5.2,0.0293,1.4,4.0,Crystal Structure Of Human Spindlin3
@@ -59,7 +58,6 @@
 2X9H A 1,26,5.2,0.0153,1.6,3.8,Crystal Structure Of Myosin-2 Motor Domain In Complex With Adp-Metavanadate And Pentachlorocarbazoleÿ
 3RMC D 1,22,5.1,0.0055,1.6,4.5,Crystal Structure Of A Replicative Dna Polymerase Bound To Dna Containing Thymine Glycolÿ
 3BZ7 A 1,26,5.1,0.0466,1.6,3.8,Crystal Structures Of (S)-(-)-Blebbistatin Analogs Bound To Dictyostelium Discoideum Myosin Ii
-
 3BZ9 A 1,26,5.1,0.0333,1.6,3.8,Crystal Structures Of (S)-(-)-Blebbistatin Analogs Bound To Dictyostelium Discoideum Myosin Ii
 2JJB A 2,21,3.5,0.0431,1.6,9.5,Family 37 Trehalase From Escherichia Coli In Complex With Casuarine-6-O-Alpha-Glucopyranoseÿ
 4DG6 A 5,25,5.3,0.0140,1.6,8.0,Crystal Structure Of Domains 1 And 2 Of Lrp6
@@ -120,7 +118,6 @@
 3QET A 1,24,5.1,0.0091,1.9,4.2,Rb69 Dna Polymerase (L561aS565GY567A) TERNARY COMPLEX WITH DTTP Opposite Dtÿ
 1IG9 A 1,24,5.0,0.0151,1.9,4.2,Structure Of The Replicating Complex Of A Pol Alpha Family Dna Polymerase
 4KHQ A 1,24,5.0,0.0102,1.9,4.2,Ternary Complex Of Rb69 Mutant L415f Wit Dumpnpp
-
 4E3S A 1,24,5.0,0.0110,1.9,4.2,Rb69 Dna Polymerase Ternary Complex With Dqtp Opposite Dt
 3SUP A 1,24,5.0,0.0096,1.9,4.2,Rb69 Dna Polymerase (Y567a) Ternary Complex With Dctp Opposite 2ap (Gc Rich Sequence)ÿ
 1WAJ A 1,25,4.8,0.0276,1.9,4.0,Dna Polymerase From Bacteriophage Rb69

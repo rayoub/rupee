@@ -1,4 +1,3 @@
-
 1F3M A 1,12,3.5,0.0448,1.0,0.0,Crystal Structure Of Human SerineTHREONINE KINASE PAK1
 4YTB A 4,25,5.2,0.0118,1.0,4.0,Crystal Structure Of Porphyromonas Gingivalis Peptidylarginine Deiminase (ppad) In Complex With Dipeptide Asp-gln
 5AK7 A 4,25,5.2,0.0114,1.0,4.0,Structure Of Wt Porphyromonas Gingivalis Peptidylarginine Deiminase
@@ -59,7 +58,6 @@
 3FKU H 2,32,4.9,0.0099,1.8,12.5,Crystal Structure Of Influenza Hemagglutinin (H5) In Complex With A Broadly Neutralizing Antibody F10ÿ
 2N4C A ,35,4.9,0.0346,1.8,14.3,Ec-nmr Structure Of Agrobacterium Tumefaciens Atu1203 Determined By Combining Evolutionary Couplings (ec) And Sparse Nmr Data. Northeast Structural Genomics Consortium Target Att10
 3IY8 K ,40,6.6,0.0293,1.8,2.5,Leishmania Tarentolae Mitonchondrial Ribosome Small Subunitÿ
-
 4ADV K ,40,6.6,0.0293,1.8,2.5,Structure Of The E. Coli Methyltransferase Ksga Bound To The E. Coli 30s Ribosomal Subunitÿ
 4A2I K ,40,6.6,0.0293,1.8,2.5,Cryo-Electron Microscopy Structure Of The 30s Subunit In Complex With The Yjeq Biogenesis Factorÿ
 3TVI J 2,30,5.2,0.0357,1.8,10.0,Crystal Structure Of Clostridium Acetobutylicum Aspartate Kinase (Caak): An Important Allosteric Enzyme For Industrial Amino Acids Productionÿ
@@ -120,7 +118,6 @@
 3TVI C 2,35,5.2,0.0305,1.9,8.6,Crystal Structure Of Clostridium Acetobutylicum Aspartate Kinase (Caak): An Important Allosteric Enzyme For Industrial Amino Acids Productionÿ
 3J1X Q 2,31,5.7,0.0121,1.9,6.5,A Refined Model Of The Prototypical Salmonella Typhimurium T3ss Basal Body Reveals The Molecular Basis For Its Assembly
 1OYD A 2,45,6.0,0.0407,1.9,8.9,Structural Basis Of Multiple Binding Capacity Of The Acrb Multidrug Efflux Pump
-
 3LC9 A ,38,7.2,0.0185,1.9,10.5,Ricin A-Chain Variant 1-3344-198 With Engineered Disulfide Bondÿ
 4BC2 A 2,40,7.1,0.0188,1.9,0.0,Crystal Structure Of Human D-Xylulokinase In Complex With D- Xylulose And Adenosine Diphosphate
 4N5Y B 2,34,4.8,0.0115,1.9,11.8,Crystal Structure Of H5 Hemagglutinin Mutant (n158d, N224k And Q226l) From The Influenza Virus A/viet Nam/1203/2004 (h5n1)

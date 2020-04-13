@@ -1,4 +1,3 @@
-
 2NXN A 1,20,5.2,0.0308,1.3,5.0,T. Thermophilus Ribosomal Protein L11 Methyltransferase (Prma) In Complex With Ribosomal Protein L11
 4GL2 B 4,18,5.2,0.0308,1.3,5.6,Structural Basis For Dsrna Duplex Backbone Recognition By Mda5
 4YER A 2,23,5.2,0.0308,1.4,13.0,Crystal Structure Of An Abc Transporter Atp-binding Protein (tm_1403) From Thermotoga Maritima Msb8 At 2.35 A Resolution
@@ -59,7 +58,6 @@
 3HOB M ,39,8.7,0.0489,2.0,7.7,Factor Viii Trp2313-His2315 Segment Is Involved In Membrane Binding As Shown By Crystal Structure Of Complex Between Factor Viii C2 Domain And An Inhibitorÿ
 4U59 A 3,33,6.8,0.0393,2.0,6.1,Crystal Structure Of Salmonella Alpha-2-macroglobulin Reacted With Methylamine
 3J5S F 1,42,7.7,0.0458,2.0,9.5,Etta Binds To Ribosome Exit Site And Regulates Translation By Restricting Ribosome And Trna Dynamics
-
 2ORX A 1,40,8.6,0.0471,2.0,7.5,Structural Basis For Ligand Binding And Heparin Mediated Activation Of Neuropilin
 2J1U B ,37,8.6,0.0108,2.0,5.4,Structure Of A Streptococcus Pneumoniae Fucose Binding Module In Complex With The Blood Group A-Tetrasaccharide
 2DI9 A ,51,7.9,0.0087,2.0,11.8,Solution Structure Of The 9th Filamin Domain From Human Filamin-B
@@ -120,7 +118,6 @@
 3FCS A 5,52,9.0,0.0020,2.2,9.6,Structure Of Complete Ectodomain Of Integrin Aiibb3ÿ
 4CSU 5 1,47,7.4,0.0249,2.2,6.4,Cryo-em Structures Of The 50s Ribosome Subunit Bound With Obge
 5F9W L 2,39,7.1,0.0416,2.2,5.1,Crystal Structure Of Broadly Neutralizing Vh1-46 Germline-derived Cd4- Binding Site-directed Antibody Ch235 In Complex With Hiv-1 Clade A/e 93th057 Gp120
-
 1I9R L 2,38,8.6,0.0079,2.2,7.9,Structure Of Cd40l In Complex With The Fab Fragment Of Humanized 5c8 Antibody
 4JZJ D 1,34,6.8,0.0275,2.2,11.8,Crystal Structure Of Receptor-fab Complex
 2VPL A ,43,7.8,0.0072,2.2,16.3,The Structure Of The Complex Between The First Domain Of L1 Protein From Thermus Thermophilus And Mrna From Methanococcus Jannaschii

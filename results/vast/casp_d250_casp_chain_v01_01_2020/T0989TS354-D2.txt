@@ -1,4 +1,3 @@
-
 1W1I A 2,27,5.1,0.0423,1.7,3.7,Crystal Structure Of Dipeptidyl Peptidase Iv (Dppiv Or Cd26) In Complex With Adenosine Deaminase
 1W1I B 2,27,5.1,0.0395,1.7,3.7,Crystal Structure Of Dipeptidyl Peptidase Iv (Dppiv Or Cd26) In Complex With Adenosine Deaminase
 1W1I D 2,27,5.1,0.0394,1.7,3.7,Crystal Structure Of Dipeptidyl Peptidase Iv (Dppiv Or Cd26) In Complex With Adenosine Deaminase
@@ -59,7 +58,6 @@
 3TKN G 1,37,7.1,0.0026,2.3,5.4,Structure Of The Nup82-Nup159-Nup98 Heterotrimerÿ
 4LK1 C 3,36,5.2,0.0154,2.3,5.6,Crystal Structure Analysis Of The E.coli Holoenzyme
 4LK1 I 4,36,5.2,0.0154,2.3,5.6,Crystal Structure Analysis Of The E.coli Holoenzyme
-
 4ZH3 C 3,36,5.2,0.0154,2.3,5.6,Crystal Structure Of Escherichia Coli Rna Polymerase In Complex With Cbrh16-br
 4LK0 C 3,36,5.2,0.0154,2.3,5.6,Crystal Structure Analysis Of The E.coli Holoenzyme/t7 Gp2 Complex
 4LK0 I 4,36,5.2,0.0154,2.3,5.6,Crystal Structure Analysis Of The E.coli Holoenzyme/t7 Gp2 Complex
@@ -120,7 +118,6 @@
 4A2L D 3,41,7.4,0.0036,2.5,7.3,Structure Of The Periplasmic Domain Of The Heparin And Heparan Sulphate Sensing Hybrid Two Component System Bt4663 In Apo And Ligand Bound Forms
 4XSY C 3,31,5.2,0.0154,2.5,12.9,Crystal Structure Of Cbr 9379 Bound To Escherichia Coli Rna Polymerase Holoenzyme
 4XSX I 3,31,5.2,0.0154,2.5,12.9,Crystal Structure Of Cbr 703 Bound To Escherichia Coli Rna Polymerase Holoenzyme
-
 4CDB A 3,41,6.1,0.0300,2.5,7.3,Crystal Structure Of Listeriolysin O
 3F7F B 3,31,5.2,0.0154,2.5,12.9,Structure Of Nup120ÿ
 3F7F D 3,31,5.2,0.0154,2.5,12.9,Structure Of Nup120ÿ

@@ -1,4 +1,3 @@
-
 1M5Q Z 2,19,4.8,0.0332,0.7,0.0,Crystal Structure Of A Novel Sm-Like Archaeal Protein From Pyrobaculum Aerophilum
 1M5Q Y 2,19,4.8,0.0330,0.7,0.0,Crystal Structure Of A Novel Sm-Like Archaeal Protein From Pyrobaculum Aerophilum
 2JPB A 1,18,5.2,0.0022,0.8,11.1,Solution Structure Of Ompr-C Dna Binding Protein
@@ -59,7 +58,6 @@
 4LKL A 1,38,6.9,10e-4.8,1.2,7.9,Crystal Structure Of Plk1 Polo-box Domain In Complex With Pl-55
 2Z15 A ,29,5.2,0.0254,1.2,6.9,Crystal Structure Of Human Tob1 Protein
 1QHT A 5,18,5.0,0.0100,1.2,5.6,Dna Polymerase From Thermococcus Sp. 9on-7 Archaeon
-
 4P79 A ,27,5.1,0.0352,1.2,11.1,Crystal Structure Of Mouse Claudin-15
 4O9W A ,38,6.9,0.0032,1.2,7.9,Crystal Structure Of Polo-like Kinase(plk1)pbd In Complex With Phospho Peptide
 4O9W A 1,38,6.9,10e-4.6,1.2,7.9,Crystal Structure Of Polo-like Kinase(plk1)pbd In Complex With Phospho Peptide
@@ -120,7 +118,6 @@
 4KSS A 3,40,6.8,0.0368,1.3,5.0,Crystal Structure Of Vibrio Cholerae Atpase Gspse Hexamer
 4KSR B 3,40,6.8,0.0173,1.3,5.0,Crystal Structure Of The Vibrio Cholerae Atpase Gspe Hexamer
 4BY2 B ,40,7.0,0.0039,1.3,5.0,Sas-4 (dcpap) Tcp Domain In Complex With A Proline Rich Motif Of Ana2 (dstil) Of Drosophila Melanogaster
-
 4KSS E 3,40,6.8,0.0399,1.3,5.0,Crystal Structure Of Vibrio Cholerae Atpase Gspse Hexamer
 4BY2 B ,40,7.0,0.0039,1.3,5.0,Sas-4 (dcpap) Tcp Domain In Complex With A Proline Rich Motif Of Ana2 (dstil) Of Drosophila Melanogaster
 4LD3 A ,38,7.0,0.0080,1.3,5.3,Structural Analysis Of The Microcephaly Protein Cpap G-box Domain Suggests A Role In Centriole Elongation

@@ -1,4 +1,3 @@
-
 3PQH B 2,16,5.2,0.0308,0.7,25.0,Crystal Structure Of The C-Terminal Fragment Of The Bacteriophage Phi92 Membrane-Piercing Protein Gp138ÿ
 3PQH A 2,16,5.2,0.0308,0.7,25.0,Crystal Structure Of The C-Terminal Fragment Of The Bacteriophage Phi92 Membrane-Piercing Protein Gp138ÿ
 3PQI A 3,16,5.2,0.0308,0.7,25.0,Crystal Structure Of The Bacteriophage Phi92 Membrane-Piercing Protein Gp138ÿ
@@ -59,7 +58,6 @@
 1XI4 E 3,29,5.2,0.0397,1.1,6.9,Clathrin D6 Coat
 1XI4 F 3,29,5.2,0.0398,1.1,6.9,Clathrin D6 Coat
 1XI4 A 3,29,5.2,0.0398,1.1,6.9,Clathrin D6 Coat
-
 1XI4 C 3,29,5.2,0.0398,1.1,6.9,Clathrin D6 Coat
 1XI5 I 3,29,5.2,0.0396,1.1,6.9,Clathrin D6 Coat With Auxilin J-Domain
 1XI5 G 3,29,5.2,0.0395,1.1,6.9,Clathrin D6 Coat With Auxilin J-Domain
@@ -120,7 +118,6 @@
 3H7N C 2,37,6.6,0.0026,1.2,16.2,Structure Of Nup120ÿ
 3H7N C 3,34,5.2,0.0318,1.2,5.9,Structure Of Nup120ÿ
 3F7F B 2,38,6.6,0.0025,1.2,15.8,Structure Of Nup120ÿ
-
 3F7F C 2,38,6.6,0.0026,1.2,15.8,Structure Of Nup120ÿ
 3F7F A 2,38,6.6,0.0026,1.2,15.8,Structure Of Nup120ÿ
 3P2N B 2,24,5.2,0.0310,1.2,16.7,Discovery And Structural Characterization Of A New Glycoside Hydrolase Family Abundant In Coastal Waters That Was Annotated As 'hypothetical Protein'ÿ

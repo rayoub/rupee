@@ -1,4 +1,3 @@
-
 3TSB B 2,12,3.5,0.0262,0.8,0.0,Crystal Structure Of Inosine-5'-Monophosphate Dehydrogenase From Bacillus Anthracis Str. Amesÿ
 3FDF C 2,13,3.5,0.0106,0.8,15.4,Crystal Structure Of The Serine Phosphatase Of Rna Polymerase Ii Ctd (Ssu72 Superfamily) From Drosophila Melanogaster. Orthorhombic Crystal Form. Northeast Structural Genomics Consortium Target Fr253ÿ
 3J81 S 1,12,3.5,0.0182,0.8,8.3,Cryoem Structure Of A Partial Yeast 48s Preinitiation Complex
@@ -59,7 +58,6 @@
 2XSS B 2,23,5.1,0.0017,1.4,13.0,Crystal Structure Of Gafb From The Human Phosphodiesterase 5ÿ
 3B3K B ,17,5.7,0.0471,1.4,0.0,Crystal Structure Of The Complex Between Ppargamma And The Full Agonist Lt175
 4NYK A 2,12,3.5,0.0257,1.4,8.3,Structure Of A Membrane Protein
-
 2Q61 B ,17,5.7,0.0398,1.4,0.0,Crystal Structure Of Ppargamma Ligand Binding Domain Bound To Partial Agonist Sr145
 3LYV B ,31,4.9,0.0039,1.4,12.9,Crystal Structure Of A Domain Of Ribosome-Associated Factor Streptococcus Pyogenes Serotype M6. Northeast Structural Ge Consortium Target Id Dr64aÿ
 4DV2 M ,12,3.9,0.0267,1.4,8.3,Crystal Structure Of The Thermus Thermophilus 30s Ribosomal Subunit With A 16s Rrna Mutation, C912a
@@ -120,7 +118,6 @@
 2H3G X 2,31,5.9,0.0446,1.6,12.9,Structure Of The Type Iii Pantothenate Kinase (Coax) From Bacillus Anthracis
 3JCG A 1,30,6.7,0.0064,1.6,3.3,Cryo-em Structure Of The Magnesium Channel Cora In The Magnesium-free, Asymmetric Open State I
 4D60 K 1,13,3.5,0.0159,1.6,7.7,Structure Of A Dimeric Plasmodium Falciparum Profilin Mutant
-
 2BBJ A ,31,6.6,0.0106,1.6,6.5,Crystal Structure Of The Cora Mg2+ Transporter
 4D60 P 1,13,3.4,0.0282,1.6,15.4,Structure Of A Dimeric Plasmodium Falciparum Profilin Mutant
 4EV6 D ,29,6.1,0.0411,1.6,3.4,The Complete Structure Of Cora Magnesium Transporter From Methanocaldococcus Jannaschii

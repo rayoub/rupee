@@ -1,4 +1,3 @@
-
 4HAB C 1,32,7.0,0.0060,1.3,15.6,Crystal Structure Of Plk1 Polo-box Domain In Complex With Pl-49
 4HAB C 2,32,6.9,0.0081,1.3,9.4,Crystal Structure Of Plk1 Polo-box Domain In Complex With Pl-49
 4NKB B 1,39,7.0,0.0060,1.3,0.0,Crystal Structure Of The Cryptic Polo Box (cpb)of Zyg-1
@@ -59,7 +58,6 @@
 4WHK A 2,39,7.0,0.0060,1.6,12.8,A New Class Of Peptidomimetics Targeting The Polo-box Domain Of Polo- Like Kinase 1
 4BGF C 1,37,7.0,0.0190,1.6,5.4,The 3d-structure Of Arylamine-n-acetyltransferase From M. Tuberculosis
 4J7B B 2,38,7.0,0.0060,1.6,15.8,Crystal Structure Of Polo-like Kinase 1
-
 4RS6 A 2,40,6.9,0.0109,1.6,5.0,Crystal Structure Of The C Domain Of Polo Like Kinase Ii In Homo Sapiens
 4O6W A 2,39,7.0,0.0060,1.6,12.8,Peptide-based Inhibitors Of Plk1 Polo-box Domain
 2PMZ B 3,34,6.2,0.0330,1.6,5.9,Archaeal Rna Polymerase From Sulfolobus Solfataricus
@@ -120,7 +118,6 @@
 4X9R A 2,41,6.7,0.0230,1.8,7.3,Plk-1 Polo-box Domain In Complex With Bioactive Imidazolium-containing Phosphopeptide Macrocycle 3b
 1Q4K C 2,40,7.0,0.0060,1.8,12.5,The Polo-Box Domain Of Plk1 In Complex With A Phospho- Peptide
 1UMW A 2,41,6.8,0.0188,1.8,7.3,Structure Of A Human Plk1 Polo-Box DomainPHOSPHOPEPTIDE Complex
-
 3P37 C 2,42,6.8,0.0145,1.8,9.5,Polo-Like Kinase I Polo-Box Domain In Complex With Fdpplhspta Phosphopeptide From Pbip1ÿ
 4H63 Q 3,46,7.6,0.0012,1.8,6.5,Structure Of The Schizosaccharomyces Pombe Mediator Head Module
 5DMS C 2,42,6.9,0.0106,1.8,7.1,Mouse Polo-box Domain And Emi2 (169-177)

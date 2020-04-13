@@ -1,4 +1,3 @@
-
 3FDF C 2,14,3.5,0.0106,0.9,14.3,Crystal Structure Of The Serine Phosphatase Of Rna Polymerase Ii Ctd (Ssu72 Superfamily) From Drosophila Melanogaster. Orthorhombic Crystal Form. Northeast Structural Genomics Consortium Target Fr253ÿ
 2VY5 A ,12,3.3,0.0251,0.9,8.3,U11-48k Chhc Zn-Finger Protein Domainÿ
 4IDX C 1,12,3.5,0.0180,0.9,0.0,Hexameric Crystal Structure Of Schmallenberg Virus Nucleoprotein
@@ -59,7 +58,6 @@
 3V8V B 2,19,3.5,0.0477,1.3,0.0,Crystal Structure Of Bifunctional Methyltransferase Ycby (Rlmlk) From Escherichia Coli, Sam Bindingÿ
 2M9A A ,13,3.5,0.0343,1.3,0.0,Solution Nmr Structure Of E3 Ubiquitin-protein Ligase Zfp91 From Homo Sapiens, Northeast Structural Genomics Consortium (nesg) Target Hr7784a
 3WMH B ,18,6.0,0.0120,1.3,5.6,Human Pprr Gamma Ligand Binding Domain In Complex With A Gammma Selective Synthetic Partial Agonist Mekt75
-
 4DUY M ,12,3.8,0.0420,1.3,8.3,Crystal Structure Of The Thermus Thermophilus 30s Ribosomal Subunit With A 16s Rrna Mutation, U13c
 4TTQ A 2,12,3.9,0.0445,1.3,8.3,Crystal Structure Of Legionella Pneumophila Dephospho-coa Kinase In Complex With Atp
 4NTX A 3,12,3.4,0.0492,1.3,8.3,Structure Of Acid-sensing Ion Channel In Complex With Snake Toxin And Amiloride
@@ -120,7 +118,6 @@
 3NFF F ,22,5.0,0.0160,1.4,18.2,Crystal Structure Of Extended Dimerization Module Of Rna Polymerase I Subcomplex A49A34.5ÿ
 2HWR A ,19,6.0,0.0120,1.4,0.0,Structural Basis For The Structure-Activity Relationships Of Peroxisome Proliferator-Activated Receptor Agonists
 3ADT A ,18,6.0,0.0157,1.4,0.0,Human Ppargamma Ligand-Binding Domain In Complex With 5-Hydroxy-Indole Acetateÿ
-
 4Y29 A ,19,6.0,0.0155,1.4,0.0,Identification Of A Novel Pparg Ligand That Regulates Metabolism
 3WJ4 B ,19,6.0,0.0120,1.4,0.0,Crystal Structure Of Ppargamma Ligand Binding Domain In Complex With Tributyltin
 3WJ5 B ,19,5.8,0.0303,1.4,0.0,Crystal Structure Of Ppargamma Ligand Binding Domain In Complex With Triphenyltin

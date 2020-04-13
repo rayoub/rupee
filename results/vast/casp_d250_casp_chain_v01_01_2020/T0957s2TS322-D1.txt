@@ -1,4 +1,3 @@
-
 3IYV A 20,38,5.5,0.0457,1.4,5.3,Clathrin D6 Coatÿ
 3IYV D 20,38,5.5,0.0458,1.4,5.3,Clathrin D6 Coatÿ
 3IYV E 19,38,5.5,0.0458,1.4,5.3,Clathrin D6 Coatÿ
@@ -59,7 +58,6 @@
 3FUI A 5,56,5.3,0.0161,1.7,5.4,Leukotriene A4 Hydrolase In Complex With N-Benzyl-4-[(2r)- Pyrrolidin-2-Ylmethoxy]anilineÿ
 3FTX A 5,56,5.4,0.0134,1.7,5.4,Leukotriene A4 Hydrolase In Complex With Dihydroresveratrol And Bestatinÿ
 3FTY A 5,56,5.3,0.0155,1.7,5.4,Leukotriene A4 Hydrolase In Complex With Fragment 3- (Benzyloxy)pyridin-2-Amineÿ
-
 3FUF A 5,56,5.3,0.0158,1.7,5.4,Leukotriene A4 Hydrolase In Complex With Fragment 5- Fluoroindole And Bestatinÿ
 1H19 A 5,56,5.3,0.0152,1.7,5.4,Structure Of [e271q] Leukotriene A4 Hydrolase
 4QFV C 2,43,5.7,0.0030,1.7,11.6,Crystal Structure Of A Unique Ankyrin
@@ -120,7 +118,6 @@
 4G8K A 1,48,5.2,0.0219,1.8,8.3,Intact Sensor Domain Of Human Rnase L In The Inactive Signaling State
 1WDY A 1,48,5.2,0.0272,1.8,8.3,Crystal Structure Of Ribonuclease
 5CWU D 2,60,7.4,0.0047,1.8,10.0,Crystal Structure Of Chaetomium Thermophilum Nup188 Tail Domain
-
 4K5B A 2,32,5.4,0.0133,1.8,12.5,Co-crystallization With Conformation-specific Designed Ankyrin Repeat Proteins Explains The Conformational Flexibility Of Bcl-w
 4L2L A 5,57,5.3,0.0173,1.8,5.3,Human Leukotriene A4 Hydrolase Complexed With Ligand 4-(4- Benzylphenyl)thiazol-2-amine
 5CWU G 2,60,7.7,0.0014,1.8,10.0,Crystal Structure Of Chaetomium Thermophilum Nup188 Tail Domain

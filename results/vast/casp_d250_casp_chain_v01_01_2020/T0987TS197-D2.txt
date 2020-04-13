@@ -1,4 +1,3 @@
-
 3WO3 J 1,35,7.1,0.0093,1.5,5.7,Crystal Structure Of Il-18 In Complex With Il-18 Receptor Alpha
 4K0V A 2,48,7.8,0.0008,1.5,8.3,Structural Basis For Angiopoietin-1 Mediated Signaling Initiation
 3DX9 A 1,41,7.0,0.0361,1.5,7.3,Crystal Structure Of The Dm1 Tcr At 2.75aÿ
@@ -59,7 +58,6 @@
 2GY7 B 2,52,7.7,0.0011,1.9,9.6,Angiopoietin-2TIE2 COMPLEX CRYSTAL STRUCTURE
 4S3Q C 2,46,7.2,0.0016,1.9,2.2,Amylomaltase Malq From Escherichia Coli In Complex With Maltose
 5ANM E 2,34,7.2,0.0098,1.9,8.8,Crystal Structure Of Ige Fc In Complex With A Neutralizing Antibody
-
 3S3P A 4,52,7.4,0.0125,1.9,7.7,Transglutaminase 2 In Complex With A Novel Inhibitor
 4OZI G 1,45,7.5,0.0079,1.9,4.4,S2 Protein Complex
 4XVO A 1,47,8.0,0.0006,1.9,4.3,L,d-transpeptidase From Mycobacterium Smegmatis
@@ -120,7 +118,6 @@
 4OF7 B ,47,7.4,0.0245,2.0,6.4,Crystal Structure Of Syg-1 D1, Crystal Form 2
 3S7G B 1,41,7.3,0.0075,2.0,7.3,Aglycosylated Human Igg1 Fc Fragment
 3J2X H 1,49,7.6,0.0317,2.0,6.1,Electron Cryo-microscopy Of Chikungunya Vlp In Complex With Neutralizing Antibody Fab M242
-
 1S5H B 1,50,7.5,0.0462,2.0,6.0,Potassium Channel Kcsa-Fab Complex T75c Mutant In K+
 1L5G A 5,72,8.7,0.0036,2.0,2.8,Crystal Structure Of The Extracellular Segment Of Integrin Avb3 In Complex With An Arg-Gly-Asp Ligand
 3J8F 7 1,48,7.9,0.0057,2.0,4.2,Cryo-em Reconstruction Of Poliovirus-receptor Complex

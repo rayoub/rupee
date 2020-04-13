@@ -1,4 +1,3 @@
-
 3MKQ C 7,20,5.1,0.0092,0.8,10.0,Crystal Structure Of Yeast AlphaBETAPRIME-Cop Subcomplex Of The Copi Vesicular Coatÿ
 4Z8L D 3,19,5.0,0.0132,0.9,0.0,Crystal Structure Of Dcaf1/siv-mnd Vpx/mnd Samhd1 Ntd Ternary Complex
 4U1F A 2,21,4.8,0.0362,0.9,9.5,Crystal Structure Of Middle Domain Of Eukaryotic Translation Initiation Factor Eif3b
@@ -59,7 +58,6 @@
 4YD8 B 2,23,5.2,0.0022,1.2,17.4,Bardet-biedl Syndrome 9 Protein (aa1-407), Homo Sapiens
 4G1F C 4,21,4.9,0.0175,1.2,4.8,Crystal Structure Of Human Dipeptidyl Peptidase Iv In Complex With A Pyridopyrimidinedione Analogue
 3HXR A 6,24,4.7,0.0447,1.2,16.7,Nucleoporin Nup120 From S.Cerevisiae (Aa 1-757)ÿ
-
 3SWW A 4,21,5.0,0.0157,1.2,4.8,Crystal Structure Of Human Dpp-Iv In Complex With Sa-(+)-3- (Aminomethyl)-4-(2,4-Dichlorophenyl)-6-(2-Methoxyphenyl)- 2-Methyl- 5h-Pyrrolo[3,4-B]pyridin-7(6h)-Oneÿ
 1RTI A 2,19,5.2,0.0049,1.2,10.5,Hiv-1 Reverse Transcriptase Mol_id: 1; Molecule: Hiv-1 Reverse Transcriptase; Chain: A, B; Synonym: Hiv-1 Rt; Ec: 2.7.7.49; Engineered: Yes
 1MDA H 5,22,4.8,0.0336,1.2,13.6,Crystal Structure Of An Electron-Transfer Complex Between Methylamine Dehydrogenase And Amicyanin
@@ -120,7 +118,6 @@
 1PFQ B 4,21,4.8,0.0280,1.2,4.8,Crystal Structure Of Human Apo Dipeptidyl Peptidase Iv Cd26
 2ONC D 4,20,5.0,0.0161,1.2,5.0,Crystal Structure Of Human Dpp-4
 3G0D A 4,20,4.9,0.0202,1.2,5.0,Crystal Structure Of Dipeptidyl Peptidase Iv In Complex With A Pyrimidinedione Inhibitor 2ÿ
-
 4XFV A 4,19,5.2,0.0022,1.2,5.3,Crystal Structure Of Elp2
 2G5T A 4,21,4.9,0.0248,1.2,4.8,Crystal Structure Of Human Dipeptidyl Peptidase Iv (Dppiv) Complexed With Cyanopyrrolidine (C5-Pro-Pro) Inhibitor 21ag
 3KNR D 2,30,5.2,0.0179,1.2,6.7,Bacillus Cereus Metallo-Beta-Lactamase Cys221asp Mutant, 1 Mm Zn(Ii)ÿ

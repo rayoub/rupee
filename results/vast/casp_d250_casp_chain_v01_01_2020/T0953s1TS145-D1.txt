@@ -1,4 +1,3 @@
-
 4UOP A 1,27,6.7,0.0026,1.2,3.7,Crystal Structure Of The Lipoteichoic Acid Synthase Ltap From Listeria Monocytogenes
 4UOP B 1,30,6.7,0.0026,1.2,3.3,Crystal Structure Of The Lipoteichoic Acid Synthase Ltap From Listeria Monocytogenes
 3S29 F 1,24,6.2,0.0300,1.2,4.2,The Crystal Structure Of Sucrose Synthase-1 From Arabidopsis Thaliana And Its Functional Implicationsÿ
@@ -59,7 +58,6 @@
 1GOV B ,22,6.1,0.0471,1.5,0.0,Ribonuclease Bi(G Specific Endonuclease) Complexed With Sulfate Ions
 1X1Y A ,22,6.1,0.0444,1.5,0.0,Water-Mediate Interaction At Aprotein-Protein Interface
 1GOY B ,22,6.1,0.0441,1.5,0.0,Hydrolase(Endoribonuclease)ribonuclease Bi (G Specific Endonuclease) (E.C.3.1.27.-) Complexed With Guanosine-3'-Phosphate (3'-Gmp)
-
 1BRK A ,21,6.3,0.0248,1.5,0.0,Barnase Mutant With Ile 96 Replaced By Ala
 1GOV A ,22,6.1,0.0454,1.5,0.0,Ribonuclease Bi(G Specific Endonuclease) Complexed With Sulfate Ions
 1Q87 A ,25,6.5,0.0087,1.5,4.0,Crystal Structure Of The C-Domain Of The T.Vaginalis Inr Binding Protein, Ibp39 (Tetragonal Form)
@@ -120,7 +118,6 @@
 1Y1V B 3,33,6.6,0.0042,1.6,6.1,Refined Rna Polymerase Ii-Tfiis Complex
 4LAD A ,34,6.8,0.0227,1.6,0.0,Crystal Structure Of The Ube2g2:ring-g2br Complex
 3I4M B 3,33,6.1,0.0475,1.6,6.1,8-Oxoguanine Containing Rna Polymerase Ii Elongation Complex Dÿ
-
 3PO3 B 3,33,6.2,0.0305,1.6,6.1,Arrested Rna Polymerase Ii Reactivation Intermediateÿ
 3HOY B 3,33,6.7,0.0024,1.6,6.1,Complete Rna Polymerase Ii Elongation Complex Viÿ
 3H8K A ,31,7.0,0.0060,1.6,0.0,Crystal Structure Of Ube2g2 Complxed With The G2br Domain Of Gp78 At 1.8-A Resolutionÿ

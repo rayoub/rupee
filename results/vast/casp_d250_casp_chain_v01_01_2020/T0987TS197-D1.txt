@@ -1,4 +1,3 @@
-
 1ODU A 2,35,7.8,0.0372,1.5,14.3,Crystal Structure Of Thermotoga Maritima Alpha-Fucosidase In Complex With Fucose
 4QEX L 2,47,7.8,0.0369,1.5,10.6,Crystal Structure Of Pfeba-175 Rii In Complex With A Fab Fragment From Inhibitory Antibody R217
 1IGI L 2,48,8.2,0.0139,1.6,8.3,26-10 Fab:digoxin Complex-Affinity And Specificity Due To Surface Complementarity
@@ -59,7 +58,6 @@
 4F9P C 1,57,8.8,0.0104,1.9,14.0,Crystal Structure Of The Human Btn3a1 Ectodomain In Complex With The 103.2 Single Chain Antibody
 1S78 C 2,40,7.7,0.0099,1.9,12.5,Insights Into Erbb Signaling From The Structure Of The Erbb2-Pertuzumab Complex
 4HK0 A 1,58,9.0,0.0160,1.9,6.9,Uca Fab (Unbound) From Ch65-Ch67 Lineage
-
 4IOF D 1,52,8.9,0.0269,1.9,7.7,Crystal Structure Analysis Of Fab-bound Human Insulin Degrading Enzyme (ide)
 1T3F B 1,56,8.4,0.0453,1.9,8.9,Three Dimensional Structure Of A Humanized Anti-Ifn-Gamma Fab (Huzaf) In P21 21 21 Space Group
 4M93 C 2,52,8.7,0.0024,1.9,7.7,Unliganded 2 Crystal Structure Of S25-26 Fab
@@ -120,7 +118,6 @@
 3LEX H 1,60,9.0,0.0179,2.0,5.0,2f5 Epitope Scaffold Elicited Anti-Hiv-1 Monoclonal Antibody 11f10 In Complex With Hiv-1 Gp41ÿ
 4PP2 A 1,57,9.0,0.0179,2.0,8.8,The Crystal Structure Of Der P 1 Allergen Complexed With Fab Fragment Of Mab 10b9
 3NTC H 1,60,8.4,0.0399,2.0,10.0,Crystal Structure Of Kd-247 Fab, An Anti-V3 Antibody That Inhibits Hiv-1 Entryÿ
-
 4PP2 A 1,57,9.0,0.0179,2.0,8.8,The Crystal Structure Of Der P 1 Allergen Complexed With Fab Fragment Of Mab 10b9
 4DKF L 1,58,9.5,0.0090,2.0,8.6,Crystal Structure Of Human Interleukin-34 Bound To Fab2ÿ
 4XWO I 1,59,8.9,0.0081,2.0,8.5,Structure Of Get3 Bound To The Transmembrane Domain Of Sec22

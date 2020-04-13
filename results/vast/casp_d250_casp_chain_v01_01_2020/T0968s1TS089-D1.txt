@@ -1,4 +1,3 @@
-
 1S1X A 2,19,5.3,0.0002,0.7,5.3,Crystal Structure Of V108i Mutant Hiv-1 Reverse Transcriptase In Complex With Nevirapine
 1JLC A 2,19,5.2,0.0004,0.7,5.3,Crystal Structure Of Y181c Mutant Hiv-1 Reverse Transcriptase In Complex With Pett-2
 2D11 A 3,21,5.2,0.0329,0.8,4.8,Crystal Structure Of The Radixin Ferm Domain Complexed With The Nherf-2 C-Terminal Tail Peptide
@@ -59,7 +58,6 @@
 3PQH B 2,17,5.2,0.0008,0.9,5.9,Crystal Structure Of The C-Terminal Fragment Of The Bacteriophage Phi92 Membrane-Piercing Protein Gp138ÿ
 4XAV A 4,21,5.2,0.0036,0.9,9.5,Crystal Structure Of Olfactomedin Domain From Gliomedin
 2N19 A ,31,5.2,0.0066,0.9,0.0,Stil Binding To The Polo-box Domain 3 Of Plk4 Regulates Centriole Duplication
-
 2N19 A 1,31,5.2,0.0066,0.9,0.0,Stil Binding To The Polo-box Domain 3 Of Plk4 Regulates Centriole Duplication
 3TR5 B 2,21,5.2,0.0006,0.9,4.8,Structure Of A Peptide Chain Release Factor 3 (Prfc) From Coxiella Burnetiiÿ
 2QKY C 3,23,5.1,0.0182,0.9,17.4,Complex Structure Of Dipeptidyl Peptidase Iv And A Oxadiazolyl Ketone
@@ -120,7 +118,6 @@
 1R9M A 4,22,4.8,0.0059,0.9,4.5,Crystal Structure Of Human Dipeptidyl Peptidase Iv At 2.1 Ang. Resolution
 2OAG C 4,22,4.8,0.0079,0.9,4.5,Crystal Structure Of Human Dipeptidyl Peptidase Iv (Dppiv) With Pyrrolidine-Constrained Phenethylamine 29g
 2OAG D 4,22,4.8,0.0078,0.9,4.5,Crystal Structure Of Human Dipeptidyl Peptidase Iv (Dppiv) With Pyrrolidine-Constrained Phenethylamine 29g
-
 2QKY A 4,22,4.9,0.0047,0.9,4.5,Complex Structure Of Dipeptidyl Peptidase Iv And A Oxadiazolyl Ketone
 1DTT A 2,20,5.2,0.0004,0.9,5.0,Crystal Structure Of Hiv-1 Reverse Transcriptase In Complex With Pett-2 (Pett130a94)
 4S05 A 2,19,5.2,0.0006,0.9,10.5,Crystal Structure Of Klebsiella Pneumoniae Pmra In Complex With Pmra Box Dna

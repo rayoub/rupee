@@ -1,4 +1,3 @@
-
 2ZVS B 1,16,5.2,0.0308,1.4,0.0,Crystal Structure Of The 2[4fe-4s] Ferredoxin From Escherichia Coliÿ
 3J16 G 1,28,6.4,0.0421,1.6,10.7,Models Of Ribosome-Bound Dom34p And Rli1p And Their Ribosomal Binding Partnersÿ
 3RI5 F 2,31,7.3,0.0149,1.8,0.0,C. Elegans Glutamate-Gated Chloride Channel (Glucl) In Complex With Fab, Ivermectin And Picrotoxinÿ
@@ -59,7 +58,6 @@
 3B83 F ,56,9.0,0.0001,2.1,3.6,Tba
 3QWR D ,43,7.1,0.0095,2.1,9.3,Crystal Structure Of Il-23 In Complex With An Adnectinÿ
 4NHH G 1,56,8.2,0.0227,2.1,1.8,Structure Of 2g12 Igg Dimer
-
 4S3R A 2,36,6.8,0.0400,2.1,2.8,Amylomaltase Malq From Escherichia Coli In Complex With The Pseudo- Heptasaccharide Acarviosine-glucose-acarbose
 4NEY A 2,36,6.4,0.0328,2.1,5.6,Crystal Structure Of An Engineered Protein With Ferredoxin Fold, Northeast Structural Genomics Consortium (nesg) Target Or277
 2QKI D 2,49,7.2,0.0318,2.1,8.2,Human C3c In Complex With The Inhibitor Compstatin
@@ -120,7 +118,6 @@
 2YA1 A 3,32,7.3,0.0155,2.2,3.1,Product Complex Of A Multi-Modular Glycogen-Degrading Pneumococcal Virulence Factor Spuaя
 4KUC D 1,55,8.2,0.0485,2.2,5.5,Crystal Structure Of Ricin-a Chain In Complex With The Antibody 6c2
 2BOI B ,40,8.3,0.0480,2.2,5.0,1.1a Structure Of Chromobacterium Violaceum Lectin Cv2l In Complex With Alpha-Methyl-Fucoside
-
 3NME B 2,41,7.5,0.0321,2.2,4.9,Structure Of A Plant Phosphataseÿ
 3SDX H 1,55,8.6,0.0183,2.2,10.9,Crystal Structure Of Human Autoreactive-Valpha24 Nkt Tcr In Complex With Cd1d-Beta-Galactosylceramideÿ
 3RFZ B 3,49,7.1,0.0108,2.2,12.2,Crystal Structure Of The Fimd Usher Bound To Its Cognate Fimc:fimh Substrateÿ

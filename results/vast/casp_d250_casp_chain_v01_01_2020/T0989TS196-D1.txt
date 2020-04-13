@@ -1,4 +1,3 @@
-
 3J2T A 13,20,5.2,0.0066,0.6,5.0,An Improved Model Of The Human Apoptosome
 3J2T B 13,20,5.2,0.0066,0.6,5.0,An Improved Model Of The Human Apoptosome
 3J2T C 13,20,5.2,0.0066,0.6,5.0,An Improved Model Of The Human Apoptosome
@@ -59,7 +58,6 @@
 4TQO E 3,23,5.0,0.0385,1.0,4.3,The Crystal Structure Of Methanol Dehydrogenase From Methylococcus Capsulatus (bath)
 1RTI A 2,19,5.2,0.0225,1.0,15.8,Hiv-1 Reverse Transcriptase Mol_id: 1; Molecule: Hiv-1 Reverse Transcriptase; Chain: A, B; Synonym: Hiv-1 Rt; Ec: 2.7.7.49; Engineered: Yes
 3IT5 B 2,18,5.2,0.0140,1.0,0.0,Crystal Structure Of The Lasa Virulence Factor From Pseudomonas Aeruginosaÿ
-
 5BQO C 1,15,3.3,0.0303,1.0,6.7,Hypoxanthine-guanine-xanthine Phosphoribosyltransferase (hgxprt) From Sulfolobus Solfataricus With Sulfate Bound In The 5-phosphoribosyl Binding Site
 2ECF A 2,27,5.2,0.0113,1.0,11.1,Crystal Structure Of Dipeptidyl Aminopeptidase Iv From Stenotrophomonas Maltophilia
 4CC9 A 4,22,5.2,0.0085,1.0,9.1,Crystal Structure Of Human Samhd1 (amino Acid Residues 582- 626) Bound To Vpx Isolated From Sooty Mangabey And Human Dcaf1 (amino Acid Residues 1058-1396)
@@ -120,7 +118,6 @@
 1TL2 A 2,23,5.2,0.0066,1.1,0.0,Tachylectin-2 From Tachypleus Tridentatus (Japanese Horseshoe Crab)
 4PXW B 4,21,5.2,0.0115,1.1,0.0,Crystal Structure Of Human Dcaf1 Wd40 Repeats (q1250l)
 2DCM A 1,25,5.2,0.0066,1.1,8.0,The Crystal Structure Of S603a Mutated Prolyl Tripeptidyl Aminopeptidase Complexed With Substrate
-
 2AJB C 2,25,5.2,0.0066,1.1,0.0,Porcine Dipeptidyl Peptidase Iv (Cd26) In Complex With The Tripeptide Tert-Butyl-Gly-L-Pro-L-Ile (Tbu-Gpi)
 4MH1 B 4,24,5.2,0.0107,1.1,20.8,Crystal Structure And Functional Studies Of Quinoprotein L-sorbose Dehydrogenase From Ketogulonicigenium Vulgare Y25
 3WJ9 B 2,25,5.2,0.0135,1.1,4.0,Crystal Structure Of The Eukaryotic Initiation Factor

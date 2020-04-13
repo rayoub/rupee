@@ -1,4 +1,3 @@
-
 2YX1 A 2,35,7.0,10e-4.3,1.4,8.6,Crystal Structure Of M.Jannaschii Trna M1g37 Methyltransferase
 3AY0 B 2,36,7.0,10e-4.3,1.4,8.3,Crystal Structure Of Methanocaldococcus Jannaschii Trm5 In Complex With Adenosineя
 2YX1 B 2,36,7.0,10e-4.3,1.5,8.3,Crystal Structure Of M.Jannaschii Trna M1g37 Methyltransferase
@@ -59,7 +58,6 @@
 3AJV C 2,56,7.2,0.0206,2.6,14.3,Splicing Endonuclease From Aeropyrum Pernixя
 3P1Z G 2,55,7.3,0.0159,2.6,14.5,Crystal Structure Of The Aperopyrum Pernix Rna Splicing Endonucleaseя
 3R3P B ,38,7.6,0.0417,2.6,10.5,Homing Endonuclease I-Bth0305i Catalytic Domainя
-
 4R5Q A ,132,16.0,10e-10.7,2.6,17.4,Crystal Structure And Nuclease Activity Of The Crispr-associated Cas4 Protein Pcal_0546 From Pyrobaculum Calidifontis Containing A [2fe-2s] Cluster
 3LZC B 2,54,7.4,0.0445,2.6,3.7,Crystal Structure Of Dph2 From Pyrococcus Horikoshiiÿ
 3LZD B 2,53,7.4,0.0459,2.7,3.8,Crystal Structure Of Dph2 From Pyrococcus Horikoshii With 4fe-4s Clusterÿ

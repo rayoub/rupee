@@ -1,4 +1,3 @@
-
 3PQH B 2,16,5.1,0.0420,0.7,0.0,Crystal Structure Of The C-Terminal Fragment Of The Bacteriophage Phi92 Membrane-Piercing Protein Gp138ÿ
 3PQI A 3,16,5.2,0.0154,0.8,0.0,Crystal Structure Of The Bacteriophage Phi92 Membrane-Piercing Protein Gp138ÿ
 4KNY B 2,16,5.2,0.0154,0.8,0.0,Crystal Structure Of The Response Regulator Kdpe Complexed To Dna In An Active-like Conformation
@@ -59,7 +58,6 @@
 3CWB R 3,21,5.1,0.0442,1.1,4.8,Chicken Cytochrome Bc1 Complex Inhibited By An Iodinated Analogue Of The Polyketide Crocacin-D
 4NF9 B 3,31,5.1,0.0472,1.1,9.7,Structure Of The Knl1/nsl1 Complex
 1JY4 B ,27,5.1,0.0372,1.1,3.7,B4dimer: A De Novo Designed Eight-Stranded Beta-Sheet Assembled Using A Disulfide Bond
-
 3GRE A 2,29,5.2,0.0154,1.1,3.4,Crystal Structure Of Saccharomyces Cerevisiae Vps15 Wd Repeat Domainÿ
 4NHJ B 1,20,5.1,0.0471,1.1,0.0,Crystal Structure Of Klebsiella Pneumoniae Rsta Dna-binding Domain In Complex With Rsta Box
 4RBN C 1,30,6.8,0.0310,1.1,6.7,The Crystal Structure Of Nitrosomonas Europaea Sucrose Synthase: Insights Into The Evolutionary Origin Of Sucrose Metabolism In Prokaryotes
@@ -120,7 +118,6 @@
 3H1L R 3,20,5.1,0.0412,1.2,5.0,Chicken Cytochrome Bc1 Complex With Ascochlorin Bound At Qo And Qi Sitesÿ
 2JZA A 2,17,5.2,0.0303,1.2,5.9,Solution Nmr Structure Of Nitrite Reductase [nad(P)h] Small Subunit From Erwinia Carotovora. Northeast Structural Genomics Consortium Target Ewr120
 4WXQ A 2,26,5.1,0.0492,1.2,3.8,Crystal Structure Of The Myocilin Olfactomedin Domain
-
 2WOF A 2,33,6.5,0.0015,1.2,6.1,Edta Treated E. Coli Copper Amine Oxidaseÿ
 1DYU A 2,33,6.5,0.0015,1.2,6.1,The Active Site Base Controls Cofactor Reactivity In Escherichia Coli Amine Oxidase: X-Ray Crystallographic Studies With Mutational Variants
 1SPU A 2,33,6.6,0.0007,1.2,6.1,Structure Of Oxidoreductase

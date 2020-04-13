@@ -1,4 +1,3 @@
-
 4CYV D 2,26,5.0,0.0166,1.2,7.7,Structure Of The A_mallard_sweden_51_2002 H10 Avian Haemmaglutinin
 4I43 B 10,26,3.8,0.0333,1.3,11.5,Crystal Structure Of Prp8:aar2 Complex
 4CZ0 F 2,33,5.2,0.0023,1.4,6.1,Structure Of The A_mallard_sweden_51_2002 H10 Avian Haemmaglutinin In Complex With Avian Receptor Analog Su-3sln
@@ -59,7 +58,6 @@
 4KWM F 2,42,5.2,0.0052,1.9,9.5,Structure Of A/anhui/5/2005 H5 Ha
 2OFH X ,49,7.0,0.0027,1.9,10.2,Solution Structure Of The N-Terminal Domain Of The Zinc(Ii) Atpase Ziaa In Its Apo Form
 3TM4 B 1,50,8.0,0.0034,1.9,2.0,Crystal Structure Of Trm14 From Pyrococcus Furiosus In Complex With S- Adenosylmethionineя
-
 4NRK D ,40,6.8,0.0358,1.9,7.5,Structure Of Hemagglutinin With F95y Mutation Of Influenza Virus B/lee/40 Complex With Lstc
 4NRL F ,40,6.8,0.0324,1.9,7.5,Structure Of Hemagglutinin With F95y Mutation Of Influenza Virus B/lee/40
 2ROG A ,50,7.8,0.0002,1.9,12.0,Solution Structure Of Thermus Thermophilus Hb8 Ttha1718 Protein In Living E. Coli Cellsÿ
@@ -120,7 +118,6 @@
 2Y9K C 2,41,5.7,0.0427,2.0,9.8,Three-Dimensional Model Of Salmonella's Needle Complex At Subnanometer Resolutionÿ
 2Y9K D 2,41,5.7,0.0427,2.0,9.8,Three-Dimensional Model Of Salmonella's Needle Complex At Subnanometer Resolutionÿ
 2Y9K E 2,41,5.7,0.0427,2.0,9.8,Three-Dimensional Model Of Salmonella's Needle Complex At Subnanometer Resolutionÿ
-
 2Y9K F 2,41,5.7,0.0427,2.0,9.8,Three-Dimensional Model Of Salmonella's Needle Complex At Subnanometer Resolutionÿ
 2Y9K G 2,41,5.7,0.0427,2.0,9.8,Three-Dimensional Model Of Salmonella's Needle Complex At Subnanometer Resolutionÿ
 2Y9K H 2,41,5.7,0.0427,2.0,9.8,Three-Dimensional Model Of Salmonella's Needle Complex At Subnanometer Resolutionÿ

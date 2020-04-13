@@ -1,4 +1,3 @@
-
 4TQO H 5,17,5.0,0.0395,0.9,0.0,The Crystal Structure Of Methanol Dehydrogenase From Methylococcus Capsulatus (bath)
 2AQC A ,16,5.1,0.0234,0.9,31.2,Nmr Structural Analysis Of Archaeal Nop10ÿ
 3Q7N A 3,17,5.0,0.0309,0.9,0.0,The Crystal Structure Of Bamb From The Bam Complex In Spacegroup P212121ÿ
@@ -59,7 +58,6 @@
 4AK6 B 3,23,5.1,0.0234,1.4,4.3,Bpgh117_h302e Mutant Glycoside Hydrolaseÿ
 4ID2 B 2,31,5.5,0.0158,1.4,12.9,Crystal Structure Of A Hypothetical Protein (bacova_05496) From Bacteroides Ovatus Atcc 8483 At 2.15 A Resolution
 4LZD A 3,21,5.0,0.0500,1.4,9.5,Human Dna Polymerase Mu- Apoenzyme
-
 2RET E ,22,5.1,0.0351,1.4,9.1,The Crystal Structure Of A Binary Complex Of Two Pseudopilins: Epsi And Epsj From The Type 2 Secretion System Of Vibrio Vulnificus
 4AK5 B 3,23,5.1,0.0243,1.4,4.3,Native Crystal Structure Of Bpgh117ÿ
 1GYE B 2,30,5.0,0.0467,1.4,6.7,Structure Of Cellvibrio Cellulosa Alpha-L-Arabinanase Complexed With Arabinohexaose
@@ -120,7 +118,6 @@
 5CAW C 3,24,6.9,0.0070,1.6,16.7,Structure Of Pediculus Humanus Parkin Bound To Phospho-ubiquitin
 4NBG E ,33,7.2,0.0272,1.6,3.0,Oxygenase With Gln282 Replaced By Tyr And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
 2EFU E 3,20,5.1,0.0252,1.6,10.0,The Crystal Structure Of D-Amino Acid Amidase From Ochrobactrum Anthropi Sv3 Complexed With L-Phenylalanineÿ
-
 3DQY A ,34,7.7,0.0064,1.6,8.8,Crystal Structure Of Toluene 2,3-Dioxygenase Ferredoxinя
 4NB9 F ,33,7.3,0.0250,1.6,3.0,Oxygenase With Ile262 Replaced By Val And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
 4PXW B 4,19,5.1,0.0175,1.6,5.3,Crystal Structure Of Human Dcaf1 Wd40 Repeats (q1250l)

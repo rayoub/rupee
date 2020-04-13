@@ -1,4 +1,3 @@
-
 2W5S A 1,17,5.1,0.0065,0.9,17.6,Structure-Based Mechanism Of Lipoteichoic Acid Synthesis By Staphylococcus Aureus Ltasÿ
 2W5Q A 1,17,5.1,0.0375,1.0,17.6,Structure-Based Mechanism Of Lipoteichoic Acid Synthesis By Staphylococcus Aureus Ltasÿ
 3PQH A 2,16,5.2,0.0024,1.0,6.2,Crystal Structure Of The C-Terminal Fragment Of The Bacteriophage Phi92 Membrane-Piercing Protein Gp138ÿ
@@ -59,7 +58,6 @@
 3BDM W ,34,6.5,0.0310,1.4,0.0,Yeast 20s Proteasome:glidobactin A-Complex
 3TDD I ,34,6.5,0.0395,1.4,0.0,Crystal Structure Of Yeast Cp In Complex With Belactosin Cÿ
 3BDM I ,34,6.5,0.0327,1.4,0.0,Yeast 20s Proteasome:glidobactin A-Complex
-
 5AHJ W ,35,6.7,0.0125,1.4,0.0,Yeast 20s Proteasome In Complex With Macyranone A
 4QWL W ,35,6.7,0.0146,1.4,0.0,Ycp Beta5-a50v Mutant In Complex With Carfilzomib
 3WXR X ,32,6.5,0.0251,1.4,0.0,Yeast 20s Proteasome With A Mutation Of Alpha7 Subunit
@@ -120,7 +118,6 @@
 3FVH A 1,34,6.6,0.0002,1.4,5.9,Polo-Like Kinase 1 Polo Box Domain In Complex With Ac- Lhspta-Nh2 Peptideÿ
 1YA7 A ,32,6.4,0.0315,1.4,9.4,Implications For Interactions Of Proteasome With Pan And Pa700 From The 1.9 A Structure Of A Proteasome-11s Activator Complex
 3UNB R ,33,6.3,0.0453,1.4,3.0,Mouse Constitutive 20s Proteasome In Complex With Pr-957ÿ
-
 3UNB t ,33,6.3,0.0424,1.4,3.0,Mouse Constitutive 20s Proteasome In Complex With Pr-957ÿ
 2ZWE B ,16,5.1,0.0324,1.4,0.0,Crystal Structure Of The Copper-Bound Tyrosinase In Complex With A Caddie Protein From Streptomyces Castaneoglobisporus Obtained By Soaking The Deoxy-Form Crystal In Dioxygen- Saturated Solution For 40 Minutesÿ
 3K1L A 3,20,4.7,0.0499,1.4,10.0,E3 Ligaseÿ

@@ -1,4 +1,3 @@
-
 4WED A 3,21,5.2,0.0207,0.9,4.8,Crystal Structure Of Abc Transporter Substrate-binding Protein From Sinorhizobium Meliloti
 1HSJ B 3,30,5.2,0.0445,1.0,13.3,Sarr Mbp Fusion Structure
 3IR7 B 2,13,3.5,0.0318,1.0,15.4,Crystal Structure Of Narghi Mutant Narg-R94sя
@@ -59,7 +58,6 @@
 3WX6 B ,61,7.9,0.0208,1.6,9.8,Crystal Structure Of Type Six Secretion System Protein
 3LB6 C 3,16,5.2,0.0308,1.6,6.2,The Structure Of Il-13 In Complex With Il-13ralpha2я
 3VR2 B 1,35,7.2,0.0264,1.6,11.4,Crystal Structure Of Nucleotide-free A3b3 Complex From Enterococcus Hirae V-atpase [ea3b3]
-
 3VR2 A 1,35,7.2,0.0321,1.6,11.4,Crystal Structure Of Nucleotide-free A3b3 Complex From Enterococcus Hirae V-atpase [ea3b3]
 2L8E A ,13,3.5,0.0318,1.6,15.4,Solution Nmr Structure Of Fcs Domain Of Human Polyhomeotic Homolog 1 (Hph1)ÿ
 1KQ2 K ,29,6.4,0.0377,1.6,10.3,Crystal Structure Of An Hfq-Rna Complexÿ
@@ -120,7 +118,6 @@
 3VR6 C 1,40,7.4,0.0178,1.9,7.5,Crystal Structure Of Amp-pnp Bound Enterococcus Hirae V1-atpase [bv1]
 2BR2 M 3,35,6.4,0.0037,1.9,5.7,Rnase Ph Core Of The Archaeal Exosome
 2BR2 O 3,35,6.4,0.0038,1.9,5.7,Rnase Ph Core Of The Archaeal Exosome
-
 2C39 S 3,35,6.4,0.0041,1.9,5.7,Rnase Ph Core Of The Archaeal Exosome In Complex With Adpÿ
 2C39 Q 3,35,6.4,0.0039,1.9,5.7,Rnase Ph Core Of The Archaeal Exosome In Complex With Adpÿ
 2BR2 W 3,35,6.4,0.0036,1.9,5.7,Rnase Ph Core Of The Archaeal Exosome

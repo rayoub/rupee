@@ -1,4 +1,3 @@
-
 2J57 J 2,37,6.2,0.0049,1.0,18.9,X-Ray Reduced Paraccocus Denitrificans Methylamine Dehydrogenase N-Quinol In Complex With Amicyanin
 2IUV B 1,36,7.8,0.0179,1.1,8.3,Crystal Structure Of N-Quinol Form Of Aromatic Amine Dehydrogenase (Aadh) From Alcaligenes Faecalis, Form B
 4HXG B 2,41,6.0,0.0100,1.1,7.3,Pyrococcus Horikoshii Acylaminoacyl Peptidase (orthorhombic Crystal Form)
@@ -59,7 +58,6 @@
 1NCB N 2,30,5.9,0.0138,1.3,0.0,N9 Neuraminidase-Nc41 (E.C.3.2.1.18) Mutant With Asn 329 Replaced By Asp (N329d) Complex With Fab
 1PU8 B 1,30,4.0,0.0430,1.3,13.3,Crystal Structure Of H.Pylori 3-Methyladenine Dna Glycosylase (Magiii) Bound To 1,N6-Ethenoadenine
 4FAV F 2,38,6.3,0.0037,1.3,18.4,Crystal Structure Of Wt Maug In Complex With Pre-methylamine Dehydrogenase Aged 50 Days
-
 2AGZ A 1,38,7.8,0.0191,1.3,13.2,Crystal Structure Of The Carbinolamine Intermediate In The Reductive Half-Reaction Of Aromatic Amine Dehydrogenase (Aadh) With Tryptamine. F222 Form
 1NCD N 3,32,5.7,0.0260,1.3,0.0,N9 Neuraminidase-Nc41 (E.C.3.2.1.18) Complex With Fab
 3EGJ B 3,21,5.1,0.0451,1.3,0.0,N-Acetylglucosamine-6-Phosphate Deacetylase From Vibrio Cholerae
@@ -120,7 +118,6 @@
 4YON A 2,41,7.2,0.0497,1.5,4.9,P-rex1:rac1 Complex
 3TIC B 3,30,5.7,0.0236,1.6,0.0,Crystal Structure Of 1957 Pandemic H2n2 Neuraminidase Complexed With Zanamivirя
 3TIC D 3,30,5.7,0.0234,1.6,0.0,Crystal Structure Of 1957 Pandemic H2n2 Neuraminidase Complexed With Zanamivirя
-
 3KXE B ,41,7.0,0.0286,1.6,9.8,A Conserved Mode Of Protein Recognition And Binding In A Pard-Pare Toxin-Antitoxin Complexÿ
 4GUU A 1,23,3.8,0.0275,1.6,8.7,Crystal Structure Of Lsd2-npac With Tranylcypromine
 3PUF O ,30,6.6,0.0259,1.7,3.3,Crystal Structure Of Human Rnase H2 Complexÿ

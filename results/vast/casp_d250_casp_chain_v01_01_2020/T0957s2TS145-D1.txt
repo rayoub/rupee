@@ -1,4 +1,3 @@
-
 3IYV A 20,31,5.5,0.0451,1.2,6.5,Clathrin D6 Coatÿ
 3IYV D 20,31,5.5,0.0452,1.2,6.5,Clathrin D6 Coatÿ
 3IYV G 21,31,5.5,0.0452,1.2,6.5,Clathrin D6 Coatÿ
@@ -59,7 +58,6 @@
 4OAU C 1,37,5.6,0.0061,1.6,10.8,Complete Human Rnase L In Complex With Biological Activators
 2XPL A 1,51,5.5,0.0487,1.6,15.7,Crystal Structure Of Iws1(Spn1) Conserved Domain From Encephalitozoon Cuniculiÿ
 3T9K A 2,43,5.6,0.0415,1.6,7.0,Crystal Structure Of Acap1 C-Portion Mutant S554d Fused With Integrin Beta1 Peptide
-
 2DZO C 2,30,5.5,0.0076,1.6,3.3,Crystal Structure Analysis Of Yeast Nas6p Complexed With The Proteasome Subunit, Rpt3
 2DZN E 2,30,5.4,0.0125,1.6,3.3,Crystal Structure Analysis Of Yeast Nas6p Complexed With The Proteasome Subunit, Rpt3
 4G8K B 1,40,5.4,0.0098,1.6,10.0,Intact Sensor Domain Of Human Rnase L In The Inactive Signaling State
@@ -120,7 +118,6 @@
 3FUJ A 5,54,5.4,0.0132,1.7,5.6,Leukotriene A4 Hydrolase In Complex With 5-[2-(1h-Pyrrol-1- Yl)ethoxy]-1h-Indoleÿ
 1HS6 A 5,54,5.4,0.0126,1.7,5.6,Structure Of Leukotriene A4 Hydrolase Complexed With Bestatin.
 2DZO A 2,31,5.6,0.0348,1.7,19.4,Crystal Structure Analysis Of Yeast Nas6p Complexed With The Proteasome Subunit, Rpt3
-
 3FU5 A 5,54,5.3,0.0142,1.7,5.6,Leukotriene A4 Hydrolase In Complex With (5-Thiophen-2- Ylthiophen-2-Yl)methylamineÿ
 3FTS A 5,54,5.4,0.0129,1.7,5.6,Leukotriene A4 Hydrolase In Complex With Resveratrolÿ
 3FTZ A 5,54,5.3,0.0138,1.7,5.6,Leukotriene A4 Hydrolase In Complex With Fragment 2- (Pyridin-3-Ylmethoxy)anilineÿ

@@ -1,4 +1,3 @@
-
 4V3D C 1,17,5.1,0.0328,0.8,11.8,The Cidra Domain From Hb3var03 Pfemp1 Bound To Endothelial Protein C Receptor
 2LK0 A ,16,5.1,0.0235,0.8,25.0,Solution Structure And Binding Studies Of The Ranbp2-Type Zinc Finger Of Rbm5ÿ
 5C9V A 5,17,5.2,0.0066,0.8,11.8,Structure Of Human Parkin G319a
@@ -59,7 +58,6 @@
 1Z1A B 1,19,5.2,0.0161,1.1,21.1,S. Cerevisiae Sir1 Orc-Interaction Domain
 1Q5W A ,18,5.2,0.0066,1.1,27.8,Ubiquitin Recognition By Npl4 Zinc-Fingers
 3Q0T B 2,19,5.2,0.0066,1.1,10.5,Crystal Structure Of Human Dpp-Iv In Complex Withsa-(+)- Methyl2-(3- (Aminomethyl)-4-(2,4-Dichlorophenyl)-2-Methyl- 7-Oxo-5h-Pyrrolo[3,4- B]pyridin-6(7h)-Yl)acetateÿ
-
 1JY4 B ,25,5.0,0.0444,1.1,4.0,B4dimer: A De Novo Designed Eight-Stranded Beta-Sheet Assembled Using A Disulfide Bond
 4DSZ B 2,22,5.2,0.0066,1.1,13.6,Crystal Structure Of Dpp-iv With Compound C2
 1R9M D 2,19,5.0,0.0292,1.1,10.5,Crystal Structure Of Human Dipeptidyl Peptidase Iv At 2.1 Ang. Resolution
@@ -120,7 +118,6 @@
 2GBG B 2,25,5.2,0.0090,1.2,12.0,Rat Dpp-Iv With Alkynyl Cyanopyrrolidine #2
 2BGN D 1,25,5.1,0.0179,1.2,8.0,Hiv-1 Tat Protein Derived N-Terminal Nonapeptide Trp2-Tat (1-9) Bound To The Active Site Of Dipeptidyl Peptidase Iv (Cd26)
 3H3V J 1,27,6.3,0.0010,1.2,11.1,Yeast Rnap Ii Containing Poly(A)-Signal Sequence In The Active Siteя
-
 4PV7 A 2,20,5.1,0.0252,1.2,15.0,Cocrystal Structure Of Dipeptidyl-peptidase 4 With An Indole Scaffold Inhibitor
 3K7A I 1,27,6.1,0.0018,1.2,11.1,Crystal Structure Of An Rna Polymerase Ii-Tfiib Complexÿ
 2OQI A 2,25,5.1,0.0240,1.2,8.0,Human Dipeptidyl Peptidase Iv (Dpp4) With Piperidinone- Constrained Phenethylamine
