@@ -33,7 +33,6 @@ data/ecod/segments.txt
 results/mtm/temp/
 results/ssm/temp/
 results/cathedral/temp/
-results/vast/temp/
 
 # result import files
 results/cathedral/cathedral_results.txt

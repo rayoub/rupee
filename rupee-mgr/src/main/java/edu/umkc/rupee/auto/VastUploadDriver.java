@@ -20,7 +20,7 @@ public class VastUploadDriver extends DriverBase {
         // so they don't remember us
         driver.manage().deleteAllCookies();
 
-        // go to the search page
+        // go to search page
         driver.get("https://www.ncbi.nlm.nih.gov/Structure/VAST/");
         
         // file upload

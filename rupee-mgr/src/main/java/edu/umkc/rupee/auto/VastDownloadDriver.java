@@ -19,11 +19,15 @@ import edu.umkc.rupee.lib.Db;
 
 public class VastDownloadDriver extends DriverBase {
 
-    public String doSearch(String dbId, String request) throws Exception {
+    public String doSearch(String dbId, String link) throws Exception {
         
         StringBuilder builder = new StringBuilder("");
 
-        driver.get(request);
+        // so they don't remember us
+        driver.manage().deleteAllCookies();
+
+        // go to results page
+        driver.get(link);
 
         // wait for page to load
         Thread.sleep(5000);
@@ -145,7 +149,7 @@ public class VastDownloadDriver extends DriverBase {
 
             Pair<String,String> pair = pairs.get(i);
             String dbId = pair.getValue0();
-            String requestId = pair.getValue1();
+            String link = pair.getValue1();
             String fileName = Constants.VAST_PATH + dbId + ".txt";
 
             if (Files.notExists(Paths.get(fileName))) {
@@ -154,14 +158,14 @@ public class VastDownloadDriver extends DriverBase {
 
                 try {
 
-                    String source = doSearch(dbId, requestId);
+                    String results = doSearch(dbId, link);
 
-                    if (!source.isEmpty()) {
+                    if (!results.isEmpty()) {
                         FileOutputStream outputStream = new FileOutputStream(fileName);
                         OutputStreamWriter outputWriter = new OutputStreamWriter(outputStream);
 
                         try (BufferedWriter bufferedWriter = new BufferedWriter(outputWriter);) {
-                               bufferedWriter.write(source);
+                               bufferedWriter.write(results);
                         }
                    
                         processed++;
