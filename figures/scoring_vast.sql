@@ -1,11 +1,11 @@
 
 DO $$
 
-    DECLARE p_benchmark VARCHAR := 'casp_vast_d55'; 
+    DECLARE p_benchmark VARCHAR := 'casp_vast_d65'; 
     DECLARE p_version VARCHAR := 'casp_chain_v01_01_2020'; 
     DECLARE p_search_type VARCHAR := 'rmsd'; 
     DECLARE p_sort_by INTEGER := 2; -- 1 (ce_rmsd), 2 (fatcat_rigid_rmsd)
-    DECLARE p_limit INTEGER := 50; 
+    DECLARE p_limit INTEGER := 100; 
 
 BEGIN
 
