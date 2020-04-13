@@ -1,0 +1,85 @@
+
+1VSZ L 3,14,3.5,0.0053,1.3,7.1,Crystal Structure Of Human Adenovirus At 3.5aÿ
+1UF9 C 2,14,3.5,0.0425,1.4,7.1,Crystal Structure Of Tt1252 From Thermus Thermophilus
+3P5J A 2,12,3.5,0.0372,1.5,0.0,The Structure Of The Human Rnase H2 Complex Defines Key Interaction Interfaces Relevant To Enzyme Function And Human Diseaseÿ
+2GRJ A 2,12,3.5,0.0477,1.6,16.7,Crystal Structure Of Dephospho-Coa Kinase (Ec 2.7.1.24) (Dephosphocoenzyme A Kinase) (Tm1387) From Thermotoga Maritima At 2.60 A Resolution
+2WVS C 2,30,6.4,0.0458,1.7,3.3,Crystal Structure Of An Alpha-L-Fucosidase Gh29 Trapped Covalent Intermediate From Bacteroides Thetaiotaomicron In Complex With 2-Fluoro-Fucosyl Fluoride Using An E288q Mutantÿ
+4JL1 B 2,30,6.6,0.0486,1.8,3.3,Crystal Structure Of A Bacterial Fucosidase With A Multivalent Iminocyclitol Inhibitor
+2EN9 A ,16,3.3,0.0297,1.9,12.5,Solution Structure Of The C2h2 Type Zinc Finger (Region 415- 447) Of Human Zinc Finger Protein 28 Homolog
+3ZX9 C 2,31,6.8,0.0339,1.9,0.0,Cryo-Em Reconstruction Of Native And Expanded Turnip Crinkle Virus
+3ZX8 A 2,30,6.8,0.0337,1.9,0.0,Cryo-Em Reconstruction Of Native And Expanded Turnip Crinkle Virus
+3ZX9 A 2,30,6.8,0.0338,1.9,0.0,Cryo-Em Reconstruction Of Native And Expanded Turnip Crinkle Virus
+3ZX9 B 2,32,6.8,0.0339,2.0,0.0,Cryo-Em Reconstruction Of Native And Expanded Turnip Crinkle Virus
+3ZX8 C 2,31,6.8,0.0339,2.0,0.0,Cryo-Em Reconstruction Of Native And Expanded Turnip Crinkle Virus
+2WVS D 2,30,6.4,0.0464,2.0,10.0,Crystal Structure Of An Alpha-L-Fucosidase Gh29 Trapped Covalent Intermediate From Bacteroides Thetaiotaomicron In Complex With 2-Fluoro-Fucosyl Fluoride Using An E288q Mutantÿ
+2WVV A 2,31,6.4,0.0416,2.0,12.9,Crystal Structure Of An Alpha-L-Fucosidase Gh29 From Bacteroides Thetaiotaomicronÿ
+3U85 A 2,15,4.0,0.0481,2.1,6.7,Crystal Structure Of Human Menin In Complex With Mll1ÿ
+4TZD D ,34,8.2,0.0485,2.1,8.8,Crystal Structure Of Canavalia Maritima Lectin (conm) Complexed With Interleukin - 1 Beta Primer
+3ZX8 B 2,32,6.8,0.0338,2.2,0.0,Cryo-Em Reconstruction Of Native And Expanded Turnip Crinkle Virus
+2F1X A ,34,6.9,0.0234,2.3,2.9,Crystal Structure Of The Traf-Like Domain Of HauspUSP7 Bound To A P53 Peptide
+2N8R A 1,13,3.5,0.0053,2.3,0.0,Productive Complex Between Mmp-12 And Synthetic Triple-helical Collagen, Revealed Through Paramagnetic Nmr
+2F1W A ,35,7.3,0.0056,2.3,2.9,Crystal Structure Of The Traf-Like Domain Of HauspUSP7
+1YZE C ,34,6.4,0.0417,2.3,2.9,Crystal Structure Of The N-Terminal Domain Of Usp7HAUSP
+2FZ0 A ,33,5.9,0.0305,2.4,3.0,Identification Of Yeast R-Snare Nyv1p As A Novel Longin Domain Protein
+1MVF E 1,13,3.5,0.0318,2.4,15.4,Maze Addiction Antidote
+3U1O B 2,31,3.5,0.0477,2.5,12.9,Three Dimensional Structure Of De Novo Designed Cysteine Esterase Ech19, Northeast Structural Genomics Consortium Target Or49ÿ
+3ZXA C 2,33,6.8,0.0338,2.5,3.0,Structure And Assembly Of Turnip Crinkle Virus I. X-Ray Crystallographic Structure Analysis At 3.2 A Resolutionÿ
+4JXI A 2,33,3.5,0.0477,2.5,15.2,Directed Evolution And Rational Design Of A De Novo Designed Esterase Toward Improved Catalysis. Northeast Structural Genomics Consortium (nesg) Target Or184
+2F1X B ,36,6.7,0.0279,2.5,2.8,Crystal Structure Of The Traf-Like Domain Of HauspUSP7 Bound To A P53 Peptide
+4GWQ B 3,27,5.8,0.0477,2.6,11.1,Structure Of The Mediator Head Module From S. Cerevisiae In Complex With The Carboxy-Terminal Domain (Ctd) Of Rna Polymerase Ii Rpb1 Subunit
+2JKT M 1,34,6.5,0.0474,2.6,2.9,Ap2 Clathrin Adaptor Core With Cd4 Dileucine Peptide Rm( Phosphos)eikrllse Q To E Mutant
+2JKT U 1,34,6.5,0.0468,2.6,2.9,Ap2 Clathrin Adaptor Core With Cd4 Dileucine Peptide Rm( Phosphos)eikrllse Q To E Mutant
+2RSI A 2,16,3.2,0.0358,2.6,12.5,Solution Structures Of The Dna-binding Domains Of Immune-related Zinc- Finger Protein Zfat
+3U1O A 2,32,3.5,0.0477,2.6,12.5,Three Dimensional Structure Of De Novo Designed Cysteine Esterase Ech19, Northeast Structural Genomics Consortium Target Or49ÿ
+4UQI M 1,34,6.4,0.0055,2.6,2.9,Ap2 Controls Clathrin Polymerization With A Membrane- Activated Switch
+2EPU A ,13,3.3,0.0254,2.6,7.7,Solution Structure Of The Secound C2h2 Type Zinc Finger Domain Of Zinc Finger Protein 32
+2EOU A ,13,3.2,0.0476,2.6,7.7,Solution Structure Of The C2h2 Type Zinc Finger (Region 370- 400) Of Human Zinc Finger Protein 473
+2YRH A ,13,3.2,0.0415,2.7,7.7,Solution Structure Of The C2h2-Type Zinc Finger Domain (699- 729) From Zinc Finger Protein 473
+2JKR U 1,40,6.5,0.0493,2.7,5.0,Ap2 Clathrin Adaptor Core With Dileucine Peptide Rm( Phosphos)qikrllse
+1ZLD A ,35,6.7,0.0248,2.7,2.9,Crystal Structure Of A Rgd-Containing Host-Selective Toxin: Pyrenophora Tritici-Repentis Ptr Toxa
+2EN7 A ,13,3.3,0.0230,2.8,7.7,Solution Structure Of The C2h2 Type Zinc Finger (Region 495- 525) Of Human Zinc Finger Protein 268
+3UDF B 3,43,6.1,0.0373,2.8,4.7,Crystal Structure Of Apo Pbp1a From Acinetobacter Baumanniiÿ
+2EMJ A ,13,3.2,0.0447,2.8,7.7,Solution Structure Of The C2h2 Type Zinc Finger (Region 612- 644) Of Human Zinc Finger Protein 28 Homolog
+2EPP A ,13,3.3,0.0239,2.9,7.7,Solution Structure Of The First C2h2 Type Zinc Finger Domain Of Zinc Finger Protein 278
+2XXN A ,39,6.7,0.0301,2.9,5.1,Structure Of The Virf4-Hausp Traf Domain Complexÿ
+3MQR A ,39,6.8,0.0456,3.0,5.1,Crystal Structure Of The Usp7:hdmx(Ahss) Complexÿ
+2FOJ A ,39,6.8,0.0177,3.0,5.1,The Crystal Strucure Of The N-Terminal Domain Of HauspUSP7 Complexed With P53 Peptide 364-367
+1YY6 A ,39,7.0,0.0138,3.0,5.1,The Crystal Strucure Of The N-Terminal Domain Of HauspUSP7 Complexed With An Ebna1 Peptide
+2FOO A ,39,6.8,0.0372,3.0,5.1,The Crystal Strucure Of The N-Terminal Domain Of HauspUSP7 Complexed With P53 Peptide 359-362
+4YSI A ,39,7.2,0.0026,3.0,5.1,Structure Of Usp7 With A Novel Viral Protein
+4KG9 A ,39,6.8,0.0161,3.1,5.1,Crystal Structure Of Usp7-ntd With Mcm-bp
+2FOP A ,39,6.8,0.0182,3.1,5.1,The Crystal Strucure Of The N-Terminal Domain Of HauspUSP7 Complexed With Mdm2 Peptide 147-150
+1EJ6 C 3,14,3.2,0.0350,3.1,7.1,Reovirus Core
+2CSE W 3,14,3.2,0.0350,3.1,7.1,Features Of Reovirus Outer-Capsid Protein Mu1 Revealed By Electron And Image Reconstruction Of The Virion At 7.0-A Resolutionÿ
+3O98 B 4,33,5.5,0.0239,3.1,9.1,Glutathionylspermidine SynthetaseAMIDASE C59A COMPLEX WITH ADP AND Gspÿ
+3MQS C ,39,6.8,0.0129,3.1,5.1,Crystal Structure Of The Usp7:hdm2(Psts) Complexÿ
+2CTD A 2,21,3.3,0.0308,3.1,9.5,Solution Structure Of Two Zf-C2h2 Domains From Human Zinc Finger Protein 512ÿ
+2F1Z A 1,39,7.4,0.0016,3.1,5.1,Crystal Structure Of Hausp
+2PF6 A 1,41,7.3,0.0131,3.3,2.4,Lutheran Glycoprotein, N-Terminal Domains 1 And 2
+1IFQ B ,50,5.7,0.0491,3.3,6.0,Sec22b N-Terminal Domain
+4AFI B ,48,6.8,0.0034,3.3,8.3,Complex Between Vamp7 Longin Domain And Fragment Of Delta- Adaptin From Ap3
+1ZNF A ,13,3.5,0.0053,3.3,15.4,Three-Dimensional Solution Structure Of A Single Zinc Finger Dna-Binding Domain
+
+2EM9 A ,13,3.2,0.0358,3.4,7.7,Solution Structure Of The C2h2 Type Zinc Finger (Region 367- 399) Of Human Zinc Finger Protein 224
+2DLK A 1,12,3.3,0.0303,3.5,8.3,Solution Structure Of The First And The Second Zf-C2h2 Domains Of Zinc Finger Protein 692
+2DMW A ,43,7.1,0.0007,3.5,7.0,Solution Structure Of The Longin Domain Of Synaptobrevin- Like Protein 1
+1IFQ A ,51,6.4,0.0060,3.6,5.9,Sec22b N-Terminal Domain
+2EMG A ,13,3.5,0.0053,3.6,15.4,Solution Structure Of The C2h2 Type Zinc Finger (Region 463- 495) Of Human Zinc Finger Protein 484
+2ELM A ,12,3.2,0.0393,3.6,8.3,Solution Structure Of The 10th C2h2 Zinc Finger Of Human Zinc Finger Protein 406
+2EOJ A ,12,3.2,0.0480,3.7,16.7,Solution Structure Of The C2h2 Type Zinc Finger (Region 355- 385) Of Human Zinc Finger Protein 268
+2EQ1 A ,13,3.2,0.0365,3.7,7.7,Solution Structure Of The 9th C2h2 Type Zinc Finger Domain Of Zinc Finger Protein 347
+2EE8 A 1,17,3.2,0.0445,3.7,5.9,Solution Structure Of Three Zf-C2h2 Domains From Mouse Protein Odd-Skipped-Related 2 Splicing Isoform 2
+5EGB A 1,13,3.2,0.0467,3.7,7.7,Human Prdm9 Allele-a Znf Domain With Associated Recombination Hotspot Dna Sequence Ii
+4GJT B ,30,6.8,0.0378,3.7,10.0,Complex Structure Of Nectin-4 Bound To Mv-H
+4F9A D 1,13,3.3,0.0299,3.7,7.7,Human Cdc7 Kinase In Complex With Dbf4 And Nucleotide
+2YTT A ,12,3.5,0.0054,3.7,8.3,Solution Structure Of The C2h2 Type Zinc Finger (Region 204- 236) Of Human Zinc Finger Protein 473
+4F99 B 1,14,3.3,0.0210,3.7,14.3,Human Cdc7 Kinase In Complex With Dbf4 And Nucleotide
+4NH0 A 2,28,3.3,0.0292,3.7,7.1,Cytoplasmic Domain Of The Thermomonospora Curvata Type Vii Secretion Atpase Eccc
+4NDG B 2,14,3.3,0.0256,3.8,14.3,Human Aprataxin (aptx) Bound To Rna-dna And Zn - Adenosine Vanadate Transition State Mimic Complex
+4F9C B 1,12,3.3,0.0237,3.8,8.3,Human Cdc7 Kinase In Complex With Dbf4 And Xl413
+2EML A ,13,3.2,0.0448,3.9,7.7,Solution Structure Of The C2h2 Type Zinc Finger (Region 752- 784) Of Human Zinc Finger Protein 28 Homolog
+3T1X A ,47,5.9,0.0394,3.9,8.5,Mglb R124a E127a Monomerя
+3O98 A 5,32,5.8,0.0102,3.9,9.4,Glutathionylspermidine SynthetaseAMIDASE C59A COMPLEX WITH ADP AND Gspя
+4KH4 B 3,32,6.0,0.0255,3.9,6.2,Toxoplasma Gondii Ntpdase1 C258s/c268s In Complex With Mg And Amppnp
+4A59 C 3,32,5.9,0.0364,4.0,6.2,Crystal Structure Of Toxoplasma Gondii Nucleoside Triphosphate Diphosphohydrolase 3 (Ntpdase3) In Complex With Ampя
+2JN7 A ,54,6.4,0.0049,4.1,7.4,Northeast Structural Genomics Consortium Target Er411

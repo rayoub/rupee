@@ -1,0 +1,183 @@
+
+4USX A 3,13,3.5,0.0318,1.0,0.0,The Structure Of The C-terminal Yada-like Domain Of Bpsl2063 From Burkholderia Pseudomallei
+1POS A 2,12,3.5,0.0383,1.0,16.7,Porcine Pancreatic Spasmolytic Polypeptide
+3L4V A 1,13,3.5,0.0318,1.0,15.4,Crystal Complex Of N-Terminal Human Maltase-Glucoamylase With Kotalanolÿ
+3L4Z A 1,13,3.5,0.0318,1.1,15.4,Crystal Complex Of N-Terminal Human Maltase-Glucoamylase With Salacinolÿ
+2PSP B 2,12,3.5,0.0396,1.1,8.3,Porcine Pancreatic Spasmolytic Polypeptide
+1PSP A 2,12,3.5,0.0318,1.1,16.7,Pancreatic Spasmolytic Polypeptide (Psp)
+2PSP A 2,12,3.5,0.0318,1.1,8.3,Porcine Pancreatic Spasmolytic Polypeptide
+1POS B 2,12,3.5,0.0318,1.1,8.3,Porcine Pancreatic Spasmolytic Polypeptide
+2QLY A 1,13,3.5,0.0318,1.1,15.4,Crystral Structure Of The N-Terminal Subunit Of Human Maltase-Glucoamylase
+2QMJ A 1,14,3.5,0.0318,1.1,14.3,Crystral Structure Of The N-Terminal Subunit Of Human Maltase-Glucoamylase In Complex With Acarbose
+3L4X A 1,14,3.5,0.0318,1.1,14.3,Crystal Complex Of N-Terminal Human Maltase-Glucoamylase With Nr4-8ÿ
+3L4Y A 1,14,3.5,0.0318,1.1,14.3,Crystal Complex Of N-Terminal Human Maltase-Glucoamylase With Nr4-8iiÿ
+3LPP B 1,14,3.5,0.0318,1.1,14.3,Crystal Complex Of N-Terminal Sucrase-Isomaltase With Kotalanolÿ
+3L4W A 1,14,3.5,0.0318,1.1,14.3,Crystal Complex Of N-Terminal Human Maltase-Glucoamylase With Miglitolÿ
+3CTT A 1,14,3.5,0.0318,1.1,14.3,Crystal Complex Of N-Terminal Human Maltase-Glucoamylase With Casuarineÿ
+5AFR B ,23,6.1,0.0459,1.1,8.7,N-terminal Fragment Of Dynein Heavy Chain
+3LPP A 1,14,3.5,0.0318,1.1,14.3,Crystal Complex Of N-Terminal Sucrase-Isomaltase With Kotalanolÿ
+3LPO D 1,14,3.5,0.0318,1.1,14.3,Crystal Structure Of The N-Terminal Domain Of Sucrase- Isomaltaseÿ
+3LPO C 1,14,3.5,0.0318,1.1,14.3,Crystal Structure Of The N-Terminal Domain Of Sucrase- Isomaltaseÿ
+1PSP B 2,12,3.5,0.0318,1.1,8.3,Pancreatic Spasmolytic Polypeptide (Psp)
+3LPO B 1,14,3.5,0.0318,1.1,14.3,Crystal Structure Of The N-Terminal Domain Of Sucrase- Isomaltaseÿ
+4FQK B 2,13,3.5,0.0467,1.1,0.0,Influenza BBRISBANE602008 HEMAGGLUTININ FAB CR8059 COMPLEX
+3LPO A 1,14,3.5,0.0318,1.1,14.3,Crystal Structure Of The N-Terminal Domain Of Sucrase- Isomaltaseÿ
+3LPP D 1,14,3.5,0.0318,1.2,14.3,Crystal Complex Of N-Terminal Sucrase-Isomaltase With Kotalanolÿ
+3TOP B 1,13,3.5,0.0318,1.2,7.7,Crystral Structure Of The C-Terminal Subunit Of Human Maltase- Glucoamylase In Complex With Acarboseÿ
+3TOP A 1,13,3.5,0.0318,1.2,7.7,Crystral Structure Of The C-Terminal Subunit Of Human Maltase- Glucoamylase In Complex With Acarboseÿ
+2JP6 A ,23,5.2,0.0218,1.2,8.7,Structural And Functional Characterization Of The Recombinant Form Of The Kv1.3 Channel Blocker Tc32
+5AFU 2 ,24,6.5,0.0097,1.2,0.0,Cryo-em Structure Of Dynein Tail-dynactin-bicd2n Complex
+3TON B 1,15,3.5,0.0318,1.2,6.7,Crystral Structure Of The C-Terminal Subunit Of Human Maltase- Glucoamylaseÿ
+3TON A 1,15,3.5,0.0318,1.2,6.7,Crystral Structure Of The C-Terminal Subunit Of Human Maltase- Glucoamylaseÿ
+4B8C D 2,19,5.1,0.0251,1.2,10.5,Nuclease Module Of The Yeast Ccr4-Not Complex
+4FQM J 2,14,3.5,0.0491,1.3,14.3,Structure Of BBRISBANE602008 INFLUENZA HEMAGGLUTININ
+4K95 G 4,17,3.5,0.0477,1.3,5.9,Crystal Structure Of Parkin
+4GL2 B 4,19,5.2,0.0308,1.3,10.5,Structural Basis For Dsrna Duplex Backbone Recognition By Mda5
+4RQZ A 2,26,5.8,0.0307,1.3,3.8,Re-refinement Of 1soz, Crystal Structure Of Degs Protease In Complex With An Activating Peptide
+4RQZ C 2,21,6.0,0.0153,1.3,4.8,Re-refinement Of 1soz, Crystal Structure Of Degs Protease In Complex With An Activating Peptide
+2C39 S 3,34,6.3,0.0067,1.3,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With Adpÿ
+2C39 Q 3,34,6.3,0.0063,1.3,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With Adpÿ
+2C39 U 3,34,6.3,0.0066,1.3,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With Adpÿ
+2C39 C 3,34,6.3,0.0071,1.3,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With Adpÿ
+2C39 E 3,34,6.3,0.0066,1.3,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With Adpÿ
+2C39 G 3,34,6.3,0.0068,1.3,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With Adpÿ
+2C39 I 3,34,6.3,0.0065,1.3,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With Adpÿ
+2C39 M 3,34,6.3,0.0069,1.3,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With Adpÿ
+2C39 K 3,34,6.3,0.0071,1.3,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With Adpÿ
+2C39 A 3,34,6.3,0.0067,1.3,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With Adpÿ
+4M78 I ,32,6.6,0.0213,1.3,15.6,Crystal Structure Of Spliceosomal U6 Snrnp Protein Complex
+2C39 O 3,34,6.3,0.0067,1.3,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With Adpÿ
+2C39 W 3,34,6.3,0.0065,1.3,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With Adpÿ
+4JUV D ,27,6.4,0.0453,1.4,14.8,Crystal Structure Of Escherichia Coli Hfq Distal Face 1 Mutant
+5AFU 1 ,30,7.1,0.0014,1.4,0.0,Cryo-em Structure Of Dynein Tail-dynactin-bicd2n Complex
+5AFU 1 1,30,6.2,0.0073,1.4,0.0,Cryo-em Structure Of Dynein Tail-dynactin-bicd2n Complex
+3J9V F 1,31,7.2,0.0071,1.4,9.7,Yeast V-atpase State 3
+2C37 E 3,34,6.3,0.0055,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With U8 Rnaÿ
+2C37 G 3,34,6.3,0.0058,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With U8 Rnaÿ
+2C37 A 3,34,6.3,0.0052,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With U8 Rnaÿ
+2C37 M 3,34,6.3,0.0060,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With U8 Rnaÿ
+2C37 S 3,34,6.3,0.0055,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With U8 Rnaÿ
+2C37 U 3,34,6.3,0.0055,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With U8 Rnaÿ
+2C37 K 3,34,6.3,0.0055,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With U8 Rnaÿ
+
+2C37 Q 3,34,6.3,0.0054,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With U8 Rnaÿ
+2BR2 U 3,34,6.3,0.0050,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome
+2BR2 A 3,34,6.4,0.0048,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome
+2BR2 C 3,34,6.4,0.0050,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome
+2BR2 E 3,34,6.3,0.0050,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome
+2BR2 G 3,34,6.4,0.0050,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome
+2BR2 O 3,34,6.3,0.0050,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome
+2BR2 S 3,34,6.3,0.0051,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome
+2BR2 K 3,34,6.3,0.0050,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome
+2C37 O 3,34,6.3,0.0055,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With U8 Rnaÿ
+2C37 I 3,34,6.3,0.0057,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With U8 Rnaÿ
+2C37 C 3,34,6.3,0.0056,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With U8 Rnaÿ
+4JRK C ,32,6.5,0.0344,1.4,15.6,Crystal Structure Of Escherichia Coli Hfq Surface Mutant
+2C37 W 3,34,6.3,0.0055,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With U8 Rnaÿ
+2BR2 W 3,34,6.4,0.0050,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome
+1N3J A 2,23,5.2,0.0189,1.4,0.0,Structure And Substrate Of A Histone H3 Lysine Methyltransferase From Paramecium Bursaria Chlorella Virus 1
+1N3J B 2,23,5.2,0.0189,1.4,0.0,Structure And Substrate Of A Histone H3 Lysine Methyltransferase From Paramecium Bursaria Chlorella Virus 1
+2BR2 Q 3,34,6.4,0.0049,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome
+2BR2 M 3,34,6.3,0.0051,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome
+2BR2 I 3,34,6.3,0.0050,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome
+3L7Z G 1,34,6.3,0.0075,1.4,5.9,Crystal Structure Of The S. Solfataricus Archaeal Exosomeÿ
+3L7Z D 3,34,6.3,0.0067,1.4,5.9,Crystal Structure Of The S. Solfataricus Archaeal Exosomeÿ
+4I86 B ,51,8.7,0.0003,1.4,7.8,Crystal Structure Of Pilz Domain Of Cesa From Cellulose Synthesizing Bacterium
+4CNJ A 2,16,3.5,0.0318,1.4,0.0,L-aminoacetone Oxidase From Streptococcus Oligofermentans Belongs To A New 3-domain Family Of Bacterial Flavoproteins
+4JUV F ,32,6.4,0.0500,1.4,15.6,Crystal Structure Of Escherichia Coli Hfq Distal Face 1 Mutant
+2RKW B 1,30,5.9,0.0450,1.4,16.7,Intermediate Position Of Atp On Its Trail To The Binding Pocket Inside The Subunit B Mutant R416w Of The Energy Converter A1ao Atp Synthase
+3J7A K 1,30,5.1,0.0304,1.4,3.3,Cryo-em Structure Of The Plasmodium Falciparum 80s Ribosome Bound To The Anti-protozoan Drug Emetine, Small Subunit
+3VR6 F 1,42,7.1,0.0370,1.4,4.8,Crystal Structure Of Amp-pnp Bound Enterococcus Hirae V1-atpase [bv1]
+4CNJ B 2,14,3.5,0.0318,1.4,0.0,L-aminoacetone Oxidase From Streptococcus Oligofermentans Belongs To A New 3-domain Family Of Bacterial Flavoproteins
+4J5Y A ,33,6.4,0.0480,1.4,15.2,Crystal Structure Of Hfq From Pseudomonas Aeruginosa In Complex With Atp
+4CNK A 2,14,3.5,0.0318,1.5,0.0,L-aminoacetone Oxidase From Streptococcus Oligofermentans Belongs To A New 3-domain Family Of Bacterial Flavoproteins
+4CNK B 2,14,3.5,0.0318,1.5,0.0,L-aminoacetone Oxidase From Streptococcus Oligofermentans Belongs To A New 3-domain Family Of Bacterial Flavoproteins
+3QHS D ,32,6.5,0.0346,1.5,15.6,Crystal Structure Of Full-Length Hfq From Escherichia Coliÿ
+3VR4 F 1,42,7.4,0.0164,1.5,4.8,Crystal Structure Of Enterococcus Hirae V1-atpase [ev1]
+5AFR A ,29,7.7,0.0001,1.5,6.9,N-terminal Fragment Of Dynein Heavy Chain
+5AFR A 1,29,6.7,0.0007,1.5,6.9,N-terminal Fragment Of Dynein Heavy Chain
+2WNR A 1,34,6.1,0.0129,1.5,5.9,The Structure Of Methanothermobacter Thermautotrophicus Exosome Core Assemblyÿ
+1LJO A ,34,6.7,0.0497,1.5,20.6,Crystal Structure Of An Sm-Like Protein (Af-Sm2) From Archaeoglobus Fulgidus At 1.95a Resolution
+1XDN A 1,23,5.2,0.0308,1.5,4.3,High Resolution Crystal Structure Of An Editosome Enzyme From Trypanosoma Brucei: Rna Editing Ligase 1
+4CNJ C 2,15,3.5,0.0318,1.5,0.0,L-aminoacetone Oxidase From Streptococcus Oligofermentans Belongs To A New 3-domain Family Of Bacterial Flavoproteins
+3RER F ,29,6.5,0.0284,1.5,13.8,Crystal Structure Of E. Coli Hfq In Complex With Au6a Rna And Adpÿ
+3LB6 C 3,21,5.2,0.0308,1.5,4.8,The Structure Of Il-13 In Complex With Il-13ralpha2ÿ
+3QHS B ,32,6.6,0.0182,1.5,15.6,Crystal Structure Of Full-Length Hfq From Escherichia Coliÿ
+3B4T A 2,34,5.9,0.0246,1.5,0.0,Crystal Structure Of Mycobacterium Tuberculosis Rnase Ph, The Mycobacterium Tuberculosis Structural Genomics Consortium Target Rv1340
+4EWV B 2,27,3.5,0.0318,1.5,11.1,Crystal Structure Of Gh3.12 In Complex With Ampcpp
+1I6U A 1,32,5.2,0.0249,1.6,6.2,Rna-Protein Interactions: The Crystal Structure Of Ribosomal Protein S8RRNA COMPLEX FROM METHANOCOCCUS Jannaschiiÿ
+3CW2 F 3,37,8.0,0.0139,1.6,10.8,Crystal Structure Of The Intact Archaeal Translation Initiation Factor 2 From Sulfolobus Solfataricus ÿ
+4UER H 1,34,5.2,0.0269,1.6,2.9,40s-eif1-eif1a-eif3-eif3j Translation Initiation Complex From Lachancea Kluyveri
+3LPP C 1,12,3.5,0.0318,1.6,8.3,Crystal Complex Of N-Terminal Sucrase-Isomaltase With Kotalanolÿ
+4KZX W 1,34,5.2,0.0274,1.6,2.9,Rabbit 40s Ribosomal Subunit In Complex With Eif1
+4KZY W 1,34,5.2,0.0274,1.6,2.9,Rabbit 40s Ribosomal Subunit In Complex With Eif1 And Eif1a
+4KZZ W 1,34,5.2,0.0274,1.6,2.9,Rabbit 40s Ribosomal Subunit In Complex With Mrna, Initiator Trna And Eif1a
+2V1N A ,30,5.2,0.0440,1.6,13.3,Solution Structure Of The Region 51-160 Of Human Kin17 Reveals A Winged Helix Fold
+4B3F X 1,42,7.5,0.0334,1.6,2.4,Crystal Structure Of 1ghmbp2 Helicase
+4B3G A 2,43,8.2,0.0029,1.6,4.7,Crystal Structure Of Ighmbp2 Helicase In Complex With Rna
+3G2E A 1,33,3.5,0.0318,1.6,12.1,Structure Of Putative Oorc Subunit Of 2- Oxoglutarate:acceptor Oxidoreductase From Campylobacter Jejuniÿ
+3JAM W 1,34,5.2,0.0176,1.6,2.9,Cryoem Structure Of 40s-eif1a-eif1 Complex From Yeast
+4QJV D ,52,6.4,0.0340,1.6,7.7,The X-ray Crystal Structure Of Rpo3/rpo11 Heterodimer Of Euryarchaeal Rna Polymerase From Thermococcus Kodakarensis
+1SFO C 1,50,6.3,0.0389,1.6,10.0,Rna Polymerase Ii Strand Separated Elongation Complex
+3B4T C 2,33,5.9,0.0255,1.7,0.0,Crystal Structure Of Mycobacterium Tuberculosis Rnase Ph, The Mycobacterium Tuberculosis Structural Genomics Consortium Target Rv1340
+
+3J80 W 1,33,5.1,0.0468,1.7,3.0,Cryoem Structure Of 40s-eif1-eif1a Preinitiation Complex
+2E2I C 1,50,6.3,0.0426,1.7,10.0,Rna Polymerase Ii Elongation Complex In 5 Mm Mg+2 With 2'- Dgtp
+4X67 C 1,50,6.2,0.0495,1.7,10.0,Crystal Structure Of Elongating Yeast Rna Polymerase Ii Stalled At Oxidative Cyclopurine Dna Lesions
+1R9T C 1,48,6.3,0.0396,1.7,10.4,Rna Polymerase Ii Strand Separated Elongation Complex, Mismatched Nucleotide
+2OAU A 1,30,6.6,0.0335,1.7,10.0,Mechanosensitive Channel Of Small Conductance (Mscs)
+3WX6 B ,59,7.7,0.0425,1.7,10.2,Crystal Structure Of Type Six Secretion System Protein
+3N94 A 3,28,3.5,0.0318,1.7,3.6,Crystal Structure Of Human Pituitary Adenylate Cyclase 1 Receptor- Short N-Terminal Extracellular Domainя
+4BY7 C 1,50,6.4,0.0243,1.7,10.0,Elongating Rna Polymerase Ii-bye1 Tld Complex
+3M4O C 1,50,6.4,0.0330,1.7,10.0,Rna Polymerase Ii Elongation Complex Bя
+2OAU E 1,30,6.6,0.0345,1.7,10.0,Mechanosensitive Channel Of Small Conductance (Mscs)
+4A3M C 1,50,6.4,0.0325,1.7,10.0,Rna Polymerase Ii Initial Transcribing Complex With A 4nt Dna-Rna Hybrid And Soaked With Ampcppя
+4I86 A ,55,8.3,0.0020,1.7,7.3,Crystal Structure Of Pilz Domain Of Cesa From Cellulose Synthesizing Bacterium
+4ADV H 1,29,5.2,0.0195,1.7,20.7,Structure Of The E. Coli Methyltransferase Ksga Bound To The E. Coli 30s Ribosomal Subunitя
+4A2I H 1,29,5.2,0.0195,1.7,20.7,Cryo-Electron Microscopy Structure Of The 30s Subunit In Complex With The Yjeq Biogenesis Factorя
+3IY8 H 1,29,5.2,0.0195,1.7,20.7,Leishmania Tarentolae Mitonchondrial Ribosome Small Subunitя
+2OAU F 1,30,6.5,0.0455,1.7,10.0,Mechanosensitive Channel Of Small Conductance (Mscs)
+2PLF A 2,39,8.4,0.0457,1.7,5.1,The Structure Of Aif2gamma Subunit From The Archaeon Sulfolobus Solfataricus In The Nucleotide-Free Form
+3RZD C 1,50,6.3,0.0355,1.7,10.0,Rna Polymerase Ii Initiation Complex With A 5-Nt Rnaя
+4M53 A 2,38,8.6,0.0405,1.7,5.3,Gamma Subunit Of The Translation Initiation Factor 2 From Sulfolobus Solfataricus In Complex With Gdpcp
+2OAU D 1,30,6.5,0.0370,1.7,10.0,Mechanosensitive Channel Of Small Conductance (Mscs)
+4M75 N ,36,6.9,0.0164,1.7,16.7,Crystal Structure Of Lsm1-7 Complex
+3GTL C 1,50,6.4,0.0286,1.7,10.0,Backtracked Rna Polymerase Ii Complex With 13mer With G<>u Mismatchя
+4RD4 A 2,39,8.4,0.0459,1.8,5.1,Structure Of Aif2 Gamma From Sulfolobus Solfataricus Bound To Gdpnp
+1TWF C 1,51,6.2,0.0497,1.8,9.8,Rna Polymerase Ii Complexed With Utp At 2.3 A Resolution
+5GAS B 1,40,7.4,0.0137,1.8,5.0,Thermus Thermophilus V/a-atpase, Conformation 2
+2NVY C 1,48,6.4,0.0272,1.8,10.4,Rna Polymerase Ii Form Ii In 150 Mm Mn+2
+1LHF H 2,44,8.0,0.0193,1.8,9.1,Human Alpha-Thrombin Complexed With Ac-(D)phe-Pro-Boro-Homolys-Oh
+5FJA K 1,33,6.7,0.0073,1.8,6.1,Cryo-em Structure Of Yeast Rna Polymerase Iii At 4.7 A
+3KRN A 2,32,6.3,0.0074,1.8,3.1,Crystal Structure Of C. Elegans Cell-Death-Related Nuclease 5(Crn-5)я
+4GQN B 2,37,7.1,0.0479,1.8,5.4,Crystallographic Structure Of Trimeric Riboflavin Synthase From Brucella Abortus In Complex With 5-nitro-6-(d-ribitylamino)-2,4(1h, 3h) Pyrimidinedione
+5FLM C 1,47,6.3,0.0477,1.8,10.6,Structure Of Transcribing Mammalian Rna Polymerase Ii
+2FB7 A ,34,6.6,0.0159,1.8,11.8,Nmr Solution Structure Of Protein From Zebra Fish Dr.13312
+1FKA H 1,28,5.2,0.0279,1.8,3.6,Structure Of Functionally Activated Small Ribosomal Subunit At 3.3 A Resolution
+3W3A J 1,42,7.1,0.0433,1.8,4.8,Crystal Structure Of V1-atpase At 3.9 Angstrom Resolution
+1MKX K 2,44,7.8,0.0312,1.8,13.6,The Co-Crystal Structure Of Unliganded Bovine Alpha- Thrombin And Prethrombin-2: Movement Of The Yppw Segment And Active Site Residues Upon Ligand Binding
+1ABI H 2,44,7.9,0.0246,1.8,9.1,Structure Of The Hirulog 3-Thrombin Complex And Nature Of The S' Subsites Of Substrates And Inhibitorsя
+3W3A B 1,42,7.1,0.0417,1.8,4.8,Crystal Structure Of V1-atpase At 3.9 Angstrom Resolution
+2WJV A 3,43,8.9,10e-4.5,1.8,7.0,Crystal Structure Of The Complex Between Human Nonsense Mediated Decay Factors Upf1 And Upf2я
+3P70 D 2,43,7.9,0.0264,1.9,9.3,Structural Basis Of Thrombin-Mediated Factor V Activation: Essential Role Of The Hirudin-Like Sequence Glu666-Glu672 For Processing At The Heavy Chain-B Domain Junctionя
+5FJA K ,43,6.7,0.0074,1.9,0.0,Cryo-em Structure Of Yeast Rna Polymerase Iii At 4.7 A
+1NRN H 2,45,7.7,0.0463,1.9,8.9,Alpha-Thrombin (E.C.3.4.21.5) Non-Covalently Complexed With Receptor Based Peptide Nrs
+3BEF B 2,44,7.9,0.0266,1.9,9.1,Crystal Structure Of Thrombin Bound To The Extracellular Fragment Of Par1
+5CHA B ,44,7.1,0.0371,1.9,6.8,The Refinement And The Structure Of The Dimer Of Alpha- Chymotrypsin At 1.67-Angstroms Resolution
+2AS9 B 1,43,7.1,0.0419,1.9,9.3,Functional And Structural Characterization Of Spl Proteases From Staphylococcus Aureus
+3DRY E 3,36,5.2,0.0210,1.9,8.3,X-Ray Crystal Structure Of Human Kctd5 Protein Crystallized In Low-Salt Bufferя
+4RR1 C 1,43,7.9,0.0006,1.9,2.3,Re-refinement Of Entry 1sot, Crystal Structure Of The Degs Stress Sensor
+3GTJ C 1,49,6.4,0.0340,1.9,10.2,Backtracked Rna Polymerase Ii Complex With 13mer Rnaя
+1OB5 A 2,41,7.6,0.0093,1.9,14.6,T. Aquaticus Elongation Factor Ef-Tu Complexed With The Antibiotic Enacyloxin Iia, A Gtp Analog, And Phe-Trna
+1OB5 C 2,41,7.6,0.0093,1.9,14.6,T. Aquaticus Elongation Factor Ef-Tu Complexed With The Antibiotic Enacyloxin Iia, A Gtp Analog, And Phe-Trna
+1OB5 E 2,41,7.6,0.0093,1.9,14.6,T. Aquaticus Elongation Factor Ef-Tu Complexed With The Antibiotic Enacyloxin Iia, A Gtp Analog, And Phe-Trna
+3WX6 A 1,65,9.2,10e-4.3,1.9,9.2,Crystal Structure Of Type Six Secretion System Protein
+2FPZ A 1,39,7.1,0.0333,1.9,2.6,Human Tryptase With 2-Amino Benzimidazole
+1ABJ H 2,44,7.8,0.0317,1.9,9.1,Structure Of The Hirulog 3-Thrombin Complex And Nature Of The S' Subsites Of Substrates And Inhibitors
+3BEF E 2,43,7.9,0.0244,1.9,9.3,Crystal Structure Of Thrombin Bound To The Extracellular Fragment Of Par1
+2FS8 D 1,39,7.0,0.0423,1.9,2.6,Human Beta-Tryptase Ii With Inhibitor Cra-29382
+3WX6 A ,66,9.2,0.0002,1.9,9.1,Crystal Structure Of Type Six Secretion System Protein
+1DWB H 2,44,7.9,0.0281,1.9,9.1,Alpha-Thrombin (E.C.3.4.21.5) Complex With (Des-Amino Asp 55) Hirudin (Residues 55 - 65) And Benzamidine
+3GTG C 1,51,6.5,0.0212,1.9,9.8,Backtracked Rna Polymerase Ii Complex With 12mer Rnaя
+5C3E C 1,51,6.3,0.0348,1.9,9.8,Crystal Structure Of A Transcribing Rna Polymerase Ii Complex Reveals A Complete Transcription Bubble
+2GDD D 1,39,7.1,0.0369,1.9,2.6,Human Beta Ii Tryptase With Inhibitor Cra-27592
