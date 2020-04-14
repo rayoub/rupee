@@ -3,8 +3,8 @@ DO $$
 
     DECLARE p_benchmark VARCHAR := 'casp_vast_d65'; 
     DECLARE p_version VARCHAR := 'casp_chain_v01_01_2020'; 
-    DECLARE p_search_type VARCHAR := 'rmsd'; 
-    DECLARE p_sort_by INTEGER := 2; -- 1 (ce_rmsd), 2 (fatcat_rigid_rmsd)
+    DECLARE p_search_type VARCHAR := 'full_length';  -- rmsd, full_length
+    DECLARE p_sort_by INTEGER := 4; -- 1 (ce_rmsd), 2 (fatcat_rigid_rmsd), 4 (tm_avg_tm_score)
     DECLARE p_limit INTEGER := 100; 
 
 BEGIN
@@ -20,7 +20,7 @@ BEGIN
         (
             SELECT * FROM get_rupee_results(p_benchmark, p_version, 'top_aligned', p_search_type, p_sort_by, p_limit)
         ),
-        cathedral AS
+        vast AS
         (   
             SELECT * FROM get_vast_results(p_benchmark, p_version, p_sort_by, p_limit) 
         ),
@@ -33,6 +33,7 @@ BEGIN
                 CASE 
                     WHEN p_sort_by = 1 THEN ce_rmsd 
                     WHEN p_sort_by = 2 THEN fatcat_rigid_rmsd
+                    WHEN p_sort_by = 4 THEN tm_avg_tm_score
                 END AS score
             FROM
                 rupee_all_aligned
@@ -44,6 +45,7 @@ BEGIN
                 CASE 
                     WHEN p_sort_by = 1 THEN ce_rmsd 
                     WHEN p_sort_by = 2 THEN fatcat_rigid_rmsd
+                    WHEN p_sort_by = 4 THEN tm_avg_tm_score
                 END AS score
             FROM
                 rupee_top_aligned
@@ -55,9 +57,10 @@ BEGIN
                 CASE 
                     WHEN p_sort_by = 1 THEN ce_rmsd 
                     WHEN p_sort_by = 2 THEN fatcat_rigid_rmsd
+                    WHEN p_sort_by = 4 THEN tm_avg_tm_score
                 END AS score
             FROM
-                cathedral
+                vast
         ),
         accumulated AS
         (

@@ -31,7 +31,10 @@ public class Constants {
     public final static String SSM_PATH = "/home/ayoub/git/rupee/results/ssm/temp/";
     public final static String MTM_PATH = "/home/ayoub/git/rupee/results/mtm/temp/";
     public final static String CATHEDRAL_PATH = "/home/ayoub/git/rupee/results/cathedral/temp/";
-    public final static String VAST_PATH = "/home/ayoub/git/rupee/results/vast/casp_d250_casp_chain_v01_01_2020/";
+    public final static String VAST_PATH_RMSD 
+        = "/home/ayoub/git/rupee/results/vast/casp_d250_casp_chain_v01_01_2020_rmsd/";
+    public final static String VAST_PATH_VAST_SCORE 
+        = "/home/ayoub/git/rupee/results/vast/casp_d250_casp_chain_v01_01_2020_vast_score/";
     
     public final static String CASP_PATH = "/home/ayoub/git/rupee/data/casp/eu_preds/";
     

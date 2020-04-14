@@ -67,7 +67,7 @@ public class VastUploadDriver extends DriverBase {
         for (int i = 0; i < dbIds.size(); i++) {
             
             String dbId = dbIds.get(i);
-            String fileName = Constants.VAST_PATH + dbId + ".txt";
+            String fileName = Constants.VAST_PATH_RMSD + dbId + ".txt";
 
             try {
 

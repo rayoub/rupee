@@ -150,7 +150,7 @@ public class VastDownloadDriver extends DriverBase {
             Pair<String,String> pair = pairs.get(i);
             String dbId = pair.getValue0();
             String link = pair.getValue1();
-            String fileName = Constants.VAST_PATH + dbId + ".txt";
+            String fileName = Constants.VAST_PATH_RMSD + dbId + ".txt";
 
             if (Files.notExists(Paths.get(fileName))) {
             

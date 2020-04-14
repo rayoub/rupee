@@ -89,10 +89,10 @@ public class AlignResults
     // RUPEE is already done for this vs. mTM above
     public static void alignVastResults() {
 
-        String benchmark = "casp_vast_d55";
+        String benchmark = "casp_d250";
         String version = "casp_chain_v01_01_2020";
         DbType dbType = DbType.CHAIN;
-        int maxN = 50;
+        int maxN = 100;
         
         alignVastResults(benchmark, version, dbType, maxN); 
     }

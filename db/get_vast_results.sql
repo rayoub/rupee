@@ -12,7 +12,7 @@
 -- 7. ssap_score (vs. CATHEDRAL only)
 
 -- valid sort by parameters
--- 1, 2
+-- 1, 2, 4
 
 CREATE OR REPLACE FUNCTION get_vast_results (p_benchmark VARCHAR, p_version VARCHAR, p_sort_by INTEGER, p_limit INTEGER)
 RETURNS TABLE (
@@ -20,7 +20,8 @@ RETURNS TABLE (
     db_id_1 VARCHAR,
     db_id_2 VARCHAR,
     ce_rmsd NUMERIC,
-    fatcat_rigid_rmsd NUMERIC
+    fatcat_rigid_rmsd NUMERIC,
+    tm_avg_tm_score NUMERIC
 )
 AS $$
 BEGIN
@@ -35,11 +36,14 @@ BEGIN
                     RANK(*) OVER (PARTITION BY r.db_id_1 ORDER BY s.ce_rmsd, r.db_id_2) 
                 WHEN p_sort_by = 2 THEN
                     RANK(*) OVER (PARTITION BY r.db_id_1 ORDER BY s.fatcat_rigid_rmsd, r.db_id_2) 
+                WHEN p_sort_by = 4 THEN
+                    RANK(*) OVER (PARTITION BY r.db_id_1 ORDER BY s.tm_avg_tm_score DESC, r.db_id_2) 
             END AS n,
             r.db_id_1,
             r.db_id_2,
             s.ce_rmsd,
-            s.fatcat_rigid_rmsd
+            s.fatcat_rigid_rmsd,
+            s.tm_avg_tm_score
         FROM
             vast_result r
             INNER JOIN benchmark b
@@ -69,7 +73,8 @@ BEGIN
             r.db_id_1,
             r.db_id_2,
             r.ce_rmsd,
-            r.fatcat_rigid_rmsd
+            r.fatcat_rigid_rmsd,
+            r.tm_avg_tm_score
         FROM
             results r
             INNER JOIN valid_results v
@@ -82,7 +87,8 @@ BEGIN
         r.db_id_1,
         r.db_id_2,
         r.ce_rmsd,
-        r.fatcat_rigid_rmsd
+        r.fatcat_rigid_rmsd,
+        r.tm_avg_tm_score
     FROM 
         filtered_results r
     ORDER BY
