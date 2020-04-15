@@ -5,7 +5,6 @@ import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -27,11 +26,13 @@ public class VastCombinedDriver extends VastDriver {
             link = "";
             System.out.println("interrupted while uploading structure for db_id: " + dbId);
         }
-
+        
         if (!link.isEmpty()) {
 
             System.out.println("... got the results link");
-            System.out.println(dbId + "," + link);
+
+            // write the request to a file in case we need to retry
+            appendRequest(dbId, link); 
 
             // wait 2 hour
             for (int i = 0; i < 24; i++) {

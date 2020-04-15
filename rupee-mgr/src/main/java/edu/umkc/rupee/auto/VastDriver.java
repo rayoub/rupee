@@ -1,5 +1,6 @@
 package edu.umkc.rupee.auto;
 
+import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,6 +21,14 @@ public class VastDriver extends DriverBase {
         excludes.add("T0957s2TS145-D1");
         excludes.add("T0957s2TS354-D1");
         excludes.add("T0968s2TS261-D1");
+        excludes.add("T0968s2TS261-D1");
+        excludes.add("T0969TS354-D1");
+        excludes.add("T0969TS354-D1");
+        excludes.add("T0980s1TS261-D1");
+        excludes.add("T0987TS322-D2");
+        excludes.add("T0987TS322-D2");
+        excludes.add("T0990TS089-D1");
+        excludes.add("T0990TS145-D1");
     }
 
     public String doSearchUpload(String dbId) throws InterruptedException {
@@ -224,5 +233,22 @@ public class VastDriver extends DriverBase {
             }
         }
         return excluded;
+    }
+
+    public void appendRequest(String dbId, String link) {
+
+        String outputText = dbId + "," + link + System.lineSeparator();
+
+        try {
+
+            FileOutputStream outputStream = new FileOutputStream(Constants.VAST_PATH + "requests.txt", true);
+            byte[] strToBytes =  outputText.getBytes();
+            outputStream.write(strToBytes);
+            outputStream.close();
+
+        } 
+        catch (Exception e) {
+            System.out.println("error writing to the request file: " + dbId + "," + link);
+        }
     }
 }
