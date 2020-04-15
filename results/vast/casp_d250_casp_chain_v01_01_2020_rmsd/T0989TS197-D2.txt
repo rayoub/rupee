@@ -1,4 +1,3 @@
-
 3Q9S A 2,17,5.2,0.0066,0.7,5.9,Crystal Structure Of Rra(1-215) From Deinococcus Radioduransÿ
 4A2M C 3,27,5.0,0.0400,0.8,11.1,Structure Of The Periplasmic Domain Of The Heparin And Heparan Sulphate Sensing Hybrid Two Component System Bt4663 In Apo And Ligand Bound Forms
 3PQH A 2,18,5.2,0.0094,0.8,5.6,Crystal Structure Of The C-Terminal Fragment Of The Bacteriophage Phi92 Membrane-Piercing Protein Gp138ÿ
@@ -59,7 +58,6 @@
 3R0J B 2,18,5.2,0.0107,1.0,11.1,Structure Of Phop From Mycobacterium Tuberculosisÿ
 1BPO A 2,29,5.1,0.0269,1.0,0.0,Clathrin Heavy-Chain Terminal Domain And Linker
 1C9L A 2,29,5.0,0.0402,1.0,0.0,Peptide-In-Groove Interactions Link Target Proteins To The B-Propeller Of Clathrin
-
 2YMS B 2,20,5.0,0.0405,1.0,15.0,Structure And Assembly Of A B-propeller With Nine Blades And A New Conserved Repetitive Sequence Motif
 2PMU F 1,20,5.2,0.0066,1.0,10.0,Crystal Structure Of The Dna-Binding Domain Of Phopÿ
 1N6F E 5,29,5.0,0.0462,1.0,10.3,Tricorn Protease In Complex With Z-Phe-Diketo-Arg-Glu-Phe
@@ -120,7 +118,6 @@
 5DJO B 2,35,6.9,0.0286,1.2,11.4,Crystal Structure Of The Cc1-fha Tandem Of Kinesin-3 Kif13a
 5CYR A 4,31,5.1,0.0222,1.3,3.2,Crystal Structure Of Thosea Asigna Virus Rna-dependent Rna Polymerase (rdrp) Complexed With Atp And Ssrna
 1W1I A 2,22,5.1,0.0202,1.3,0.0,Crystal Structure Of Dipeptidyl Peptidase Iv (Dppiv Or Cd26) In Complex With Adenosine Deaminase
-
 1W1I A 2,22,5.1,0.0202,1.3,0.0,Crystal Structure Of Dipeptidyl Peptidase Iv (Dppiv Or Cd26) In Complex With Adenosine Deaminase
 1W1I D 2,22,5.1,0.0264,1.3,0.0,Crystal Structure Of Dipeptidyl Peptidase Iv (Dppiv Or Cd26) In Complex With Adenosine Deaminase
 1MDA J 2,33,5.2,0.0089,1.3,3.0,Crystal Structure Of An Electron-Transfer Complex Between Methylamine Dehydrogenase And Amicyanin

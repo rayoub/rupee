@@ -1,4 +1,3 @@
-
 3PTA A 5,13,3.5,0.0216,0.7,7.7,Crystal Structure Of Human Dnmt1(646-1600) In Complex With Dnaÿ
 3PT6 B 5,12,3.5,0.0216,0.8,8.3,Crystal Structure Of Mouse Dnmt1(650-1602) In Complex With Dnaÿ
 4HZI B 2,12,3.5,0.0216,0.8,16.7,Crystal Structure Of The Leptospira Interrogans Atpase Subunit Of An Orphan Abc Transporter
@@ -59,7 +58,6 @@
 3O3I X 1,24,4.8,0.0083,1.6,12.5,Crystal Structure Of Human Hiwi1 Paz Domain (Residues 277-399) In Complex With 14-Mer Rna (12-Bp + 2-Nt Overhang) Containing 2'-Oh At Its 3'-Endÿ
 3O7V X 1,24,4.6,0.0171,1.6,12.5,Crystal Structure Of Human Hiwi1 (V361m) Paz Domain (Residues 277-399) In Complex With 14-Mer Rna (12-Bp + 2-Nt Overhang) Containing 2'-Och3 At Its 3'-Endÿ
 3O6E X 1,24,4.7,0.0126,1.6,12.5,Crystal Structure Of Human Hiwi1 Paz Domain (Residues 277-399) In Complex With 14-Mer Rna (12-Bp + 2-Nt Overhang) Containing 2'-Och3 At Its 3'-Endÿ
-
 3VIQ C 1,25,3.5,0.0216,1.7,0.0,Crystal Structure Of Swi5-Sfr1 Complex From Fission Yeast
 2D8L A 2,13,3.4,0.0380,1.7,0.0,Crystal Structure Of Unsaturated Rhamnogalacturonyl Hydrolase In Complex With Dglca-Galnac
 2RVJ A ,29,5.7,0.0143,1.7,10.3,Pet22-hesrp1-rrm3
@@ -120,7 +118,6 @@
 3K4K A 3,13,3.2,0.0387,1.9,7.7,Pyranose 2-Oxidase F454n Mutantÿ
 2J0J A 1,35,5.2,0.0394,1.9,20.0,Crystal Structure Of A Fragment Of Focal Adhesion Kinase Containing The Ferm And Kinase Domains
 4MOS A 3,13,3.2,0.0432,1.9,7.7,Pyranose 2-oxidase H450g/v546c Double Mutant With 2-fluorinated Galactose
-
 1F9N A 1,23,3.9,0.0296,1.9,17.4,Crystal Structure Of Ahrc, The Arginine RepressorACTIVATOR Protein From Bacillus Subtilis
 4MOS A 3,13,3.2,0.0432,1.9,7.7,Pyranose 2-oxidase H450g/v546c Double Mutant With 2-fluorinated Galactose
 4F3T A 4,24,4.5,0.0412,1.9,8.3,Human Argonaute-2 - Mir-20a Complex

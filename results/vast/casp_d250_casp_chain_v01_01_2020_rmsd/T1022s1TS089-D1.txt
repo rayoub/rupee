@@ -1,4 +1,3 @@
-
 4F9B D 1,14,3.5,0.0450,0.7,0.0,Human Cdc7 Kinase In Complex With Dbf4 And Pha767491
 1Y5N B 2,13,3.5,0.0318,1.0,15.4,The Crystal Structure Of The Narghi Mutant Nari-K86a In Complex With Pentachlorophenol
 1Y5L B 2,13,3.5,0.0318,1.0,15.4,The Crystal Structure Of The Narghi Mutant Nari-H66y
@@ -59,7 +58,6 @@
 3DOM A ,28,5.2,0.0141,1.4,7.1,Crystal Structure Of The Complex Between Tfb5 And The C- Terminal Domain Of Tfb2
 3DOM A 1,28,5.2,0.0123,1.4,7.1,Crystal Structure Of The Complex Between Tfb5 And The C- Terminal Domain Of Tfb2
 3VR3 F 1,35,6.7,0.0441,1.4,2.9,Crystal Structure Of Amp-pnp Bound A3b3 Complex From Enterococcus Hirae V-atpase [ba3b3]
-
 3L4X A 1,14,3.5,0.0330,1.4,7.1,Crystal Complex Of N-Terminal Human Maltase-Glucoamylase With Nr4-8ÿ
 3J9V D 1,32,6.8,0.0361,1.4,9.4,Yeast V-atpase State 3
 2EJ9 A 2,26,6.5,0.0313,1.4,15.4,Crystal Structure Of Biotin Protein Ligase From Methanococcus Jannaschii
@@ -120,7 +118,6 @@
 5GAN 4 ,33,6.8,0.0360,1.7,18.2,The Overall Structure Of The Yeast Spliceosomal U4/u6.u5 Tri-snrnp At 3.7 Angstrom
 1LVB A 1,41,7.5,0.0123,1.7,12.2,Catalytically Inactive Tobacco Etch Virus Protease Complexed With Substrate
 4MMK A ,30,6.7,0.0100,1.7,10.0,Q8a Hfq From Pseudomonas Aeruginosa
-
 4B3F X 1,40,8.5,0.0007,1.7,5.0,Crystal Structure Of 1ghmbp2 Helicase
 4ZKE A 2,43,8.0,0.0420,1.7,9.3,Crystal Structure Of The S. Cerevisiae Ski7 Gtpase-like Domain, Bound To Gtp
 4RD6 A 2,40,8.4,0.0456,1.7,10.0,Structure Of Aif2-gamma From Sulfolobus Solfataricus Bound To Gdp

@@ -1,4 +1,3 @@
-
 2F1T C ,128,15.0,0.0004,3.2,7.8,Outer Membrane Protein Ompw
 3NB3 A ,108,14.2,10e-4.2,3.0,6.5,The Host Outer Membrane Proteins Ompa And Ompc Are Packed At Specific Sites In The Shigella Phage Sf6 Virion As Structural Componentsÿ
 3NB3 C ,110,14.2,10e-4.2,2.6,6.4,The Host Outer Membrane Proteins Ompa And Ompc Are Packed At Specific Sites In The Shigella Phage Sf6 Virion As Structural Componentsÿ
@@ -59,7 +58,6 @@
 4H6A E ,100,11.9,0.0131,3.2,4.0,Crystal Structure Of The Allene Oxide Cyclase 2 From Physcomitrella Patens
 4H69 A ,102,11.9,0.0336,3.3,4.9,Crystal Structure Of The Allene Oxide Cyclase 2 From Physcomitrella Patens Complexed With Substrate Analog
 3H4Z A 4,82,11.9,0.0019,2.9,8.5,Crystal Structure Of A Mbp-Allergen Fusion Proteinÿ
-
 4H6A A ,102,11.9,0.0296,3.4,4.9,Crystal Structure Of The Allene Oxide Cyclase 2 From Physcomitrella Patens
 4H69 E ,103,11.9,0.0161,3.4,4.9,Crystal Structure Of The Allene Oxide Cyclase 2 From Physcomitrella Patens Complexed With Substrate Analog
 4H6A C ,92,11.8,0.0065,3.1,4.3,Crystal Structure Of The Allene Oxide Cyclase 2 From Physcomitrella Patens
@@ -120,7 +118,6 @@
 4XIN A ,80,10.8,0.0201,3.3,8.7,X-ray Crystal Structure Of An Lpqh Orthologue From Mycobacterium Avium
 1JMX A 3,93,10.8,0.0205,2.7,5.4,Crystal Structure Of A Quinohemoprotein Amine Dehydrogenase From Pseudomonas Putida
 2POA A ,68,10.7,0.0099,2.6,7.4,Schistosoma Mansoni Sm14 Fatty Acid-Binding Protein: Improvement Of Protein Stability By Substitution Of The Single Cys62 Residue
-
 4Z28 B ,102,10.7,0.0312,3.2,6.9,Crystal Structure Of Short Hoefavidin Biotin Complex
 4XIN B ,90,10.7,0.0246,3.6,8.9,X-ray Crystal Structure Of An Lpqh Orthologue From Mycobacterium Avium
 4BBO D ,91,10.7,0.0037,2.8,6.6,Crystal Structure Of Core-bradavidin

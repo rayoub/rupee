@@ -1,4 +1,3 @@
-
 3MOP M ,30,4.0,0.0390,1.1,0.0,The Ternary Death Domain Complex Of Myd88, Irak4, And Irak2ÿ
 3MOP N ,30,4.0,0.0390,1.1,0.0,The Ternary Death Domain Complex Of Myd88, Irak4, And Irak2ÿ
 3MOP K ,30,4.0,0.0390,1.1,0.0,The Ternary Death Domain Complex Of Myd88, Irak4, And Irak2ÿ
@@ -59,7 +58,6 @@
 2KHD A ,48,6.0,0.0098,1.9,10.4,Solution Nmr Structure Of Vc_a0919 From Vibrio Cholerae. Northeast Structural Genomics Consortium Target Vcr52ÿ
 3MOP C 1,39,4.0,0.0390,1.9,10.3,The Ternary Death Domain Complex Of Myd88, Irak4, And Irak2ÿ
 3MOP F 1,39,4.0,0.0390,1.9,10.3,The Ternary Death Domain Complex Of Myd88, Irak4, And Irak2ÿ
-
 3AA9 C ,53,8.1,0.0049,1.9,5.7,Crystal Structure Analysis Of The Mutant Cuta1 (E61v) From E. Coliÿ
 4RWX A ,47,7.7,0.0004,1.9,8.5,Crystal Structure Of L. Monocytogenes Psta
 2W25 A 2,36,6.2,0.0176,1.9,8.3,Crystal Structure Of Glu104ala Mutantÿ
@@ -120,7 +118,6 @@
 1MN7 B ,40,7.1,0.0397,2.0,10.0,Ndp Kinase Mutant (H122g;n119s;f64w) In Complex With Abazttp
 3AB4 O 2,46,6.5,0.0067,2.0,6.5,Crystal Structure Of Feedback Inhibition Resistant Mutant Of Aspartate Kinase From Corynebacterium Glutamicum In Complex With Lysine And Threonineÿ
 4U9R A 2,41,6.1,0.0061,2.0,7.3,Structure Of The N-terminal Extension From Cupriavidus Metallidurans Czcp
-
 4AT1 B ,52,8.5,0.0299,2.0,13.5,Structural Consequences Of Effector Binding To The T State Of Aspartate Carbamoyltransferase. Crystal Structures Of The Unligated And Atp-, And Ctp-Complexed Enzymes At 2.6- Angstroms Resolution
 4QR1 B ,32,6.4,0.0498,2.0,18.8,Crystal Structure Of Streptococcus Pyogenes Cas2 At Ph 6.5
 2K3K A 1,41,7.1,0.0030,2.0,7.3,Solution Structure Of Drosophila Melanogaster Snf Rbd1

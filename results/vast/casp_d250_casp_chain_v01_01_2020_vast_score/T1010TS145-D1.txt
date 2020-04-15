@@ -1,4 +1,3 @@
-
 1Z8K A ,84,13.2,10e-5.6,3.8,11.9,X-Ray Structure Of Allene Oxide Cyclase From Arabidopsis Thaliana At3g25770
 3Q34 D ,87,13.1,10e-6.0,3.0,3.4,The Crystal Structure Of Ycei-Like Family Protein From Pseudomonas Syringaeÿ
 4H69 B ,77,13.0,10e-5.3,3.2,3.9,Crystal Structure Of The Allene Oxide Cyclase 2 From Physcomitrella Patens Complexed With Substrate Analog
@@ -59,7 +58,6 @@
 4TNK O ,110,12.1,0.0044,4.7,7.3,Rt Xfel Structure Of Photosystem Ii 250 Microsec After The Third Illumination At 5.2 A Resolution
 5BTU A ,76,12.1,10e-4.2,2.8,6.6,The Structure Of Diels-alderase Pyri4 In The Biosynthetic Pathway Of Pyrroindomycins
 3RBY B ,83,12.1,0.0007,3.1,2.4,Crystal Structure Of Uncharacterized Protein Ylr301w From Saccharomycces Cerevisiaeÿ
-
 3RBY B 1,84,12.1,10e-6.3,3.2,2.4,Crystal Structure Of Uncharacterized Protein Ylr301w From Saccharomycces Cerevisiaeÿ
 3WU2 o ,107,12.1,0.0049,4.3,7.5,Crystal Structure Analysis Of Photosystem Ii Complex
 4IXQ O ,109,12.0,0.0050,4.5,10.1,Rt Fs X-ray Diffraction Of Photosystem Ii, Dark State
@@ -120,7 +118,6 @@
 3I4X A ,71,10.8,0.0006,2.6,9.9,Crystal Structure Of The Dimethylallyl Tryptophan Synthase Fgapt2 From Aspergillus Fumigatus In Complex With Trp And Dmsppÿ
 4BG2 B ,67,10.8,0.0003,3.3,4.5,X-ray Crystal Structure Of Patf From Prochloron Didemni
 3I4Z A ,72,10.8,0.0006,2.7,8.3,Crystal Structure Of The Dimethylallyl Tryptophan Synthase Fgapt2 From Aspergillus Fumigatusÿ
-
 4BG2 A ,72,10.8,0.0008,3.4,2.8,X-ray Crystal Structure Of Patf From Prochloron Didemni
 1TH4 C ,53,10.8,0.0401,3.1,5.7,Crystal Structure Of Nadph Depleted Bovine Liver Catalase Complexed With 3-Amino-1,2,4-Triazole
 1TH4 C 1,55,10.8,0.0401,3.3,7.3,Crystal Structure Of Nadph Depleted Bovine Liver Catalase Complexed With 3-Amino-1,2,4-Triazole

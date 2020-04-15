@@ -1,4 +1,3 @@
-
 3LFC A 2,32,5.1,0.0372,1.0,15.6,Human P38 Map Kinase In Complex With Rl99ÿ
 4GL2 B 4,20,5.2,0.0308,1.0,10.0,Structural Basis For Dsrna Duplex Backbone Recognition By Mda5
 3FSF A 2,34,5.1,0.0312,1.0,14.7,P38 Kinase Crystal Structure In Complex With 3-(2,6- Dichloro-Phenyl)-7-[4-(2-Diethylamino-Ethoxy)-Phenylamino]- 1-Methyl-3,4-Dihydro-1h-Pyrimido[4,5-D]pyrimidin-2-Oneÿ
@@ -59,7 +58,6 @@
 2C39 O 3,33,6.3,0.0052,1.3,6.1,Rnase Ph Core Of The Archaeal Exosome In Complex With Adpÿ
 2C39 K 3,33,6.3,0.0055,1.3,6.1,Rnase Ph Core Of The Archaeal Exosome In Complex With Adpÿ
 2BR2 C 3,33,6.4,0.0045,1.3,6.1,Rnase Ph Core Of The Archaeal Exosome
-
 2BR2 E 3,33,6.4,0.0044,1.3,6.1,Rnase Ph Core Of The Archaeal Exosome
 2C39 W 3,33,6.3,0.0051,1.3,6.1,Rnase Ph Core Of The Archaeal Exosome In Complex With Adpÿ
 2C37 G 3,33,6.4,0.0047,1.3,6.1,Rnase Ph Core Of The Archaeal Exosome In Complex With U8 Rnaÿ
@@ -120,7 +118,6 @@
 1YWU A ,56,9.1,10e-4.8,1.6,3.6,Solution Nmr Structure Of Pseudomonas Aeruginosa Protein Pa4608. Northeast Structural Genomics Target Pat7
 3CVZ B 1,33,6.6,0.0262,1.6,6.1,Structural Insights Into The Molecular Organization Of The S-Layer From Clostridium Difficileÿ
 2RDE A 2,57,8.2,0.0477,1.6,10.5,Crystal Structure Of Vca0042 Complexed With C-Di-Gmp
-
 5C0X B 2,30,5.9,0.0248,1.6,0.0,Structure Of A 12-subunit Nuclear Exosome Complex Bound To Structured Rna
 4E7N A 1,31,6.7,0.0444,1.6,3.2,Crystal Structure Of Ahv_tl-I, A Glycosylated Snake-Venom Thrombin- Like Enzyme From Agkistrodon Halysÿ
 2F83 A 6,32,7.7,0.0008,1.6,0.0,Crystal Structure Of A Human Coagulation Factor

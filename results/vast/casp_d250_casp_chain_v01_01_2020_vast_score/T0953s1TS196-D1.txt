@@ -1,4 +1,3 @@
-
 2Q4I B ,49,11.0,0.0002,2.9,8.2,Ensemble Refinement Of The Protein Crystal Structure Of Allene Oxide Cyclase From Arabidopsis Thaliana At3g25770
 2CZT A ,50,10.9,10e-5.5,2.5,12.0,Lipocalin-Type Prostaglandin D Synthase
 2Q4I A ,53,10.8,0.0004,2.8,7.5,Ensemble Refinement Of The Protein Crystal Structure Of Allene Oxide Cyclase From Arabidopsis Thaliana At3g25770
@@ -59,7 +58,6 @@
 4ZHH C ,51,10.2,10e-4.3,2.5,5.9,Siderocalin-mediated Recognition And Cellular Uptake Of Actinides
 4ZHF E ,47,10.2,0.0002,2.3,8.5,Siderocalin-mediated Recognition And Cellular Uptake Of Actinides
 4ES7 A ,51,10.2,10e-4.3,2.6,7.8,Crystal Structure Of Protein Hc From Homo Sapiens At 2 Angstrom
-
 3U9P C ,49,10.2,0.0002,2.4,4.1,Crystal Structure Of Murine Siderocalin In Complex With An Fab Fragment
 1OBU B ,50,10.2,10e-4.3,2.4,6.0,Apocrustacyanin C1 Crystals Grown In Space And Earth Using Vapour Diffusion Geometry
 4ZHF B ,47,10.2,0.0002,2.2,8.5,Siderocalin-mediated Recognition And Cellular Uptake Of Actinides
@@ -120,7 +118,6 @@
 1E06 B ,50,9.9,0.0044,2.8,2.0,Porcine Odorant Binding Protein Complexed With 5-Methyl-2-(1-Methylethyl)phenol
 3HWD A ,49,9.9,0.0001,2.5,8.2,Crystal Structure Of Siderocalin (Ngal, Lipocalin 2) K125a-K Mutant Complexed With Ferric Enterobactinÿ
 3BY0 C ,49,9.9,0.0001,2.2,10.2,Crystal Structure Of Siderocalin (Ngal, Lipocalin 2) W79a- R81a Complexed With Ferric Enterobactin
-
 4ORS B ,47,9.9,0.0010,2.4,6.4,Threedimensional Structure Of The C65a Mutant Of Human Lipocalin-type Prostaglandin D Synthase Apo-form
 1KT3 A ,46,9.9,0.0092,2.5,8.7,Crystal Structure Of Bovine Holo-Rbp At Ph 2.0
 4ZFX C ,47,9.9,0.0004,2.4,8.5,Siderocalin-mediated Recognition And Cellular Uptake Of Actinides

@@ -1,4 +1,3 @@
-
 2DGO A ,48,7.7,10e-5.2,2.5,8.3,Solution Structure Of The Rna Binding Domain In Cytotoxic Granule-Associated Rna Binding Protein 1
 1X4C A ,52,7.6,10e-5.1,2.6,9.6,Solution Structure Of Rrm Domain In Splicing Factor 2ÿ
 2O3D A ,47,7.6,10e-5.1,2.4,8.5,Structure Of Human Sf2ASF RNA RECOGNITION MOTIF 2 (RRM2)
@@ -59,7 +58,6 @@
 4BS2 A 1,49,6.7,0.0005,2.3,6.1,Nmr Structure Of Human Tdp-43 Tandem Rrms In Complex With Ug-rich Rna
 2EK6 D ,37,6.6,0.0005,2.2,8.1,Crystal Structure Of Human Rna-Binding Protein 12
 2YTC A ,50,6.6,0.0006,2.8,12.0,Solution Structure Of Rna Binding Domain In Pre-Mrna- Splicing Factor Rbm22
-
 1H6K Y ,40,6.6,0.0006,2.1,7.5,Nuclear Cap Binding Complexÿ
 2VOO A 2,45,6.6,0.0024,2.2,8.9,Crystal Structure Of N-Terminal Domains Of Human La Protein Complexed With Rna Oligomer Uuuuuuuu
 2VOP A 2,46,6.6,0.0051,2.3,8.7,Crystal Structure Of N-Terminal Domains Of Human La Protein Complexed With Rna Oligomer Auuuu
@@ -120,7 +118,6 @@
 3X0C B 1,36,6.5,0.0304,1.9,16.7,Crystal Structure Of Pip4kiibeta I368a Complex With Gmp
 3X04 B 1,36,6.5,0.0304,1.9,16.7,Crystal Structure Of Pip4kiibeta Complex With Gmppnp
 1P27 D ,38,6.5,0.0012,2.1,10.5,Crystal Structure Of The Human Y14MAGOH COMPLEX
-
 1H2U Y ,42,6.5,0.0104,2.5,4.8,Structure Of The Human Nuclear Cap-Binding-Complex (Cbc) In Complex With A Cap Analogue M7gpppg
 3X06 A 1,35,6.5,0.0430,2.7,8.6,Crystal Structure Of Pip4kiibeta T201m Complex With Gmp
 1ZH5 B 2,44,6.5,0.0050,2.3,9.1,Structural Basis For Recognition Of Uuuoh 3'-Terminii Of Nascent Rna Pol Iii Transcripts By La Autoantigen

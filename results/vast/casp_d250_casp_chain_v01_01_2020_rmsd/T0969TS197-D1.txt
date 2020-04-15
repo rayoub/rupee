@@ -1,4 +1,3 @@
-
 5C0Q D 2,41,8.9,10e-4.4,1.3,2.4,Crystal Structure Of Zn Bound Cbsa From Thermotoga Neapolitana
 5EMM A 3,42,7.8,0.0463,1.3,9.5,Crystal Structure Of Prmt5:mep50 With Compound 15 And Sinefungin
 4W8C A 2,40,5.2,0.0059,1.4,7.5,Crystal Structure Of The Helical Domain Deleted Form Msra From Clostridium Oremlandii
@@ -59,7 +58,6 @@
 4C03 B 1,53,7.9,0.0483,1.7,11.3,Crystal Structure Of M. Musculus Protein Arginine Methyltransferase Prmt6 Reduced
 2PGW D 4,51,7.8,0.0002,1.7,5.9,Crystal Structure Of A Putative Muconate Cycloisomerase From Sinorhizobium Meliloti 1021
 2BBW A 1,63,8.6,0.0169,1.7,11.1,Crystal Structure Of Human Adenylate Kinase 4 (Ak4) In Complex With Diguanosine Pentaphosphateя
-
 3OPY E 1,44,6.5,0.0102,1.7,6.8,Crystal Structure Of Eukaryotic Phosphofructokinase From Yeast Pichia Pastoris With A Unique Gamma Subunit And Glyoxalase Subdomains In Alpha And Beta Subunitsÿ
 2PGW B 4,51,7.8,0.0003,1.7,5.9,Crystal Structure Of A Putative Muconate Cycloisomerase From Sinorhizobium Meliloti 1021
 4B8Y A 1,59,10.3,0.0025,1.7,8.5,Ferrichrome-Bound Fhud2
@@ -120,7 +118,6 @@
 3WST M 2,56,8.6,0.0024,1.8,7.1,Crystal Structure Of C.elegans Prmt7 In Complex With Sah(p31)
 2G5C D 1,84,11.4,10e-4.3,1.8,9.5,Crystal Structure Of Prephenate Dehydrogenase From Aquifex Aeolicus
 3JV7 B 2,69,9.9,0.0003,1.8,5.8,Structure Of Adh-A From Rhodococcus Ruberÿ
-
 3DZB B 1,84,11.0,0.0002,1.8,7.1,Crystal Structure Of Prephenate Dehydrogenase From Streptococcus Thermophilus
 3GGG C ,83,11.4,0.0035,1.8,9.6,The Crystal Structure Of A. Aeolicus Prephenate Dehydrogenase In Complex With Tyrosine And Nad+ÿ
 4LU9 C 2,40,6.2,0.0484,1.8,2.5,Crystal Structure Of E.coli Sbcd At 2.5 Angstrom Resolution

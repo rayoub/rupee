@@ -1,4 +1,3 @@
-
 2F7L B 4,34,6.3,0.0347,1.2,8.8,Crystal Structure Of Sulfolobus Tokodaii PhosphomannomutasePHOSPHOGLUCOMUTASE
 4N9J A 2,37,7.0,0.0417,1.3,5.4,Crystal Structure Of The Cryptic Polo Box Domain Of Human Plk4
 4N9J B 2,37,7.0,0.0441,1.3,5.4,Crystal Structure Of The Cryptic Polo Box Domain Of Human Plk4
@@ -59,7 +58,6 @@
 2LBH A ,29,7.7,0.0045,2.2,6.9,Solution Structure Of The Dimeric Form Of A Unliganded Bovine Neurophysin, Minimized Average Structureя
 3V79 K 1,22,7.7,0.0065,2.2,0.0,Structure Of Human Notch1 Transcription Complex Including Csl, Ram, Ank, And Maml-1 On Hes-1 Promoter Dna Sequenceя
 1YMP A ,23,7.2,0.0366,2.2,4.3,The Crystal Structure Of A Partial Mouse Notch-1 Ankyrin Domain: Repeats 4 Through 7 Preserve An Ankyrin Fold
-
 2R19 A ,68,11.6,10e-5.1,2.2,2.9,Crystal Structure Of The Periplasmic Lipopolysaccharide Transport Protein Lpta (Yhbn), Orthorhombic Form
 3FY6 B 1,39,6.3,0.0243,2.2,2.6,Structure From The Mobile Metagenome Of V. Cholerae. Integron Cassette Protein Vch_cass3ÿ
 2R1A D ,68,11.8,10e-5.0,2.2,2.9,Crystal Structure Of The Periplasmic Lipopolysaccharide Transport Protein Lpta (Yhbn), Trigonal Form
@@ -120,7 +118,6 @@
 4HBD A 2,26,7.5,0.0443,3.2,0.0,Crystal Structure Of Kank2 Ankyrin Repeats
 4ATZ F ,25,8.6,0.0031,3.2,8.0,Ad5 Knob In Complex With A Designed Ankyrin Repeat Protein
 3WPR B 3,39,8.3,0.0004,3.2,5.1,Acinetobacter Sp. Tol 5 Ataa N-terminal Half Of C-terminal Stalk Fused To Gcn4 Adaptors (cstalkn)
-
 4ATZ D ,30,8.9,0.0006,3.2,6.7,Ad5 Knob In Complex With A Designed Ankyrin Repeat Protein
 3WPR A 3,39,8.2,0.0005,3.3,5.1,Acinetobacter Sp. Tol 5 Ataa N-terminal Half Of C-terminal Stalk Fused To Gcn4 Adaptors (cstalkn)
 3WPR C 3,39,8.2,0.0006,3.3,5.1,Acinetobacter Sp. Tol 5 Ataa N-terminal Half Of C-terminal Stalk Fused To Gcn4 Adaptors (cstalkn)

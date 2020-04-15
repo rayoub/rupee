@@ -1,4 +1,3 @@
-
 2A6M A 1,13,3.5,0.0247,0.7,23.1,Crystal Structure Of The Ishp608 Transposaseя
 3CGU A 2,16,4.4,0.0254,0.8,6.2,Crystal Structure Of Unliganded Argos
 1QDB A 2,18,3.5,0.0247,0.8,5.6,Cytochrome C Nitrite Reductase
@@ -59,7 +58,6 @@
 3A2W D 2,17,4.7,0.0420,1.4,5.9,Peroxiredoxin (C50s) From Aeropytum Pernix K1 (Peroxide- Bound Form)я
 3A2X J 3,16,4.7,0.0453,1.4,6.2,Peroxiredoxin (C50s) From Aeropyrum Pernix K1 (Acetate-Bound Form)я
 3A5W A 2,16,4.7,0.0455,1.4,6.2,Peroxiredoxin (Wild Type) From Aeropyrum Pernix K1 (Reduced Form)я
-
 2E2G A 2,16,4.7,0.0350,1.4,6.2,Crystal Structure Of Archaeal Peroxiredoxin, Thioredoxin Peroxidase From Aeropyrum Pernix K1 (Pre-Oxidation Form)
 3A2X G 3,16,4.7,0.0402,1.4,6.2,Peroxiredoxin (C50s) From Aeropyrum Pernix K1 (Acetate-Bound Form)ÿ
 2ZCT G 2,16,4.7,0.0336,1.4,6.2,Oxidation Of Archaeal Peroxiredoxin Involves A Hypervalent Sulfur Intermediate
@@ -120,7 +118,6 @@
 4JGO B 1,44,6.3,0.0003,1.6,9.1,The Crystal Structure Of Sporulation Kinase D Sensor Domain From Bacillus Subtilis Subsp
 4R5O B 2,19,4.8,0.0284,1.6,21.1,Crystal Structure Of A Quinonprotein Alcohol Dehydrogenase-like Protein (bt1487) From Bacteroides Thetaiotaomicron Vpi-5482 At 2.64 A Resolution
 4CSG B 3,14,3.5,0.0247,1.6,21.4,Structural Insights Into Toscana Virus Rna Encapsidation
-
 4CSU C 1,21,4.8,0.0378,1.6,0.0,Cryo-em Structures Of The 50s Ribosome Subunit Bound With Obge
 5C5K A 2,37,6.2,0.0180,1.6,10.8,Structure Of The Pfr Form Of A Canonical Phytochrome
 5HL4 A 2,26,4.7,0.0422,1.6,3.8,Acoustic Injectors For Drop-on-demand Serial Femtosecond Crystallography

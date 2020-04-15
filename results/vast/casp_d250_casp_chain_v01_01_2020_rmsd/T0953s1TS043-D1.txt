@@ -1,4 +1,3 @@
-
 2QJR A 4,18,5.2,0.0083,0.7,0.0,Dipepdyl Peptidase Iv In Complex With Inhibitor Pzf
 2J55 H 3,23,5.1,0.0229,0.8,17.4,X-Ray Reduced Paraccocus Denitrificans Methylamine Dehydrogenase O-Quinone In Complex With Amicyaninÿ
 3OPM C 4,18,5.2,0.0066,0.8,0.0,Crystal Structure Of Human Dpp4 Bound To Tak-294ÿ
@@ -59,7 +58,6 @@
 4JX6 D 1,21,5.0,0.0397,1.0,0.0,Structure Of The Carboxyl Transferase Domain Y628a From Rhizobium Etli Pyruvate Carboxylase With Pyruvate
 2GBC A 7,18,5.0,0.0485,1.0,0.0,Native Dpp-Iv (Cd26) From Rat
 2VDW G 2,17,5.2,0.0126,1.0,5.9,Guanosine N7 Methyl-Transferase Sub-Complex (D1-D12) Of The Vaccinia Virus Mrna Capping Enzyme
-
 4CKB A 6,19,5.2,0.0136,1.0,5.3,Vaccinia Virus Capping Enzyme Complexed With Gtp And Sah
 4CKB D 6,19,5.2,0.0136,1.0,5.3,Vaccinia Virus Capping Enzyme Complexed With Gtp And Sah
 4MFE D 1,19,5.0,0.0326,1.0,0.0,Structure Of The Carboxyl Transferase Domain From Rhizobium Etli Pyruvate Carboxylase With 3-hydroxypyruvate
@@ -120,7 +118,6 @@
 2OAG D 4,19,5.2,0.0088,1.1,0.0,Crystal Structure Of Human Dipeptidyl Peptidase Iv (Dppiv) With Pyrrolidine-Constrained Phenethylamine 29g
 3CCB B 4,19,5.2,0.0066,1.1,0.0,Crystal Structure Of Human Dpp4 In Complex With A Benzimidazole Derivative
 4WJL A 6,18,5.0,0.0437,1.1,0.0,Structure Of Human Dipeptidyl Peptidase 10 (dppy): A Modulator Of Neuronal Kv4 Channels
-
 1IKG A 2,21,5.0,0.0406,1.1,4.8,Michaelis Complex Of Streptomyces R61 Dd-Peptidase With A Specific Peptidoglycan Substrate Fragment
 1ORV D 4,19,5.2,0.0116,1.1,5.3,Crystal Structure Of Porcine Dipeptidyl Peptidase Iv (Cd26)
 4A0L A 4,19,5.0,0.0398,1.1,5.3,Structure Of Ddb1-Ddb2-Cul4b-Rbx1 Bound To A 12 Bp Abasic Site Containing Dna-Duplexя

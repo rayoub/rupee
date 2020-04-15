@@ -1,4 +1,3 @@
-
 4JFR A 2,57,8.2,0.0470,1.5,7.0,Crystal Structure Of Anabolic Ornithine Carbamoyltransferase From Vibrio Vulnificus In Complex With Carbamoyl Phosphate
 4A26 A 2,65,8.3,0.0276,1.5,9.2,The Crystal Structure Of Leishmania Major N5,N10- Methylenetetrahydrofolate DehydrogenaseCYCLOHYDROLASE˙
 4KWT A 2,58,8.3,0.0382,1.5,6.9,Crystal Structure Of Unliganded Anabolic Ornithine Carbamoyltransferase From Vibrio Vulnificus At 1.86 A Resolution
@@ -59,7 +58,6 @@
 3EXG 6 2,90,11.6,0.0010,1.9,12.2,Crystal Structure Of The Pyruvate Dehydrogenase (E1p) Component Of Human Pyruvate Dehydrogenase Complex
 4A26 B 2,69,8.4,0.0142,1.9,10.1,The Crystal Structure Of Leishmania Major N5,N10- Methylenetetrahydrofolate DehydrogenaseCYCLOHYDROLASE˙
 3CLK A 1,73,10.6,0.0026,1.9,9.6,Crystal Structure Of A Transcription Regulator From Lactobacillus Plantarum
-
 1DTW B 2,91,11.1,0.0014,1.9,8.8,Human Branched-Chain Alpha-Keto Acid Dehydrogenase
 3EXH H 2,90,12.0,0.0003,1.9,12.2,Crystal Structure Of The Pyruvate Dehydrogenase (E1p) Component Of Human Pyruvate Dehydrogenase Complex
 1MB0 A ,73,10.6,0.0045,1.9,12.3,Crystal Structure Of The Response Regulator Divk At Ph 8.0 In Complex With Mn2+
@@ -120,7 +118,6 @@
 1KJ8 A 1,61,7.7,0.0379,1.9,11.5,Crystal Structure Of Purt-Encoded Glycinamide Ribonucleotide Transformylase In Complex With Mg-Atp And Garÿ
 3EXG T 2,91,11.5,0.0012,1.9,12.1,Crystal Structure Of The Pyruvate Dehydrogenase (E1p) Component Of Human Pyruvate Dehydrogenase Complex
 3EXF H 2,92,11.8,0.0006,1.9,12.0,Crystal Structure Of The Pyruvate Dehydrogenase (E1p) Component Of Human Pyruvate Dehydrogenase Complex
-
 4LZP C 1,74,10.7,0.0041,1.9,9.5,Structure Of The Tir Domain Of The Immunosuppressor Btpa From Brucella
 4D6Y A ,78,11.3,0.0007,1.9,9.0,Crystal Structure Of The Receiver Domain Of Ntrx From Brucella Abortus In Complex With Beryllofluoride And Magnesium
 1QP8 A 2,57,10.0,0.0156,1.9,12.3,Crystal Structure Of A Putative Formate Dehydrogenase From Pyrobaculum Aerophilum

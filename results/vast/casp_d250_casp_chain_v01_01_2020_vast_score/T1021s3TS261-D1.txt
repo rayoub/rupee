@@ -1,4 +1,3 @@
-
 4HUH F ,95,11.6,10e-6.9,2.2,13.7,Structure Of The Bacteriophage T4 Tail Terminator Protein, Gp15 (c- Terminal Truncation Mutant 1-261)
 4HUH A ,96,11.6,10e-6.9,2.2,13.5,Structure Of The Bacteriophage T4 Tail Terminator Protein, Gp15 (c- Terminal Truncation Mutant 1-261)
 4HUH E ,92,11.6,10e-6.9,2.2,13.0,Structure Of The Bacteriophage T4 Tail Terminator Protein, Gp15 (c- Terminal Truncation Mutant 1-261)
@@ -59,7 +58,6 @@
 3GB5 A ,87,9.2,10e-5.3,2.4,17.2,Crystal Structure Of Mus Musculus Iodotyrosine Deiodinase (Iyd) Bound To Fmnÿ
 3GH8 A ,103,9.2,0.0002,3.0,12.6,Crystal Structure Of Mus Musculus Iodotyrosine Deiodinase (Iyd) Bound To Fmn And Di-Iodotyrosine (Dit)ÿ
 3GFD B ,95,9.2,10e-4.3,2.6,14.7,Crystal Structure Of Mus Musculus Iodotyrosine Deiodinase (Iyd) Bound To Fmn And Mono-Iodotyrosine (Mit)ÿ
-
 3GH8 G ,93,9.2,0.0002,2.5,15.1,Crystal Structure Of Mus Musculus Iodotyrosine Deiodinase (Iyd) Bound To Fmn And Di-Iodotyrosine (Dit)ÿ
 4TTC A ,91,9.2,0.0002,2.3,14.3,Crystal Structure Of Homo Sapiens Iodotyrosine Deiodinase Bound To Fmn And Mono-iodotyrosine (mit)
 1YWQ A ,111,9.1,10e-4.8,3.3,7.2,Crystal Structure Of A Nitroreductase Family Protein From Bacillus Cereus Atcc 14579
@@ -120,7 +118,6 @@
 1YLR A ,94,8.9,10e-4.2,2.9,4.3,The Structure Of E.Coli Nitroreductase With Bound Acetate, Crystal Form 1
 3HZN E ,89,8.9,10e-4.1,2.5,4.5,Structure Of The Salmonella Typhimurium Nfnb Dihydropteridine Reductaseÿ
 3HZN A ,96,8.9,10e-4.1,2.8,4.2,Structure Of The Salmonella Typhimurium Nfnb Dihydropteridine Reductaseÿ
-
 1OO6 B ,92,8.9,10e-4.1,2.6,4.3,Nitroreductase From E-Coli In Complex With The Dinitrobenzamide Prodrug Sn23862
 3X21 H ,89,8.9,10e-4.1,2.5,4.5,Crystal Structure Of Escherichia Coli Nitroreductase Nfsb Mutant T41l/n71s/f124w
 1YKI C ,93,8.9,10e-4.2,2.7,4.3,The Structure Of E. Coli Nitroreductase Bound With The Antibiotic Nitrofurazone

@@ -1,4 +1,3 @@
-
 4EB6 A ,153,15.3,10e-5.4,3.7,7.8,Tubulin-Vinblastine: Stathmin-Like Complex
 4EB6 A 1,156,15.3,10e-7.1,4.0,9.6,Tubulin-Vinblastine: Stathmin-Like Complex
 5D2E A ,142,15.2,10e-4.2,3.1,4.2,Crystal Structure Of An N-terminal Ketoreductase From Macrolactin Assembly Line
@@ -59,7 +58,6 @@
 1SNY A ,137,14.4,10e-8.4,3.0,13.1,Carbonyl Reductase Sniffer Of D. Melanogaster
 3KSU B ,132,14.4,10e-8.6,2.9,9.1,Crystal Structure Of Short-Chain Dehydrogenase From Oenococcus Oeni Psu-1ÿ
 3KSU A ,134,14.4,10e-8.6,3.0,9.0,Crystal Structure Of Short-Chain Dehydrogenase From Oenococcus Oeni Psu-1ÿ
-
 4J1Q A 1,153,14.4,10e-6.7,3.9,9.2,Crystal Structure Of A Ketoreductase Domain From The Bacillaene Assembly Line
 3KSU A ,134,14.4,10e-8.6,3.0,9.0,Crystal Structure Of Short-Chain Dehydrogenase From Oenococcus Oeni Psu-1ÿ
 2VRC C ,133,14.4,10e-6.6,2.8,10.5,Crystal Structure Of The Citrobacter Sp. Triphenylmethane Reductase Complexed With Nadp(H)
@@ -120,7 +118,6 @@
 5COA B ,137,14.2,10e-5.2,2.9,10.2,Crystal Structure Of Iridoid Synthase At 2.2-angstrom Resolution
 3L6E B ,142,14.2,10e-8.6,3.0,10.6,Crystal Structure Of Putative Short Chain DehydrogenaseREDUCTASE FAMILY OXIDOREDUCTASE FROM Aeromonas Hydrophila Subsp. Hydrophila Atcc 7966ÿ
 5MDH A ,133,14.2,10e-4.8,3.2,7.5,Crystal Structure Of Ternary Complex Of Porcine Cytoplasmic Malate Dehydrogenase Alpha-Ketomalonate And Tnad At 2.4 Angstroms Resolution
-
 5DBF B ,136,14.2,10e-5.1,2.8,8.8,Crystal Structure Of Iridoid Synthase From Cantharanthus Roseus In Complex With Nadph
 2ZQZ D ,124,14.2,10e-5.1,3.0,10.5,R-State Structure Of Allosteric L-Lactate Dehydrogenase From Lactobacillus Caseiÿ
 3GUY A ,128,14.2,10e-8.1,2.7,5.5,Crystal Structure Of A Short-Chain DehydrogenaseREDUCTASE From Vibrio Parahaemolyticusÿ

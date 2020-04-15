@@ -1,4 +1,3 @@
-
 1EIY B 7,42,6.3,0.0079,1.1,9.5,The Crystal Structure Of Phenylalanyl-Trna Synthetase From Thermus Thermophilus Complexed With Cognate Trnapheÿ
 4CQ1 B 2,38,6.3,0.0366,1.2,7.9,Crystal Structure Of The Neuronal Isoform Of Ptb
 1X5T A ,32,6.5,0.0179,1.2,9.4,Solution Structure Of The Second Rrm Domain In Splicing Factor 3bÿ
@@ -59,7 +58,6 @@
 2ROG A ,37,6.1,0.0152,1.5,18.9,Solution Structure Of Thermus Thermophilus Hb8 Ttha1718 Protein In Living E. Coli Cellsÿ
 3LPY A ,38,6.5,0.0234,1.5,15.8,Crystal Structure Of The Rrm Domain Of Cyp33ÿ
 1A9N D ,44,6.5,0.0227,1.5,2.3,U2 B''A'RNA TERNARY COMPLEX
-
 5DDR D ,44,6.3,0.0404,1.5,0.0,L-glutamine Riboswitch Bound With L-glutamine Soaked With Cs+
 3LPY B ,38,6.5,0.0231,1.5,15.8,Crystal Structure Of The Rrm Domain Of Cyp33ÿ
 3CW1 7 1,41,6.3,0.0374,1.5,4.9,Crystal Structure Of Human Spliceosomal U1 Snrnpÿ
@@ -120,7 +118,6 @@
 1HL6 C ,41,6.8,0.0209,1.6,7.3,A Novel Mode Of Rbd-Protein Recognition In The Y14-Mago Complex
 4F02 D 1,38,6.4,0.0269,1.6,5.3,Crystal Structure Of The Pabp-Binding Site Of Eif4g In Complex With Rrm1-2 Of Pabp And Poly(A)
 2HYI B ,41,6.5,0.0171,1.6,9.8,Structure Of The Human Exon Junction Complex With A Trapped Dead-Box Helicase Bound To Rna
-
 1CVJ E 1,39,6.3,0.0372,1.6,5.1,X-Ray Crystal Structure Of The Poly(A)-Binding Protein In Complex With Polyadenylate Rna˙
 2RRB A ,40,6.6,0.0113,1.6,10.0,Refinement Of Rna Binding Domain In Human Tra2 Beta Protein˙
 2OIH A ,44,6.5,0.0310,1.6,0.0,Hepatitis Delta Virus Gemonic Ribozyme Precursor With C75u Mutation And Bound To Monovalent Cation Tl+

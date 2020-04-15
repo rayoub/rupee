@@ -1,4 +1,3 @@
-
 2Q45 A ,115,16.3,10e-7.6,3.2,11.3,Ensemble Refinement Of The Protein Crystal Structure Of Putative Tropinone Reductase From Arabidopsis Thaliana Gene At1g07440
 2Q45 A 1,110,16.3,10e-8.9,2.8,9.1,Ensemble Refinement Of The Protein Crystal Structure Of Putative Tropinone Reductase From Arabidopsis Thaliana Gene At1g07440
 1QRR A ,115,16.1,0.0002,3.2,13.9,Crystal Structure Of Sqd1 Protein Complex With Nad And Udp- Glucose
@@ -59,7 +58,6 @@
 3AWD D ,117,15.5,10e-6.9,3.3,13.7,Crystal Structure Of Gox2181я
 3ZV6 B ,117,15.5,10e-7.5,3.2,12.0,Crystal Structure Of Cis-Biphenyl-2,3-Dihydrodiol-2,3- Dehydrogenase (Bphb) From Pandoraea Pnomenusa Strain B- 356 Complex With Co-Enzyme Nad And Product Analog 4,4'- Dihydroxybiphenylя
 2Y99 B ,115,15.5,10e-7.5,3.2,13.0,Crystal Structure Of Cis-Biphenyl-2,3-Dihydrodiol-2,3-Dehydrogenase (Bphb)from Pandoraea Pnomenusa Strain B-356 Complex With Co-Enzyme Nadя
-
 4BMS C ,123,15.5,10e-6.9,3.3,13.0,Short Chain Alcohol Dehydrogenase From Ralstonia Sp. Dsm 6428 In Complex With Nadph
 3F4B A ,117,15.5,10e-6.3,2.8,10.3,Crystal Structure Of Plasmodium Berghei Enoyl-Acyl-Carrier- Protein Reductase With Triclosanÿ
 3RUE B ,121,15.5,0.0015,3.7,8.3,Alternative Analogs As Viable Substrates Of Udp-Hexose 4-Epimerasesÿ
@@ -120,7 +118,6 @@
 1A4U B ,109,15.3,10e-5.1,3.2,13.8,Alcohol Dehydrogenase From Drosophila Lebanonensis
 4IUY G ,114,15.3,10e-6.0,3.4,10.5,Crystal Structure Of Short-chain Dehydrogenase/reductase (apo-form) From A. Baumannii Clinical Strain Wm99c
 4I5F B ,120,15.3,10e-6.5,3.2,14.2,Crystal Structure Of Ralstonia Sp. Alcohol Dehydrogenase Mutant N15g, G37d, R38v, R39s
-
 1UH5 B ,113,15.3,10e-5.1,2.7,8.0,Crystal Structure Of Enoyl-Acp Reductase With Triclosan At 2.2angstroms
 1A9Y A ,122,15.3,0.0019,3.1,9.0,Udp-Galactose 4-Epimerase Mutant S124aY149F COMPLEXED WITH Udp-Glucose
 1KVQ A ,124,15.3,0.0020,3.2,8.9,Udp-Galactose 4-Epimerase Complexed With Udp-Phenol

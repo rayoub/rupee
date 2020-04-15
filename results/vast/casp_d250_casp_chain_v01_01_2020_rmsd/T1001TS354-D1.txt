@@ -1,4 +1,3 @@
-
 4DOF B 1,17,3.5,0.0493,0.7,0.0,Structures Of Vaccinia Virus Uracil-dna Glycosylase In New Crystal Forms
 4LZB C 1,19,3.5,0.0493,0.7,0.0,Uracil Binding Pocket In Vaccinia Virus Uracil Dna Glycosylase
 4LZB K 1,19,3.5,0.0493,0.7,0.0,Uracil Binding Pocket In Vaccinia Virus Uracil Dna Glycosylase
@@ -59,7 +58,6 @@
 3FPV D ,55,7.1,0.0050,1.5,10.9,Crystal Structure Of Hbpsÿ
 3KUC B ,30,5.5,0.0157,1.5,13.3,Complex Of Rap1a(E30dK31E)GDP WITH RAFRBD(A85KN71R)ÿ
 2KTX A ,16,4.8,0.0386,1.5,6.2,Complete Kaliotoxin From Androctonus Mauretanicus Mauretanicus, Nmr, 18 Structures
-
 2K5S A ,37,4.0,0.0446,1.5,5.4,Ymoa
 3U61 G 2,26,5.2,0.0026,1.5,3.8,Structure Of T4 Bacteriophage Clamp Loader Bound To Closed Clamp, Dna And Atp Analog And Adpÿ
 4R5O B 2,20,5.1,0.0080,1.5,20.0,Crystal Structure Of A Quinonprotein Alcohol Dehydrogenase-like Protein (bt1487) From Bacteroides Thetaiotaomicron Vpi-5482 At 2.64 A Resolution
@@ -120,7 +118,6 @@
 4R70 A 2,106,11.5,10e-7.6,1.8,7.5,Crystal Structure Of Bacteriophytochrome Rpbphp3 From Photosynthetic Bacterium R. Palustris
 4AEI A ,22,4.8,0.0348,1.8,9.1,Crystal Structure Of The Aahii-Fab4c1 Complexÿ
 3T1Q C ,60,7.3,0.0086,1.8,3.3,Mgla Bound To Gppnhp In Complex With Mglbÿ
-
 1ZNF A ,14,3.5,0.0493,1.8,7.1,Three-Dimensional Solution Structure Of A Single Zinc Finger Dna-Binding Domain
 2M7U A ,103,9.4,10e-4.2,1.8,9.7,Blue Light-absorbing State Of Tepixj, An Active Cyanobacteriochrome Domain
 3FPV C ,58,7.1,0.0061,1.8,10.3,Crystal Structure Of Hbpsÿ

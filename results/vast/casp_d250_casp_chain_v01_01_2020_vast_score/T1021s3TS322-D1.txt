@@ -1,4 +1,3 @@
-
 4ACV A ,104,11.3,10e-8.9,2.7,11.5,Listeria Monocytogenes Antigen B
 4HUD E ,95,10.9,10e-6.2,2.3,12.6,Structure Of The Bacteriophage T4 Tail Terminator Protein, Gp15
 3J2M E ,97,10.9,10e-6.2,2.5,12.4,The X-ray Structure Of The Gp15 Hexamer And The Model Of The Gp18 Protein Fitted Into The Cryo-em Reconstruction Of The Extended T4 Tail
@@ -59,7 +58,6 @@
 4XOQ B 1,108,9.1,10e-5.5,3.0,6.5,F420 Complex Of Coenzyme F420:l-glutamate Ligase (fbib) From Mycobacterium Tuberculosis (c-terminal Domain)
 4XOM B ,111,9.1,10e-5.2,3.0,4.5,Coenzyme F420:l-glutamate Ligase (fbib) From Mycobacterium Tuberculosis (c-terminal Domain)
 4XOM B 1,112,9.1,10e-5.5,3.0,5.4,Coenzyme F420:l-glutamate Ligase (fbib) From Mycobacterium Tuberculosis (c-terminal Domain)
-
 1VFR B ,96,9.1,10e-4.1,2.9,5.2,The Major Nad(P)h:fmn Oxidoreductase From Vibrio Fischeri
 4XOM C ,114,9.1,10e-5.5,3.1,5.3,Coenzyme F420:l-glutamate Ligase (fbib) From Mycobacterium Tuberculosis (c-terminal Domain)
 1YKI D ,91,9.1,10e-4.8,2.5,4.4,The Structure Of E. Coli Nitroreductase Bound With The Antibiotic Nitrofurazone
@@ -120,7 +118,6 @@
 1KQD A ,92,8.9,10e-4.3,2.8,5.4,Structure Of Nitroreductase From E. Cloacae Bound With 2e- Reduced Flavin Mononucleotide (Fmn)я
 2ISL C ,82,8.9,10e-4.9,2.1,8.5,Blub Bound To Reduced Flavin (Fmnh2) And Molecular Oxygen. (Clear Crystal Form)
 1OO5 B ,88,8.9,10e-4.4,2.4,4.5,Studies On The Nitroreductase Prodrug-Activating System. Crystal Structures Of The Enzyme Active Form And Complexes With The Inhibitor Dicoumarol And Dinitrobenzamide Prodrugs
-
 3HZN A ,107,8.9,10e-4.3,3.6,5.6,Structure Of The Salmonella Typhimurium Nfnb Dihydropteridine Reductaseÿ
 2IFA F ,93,8.9,10e-4.4,2.5,5.4,Crystal Structure Of The Putative Nitroreductase (Smu.260) In Complex With Fmn From Streptococcus Mutans, Northeast Structural Genomics Target Smr5
 2ISJ E ,90,8.8,10e-4.8,2.4,7.8,Blub Bound To Oxidized Fmn

@@ -1,4 +1,3 @@
-
 3JBQ 1 ,94,11.6,10e-7.8,2.7,14.9,Domain Organization And Conformational Plasticity Of The G Protein Effector, Pde6
 3JBQ 2 ,96,11.5,10e-7.6,3.0,14.6,Domain Organization And Conformational Plasticity Of The G Protein Effector, Pde6
 2ZMF B ,98,11.1,10e-6.0,2.5,10.2,Crystal Structure Of The C-Terminal Gaf Domain Of Human Phosphodiesterase 10a
@@ -59,7 +58,6 @@
 4IJG A 1,109,9.6,10e-4.4,2.8,11.9,Crystal Structure Of Monomeric Bacteriophytochrome
 3S7P A 1,111,9.6,10e-4.4,2.8,13.5,Crystal Structure Of The Infrared Fluorescent D207h Variant Of Deinococcus Bacteriophytochrome Chromophore Binding Domain At 1.72 Angstrom Resolutionÿ
 2K31 A ,95,9.6,10e-4.2,2.9,6.3,Solution Structure Of Cgmp-Binding Gaf Domain Of Phosphodiesterase 5
-
 4Q0H A 1,115,9.6,10e-4.4,2.9,13.0,Deinococcus Radiodurans Bphp Pas-gaf
 4O01 A ,117,9.6,0.0314,2.9,13.7,Crystal Structure Of D. Radiodurans Bacteriophytochrome Photosensory Core Module In Its Illuminated Form
 4O01 A 1,109,9.6,0.0002,2.7,13.8,Crystal Structure Of D. Radiodurans Bacteriophytochrome Photosensory Core Module In Its Illuminated Form
@@ -120,7 +118,6 @@
 3MF0 A ,105,9.1,0.0323,3.0,9.5,Crystal Structure Of Pde5a Gaf Domain (89-518)ÿ
 3MF0 A 1,102,9.1,0.0002,2.9,9.8,Crystal Structure Of Pde5a Gaf Domain (89-518)ÿ
 4Y5F A ,115,9.1,0.0072,3.0,13.0,Pas-gaf Fragment From Deinococcus Radiodurans Bphp Assembled With Bv - Y307s, High Dose
-
 3CI6 A ,92,9.1,10e-4.3,2.3,14.1,Crystal Structure Of The Gaf Domain From Acinetobacter Phosphoenolpyruvate-Protein Phosphotransferase
 3S7N A ,113,9.1,0.0080,3.0,13.3,Crystal Structure Of The Alternate His 207 Conformation Of The Infrared Fluorescent D207h Variant Of Deinococcus Bacteriophytochrome Chromophore Binding Domain At 2.45 Angstrom Resolutionÿ
 4E04 A ,107,9.0,0.0192,2.7,8.4,Rpbphp2 Chromophore-Binding Domain Crystallized By Homologue-Directed Mutagenesis

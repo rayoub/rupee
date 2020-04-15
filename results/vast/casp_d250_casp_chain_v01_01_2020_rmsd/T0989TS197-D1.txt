@@ -1,4 +1,3 @@
-
 1RM6 B 2,18,5.2,0.0030,0.8,5.6,Structure Of 4-Hydroxybenzoyl-Coa Reductase From Thauera Aromatica
 1N62 F 2,17,5.1,0.0460,0.8,17.6,Crystal Structure Of The Mo,Cu-Co Dehydrogenase (Codh), N- Butylisocyanide-Bound State
 2C50 A ,18,5.2,0.0445,0.8,5.6,Ms2-rna Hairpin (a -5) Complex
@@ -59,7 +58,6 @@
 1IAK B 1,21,4.9,0.0043,0.9,0.0,Histocompatibility Antigen I-Ak
 1JL4 B 1,21,4.9,0.0043,0.9,0.0,Crystal Structure Of The Human Cd4 N-Terminal Two Domain Fragment Complexed To A Class Ii Mhc Molecule
 1HDM A 1,16,4.9,0.0043,0.9,0.0,Histocompatibility Antigen Hla-Dm
-
 2BS1 C ,21,5.2,0.0369,0.9,9.5,Ms2 (N87ae89k Mutant) - Qbeta Rna Hairpin Complexÿ
 2BS1 C 1,21,5.2,0.0369,0.9,9.5,Ms2 (N87ae89k Mutant) - Qbeta Rna Hairpin Complexÿ
 1ZDI C ,21,5.2,0.0308,0.9,9.5,Rna Bacteriophage Ms2 Coat ProteinRNA COMPLEX
@@ -120,7 +118,6 @@
 1ZDH C 1,21,5.2,0.0320,1.0,9.5,Ms2 Coat ProteinRNA COMPLEX
 1ZSE C ,21,5.2,0.0333,1.0,9.5,Rna Stemloop From Bacteriophage Qbeta Complexed With An N87s Mutant Ms2 Capsid
 1ZSE C 1,21,5.2,0.0333,1.0,9.5,Rna Stemloop From Bacteriophage Qbeta Complexed With An N87s Mutant Ms2 Capsid
-
 2VDW C 2,18,4.5,0.0181,1.0,0.0,Guanosine N7 Methyl-Transferase Sub-Complex (D1-D12) Of The Vaccinia Virus Mrna Capping Enzyme
 2VDW A 2,18,4.5,0.0184,1.0,0.0,Guanosine N7 Methyl-Transferase Sub-Complex (D1-D12) Of The Vaccinia Virus Mrna Capping Enzyme
 2IZN C ,21,5.2,0.0308,1.0,9.5,Ms2-Rna Hairpin (G-10) Complex

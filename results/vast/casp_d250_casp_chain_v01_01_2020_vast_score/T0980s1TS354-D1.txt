@@ -1,4 +1,3 @@
-
 2QYF C 2,52,7.4,10e-4.8,2.8,7.7,Crystal Structure Of The Mad2P31(COMET)MAD2-Binding Peptide Ternary Complex
 4GK5 B ,54,7.3,0.0011,2.6,20.4,Crystal Structure Of Human Rev3-rev7-rev1-polkappa Complex
 3ABD A ,61,7.3,0.0004,2.7,18.0,Structure Of Human Rev7 In Complex With A Human Rev3 Fragment In A Monoclinic Crystalя
@@ -59,7 +58,6 @@
 5HJ3 F 2,25,5.2,0.0022,1.3,12.0,Crystal Structure Of Host-primed Ebola Virus Gp, Gpcl
 4ZXB D 2,25,5.2,0.0190,1.3,12.0,Structure Of The Human Insulin Receptor Ectodomain, Irdeltabeta Construct, In Complex With Four Fab Molecules
 4RA1 A 3,24,5.2,0.0227,0.9,4.2,Structure Of A Periplasmic Binding Protein
-
 4ZED A 3,24,5.2,0.0227,0.9,4.2,Pbp Acca From A. Tumefaciens C58 In Complex With Agrocinopine-3'-o- Benzoate
 4WNQ A 2,21,5.2,0.0022,1.4,4.8,The Molecular Bases Of Delta/alpha-beta T-cell Mediated Antigen Recognition
 4WNQ C 2,21,5.2,0.0022,1.4,4.8,The Molecular Bases Of Delta/alpha-beta T-cell Mediated Antigen Recognition
@@ -120,7 +118,6 @@
 1QPK A 2,26,5.1,0.0460,1.7,0.0,Mutant (D193g) Maltotetraose-Forming Exo-Amylase In Complex With Maltotetraose
 4KMU B 1,27,5.1,0.0437,1.5,0.0,X-ray Crystal Structure Of The Escherichia Coli Rna Polymerase In Complex With Rifampin
 3TVI L 2,22,5.1,0.0444,1.0,0.0,Crystal Structure Of Clostridium Acetobutylicum Aspartate Kinase (Caak): An Important Allosteric Enzyme For Industrial Amino Acids Productionÿ
-
 4S20 F 1,29,5.1,0.0443,1.4,0.0,Structural Basis For Transcription Reactivation By Rapa
 5BYH A 1,27,5.1,0.0446,1.5,0.0,Crystal Structure Of Escherichia Coli Rna Polymerase - Sigma54 Holoenzyme Complex
 4S20 A 1,29,5.1,0.0452,1.4,0.0,Structural Basis For Transcription Reactivation By Rapa

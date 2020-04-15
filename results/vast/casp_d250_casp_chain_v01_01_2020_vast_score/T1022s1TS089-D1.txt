@@ -1,4 +1,3 @@
-
 2ED4 A ,72,12.2,10e-7.8,2.6,12.5,Crystal Structure Of Flavin Reductase Hpac Complexed With Fad And Nad
 2ECR A ,75,12.1,10e-7.7,2.6,12.0,Crystal Structure Of The Ligand-Free Form Of The Flavin Reductase Component (Hpac) Of 4-Hydroxyphenylacetate 3- Monooxygenase
 2ECU A ,72,11.9,10e-7.4,2.4,12.5,Crystal Structure Of Flavin Reductase Component (Hpac) Of 4- Hydroxyphenylacetate 3-Monooxygenase
@@ -59,7 +58,6 @@
 3RH7 B 1,74,10.6,10e-4.3,2.3,13.5,Crystal Structure Of A Hypothetical Oxidoreductase (Sma0793) From Sinorhizobium Meliloti 1021 At 3.00 A Resolutionÿ
 3RH7 A ,72,10.6,0.0040,2.2,13.9,Crystal Structure Of A Hypothetical Oxidoreductase (Sma0793) From Sinorhizobium Meliloti 1021 At 3.00 A Resolutionÿ
 3RH7 A 1,73,10.6,10e-4.3,2.3,13.7,Crystal Structure Of A Hypothetical Oxidoreductase (Sma0793) From Sinorhizobium Meliloti 1021 At 3.00 A Resolutionÿ
-
 3CDD F ,71,10.6,0.0230,2.0,14.1,Crystal Structure Of Prophage Muso2, 43 Kda Tail Protein From Shewanella Oneidensis
 3CDD F 1,71,10.6,10e-4.1,2.0,15.5,Crystal Structure Of Prophage Muso2, 43 Kda Tail Protein From Shewanella Oneidensis
 1WGB A ,71,10.6,10e-4.6,2.3,11.3,Crystal Structure Of A Probable Flavoprotein From Thermus Thermophilus Hb8
@@ -120,7 +118,6 @@
 4F07 A ,77,9.8,0.0003,2.6,7.8,Structure Of The Styrene Monooxygenase Flavin Reductase (smob) From Pseudomonas Putida S12
 4F07 B ,73,9.8,0.0003,2.2,8.2,Structure Of The Styrene Monooxygenase Flavin Reductase (smob) From Pseudomonas Putida S12
 2WZP R 1,58,9.8,0.0001,2.0,10.3,Structures Of Lactococcal Phage P2 Baseplate Shed Light On A Novel Mechanism Of Host Attachment And Activation In Siphoviridaeÿ
-
 4Y9I A ,66,9.8,10e-5.1,2.8,6.1,Structure Of F420-h2 Dependent Reductase (fdr-a) Msmeg_2027
 2R6V A ,75,9.8,0.0012,2.5,6.7,Crystal Structure Of Fmn-Binding Protein (Np_142786.1) From Pyrococcus Horikoshii At 1.35 A Resolution
 4XJ2 A ,74,9.8,0.0003,2.3,8.1,Fera - Nadh:fmn Oxidoreductase From Paracoccus Denitrificans In Complex With Fmn

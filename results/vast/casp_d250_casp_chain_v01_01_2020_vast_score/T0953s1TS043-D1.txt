@@ -1,4 +1,3 @@
-
 4I3D A ,37,8.6,10e-5.2,2.0,8.1,Crystal Structure Of Fluorescent Protein Unag N57a Mutant
 4I3C A ,31,8.6,10e-4.8,1.3,0.0,Crystal Structure Of Fluorescent Protein Unag N57q Mutant
 4I3D D ,37,8.6,10e-4.8,2.0,8.1,Crystal Structure Of Fluorescent Protein Unag N57a Mutant
@@ -59,7 +58,6 @@
 1C8Z A ,38,8.0,0.0126,1.4,10.5,C-Terminal Domain Of Mouse Brain Tubby Protein
 4O4O A ,35,8.0,0.0082,1.5,14.3,Crystal Structure Of Phycobiliprotein Lyase Cpct
 4O4S G ,35,8.0,0.0084,1.4,14.3,Crystal Structure Of Phycobiliprotein Lyase Cpct Complexed With Phycocyanobilin (pcb)
-
 4AZM A 2,38,8.0,10e-4.9,2.1,5.3,Human Epidermal Fatty Acid-binding Protein (fabp5) In Complex With The Inhibitor Bms-309413
 4AZM A ,38,8.0,0.0004,2.1,5.3,Human Epidermal Fatty Acid-binding Protein (fabp5) In Complex With The Inhibitor Bms-309413
 4O4S C ,35,8.0,0.0089,1.4,14.3,Crystal Structure Of Phycobiliprotein Lyase Cpct Complexed With Phycocyanobilin (pcb)
@@ -120,7 +118,6 @@
 4H6C L ,34,7.9,0.0136,2.1,8.8,Crystal Structure Of The Allene Oxide Cyclase 1 From Physcomitrella Patens
 4WBK A ,36,7.9,0.0013,2.1,8.3,The 1.37 Angstrom X-ray Structure Of The Human Heart Fatty Acid- Binding Protein Complexed With Stearic Acid
 3SWJ A ,33,7.9,0.0083,1.6,3.0,Crystal Structure Of Campylobacter Jejuni Chuzÿ
-
 3SWJ A 2,33,7.9,0.0013,1.6,3.0,Crystal Structure Of Campylobacter Jejuni Chuzя
 4O4S I ,39,7.9,0.0142,2.3,7.7,Crystal Structure Of Phycobiliprotein Lyase Cpct Complexed With Phycocyanobilin (pcb)
 4H69 A ,33,7.9,0.0227,2.0,3.0,Crystal Structure Of The Allene Oxide Cyclase 2 From Physcomitrella Patens Complexed With Substrate Analog
