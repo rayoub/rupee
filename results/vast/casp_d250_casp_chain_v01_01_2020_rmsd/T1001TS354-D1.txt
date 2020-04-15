@@ -1,0 +1,183 @@
+
+4DOF B 1,17,3.5,0.0493,0.7,0.0,Structures Of Vaccinia Virus Uracil-dna Glycosylase In New Crystal Forms
+4LZB C 1,19,3.5,0.0493,0.7,0.0,Uracil Binding Pocket In Vaccinia Virus Uracil Dna Glycosylase
+4LZB K 1,19,3.5,0.0493,0.7,0.0,Uracil Binding Pocket In Vaccinia Virus Uracil Dna Glycosylase
+1Y7M B 1,12,3.5,0.0370,0.8,16.7,Crystal Structure Of The B. Subtilis Ykud Protein At 2 A Resolution
+1Y7M A 1,12,3.5,0.0495,0.8,16.7,Crystal Structure Of The B. Subtilis Ykud Protein At 2 A Resolution
+4DOF A 1,12,3.5,0.0493,0.9,16.7,Structures Of Vaccinia Virus Uracil-dna Glycosylase In New Crystal Forms
+4LZB I 1,12,3.5,0.0493,1.0,16.7,Uracil Binding Pocket In Vaccinia Virus Uracil Dna Glycosylase
+4LZB L 1,22,3.5,0.0493,1.1,4.5,Uracil Binding Pocket In Vaccinia Virus Uracil Dna Glycosylase
+4LZB J 1,24,3.5,0.0493,1.1,8.3,Uracil Binding Pocket In Vaccinia Virus Uracil Dna Glycosylase
+4LZB A 1,24,3.5,0.0493,1.1,8.3,Uracil Binding Pocket In Vaccinia Virus Uracil Dna Glycosylase
+4LZB H 1,24,3.5,0.0493,1.1,8.3,Uracil Binding Pocket In Vaccinia Virus Uracil Dna Glycosylase
+1C55 A ,17,5.2,0.0049,1.1,23.5,Nmr Solution Structure Of Butantoxin
+4LZB E 1,25,3.5,0.0493,1.1,8.0,Uracil Binding Pocket In Vaccinia Virus Uracil Dna Glycosylase
+4DOF D 1,23,3.5,0.0493,1.1,8.7,Structures Of Vaccinia Virus Uracil-dna Glycosylase In New Crystal Forms
+4QCA A 1,24,3.5,0.0493,1.1,8.3,Crystal Structure Of Vaccinia Virus Uracil-dna Glycosylase Mutant R167ad4
+4QCB B 1,24,3.5,0.0493,1.1,8.3,Protein-dna Complex Of Vaccinia Virus D4 With Double-stranded Non- Specific Dna
+4QCB A 1,24,3.5,0.0493,1.2,8.3,Protein-dna Complex Of Vaccinia Virus D4 With Double-stranded Non- Specific Dna
+4DOF C 1,24,3.5,0.0493,1.2,8.3,Structures Of Vaccinia Virus Uracil-dna Glycosylase In New Crystal Forms
+4DOG A 1,24,3.5,0.0493,1.2,8.3,Structures Of Vaccinia Virus Uracil-dna Glycosylase In New Crystal Forms
+1TSK A ,16,5.2,0.0052,1.2,6.2,Scorpion Toxin (Ts Kappa) From Tityus Serrulatus Active On Small Conductance Potassium Channel, Nmr, 30 Structures
+2QFI A 2,29,5.1,0.0261,1.2,6.9,Structure Of The Zinc Transporter Yiip
+2QFI B 2,29,5.1,0.0261,1.2,6.9,Structure Of The Zinc Transporter Yiip
+1C56 A ,17,4.9,0.0269,1.2,23.5,Nmr Solution Structure Of Butantoxin
+4YGM B 1,24,3.5,0.0493,1.2,8.3,Vaccinia Virus His-d4/a20(1-50) In Complex With Uracil
+5EI9 E 3,14,3.5,0.0493,1.3,7.1,Human Prdm9 Allele-a Znf Domain With Associated Recombination Hotspot Dna Sequence I
+2YZT A ,34,5.1,0.0160,1.3,8.8,Crystal Structure Of Uncharacterized Conserved Protein From Thermus Thermophilus Hb8
+1J5J A ,17,4.8,0.0337,1.3,11.8,Solution Structure Of Herg-Specific Scorpion Toxin Bekm-1
+4LZB F 1,24,3.5,0.0493,1.3,8.3,Uracil Binding Pocket In Vaccinia Virus Uracil Dna Glycosylase
+4JTA Y ,22,5.1,0.0080,1.3,13.6,Crystal Structure Of Kv1.2-2.1 Paddle Chimera Channel In Complex With Charybdotoxin
+4M8R A 2,31,4.9,0.0174,1.4,6.5,Crystal Structure Of A Hypothetical Protein (baccac_01631) From Bacteroides Caccae Atcc 43185 At 2.50 A Resolution
+4LZB B 1,26,3.5,0.0493,1.4,7.7,Uracil Binding Pocket In Vaccinia Virus Uracil Dna Glycosylase
+2CRD A ,21,4.7,0.0492,1.4,14.3,Analysis Of Side-Chain Organization On A Refined Model Of Charybdotoxin: Structural And Functional Implications
+4ONX D ,42,6.9,0.0160,1.4,7.1,2.8 Angstrom Crystal Structure Of Sensor Domain Of Histidine Kinase From Clostridium Perfringens
+4ONX A ,42,7.0,0.0147,1.4,7.1,2.8 Angstrom Crystal Structure Of Sensor Domain Of Histidine Kinase From Clostridium Perfringens
+4CSU C 1,22,4.8,0.0379,1.4,4.5,Cryo-em Structures Of The 50s Ribosome Subunit Bound With Obge
+2EMG A ,15,3.5,0.0493,1.4,13.3,Solution Structure Of The C2h2 Type Zinc Finger (Region 463- 495) Of Human Zinc Finger Protein 484
+4RCN B 3,16,5.1,0.0251,1.4,6.2,Structure And Function Of A Single-chain, Multi-domain Long-chain Acyl-coa Carboxylase
+3CWF A ,43,7.0,0.0140,1.4,14.0,Crystal Structure Of Pas Domain Of Two-Component Sensor Histidine Kinase
+3FPV H ,54,7.0,0.0064,1.4,11.1,Crystal Structure Of Hbpsÿ
+3FPW A ,54,7.1,0.0407,1.4,11.1,Crystal Structure Of Hbps With Bound Ironÿ
+3CWF B ,43,6.9,0.0068,1.4,14.0,Crystal Structure Of Pas Domain Of Two-Component Sensor Histidine Kinase
+3FPV B ,54,7.1,0.0052,1.4,11.1,Crystal Structure Of Hbpsÿ
+3FPV F ,54,7.0,0.0178,1.4,11.1,Crystal Structure Of Hbpsÿ
+3FPV A ,54,6.9,0.0100,1.4,11.1,Crystal Structure Of Hbpsÿ
+4A4Y A 1,26,4.8,0.0339,1.4,3.8,Structure Of The Cytosolic Domain Of The Shigella T3ss Component Mxigÿ
+4BA1 I 3,25,5.0,0.0196,1.4,12.0,Archaeal Exosome (Rrp4-Rrp41(D182a)-Rrp42) Bound To Inorganic Phosphate
+4ONX B ,42,6.9,0.0161,1.5,9.5,2.8 Angstrom Crystal Structure Of Sensor Domain Of Histidine Kinase From Clostridium Perfringens
+3ODV A ,16,4.9,0.0296,1.5,6.2,X-Ray Structure Of Kaliotoxin By Racemic Protein Crystallographyÿ
+4ONX F ,43,7.0,0.0123,1.5,11.6,2.8 Angstrom Crystal Structure Of Sensor Domain Of Histidine Kinase From Clostridium Perfringens
+2YKR C 1,33,5.1,0.0423,1.5,21.2,30s Ribosomal Subunit With Rsga Bound In The Presence Of Gmppnpÿ
+4ONX E ,43,7.0,0.0123,1.5,11.6,2.8 Angstrom Crystal Structure Of Sensor Domain Of Histidine Kinase From Clostridium Perfringens
+3PT6 A 4,12,3.5,0.0370,1.5,0.0,Crystal Structure Of Mouse Dnmt1(650-1602) In Complex With Dnaÿ
+1VNB A ,24,4.8,0.0332,1.5,4.2,Proton Nuclear Magnetic Resonance And Distance Geometry(Slash)simulated Annealing Studies On The Variant- 1 Neurotoxin From The New World Scorpion Centruroides Sculpturatus Ewing
+3C9A B 1,27,5.1,0.0355,1.5,3.7,High Resolution Crystal Structure Of Argos Bound To The Egf Domain Of Spitz
+1YIT S ,30,6.2,0.0061,1.5,10.0,Crystal Structure Of Virginiamycin M And S Bound To The 50s Ribosomal Subunit Of Haloarcula Marismortuiÿ
+4R5O D 2,20,5.1,0.0066,1.5,20.0,Crystal Structure Of A Quinonprotein Alcohol Dehydrogenase-like Protein (bt1487) From Bacteroides Thetaiotaomicron Vpi-5482 At 2.64 A Resolution
+4BMW A ,53,7.3,0.0026,1.5,9.4,Crystal Structure Of The Streptomyces Reticuli Hbps E78d, E81d Double Mutant
+3FPV D ,55,7.1,0.0050,1.5,10.9,Crystal Structure Of Hbpsÿ
+3KUC B ,30,5.5,0.0157,1.5,13.3,Complex Of Rap1a(E30dK31E)GDP WITH RAFRBD(A85KN71R)ÿ
+2KTX A ,16,4.8,0.0386,1.5,6.2,Complete Kaliotoxin From Androctonus Mauretanicus Mauretanicus, Nmr, 18 Structures
+
+2K5S A ,37,4.0,0.0446,1.5,5.4,Ymoa
+3U61 G 2,26,5.2,0.0026,1.5,3.8,Structure Of T4 Bacteriophage Clamp Loader Bound To Closed Clamp, Dna And Atp Analog And Adpÿ
+4R5O B 2,20,5.1,0.0080,1.5,20.0,Crystal Structure Of A Quinonprotein Alcohol Dehydrogenase-like Protein (bt1487) From Bacteroides Thetaiotaomicron Vpi-5482 At 2.64 A Resolution
+4G0N B ,30,5.5,0.0475,1.5,13.3,Crystal Structure Of Wt H-ras-gppnhp Bound To The Rbd Of Raf Kinase
+4NKP C ,54,7.6,0.0037,1.5,11.1,Crystal Structure Of A Hypothetical Protein (despig_02683) From Desulfovibrio Piger Atcc 29098 At 1.24 A Resolution
+3MHS C 1,12,3.5,0.0498,1.5,16.7,Structure Of The Saga Ubp8SGF11SUS1SGF73 DUB MODULE BOUND To Ubiquitin Aldehydeÿ
+2XXS A 1,25,4.8,0.0305,1.5,4.0,Solution Structure Of The N-Terminal Domain Of The Shigella Type Iii Secretion Protein Mxigÿ
+4R5O A 2,21,5.1,0.0065,1.5,19.0,Crystal Structure Of A Quinonprotein Alcohol Dehydrogenase-like Protein (bt1487) From Bacteroides Thetaiotaomicron Vpi-5482 At 2.64 A Resolution
+3PQ1 A 2,28,5.2,0.0026,1.5,7.1,Crystal Structure Of Human Mitochondrial Poly(A) Polymerase (Papd1)ÿ
+3NY5 C ,33,5.6,0.0108,1.5,9.1,Crystal Structure Of The Rbd Domain Of SerineTHREONINE-Protein Kinase B-Raf From Homo Sapiens. Northeast Structural Genomics Consortium Target Hr4694fÿ
+2BMF A 3,18,3.5,0.0493,1.6,0.0,Dengue Virus Rna Helicase At 2.4a
+1Q82 T ,32,6.2,0.0051,1.6,9.4,Crystal Structure Of Cc-Puromycin Bound To The A-Site Of The 50s Ribosomal Subunit
+1KD1 T ,32,6.2,0.0057,1.6,9.4,Co-Crystal Structure Of Spiramycin Bound To The 50s Ribosomal Subunit Of Haloarcula Marismortui
+2IGG A ,30,5.7,0.0085,1.6,0.0,Determination Of The Solution Structures Of Domains Ii And Iii Of Protein G From Streptococcus By 1h Nmr
+1DEG A 1,12,3.5,0.0370,1.6,8.3,The Linker Of Des-Glu84 Calmodulin Is Bent As Seen In The Crystal Structure
+4NKP D ,52,7.7,0.0032,1.6,11.5,Crystal Structure Of A Hypothetical Protein (despig_02683) From Desulfovibrio Piger Atcc 29098 At 1.24 A Resolution
+4YLO P 13,28,5.0,0.0131,1.6,7.1,E. Coli Transcription Initiation Complex - 16-bp Spacer And 4-nt Rna
+2CK4 A ,22,4.9,0.0293,1.6,4.5,Solution Structure Of Aosk1
+1BAH A ,20,4.8,0.0473,1.6,10.0,A Two Disulfide Derivative Of Charybdotoxin With Disulfide 13-33 Replaced By Two Alpha-Aminobutyric Acids, Nmr, 30 Structures
+1WV8 A ,38,5.8,0.0034,1.6,13.2,Crystal Structure Of Hypothetical Protein Ttha1013 From An Extremely Thermophilic Bacterium Thermus Thermophilus Hb8
+2LY6 A ,27,4.7,0.0497,1.6,7.4,Refined Solution Structure Of Recombinant Brazzein At Low Temperature
+2W1R A ,62,9.3,10e-4.1,1.6,17.7,Crystal Structure Of The C-Terminal Domain Of B. Subtilis Spovt
+4NKP A ,51,7.7,0.0032,1.6,9.8,Crystal Structure Of A Hypothetical Protein (despig_02683) From Desulfovibrio Piger Atcc 29098 At 1.24 A Resolution
+3NY5 D ,33,5.6,0.0287,1.6,9.1,Crystal Structure Of The Rbd Domain Of SerineTHREONINE-Protein Kinase B-Raf From Homo Sapiens. Northeast Structural Genomics Consortium Target Hr4694fÿ
+2JEA I 3,26,5.1,0.0155,1.6,11.5,Structure Of A 9-Subunit Archaeal Exosome Bound To Rnaÿ
+4R5O C 2,21,5.1,0.0086,1.6,19.0,Crystal Structure Of A Quinonprotein Alcohol Dehydrogenase-like Protein (bt1487) From Bacteroides Thetaiotaomicron Vpi-5482 At 2.64 A Resolution
+2JE6 I 3,26,5.1,0.0132,1.6,11.5,Structure Of A 9-Subunit Archaeal Exosome
+5FKV A 10,20,5.0,0.0197,1.6,5.0,Cryo-em Structure Of The E. Coli Replicative Dna Polymerase Complex Bound To Dna (dna Polymerase Iii Alpha, Beta, Epsilon, Tau Complex)
+3R7W C 2,54,8.6,0.0003,1.7,13.0,Crystal Structure Of Gtr1p-Gtr2p Complexÿ
+4PHT X 3,18,5.1,0.0499,1.7,11.1,Atpase Gspe In Complex With The Cytoplasmic Domain Of Gspl From The Vibrio Vulnificus Type Ii Secretion System
+4LRZ F 1,54,7.6,0.0237,1.7,18.5,Crystal Structure Of The E.coli Dhar(n)-dhal Complex
+2WMP A 2,34,6.2,0.0349,1.7,2.9,Structure Of The E. Coli Chaperone Papd In Complex With The Pilin Domain Of The Papgii Adhesinÿ
+3NY5 B ,34,5.5,0.0381,1.7,8.8,Crystal Structure Of The Rbd Domain Of SerineTHREONINE-Protein Kinase B-Raf From Homo Sapiens. Northeast Structural Genomics Consortium Target Hr4694fÿ
+1QPX A 2,35,6.2,0.0289,1.7,2.9,Crystal Structures Of Self-Capping Papd Chaperone Homodimers
+4CBV E 2,26,5.8,0.0280,1.7,11.5,X-ray Structure Of Full-length Come From Streptococcus Pneumoniae
+3E0Y A ,88,10.0,10e-5.1,1.7,11.4,The Crystal Structure Of A Conserved Domain From A Protein Of Geobacter Sulfurreducens Pca
+3L7Z C 3,30,5.0,0.0284,1.7,10.0,Crystal Structure Of The S. Solfataricus Archaeal Exosomeÿ
+4E3C B 4,36,5.4,0.0220,1.7,2.8,X-ray Crystal Structure Of Human Ikk2 In An Active Conformation
+2W07 A 2,34,6.2,0.0326,1.7,2.9,Structural Determinants Of Polymerization Reactivity Of The P Pilus Adaptor Subunit Papf
+4A3M A 13,16,5.1,0.0094,1.7,0.0,Rna Polymerase Ii Initial Transcribing Complex With A 4nt Dna-Rna Hybrid And Soaked With Ampcppÿ
+2WW9 K ,37,6.5,0.0209,1.7,10.8,Cryo-Em Structure Of The Active Yeast Ssh1 Complex Bound To The Yeast 80s Ribosomeÿ
+4E3C F 4,36,5.4,0.0217,1.7,2.8,X-ray Crystal Structure Of Human Ikk2 In An Active Conformation
+4E3C D 4,36,5.4,0.0223,1.7,2.8,X-ray Crystal Structure Of Human Ikk2 In An Active Conformation
+4E3C C 4,36,5.4,0.0219,1.7,2.8,X-ray Crystal Structure Of Human Ikk2 In An Active Conformation
+3DPA A 2,35,6.1,0.0491,1.7,2.9,Crystal Structure Of Chaperone Protein Papd Reveals An Immunoglobulin Fold
+2WWA K ,41,6.4,0.0283,1.7,14.6,Cryo-Em Structures Of Idle Yeast Ssh1 Complex Bound To The Yeast 80s Ribosomeÿ
+1QPP B 2,35,6.2,0.0341,1.7,2.9,Crystal Structures Of Self Capping Papd Chaperone Homodimers
+4E3C E 4,36,5.4,0.0223,1.7,2.8,X-ray Crystal Structure Of Human Ikk2 In An Active Conformation
+4ARZ A 2,56,8.3,0.0008,1.7,12.5,The Crystal Structure Of Gtr1p-Gtr2p Complexed With Gtp-Gdp
+3R7W A 2,58,8.6,0.0003,1.7,12.1,Crystal Structure Of Gtr1p-Gtr2p Complexÿ
+3E0Y B ,87,9.8,10e-4.7,1.7,11.5,The Crystal Structure Of A Conserved Domain From A Protein Of Geobacter Sulfurreducens Pca
+2KBH A ,24,4.7,0.0492,1.7,0.0,Solution Structure Of Bmkalphatx11 (Major Conformation)ÿ
+3EEA A ,83,8.1,0.0029,1.8,16.9,The Crystal Structure Of The Gaf DomainHD DOMAIN PROTEIN From Geobacter Sulfurreducens
+4MMN A ,81,10.3,10e-6.5,1.8,13.6,Structural And Biochemical Analysis Of Type Ii Free Methionine-r- Sulfoxide Reductase From Thermoplasma Acidophilum
+2YU9 A 11,16,5.0,0.0110,1.8,0.0,Rna Polymerase Ii Elongation Complex In 150 Mm Mg+2 With Utp
+4MMN H ,81,10.5,10e-6.8,1.8,13.6,Structural And Biochemical Analysis Of Type Ii Free Methionine-r- Sulfoxide Reductase From Thermoplasma Acidophilum
+4ONX C ,43,7.0,0.0146,1.8,9.3,2.8 Angstrom Crystal Structure Of Sensor Domain Of Histidine Kinase From Clostridium Perfringens
+4R70 A 2,106,11.5,10e-7.6,1.8,7.5,Crystal Structure Of Bacteriophytochrome Rpbphp3 From Photosynthetic Bacterium R. Palustris
+4AEI A ,22,4.8,0.0348,1.8,9.1,Crystal Structure Of The Aahii-Fab4c1 Complexÿ
+3T1Q C ,60,7.3,0.0086,1.8,3.3,Mgla Bound To Gppnhp In Complex With Mglbÿ
+
+1ZNF A ,14,3.5,0.0493,1.8,7.1,Three-Dimensional Solution Structure Of A Single Zinc Finger Dna-Binding Domain
+2M7U A ,103,9.4,10e-4.2,1.8,9.7,Blue Light-absorbing State Of Tepixj, An Active Cyanobacteriochrome Domain
+3FPV C ,58,7.1,0.0061,1.8,10.3,Crystal Structure Of Hbpsÿ
+4ZR7 C ,34,6.8,0.0265,1.8,5.9,The Structure Of A Domain Of A Functionally Unknown Protein From Bacillus Subtilis Subsp. Subtilis Str. 168
+3JAB B ,84,7.9,0.0097,1.8,11.9,Domain Organization And Conformational Plasticity Of The G Protein Effector, Pde6
+2W3E B ,80,8.0,0.0055,1.8,6.2,Oxidized Structure Of The First Gaf Domain Of Mycobacterium Tuberculosis Dossÿ
+1J3W C ,59,7.0,0.0209,1.8,3.4,Structure Of Gliding Protein-Mglb From Thermus Thermophilus Hb8
+4AEI C ,22,4.8,0.0367,1.8,9.1,Crystal Structure Of The Aahii-Fab4c1 Complexÿ
+4YNR A ,81,7.9,0.0036,1.8,6.2,Doss Gafa Domain Reduced Co Bound Crystal Structure
+3J3W T ,35,6.4,0.0027,1.8,11.4,Atomic Model Of The Immature 50s Subunit From Bacillus Subtilis (state Ii-a)
+4A0P A 1,29,4.9,0.0169,1.8,3.4,Crystal Structure Of Lrp6p3e3p4e4ÿ
+3JAB N ,85,7.9,0.0097,1.8,12.9,Domain Organization And Conformational Plasticity Of The G Protein Effector, Pde6
+2UY7 G 2,29,6.3,0.0422,1.8,3.4,Crystal Structure Of The P Pilus Rod Subunit Papa
+2OOL A 2,109,11.0,10e-6.8,1.8,7.3,Crystal Structure Of The Chromophore-Binding Domain Of An Unusual Bacteriophytochrome Rpbphp3 From R. Palustris
+3KSI A ,91,11.0,10e-6.7,1.8,8.8,Structure Of Frmsr Of Staphylococcus Aureus (Complex With 2-ÿ
+1J3W B ,60,7.3,0.0079,1.8,3.3,Structure Of Gliding Protein-Mglb From Thermus Thermophilus Hb8
+2W1T B 1,81,9.1,0.0002,1.9,16.0,Crystal Structure Of B. Subtilis Spovt
+4R6L A 1,83,9.4,0.0067,1.9,8.4,Crystal Structure Of Bacteriophytochrome Rpbphp2 From Photosynthetic Bacterium R. Palustris
+4XMR A 2,57,7.4,0.0092,1.9,7.0,Crystal Structure Of The Sensory Domain Of The Campylobacter Jejuni Chemoreceptor Tlp3 (ccml) With Isoleucine Bound
+2W3D B ,83,8.0,0.0055,1.9,6.0,Structure Of The First Gaf Domain Of Mycobacterium Tuberculosis Dossÿ
+4YNR B ,84,7.8,0.0082,1.9,6.0,Doss Gafa Domain Reduced Co Bound Crystal Structure
+1FFK P ,37,6.3,0.0040,1.9,8.1,Crystal Structure Of The Large Ribosomal Subunit From Haloarcula Marismortui At 2.4 Angstrom Resolution
+2W3F B ,83,7.9,0.0059,1.9,6.0,Reduced Structure Of The First Gaf Domain Of Mycobacterium Tuberculosis Dossÿ
+4MMN E ,84,10.1,10e-6.1,1.9,13.1,Structural And Biochemical Analysis Of Type Ii Free Methionine-r- Sulfoxide Reductase From Thermoplasma Acidophilum
+2W3H B ,84,7.9,0.0063,1.9,6.0,Cyanide Bound Structure Of The First Gaf Domain Of Mycobacterium Tuberculosis Dossÿ
+3T1S A ,63,7.1,0.0161,1.9,3.2,Mglb Homodimerÿ
+3KSH A ,91,11.0,10e-6.7,1.9,8.8,Structure Of Frmsr Of Staphylococcus Aureus (Oxidized Form)ÿ
+4MMN D ,84,10.3,10e-6.4,1.9,13.1,Structural And Biochemical Analysis Of Type Ii Free Methionine-r- Sulfoxide Reductase From Thermoplasma Acidophilum
+1WXM A ,36,5.8,0.0208,1.9,11.1,Solution Structure Of The N-Terminal Ras-Binding Domain (Rbd) In Human A-Raf Kinase
+4ZR7 A ,41,6.7,0.0383,1.9,4.9,The Structure Of A Domain Of A Functionally Unknown Protein From Bacillus Subtilis Subsp. Subtilis Str. 168
+2Y79 B ,84,8.0,0.0055,1.9,6.0,Structure Of The First Gaf Domain E87a Mutant Of Mycobacterium Tuberculosis Dossÿ
+2QEX S ,40,6.4,0.0028,1.9,7.5,Negamycin Binds To The Wall Of The Nascent Chain Exit Tunnel Of The 50s Ribosomal Subunit
+3G6O B 2,79,10.6,10e-6.1,1.9,11.4,Crystal Structure Of P. Aeruginosa Bacteriophytochrome Pabphp Photosensory Core Domain Mutant Q188lÿ
+2W3G B ,84,7.9,0.0061,1.9,6.0,Air-Oxidized Structure Of The First Gaf Domain Of Mycobacterium Tuberculosis Dossÿ
+2Z6D A ,54,6.9,0.0299,1.9,11.1,Crystal Structure Of Lov1 Domain Of Phototropin2 From Arabidopsis Thaliana
+2W3H A ,82,7.9,0.0062,1.9,6.1,Cyanide Bound Structure Of The First Gaf Domain Of Mycobacterium Tuberculosis Dossÿ
+4E04 A 2,108,12.0,10e-8.6,1.9,8.3,Rpbphp2 Chromophore-Binding Domain Crystallized By Homologue-Directed Mutagenesis
+3E4P B 2,53,7.5,0.0077,1.9,20.8,Crystal Structure Of Malonate Occupied Dctb
+2W1T A 1,83,9.4,10e-4.3,1.9,15.7,Crystal Structure Of B. Subtilis Spovt
+2W1T B ,82,9.4,0.0006,1.9,15.9,Crystal Structure Of B. Subtilis Spovt
+4GGQ D 1,34,5.5,0.0449,1.9,8.8,Crystal Structure Of A Smt Fusion Peptidyl-Prolyl Cis-Trans Isomerase From Burkholderia Pseudomallei Complexed With Cj40
+2WWB K ,41,6.4,0.0255,1.9,9.8,Cryo-Em Structure Of The Mammalian Sec61 Complex Bound To The Actively Translating Wheat Germ 80s Ribosomeÿ
+4JGQ B 1,38,6.8,0.0016,1.9,15.8,The Crystal Structure Of Sporulation Kinase D Mutant Sensor Domain, R131a, From Bacillus Subtilis Subsp In Co-crystallization With Pyruvate
+2QA4 S ,40,6.2,0.0057,1.9,7.5,A More Complete Structure Of The The L7L12 STALK OF THE Haloarcula Marismortui 50s Large Ribosomal Subunit
+4JGR A 1,38,6.9,0.0009,1.9,15.8,The Crystal Structure Of Sporulation Kinase D Mutant Sensor Domain, R131a, From Bacillus Subtilis Subsp At 2.4a Resolution
+2VZW A ,85,7.7,0.0071,1.9,4.7,X-Ray Structure Of The Heme-Bound Gaf Domain Of Sensory Histidine Kinase Dost Of Mycobacterium Tuberculosisÿ
+4JGP A 1,39,6.8,0.0011,1.9,15.4,The Crystal Structure Of Sporulation Kinase D Sensor Domain From Bacillus Subtilis Subsp In Complex With Pyruvate At 2.0a Resolution
+4JGQ A 1,38,7.0,0.0006,1.9,15.8,The Crystal Structure Of Sporulation Kinase D Mutant Sensor Domain, R131a, From Bacillus Subtilis Subsp In Co-crystallization With Pyruvate
+4GGQ B 1,38,5.6,0.0106,1.9,7.9,Crystal Structure Of A Smt Fusion Peptidyl-Prolyl Cis-Trans Isomerase From Burkholderia Pseudomallei Complexed With Cj40
+3FPV G ,54,7.1,0.0051,1.9,9.3,Crystal Structure Of Hbpsÿ
+3MMH B ,98,10.3,10e-5.6,1.9,11.2,X-Ray Structure Of Free Methionine-R-Sulfoxide Reductase Fro Neisseria Meningitidis In Complex With Its Substrateÿ
+4JGO A 1,38,6.8,0.0014,1.9,15.8,The Crystal Structure Of Sporulation Kinase D Sensor Domain From Bacillus Subtilis Subsp
+3J3V T ,40,5.6,0.0214,1.9,12.5,Atomic Model Of The Immature 50s Subunit From Bacillus Subtilis (state I-a)
+1J3W A ,60,7.1,0.0156,1.9,3.3,Structure Of Gliding Protein-Mglb From Thermus Thermophilus Hb8
+3MMH A ,98,10.4,10e-5.9,1.9,11.2,X-Ray Structure Of Free Methionine-R-Sulfoxide Reductase Fro Neisseria Meningitidis In Complex With Its Substrateÿ
+2OOL B 2,109,11.2,10e-7.1,1.9,7.3,Crystal Structure Of The Chromophore-Binding Domain Of An Unusual Bacteriophytochrome Rpbphp3 From R. Palustris
+1YKD A 2,92,10.2,10e-4.9,1.9,8.7,Crystal Structure Of The Tandem Gaf Domains From A Cyanobacterial Adenylyl Cyclase: Novel Modes Of Ligand- Binding And Dimerization
+3FPV E ,54,7.0,0.0237,1.9,9.3,Crystal Structure Of Hbpsÿ
+4MMN C ,85,10.5,10e-6.8,1.9,12.9,Structural And Biochemical Analysis Of Type Ii Free Methionine-r- Sulfoxide Reductase From Thermoplasma Acidophilum
+1Q7Y T ,41,6.3,0.0040,1.9,7.3,Crystal Structure Of Ccdap-puromycin Bound At The Peptidyl Transferase Center Of The 50s Ribosomal Subunit
