@@ -37,3 +37,8 @@ COPY rupee_result (version, n, db_id_1, db_id_2, rupee_rmsd, rupee_tm_score, rup
 COPY rupee_result (version, n, db_id_1, db_id_2, rupee_rmsd, rupee_tm_score, rupee_q_score, rupee_ssap_score, search_mode, search_type) FROM '/home/ayoub/git/rupee/results/rupee/casp_d250_casp_scop_v1_73_all_q.txt' WITH (DELIMITER ',');
 COPY rupee_result (version, n, db_id_1, db_id_2, rupee_rmsd, rupee_tm_score, rupee_q_score, rupee_ssap_score, search_mode, search_type) FROM '/home/ayoub/git/rupee/results/rupee/casp_d250_casp_scop_v1_73_top_q.txt' WITH (DELIMITER ',');
 
+-- vast with casp_d250 (additional fields)
+COPY rupee_result (version, n, db_id_1, db_id_2, rupee_rmsd, rupee_tm_score, rupee_q_score, rupee_ssap_score, search_mode, search_type) FROM '/home/ayoub/git/rupee/results/rupee/casp_d250_casp_chain_v01_01_2020_all_fl.txt' WITH (DELIMITER ',');
+COPY rupee_result (version, n, db_id_1, db_id_2, rupee_rmsd, rupee_tm_score, rupee_q_score, rupee_ssap_score, search_mode, search_type) FROM '/home/ayoub/git/rupee/results/rupee/casp_d250_casp_chain_v01_01_2020_top_fl.txt' WITH (DELIMITER ',');
+
+

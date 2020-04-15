@@ -86,14 +86,18 @@ public class AlignResults
         alignSsmResults(benchmark, version, dbType, maxN, "q_score"); 
     }
    
-    // RUPEE is already done for this vs. mTM above
-    public static void alignVastResults() {
+    public static void alignRupeeVsVastResults() {
 
         String benchmark = "casp_d250";
         String version = "casp_chain_v01_01_2020";
         DbType dbType = DbType.CHAIN;
         int maxN = 100;
-        
+
+        // RMSD alignments have already been done against mTM whole chains
+
+        alignRupeeResults(benchmark, version, dbType, maxN, "all_aligned", "full_length");
+        alignRupeeResults(benchmark, version, dbType, maxN, "top_aligned", "full_length");
+
         alignVastResults(benchmark, version, dbType, maxN); 
     }
 
