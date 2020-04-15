@@ -14,9 +14,6 @@ public class VastUploadDriver extends VastDriver {
 
     public void doSearchBatch() {
 
-        List<String> excludes = new ArrayList<>();
-        excludes.add("T0957s2TS145-D1");
-
         int EARLY_EXIT = 5;
 
         List<String> dbIds = Benchmarks.get("casp_d250");
@@ -29,7 +26,7 @@ public class VastUploadDriver extends VastDriver {
 
             try {
 
-                if (!isExcluded(excludes, dbId) && Files.notExists(Paths.get(fileName))) {
+                if (!isExcluded(dbId) && Files.notExists(Paths.get(fileName))) {
                     
                     count++;
                     doSearchUpload(dbId);

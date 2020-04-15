@@ -1,5 +1,6 @@
 package edu.umkc.rupee.auto;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -12,6 +13,14 @@ public class VastDriver extends DriverBase {
 
     public static int ONE_SECOND = 1000; 
     public static int ONE_MINUTE = 60 * ONE_SECOND; 
+
+    private static List<String> excludes = new ArrayList<>();
+    static {
+
+        excludes.add("T0957s2TS145-D1");
+        excludes.add("T0957s2TS354-D1");
+        excludes.add("T0968s2TS261-D1");
+    }
 
     public String doSearchUpload(String dbId) throws InterruptedException {
 
@@ -205,7 +214,7 @@ public class VastDriver extends DriverBase {
         return builder.toString();
     }
 
-    public boolean isExcluded(List<String> excludes, String dbId) {
+    public boolean isExcluded(String dbId) {
 
         boolean excluded = false;
         for (String exclude : excludes) {

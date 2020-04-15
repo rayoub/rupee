@@ -76,9 +76,6 @@ public class VastCombinedDriver extends VastDriver {
 
     public void doSearchBatch() {
 
-        List<String> excludes = new ArrayList<>();
-        excludes.add("T0957s2TS145-D1");
-
         int EARLY_EXIT = 100;
 
         List<String> dbIds = Benchmarks.get("casp_d190");
@@ -93,7 +90,7 @@ public class VastCombinedDriver extends VastDriver {
             try {
 
                 // for now lets not do the rmsd work again
-                if (!isExcluded(excludes, dbId) && Files.notExists(Paths.get(fileNameRmsd))) {
+                if (!isExcluded(dbId) && Files.notExists(Paths.get(fileNameRmsd))) {
             
                     count++;
                     System.out.println(count + ":Processing request for " + dbId);
