@@ -1,0 +1,20 @@
+
+2EOH A ,13,3.4,0.0111,1.1,0.0,Solution Structure Of The C2h2 Type Zinc Finger (Region 780- 812) Of Human Zinc Finger Protein 28 Homolog
+1R7H A 2,12,3.2,0.0341,1.2,0.0,Nrdh-Redoxin Of Corynebacterium Ammoniagenes Forms A Domain- Swapped Dimer
+1R7H B 2,15,3.3,0.0314,1.2,0.0,Nrdh-Redoxin Of Corynebacterium Ammoniagenes Forms A Domain- Swapped Dimer
+4XKL B ,12,3.3,0.0274,1.2,0.0,Crystal Structure Of Ndp52 Zf2 In Complex With Mono-ubiquitin
+4W5W A 1,16,3.3,0.0419,1.3,12.5,Rubisco Activase From Arabidopsis Thaliana
+1E9Y A 3,12,3.3,0.0328,1.3,8.3,Crystal Structure Of Helicobacter Pylori Urease In Complex With Acetohydroxamic Acid
+2NVT B 8,12,3.5,0.0075,1.6,0.0,Rna Polymerase Ii Elongation Complex In 150 Mm Mg+2 With Gmpcpp
+2E1M A 4,14,4.0,0.0195,1.6,0.0,Crystal Structure Of L-Glutamate Oxidase From Streptomyces Sp. X-119-6
+2XSM L 1,13,4.0,0.0390,1.6,0.0,Crystal Structure Of The Mammalian Cytosolic Chaperonin Cct In Complex With Tubulinÿ
+1E9Z A 3,12,3.2,0.0405,1.7,8.3,Crystal Structure Of Helicobacter Pylori Urease
+4F9B D 1,13,3.5,0.0067,1.7,7.7,Human Cdc7 Kinase In Complex With Dbf4 And Pha767491
+1VDI A ,13,3.5,0.0425,2.0,15.4,Solution Structure Of Actin-Binding Domain Of Troponin In Ca2+-Free State
+4WBD A 3,26,3.4,0.0206,2.0,15.4,The Crystal Structure Of Bshc From Bacillus Subtilis Complexed With Citrate And Adp
+4BTQ B 5,18,3.3,0.0274,2.1,0.0,Coordinates Of The Bacteriophage Phi6 Capsid Subunits Fitted Into The Cryoem Map Emd-1206
+3T15 A 1,14,3.5,0.0169,2.1,14.3,Structure Of Green-Type Rubisco Activase From Tobaccoÿ
+1VYX A ,16,3.2,0.0352,2.2,6.2,Solution Structure Of The Kshv K3 N-Terminal Domain
+2YRK A ,15,3.3,0.0300,2.4,13.3,Solution Structure Of The Zf-C2h2 Domain In Zinc Finger Homeodomain 4
+4BBR B 6,22,3.4,0.0396,2.8,9.1,Structure Of Rna Polymerase Ii-Tfiib Complex
+4BY7 B 7,22,3.4,0.0458,2.9,9.1,Elongating Rna Polymerase Ii-bye1 Tld Complex
