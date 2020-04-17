@@ -5,11 +5,10 @@ library(plyr)
 # clear environment
 rm(list = ls())
 
-get_scoring_plot <- function(p_title, p_file, p_levels, p_xlimits, p_xbreaks, p_ylimits) {
+get_scoring_plot <- function(p_title, p_file, p_levels, p_xlimits, p_xbreaks, p_ylimits, p_ref_lines) {
 
     # read in data files
     df <- read.csv(p_file)
-    refs <- read.csv('scoring_refs.txt')
 
     # reorder factor levels 
     df$app <- factor(df$app, levels = p_levels)
@@ -24,6 +23,18 @@ get_scoring_plot <- function(p_title, p_file, p_levels, p_xlimits, p_xbreaks, p_
         geom_line(
             size = rel(0.5)
         ) + 
+        {if (p_ref_lines) { 
+            geom_hline(
+                yintercept = 0.50,
+                colour = 'grey50', 
+                size = rel(0.15)
+        )}} +
+        {if (p_ref_lines) { 
+            geom_hline(
+                yintercept = 0.17,
+                colour = 'grey50', 
+                size = rel(0.15)
+        )}} +
 
         # scales        
         scale_color_manual(

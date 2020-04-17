@@ -7,7 +7,8 @@ source('scoring.R')
 #        c('RUPEE All-Aligned','RUPEE Top-Aligned','mTM'), 
 #        c(1, 100),
 #        c(1,10,20,30,40,50,60,70,80,90,100),
-#        c(0.20, 0.80) # c(0, 5) or c(0.20, 0.80)
+#        c(0.20, 0.80), # c(0, 5) or c(0.20, 0.80)
+#        FALSE
 #)
 #plot <- get_scoring_plot(
 #        'vs. SSM',
@@ -15,7 +16,8 @@ source('scoring.R')
 #        c('RUPEE All-Aligned','RUPEE Top-Aligned','SSM'), 
 #        c(1, 100),
 #        c(1,10,20,30,40,50,60,70,80,90,100),
-#        c(0.05, 0.25) # c(0, 6), c(0.25, 0.55) or c(0.05, 0.25)
+#        c(0.05, 0.25), # c(0, 6), c(0.25, 0.55) or c(0.05, 0.25)
+#        FALSE
 #)
 #plot <- get_scoring_plot(
 #        'vs. CATHEDRAL',
@@ -23,7 +25,8 @@ source('scoring.R')
 #        c('RUPEE All-Aligned','RUPEE Top-Aligned','CATHEDRAL'), 
 #        c(1, 100),
 #        c(1,10,20,30,40,50,60,70,80,90,100),
-#        c(0.3, 0.55) # c(0, 5), c(0.30, 0.55) or c(60, 75)
+#        c(0.3, 0.55), # c(0, 5), c(0.30, 0.55) or c(60, 75)
+#        FALSE
 #)
 plot <- get_scoring_plot(
         'vs. VAST',
@@ -31,7 +34,8 @@ plot <- get_scoring_plot(
         c('RUPEE All-Aligned','RUPEE Top-Aligned','VAST'), 
         c(1, 100),
         c(1,10,20,30,40,50,60,70,80,90,100),
-        c(0.3, 0.6) # c(0, 5) or c(0.25, 0.80)
+        c(0.1, 0.6), # c(0, 5) or c(0.25, 0.80)
+        TRUE
 )
 
 ggsave('scoring_test.eps', plot = plot, width = 3.25, height = 3.25, dpi = 300)
