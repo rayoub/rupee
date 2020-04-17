@@ -1,14 +1,14 @@
 
 source('scoring.R')
 
-plot <- get_scoring_plot(
-        'vs. mTM',
-        'scoring_mtm_ci.txt', # _rmsd, _ci
-        c('RUPEE All-Aligned','RUPEE Top-Aligned','mTM'), 
-        c(1, 100),
-        c(1,10,20,30,40,50,60,70,80,90,100),
-        c(0.20, 0.80) # c(0, 5) or c(0.20, 0.80)
-)
+#plot <- get_scoring_plot(
+#        'vs. mTM',
+#        'scoring_mtm_ci.txt', # _rmsd, _ci
+#        c('RUPEE All-Aligned','RUPEE Top-Aligned','mTM'), 
+#        c(1, 100),
+#        c(1,10,20,30,40,50,60,70,80,90,100),
+#        c(0.20, 0.80) # c(0, 5) or c(0.20, 0.80)
+#)
 #plot <- get_scoring_plot(
 #        'vs. SSM',
 #        'scoring_ssm_q.txt', # _ce, _fatcat, _fl, _q
@@ -25,14 +25,14 @@ plot <- get_scoring_plot(
 #        c(1,10,20,30,40,50,60,70,80,90,100),
 #        c(0.3, 0.55) # c(0, 5), c(0.30, 0.55) or c(60, 75)
 #)
-#plot <- get_scoring_plot(
-#        'vs. VAST',
-#        'scoring_vast_fatcat.txt', # _ce, _fatcat
-#        c('RUPEE All-Aligned','RUPEE Top-Aligned','VAST'), 
-#        c(1, 100),
-#        c(1,10,20,30,40,50,60,70,80,90,100),
-#        c(0, 5) # just c(0, 5)
-#)
+plot <- get_scoring_plot(
+        'vs. VAST',
+        'scoring_vast_fl.txt', # _ce, _fatcat, _fl
+        c('RUPEE All-Aligned','RUPEE Top-Aligned','VAST'), 
+        c(1, 100),
+        c(1,10,20,30,40,50,60,70,80,90,100),
+        c(0.3, 0.6) # c(0, 5) or c(0.25, 0.80)
+)
 
-ggsave('scoring_test.eps', plot = plot, width = 3.5, height = 2.25, dpi = 300)
+ggsave('scoring_test.eps', plot = plot, width = 3.25, height = 3.25, dpi = 300)
 

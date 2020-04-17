@@ -77,9 +77,6 @@ get_scoring_plot <- function(p_title, p_file, p_levels, p_xlimits, p_xbreaks, p_
             legend.position = 'bottom',
             legend.direction = 'horizontal',
             legend.spacing = unit(0,'mm')
-
-#            strip.background = element_blank(),
-#            strip.placement = 'outside'
         ) 
 
     theme <- theme + theme(strip.text = element_text(size = 8))
