@@ -37,7 +37,9 @@ grid_arrange_shared_legend <-
   }
 
 plot1 <- get_scoring_plot(
+        'mTM-align',
         'vs. mTM-align',
+        'TM-score (q)',
         'scoring_mtm_ci.txt', # _rmsd, _ci
         c('RUPEE All-Aligned','RUPEE Top-Aligned','mTM'), 
         c(1, 100),
@@ -46,7 +48,9 @@ plot1 <- get_scoring_plot(
         TRUE
 )
 plot2 <- get_scoring_plot(
+        'mTM-align',
         'vs. mTM-align',
+        'RMSD',
         'scoring_mtm_rmsd.txt', # _rmsd, _ci
         c('RUPEE All-Aligned','RUPEE Top-Aligned','mTM'), 
         c(1, 10),

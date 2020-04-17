@@ -37,7 +37,9 @@ grid_arrange_shared_legend <-
   }
 
 plot1 <- get_scoring_plot(
+        'VAST',
         'vs. VAST (search by VAST-score)',
+        'TM-score (avg)',
         'scoring_vast_fl.txt', # _ce, _fatcat, _fl
         c('RUPEE All-Aligned','RUPEE Top-Aligned','VAST'), 
         c(1, 100),
@@ -46,7 +48,9 @@ plot1 <- get_scoring_plot(
         TRUE
 )
 plot2 <- get_scoring_plot(
+        'VAST',
         'vs. VAST (search by RMSD)',
+        'RMSD',
         'scoring_vast_ce.txt', # _ce, _fatcat, _fl
         c('RUPEE All-Aligned','RUPEE Top-Aligned','VAST'), 
         c(1, 100),
