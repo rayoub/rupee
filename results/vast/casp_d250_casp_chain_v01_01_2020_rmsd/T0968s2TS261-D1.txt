@@ -1,4 +1,3 @@
-
 3NBN B ,29,9.1,0.0041,3.1,0.0,Crystal Structure Of A Dimer Of Notch Transcription Complex Trimers On Hes1 Dna˙
 3EAO C 3,38,8.1,0.0239,3.1,7.9,Crystal Structure Of Recombinant Rat Selenoprotein Thioredoxin Reductase 1 With Oxidized C-Terminal Tail
 3EAN D 3,38,8.1,0.0253,3.1,7.9,Crystal Structure Of Recombinant Rat Selenoprotein Thioredoxin Reductase 1 With Reduced C-Terminal Tail
@@ -59,7 +58,6 @@
 1YYH B ,30,9.0,0.0051,4.1,6.7,Crystal Structure Of The Human Notch 1 Ankyrin Domain
 2QC9 B ,30,8.9,0.0075,4.1,6.7,Mouse Notch 1 Ankyrin Repeat Intracellular Domain
 2HE0 B ,30,8.8,0.0091,4.1,6.7,Crystal Structure Of A Human Notch1 Ankyrin Domain Mutant
-
 3A5P D ,64,9.1,0.0012,2.2,7.8,Crystal Structure Of Hemagglutininÿ
 4KPR A 3,33,8.2,0.0210,2.3,12.1,Tetrameric Form Of Rat Selenoprotein Thioredoxin Reductase 1
 3A5P C ,64,9.0,0.0062,2.3,7.8,Crystal Structure Of Hemagglutininÿ
@@ -120,7 +118,6 @@
 3WPR C 3,39,8.4,0.0005,3.1,5.1,Acinetobacter Sp. Tol 5 Ataa N-terminal Half Of C-terminal Stalk Fused To Gcn4 Adaptors (cstalkn)
 3WPR A 3,39,8.5,0.0004,3.1,5.1,Acinetobacter Sp. Tol 5 Ataa N-terminal Half Of C-terminal Stalk Fused To Gcn4 Adaptors (cstalkn)
 3EAN B 3,38,8.1,0.0239,3.1,7.9,Crystal Structure Of Recombinant Rat Selenoprotein Thioredoxin Reductase 1 With Reduced C-Terminal Tail
-
 3NBN B ,29,9.1,0.0041,3.1,0.0,Crystal Structure Of A Dimer Of Notch Transcription Complex Trimers On Hes1 Dna˙
 3EAO C 3,38,8.1,0.0239,3.1,7.9,Crystal Structure Of Recombinant Rat Selenoprotein Thioredoxin Reductase 1 With Oxidized C-Terminal Tail
 3EAN D 3,38,8.1,0.0253,3.1,7.9,Crystal Structure Of Recombinant Rat Selenoprotein Thioredoxin Reductase 1 With Reduced C-Terminal Tail

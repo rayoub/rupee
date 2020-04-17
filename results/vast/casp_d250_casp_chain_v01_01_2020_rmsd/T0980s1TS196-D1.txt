@@ -1,4 +1,3 @@
-
 2XQY A 3,20,5.2,0.0022,1.3,15.0,Crystal Structure Of Pseudorabies Core Fragment Of Glycoprotein H In Complex With Fab D6.3ÿ
 4XSY H 1,30,5.2,0.0227,1.3,0.0,Crystal Structure Of Cbr 9379 Bound To Escherichia Coli Rna Polymerase Holoenzyme
 4XSY B 1,30,5.2,0.0227,1.3,0.0,Crystal Structure Of Cbr 9379 Bound To Escherichia Coli Rna Polymerase Holoenzyme
@@ -59,7 +58,6 @@
 2XQY E 3,22,5.2,0.0033,1.5,13.6,Crystal Structure Of Pseudorabies Core Fragment Of Glycoprotein H In Complex With Fab D6.3ÿ
 4F99 B 1,12,3.2,0.0385,1.5,8.3,Human Cdc7 Kinase In Complex With Dbf4 And Nucleotide
 4C56 G 2,21,5.2,0.0022,1.5,0.0,X-ray Structure Of The Complex Between Staphylococcal Enterotoxin B, T Cell Receptor And Major Histocompatibility Complex Class Ii
-
 4OIO A 1,29,5.2,0.0227,1.2,0.0,Crystal Structure Of Thermus Thermophilus Pre-insertion Substrate Complex For De Novo Transcription Initiation
 4LJZ B 1,29,5.2,0.0227,1.2,0.0,Crystal Structure Analysis Of The E.coli Holoenzyme
 4LJZ H 1,29,5.2,0.0227,1.2,0.0,Crystal Structure Analysis Of The E.coli Holoenzyme
@@ -120,7 +118,6 @@
 4KN4 B 1,31,5.2,0.0227,1.3,0.0,X-ray Crystal Structure Of The Escherichia Coli Rna Polymerase In Complex With Benzoxazinorifamycin-2b
 1WGV A 1,25,4.7,0.0499,1.3,4.0,Solution Structure Of The Cs Domain Of Human Kiaa1068 Protein
 4MJH C 1,22,5.2,0.0022,1.3,0.0,Human Hsp27 Core Domain In Complex With C-terminal Peptide
-
 2XQY A 3,20,5.2,0.0022,1.3,15.0,Crystal Structure Of Pseudorabies Core Fragment Of Glycoprotein H In Complex With Fab D6.3ÿ
 4XSY H 1,30,5.2,0.0227,1.3,0.0,Crystal Structure Of Cbr 9379 Bound To Escherichia Coli Rna Polymerase Holoenzyme
 4XSY B 1,30,5.2,0.0227,1.3,0.0,Crystal Structure Of Cbr 9379 Bound To Escherichia Coli Rna Polymerase Holoenzyme

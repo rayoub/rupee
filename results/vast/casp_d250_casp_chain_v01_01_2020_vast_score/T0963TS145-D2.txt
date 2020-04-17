@@ -1,4 +1,3 @@
-
 3TWW B 1,20,7.8,10e-5.8,2.9,0.0,Crystal Structure Of Arc4 From Human Tankyrase 2 In Complex With Peptide From Human Lnpep (Chimeric Peptide)ÿ
 3EU9 A ,23,7.6,10e-4.8,2.2,4.3,The Ankyrin Repeat Domain Of Huntingtin Interacting Protein 14ÿ
 3IYK B ,31,7.5,0.0001,1.8,9.7,Bluetongue Virus Structure Reveals A Sialic Acid Binding Domain, Amphipathic Helices And A Central Coiled Coil In The Outer Capsid Proteinsÿ
@@ -59,7 +58,6 @@
 2PI3 O ,45,7.0,0.0282,2.6,6.7,The Crystal Structure Of Ospa Mutant
 1VAX B ,45,7.0,0.0119,2.1,4.4,Crystal Structure Of Uricase From Arthrobacter Globiformis
 2YZB A ,45,7.0,0.0086,2.1,4.4,Crystal Structure Of Uricase From Arthrobacter Globiformis In Complex With Uric Acid (Substrate)
-
 1XXJ B ,48,7.0,0.0120,2.4,2.1,Urate Oxidase From Aspergillus Flavus Complexed With 5- Amino 6-Nitro Uracil
 1VAY G ,45,7.0,0.0088,2.1,4.4,Crystal Structure Of Uricase From Arthrobacter Globiformis With Inhibitor 8-Azaxanthine
 2YZY A ,41,7.0,0.0043,2.8,7.3,Crystal Structure Of Uncharacterized Conserved Protein From Thermus Thermophilus Hb8
@@ -120,7 +118,6 @@
 1XXJ C 1,44,7.0,0.0073,2.2,6.8,Urate Oxidase From Aspergillus Flavus Complexed With 5- Amino 6-Nitro Uracil
 2E0W A ,36,7.0,0.0443,2.6,8.3,T391a Precursor Mutant Protein Of Gamma- Glutamyltranspeptidase From Escherichia Coli
 2E0W A 1,36,7.0,0.0144,2.6,8.3,T391a Precursor Mutant Protein Of Gamma- Glutamyltranspeptidase From Escherichia Coli
-
 1VAX H ,43,7.0,0.0051,2.1,4.7,Crystal Structure Of Uricase From Arthrobacter Globiformis
 2E0W A ,36,7.0,0.0443,2.6,8.3,T391a Precursor Mutant Protein Of Gamma- Glutamyltranspeptidase From Escherichia Coli
 2E0W A 1,36,7.0,0.0144,2.6,8.3,T391a Precursor Mutant Protein Of Gamma- Glutamyltranspeptidase From Escherichia Coli

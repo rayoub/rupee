@@ -1,4 +1,3 @@
-
 3ZL8 A ,132,16.7,10e-4.7,3.2,11.4,Crystal Structure Of Murf Ligase From Thermotoga Maritima In Complex With Adp
 3ZL8 A 2,130,16.7,10e-9.7,3.2,10.8,Crystal Structure Of Murf Ligase From Thermotoga Maritima In Complex With Adp
 1W7K A ,131,16.2,10e-5.4,3.9,6.9,E.Coli Folc In Complex With Adp, Without Folate Substrateÿ
@@ -59,7 +58,6 @@
 7REQ A 2,123,15.2,10e-11.6,2.8,9.8,Methylmalonyl-Coa Mutase, 2-Carboxypropyl-Coa Inhibitor Complex
 2XIJ A ,132,15.1,0.0008,3.2,6.1,Crystal Structure Of Human Methylmalonyl-Coa Mutase In Complex With Adenosylcobalaminÿ
 2XIJ A 2,133,15.1,10e-11.5,3.1,6.0,Crystal Structure Of Human Methylmalonyl-Coa Mutase In Complex With Adenosylcobalaminÿ
-
 7REQ C ,124,15.1,0.0007,3.0,8.1,Methylmalonyl-Coa Mutase, 2-Carboxypropyl-Coa Inhibitor Complex
 7REQ C 2,133,15.1,10e-11.5,3.1,6.8,Methylmalonyl-Coa Mutase, 2-Carboxypropyl-Coa Inhibitor Complex
 5REQ A ,134,15.1,0.0007,3.2,6.7,Methylmalonyl-Coa Mutase, Y89f Mutant, Substrate Complex
@@ -120,7 +118,6 @@
 4R1S B ,131,14.5,10e-5.9,2.8,9.9,Crystal Structure Of Petunia Hydrida Cinnamoyl-coa Reductase
 2GIL A ,125,14.5,10e-8.2,2.7,11.2,Structure Of The Extremely Slow Gtpase Rab6a In The Gtp Bound Form At 1.8 Resolution
 4R1S A ,130,14.5,10e-5.8,2.5,9.2,Crystal Structure Of Petunia Hydrida Cinnamoyl-coa Reductase
-
 2X77 B ,143,14.5,10e-9.2,3.0,9.1,Crystal Structure Of Leishmania Major Adp Ribosylation Factor-Like 1ÿ
 2ZCU A ,121,14.5,10e-5.7,2.9,9.1,Crystal Structure Of A New Type Of Nadph-Dependent Quinone Oxidoreductase (Qor2) From Escherichia Coli
 4C12 A 2,129,14.4,10e-5.2,3.8,9.3,X-ray Crystal Structure Of Staphylococcus Aureus Mure With Udp-murnac-ala-glu-lys And Adp

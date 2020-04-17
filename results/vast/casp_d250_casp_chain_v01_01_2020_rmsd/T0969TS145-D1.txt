@@ -1,4 +1,3 @@
-
 2IYN C ,78,11.5,0.0027,2.1,14.1,The Co-Factor-Induced Pre-Active Conformation In Phob
 4FZ5 B ,55,9.3,0.0167,2.1,5.5,Crystal Structure Of Human Tirap Tir-domain
 1F51 F ,96,12.2,10e-5.0,2.1,6.2,A Transient Interaction Between Two Phosphorelay Proteins Trapped In A Crystal Lattice Reveals The Mechanism Of Molecular Recognition And Phosphotransfer In Singal Transduction
@@ -59,7 +58,6 @@
 2HSJ C 1,122,9.4,0.0135,2.2,13.9,The Structure Of A Putative Platelet Activating Factor From Streptococcus Pneumonia
 4W9N B 2,67,10.0,0.0208,2.2,7.5,Enoyl-acyl Carrier Protein-reductase Domain From Human Fatty Acid Synthase Complexed With Triclosan
 2O20 C 1,94,10.3,0.0436,2.2,9.6,Crystal Structure Of Transcription Regulator Ccpa Of Lactococcus Lactis
-
 4RVO C 2,64,9.7,0.0160,2.0,9.4,Crystal Structure Of A Putative Acyl-coa Ligase (bt_0428) From Bacteroides Thetaiotaomicron Vpi-5482 At 2.41 A Resolution
 3KCN B ,79,9.7,0.0486,2.0,11.4,The Crystal Structure Of Adenylate Cyclase From Rhodopirellula Balticaÿ
 2NU9 D 1,77,11.5,0.0013,2.0,10.4,C123at Mutant Of E. Coli Succinyl-Coa Synthetase Orthorhombic Crystal Form
@@ -120,7 +118,6 @@
 1W7K A 2,71,11.4,0.0014,2.1,1.4,E.Coli Folc In Complex With Adp, Without Folate Substrateÿ
 4XCV A 1,66,9.7,0.0006,2.1,4.5,Probable 2-hydroxyacid Dehydrogenase From Rhizobium Etli Cfn 42 In Complex With Nadph
 4GX5 C 2,103,12.8,10e-4.4,2.1,5.8,Gsuk Channel
-
 2IYN C ,78,11.5,0.0027,2.1,14.1,The Co-Factor-Induced Pre-Active Conformation In Phob
 4FZ5 B ,55,9.3,0.0167,2.1,5.5,Crystal Structure Of Human Tirap Tir-domain
 1F51 F ,96,12.2,10e-5.0,2.1,6.2,A Transient Interaction Between Two Phosphorelay Proteins Trapped In A Crystal Lattice Reveals The Mechanism Of Molecular Recognition And Phosphotransfer In Singal Transduction

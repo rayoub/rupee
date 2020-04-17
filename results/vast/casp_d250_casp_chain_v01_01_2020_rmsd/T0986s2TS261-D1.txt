@@ -1,4 +1,3 @@
-
 3BPS P ,49,7.5,0.0112,1.8,2.0,Pcsk9:egf-A Complex
 3AB2 F 2,56,8.4,10e-4.7,1.8,8.9,Crystal Structure Of Aspartate Kinase From Corynebacterium Glutamicum In Complex With Threonineÿ
 3K5M A 2,44,5.7,0.0284,1.8,6.8,Crystal Structure Of E.Coli Pol Ii-Abasic Dna-Ddgtp Lt(-2, 2) Ternary Complexÿ
@@ -59,7 +58,6 @@
 1YG0 A ,49,6.4,0.0022,1.9,8.2,Solution Structure Of Apo-Copp From Helicobacter Pylori
 5FJ9 A 12,40,7.5,0.0335,1.9,2.5,Cryo-em Structure Of Yeast Apo Rna Polymerase Iii At 4.6 A
 2GCF A ,39,6.8,0.0099,1.9,0.0,Solution Structure Of The N-Terminal Domain Of The Coppper(I) Atpase Pacs In Its Apo Form
-
 1XXC E ,37,6.4,0.0129,1.8,8.1,C-Terminal Domain Of Escherichia Coli Arginine Repressor
 2Y9K A 2,36,6.3,0.0032,1.8,11.1,Three-Dimensional Model Of Salmonella's Needle Complex At Subnanometer Resolutionÿ
 2Y9K B 2,36,6.3,0.0032,1.8,11.1,Three-Dimensional Model Of Salmonella's Needle Complex At Subnanometer Resolutionÿ
@@ -120,7 +118,6 @@
 2PMZ C ,41,8.5,0.0062,1.8,4.9,Archaeal Rna Polymerase From Sulfolobus Solfataricus
 3K5N B 2,44,6.2,0.0041,1.8,6.8,Crystal Structure Of E.Coli Pol Ii-Abasic Dna Binary Complexÿ
 4FHM B 6,39,4.0,0.0449,1.8,5.1,Nup37-Nup120(Aa1-961) Complex From Schizosaccharomyces Pombe
-
 3BPS P ,49,7.5,0.0112,1.8,2.0,Pcsk9:egf-A Complex
 3AB2 F 2,56,8.4,10e-4.7,1.8,8.9,Crystal Structure Of Aspartate Kinase From Corynebacterium Glutamicum In Complex With Threonineÿ
 3K5M A 2,44,5.7,0.0284,1.8,6.8,Crystal Structure Of E.Coli Pol Ii-Abasic Dna-Ddgtp Lt(-2, 2) Ternary Complexÿ

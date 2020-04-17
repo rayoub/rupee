@@ -1,4 +1,3 @@
-
 4GU4 A 1,40,8.4,0.0430,3.6,0.0,Crystal Structure Of The T1l Reovirus Attachment Protein Sigma1 In Complex With Alpha-2,3-Sialyllactose
 4GU4 B 1,40,8.4,0.0405,3.6,0.0,Crystal Structure Of The T1l Reovirus Attachment Protein Sigma1 In Complex With Alpha-2,3-Sialyllactose
 3CPW D ,40,6.8,0.0282,3.6,12.5,The Structure Of The Antibiotic Linezolid Bound To The Large Ribosomal Subunit Of Haloarcula Marismortui
@@ -50,7 +49,6 @@
 3CXC D ,48,6.9,0.0212,4.2,8.3,The Structure Of An Enhanced Oxazolidinone Inhibitor Bound To The 50s Ribosomal Subunit Of H. Marismortuiÿ
 1K8A F ,48,6.9,0.0253,4.2,8.3,Co-Crystal Structure Of Carbomycin A Bound To The 50s Ribosomal Subunit Of Haloarcula Marismortui
 4IOC D ,32,6.4,0.0436,4.3,6.2,Crystal Structure Of Compound 4f Bound To Large Ribosomal Subunit (50s) From Deinococcus Radiodurans
-
 1WCE K 2,49,8.8,0.0043,2.9,8.2,Crystal Structure Of The T13 Ibdv Viral Particle Reveals A Missing Link In Icosahedral Viruses Evolution
 1WCE L 2,49,8.8,0.0043,2.9,8.2,Crystal Structure Of The T13 Ibdv Viral Particle Reveals A Missing Link In Icosahedral Viruses Evolution
 1WCE M 2,49,8.8,0.0043,2.9,8.2,Crystal Structure Of The T13 Ibdv Viral Particle Reveals A Missing Link In Icosahedral Viruses Evolution
@@ -111,7 +109,6 @@
 4XC5 A 1,40,8.4,0.0449,3.5,0.0,Crystal Structure Of The T1l Reovirus Attachment Protein Sigma1
 4XC5 C 1,44,8.4,0.0469,3.5,2.3,Crystal Structure Of The T1l Reovirus Attachment Protein Sigma1
 3Q2V A 2,49,7.7,0.0184,3.5,2.0,Crystal Structure Of Mouse E-Cadherin Ectodomainÿ
-
 4GU4 A 1,40,8.4,0.0430,3.6,0.0,Crystal Structure Of The T1l Reovirus Attachment Protein Sigma1 In Complex With Alpha-2,3-Sialyllactose
 4GU4 B 1,40,8.4,0.0405,3.6,0.0,Crystal Structure Of The T1l Reovirus Attachment Protein Sigma1 In Complex With Alpha-2,3-Sialyllactose
 3CPW D ,40,6.8,0.0282,3.6,12.5,The Structure Of The Antibiotic Linezolid Bound To The Large Ribosomal Subunit Of Haloarcula Marismortui

@@ -1,4 +1,3 @@
-
 1VLP C 4,12,3.3,0.0259,3.7,8.3,Crystal Structure Of Nicotinate Phosphoribosyltransferase (Yor209c) From Saccharomyces Cerevisiae At 1.75 A Resolution
 1VLP D 3,12,3.3,0.0327,3.7,8.3,Crystal Structure Of Nicotinate Phosphoribosyltransferase (Yor209c) From Saccharomyces Cerevisiae At 1.75 A Resolution
 3HKZ A 5,12,3.4,0.0261,3.8,0.0,The X-Ray Crystal Structure Of Rna Polymerase From Archaeaÿ
@@ -7,7 +6,6 @@
 2XHY B 2,18,4.9,0.0232,4.4,5.6,Crystal Structure Of E.Coli Bglaÿ
 3JXO B ,26,5.6,0.0340,4.6,3.8,Crystal Structure Of An Octomeric Two-Subunit Trka K+ Channel Ring Gating Assembly, Tm1088a:tm1088b, From Thermotoga Maritimaÿ
 2XRC B 2,33,6.3,0.0184,7.6,3.0,Human Complement Factor Iÿ
-
 3U6P A 1,28,6.1,0.0394,2.3,17.9,Mutm Set 1 Gpgÿ
 3U6E A 1,28,6.1,0.0387,2.3,17.9,Mutm Set 1 Tpgoÿ
 3U6M A 1,28,6.2,0.0266,2.3,17.9,Structural Effects Of Sequence Context On Lesion Recognition By Mutmÿ
@@ -68,7 +66,6 @@
 3NIL F ,17,4.7,0.0460,3.6,5.9,The Structure Of Ubr Box (Rdaa)ÿ
 3H09 B 1,28,5.7,0.0082,3.6,0.0,The Structure Of Haemophilus Influenzae Iga1 Proteaseÿ
 3H09 A 1,28,5.7,0.0084,3.6,0.0,The Structure Of Haemophilus Influenzae Iga1 Proteaseÿ
-
 1VLP C 4,12,3.3,0.0259,3.7,8.3,Crystal Structure Of Nicotinate Phosphoribosyltransferase (Yor209c) From Saccharomyces Cerevisiae At 1.75 A Resolution
 1VLP D 3,12,3.3,0.0327,3.7,8.3,Crystal Structure Of Nicotinate Phosphoribosyltransferase (Yor209c) From Saccharomyces Cerevisiae At 1.75 A Resolution
 3HKZ A 5,12,3.4,0.0261,3.8,0.0,The X-Ray Crystal Structure Of Rna Polymerase From Archaeaÿ

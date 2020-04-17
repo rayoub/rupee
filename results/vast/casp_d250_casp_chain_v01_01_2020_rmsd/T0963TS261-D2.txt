@@ -1,4 +1,3 @@
-
 4A63 L 1,16,5.7,0.0023,1.4,12.5,Crystal Structure Of The P73-Aspp2 Complex At 2.6a Resolutionÿ
 5C2M A 4,20,4.7,0.0426,1.4,5.0,The De Novo Evolutionary Emergence Of A Symmetrical Protein Is Shaped By Folding Constraints
 4Q28 B 1,37,4.9,0.0225,1.4,0.0,Crystal Structure Of The Plectin 1 And 2 Repeats Of The Human Periplakin. Northeast Structural Genomics Consortium (nesg) Target Hr9083a
@@ -59,7 +58,6 @@
 2R1A F ,35,6.9,0.0127,1.5,5.7,Crystal Structure Of The Periplasmic Lipopolysaccharide Transport Protein Lpta (Yhbn), Trigonal Form
 4Q28 A 1,37,5.1,0.0091,1.5,0.0,Crystal Structure Of The Plectin 1 And 2 Repeats Of The Human Periplakin. Northeast Structural Genomics Consortium (nesg) Target Hr9083a
 4BOD A ,29,7.0,0.0010,1.5,0.0,Complement Regulator Acquiring Outer Surface Protein Bbcrasp-4 Or Erpc From Borrelia Burgdorferi
-
 4KSS A 3,40,7.0,0.0045,1.3,5.0,Crystal Structure Of Vibrio Cholerae Atpase Gspse Hexamer
 4KSS E 3,40,7.0,0.0054,1.3,5.0,Crystal Structure Of Vibrio Cholerae Atpase Gspse Hexamer
 4KSS D 3,40,7.0,0.0061,1.3,5.0,Crystal Structure Of Vibrio Cholerae Atpase Gspse Hexamer
@@ -120,7 +118,6 @@
 4IXM A 2,30,5.2,0.0152,1.4,3.3,Crystal Structure Of Zn(ii)-bound Yjia Gtpase From E. Coli
 4RAA A 5,34,4.8,0.0298,1.4,2.9,Crystal Structure Of A Putative Exported Protein (bf0058) From Bacteroides Fragilis Nctc 9343 At 2.60 A Resolution
 5CWW A ,36,6.2,0.0163,1.4,2.8,Crystal Structure Of The Chaetomium Thermophilum Heterotrimeric Nup82 Ntd-nup159 Tail-nup145n Apd Complex
-
 4A63 L 1,16,5.7,0.0023,1.4,12.5,Crystal Structure Of The P73-Aspp2 Complex At 2.6a Resolutionя
 4Q28 B 1,37,4.9,0.0225,1.4,0.0,Crystal Structure Of The Plectin 1 And 2 Repeats Of The Human Periplakin. Northeast Structural Genomics Consortium (nesg) Target Hr9083a
 5C2M A 4,20,4.7,0.0426,1.4,5.0,The De Novo Evolutionary Emergence Of A Symmetrical Protein Is Shaped By Folding Constraints

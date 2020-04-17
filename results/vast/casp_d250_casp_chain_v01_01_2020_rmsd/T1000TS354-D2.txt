@@ -1,4 +1,3 @@
-
 3VA7 A 1,49,8.1,0.0026,1.8,12.2,Crystal Structure Of The Kluyveromyces Lactis Urea Carboxylaseÿ
 1ZVV A 3,51,9.9,0.0018,1.8,15.7,Crystal Structure Of A Ccpa-Crh-Dna Complex
 3ORR B 1,50,7.3,0.0417,1.8,12.0,Crystal Structure Of N5-Carboxyaminoimidazole Synthetase From Staphylococcus Aureusÿ
@@ -59,7 +58,6 @@
 2FEP A 2,50,9.6,0.0045,1.8,14.0,Structure Of Truncated Ccpa In Complex With P-Ser-Hpr And Sulfate Ions
 1EZ1 A 1,48,8.0,0.0029,1.8,10.4,Structure Of Escherichia Coli Purt-Encoded Glycinamide Ribonucleotide Transformylase Complexed With Mg, Amppnp, And Gar
 4LK3 D 1,58,10.2,0.0010,1.8,6.9,Crystal Structure Of Human Udp-xylose Synthase R236a Substitution
-
 4B09 C 1,61,9.3,0.0056,1.7,4.9,Structure Of Unphosphorylated Baer Dimer
 1RZR D 3,48,9.8,0.0028,1.7,14.6,Crystal Structure Of Transcriptional Regulator- Phosphoprotein-Dna Complex
 1MQA A ,58,9.8,0.0034,1.7,6.9,Crystal Structure Of High Affinity Alphal I Domain In The Absence Of Ligand Or Metal
@@ -120,7 +118,6 @@
 3U19 A ,62,11.4,0.0013,1.7,6.5,Crystal Structure Of Acylenzyme Intermediate Of De Novo Designed Cysteine Esterase Ech13, Northeast Structural Genomics Consortium Target Or51ÿ
 3HGM A ,61,9.5,0.0091,1.8,14.8,Universal Stress Protein Tead From The Trap Transporter Teaabc Of Halomonas Elongataÿ
 2DZD A 1,54,9.8,0.0004,1.8,7.4,Crystal Structure Of The Biotin Carboxylase Domain Of Pyruvate Carboxylase
-
 3VA7 A 1,49,8.1,0.0026,1.8,12.2,Crystal Structure Of The Kluyveromyces Lactis Urea Carboxylaseÿ
 1ZVV A 3,51,9.9,0.0018,1.8,15.7,Crystal Structure Of A Ccpa-Crh-Dna Complex
 3ORR B 1,50,7.3,0.0417,1.8,12.0,Crystal Structure Of N5-Carboxyaminoimidazole Synthetase From Staphylococcus Aureusÿ

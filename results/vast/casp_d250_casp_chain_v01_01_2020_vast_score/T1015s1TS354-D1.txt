@@ -1,4 +1,3 @@
-
 2HU9 A ,34,8.6,10e-4.3,1.6,11.8,X-Ray Structure Of The Archaeoglobus Fulgidus Copz N- Terminal Domain
 2HU9 A 1,34,8.6,10e-5.3,1.6,11.8,X-Ray Structure Of The Archaeoglobus Fulgidus Copz N- Terminal Domain
 3C0D H ,34,8.5,10e-4.0,1.9,0.0,Crystal Structure Of The Putative Nitrite Reductase Nadph (Small Subunit) Oxidoreductase Protein Q87hb1. Northeast Structural Genomics Consortium Target Vpr162
@@ -59,7 +58,6 @@
 3VMH D ,31,8.1,0.0010,1.6,19.4,Oxygen-Bound Complex Between Oxygenase And Ferredoxin In Carbazole 1, 9a-Dioxygenase
 3VMH D 2,31,8.1,10e-4.0,1.6,19.4,Oxygen-Bound Complex Between Oxygenase And Ferredoxin In Carbazole 1, 9a-Dioxygenase
 2DE6 D ,31,8.1,0.0010,1.5,19.4,The Reduced Complex Between Oxygenase And Ferredoxin In Carbazole 1,9a-Dioxygenase
-
 4NB9 D ,31,8.1,0.0011,1.6,19.4,Oxygenase With Ile262 Replaced By Val And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
 4NBC D ,31,8.1,0.0011,1.6,19.4,Oxygenase With Phe275 Replaced By Trp And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase (form1)
 3VMG F ,31,8.1,0.0011,1.5,19.4,Reduced Carbazole-Bound Complex Between Oxygenase And Ferredoxin In Carbazole 1,9a-Dioxygenase
@@ -120,7 +118,6 @@
 3GB4 C 2,31,7.9,0.0003,1.6,3.2,Crystal Structure Of Dicamba Monooxygenase With Non-Heme Cobalt And Dicambaÿ
 3AAE E ,34,7.9,0.0333,1.9,5.9,Crystal Structure Of Actin Capping Protein In Complex With Carmil Fragmentÿ
 3AAE E 2,34,7.9,0.0333,1.9,5.9,Crystal Structure Of Actin Capping Protein In Complex With Carmil Fragmentÿ
-
 3GKE C 2,31,7.9,0.0003,1.5,0.0,Crystal Structure Of Dicamba Monooxygenaseÿ
 3GB4 B 2,31,7.9,0.0003,1.6,3.2,Crystal Structure Of Dicamba Monooxygenase With Non-Heme Cobalt And Dicambaÿ
 3AAE C ,34,7.9,0.0340,1.9,5.9,Crystal Structure Of Actin Capping Protein In Complex With Carmil Fragmentÿ

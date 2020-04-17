@@ -1,4 +1,3 @@
-
 4L29 N ,33,6.8,0.0327,2.1,6.1,Structure Of Wtmhc Class I With Ny-eso1 Double Mutant
 1XF5 C 2,36,6.7,0.0176,2.1,8.3,Complex Hcv Core-Fab 19d9d6-Protein L Mutant (H74c, Y64w)in Space Group P21212
 2A62 A 3,34,7.5,0.0090,2.1,2.9,Crystal Structure Of Mouse Cadherin-8 Ec1-3
@@ -59,7 +58,6 @@
 4HWB H 2,37,6.7,0.0485,2.2,5.4,Crystal Structure Of Ectodomain 3 Of The Il-13 Receptor Alpha 1 In Complex With A Human Neutralizing Monoclonal Antibody Fragment
 1D9K G 2,34,7.1,0.0026,2.2,11.8,Crystal Structure Of Complex Between D10 Tcr And Pmhc I- AkCA
 4LLQ A ,38,7.0,0.0391,2.2,5.3,Structure Of Redesigned Igg1 First Constant And Lambda Domains (ch1:clambda Constant Redesign 2 Beta, Crd2b) At 1.42a
-
 4U6V H 2,36,6.9,0.0225,2.1,2.8,Mechanisms Of Neutralization Of A Human Anti-alpha Toxin Antibody
 1QTY X ,35,6.9,0.0207,2.1,11.4,Vascular Endothelial Growth Factor In Complex With Domain 2 Of The Flt-1 Receptor
 2ATL B 4,32,5.9,0.0123,2.1,21.9,Unmodified Insertion Ternary Complexÿ
@@ -120,7 +118,6 @@
 4JO4 I 2,39,6.7,0.0495,2.1,2.6,Crystal Structure Of Rabbit Mab R20 Fab
 4M61 D 2,36,6.8,0.0361,2.1,5.6,Crystal Structure Of Unliganded Anti-dna Fab A52
 4L29 N ,33,6.8,0.0327,2.1,6.1,Structure Of Wtmhc Class I With Ny-eso1 Double Mutant
-
 1MCR B 2,34,7.0,0.0137,2.1,2.9,Principles And Pitfalls In Designing Site Directed Peptide Ligandsя
 1XF5 C 2,36,6.7,0.0176,2.1,8.3,Complex Hcv Core-Fab 19d9d6-Protein L Mutant (H74c, Y64w)in Space Group P21212
 2A62 A 3,34,7.5,0.0090,2.1,2.9,Crystal Structure Of Mouse Cadherin-8 Ec1-3

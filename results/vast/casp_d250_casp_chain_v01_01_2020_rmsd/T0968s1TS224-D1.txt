@@ -1,4 +1,3 @@
-
 4UUY B 2,26,5.0,0.0141,1.2,3.8,Structural Identification Of The Vps18 Beta-propeller Reveals A Critical Role In The Hops Complex Stability And Function
 2ONC B 4,22,5.1,0.0090,1.2,4.5,Crystal Structure Of Human Dpp-4
 4LKO A 4,22,5.1,0.0079,1.2,4.5,Crystal Structure Of Human Dpp-iv In Complex With Bms-744891
@@ -59,7 +58,6 @@
 1W20 A 4,27,4.9,0.0258,1.3,7.4,Structure Of Neuraminidase From English Duck Subtype N6 Copmplexed With 30 Mm Sialic Acid (Nana, Neu5ac), Crystal Soaked For 3 Hours At 291 K
 1W21 A 4,27,4.9,0.0258,1.3,7.4,Structure Of Neuraminidase From English Duck Subtype N6 Complexed With 30 Mm Sialic Acid (Nana, Neu5ac), Crystal Soaked For 43 Hours At 291 K
 3ES8 B 1,42,5.2,0.0022,1.3,7.1,Crystal Structure Of Divergent Enolase From Oceanobacillus Iheyensis Complexed With Mg And L-Malate
-
 1W1I B 4,18,5.0,0.0096,1.2,0.0,Crystal Structure Of Dipeptidyl Peptidase Iv (Dppiv Or Cd26) In Complex With Adenosine Deaminase
 2P8S A 4,18,5.1,0.0088,1.2,0.0,Human Dipeptidyl Peptidase IvCD26 IN COMPLEX WITH A Cyclohexalamine Inhibitor
 2QGX C 2,29,5.2,0.0040,1.2,3.4,Ubiquitin-Conjugating Enzyme E2q
@@ -120,7 +118,6 @@
 4AT1 B 2,23,4.8,0.0351,1.2,0.0,Structural Consequences Of Effector Binding To The T State Of Aspartate Carbamoyltransferase. Crystal Structures Of The Unligated And Atp-, And Ctp-Complexed Enzymes At 2.6- Angstroms Resolution
 2P8S B 4,22,5.0,0.0096,1.2,4.5,Human Dipeptidyl Peptidase IvCD26 IN COMPLEX WITH A Cyclohexalamine Inhibitor
 3O95 C 4,23,5.1,0.0091,1.2,8.7,Crystal Structure Of Human Dpp4 Bound To Tak-100ÿ
-
 4UUY B 2,26,5.0,0.0141,1.2,3.8,Structural Identification Of The Vps18 Beta-propeller Reveals A Critical Role In The Hops Complex Stability And Function
 2ONC B 4,22,5.1,0.0090,1.2,4.5,Crystal Structure Of Human Dpp-4
 4LKO A 4,22,5.1,0.0079,1.2,4.5,Crystal Structure Of Human Dpp-iv In Complex With Bms-744891

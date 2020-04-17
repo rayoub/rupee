@@ -1,4 +1,3 @@
-
 2HZS A ,89,11.9,10e-4.6,2.4,5.6,Structure Of The Mediator Head Submodule Med8c1820
 4V1O Y ,88,11.9,10e-4.6,2.3,6.8,Architecture Of The Rna Polymerase Ii-mediator Core Transcription Initiation Complex
 2HZS G ,89,11.9,10e-4.6,2.4,5.6,Structure Of The Mediator Head Submodule Med8c1820
@@ -59,7 +58,6 @@
 1VBK A 1,68,9.5,10e-5.4,2.9,10.3,Crystal Structure Of Ph1313 From Pyrococcus Horikoshii Ot3
 1IG9 A 4,85,9.4,0.0045,3.3,2.4,Structure Of The Replicating Complex Of A Pol Alpha Family Dna Polymerase
 3RD6 A ,77,9.4,0.0008,2.3,10.4,Crystal Structure Of Mll3558 Protein From Rhizobium Loti. Northeast Structural Genomics Consortium Target Id Mlr403ÿ
-
 4DU1 A 4,84,9.4,0.0050,3.6,4.8,Rb69 Dna Polymerase Ternary Complex With Datp Opposite Dt
 3HWD B ,65,9.4,0.0025,3.4,12.3,Crystal Structure Of Siderocalin (Ngal, Lipocalin 2) K125a-K Mutant Complexed With Ferric Enterobactinÿ
 4X7M A 2,39,9.4,0.0103,2.8,0.0,Crystal Structure Of S. Aureus Tarm G117r Mutant In Complex With Udp And Udp-glcnac
@@ -120,7 +118,6 @@
 4X7P A 2,46,9.2,0.0229,3.2,10.9,Crystal Structure Of Apo S. Aureus Tarm
 4N3E V ,79,9.2,0.0005,2.5,11.4,Crystal Structure Of Hyp-1, A St John's Wort Pr-10 Protein, In Complex With 8-anilino-1-naphthalene Sulfonate (ans)
 1ZTP A ,82,9.2,0.0468,3.4,4.9,X-Ray Structure Of Gene Product From Homo Sapiens Hs.433573
-
 1ZTP A 1,81,9.2,0.0362,3.5,4.9,X-Ray Structure Of Gene Product From Homo Sapiens Hs.433573
 2WMC C ,77,9.1,0.0036,2.7,5.2,Crystal Structure Of Eukaryotic Initiation Factor 4e From Pisum Sativumÿ
 3BY0 B ,67,9.1,0.0061,3.5,9.0,Crystal Structure Of Siderocalin (Ngal, Lipocalin 2) W79a- R81a Complexed With Ferric Enterobactin

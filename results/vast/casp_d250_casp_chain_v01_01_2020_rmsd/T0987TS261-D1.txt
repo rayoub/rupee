@@ -1,4 +1,3 @@
-
 1IM3 H ,49,9.1,0.0146,2.0,6.1,Crystal Structure Of The Human Cytomegalovirus Protein Us2 Bound To The Mhc Class I Molecule Hla-A2TAX
 3LB6 D 3,55,8.4,0.0231,2.1,12.7,The Structure Of Il-13 In Complex With Il-13ralpha2ÿ
 2XIB D 2,59,9.1,0.0165,2.1,6.8,Crystal Structure Of An Alpha-L-Fucosidase Gh29 From Bacteroides Thetaiotaomicron In Complex With Deoxyfuconojirimycinÿ
@@ -59,7 +58,6 @@
 3V6F B 2,53,8.7,0.0454,2.4,13.2,Crystal Structure Of An Anti-hbv E-antigen Monoclonal Fab Fragment (e6), Unbound
 1PJ9 A 3,58,10.1,0.0479,2.4,5.2,Bacillus Circulans Strain 251 Loop Mutant 183-195
 3B2U H 1,75,10.3,0.0260,2.4,10.7,Crystal Structure Of Isolated Domain Iii Of The Extracellular Region Of The Epidermal Growth Factor Receptor In Complex With The Fab Fragment Of Imc-11f8
-
 3QXW D ,72,10.3,0.0263,2.4,6.9,Free Structure Of An Anti-Methotrexate Cdr1-4 Graft Vhh Antibodyÿ
 4ZRX A 3,52,10.4,0.0041,2.4,1.9,Crystal Structure Of A Putative Alpha-l-fucosidase (bacova_04357) From Bacteroides Ovatus Atcc 8483 At 1.59 A Resolution
 4HXB L 2,52,8.8,0.0388,2.4,13.5,Crystal Structure Of 6b9 Fab
@@ -120,7 +118,6 @@
 1KCK A 3,63,10.8,0.0058,2.5,6.3,Bacillus Circulans Strain 251 Cyclodextrin Glycosyl Transferase Mutant N193g
 2HT3 D 2,54,9.0,0.0237,2.5,14.8,Structure Of The Escherichia Coli Clc Chloride Channel Y445l Mutant And Fab Complex
 3F7R A 1,76,9.0,0.0181,2.5,0.0,First Pair Of Fibronectin Type Iii Domains And Part Of The Connecting Segment Of The Integrin Beta4ÿ
-
 1CXH A 4,62,10.8,0.0060,2.5,6.5,Complex Of Cgtase With Maltotetraose At Room Temperature And Ph 9.6 Based On Diffraction Data Of A Crystal Soaked With Maltoheptaose
 3IJY C 2,55,8.8,0.0431,2.5,12.7,Structure Of S67-27 In Complex With Kdo(2.8)kdoÿ
 1ZWI A 1,73,10.1,0.0472,2.5,9.6,Structure Of Mutant Kcsa Potassium Channel

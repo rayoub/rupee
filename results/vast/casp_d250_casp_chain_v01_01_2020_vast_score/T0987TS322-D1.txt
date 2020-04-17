@@ -1,4 +1,3 @@
-
 4C8X B ,115,14.1,10e-5.5,3.6,5.2,Crystal Structure Of Carbohydrate-binding Module Cbm3b Mutant (y56s) From The Cellulosomal Cellobiohydrolase 9a From Clostridium Thermocellum
 1RXL A ,114,14.0,10e-5.9,3.4,8.8,Solution Structure Of The Engineered Protein Afae-Dsc
 2YLK D ,104,13.8,10e-5.1,3.1,9.6,Carbohydrate-Binding Module Cbm3b From The Cellulosomal Cellobiohydrolase 9a From Clostridium Thermocellumÿ
@@ -59,7 +58,6 @@
 4IBV A ,93,11.6,0.0023,2.7,5.4,Human P53 Core Domain With Hot Spot Mutation R273c And Second-site Suppressor Mutation S240r In Sequence-specific Complex With Dna
 1VKX B 1,100,11.6,0.0039,3.4,9.0,Crystal Structure Of The Nfkb P50P65 HETERODIMER COMPLEXED To The Immunoglobulin Kb Dnaÿ
 2CDP B ,88,11.6,0.0063,2.9,9.1,Structure Of A Cbm6 In Complex With Neoagarohexaoseÿ
-
 4BQ9 A 2,77,11.5,0.0002,3.0,7.8,Crystal Structure Of The Fn5 And Fn6 Domains Of Neo1, Form 1
 3F84 B 2,101,11.5,0.0169,4.3,6.9,Structure Of Fusion Complex Of Major Pilin Cfab And Major Pilin Cfab Of CfaI PILUS FROM ETEC E. COLIÿ
 3VD0 D ,101,11.5,0.0077,3.3,6.9,Structure Of P73 Dna Binding Domain Tetramer Modulates P73 Transactivationÿ
@@ -120,7 +118,6 @@
 1XGY L 1,74,11.3,0.0005,2.9,5.4,Crystal Structure Of Anti-Meta I Rhodopsin Fab Fragment K42- 41lÿ
 4BQC B 2,81,11.3,0.0001,3.4,7.4,Crystal Structure Of The Fn5 And Fn6 Domains Of Neo1 Bound To Sos
 4TUK L 1,74,11.3,0.0057,2.9,6.8,Crystal Structure Of Monoclonal Antibody Against Neuroblastoma Associated Antigen
-
 4TUK L 1,74,11.3,0.0057,2.9,6.8,Crystal Structure Of Monoclonal Antibody Against Neuroblastoma Associated Antigen
 2IBG B 2,81,11.2,0.0001,2.7,2.5,Crystal Structure Of Hedgehog Bound To The Fniii Domains Of Ihog
 1YEG L 1,76,11.2,0.0060,3.0,5.3,Structure Of Igg2a Fab Fragment (D2.3) Complexed With Reaction Product

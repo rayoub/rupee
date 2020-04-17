@@ -1,4 +1,3 @@
-
 4UU4 A ,64,11.3,0.0005,2.3,4.7,Crystal Structure Of Lpth, The Lpta Homologous Periplasmic Component Of The Conserved Lipopolysaccharide Transport Device From Pseudomonas Aeruginosa
 2R19 A ,67,10.7,0.0016,2.2,3.0,Crystal Structure Of The Periplasmic Lipopolysaccharide Transport Protein Lpta (Yhbn), Orthorhombic Form
 2R1A H ,68,10.5,0.0071,2.2,2.9,Crystal Structure Of The Periplasmic Lipopolysaccharide Transport Protein Lpta (Yhbn), Trigonal Form
@@ -59,7 +58,6 @@
 1QAE B ,42,8.5,0.0275,2.4,4.8,The Active Site Of Serratia Endonuclease Contains A Conserved Magnesium-Water Cluster
 2Y1L F ,28,8.5,0.0040,3.7,0.0,Caspase-8 In Complex With Darpin-8.4ÿ
 1SMN B ,40,8.5,0.0287,1.7,10.0,Nuclease, Dnase, Rnase, Sugar-Nonspecific Nuclease Mol_id: 1; Molecule: Extracellular Endonuclease; Chain: A, B; Ec: 3.1.30.2; Engineered: Yes
-
 1SMN A ,40,8.5,0.0308,1.7,10.0,Nuclease, Dnase, Rnase, Sugar-Nonspecific Nuclease Mol_id: 1; Molecule: Extracellular Endonuclease; Chain: A, B; Ec: 3.1.30.2; Engineered: Yes
 3WPR A 3,39,8.5,0.0004,3.1,5.1,Acinetobacter Sp. Tol 5 Ataa N-terminal Half Of C-terminal Stalk Fused To Gcn4 Adaptors (cstalkn)
 1QAE A ,40,8.5,0.0343,1.7,10.0,The Active Site Of Serratia Endonuclease Contains A Conserved Magnesium-Water Cluster
@@ -120,7 +118,6 @@
 3FCS B 4,29,7.7,0.0456,3.4,0.0,Structure Of Complete Ectodomain Of Integrin Aiibb3ÿ
 4XLQ I 3,35,7.7,0.0012,2.4,11.4,Crystal Structure Of T.aquaticus Transcription Initiation Complex Containing Upstream Fork (-11 Base-paired) Promoter
 3DEP A 2,27,7.7,0.0342,4.5,7.4,Structural Basis For Specific Substrate Recognition By The Chloroplast Signal Recognition Particle Protein Cpsrp43
-
 3ZUV D ,26,7.7,0.0280,3.9,7.7,Crystal Structure Of A Designed Selected Ankyrin Repeat Protein In Complex With The Phosphorylated Map Kinase Erk2
 3TWW B 1,21,7.7,0.0130,2.6,4.8,Crystal Structure Of Arc4 From Human Tankyrase 2 In Complex With Peptide From Human Lnpep (Chimeric Peptide)ÿ
 5ET0 C 3,32,7.6,0.0354,3.6,3.1,Crystal Structure Of Myo3b-arb2 In Complex With Espin1-ar

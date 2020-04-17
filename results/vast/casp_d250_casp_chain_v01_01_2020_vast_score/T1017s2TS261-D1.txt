@@ -1,4 +1,3 @@
-
 2ZZG B 1,78,11.3,0.0043,3.4,7.7,Crystal Structure Of Alanyl-Trna Synthetase In Complex With 5''-O-(N-(L-Alanyl)-Sulfamyoxyl) Adenine Without Oligomerization Domainÿ
 3KBQ A ,59,10.6,10e-4.6,3.0,6.8,The Crystal Structure Of The Protein Cina With Unknown Function From Thermoplasma Acidophilumÿ
 3KBQ B ,59,10.4,10e-4.2,3.1,10.2,The Crystal Structure Of The Protein Cina With Unknown Function From Thermoplasma Acidophilumÿ
@@ -59,7 +58,6 @@
 4YTX N ,54,8.8,0.0007,2.1,3.7,Crystal Structure Of Ups1-mdm35 Complex With Pa
 4YTX N 1,64,8.8,0.0002,2.5,10.9,Crystal Structure Of Ups1-mdm35 Complex With Pa
 4YTW B ,61,8.8,0.0008,2.3,11.5,Crystal Structure Of Ups1-mdm35 Complex
-
 4YTW B 1,64,8.8,0.0002,2.4,10.9,Crystal Structure Of Ups1-mdm35 Complex
 4NKT B ,45,8.7,0.0154,1.8,0.0,Structure Of Cid1 In Complex With The Utp Analog Umpnpp
 4NKT B 2,42,8.7,10e-4.6,1.7,4.8,Structure Of Cid1 In Complex With The Utp Analog Umpnpp
@@ -120,7 +118,6 @@
 3NVO A ,40,8.5,0.0480,2.3,2.5,The Soluble Domain Structure Of The Zntb Zn2+ Efflux Systemя
 3NVO A 1,40,8.5,0.0176,2.2,2.5,The Soluble Domain Structure Of The Zntb Zn2+ Efflux Systemя
 3NWI D ,42,8.5,0.0480,2.0,9.5,The Soluble Domain Structure Of The Zntb Zn2+ Efflux Systemя
-
 3NWI D 1,43,8.5,0.0075,2.0,9.3,The Soluble Domain Structure Of The Zntb Zn2+ Efflux Systemÿ
 3NWI B ,43,8.5,0.0481,2.0,9.3,The Soluble Domain Structure Of The Zntb Zn2+ Efflux Systemÿ
 3NWI B 1,43,8.5,0.0076,2.0,9.3,The Soluble Domain Structure Of The Zntb Zn2+ Efflux Systemÿ

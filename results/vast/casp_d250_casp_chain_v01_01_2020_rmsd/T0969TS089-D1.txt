@@ -1,4 +1,3 @@
-
 3WNQ A 2,48,9.4,0.0453,2.1,8.3,Crystal Structure Of (r)-carbonyl Reductase H49a Mutant From Candida Parapsilosis In Complex With 2-hydroxyacetophenone
 5BZA B 2,63,10.2,0.0018,2.1,4.8,Crystal Structure Of Cbsa From Thermotoga Neapolitana
 1SJC C 3,62,8.0,0.0168,2.1,6.5,X-Ray Structure Of O-Succinylbenzoate Synthase Complexed With N-Succinyl Methionine
@@ -59,7 +58,6 @@
 2Q5C D 1,76,8.4,0.0498,2.2,9.2,Crystal Structure Of Ntrc Family Transcriptional Regulator From Clostridium Acetobutylicum
 1U08 A 3,73,10.7,0.0042,2.2,2.7,Crystal Structure And Reactivity Of Ybdl From Escherichia Coli Identify A Methionine Aminotransferase Function
 1VYH F 1,106,9.2,0.0061,2.2,10.4,Paf-Ah Holoenzyme: Lis1ALFA2
-
 3Q7T B ,80,12.0,10e-7.2,1.9,11.2,2.15a Resolution Structure (I41 Form) Of The Chxr Receiver Domain From Chlamydia Trachomatisÿ
 1FXW A 1,96,9.1,0.0074,1.9,12.5,Crystal Structure Of The Recombinant Alpha1ALPHA2 Catalytic Heterodimer Of Bovine Brain Platelet-Activating Factor Acetylhydrolase Ib.
 1VYH I 1,98,9.2,0.0056,1.9,11.2,Paf-Ah Holoenzyme: Lis1ALFA2
@@ -120,7 +118,6 @@
 2I91 B 4,68,10.4,0.0005,2.1,8.8,60kda Ro Autoantigen In Complex With A Fragment Of Misfolded Rna
 4GMF C 1,58,10.6,0.0004,2.1,13.8,Apo Structure Of A Thiazolinyl Imine Reductase From Yersinia Enterocolitica (Irp3)
 1VYH Q 1,103,9.2,0.0062,2.1,10.7,Paf-Ah Holoenzyme: Lis1ALFA2
-
 3WNQ A 2,48,9.4,0.0453,2.1,8.3,Crystal Structure Of (r)-carbonyl Reductase H49a Mutant From Candida Parapsilosis In Complex With 2-hydroxyacetophenone
 5BZA B 2,63,10.2,0.0018,2.1,4.8,Crystal Structure Of Cbsa From Thermotoga Neapolitana
 1VYH A 1,103,9.2,0.0064,2.1,10.7,Paf-Ah Holoenzyme: Lis1ALFA2

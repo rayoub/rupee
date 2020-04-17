@@ -1,4 +1,3 @@
-
 2ED4 A ,73,12.1,10e-7.6,2.6,12.3,Crystal Structure Of Flavin Reductase Hpac Complexed With Fad And Nad
 2ECR A ,74,12.0,10e-7.5,2.5,12.2,Crystal Structure Of The Ligand-Free Form Of The Flavin Reductase Component (Hpac) Of 4-Hydroxyphenylacetate 3- Monooxygenase
 3V4H A ,80,11.9,10e-6.0,2.1,7.5,Crystal Structure Of A Type Vi Secretion System Effector From Yersinia Pestisÿ
@@ -59,7 +58,6 @@
 1RZ1 F ,73,10.4,10e-4.0,2.5,2.7,Reduced Flavin Reductase Phea2 In Complex With Nad
 3RH7 D ,73,10.4,0.0102,2.2,13.7,Crystal Structure Of A Hypothetical Oxidoreductase (Sma0793) From Sinorhizobium Meliloti 1021 At 3.00 A Resolutionÿ
 3RH7 D 1,72,10.4,0.0001,2.2,13.9,Crystal Structure Of A Hypothetical Oxidoreductase (Sma0793) From Sinorhizobium Meliloti 1021 At 3.00 A Resolutionÿ
-
 2R0X A ,72,10.3,0.0001,2.3,8.3,Crystal Structure Of Putative Flavin Reductase (Yp_719437.1) From Haemophilus Somnus 129pt At 1.06 A Resolution
 3HY8 A ,58,10.3,0.0003,2.0,8.6,Crystal Structure Of Human Pyridoxine 5'-Phosphate Oxidase R229w Mutantÿ
 1WGB A ,73,10.3,10e-4.2,2.4,12.3,Crystal Structure Of A Probable Flavoprotein From Thermus Thermophilus Hb8
@@ -120,7 +118,6 @@
 2WZP R 1,56,9.7,0.0002,2.0,8.9,Structures Of Lactococcal Phage P2 Baseplate Shed Light On A Novel Mechanism Of Host Attachment And Activation In Siphoviridaeÿ
 4L82 C ,73,9.7,0.0016,2.4,4.1,Structure Of A Putative Oxidoreductase From Rickettsia Felis
 3K86 A ,74,9.7,0.0016,2.4,5.4,Crystal Structure Of Nadh:fad Oxidoreductase (Tftc) - Apo Formÿ
-
 3WX6 A ,63,9.7,10e-4.6,1.6,9.5,Crystal Structure Of Type Six Secretion System Protein
 3WX6 A 1,66,9.7,10e-5.0,1.8,9.1,Crystal Structure Of Type Six Secretion System Protein
 4HX6 D ,74,9.6,0.0019,2.4,4.1,The Crystal Structure Of An Oxidoreductase (Sgce6)from Streptomyces Globisporus

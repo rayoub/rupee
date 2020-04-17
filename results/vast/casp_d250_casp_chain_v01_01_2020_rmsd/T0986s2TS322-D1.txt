@@ -1,4 +1,3 @@
-
 3UQZ B 1,20,4.0,0.0390,1.0,20.0,X-Ray Structure Of Dna Processing Protein A (Dpra) From Streptococcus Pneumoniae
 4O6X B ,21,4.0,0.0487,1.1,9.5,Crystal Structure Of Human Ankyrin G Death Domain
 2IB1 A 1,12,3.7,0.0467,1.2,8.3,Solution Structure Of P45 Death Domain
@@ -59,7 +58,6 @@
 3K7R J ,42,8.1,10e-4.2,1.9,4.8,Crystal Structure Of [tm][cuatx1]3ÿ
 2XMV B ,39,5.9,0.0160,1.9,5.1,Copper Chaperone Atx1 From Synechocystis Pcc6803 (Cu1, Trimeric Form, His61tyr Mutant)ÿ
 1U0S A ,49,6.6,0.0344,1.9,10.2,Chemotaxis Kinase Chea P2 Domain In Complex With Response Regulator Chey From The Thermophile Thermotoga Maritima
-
 1Q1K A 3,28,5.9,0.0446,1.9,7.1,Structure Of Atp-Phosphoribosyltransferase From E. Coli Complexed With Pr-Atp
 2XMU B ,40,6.0,0.0112,1.9,5.0,Copper Chaperone Atx1 From Synechocystis Pcc6803 (Cu2 Form)ÿ
 1YG0 A ,45,6.8,0.0003,1.9,6.7,Solution Structure Of Apo-Copp From Helicobacter Pylori
@@ -120,7 +118,6 @@
 3IWL A ,53,8.2,10e-4.3,2.0,7.5,Crystal Structure Of Cisplatin Bound To A Human Copper Chaperone (Monomer)ÿ
 1CC8 A ,49,8.3,10e-4.5,2.0,4.1,Crystal Structure Of The Atx1 Metallochaperone Protein
 1CC7 A ,45,8.3,10e-4.6,2.0,4.4,Crystal Structure Of The Atx1 Metallochaperone Protein
-
 4K8X A 6,44,6.2,0.0155,2.0,6.8,Binary Complex Of 9n Dna Polymerase In The Replicative State
 4C3H A 13,32,7.4,0.0009,2.0,0.0,Structure Of 14-subunit Rna Polymerase I At 3.27 A Resolution, Crystal Form C2-93
 3K7R F ,51,8.1,10e-4.2,2.0,5.9,Crystal Structure Of [tm][cuatx1]3ÿ

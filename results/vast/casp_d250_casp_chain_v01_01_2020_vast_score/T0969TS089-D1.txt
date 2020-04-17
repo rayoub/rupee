@@ -1,4 +1,3 @@
-
 4JJ4 A ,176,15.6,10e-8.9,3.4,11.9,Crystal Structure Of A Catalytic Mutant Of Axe2 (axe2-d191a), An Acetylxylan Esterase From Geobacillus Stearothermophilus
 4JKO B ,170,15.4,10e-9.7,3.2,10.6,Crystal Structure Of A Catalytic Mutant Of Axe2 (axe2_s15a), An Acetylxylan Esterase From Geobacillus Stearothermophilus
 5COB C ,139,15.4,10e-4.3,2.9,10.1,Crystal Structure Of Iridoid Synthase In Complex With Nadp+ And 8- Oxogeranial At 2.65-angstrom Resolution
@@ -59,7 +58,6 @@
 3DC7 B ,148,14.8,10e-9.3,2.9,10.1,Crystal Structure Of The Protein Q88sr8 From Lactobacillus Plantarum. Northeast Structural Genomics Consortium Target Lpr109
 5COA B ,131,14.8,0.0003,2.7,8.4,Crystal Structure Of Iridoid Synthase At 2.2-angstrom Resolution
 4OAO A ,178,14.8,10e-8.6,3.6,12.4,A Mutant Of Axe2 (r55a), And Acetyl-xylooligosaccharide Esterase From Geobacillus Stearmophilus
-
 1PLL A ,106,14.8,10e-9.0,3.0,9.4,Crystallographic Studies On P21h-Ras Using Synchrotron Laue Method: Improvement Of Crystal Quality And Monitoring Of The Gtpase Reaction At Different Time Points
 1YO6 D ,132,14.8,10e-7.8,2.6,10.6,Crystal Structure Of The Putative Carbonyl Reductase Sniffer Of Caenorhabditis Elegans
 5DBF A ,130,14.8,0.0003,2.8,9.2,Crystal Structure Of Iridoid Synthase From Cantharanthus Roseus In Complex With Nadph
@@ -120,7 +118,6 @@
 1W7K A 1,121,14.6,10e-4.9,3.9,9.1,E.Coli Folc In Complex With Adp, Without Folate Substrateÿ
 3AM4 A ,149,14.6,10e-5.2,4.0,10.1,A372m Mutant Of Enoyl-Acp Reductase From Plasmodium Falciparum (Pfenr) In Complex With Triclosan Variant T1ÿ
 1Z45 A 1,135,14.6,10e-4.8,3.1,8.1,Crystal Structure Of The Gal10 Fusion Protein Galactose MutarotaseUDP-Galactose 4-Epimerase From Saccharomyces Cerevisiae Complexed With Nad, Udp-Glucose, And Galactose
-
 3DXF A ,130,14.6,0.0029,2.7,10.0,Crystal Structure Of The Hscarg R37a Mutantÿ
 2GAS B ,133,14.5,0.0004,3.1,9.8,Crystal Structure Of Isoflavone Reductase
 4HNH A ,125,14.5,10e-6.2,2.7,12.0,The Crystal Structure Of A Short-Chain DehydrogenasesREDUCTASE (WIDE Type) From Veillonella Parvula Dsm 2008 In Complex With Nadp

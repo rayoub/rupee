@@ -1,4 +1,3 @@
-
 2Q8Q A 1,46,8.3,0.0191,1.8,10.9,Crystal Structure Of S. Aureus Isde Complexed With Heme
 2NU7 D 1,77,12.1,10e-5.6,1.8,10.4,C123as Mutant Of E. Coli Succinyl-Coa Synthetase
 4OM8 A 1,76,9.7,0.0186,1.8,13.2,Crystal Structure Of 5-formly-3-hydroxy-2-methylpyridine 4-carboxylic Acid (fhmpc) 5-dehydrogenase, An Nad+ Dependent Dismutase
@@ -59,7 +58,6 @@
 3I4C B 2,70,11.3,0.0002,1.9,12.9,Crystal Structure Of Sulfolobus Solfataricus Adh(Ssadh) Double Mutant (W95l,N249y)я
 4K9Q B 2,55,9.0,0.0491,1.9,12.7,The Crystal Structure Of Benzoylformate Decarboxylase From Polynucleobacter Necessarius
 2NU8 D 1,78,12.1,10e-5.7,1.9,10.3,C123at Mutant Of E. Coli Succinyl-Coa Synthetase
-
 4DYD A 1,76,9.8,0.0307,1.7,13.2,Substrate-Directed Dual Catalysis Of Dicarbonyl Compounds By Diketoreductase
 3KEO B 2,60,9.0,0.0068,1.7,11.7,Crystal Structure Of A Rex-Family Transcriptional Regulatory Protein From Streptococcus Agalactiae Complexed With Nad+ÿ
 3KEQ B 2,61,9.4,0.0019,1.7,11.5,Crystal Structure Of A Rex-Family Transcriptional Regulatory Protein From Streptococcus Agalactiae Complexed With Nad+ÿ
@@ -120,7 +118,6 @@
 5BZA D 2,54,10.2,10e-4.2,1.8,1.9,Crystal Structure Of Cbsa From Thermotoga Neapolitana
 1NTO H 2,65,11.1,0.0001,1.8,13.8,N249y Mutant Of Alcohol Dehydrogenase From The Archaeon Sulfolobus Solfataricus-Monoclinic Crystal Form
 2NU6 D 1,76,12.0,10e-5.6,1.8,9.2,C123aa Mutant Of E. Coli Succinyl-Coa Synthetase
-
 2Q8Q A 1,46,8.3,0.0191,1.8,10.9,Crystal Structure Of S. Aureus Isde Complexed With Heme
 2NU7 D 1,77,12.1,10e-5.6,1.8,10.4,C123as Mutant Of E. Coli Succinyl-Coa Synthetase
 4OM8 A 1,76,9.7,0.0186,1.8,13.2,Crystal Structure Of 5-formly-3-hydroxy-2-methylpyridine 4-carboxylic Acid (fhmpc) 5-dehydrogenase, An Nad+ Dependent Dismutase

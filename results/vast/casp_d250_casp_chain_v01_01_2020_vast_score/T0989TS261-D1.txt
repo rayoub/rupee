@@ -1,4 +1,3 @@
-
 4PQG A 2,53,8.6,0.0010,2.5,5.7,Crystal Structure Of The Pneumococcal O-glcnac Transferase Gtfa In Complex With Udp And Glcnac
 3VMA A 3,42,8.5,0.0041,3.3,4.8,Crystal Structure Of The Full-Length Transglycosylase Pbp1b From Escherichia Coliя
 1AQB A ,42,8.5,0.0221,2.0,4.8,Retinol-Binding Protein (Rbp) From Pig Plasma
@@ -59,7 +58,6 @@
 3LBE C ,47,7.9,0.0366,2.0,8.5,The Crystal Structure Of Smu.793 From Streptococcus Mutans Ua159 Bound To Acetyl Coaя
 3LBE A ,47,7.9,0.0372,2.0,8.5,The Crystal Structure Of Smu.793 From Streptococcus Mutans Ua159 Bound To Acetyl Coaя
 3ESI B ,53,7.9,0.0211,1.9,3.8,Crystal Structure Of An Uncharacterized Protein From Erwinia Carotovora Subsp. Atroseptica. Northeast Structural Genomics Target Ewr179
-
 1PXV D ,41,7.8,0.0329,1.4,7.3,The Staphostatin-Staphopain Complex: A Forward Binding Inhibitor In Complex With Its Target Cysteine Protease
 3RPX C ,43,7.8,0.0010,1.9,2.3,Crystal Structure Of Complement Component 1, Q Subcomponent Binding Protein, C1qbpÿ
 3J6U C 1,46,7.8,0.0192,2.5,8.7,Cryo-em Structure Of Dengue Virus Serotype 3 In Complex With Human Antibody 5j7 Fab
@@ -120,7 +118,6 @@
 3AZ9 K ,46,7.5,0.0317,2.1,13.0,Beta-Hydroxyacyl-Acyl Carrier Protein Dehydratase (Fabz) From Plasmodium Falciparum In Complex With Nas91ÿ
 3AZ9 Q ,46,7.5,0.0318,2.3,13.0,Beta-Hydroxyacyl-Acyl Carrier Protein Dehydratase (Fabz) From Plasmodium Falciparum In Complex With Nas91ÿ
 5EP5 D ,45,7.5,0.0145,1.9,11.1,The Crystal Structure Of The Hypothetical Protein Sav0944 Mutant (glu47ala) From Staphylococcus Aureus
-
 3UTH C 3,39,7.5,0.0273,1.9,0.0,Crystal Structure Of Aspergillus Fumigatus Udp Galactopyranose Mutase Complexed With Substrate Udp-Galp In Reduced Stateÿ
 3AZ9 E ,47,7.5,0.0329,2.4,12.8,Beta-Hydroxyacyl-Acyl Carrier Protein Dehydratase (Fabz) From Plasmodium Falciparum In Complex With Nas91ÿ
 3AZA K ,47,7.4,0.0336,2.4,10.6,Beta-Hydroxyacyl-Acyl Carrier Protein Dehydratase (Fabz) From Plasmodium Falciparum In Complex With Nas91-10ÿ

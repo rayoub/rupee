@@ -1,4 +1,3 @@
-
 4HSQ A ,88,12.0,0.0001,3.5,2.3,Crystal Structure Of Domains D2 And D3 Of The Major Pilin Spad From Corynebacterium Diphtheriae
 4HSS A ,89,12.0,0.0111,3.5,1.1,Structure Of The Full-length Major Pilin Spad From Corynebacterium Diphtheriae
 4HSS A 2,83,12.0,0.0002,3.4,2.4,Structure Of The Full-length Major Pilin Spad From Corynebacterium Diphtheriae
@@ -59,7 +58,6 @@
 2X12 A ,66,9.6,0.0078,2.8,6.1,Ph-Induced Modulation Of Streptococcus Parasanguinis Adhesion By Fap1 Fimbriaeÿ
 4QDR A 1,58,9.6,0.0036,3.1,12.1,Physical Basis For Nrp2 Ligand Binding
 4IGB D 2,79,9.6,0.0183,3.5,8.9,Crystal Structure Of The N-terminal Domain Of The Streptococcus Gordonii Adhesin Sgo0707
-
 4Z6J B ,51,9.6,0.0086,2.7,9.8,Crystal Structure Of Apo Intact Hoefavidin
 1FGQ A 1,66,9.6,10e-4.2,3.1,4.5,Lipoxygenase-1 (Soybean) At 100k, Q495e Mutant
 4AE0 A 3,53,9.6,0.0343,3.3,3.8,Crystal Structure Of Diphtheria Toxin Mutant Crm197ÿ
@@ -120,7 +118,6 @@
 3PZW A 1,58,9.2,0.0002,2.8,3.4,Soybean Lipoxygenase-1 - Re-Refinementÿ
 1JMX A 3,62,9.2,0.0063,3.0,11.3,Crystal Structure Of A Quinohemoprotein Amine Dehydrogenase From Pseudomonas Putida
 2QQK A 3,62,9.2,0.0153,3.3,4.8,Neuropilin-2 A1a2b1b2 Domains In Complex With A Semaphorin- Blocking Fab
-
 3LHN A ,44,9.2,0.0003,2.7,4.5,Crystal Structure Of Putative Lipoprotein (Np_718719.1) From Shewanella Oneidensis At 1.42 A Resolutionÿ
 4AG4 A 1,66,9.2,0.0028,3.3,6.1,Crystal Structure Of A Ddr1-Fab Complexÿ
 4QDS A 1,61,9.1,0.0166,3.3,4.9,Physical Basis For Nrp2 Ligand Binding

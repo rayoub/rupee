@@ -1,4 +1,3 @@
-
 4U1F B 2,19,4.9,0.0190,1.5,10.5,Crystal Structure Of Middle Domain Of Eukaryotic Translation Initiation Factor Eif3b
 5C2N F ,21,5.1,0.0077,1.5,0.0,The De Novo Evolutionary Emergence Of A Symmetrical Protein Is Shaped By Folding Constraints
 3KIH E 1,20,5.0,0.0131,1.5,0.0,The Crystal Structures Of Two Fragments Truncated From 5-Bla Propeller Lectin, Tachylectin-2 (Lib2-D2-15)ÿ
@@ -59,7 +58,6 @@
 3H7N D 5,30,4.8,0.0378,1.6,6.7,Structure Of Nup120ÿ
 2M3X F 2,25,5.2,0.0032,1.6,4.0,Solution Structure Of Ph1500: A Homohexameric Protein Centered On A 12-bladed Beta-propeller
 5C2N E ,20,5.1,0.0094,1.6,0.0,The De Novo Evolutionary Emergence Of A Symmetrical Protein Is Shaped By Folding Constraints
-
 1MU2 A 2,17,5.2,0.0022,1.4,0.0,Crystal Structure Of Hiv-2 Reverse Transcriptase
 3Q7O A 5,23,5.1,0.0069,1.4,4.3,The Crystal Structure Of Bamb From The Bam Complex In Spacegroup P213ÿ
 2YH3 A 4,22,5.0,0.0134,1.4,4.5,The Structure Of Bamb From E. Coliÿ
@@ -120,7 +118,6 @@
 2OK6 B 4,28,4.8,0.0352,1.5,3.6,Crystal Structure Of Aromatic Amine Dehydrogenase Ttq- Formamide Adduct Oxidized With Ferricyanide
 4PO7 A 5,21,4.9,0.0221,1.5,9.5,Structure Of The Sortilin:neurotensin Complex At Excess Neurotensin Concentration
 2I0S B 4,28,4.8,0.0347,1.5,3.6,Crystal Structure Of Aromatic Amine Dehydrogenase Ttq- Phenylacetaldehyde Adduct
-
 4U1F B 2,19,4.9,0.0190,1.5,10.5,Crystal Structure Of Middle Domain Of Eukaryotic Translation Initiation Factor Eif3b
 5C2N F ,21,5.1,0.0077,1.5,0.0,The De Novo Evolutionary Emergence Of A Symmetrical Protein Is Shaped By Folding Constraints
 3KIH E 1,20,5.0,0.0131,1.5,0.0,The Crystal Structures Of Two Fragments Truncated From 5-Bla Propeller Lectin, Tachylectin-2 (Lib2-D2-15)ÿ

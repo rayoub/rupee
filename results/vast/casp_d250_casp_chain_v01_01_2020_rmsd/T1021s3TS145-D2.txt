@@ -1,4 +1,3 @@
-
 4EC5 A 2,33,3.9,0.0368,1.7,15.2,Crystal Structure Of The S210c (Dimer) Mutant From The N-Terminal Domain Of The Secretin Xcpq From Pseudomonas Aeruginosa
 2HIQ A ,47,5.0,0.0073,1.7,8.5,Crystal Structure Of Jw1657 From Escherichia Coli
 2HIQ A 1,47,5.1,0.0050,1.7,8.5,Crystal Structure Of Jw1657 From Escherichia Coli
@@ -59,7 +58,6 @@
 3AEV B 2,35,4.8,0.0048,1.7,2.9,Crystal Structure Of AEIF2ALPHA-Adim2p-Rrna Complex From Pyrococcus Horikoshii Ot3ÿ
 4QG4 D 2,38,4.6,0.0258,1.7,13.2,Crystal Structure Of The Tetrameric Gtp/datp/atp-bound Samhd1 (h210a) Mutant Catalytic Core
 4QFZ C 2,36,4.6,0.0284,1.7,13.9,Crystal Structure Of The Tetrameric Dgtp/dttp-bound Samhd1 (rn206) Mutant Catalytic Core
-
 3S6E B ,39,4.9,0.0487,1.6,12.8,Crystal Structure Of A Rna Binding Motif Protein 39 (Rbm39) From Mus Musculus At 0.95 A Resolutionÿ
 5CHE A 1,37,5.0,0.0112,1.6,16.2,Crystal Structure Of Arabidopsis Glutamyl-trna Reductase In Complex With Its Regulatory Proteins
 5CHE B 1,37,5.1,0.0105,1.6,16.2,Crystal Structure Of Arabidopsis Glutamyl-trna Reductase In Complex With Its Regulatory Proteins
@@ -120,7 +118,6 @@
 3R9J D 1,19,3.5,0.0364,1.7,26.3,4.3a Resolution Structure Of A Mind-Mine(I24n) Protein Complexÿ
 5AO1 D 3,38,4.5,0.0052,1.7,13.2,Crystal Structure Of Human Samhd1 (amino Acid Residues 115-583) Bound To Ddgtp
 1DT4 A ,35,4.5,0.0051,1.7,5.7,Crystal Structure Of Nova-1 Kh3 K-Homology Rna-Binding Domain
-
 4EC5 A 2,33,3.9,0.0368,1.7,15.2,Crystal Structure Of The S210c (Dimer) Mutant From The N-Terminal Domain Of The Secretin Xcpq From Pseudomonas Aeruginosa
 2HIQ A ,47,5.0,0.0073,1.7,8.5,Crystal Structure Of Jw1657 From Escherichia Coli
 2HIQ A 1,47,5.1,0.0050,1.7,8.5,Crystal Structure Of Jw1657 From Escherichia Coli

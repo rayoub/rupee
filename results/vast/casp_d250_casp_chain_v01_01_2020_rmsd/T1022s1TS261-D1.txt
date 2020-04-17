@@ -1,4 +1,3 @@
-
 5C0X B 2,30,5.9,0.0248,1.6,0.0,Structure Of A 12-subunit Nuclear Exosome Complex Bound To Structured Rna
 4E7N A 1,31,6.7,0.0444,1.6,3.2,Crystal Structure Of Ahv_tl-I, A Glycosylated Snake-Venom Thrombin- Like Enzyme From Agkistrodon Halysÿ
 2F83 A 6,32,7.7,0.0008,1.6,0.0,Crystal Structure Of A Human Coagulation Factor
@@ -59,7 +58,6 @@
 3U35 A ,43,8.1,0.0068,1.8,18.6,Crystal Structure Of The General Stress FmnFAD BINDING PROTEIN FROM The Phytopathogen Xanthomonas Citri
 1FXX A 2,33,6.7,0.0344,1.9,12.1,The Structure Of Exonuclease I Suggests How Processivity Is Achieved
 3QZQ D 2,39,8.1,0.0294,1.9,10.3,Human Enterovirus 71 3c Protease Mutant E71d In Complex With Rupintrivirÿ
-
 2BR2 E 3,33,6.4,0.0044,1.3,6.1,Rnase Ph Core Of The Archaeal Exosome
 2C39 W 3,33,6.3,0.0051,1.3,6.1,Rnase Ph Core Of The Archaeal Exosome In Complex With Adpÿ
 2C37 G 3,33,6.4,0.0047,1.3,6.1,Rnase Ph Core Of The Archaeal Exosome In Complex With U8 Rnaÿ
@@ -120,7 +118,6 @@
 3CVZ B 1,33,6.6,0.0262,1.6,6.1,Structural Insights Into The Molecular Organization Of The S-Layer From Clostridium Difficileÿ
 1YWU A ,56,9.1,10e-4.8,1.6,3.6,Solution Nmr Structure Of Pseudomonas Aeruginosa Protein Pa4608. Northeast Structural Genomics Target Pat7
 2RDE A 2,57,8.2,0.0477,1.6,10.5,Crystal Structure Of Vca0042 Complexed With C-Di-Gmp
-
 5C0X B 2,30,5.9,0.0248,1.6,0.0,Structure Of A 12-subunit Nuclear Exosome Complex Bound To Structured Rna
 4E7N A 1,31,6.7,0.0444,1.6,3.2,Crystal Structure Of Ahv_tl-I, A Glycosylated Snake-Venom Thrombin- Like Enzyme From Agkistrodon Halysÿ
 2F83 A 6,32,7.7,0.0008,1.6,0.0,Crystal Structure Of A Human Coagulation Factor

@@ -1,4 +1,3 @@
-
 1K82 D ,32,6.8,0.0356,2.5,6.2,Crystal Structure Of E.Coli Formamidopyrimidine-Dna Glycosylase (Fpg) Covalently Trapped With Dna
 1K82 D 1,32,6.8,0.0017,2.5,6.2,Crystal Structure Of E.Coli Formamidopyrimidine-Dna Glycosylase (Fpg) Covalently Trapped With Dna
 1K82 C 1,32,6.5,0.0097,2.5,6.2,Crystal Structure Of E.Coli Formamidopyrimidine-Dna Glycosylase (Fpg) Covalently Trapped With Dna
@@ -59,7 +58,6 @@
 4G4Q A 1,30,6.1,0.0383,2.3,10.0,Mutm Containing F114a Mutation Bound To Undamaged Dna
 3U6O A 1,28,6.1,0.0386,2.3,17.9,Mutm Set 1 Apgÿ
 3U6E A 1,28,6.1,0.0387,2.3,17.9,Mutm Set 1 Tpgoÿ
-
 4G4N A 1,28,6.1,0.0393,2.4,17.9,Mutm Containing M77a Mutation Bound To Undamaged Dna
 3U6P A 1,28,6.1,0.0394,2.3,17.9,Mutm Set 1 Gpgÿ
 4NRW B 1,27,6.1,0.0442,1.9,14.8,Mvnei1-g86d
@@ -120,7 +118,6 @@
 3HHZ D ,16,3.3,0.0301,2.0,0.0,Complex Of The Vesicular Stomatitis Virus Nucleocapsid And The Nucleocapsid-Binding Domain Of The Phosphoproteinÿ
 5ARE S 2,12,3.3,0.0303,1.3,0.0,Bovine Mitochondrial Atp Synthase State 1b
 3E04 C 1,16,3.3,0.0316,1.3,6.2,Crystal Structure Of Human Fumarate Hydratase
-
 1VLP D 3,12,3.3,0.0327,3.7,8.3,Crystal Structure Of Nicotinate Phosphoribosyltransferase (Yor209c) From Saccharomyces Cerevisiae At 1.75 A Resolution
 5C74 B 2,17,3.3,0.0333,1.5,5.9,Structure Of A Novel Protein Arginine Methyltransferase
 3OCE A 1,12,3.3,0.0336,1.0,8.3,Crystal Structure Of Fumarate Luase:delta Crystallin From Brucella Melitensis Bound To Cobaltÿ

@@ -1,4 +1,3 @@
-
 4M62 S ,30,6.2,0.0086,2.6,10.0,Ontogeny Of Recognition Specificity And Functionality For The Anti-hiv Neutralizing Antibody 4e10
 1XIZ A ,30,6.1,0.0089,2.6,10.0,Structural Genomics, The Crystal Structure Of Domain Iia Of Putative Phosphotransferase System Specific For MannitolFRUCTOSE FROM SALMONELLA TYPHIMURIUM
 3LF6 A ,36,6.1,0.0095,2.8,11.1,Crystal Structure Of Hiv Epitope-Scaffold 4e10_1xiza_s0_001_nÿ
@@ -59,7 +58,6 @@
 3H1K O 2,36,5.1,0.0424,1.7,5.6,Chicken Cytochrome Bc1 Complex With Zn++ And An Iodinated Derivative Of Kresoxim-Methyl Boundÿ
 3L75 B 2,40,5.1,0.0427,1.9,7.5,Cytochrome Bc1 Complex From Chicken With Fenamidone Boundÿ
 3L74 B 2,40,5.1,0.0427,1.9,7.5,Cytochrome Bc1 Complex From Chicken With Famoxadone Boundÿ
-
 2A06 O 2,38,5.1,0.0426,1.8,2.6,Bovine Cytochrome Bc1 Complex With Stigmatellin Bound
 3H1I B 2,41,5.1,0.0428,2.3,4.9,Stigmatellin And Antimycin Bound Cytochrome Bc1 Complex From Chickenÿ
 3H1K B 2,38,5.1,0.0430,1.8,5.3,Chicken Cytochrome Bc1 Complex With Zn++ And An Iodinated Derivative Of Kresoxim-Methyl Boundÿ
@@ -120,7 +118,6 @@
 1Y7P A 1,29,5.0,0.0092,2.3,6.9,Structural Genomics, 1.9a Crystal Structure Of A Hypothetical Protein Af1403 From Archaeoglobus Fulgidus
 5A2Y B 2,32,5.0,0.0094,1.9,6.2,Crystal Structure Of Mtpap In Complex With Utp
 3CCZ A 3,56,5.0,0.0439,2.2,3.6,Thermodynamic And Structure Guided Design Of Statin Hmg-Coa Reductase Inhibitors
-
 3WBF C 3,33,5.0,0.0094,1.8,9.1,Crystal Structure Of Meso-diaminopimelate Dehydrogenase From Symbiobacterium Thermophilum Co-crystallized With Nadp+ And Dap
 3BIO A 3,35,5.0,0.0094,1.8,8.6,Crystal Structure Of Oxidoreductase (GfoIDHMOCA FAMILY Member) From Porphyromonas Gingivalis W83
 5ELR D ,36,5.0,0.0052,1.9,11.1,Structure Of The Kh-qua2 Domain Of T-star In Complex With Aauaau Rna

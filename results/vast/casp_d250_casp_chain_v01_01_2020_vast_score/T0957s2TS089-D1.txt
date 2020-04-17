@@ -1,4 +1,3 @@
-
 3S4W B ,128,12.0,0.0191,3.1,10.9,Structure Of The Fanci-Fancd2 Complexÿ
 3LVG C ,95,11.3,0.0001,3.3,11.6,Crystal Structure Of A Clathrin Heavy Chain And Clathrin Lig Complexÿ
 3LVH C ,98,11.1,0.0002,3.4,11.2,Crystal Structure Of A Clathrin Heavy Chain And Clathrin Lig Complexÿ
@@ -59,7 +58,6 @@
 3BX3 A ,116,10.2,0.0026,3.3,6.0,Puf4 T650cC724R MUTANT BOUND TO COX17 RNA 3' UTR Recognition Sequence
 3BX3 B ,111,10.2,0.0017,3.2,6.3,Puf4 T650cC724R MUTANT BOUND TO COX17 RNA 3' UTR Recognition Sequence
 5BZ1 A ,140,10.2,0.0027,3.1,8.6,Crystal Structure Of The Rna-binding Domain Of Yeast Puf5p Bound To Mfa2 Rna
-
 1N9A A ,126,10.2,0.0001,3.9,5.6,Farnesyltransferase Complex With Tetrahydropyridine Inhibitors
 1TNY K ,130,10.2,0.0001,4.0,4.6,Rat Protein Geranylgeranyltransferase Type-I Complexed With A Ggpp Analog And A Frekkffcail Peptide Derived From The Heterotrimeric G Protein Gamma-2 Subunit
 3DSX A ,130,10.1,0.0001,4.0,11.5,Crystal Structure Of Rabggtase(Delta Lrr; Delta Ig)in Complex With Di-Prenylated Peptide Ser-Cys(Gg)-Ser-Cys(Gg) Derivated From Rab7
@@ -120,7 +118,6 @@
 1TNU G ,128,10.0,0.0002,3.9,4.7,Rat Protein Geranylgeranyltransferase Type-I Complexed With A Ggpp Analog And A Gcincckvl Peptide Derived From Rhob
 1TNU I ,130,10.0,0.0002,4.0,4.6,Rat Protein Geranylgeranyltransferase Type-I Complexed With A Ggpp Analog And A Gcincckvl Peptide Derived From Rhob
 1O1R A ,130,10.0,0.0002,4.2,6.2,Structure Of Fpt Bound To Ggpp
-
 2WPV C ,129,10.0,0.0002,3.8,7.8,Crystal Structure Of S. Cerevisiae Get4-Get5 Complexÿ
 1S64 C ,127,10.0,0.0002,3.9,4.7,Rat Protein Geranylgeranyltransferase Type-I Complexed With L-778,123 And A Sulfate Anion
 1N4Q G ,132,10.0,0.0002,4.1,4.5,Protein Geranylgeranyltransferase Type-I Complexed With A Ggpp Analog And A Kkksktkcvil Peptide

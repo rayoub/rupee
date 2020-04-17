@@ -1,4 +1,3 @@
-
 3A8I B ,71,12.1,0.0361,2.9,5.6,Crystal Structure Of Et-Ehred-5-Ch3-Thf Complexÿ
 3A8I B 2,74,12.1,10e-8.8,2.9,5.4,Crystal Structure Of Et-Ehred-5-Ch3-Thf Complexÿ
 1WSV B 2,81,11.1,10e-6.6,3.7,7.4,Crystal Structure Of Human T-Protein Of Glycine Cleavage System
@@ -59,7 +58,6 @@
 4RF7 B 2,87,9.5,0.0096,3.3,14.9,Crystal Structure Of Double-domain Arginine Kinase From Anthopleura Japonicas In Complex With Substrate L-arginine
 4RF8 A 2,86,9.5,0.0479,2.9,14.0,Crystal Structure Of Double-domain Arginine Kinase From Anthopleura Japonicas In Complex With Adp
 3CFO A 5,83,9.5,0.0210,3.4,6.0,Triple Mutant Apo Structureÿ
-
 4DU1 A 4,85,9.5,0.0035,3.1,1.2,Rb69 Dna Polymerase Ternary Complex With Datp Opposite Dt
 4DTR A 4,82,9.5,0.0052,3.0,1.2,Rb69 Dna Polymerase Ternary Complex With Datp Opposite An Abasic Site And DdcDG AS THE PENULTIMATE BASE-Pair
 1WOP A 2,60,9.5,10e-4.6,2.5,13.3,Crystal Structure Of T-Protein Of The Glycine Cleavage System
@@ -120,7 +118,6 @@
 2PSO A 1,85,9.0,0.0365,3.2,8.2,Human Stard13 (Dlc2) Lipid Transfer And Protein Localization Domain
 3BWL A ,46,9.0,0.0080,3.4,8.7,Crystal Structure Of Pas Domain Of Htr-Like Protein From Haloarcula Marismortui
 1RAG B ,65,9.0,0.0061,2.6,9.2,Crystal Structure Of Ctp-Ligated T State Aspartate Transcarbamoylase At 2.5 Angstroms Resolution: Implications For Atcase Mutants And The Mechanism Of Negative Cooperativity
-
 1RAG B 1,62,9.0,10e-4.7,2.6,9.7,Crystal Structure Of Ctp-Ligated T State Aspartate Transcarbamoylase At 2.5 Angstroms Resolution: Implications For Atcase Mutants And The Mechanism Of Negative Cooperativity
 3KB3 A ,76,9.0,0.0076,2.7,3.9,Crystal Structure Of Abscisic Acid-Bound Pyl2 In Complex With Hab1ÿ
 3JU6 A 1,93,9.0,0.0458,3.3,6.5,Crystal Structure Of Dimeric Arginine Kinase In Complex With Amppnp And Arginineÿ

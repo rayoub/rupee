@@ -1,4 +1,3 @@
-
 2R1A C ,38,8.4,0.0015,2.6,2.6,Crystal Structure Of The Periplasmic Lipopolysaccharide Transport Protein Lpta (Yhbn), Trigonal Form
 2JGR A 2,32,8.4,0.0127,2.3,6.2,Crystal Structure Of Yegs In Complex With Adp
 4UU4 A ,41,8.4,0.0021,2.5,4.9,Crystal Structure Of Lpth, The Lpta Homologous Periplasmic Component Of The Conserved Lipopolysaccharide Transport Device From Pseudomonas Aeruginosa
@@ -59,7 +58,6 @@
 3W42 A ,46,7.7,0.0248,2.6,6.5,Crystal Structure Of Rsbx In Complex With Manganese In Space Group P1
 4D8O A 2,33,7.7,0.0195,2.1,3.0,Crystal Structure Of The Ankyrin-B Zu5-Zu5-Upa-Dd Tandemÿ
 3V79 K ,23,7.7,0.0003,2.3,8.7,Structure Of Human Notch1 Transcription Complex Including Csl, Ram, Ank, And Maml-1 On Hes-1 Promoter Dna Sequenceÿ
-
 3V79 K 1,22,7.7,10e-5.6,2.3,9.1,Structure Of Human Notch1 Transcription Complex Including Csl, Ram, Ank, And Maml-1 On Hes-1 Promoter Dna Sequenceÿ
 3W44 B ,43,7.7,0.0263,2.1,11.6,Crystal Structure Of Rsbx, Selenomethionine Derivative
 3ZT9 A ,44,7.6,0.0139,2.3,4.5,The Bacterial Stressosome: A Modular System That Has Been Adapted To Control Secondary Messenger Signalingÿ
@@ -120,7 +118,6 @@
 2J86 A ,40,7.3,0.0358,2.4,10.0,Structural Analysis Of The Pp2c Family Phosphatase Tppha Of Thermosynechococcus Elongatus
 3H6I Q ,34,7.3,0.0048,2.7,0.0,Crystal Structure Of Mycobacterium Tuberculosis Proteasome Modified By Inhibitor Gl1ÿ
 4TSO B ,43,7.3,0.0394,3.5,4.7,Crystal Structure Of Frac With Dhpc Bound (crystal Form I)
-
 2F16 E ,30,7.3,0.0107,2.7,13.3,Crystal Structure Of The Yeast 20s Proteasome In Complex With Bortezomib
 2F16 S ,36,7.3,0.0108,3.1,8.3,Crystal Structure Of The Yeast 20s Proteasome In Complex With Bortezomib
 3MG0 E ,30,7.3,0.0049,2.7,13.3,Structure Of Yeast 20s Proteasome With Bortezomibÿ
