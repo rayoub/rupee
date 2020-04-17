@@ -14,7 +14,7 @@
 -- valid sort by parameters
 -- 1, 2, 4
 
-CREATE OR REPLACE FUNCTION get_vast_results (p_benchmark VARCHAR, p_version VARCHAR, p_sort_by INTEGER, p_limit INTEGER)
+CREATE OR REPLACE FUNCTION get_vast_results (p_benchmark VARCHAR, p_version VARCHAR, p_search_type VARCHAR, p_sort_by INTEGER, p_limit INTEGER)
 RETURNS TABLE (
     n INTEGER, 
     db_id_1 VARCHAR,
@@ -55,6 +55,7 @@ BEGIN
                 AND s.version = p_version
         WHERE
             r.version = p_version 
+            AND r.search_type = p_search_type
     ),
     valid_results As
     (

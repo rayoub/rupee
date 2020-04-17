@@ -11,6 +11,9 @@
 -- OTHER
 -- 7. ssap_score (vs. CATHEDRAL only)
 
+-- valid sort by parameters
+-- 1, 2, 4, 6
+
 CREATE OR REPLACE FUNCTION get_ssm_results (p_benchmark VARCHAR, p_version VARCHAR, p_search_type VARCHAR, p_sort_by INTEGER,  p_limit INTEGER)
 RETURNS TABLE (
     n INTEGER, 
