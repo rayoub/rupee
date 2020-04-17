@@ -1,7 +1,7 @@
 
 DO $$
 
-    DECLARE p_benchmark VARCHAR := 'casp_vast_d65'; 
+    DECLARE p_benchmark VARCHAR := 'casp_vast_fl_d51';  -- casp_vast_rmsd_d113 (for search_type = rmsd), casp_vast_fl_d51 (for search_type = full_length)
     DECLARE p_version VARCHAR := 'casp_chain_v01_01_2020'; 
     DECLARE p_search_type VARCHAR := 'full_length';  -- rmsd, full_length
     DECLARE p_sort_by INTEGER := 4; -- 1 (ce_rmsd), 2 (fatcat_rigid_rmsd), 4 (tm_avg_tm_score)
@@ -22,7 +22,7 @@ BEGIN
         ),
         vast AS
         (   
-            SELECT * FROM get_vast_results(p_benchmark, p_version, p_sort_by, p_limit) 
+            SELECT * FROM get_vast_results(p_benchmark, p_version, p_search_type, p_sort_by, p_limit) 
         ),
         ranked AS
         (

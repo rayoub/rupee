@@ -1,7 +1,7 @@
 
 DO $$
 
-    DECLARE p_benchmark VARCHAR := 'casp_ssm_d240'; -- casp_ssm_d233 (for search_type = rmsd), casp_ssm_d240 (for search_type = q_score and full_length)
+    DECLARE p_benchmark VARCHAR := 'casp_ssm_q_d240'; -- casp_ssm_rmsd_d233 (for search_type = rmsd), casp_ssm_q_d240 (for search_type = q_score and full_length)
     DECLARE p_version VARCHAR := 'casp_scop_v1_73'; 
     DECLARE p_search_type VARCHAR := 'full_length'; -- rmsd, full_length, q_score
     DECLARE p_sort_by INTEGER := 4; -- 1 (ce_rmsd), 2 (fatcat_rigid_rmsd), 4 (tm_avg_tm_score), 6 (tm_q_score)
@@ -23,6 +23,7 @@ BEGIN
         ssm AS
         (   
             -- p_search_type = 'q_score' when doing full_length for rupee
+            -- note: I did not map q_score search to full_length search similar to VAST because RUPEE has a q_score search
             SELECT * FROM get_ssm_results(p_benchmark, p_version, 'q_score', p_sort_by, p_limit) 
         ),
         ranked AS
