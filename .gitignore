@@ -39,7 +39,8 @@ results/cathedral/cathedral_results.txt
 results/mtm/mtm_results.txt
 results/ssm/ssm_results_q_score.txt
 results/ssm/ssm_results_rmsd.txt
-results/vast/vast_results.txt
+results/vast/vast_results_fl.txt
+results/vast/vast_results_rmsd.txt
 
 # build ignores
 rupee-mgr/target/
