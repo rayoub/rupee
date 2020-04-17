@@ -24,29 +24,26 @@ public class VastDriver extends DriverBase {
         
         // pendings
         pendings.add("T0960TS261-D2");
+        pendings.add("T0960TS354-D2");
         pendings.add("T0969TS354-D1");
-        pendings.add("T0969TS145-D1");
-        pendings.add("T0969TS224-D1");
         pendings.add("T0975TS197-D1");
         pendings.add("T0987TS089-D2");
         pendings.add("T0987TS196-D1");
         pendings.add("T0987TS354-D2");
         pendings.add("T0989TS145-D2");
-        pendings.add("T0990TS224-D3");
         pendings.add("T0990TS089-D3");
         pendings.add("T0990TS145-D3");
         pendings.add("T0990TS196-D1");
-        pendings.add("T0998TS354-D1");
+        pendings.add("T0990TS224-D3");
         pendings.add("T0998TS089-D1");
         pendings.add("T0998TS261-D1");
         pendings.add("T0998TS322-D1");
+        pendings.add("T0998TS354-D1");
         pendings.add("T1000TS197-D2");
         pendings.add("T1000TS322-D2");
         pendings.add("T1010TS197-D1");
         pendings.add("T0957s2TS197-D1");
-        pendings.add("T0968s2TS197-D1");
         pendings.add("T0980s1TS197-D1");
-        pendings.add("T0980s1TS224-D1");
         pendings.add("T1017s2TS145-D1");
         pendings.add("T1021s3TS322-D2");
         pendings.add("T1022s1TS145-D1");
