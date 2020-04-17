@@ -79,7 +79,7 @@ public class VastCombinedDriver extends VastDriver {
 
         int EARLY_EXIT = 100;
 
-        List<String> dbIds = Benchmarks.get("casp_d190");
+        List<String> dbIds = Benchmarks.get("casp_d250");
 
         int count = 0;
         for (int i = 0; i < dbIds.size(); i++) {
