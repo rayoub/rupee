@@ -16,19 +16,40 @@ public class VastDriver extends DriverBase {
     public static int ONE_MINUTE = 60 * ONE_SECOND; 
 
     private static List<String> excludes = new ArrayList<>();
+    private static List<String> pendings = new ArrayList<>();
+    
     static {
 
-        excludes.add("T0957s2TS145-D1");
-        excludes.add("T0957s2TS354-D1");
-        excludes.add("T0968s2TS261-D1");
-        excludes.add("T0968s2TS261-D1");
-        excludes.add("T0969TS354-D1");
-        excludes.add("T0969TS354-D1");
-        excludes.add("T0980s1TS261-D1");
-        excludes.add("T0987TS322-D2");
-        excludes.add("T0987TS322-D2");
-        excludes.add("T0990TS089-D1");
-        excludes.add("T0990TS145-D1");
+        // excludes
+        
+        // pendings
+        pendings.add("T0960TS261-D2");
+        pendings.add("T0969TS354-D1");
+        pendings.add("T0969TS145-D1");
+        pendings.add("T0969TS224-D1");
+        pendings.add("T0975TS197-D1");
+        pendings.add("T0987TS089-D2");
+        pendings.add("T0987TS196-D1");
+        pendings.add("T0987TS354-D2");
+        pendings.add("T0989TS145-D2");
+        pendings.add("T0990TS224-D3");
+        pendings.add("T0990TS089-D3");
+        pendings.add("T0990TS145-D3");
+        pendings.add("T0990TS196-D1");
+        pendings.add("T0998TS354-D1");
+        pendings.add("T0998TS089-D1");
+        pendings.add("T0998TS261-D1");
+        pendings.add("T0998TS322-D1");
+        pendings.add("T1000TS197-D2");
+        pendings.add("T1000TS322-D2");
+        pendings.add("T1010TS197-D1");
+        pendings.add("T0957s2TS197-D1");
+        pendings.add("T0968s2TS197-D1");
+        pendings.add("T0980s1TS197-D1");
+        pendings.add("T0980s1TS224-D1");
+        pendings.add("T1017s2TS145-D1");
+        pendings.add("T1021s3TS322-D2");
+        pendings.add("T1022s1TS145-D1");
     }
 
     public String doSearchUpload(String dbId) throws InterruptedException {
@@ -48,7 +69,7 @@ public class VastDriver extends DriverBase {
         driver.findElement(By.name("cmdVSMmdb")).click();
 
         // wait for page to load
-        Thread.sleep(5 * ONE_SECOND);
+        Thread.sleep(20 * ONE_SECOND);
 
         // get request id
         //String requestId = driver.findElement(By.xpath("/html/body/table[2]/tbody/tr[4]/td/b")).getText();
@@ -98,6 +119,11 @@ public class VastDriver extends DriverBase {
                 results.ResultsRmsd = getTableData(true);
             }
         }
+        else {
+
+            // we got a weird page 
+            throw new InterruptedException();
+        }
 
         return results;
     }
@@ -118,10 +144,13 @@ public class VastDriver extends DriverBase {
         driver.findElement(By.name("table")).click();
         new Select(driver.findElement(By.name("sort"))).selectByIndex(sortIndex);
         driver.findElement(By.name("sort")).click();
-            
-        // change to first page
+           /* 
+
+              I don't think this is needed because when you click the dispsub it will reset as needed
+        // originally
         new Select(driver.findElement(By.name("doclistpage"))).selectByIndex(0);
         driver.findElement(By.name("doclistpage")).click();
+        */
 
         // display the first page
         driver.findElement(By.name("dispsub")).click();
@@ -225,14 +254,26 @@ public class VastDriver extends DriverBase {
 
     public boolean isExcluded(String dbId) {
 
-        boolean excluded = false;
+        boolean isExcluded = false;
         for (String exclude : excludes) {
             if (dbId.startsWith(exclude)) {
-                excluded = true;
+                isExcluded = true;
                 break;
             }
         }
-        return excluded;
+        return isExcluded;
+    }
+
+    public boolean isPending(String dbId) {
+
+        boolean isPending = false;
+        for (String pending : pendings) {
+            if (dbId.startsWith(pending)) {
+                isPending = true;
+                break;
+            }
+        }
+        return isPending;
     }
 
     public void appendRequest(String dbId, String link) {

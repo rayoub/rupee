@@ -6,8 +6,6 @@ import java.io.OutputStreamWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import org.javatuples.Pair;
 
@@ -60,7 +58,8 @@ public class VastDownloadDriver extends VastDriver {
                 } 
                 catch (Exception e) { 
 
-                    Logger.getLogger(VastDownloadDriver.class.getName()).log(Level.SEVERE, dbId, e);
+                    System.out.println("... got the too much traffic page");
+                    System.out.println(dbId + "," + link);
                 }
             }
         }

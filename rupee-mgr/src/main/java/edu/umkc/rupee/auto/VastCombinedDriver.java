@@ -34,8 +34,8 @@ public class VastCombinedDriver extends VastDriver {
             // write the request to a file in case we need to retry
             appendRequest(dbId, link); 
 
-            // wait 2 hour
-            for (int i = 0; i < 24; i++) {
+            // wait 1 hour
+            for (int i = 0; i < 12; i++) {
 
                 try {
                     results = doSearchDownload(dbId, link);
@@ -90,8 +90,8 @@ public class VastCombinedDriver extends VastDriver {
 
             try {
 
-                // for now lets not do the rmsd work again
-                if (!isExcluded(dbId) && Files.notExists(Paths.get(fileNameRmsd))) {
+                // for now lets not redo the rmsd work again
+                if (!isExcluded(dbId) && !isPending(dbId) && Files.notExists(Paths.get(fileNameRmsd))) {
             
                     count++;
                     System.out.println(count + ":Processing request for " + dbId);
