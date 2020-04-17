@@ -98,7 +98,8 @@ public class AlignResults
         alignRupeeResults(benchmark, version, dbType, maxN, "all_aligned", "full_length");
         alignRupeeResults(benchmark, version, dbType, maxN, "top_aligned", "full_length");
 
-        alignVastResults(benchmark, version, dbType, maxN); 
+        alignVastResults(benchmark, version, dbType, maxN, "rmsd");
+        alignVastResults(benchmark, version, dbType, maxN, "full_length");
     }
 
     private static void alignRupeeResults(String benchmark, String version, DbType dbType, int maxN, String searchMode, String searchType) {
@@ -141,14 +142,14 @@ public class AlignResults
         dbIds.parallelStream().forEach(dbId -> alignResults(command, version, dbType, dbId, maxN, "", searchType));
     }
 
-    private static void alignVastResults(String benchmark, String version, DbType dbType, int maxN) {
+    private static void alignVastResults(String benchmark, String version, DbType dbType, int maxN, String searchType) {
 
         List<String> dbIds = Benchmarks.get(benchmark);
 
-        String command = "SELECT db_id_2 FROM vast_result WHERE version = ? AND db_id_1 = ? AND n <= ? ORDER BY n;";
+        String command = "SELECT db_id_2 FROM vast_result WHERE version = ? AND db_id_1 = ? AND n <= ? AND search_type = ? ORDER BY n;";
 
         counter.set(0);
-        dbIds.parallelStream().forEach(dbId -> alignResults(command, version, dbType, dbId, maxN, "", ""));
+        dbIds.parallelStream().forEach(dbId -> alignResults(command, version, dbType, dbId, maxN, "", searchType));
     }
 
     private static void alignResults(String command, String version, DbType dbType, String dbId, int maxN, String searchMode, String searchType) {
