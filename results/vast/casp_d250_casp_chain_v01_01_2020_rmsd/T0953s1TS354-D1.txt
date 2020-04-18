@@ -1,146 +1,27 @@
-3WJ9 B 3,19,4.8,0.0374,0.9,5.3,Crystal Structure Of The Eukaryotic Initiation Factor
-4XF2 Y ,18,5.1,0.0054,1.0,5.6,Tetragonal Structure Of Arp2/3 Complex
-4XF2 Y 2,18,5.1,0.0054,1.0,5.6,Tetragonal Structure Of Arp2/3 Complex
-2NM3 A ,24,5.1,0.0356,1.0,4.2,Crystal Structure Of Dihydroneopterin Aldolase From S. Aureus In Complex With (1s,2s)-Monapterin At 1.68 Angstrom Resolution
-4NF9 A 3,20,5.2,0.0039,1.0,10.0,Structure Of The Knl1/nsl1 Complex
-4XF2 F ,19,5.2,0.0050,1.0,5.3,Tetragonal Structure Of Arp2/3 Complex
-4XF2 F 2,19,5.2,0.0050,1.0,5.3,Tetragonal Structure Of Arp2/3 Complex
-1RS4 A ,24,5.2,0.0297,1.0,4.2,Dhna, 7,8-Dihydroneopterin Aldolase Complexed With 3-(5- Amino-7-Hydroxy-[1,2,3]triazolo[4,5-D]pyrimidin-2-Yl)-N-(3, 5-Dichlorobenzyl)-Benzamide
-1RSD A ,24,5.2,0.0276,1.0,4.2,Dhna Complex With 3-(5-Amino-7-Hydroxy-[1,2,3]triazolo[4,5- D]pyrimidin-2-Yl)-N-[2-(2-Hydroxymethyl-Phenylsulfanyl)- Benzyl]-Benzamide
-1DHN A ,24,5.2,0.0274,1.0,4.2,1.65 Angstrom Resolution Structure Of 7,8-Dihydroneopterin Aldolase From Staphylococcus Aureus
-4NFA A 2,21,5.2,0.0039,1.0,9.5,Structure Of The C-terminal Doamin Of Knl1
-1SQL B ,23,5.1,0.0443,1.1,8.7,Crystal Structure Of 7,8-Dihydroneopterin Aldolase In Complex With Guanine
-1CEF A 2,17,4.9,0.0241,1.1,0.0,Cefotaxime Complexed With The Streptomyces R61 Dd-Peptidase
-4UPH A 2,21,5.1,0.0073,1.1,0.0,Crystal Structure Of Phosphonate Monoester Hydrolase Of Agrobacterium Radiobacter
-4UPH D 2,21,5.1,0.0085,1.1,0.0,Crystal Structure Of Phosphonate Monoester Hydrolase Of Agrobacterium Radiobacter
-4IGL A 1,18,5.2,0.0152,1.1,16.7,Structure Of The Rhs-repeat Containing Bc Component Of The Secreted Abc Toxin Complex From Yersinia Entomophaga
-4NHJ B 1,16,5.2,0.0029,1.1,6.2,Crystal Structure Of Klebsiella Pneumoniae Rsta Dna-binding Domain In Complex With Rsta Box
-5F3M A ,22,5.1,0.0355,1.1,0.0,Crystal Structure Of Dihydroneopterin Aldolase From Bacillus Anthracis Complexed With L-neopterin At 1.5 Angstroms Resolution
-4IGL C 1,18,5.2,0.0152,1.1,16.7,Structure Of The Rhs-repeat Containing Bc Component Of The Secreted Abc Toxin Complex From Yersinia Entomophaga
-1A57 A 1,16,5.0,0.0108,1.1,0.0,The Three-Dimensional Structure Of A Helix-Less Variant Of Intestinal Fatty Acid Binding Protein, Nmr, 20 Structures
-3WSX A 5,18,5.2,0.0030,1.1,11.1,Sorla Vps10p Domain In Ligand-free Form
-4XEI D 2,22,5.2,0.0191,1.1,9.1,Orthorhombic Isomorph Of Bovine Arp2/3 Complex
-4EE8 A ,29,6.8,0.0034,1.2,3.4,Crystal Structure Of The Novel Phenazine Prenyltransferase Epzp (Wildtype)
-1W1I D 6,18,5.1,0.0499,1.2,0.0,Crystal Structure Of Dipeptidyl Peptidase Iv (Dppiv Or Cd26) In Complex With Adenosine Deaminase
-3CQZ B 3,19,5.2,0.0022,1.2,0.0,Crystal Structure Of 10 Subunit Rna Polymerase Ii In Complex With The Inhibitor Alpha-Amanitinÿ
-4P79 A ,17,5.2,0.0152,1.2,5.9,Crystal Structure Of Mouse Claudin-15
-4XF2 W 2,20,5.2,0.0200,1.2,10.0,Tetragonal Structure Of Arp2/3 Complex
-3HKZ B 3,19,5.0,0.0113,1.2,5.3,The X-Ray Crystal Structure Of Rna Polymerase From Archaeaÿ
-1YQS A 2,18,4.9,0.0179,1.2,0.0,Inhibition Of The R61 Dd-Peptidase By N-Benzoyl-Beta-Sultam
-2PMU A 1,16,4.8,0.0405,1.2,6.2,Crystal Structure Of The Dna-Binding Domain Of Phopÿ
-4TQO G 3,17,5.2,0.0026,1.2,0.0,The Crystal Structure Of Methanol Dehydrogenase From Methylococcus Capsulatus (bath)
-3RFH A 3,17,4.7,0.0456,1.2,5.9,Crystal Structure Of The Yeast Rack1 Dimer In Space Group P21ÿ
-2PMU D 1,16,4.8,0.0388,1.2,6.2,Crystal Structure Of The Dna-Binding Domain Of Phopÿ
-3HKZ J 3,19,5.0,0.0141,1.2,5.3,The X-Ray Crystal Structure Of Rna Polymerase From Archaeaÿ
-2W8S D 2,22,4.9,0.0230,1.2,0.0,Crystal Structure Of A Catalytically Promiscuous Phosphonate Monoester Hydrolase From Burkholderia Caryophylliÿ
-1F37 B ,17,5.1,0.0451,1.2,0.0,Structure Of A Thioredoxin-Like [2fe-2s] Ferredoxin From Aquifex Aeolicus
-4TQO H 4,17,5.2,0.0022,1.2,0.0,The Crystal Structure Of Methanol Dehydrogenase From Methylococcus Capsulatus (bath)
-4TQO E 3,17,5.0,0.0157,1.2,0.0,The Crystal Structure Of Methanol Dehydrogenase From Methylococcus Capsulatus (bath)
-3R0J A 2,16,4.9,0.0224,1.2,6.2,Structure Of Phop From Mycobacterium Tuberculosisÿ
-4TQO D 3,17,5.2,0.0022,1.2,0.0,The Crystal Structure Of Methanol Dehydrogenase From Methylococcus Capsulatus (bath)
-1PWC A 2,18,4.8,0.0299,1.2,0.0,Penicilloyl Acyl Enzyme Complex Of The Streptomyces R61 Dd- Peptidase With Penicillin G
-2JID B 6,18,5.1,0.0407,1.2,0.0,Human Dipeptidyl Peptidase Iv In Complex With 1-(3,4- Dimethoxy-Phenyl)-3-M-Tolyl-Piperidine-4-Ylamine
-1SDE A 2,18,4.8,0.0333,1.2,0.0,Toward Better Antibiotics: Crystal Structure Of D-Ala-D-Ala Peptidase Inhibited By A Novel Bicyclic Phosphate Inhibitor
-3IYV G 3,18,4.9,0.0219,1.2,11.1,Clathrin D6 Coatÿ
-1XI5 B 3,18,4.9,0.0218,1.2,11.1,Clathrin D6 Coat With Auxilin J-Domain
-4MHX B 3,18,5.0,0.0147,1.2,0.0,Crystal Structure Of Sulfamidase
-3R0J B 2,16,4.9,0.0256,1.2,6.2,Structure Of Phop From Mycobacterium Tuberculosisÿ
-4KFC B 2,17,4.9,0.0252,1.2,5.9,Crystal Structure Of A Hyperactive Mutant Of Response Regulator Kdpe Complexed To Its Promoter Dna
-1L9U C 4,20,5.1,0.0064,1.2,15.0,Thermus Aquaticus Rna Polymerase Holoenzyme At 4 A Resolution
-1L9U L 4,20,5.1,0.0064,1.2,15.0,Thermus Aquaticus Rna Polymerase Holoenzyme At 4 A Resolution
-4UPH C 2,22,5.1,0.0069,1.2,0.0,Crystal Structure Of Phosphonate Monoester Hydrolase Of Agrobacterium Radiobacter
-4KNY B 2,17,4.9,0.0219,1.2,5.9,Crystal Structure Of The Response Regulator Kdpe Complexed To Dna In An Active-like Conformation
-1T9K A 1,17,4.7,0.0486,1.2,0.0,X-Ray Crystal Structure Of Aif-2b Alpha Subunit-Related Translation Initiation Factor [thermotoga Maritima]
-4TQO B 4,17,5.2,0.0022,1.2,0.0,The Crystal Structure Of Methanol Dehydrogenase From Methylococcus Capsulatus (bath)
-2Z15 C ,25,4.9,0.0187,1.2,4.0,Crystal Structure Of Human Tob1 Protein
-4AAH A 4,17,5.2,0.0044,1.3,11.8,Methanol Dehydrogenase From Methylophilus W3a1
-4IMM B 3,17,5.0,0.0158,1.3,0.0,The Crystal Structure Of Bamb From Moraxella Catarrhalis
-2Z15 B ,25,5.1,0.0340,1.3,4.0,Crystal Structure Of Human Tob1 Protein
-4UPH B 2,25,5.1,0.0077,1.3,0.0,Crystal Structure Of Phosphonate Monoester Hydrolase Of Agrobacterium Radiobacter
-4AX8 A 2,19,5.2,0.0180,1.3,0.0,Medium Resolution Structure Of The Bifunctional Kinase- Methyltransferase Wbdd
-4EE7 B ,30,6.8,0.0037,1.3,6.7,Crystal Structure Of The Novel Phenazine Prenyltransferase Epzp In Complex With S-Thiolodiphosphate (Methylated)
-2JG5 B 2,19,5.2,0.0152,1.3,5.3,Crystal Structure Of A Putative Phosphofructokinase From Staphylococcus Aureus
-1GXQ A 1,16,4.9,0.0242,1.3,6.2,Crystal Structure Of The Phob Effector Domain
-1GXP A 1,16,4.9,0.0175,1.3,6.2,Phob Effector Domain In Complex With Pho Box Dna˙
-4AZV A 2,20,5.2,0.0284,1.3,0.0,Co-Crystal Structure Of Wbdd And Kinase Inhibitor Gw435821x
-1LRW C 3,16,5.2,0.0025,1.3,0.0,Crystal Structure Of Methanol Dehydrogenase From P. Denitrificans
-4HZZ A 4,19,4.7,0.0493,1.3,15.8,Crystal Structure Of Influenza Neuraminidase N3-h274y Complexed With Oseltamivir
-3I7H A 3,18,5.1,0.0348,1.3,5.6,Crystal Structure Of Ddb1 In Complex With The H-Box Motif Of Hbx˙
-2WB1 B 4,22,4.8,0.0264,1.3,4.5,The Complete Structure Of The Archaeal 13-Subunit Dna- Directed Rna Polymerase˙
-4HZY A 4,19,4.7,0.0491,1.3,15.8,Crystal Structure Of Influenza A Neuraminidase N3-h274y
-2OAJ A 4,18,4.8,0.0308,1.3,0.0,Crystal Structure Of Sro7 From S. Cerevisiae
-4UPK C 2,19,5.1,0.0063,1.3,5.3,Phosphonate Monoester Hydrolase Sppmh From Silicibacter Pomeroyi
-4AZS A 2,20,5.2,0.0300,1.3,0.0,High Resolution (2.2 A) Crystal Structure Of Wbdd
-4UPK B 2,19,5.1,0.0061,1.3,5.3,Phosphonate Monoester Hydrolase Sppmh From Silicibacter Pomeroyi
-4UER b 6,21,4.9,0.0239,1.3,0.0,40s-eif1-eif1a-eif3-eif3j Translation Initiation Complex From Lachancea Kluyveri
-2GR8 F ,19,5.2,0.0043,1.3,5.3,Hia 1022-1098
-4UPK A 2,19,5.1,0.0061,1.3,5.3,Phosphonate Monoester Hydrolase Sppmh From Silicibacter Pomeroyi
-4TZ4 A 3,18,5.2,0.0152,1.3,5.6,Crystal Structure Of Human Cereblon In Complex With Ddb1 And Lenalidomide
-3A0F A 6,23,4.8,0.0348,1.3,4.3,The Crystal Structure Of Geotrichum Sp. M128 Xyloglucanase˙
-3Q9S A 2,18,5.2,0.0022,1.3,0.0,Crystal Structure Of Rra(1-215) From Deinococcus Radiodurans˙
-4NEX B 1,18,4.9,0.0212,1.3,11.1,Structure Of The N-acetyltransferase Domain Of X. Fastidiosa Nags/k
-4HZV A 3,19,4.7,0.0451,1.3,15.8,The Crystal Structure Of Influenza A Neuraminidase N3
-4I00 A 3,19,4.7,0.0433,1.3,15.8,Crystal Structure Of Influenza A Neuraminidase N3-h274y Complexed With Zanamivir
-3WJ9 A 7,18,4.9,0.0192,1.3,11.1,Crystal Structure Of The Eukaryotic Initiation Factor
-2GR7 E ,23,5.2,0.0022,1.3,8.7,Hia 992-1098
-4FHN B 2,19,5.1,0.0341,1.3,5.3,Nup37-Nup120 Full-Length Complex From Schizosaccharomyces Pombe
-2GR7 B ,23,5.2,0.0022,1.3,8.7,Hia 992-1098
-3RFH C 3,19,4.9,0.0177,1.3,5.3,Crystal Structure Of The Yeast Rack1 Dimer In Space Group P21˙
-2YMS B 1,17,4.7,0.0468,1.3,0.0,Structure And Assembly Of A B-propeller With Nine Blades And A New Conserved Repetitive Sequence Motif
-2GR7 C ,23,5.2,0.0022,1.3,8.7,Hia 992-1098
-4AAH C 4,17,5.1,0.0066,1.3,5.9,Methanol Dehydrogenase From Methylophilus W3a1
-2GR8 D ,23,5.2,0.0043,1.3,8.7,Hia 1022-1098
-2GR8 E ,23,5.2,0.0037,1.3,8.7,Hia 1022-1098
-2Z15 D ,25,5.2,0.0046,1.3,4.0,Crystal Structure Of Human Tob1 Protein
-3HO5 B 2,20,5.2,0.0045,1.3,0.0,Crystal Structure Of Hedgehog-Interacting Protein (Hhip) And Sonic Hedgehog (Shh) Complex˙
-4XFV A 5,19,5.1,0.0398,1.3,5.3,Crystal Structure Of Elp2
-2YMS C 1,17,4.8,0.0348,1.3,5.9,Structure And Assembly Of A B-propeller With Nine Blades And A New Conserved Repetitive Sequence Motif
-3LY9 A ,20,5.7,0.0146,1.3,0.0,Crystal Structure Of Mutant D471n Of The Periplasmic Domain Of Cadc˙
-5CI9 A ,25,5.2,0.0035,1.3,4.0,Crystal Structure Of Human Tob In Complex With Inhibitor Fragment 6
-3IO0 A 1,22,5.2,0.0152,1.3,18.2,Crystal Structure Of Etub From Clostridium Kluyveri˙
-3LY8 A ,20,5.6,0.0165,1.3,5.0,Crystal Structure Of Mutant D471e Of The Periplasmic Domain Of Cadc˙
-4EE7 A ,30,6.4,0.0269,1.4,3.3,Crystal Structure Of The Novel Phenazine Prenyltransferase Epzp In Complex With S-Thiolodiphosphate (Methylated)
-2RV8 A 1,17,5.2,0.0036,1.4,11.8,Solution Structure Of The Phop Dna-binding Domain From Mycobacterium Tuberculosis
-3GRE A 2,24,4.7,0.0440,1.4,4.2,Crystal Structure Of Saccharomyces Cerevisiae Vps15 Wd Repeat Domain˙
-3PFH A 1,19,5.2,0.0022,1.4,5.3,X-Ray Crystal Structure The N,N-Dimethyltransferase Tylm1 From Streptomyces Fradiae In Complex With Sah And Dtdp-Quip3n˙
-3WJ9 B 4,17,4.7,0.0467,1.4,0.0,Crystal Structure Of The Eukaryotic Initiation Factor
-3JBT M 12,20,4.9,0.0171,1.4,5.0,Atomic Structure Of The Apaf-1 Apoptosome
-3JBT A 12,20,4.9,0.0171,1.4,5.0,Atomic Structure Of The Apaf-1 Apoptosome
-3JBT C 12,20,4.9,0.0171,1.4,5.0,Atomic Structure Of The Apaf-1 Apoptosome
-3JBT E 12,20,4.9,0.0171,1.4,5.0,Atomic Structure Of The Apaf-1 Apoptosome
-3JBT G 12,20,4.9,0.0171,1.4,5.0,Atomic Structure Of The Apaf-1 Apoptosome
-3JBT I 12,20,4.9,0.0171,1.4,5.0,Atomic Structure Of The Apaf-1 Apoptosome
-3JBT K 12,20,4.9,0.0171,1.4,5.0,Atomic Structure Of The Apaf-1 Apoptosome
-3BXO B 1,24,5.1,0.0071,1.4,0.0,Crystal Structure Of Streptomyces Venezuelae Desvi
-3PX2 D 1,19,5.2,0.0025,1.4,5.3,Structure Of Tylm1 From Streptomyces Fradiae H123n Mutant In Complex With Sah And Dtdp-Quip3n˙
-5EP5 B ,30,5.9,0.0366,1.4,20.0,The Crystal Structure Of The Hypothetical Protein Sav0944 Mutant (glu47ala) From Staphylococcus Aureus
-3PX3 A 1,19,5.2,0.0022,1.4,5.3,Structure Of Tylm1 From Streptomyces Fradiae H123a Mutant In Complex With Sah And Dtdp-Quip3n˙
-2F7L B 4,17,5.1,0.0431,1.4,5.9,Crystal Structure Of Sulfolobus Tokodaii PhosphomannomutasePHOSPHOGLUCOMUTASE
-4OO1 D 1,20,5.2,0.0152,1.4,0.0,Structure Of The Exosome Component In Complex With Rna
-3E9V A ,23,5.1,0.0057,1.4,8.7,Crystal Structure Of Human B-Cell Translocation Gene 2 (Btg2)
+
 3PX2 A 1,19,5.2,0.0022,1.4,5.3,Structure Of Tylm1 From Streptomyces Fradiae H123n Mutant In Complex With Sah And Dtdp-Quip3nÿ
-4HMT A ,32,6.6,0.0217,1.4,9.4,Crystal Structure Of Phzg From Pseudomonas Fluorescens 2-79 In Complex With Hexahydrophenazine-1,6-dicarboxylic Acid
 3DW8 E 4,18,5.2,0.0046,1.4,5.6,Structure Of A Protein Phosphatase 2a Holoenzyme With B55 Subunitÿ
+4HMT A ,32,6.6,0.0217,1.4,9.4,Crystal Structure Of Phzg From Pseudomonas Fluorescens 2-79 In Complex With Hexahydrophenazine-1,6-dicarboxylic Acid
 3F6K A 5,20,4.7,0.0464,1.4,20.0,Crystal Structure Of The Vps10p Domain Of Human SortilinNTS3 IN COMPLEX WITH NEUROTENSINÿ
 1TY9 A ,32,6.6,0.0192,1.4,9.4,X-Ray Crystal Structure Of Phzg From Pseudomonas Fluorescens
-1BPO B 3,20,4.9,0.0219,1.4,10.0,Clathrin Heavy-Chain Terminal Domain And Linker
 3IYV C 3,20,4.9,0.0219,1.4,10.0,Clathrin D6 Coatÿ
 2GIA A 2,19,5.0,0.0130,1.4,10.5,Crystal Structures Of Trypanosoma Bruciei Mrp1MRP2
-3PFH D 1,19,5.2,0.0036,1.4,5.3,X-Ray Crystal Structure The N,N-Dimethyltransferase Tylm1 From Streptomyces Fradiae In Complex With Sah And Dtdp-Quip3nÿ
+1BPO B 3,20,4.9,0.0219,1.4,10.0,Clathrin Heavy-Chain Terminal Domain And Linker
 2JPB A 1,19,5.2,0.0025,1.4,5.3,Solution Structure Of Ompr-C Dna Binding Protein
 4OQE A 1,24,5.1,0.0059,1.4,4.2,Crystal Structure Of The Tylm1 N,n-dimethyltransferase In Complex With Sah And Tdp-fuc3nme
+3PFH D 1,19,5.2,0.0036,1.4,5.3,X-Ray Crystal Structure The N,N-Dimethyltransferase Tylm1 From Streptomyces Fradiae In Complex With Sah And Dtdp-Quip3nÿ
 4HMT B ,32,6.6,0.0240,1.4,9.4,Crystal Structure Of Phzg From Pseudomonas Fluorescens 2-79 In Complex With Hexahydrophenazine-1,6-dicarboxylic Acid
 4HMT B 1,32,6.6,0.0240,1.4,9.4,Crystal Structure Of Phzg From Pseudomonas Fluorescens 2-79 In Complex With Hexahydrophenazine-1,6-dicarboxylic Acid
-4HMU B ,32,6.6,0.0247,1.4,9.4,Crystal Structure Of Phzg From Pseudomonas Fluorescens 2-79 In Complex With Tetrahydrophenazine-1-carboxylic Acid After 1 Day Of Soaking
 5FAR F ,20,5.1,0.0326,1.4,0.0,Crystal Structure Of Dihydroneopterin Aldolase From Bacillus Anthracis Complex With 9-methylguanine
+4HMU B ,32,6.6,0.0247,1.4,9.4,Crystal Structure Of Phzg From Pseudomonas Fluorescens 2-79 In Complex With Tetrahydrophenazine-1-carboxylic Acid After 1 Day Of Soaking
 1L9Z C 4,23,5.2,0.0022,1.4,8.7,Thermus Aquaticus Rna Polymerase HoloenzymeFORK-Junction Promoter Dna Complex At 6.5 A Resolution
 3E1E C ,30,6.6,0.0063,1.4,10.0,Crystal Structure Of A Thioesterase Family Protein From Silicibacter Pomeroyi. Northeast Structural Genomics Target Sir180a
-2F41 D ,25,5.6,0.0330,1.4,4.0,Crystal Structure Of Fapr- A Global Regulator Of Fatty Acid Biosynthesis In B. Subtilis
 4HMV A ,32,6.6,0.0207,1.4,9.4,Crystal Structure Of Phzg From Pseudomonas Fluorescens 2-79 In Complex With Tetrahydrophenazine-1-carboxylic Acid After 5 Days Of Soaking
+2F41 D ,25,5.6,0.0330,1.4,4.0,Crystal Structure Of Fapr- A Global Regulator Of Fatty Acid Biosynthesis In B. Subtilis
+2W5R A 1,20,5.2,0.0022,1.4,5.0,Structure-Based Mechanism Of Lipoteichoic Acid Synthesis By Staphylococcus Aureus Ltasÿ
+5EP5 C ,30,5.9,0.0374,1.4,20.0,The Crystal Structure Of The Hypothetical Protein Sav0944 Mutant (glu47ala) From Staphylococcus Aureus
 4HMV B ,32,6.6,0.0248,1.4,9.4,Crystal Structure Of Phzg From Pseudomonas Fluorescens 2-79 In Complex With Tetrahydrophenazine-1-carboxylic Acid After 5 Days Of Soaking
 4HMV B 1,32,6.6,0.0248,1.4,9.4,Crystal Structure Of Phzg From Pseudomonas Fluorescens 2-79 In Complex With Tetrahydrophenazine-1-carboxylic Acid After 5 Days Of Soaking
-5EP5 C ,30,5.9,0.0374,1.4,20.0,The Crystal Structure Of The Hypothetical Protein Sav0944 Mutant (glu47ala) From Staphylococcus Aureus
-2W5R A 1,20,5.2,0.0022,1.4,5.0,Structure-Based Mechanism Of Lipoteichoic Acid Synthesis By Staphylococcus Aureus Ltasÿ
 4HMS A ,32,6.6,0.0212,1.4,9.4,Crystal Structure Of Phzg From Pseudomonas Fluorescens 2-79 In Complex With A Second Fmn In The Substrate Binding Site
 4HMU A ,32,6.6,0.0354,1.4,9.4,Crystal Structure Of Phzg From Pseudomonas Fluorescens 2-79 In Complex With Tetrahydrophenazine-1-carboxylic Acid After 1 Day Of Soaking
 5HMB A ,25,6.0,0.0236,1.4,8.0,Crystal Structure Of S. Sahachiroi Azig
@@ -153,17 +34,17 @@
 1G76 A ,30,6.6,0.0215,1.4,16.7,X-Ray Structure Of Escherichia Coli Pyridoxine 5'-Phosphate Oxidase Complexed With Pyridoxal 5'-Phosphate At 2.0 A Resolution
 2F41 C ,25,5.6,0.0356,1.4,4.0,Crystal Structure Of Fapr- A Global Regulator Of Fatty Acid Biosynthesis In B. Subtilis
 1TY9 B ,32,6.5,0.0256,1.4,9.4,X-Ray Crystal Structure Of Phzg From Pseudomonas Fluorescens
-1TY9 B 1,32,6.5,0.0256,1.4,9.4,X-Ray Crystal Structure Of Phzg From Pseudomonas Fluorescens
 5F3M B ,19,5.1,0.0343,1.4,0.0,Crystal Structure Of Dihydroneopterin Aldolase From Bacillus Anthracis Complexed With L-neopterin At 1.5 Angstroms Resolution
-1W6S C 4,19,5.1,0.0068,1.4,5.3,The High Resolution Structure Of Methanol Dehydrogenase From Methylobacterium Extorquens
+1TY9 B 1,32,6.5,0.0256,1.4,9.4,X-Ray Crystal Structure Of Phzg From Pseudomonas Fluorescens
 1G77 A ,30,6.5,0.0321,1.4,16.7,X-Ray Structure Of Escherichia Coli Pyridoxine 5`-Phosphate Oxidase Complexed With Pyridoxal 5'-Phosphate At 2.0 A Resolution
+1W6S C 4,19,5.1,0.0068,1.4,5.3,The High Resolution Structure Of Methanol Dehydrogenase From Methylobacterium Extorquens
 4S05 A 2,16,4.9,0.0215,1.4,6.2,Crystal Structure Of Klebsiella Pneumoniae Pmra In Complex With Pmra Box Dna
 3E1E H ,30,6.4,0.0148,1.4,10.0,Crystal Structure Of A Thioesterase Family Protein From Silicibacter Pomeroyi. Northeast Structural Genomics Target Sir180a
 4OQD A 1,19,5.1,0.0057,1.4,5.3,Crystal Structure Of The Tylm1 N,n-dimethyltransferase In Complex With Sah And Tdp-qui3nme2
 1W6S A 3,19,5.1,0.0065,1.4,5.3,The High Resolution Structure Of Methanol Dehydrogenase From Methylobacterium Extorquens
+1DNL A ,30,6.8,0.0064,1.4,16.7,X-Ray Structure Of Escherichia Coli Pyridoxine 5'-Phosphate Oxidase Complexed With Fmn At 1.8 Angstrom Resolution
 1G79 A ,30,6.6,0.0177,1.4,16.7,X-Ray Structure Of Escherichia Coli Pyridoxine 5'-Phosphate Oxidase Complexed With Pyridoxal 5'-Phosphate At 2.0 A Resolution
 4MIV C 3,23,5.0,0.0116,1.4,4.3,Crystal Structure Of Sulfamidase, Crystal Form L
-1DNL A ,30,6.8,0.0064,1.4,16.7,X-Ray Structure Of Escherichia Coli Pyridoxine 5'-Phosphate Oxidase Complexed With Fmn At 1.8 Angstrom Resolution
 5HMC A ,25,5.8,0.0499,1.4,8.0,Crystal Structure Of S. Sahachiroi Azig Complexed With 5-methyl Naphthoic Acid
 4MIV G 3,23,5.0,0.0119,1.4,4.3,Crystal Structure Of Sulfamidase, Crystal Form L
 3PFG A 1,19,5.2,0.0026,1.4,5.3,X-Ray Crystal Structure The N,N-Dimethyltransferase Tylm1 From Streptomyces Fradiae In Complex With Sam And Dtdp-Phenolÿ
@@ -175,6 +56,128 @@
 1T9M B ,32,6.6,0.0323,1.4,9.4,X-Ray Crystal Structure Of Phzg From Pseudomonas Aeruginosa
 4MIV E 3,23,5.0,0.0128,1.4,4.3,Crystal Structure Of Sulfamidase, Crystal Form L
 4KOO D 2,18,5.1,0.0054,1.4,0.0,Crystal Structure Of Why1 From Arabidopsis Thaliana
-4H0P A ,30,6.9,0.0131,1.4,13.3,Crystal Structure Of Acetate Kinase From Cryptococcus Neoformans
 4MIV D 3,23,5.0,0.0134,1.4,4.3,Crystal Structure Of Sulfamidase, Crystal Form L
+4H0P A ,30,6.9,0.0131,1.4,13.3,Crystal Structure Of Acetate Kinase From Cryptococcus Neoformans
+4OQD B 1,22,5.2,0.0041,1.4,4.5,Crystal Structure Of The Tylm1 N,n-dimethyltransferase In Complex With Sah And Tdp-qui3nme2
+
+4EE7 B ,30,6.8,0.0037,1.3,6.7,Crystal Structure Of The Novel Phenazine Prenyltransferase Epzp In Complex With S-Thiolodiphosphate (Methylated)
+2JG5 B 2,19,5.2,0.0152,1.3,5.3,Crystal Structure Of A Putative Phosphofructokinase From Staphylococcus Aureus
+1GXQ A 1,16,4.9,0.0242,1.3,6.2,Crystal Structure Of The Phob Effector Domain
+1GXP A 1,16,4.9,0.0175,1.3,6.2,Phob Effector Domain In Complex With Pho Box Dna˙
+4AZV A 2,20,5.2,0.0284,1.3,0.0,Co-Crystal Structure Of Wbdd And Kinase Inhibitor Gw435821x
+1LRW C 3,16,5.2,0.0025,1.3,0.0,Crystal Structure Of Methanol Dehydrogenase From P. Denitrificans
+4HZZ A 4,19,4.7,0.0493,1.3,15.8,Crystal Structure Of Influenza Neuraminidase N3-h274y Complexed With Oseltamivir
+3I7H A 3,18,5.1,0.0348,1.3,5.6,Crystal Structure Of Ddb1 In Complex With The H-Box Motif Of Hbx˙
+2WB1 B 4,22,4.8,0.0264,1.3,4.5,The Complete Structure Of The Archaeal 13-Subunit Dna- Directed Rna Polymerase˙
+4HZY A 4,19,4.7,0.0491,1.3,15.8,Crystal Structure Of Influenza A Neuraminidase N3-h274y
+2OAJ A 4,18,4.8,0.0308,1.3,0.0,Crystal Structure Of Sro7 From S. Cerevisiae
+4AZS A 2,20,5.2,0.0300,1.3,0.0,High Resolution (2.2 A) Crystal Structure Of Wbdd
+4UPK C 2,19,5.1,0.0063,1.3,5.3,Phosphonate Monoester Hydrolase Sppmh From Silicibacter Pomeroyi
+4UER b 6,21,4.9,0.0239,1.3,0.0,40s-eif1-eif1a-eif3-eif3j Translation Initiation Complex From Lachancea Kluyveri
+4UPK B 2,19,5.1,0.0061,1.3,5.3,Phosphonate Monoester Hydrolase Sppmh From Silicibacter Pomeroyi
+2GR8 F ,19,5.2,0.0043,1.3,5.3,Hia 1022-1098
+4UPK A 2,19,5.1,0.0061,1.3,5.3,Phosphonate Monoester Hydrolase Sppmh From Silicibacter Pomeroyi
+4TZ4 A 3,18,5.2,0.0152,1.3,5.6,Crystal Structure Of Human Cereblon In Complex With Ddb1 And Lenalidomide
+3A0F A 6,23,4.8,0.0348,1.3,4.3,The Crystal Structure Of Geotrichum Sp. M128 Xyloglucanase˙
+3Q9S A 2,18,5.2,0.0022,1.3,0.0,Crystal Structure Of Rra(1-215) From Deinococcus Radiodurans˙
+4NEX B 1,18,4.9,0.0212,1.3,11.1,Structure Of The N-acetyltransferase Domain Of X. Fastidiosa Nags/k
+4HZV A 3,19,4.7,0.0451,1.3,15.8,The Crystal Structure Of Influenza A Neuraminidase N3
+4I00 A 3,19,4.7,0.0433,1.3,15.8,Crystal Structure Of Influenza A Neuraminidase N3-h274y Complexed With Zanamivir
+3WJ9 A 7,18,4.9,0.0192,1.3,11.1,Crystal Structure Of The Eukaryotic Initiation Factor
+4FHN B 2,19,5.1,0.0341,1.3,5.3,Nup37-Nup120 Full-Length Complex From Schizosaccharomyces Pombe
+2GR7 E ,23,5.2,0.0022,1.3,8.7,Hia 992-1098
+2GR7 B ,23,5.2,0.0022,1.3,8.7,Hia 992-1098
+3RFH C 3,19,4.9,0.0177,1.3,5.3,Crystal Structure Of The Yeast Rack1 Dimer In Space Group P21˙
+2GR7 C ,23,5.2,0.0022,1.3,8.7,Hia 992-1098
+2YMS B 1,17,4.7,0.0468,1.3,0.0,Structure And Assembly Of A B-propeller With Nine Blades And A New Conserved Repetitive Sequence Motif
+4AAH C 4,17,5.1,0.0066,1.3,5.9,Methanol Dehydrogenase From Methylophilus W3a1
+2GR8 D ,23,5.2,0.0043,1.3,8.7,Hia 1022-1098
+3HO5 B 2,20,5.2,0.0045,1.3,0.0,Crystal Structure Of Hedgehog-Interacting Protein (Hhip) And Sonic Hedgehog (Shh) Complex˙
+2Z15 D ,25,5.2,0.0046,1.3,4.0,Crystal Structure Of Human Tob1 Protein
+2GR8 E ,23,5.2,0.0037,1.3,8.7,Hia 1022-1098
+3LY9 A ,20,5.7,0.0146,1.3,0.0,Crystal Structure Of Mutant D471n Of The Periplasmic Domain Of Cadc˙
+2YMS C 1,17,4.8,0.0348,1.3,5.9,Structure And Assembly Of A B-propeller With Nine Blades And A New Conserved Repetitive Sequence Motif
+4XFV A 5,19,5.1,0.0398,1.3,5.3,Crystal Structure Of Elp2
+5CI9 A ,25,5.2,0.0035,1.3,4.0,Crystal Structure Of Human Tob In Complex With Inhibitor Fragment 6
+3IO0 A 1,22,5.2,0.0152,1.3,18.2,Crystal Structure Of Etub From Clostridium Kluyveri˙
+3LY8 A ,20,5.6,0.0165,1.3,5.0,Crystal Structure Of Mutant D471e Of The Periplasmic Domain Of Cadc˙
+4EE7 A ,30,6.4,0.0269,1.4,3.3,Crystal Structure Of The Novel Phenazine Prenyltransferase Epzp In Complex With S-Thiolodiphosphate (Methylated)
+2RV8 A 1,17,5.2,0.0036,1.4,11.8,Solution Structure Of The Phop Dna-binding Domain From Mycobacterium Tuberculosis
+3GRE A 2,24,4.7,0.0440,1.4,4.2,Crystal Structure Of Saccharomyces Cerevisiae Vps15 Wd Repeat Domain˙
+3PFH A 1,19,5.2,0.0022,1.4,5.3,X-Ray Crystal Structure The N,N-Dimethyltransferase Tylm1 From Streptomyces Fradiae In Complex With Sah And Dtdp-Quip3n˙
+3WJ9 B 4,17,4.7,0.0467,1.4,0.0,Crystal Structure Of The Eukaryotic Initiation Factor
+3JBT G 12,20,4.9,0.0171,1.4,5.0,Atomic Structure Of The Apaf-1 Apoptosome
+3JBT I 12,20,4.9,0.0171,1.4,5.0,Atomic Structure Of The Apaf-1 Apoptosome
+3JBT K 12,20,4.9,0.0171,1.4,5.0,Atomic Structure Of The Apaf-1 Apoptosome
+3JBT M 12,20,4.9,0.0171,1.4,5.0,Atomic Structure Of The Apaf-1 Apoptosome
+3JBT E 12,20,4.9,0.0171,1.4,5.0,Atomic Structure Of The Apaf-1 Apoptosome
+3JBT C 12,20,4.9,0.0171,1.4,5.0,Atomic Structure Of The Apaf-1 Apoptosome
+3JBT A 12,20,4.9,0.0171,1.4,5.0,Atomic Structure Of The Apaf-1 Apoptosome
+3BXO B 1,24,5.1,0.0071,1.4,0.0,Crystal Structure Of Streptomyces Venezuelae Desvi
+3PX2 D 1,19,5.2,0.0025,1.4,5.3,Structure Of Tylm1 From Streptomyces Fradiae H123n Mutant In Complex With Sah And Dtdp-Quip3n˙
+5EP5 B ,30,5.9,0.0366,1.4,20.0,The Crystal Structure Of The Hypothetical Protein Sav0944 Mutant (glu47ala) From Staphylococcus Aureus
+3PX3 A 1,19,5.2,0.0022,1.4,5.3,Structure Of Tylm1 From Streptomyces Fradiae H123a Mutant In Complex With Sah And Dtdp-Quip3n˙
+2F7L B 4,17,5.1,0.0431,1.4,5.9,Crystal Structure Of Sulfolobus Tokodaii PhosphomannomutasePHOSPHOGLUCOMUTASE
+4OO1 D 1,20,5.2,0.0152,1.4,0.0,Structure Of The Exosome Component In Complex With Rna
+3E9V A ,23,5.1,0.0057,1.4,8.7,Crystal Structure Of Human B-Cell Translocation Gene 2 (Btg2)
+
+3PX2 A 1,19,5.2,0.0022,1.4,5.3,Structure Of Tylm1 From Streptomyces Fradiae H123n Mutant In Complex With Sah And Dtdp-Quip3nÿ
+3DW8 E 4,18,5.2,0.0046,1.4,5.6,Structure Of A Protein Phosphatase 2a Holoenzyme With B55 Subunitÿ
+4HMT A ,32,6.6,0.0217,1.4,9.4,Crystal Structure Of Phzg From Pseudomonas Fluorescens 2-79 In Complex With Hexahydrophenazine-1,6-dicarboxylic Acid
+3F6K A 5,20,4.7,0.0464,1.4,20.0,Crystal Structure Of The Vps10p Domain Of Human SortilinNTS3 IN COMPLEX WITH NEUROTENSINÿ
+1TY9 A ,32,6.6,0.0192,1.4,9.4,X-Ray Crystal Structure Of Phzg From Pseudomonas Fluorescens
+2GIA A 2,19,5.0,0.0130,1.4,10.5,Crystal Structures Of Trypanosoma Bruciei Mrp1MRP2
+3IYV C 3,20,4.9,0.0219,1.4,10.0,Clathrin D6 Coatÿ
+1BPO B 3,20,4.9,0.0219,1.4,10.0,Clathrin Heavy-Chain Terminal Domain And Linker
+2JPB A 1,19,5.2,0.0025,1.4,5.3,Solution Structure Of Ompr-C Dna Binding Protein
+4OQE A 1,24,5.1,0.0059,1.4,4.2,Crystal Structure Of The Tylm1 N,n-dimethyltransferase In Complex With Sah And Tdp-fuc3nme
+3PFH D 1,19,5.2,0.0036,1.4,5.3,X-Ray Crystal Structure The N,N-Dimethyltransferase Tylm1 From Streptomyces Fradiae In Complex With Sah And Dtdp-Quip3nÿ
+4HMT B ,32,6.6,0.0240,1.4,9.4,Crystal Structure Of Phzg From Pseudomonas Fluorescens 2-79 In Complex With Hexahydrophenazine-1,6-dicarboxylic Acid
+4HMT B 1,32,6.6,0.0240,1.4,9.4,Crystal Structure Of Phzg From Pseudomonas Fluorescens 2-79 In Complex With Hexahydrophenazine-1,6-dicarboxylic Acid
+5FAR F ,20,5.1,0.0326,1.4,0.0,Crystal Structure Of Dihydroneopterin Aldolase From Bacillus Anthracis Complex With 9-methylguanine
+4HMU B ,32,6.6,0.0247,1.4,9.4,Crystal Structure Of Phzg From Pseudomonas Fluorescens 2-79 In Complex With Tetrahydrophenazine-1-carboxylic Acid After 1 Day Of Soaking
+1L9Z C 4,23,5.2,0.0022,1.4,8.7,Thermus Aquaticus Rna Polymerase HoloenzymeFORK-Junction Promoter Dna Complex At 6.5 A Resolution
+3E1E C ,30,6.6,0.0063,1.4,10.0,Crystal Structure Of A Thioesterase Family Protein From Silicibacter Pomeroyi. Northeast Structural Genomics Target Sir180a
+4HMV A ,32,6.6,0.0207,1.4,9.4,Crystal Structure Of Phzg From Pseudomonas Fluorescens 2-79 In Complex With Tetrahydrophenazine-1-carboxylic Acid After 5 Days Of Soaking
+2F41 D ,25,5.6,0.0330,1.4,4.0,Crystal Structure Of Fapr- A Global Regulator Of Fatty Acid Biosynthesis In B. Subtilis
+2W5R A 1,20,5.2,0.0022,1.4,5.0,Structure-Based Mechanism Of Lipoteichoic Acid Synthesis By Staphylococcus Aureus Ltasÿ
+5EP5 C ,30,5.9,0.0374,1.4,20.0,The Crystal Structure Of The Hypothetical Protein Sav0944 Mutant (glu47ala) From Staphylococcus Aureus
+4HMV B ,32,6.6,0.0248,1.4,9.4,Crystal Structure Of Phzg From Pseudomonas Fluorescens 2-79 In Complex With Tetrahydrophenazine-1-carboxylic Acid After 5 Days Of Soaking
+4HMV B 1,32,6.6,0.0248,1.4,9.4,Crystal Structure Of Phzg From Pseudomonas Fluorescens 2-79 In Complex With Tetrahydrophenazine-1-carboxylic Acid After 5 Days Of Soaking
+4HMS A ,32,6.6,0.0212,1.4,9.4,Crystal Structure Of Phzg From Pseudomonas Fluorescens 2-79 In Complex With A Second Fmn In The Substrate Binding Site
+4HMU A ,32,6.6,0.0354,1.4,9.4,Crystal Structure Of Phzg From Pseudomonas Fluorescens 2-79 In Complex With Tetrahydrophenazine-1-carboxylic Acid After 1 Day Of Soaking
+5HMB A ,25,6.0,0.0236,1.4,8.0,Crystal Structure Of S. Sahachiroi Azig
+5C0X D 1,20,5.2,0.0152,1.4,0.0,Structure Of A 12-subunit Nuclear Exosome Complex Bound To Structured Rna
+1JNW A ,30,7.0,0.0009,1.4,16.7,Active Site Structure Of E. Coli Pyridoxine 5'-Phosphate Oxidase
+1G78 A ,30,6.6,0.0165,1.4,16.7,X-Ray Structure Of Escherichia Coli Pyridoxine 5'-Phosphate Oxidase Complexed With Pyridoxal 5'-Phosphate At 2.0 A Resolution
+2PMU B 1,19,5.1,0.0063,1.4,10.5,Crystal Structure Of The Dna-Binding Domain Of Phopÿ
+4HMS B ,32,6.6,0.0248,1.4,9.4,Crystal Structure Of Phzg From Pseudomonas Fluorescens 2-79 In Complex With A Second Fmn In The Substrate Binding Site
+4HMS B 1,32,6.6,0.0248,1.4,9.4,Crystal Structure Of Phzg From Pseudomonas Fluorescens 2-79 In Complex With A Second Fmn In The Substrate Binding Site
+1G76 A ,30,6.6,0.0215,1.4,16.7,X-Ray Structure Of Escherichia Coli Pyridoxine 5'-Phosphate Oxidase Complexed With Pyridoxal 5'-Phosphate At 2.0 A Resolution
+2F41 C ,25,5.6,0.0356,1.4,4.0,Crystal Structure Of Fapr- A Global Regulator Of Fatty Acid Biosynthesis In B. Subtilis
+1TY9 B ,32,6.5,0.0256,1.4,9.4,X-Ray Crystal Structure Of Phzg From Pseudomonas Fluorescens
+5F3M B ,19,5.1,0.0343,1.4,0.0,Crystal Structure Of Dihydroneopterin Aldolase From Bacillus Anthracis Complexed With L-neopterin At 1.5 Angstroms Resolution
+1TY9 B 1,32,6.5,0.0256,1.4,9.4,X-Ray Crystal Structure Of Phzg From Pseudomonas Fluorescens
+1G77 A ,30,6.5,0.0321,1.4,16.7,X-Ray Structure Of Escherichia Coli Pyridoxine 5`-Phosphate Oxidase Complexed With Pyridoxal 5'-Phosphate At 2.0 A Resolution
+1W6S C 4,19,5.1,0.0068,1.4,5.3,The High Resolution Structure Of Methanol Dehydrogenase From Methylobacterium Extorquens
+4S05 A 2,16,4.9,0.0215,1.4,6.2,Crystal Structure Of Klebsiella Pneumoniae Pmra In Complex With Pmra Box Dna
+3E1E H ,30,6.4,0.0148,1.4,10.0,Crystal Structure Of A Thioesterase Family Protein From Silicibacter Pomeroyi. Northeast Structural Genomics Target Sir180a
+4OQD A 1,19,5.1,0.0057,1.4,5.3,Crystal Structure Of The Tylm1 N,n-dimethyltransferase In Complex With Sah And Tdp-qui3nme2
+1W6S A 3,19,5.1,0.0065,1.4,5.3,The High Resolution Structure Of Methanol Dehydrogenase From Methylobacterium Extorquens
+1DNL A ,30,6.8,0.0064,1.4,16.7,X-Ray Structure Of Escherichia Coli Pyridoxine 5'-Phosphate Oxidase Complexed With Fmn At 1.8 Angstrom Resolution
+1G79 A ,30,6.6,0.0177,1.4,16.7,X-Ray Structure Of Escherichia Coli Pyridoxine 5'-Phosphate Oxidase Complexed With Pyridoxal 5'-Phosphate At 2.0 A Resolution
+4MIV C 3,23,5.0,0.0116,1.4,4.3,Crystal Structure Of Sulfamidase, Crystal Form L
+5HMC A ,25,5.8,0.0499,1.4,8.0,Crystal Structure Of S. Sahachiroi Azig Complexed With 5-methyl Naphthoic Acid
+4MIV G 3,23,5.0,0.0119,1.4,4.3,Crystal Structure Of Sulfamidase, Crystal Form L
+3PFG A 1,19,5.2,0.0026,1.4,5.3,X-Ray Crystal Structure The N,N-Dimethyltransferase Tylm1 From Streptomyces Fradiae In Complex With Sam And Dtdp-Phenolÿ
+3E1E F ,30,5.9,0.0385,1.4,10.0,Crystal Structure Of A Thioesterase Family Protein From Silicibacter Pomeroyi. Northeast Structural Genomics Target Sir180a
+2OIK C ,19,5.1,0.0396,1.4,10.5,Crystal Structure Of Histidine Triad (Hit) Protein (Yp_546612.1) From Methylobacillus Flagellatus Kt At 1.65 A Resolution
+4MIV H 3,23,5.0,0.0133,1.4,4.3,Crystal Structure Of Sulfamidase, Crystal Form L
+4MIV A 3,23,5.0,0.0126,1.4,4.3,Crystal Structure Of Sulfamidase, Crystal Form L
+3E1E G ,30,6.3,0.0111,1.4,10.0,Crystal Structure Of A Thioesterase Family Protein From Silicibacter Pomeroyi. Northeast Structural Genomics Target Sir180a
+1T9M B ,32,6.6,0.0323,1.4,9.4,X-Ray Crystal Structure Of Phzg From Pseudomonas Aeruginosa
+4MIV E 3,23,5.0,0.0128,1.4,4.3,Crystal Structure Of Sulfamidase, Crystal Form L
+4KOO D 2,18,5.1,0.0054,1.4,0.0,Crystal Structure Of Why1 From Arabidopsis Thaliana
+4MIV D 3,23,5.0,0.0134,1.4,4.3,Crystal Structure Of Sulfamidase, Crystal Form L
+4H0P A ,30,6.9,0.0131,1.4,13.3,Crystal Structure Of Acetate Kinase From Cryptococcus Neoformans
 4OQD B 1,22,5.2,0.0041,1.4,4.5,Crystal Structure Of The Tylm1 N,n-dimethyltransferase In Complex With Sah And Tdp-qui3nme2

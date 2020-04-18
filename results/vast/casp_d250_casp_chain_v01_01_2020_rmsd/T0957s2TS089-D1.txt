@@ -1,3 +1,4 @@
+
 1TNB C 2,50,5.5,0.0095,1.7,8.0,Rat Protein Geranylgeranyltransferase Type-I Complexed With A Ggpp Analog And A Substrate Kksktkcvif Peptide Derived From Tc21
 1TNB E 2,50,5.5,0.0094,1.7,8.0,Rat Protein Geranylgeranyltransferase Type-I Complexed With A Ggpp Analog And A Substrate Kksktkcvif Peptide Derived From Tc21
 3DSX A 2,44,5.1,0.0350,1.7,9.1,Crystal Structure Of Rabggtase(Delta Lrr; Delta Ig)in Complex With Di-Prenylated Peptide Ser-Cys(Gg)-Ser-Cys(Gg) Derivated From Rab7
@@ -19,23 +20,23 @@
 4GTT A 2,43,5.1,0.0342,1.7,9.3,Engineered Rabggtase In Complex With Bms Analogue 12
 5CWH A 1,59,5.6,0.0048,1.7,3.4,Crystal Structure Of De Novo Designed Helical Repeat Protein Dhr14
 1TNU G 3,41,5.3,0.0142,1.7,12.2,Rat Protein Geranylgeranyltransferase Type-I Complexed With A Ggpp Analog And A Gcincckvl Peptide Derived From Rhob
-3Q7A A 2,44,5.6,0.0060,1.7,6.8,Cryptococcus Neoformans Protein Farnesyltransferase In Complex With Fpp And L-778,123ÿ
-2WMN A 3,53,5.5,0.0424,1.7,9.4,Structure Of The Complex Between Dock9 And Cdc42-Gdpÿ
+3Q7A A 2,44,5.6,0.0060,1.7,6.8,Cryptococcus Neoformans Protein Farnesyltransferase In Complex With Fpp And L-778,123я
+2WMN A 3,53,5.5,0.0424,1.7,9.4,Structure Of The Complex Between Dock9 And Cdc42-Gdpя
 4O46 A 1,43,5.0,0.0440,1.7,16.3,14-3-3-gamma In Complex With Influenza Ns1 C-terminal Tail Phosphorylated At S228
 4ARE A 3,40,5.1,0.0290,1.7,7.5,Crystal Structure Of The Collagenase Unit Of Collagenase G From Clostridium Histolyticum At 2.19 Angstrom Resolution
 4GTS A 2,42,5.1,0.0358,1.7,9.5,Engineered Rabggtase In Complex With Bms Analogue 16
 3SPR A 1,41,5.2,0.0267,1.7,14.6,Crystal Structure Of Human 14-3-3 Sigma C38vN166H IN COMPLEX WITH Task-3 Peptide And Stabilizer Fc-Thf
 4QLI A 1,41,5.2,0.0239,1.7,14.6,A Novel Phospho-switch In The Linker Region Of The Snail Zinc Finger Protein Which Regulates 14-3-3 Association, Dna Binding And Epithelial-mesenchymal Differentiation
-3E37 A 2,50,5.6,0.0053,1.7,8.0,Protein Farnesyltransferase Complexed With Bisubstrate Ethylenediamine Scaffold Inhibitor 5ÿ
-3MZL D 3,35,5.7,0.0236,1.7,5.7,Sec13SEC31 EDGE ELEMENT, LOOP DELETION MUTANTÿ
-3HVE A 2,45,5.4,0.0124,1.7,11.1,Structures Of Spop-Substrate Complexes: Insights Into Molecular Architectures Of Btb-Cul3 Ubiquitin Ligases: Gigaxoninbtb3-Boxÿ
-3MZL F 3,35,5.4,0.0102,1.7,5.7,Sec13SEC31 EDGE ELEMENT, LOOP DELETION MUTANTÿ
+3E37 A 2,50,5.6,0.0053,1.7,8.0,Protein Farnesyltransferase Complexed With Bisubstrate Ethylenediamine Scaffold Inhibitor 5я
+3MZL D 3,35,5.7,0.0236,1.7,5.7,Sec13SEC31 EDGE ELEMENT, LOOP DELETION MUTANTя
+3HVE A 2,45,5.4,0.0124,1.7,11.1,Structures Of Spop-Substrate Complexes: Insights Into Molecular Architectures Of Btb-Cul3 Ubiquitin Ligases: Gigaxoninbtb3-Boxя
+3MZL F 3,35,5.4,0.0102,1.7,5.7,Sec13SEC31 EDGE ELEMENT, LOOP DELETION MUTANTя
 1YZ5 A 1,42,5.3,0.0179,1.7,11.9,The Crystal Structure Of 14-3-3-Sigma At 2.8 Angstrom Resolution
 1MZC A 2,50,5.5,0.0066,1.7,8.0,Co-Crystal Structure Of Human Farnesyltransferase With Farnesyldiphosphate And Inhibitor Compound 33a
-3HXE A 2,44,5.1,0.0368,1.7,11.4,Engineered Rabggtase In Complex With A Peptidomimetic Inhibitor (Compound 32)ÿ
+3HXE A 2,44,5.1,0.0368,1.7,11.4,Engineered Rabggtase In Complex With A Peptidomimetic Inhibitor (Compound 32)я
 1D8E A 2,50,5.3,0.0166,1.7,8.0,Zinc-Depleted Ftase Complexed With K-Ras4b Peptide Substrate And Fpp Analog.
 3DSU A 2,44,5.1,0.0352,1.7,11.4,Crystal Structure Of Rabggtase(Delta Lrr; Delta Ig)in Complex With Farnesyl Pyrophosphate
-3PZ3 A 2,44,5.1,0.0339,1.7,11.4,Crystal Structure Of Rabggtase(Delta Lrr; Delta Ig) In Complex With Bms-Analogue 14ÿ
+3PZ3 A 2,44,5.1,0.0339,1.7,11.4,Crystal Structure Of Rabggtase(Delta Lrr; Delta Ig) In Complex With Bms-Analogue 14я
 2H6G A 2,50,5.6,0.0056,1.7,8.0,W102t Protein Farnesyltransferase Mutant Complexed With A Geranylgeranylated Ddptasacvls Peptide Product At 1.85a Resolution
 1FPP A 2,50,5.5,0.0071,1.7,8.0,Protein Farnesyltransferase Complex With Farnesyl Diphosphate
 4DAT A 1,42,5.3,0.0165,1.7,14.3,Structure Of 14-3-3 Sigma In Complex With Padi6 14-3-3 Binding Motif Ii
@@ -49,15 +50,16 @@
 1JCQ A 2,50,5.6,0.0063,1.7,8.0,Crystal Structure Of Human Protein Farnesyltransferase Complexed With Farnesyl Diphosphate And The Peptidomimetic Inhibitor L-739,750
 1LD8 A 2,50,5.6,0.0056,1.7,8.0,Co-Crystal Structure Of Human Farnesyltransferase With Farnesyldiphosphate And Inhibitor Compound 49
 1O1S A 2,50,5.5,0.0082,1.7,8.0,Structure Of Fpt Bound To Isoprenoid Analog 3b
-3P1O A 1,43,5.3,0.0195,1.7,14.0,Crystal Structure Of Human 14-3-3 Sigma In Complex With Task-3 Peptide And Stabilisator Fusicoccin Aÿ
+3P1O A 1,43,5.3,0.0195,1.7,14.0,Crystal Structure Of Human 14-3-3 Sigma In Complex With Task-3 Peptide And Stabilisator Fusicoccin Aя
 4GTO A 2,50,5.4,0.0110,1.7,8.0,Ftase In Complex With Bms Analogue 14
-3E34 A 2,50,5.2,0.0215,1.7,8.0,Protein Farnesyltransferase Complexed With Fpp And Ethylenediamine-Scaffold Inhibitor 10ÿ
-3KSQ A 2,50,5.5,0.0079,1.7,8.0,Discovery Of C-Imidazole Azaheptapyridine Fpt Inhibitorsÿ
+3E34 A 2,50,5.2,0.0215,1.7,8.0,Protein Farnesyltransferase Complexed With Fpp And Ethylenediamine-Scaffold Inhibitor 10я
+3KSQ A 2,50,5.5,0.0079,1.7,8.0,Discovery Of C-Imidazole Azaheptapyridine Fpt Inhibitorsя
 1SA5 A 2,50,5.5,0.0067,1.7,8.0,Rat Protein Farnesyltransferase Complexed With Fpp And Bms- 214662
 1N94 A 2,50,5.1,0.0315,1.7,8.0,Aryl Tetrahydropyridine Inhbitors Of Farnesyltransferase: Glycine, Phenylalanine And Histidine Derivates
 1N4P K 3,38,5.3,0.0155,1.7,13.2,Protein Geranylgeranyltransferase Type-I Complexed With Geranylgeranyl Diphosphate
 1TN8 A 2,50,5.5,0.0087,1.8,8.0,Protein Farnesyltransferase Complexed With A H-Ras Peptide Substrate And A Fpp Analog At 2.25a Resolution
 1N95 A 2,50,5.4,0.0107,1.8,8.0,Aryl Tetrahydrophyridine Inhbitors Of Farnesyltranferase: Glycine, Phenylalanine And Histidine Derivatives
+
 4LNB A 2,41,5.5,0.0067,1.6,0.0,Aspergillus Fumigatus Protein Farnesyltransferase Ternary Complex With Farnesyldiphosphate And Ethylenediamine Scaffold Inhibitor 5
 4L9P A 2,41,5.5,0.0069,1.6,0.0,Crystal Structure Of Aspergillus Fumigatus Protein Farnesyltransferase Complexed With The Fii Analog, Fpt-ii, And The Kcvvm Peptide
 4LNG A 2,41,5.5,0.0068,1.6,0.0,Aspergillus Fumigatus Protein Farnesyltransferase Complex With Farnesyldiphosphate And Tipifarnib
@@ -118,63 +120,4 @@
 3LVG A 1,43,5.0,0.0440,1.7,9.3,Crystal Structure Of A Clathrin Heavy Chain And Clathrin Lig Complexÿ
 1N4P C 2,50,5.2,0.0209,1.7,8.0,Protein Geranylgeranyltransferase Type-I Complexed With Geranylgeranyl Diphosphate
 1TNB I 2,50,5.5,0.0094,1.7,8.0,Rat Protein Geranylgeranyltransferase Type-I Complexed With A Ggpp Analog And A Substrate Kksktkcvif Peptide Derived From Tc21
-1TNB C 2,50,5.5,0.0095,1.7,8.0,Rat Protein Geranylgeranyltransferase Type-I Complexed With A Ggpp Analog And A Substrate Kksktkcvif Peptide Derived From Tc21
-1TNB E 2,50,5.5,0.0094,1.7,8.0,Rat Protein Geranylgeranyltransferase Type-I Complexed With A Ggpp Analog And A Substrate Kksktkcvif Peptide Derived From Tc21
-3DSX A 2,44,5.1,0.0350,1.7,9.1,Crystal Structure Of Rabggtase(Delta Lrr; Delta Ig)in Complex With Di-Prenylated Peptide Ser-Cys(Gg)-Ser-Cys(Gg) Derivated From Rab7
-1N4R C 2,50,5.4,0.0102,1.7,8.0,Protein Geranylgeranyltransferase Type-I Complexed With A Geranylgeranylated Kkksktkcvil Peptide Product
-1N4R K 2,50,5.4,0.0102,1.7,8.0,Protein Geranylgeranyltransferase Type-I Complexed With A Geranylgeranylated Kkksktkcvil Peptide Product
-4LNB A 1,38,5.8,0.0196,1.7,10.5,Aspergillus Fumigatus Protein Farnesyltransferase Ternary Complex With Farnesyldiphosphate And Ethylenediamine Scaffold Inhibitor 5
-1N4P K 2,50,5.2,0.0208,1.7,8.0,Protein Geranylgeranyltransferase Type-I Complexed With Geranylgeranyl Diphosphate
-1N4P C 3,41,5.3,0.0156,1.7,12.2,Protein Geranylgeranyltransferase Type-I Complexed With Geranylgeranyl Diphosphate
-1N4Q C 3,41,5.3,0.0169,1.7,12.2,Protein Geranylgeranyltransferase Type-I Complexed With A Ggpp Analog And A Kkksktkcvil Peptide
-1TNZ I 3,41,5.3,0.0151,1.7,12.2,Rat Protein Geranylgeranyltransferase Type-I Complexed With A Ggpp Analog And A Rrcvll Peptide Derived From Cdc42 Splice Isoform-2
-1TNB G 2,50,5.5,0.0093,1.7,8.0,Rat Protein Geranylgeranyltransferase Type-I Complexed With A Ggpp Analog And A Substrate Kksktkcvif Peptide Derived From Tc21
-1N4R A 2,50,5.6,0.0059,1.7,8.0,Protein Geranylgeranyltransferase Type-I Complexed With A Geranylgeranylated Kkksktkcvil Peptide Product
-1N4P I 2,50,5.2,0.0199,1.7,8.0,Protein Geranylgeranyltransferase Type-I Complexed With Geranylgeranyl Diphosphate
-1N4P A 2,50,5.2,0.0211,1.7,8.0,Protein Geranylgeranyltransferase Type-I Complexed With Geranylgeranyl Diphosphate
-1N4P G 2,50,5.2,0.0213,1.7,8.0,Protein Geranylgeranyltransferase Type-I Complexed With Geranylgeranyl Diphosphate
-1N4R I 2,50,5.6,0.0056,1.7,8.0,Protein Geranylgeranyltransferase Type-I Complexed With A Geranylgeranylated Kkksktkcvil Peptide Product
-1N4R E 2,50,5.6,0.0058,1.7,8.0,Protein Geranylgeranyltransferase Type-I Complexed With A Geranylgeranylated Kkksktkcvil Peptide Product
-1TNZ K 3,38,5.3,0.0148,1.7,13.2,Rat Protein Geranylgeranyltransferase Type-I Complexed With A Ggpp Analog And A Rrcvll Peptide Derived From Cdc42 Splice Isoform-2
-4GTT A 2,43,5.1,0.0342,1.7,9.3,Engineered Rabggtase In Complex With Bms Analogue 12
-5CWH A 1,59,5.6,0.0048,1.7,3.4,Crystal Structure Of De Novo Designed Helical Repeat Protein Dhr14
-1TNU G 3,41,5.3,0.0142,1.7,12.2,Rat Protein Geranylgeranyltransferase Type-I Complexed With A Ggpp Analog And A Gcincckvl Peptide Derived From Rhob
-3Q7A A 2,44,5.6,0.0060,1.7,6.8,Cryptococcus Neoformans Protein Farnesyltransferase In Complex With Fpp And L-778,123ÿ
-2WMN A 3,53,5.5,0.0424,1.7,9.4,Structure Of The Complex Between Dock9 And Cdc42-Gdpÿ
-4O46 A 1,43,5.0,0.0440,1.7,16.3,14-3-3-gamma In Complex With Influenza Ns1 C-terminal Tail Phosphorylated At S228
-4ARE A 3,40,5.1,0.0290,1.7,7.5,Crystal Structure Of The Collagenase Unit Of Collagenase G From Clostridium Histolyticum At 2.19 Angstrom Resolution
-4GTS A 2,42,5.1,0.0358,1.7,9.5,Engineered Rabggtase In Complex With Bms Analogue 16
-3SPR A 1,41,5.2,0.0267,1.7,14.6,Crystal Structure Of Human 14-3-3 Sigma C38vN166H IN COMPLEX WITH Task-3 Peptide And Stabilizer Fc-Thf
-4QLI A 1,41,5.2,0.0239,1.7,14.6,A Novel Phospho-switch In The Linker Region Of The Snail Zinc Finger Protein Which Regulates 14-3-3 Association, Dna Binding And Epithelial-mesenchymal Differentiation
-3E37 A 2,50,5.6,0.0053,1.7,8.0,Protein Farnesyltransferase Complexed With Bisubstrate Ethylenediamine Scaffold Inhibitor 5ÿ
-3MZL D 3,35,5.7,0.0236,1.7,5.7,Sec13SEC31 EDGE ELEMENT, LOOP DELETION MUTANTÿ
-3HVE A 2,45,5.4,0.0124,1.7,11.1,Structures Of Spop-Substrate Complexes: Insights Into Molecular Architectures Of Btb-Cul3 Ubiquitin Ligases: Gigaxoninbtb3-Boxÿ
-3MZL F 3,35,5.4,0.0102,1.7,5.7,Sec13SEC31 EDGE ELEMENT, LOOP DELETION MUTANTÿ
-1YZ5 A 1,42,5.3,0.0179,1.7,11.9,The Crystal Structure Of 14-3-3-Sigma At 2.8 Angstrom Resolution
-1MZC A 2,50,5.5,0.0066,1.7,8.0,Co-Crystal Structure Of Human Farnesyltransferase With Farnesyldiphosphate And Inhibitor Compound 33a
-3HXE A 2,44,5.1,0.0368,1.7,11.4,Engineered Rabggtase In Complex With A Peptidomimetic Inhibitor (Compound 32)ÿ
-1D8E A 2,50,5.3,0.0166,1.7,8.0,Zinc-Depleted Ftase Complexed With K-Ras4b Peptide Substrate And Fpp Analog.
-3DSU A 2,44,5.1,0.0352,1.7,11.4,Crystal Structure Of Rabggtase(Delta Lrr; Delta Ig)in Complex With Farnesyl Pyrophosphate
-3PZ3 A 2,44,5.1,0.0339,1.7,11.4,Crystal Structure Of Rabggtase(Delta Lrr; Delta Ig) In Complex With Bms-Analogue 14ÿ
-2H6G A 2,50,5.6,0.0056,1.7,8.0,W102t Protein Farnesyltransferase Mutant Complexed With A Geranylgeranylated Ddptasacvls Peptide Product At 1.85a Resolution
-1FPP A 2,50,5.5,0.0071,1.7,8.0,Protein Farnesyltransferase Complex With Farnesyl Diphosphate
-4DAT A 1,42,5.3,0.0165,1.7,14.3,Structure Of 14-3-3 Sigma In Complex With Padi6 14-3-3 Binding Motif Ii
-1IB1 B 1,46,5.0,0.0472,1.7,8.7,Crystal Structure Of The 14-3-3 Zeta:serotonin N- Acetyltransferase Complex
-1OYZ A 4,48,5.3,0.0194,1.7,12.5,X-Ray Structure Of Yiba_ecoli Northeast Structural Genomics Consortium Target Et31
-3DSW A 3,44,5.2,0.0248,1.7,9.1,Crystal Structure Of Rabggtase(Delta Lrr; Delta Ig)in Complex With Mono-Prenylated Peptide Ser-Cys(Gg)-Ser-Cys Derivated From Rab7
-3T0L A 1,42,5.2,0.0200,1.7,14.3,Small-Molecule Inhibitors Of 14-3-3 Protein-Protein Interactions From Virtual Screening
-2IEJ A 2,50,5.3,0.0174,1.7,8.0,Human Protein Farnesyltransferase Complexed With Inhibitor Compound Stn-48 And Fpp Analog At 1.8a Resolution
-1NL4 A 2,50,5.4,0.0101,1.7,8.0,Crystal Structure Of Rat Farnesyl Transferase In Complex With A Potent Biphenyl Inhibitor
-1S64 K 3,42,5.3,0.0157,1.7,11.9,Rat Protein Geranylgeranyltransferase Type-I Complexed With L-778,123 And A Sulfate Anion
-1JCQ A 2,50,5.6,0.0063,1.7,8.0,Crystal Structure Of Human Protein Farnesyltransferase Complexed With Farnesyl Diphosphate And The Peptidomimetic Inhibitor L-739,750
-1LD8 A 2,50,5.6,0.0056,1.7,8.0,Co-Crystal Structure Of Human Farnesyltransferase With Farnesyldiphosphate And Inhibitor Compound 49
-1O1S A 2,50,5.5,0.0082,1.7,8.0,Structure Of Fpt Bound To Isoprenoid Analog 3b
-3P1O A 1,43,5.3,0.0195,1.7,14.0,Crystal Structure Of Human 14-3-3 Sigma In Complex With Task-3 Peptide And Stabilisator Fusicoccin Aÿ
-4GTO A 2,50,5.4,0.0110,1.7,8.0,Ftase In Complex With Bms Analogue 14
-3E34 A 2,50,5.2,0.0215,1.7,8.0,Protein Farnesyltransferase Complexed With Fpp And Ethylenediamine-Scaffold Inhibitor 10ÿ
-3KSQ A 2,50,5.5,0.0079,1.7,8.0,Discovery Of C-Imidazole Azaheptapyridine Fpt Inhibitorsÿ
-1SA5 A 2,50,5.5,0.0067,1.7,8.0,Rat Protein Farnesyltransferase Complexed With Fpp And Bms- 214662
-1N94 A 2,50,5.1,0.0315,1.7,8.0,Aryl Tetrahydropyridine Inhbitors Of Farnesyltransferase: Glycine, Phenylalanine And Histidine Derivates
-1N4P K 3,38,5.3,0.0155,1.7,13.2,Protein Geranylgeranyltransferase Type-I Complexed With Geranylgeranyl Diphosphate
-1TN8 A 2,50,5.5,0.0087,1.8,8.0,Protein Farnesyltransferase Complexed With A H-Ras Peptide Substrate And A Fpp Analog At 2.25a Resolution
-1N95 A 2,50,5.4,0.0107,1.8,8.0,Aryl Tetrahydrophyridine Inhbitors Of Farnesyltranferase: Glycine, Phenylalanine And Histidine Derivatives
+
