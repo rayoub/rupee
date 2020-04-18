@@ -58,7 +58,7 @@
 3D03 A 1,66,8.3,0.0225,1.9,9.1,1.9a Structure Of Glycerophoshphodiesterase (Gpdq) From Enterobacter Aerogenes
 3EOE D 2,56,9.2,0.0027,1.9,8.9,Crystal Structure Of Pyruvate Kinase From Toxoplasma Gondii, 55.M00007
 3Q7T B ,80,12.0,10e-7.2,1.9,11.2,2.15a Resolution Structure (I41 Form) Of The Chxr Receiver Domain From Chlamydia Trachomatisÿ
-2W2K A 1,68,9.5,0.0217,1.9,4.4,Crystal Structure Of The Apo Forms Of Rhodotorula Graminis D-Mandelate Dehydrogenase At 1.8aÿ
+3Q7T B ,80,12.0,10e-7.2,1.9,11.2,2.15a Resolution Structure (I41 Form) Of The Chxr Receiver Domain From Chlamydia Trachomatisÿ
 1FXW A 1,96,9.1,0.0074,1.9,12.5,Crystal Structure Of The Recombinant Alpha1ALPHA2 Catalytic Heterodimer Of Bovine Brain Platelet-Activating Factor Acetylhydrolase Ib.
 1VYH I 1,98,9.2,0.0056,1.9,11.2,Paf-Ah Holoenzyme: Lis1ALFA2
 3GVX B 1,54,8.2,0.0271,1.9,7.4,Crystal Structure Of Glycerate Dehydrogenase Related Protein From Thermoplasma Acidophilumÿ
@@ -70,11 +70,11 @@
 5AYX A 2,56,9.3,0.0022,2.0,7.1,Crystal Structure Of Human Quinolinate Phosphoribosyltransferase
 3AEK D 2,52,7.4,0.0185,2.0,7.7,Structure Of The Light-Independent Protochlorophyllide Reductase Catalyzing A Key Reduction For Greening In The Darkÿ
 4M37 A 2,45,8.5,0.0401,2.0,15.6,Crystal Structure Of Trypanosoma Brucei Protein Arginine Methyltransferase 7 Complex With Adohcy
-3L0G B 2,61,9.6,0.0135,2.0,3.3,Crystal Structure Of Nicotinate-Nucleotide Pyrophosphorylase From Ehrlichia Chaffeensis At 2.05a Resolutionÿ
 4YNG D 3,59,8.4,0.0384,2.0,11.9,Twinned Pyruvate Kinase From E. Coli In The T-state
+3L0G B 2,61,9.6,0.0135,2.0,3.3,Crystal Structure Of Nicotinate-Nucleotide Pyrophosphorylase From Ehrlichia Chaffeensis At 2.05a Resolutionÿ
 3QQ5 A 2,46,8.4,0.0405,2.0,2.2,Crystal Structure Of The [fefe]-Hydrogenase Maturation Protein Hydfÿ
-2YFQ B 3,61,10.5,0.0007,2.0,3.3,Crystal Structure Of Glutamate Dehydrogenase From Peptoniphilus Asaccharolyticusÿ
 2VT2 A 2,50,9.7,0.0247,2.0,2.0,Structure And Functional Properties Of The Bacillus Subtilis Transcriptional Repressor Rex
+2YFQ B 3,61,10.5,0.0007,2.0,3.3,Crystal Structure Of Glutamate Dehydrogenase From Peptoniphilus Asaccharolyticusÿ
 3WST O 2,43,8.5,0.0441,2.0,11.6,Crystal Structure Of C.elegans Prmt7 In Complex With Sah(p31)
 4M38 B 2,44,8.5,0.0433,2.0,15.9,Crystal Structure Of Trypanosoma Brucei Protein Arginine Methyltransferase 7 Complex With Adohcy And Histone H4 Peptide
 2W2L B 1,69,9.6,0.0152,2.0,5.8,Crystal Structure Of The Holo Forms Of Rhodotorula Graminis D-Mandelate Dehydrogenase At 2.5aÿ
@@ -83,12 +83,12 @@
 3COG C 1,68,11.2,0.0110,2.0,2.9,Crystal Structure Of Human Cystathionase (Cystathionine Gamma Lyase) In Complex With Dl-Propargylglycine
 2PS0 A 2,47,8.8,0.0005,2.0,4.3,Structure And Metal Binding Properties Of Znua, A Periplasmic Zinc Transporter From Escherichia Coli
 1VYH J 1,101,9.2,0.0066,2.0,10.9,Paf-Ah Holoenzyme: Lis1ALFA2
-3UH1 A 3,50,9.3,0.0011,2.0,8.0,Crystal Structure Of Saccharopine Dehydrogenase From Saccharomyces Cerevisiae With Bound Saccharopine And Nadhÿ
 3WST J 2,43,8.5,0.0483,2.0,11.6,Crystal Structure Of C.elegans Prmt7 In Complex With Sah(p31)
+3UH1 A 3,50,9.3,0.0011,2.0,8.0,Crystal Structure Of Saccharopine Dehydrogenase From Saccharomyces Cerevisiae With Bound Saccharopine And Nadhÿ
 2JBM F 2,58,9.6,0.0007,2.0,10.3,Qprtase Structure From Human
 3WST L 2,43,8.5,0.0422,2.0,11.6,Crystal Structure Of C.elegans Prmt7 In Complex With Sah(p31)
-3NV7 A 1,63,7.7,0.0101,2.0,6.3,Crystal Structure Of H.Pylori Phosphopantetheine Adenylyltransferase Mutant I4vN76Yÿ
 1PEY B ,95,13.6,10e-8.2,2.0,4.2,Crystal Structure Of The Response Regulator Spo0f Complexed With Mn2+
+3NV7 A 1,63,7.7,0.0101,2.0,6.3,Crystal Structure Of H.Pylori Phosphopantetheine Adenylyltransferase Mutant I4vN76Yÿ
 3A5D H 1,48,7.8,0.0315,2.0,2.1,Inter-Subunit Interaction And Quaternary Rearrangement Defined By The Central Stalk Of Prokaryotic V1-Atpaseÿ
 3OTK A 2,57,8.4,0.0309,2.0,1.8,Structure And Mechanisim Of Core 2 Beta1,6-N- Acetylglucosaminyltransferase: A Metal-Ion Independent Gt-A Glycosyltransferaseÿ
 3WST C 2,43,8.5,0.0471,2.0,11.6,Crystal Structure Of C.elegans Prmt7 In Complex With Sah(p31)
@@ -118,12 +118,12 @@
 2I91 B 4,68,10.4,0.0005,2.1,8.8,60kda Ro Autoantigen In Complex With A Fragment Of Misfolded Rna
 4GMF C 1,58,10.6,0.0004,2.1,13.8,Apo Structure Of A Thiazolinyl Imine Reductase From Yersinia Enterocolitica (Irp3)
 1VYH Q 1,103,9.2,0.0062,2.1,10.7,Paf-Ah Holoenzyme: Lis1ALFA2
-3WNQ A 2,48,9.4,0.0453,2.1,8.3,Crystal Structure Of (r)-carbonyl Reductase H49a Mutant From Candida Parapsilosis In Complex With 2-hydroxyacetophenone
 5BZA B 2,63,10.2,0.0018,2.1,4.8,Crystal Structure Of Cbsa From Thermotoga Neapolitana
+3WNQ A 2,48,9.4,0.0453,2.1,8.3,Crystal Structure Of (r)-carbonyl Reductase H49a Mutant From Candida Parapsilosis In Complex With 2-hydroxyacetophenone
 1SJC C 3,62,8.0,0.0168,2.1,6.5,X-Ray Structure Of O-Succinylbenzoate Synthase Complexed With N-Succinyl Methionine
 1VYH A 1,103,9.2,0.0064,2.1,10.7,Paf-Ah Holoenzyme: Lis1ALFA2
-1BWP A 1,101,10.1,0.0062,2.1,10.9,Probing The Substrate Specificity Of The Intracellular Brain Platelet-Activating Factor Acetylhydrolase
 3LWB B 1,33,6.8,0.0262,2.1,21.2,Crystal Structure Of Apo D-Alanine:d-Alanine Ligase (Ddl) From Mycobacterium Tuberculosisÿ
+1BWP A 1,101,10.1,0.0062,2.1,10.9,Probing The Substrate Specificity Of The Intracellular Brain Platelet-Activating Factor Acetylhydrolase
 2QZJ C ,98,13.4,10e-6.5,2.1,5.1,Crystal Structure Of A Two-Component Response Regulator From Clostridium Difficile
 3HBN A 1,64,10.6,0.0002,2.1,17.2,Crystal Structure Pseg-Udp Complex From Campylobacter Jejuniÿ
 2A9F A 3,64,8.6,0.0222,2.1,9.4,Crystal Structure Of A Putative Malic Enzyme ((S)- Malate:nad+ Oxidoreductase (Decarboxylating))
@@ -138,18 +138,18 @@
 1MV8 A 2,61,8.7,0.0340,2.1,9.8,1.55 A Crystal Structure Of A Ternary Complex Of Gdp- Mannose Dehydrogenase From Psuedomonas Aeruginosa
 4MDY A 1,53,10.6,0.0217,2.1,7.5,Crystal Structure Of Periplasmic Solute Binding Protein From Mycobacterium Smegmatis Str. Mc2 155
 1UC9 B 1,58,8.1,0.0321,2.1,13.8,Crystal Structure Of A Lysine Biosynthesis Enzyme, Lysx, From Thermus Thermophilus Hb8
-3KBO D 1,61,9.5,0.0027,2.1,6.6,2.14 Angstrom Crystal Structure Of Putative Oxidoreductase (Ycdw) From Salmonella Typhimurium In Complex With Nadpÿ
 2QAI A 1,53,7.9,0.0272,2.1,13.2,Crystal Structure Of The V-Type Atp Synthase Subunit F From Pyrococcus Furiosus. Nesg Target Pfr7
+3KBO D 1,61,9.5,0.0027,2.1,6.6,2.14 Angstrom Crystal Structure Of Putative Oxidoreductase (Ycdw) From Salmonella Typhimurium In Complex With Nadpÿ
 3GGO B 1,79,11.9,0.0003,2.1,7.6,Crystal Structure Of Prephenate Dehydrogenase From A. Aeolicus With Hpp And Nadhÿ
 2PJU A 2,52,8.3,0.0198,2.1,15.4,Crystal Structure Of Propionate Catabolism Operon Regulatory Protein Prpr
 1B74 A 2,52,8.6,0.0048,2.1,13.5,Glutamate Racemase From Aquifex Pyrophilus
 2QZJ A ,96,13.1,10e-6.1,2.1,4.2,Crystal Structure Of A Two-Component Response Regulator From Clostridium Difficile
 4BF5 A 2,57,7.4,0.0446,2.1,8.8,Structure Of Broad Spectrum Racemase From Aeromonas Hydrophila
 3GGP C 1,74,11.7,0.0006,2.1,8.1,Crystal Structure Of Prephenate Dehydrogenase From A. Aeolicus In Complex With Hydroxyphenyl Propionate And Nad+ÿ
-2VOS A 2,83,10.9,0.0011,2.1,6.0,Mycobacterium Tuberculosis Folylpolyglutamate Synthase Complexed With Adp
 2VOR A 2,83,11.1,0.0006,2.1,7.2,Crystal Structures Of Mycobacterium Tuberculosis Folylpolyglutamate Synthase Complexed With Adp And Amppcp
-1SJB C 3,62,8.0,0.0184,2.1,6.5,X-Ray Structure Of O-Succinylbenzoate Synthase Complexed With O-Succinylbenzoic Acid
+2VOS A 2,83,10.9,0.0011,2.1,6.0,Mycobacterium Tuberculosis Folylpolyglutamate Synthase Complexed With Adp
 3R7D B 2,63,9.2,0.0081,2.1,9.5,Crystal Structure Of Unliganded Aspartate Transcarbamoylase From Bacillus Subtilisÿ
+1SJB C 3,62,8.0,0.0184,2.1,6.5,X-Ray Structure Of O-Succinylbenzoate Synthase Complexed With O-Succinylbenzoic Acid
 2I91 A 4,72,10.4,0.0005,2.1,8.3,60kda Ro Autoantigen In Complex With A Fragment Of Misfolded Rna
 3HDG B ,92,12.0,10e-5.4,2.1,13.0,Crystal Structure Of The N-Terminal Domain Of An Uncharacterized Protein (Ws1339) From Wolinella Succinogenesÿ
 2PJU D 2,52,8.4,0.0104,2.1,15.4,Crystal Structure Of Propionate Catabolism Operon Regulatory Protein Prpr
@@ -170,8 +170,8 @@
 2XGM A 2,64,9.6,0.0470,2.1,14.1,Substrate And Product Analogues As Human O-Glcnac Transferase Inhibitorsÿ
 1YVP B 4,72,10.0,0.0127,2.1,8.3,Ro Autoantigen Complexed With Rnasÿ
 1VYH M 1,106,9.2,0.0062,2.1,10.4,Paf-Ah Holoenzyme: Lis1ALFA2
-4JJF B 1,73,10.9,0.0079,2.1,8.2,Crystal Structure Of Fe-hydrogenase From Methanothermobacter Marburgensis In Complex With 2-naphthylisocyanide
 3DT6 A 1,104,9.7,0.0219,2.1,12.5,Crystal Structure Of Bovin Brain Platelet Activating Factor Acetylhydrolase Covalently Inhibited By Paraoxonÿ
+4JJF B 1,73,10.9,0.0079,2.1,8.2,Crystal Structure Of Fe-hydrogenase From Methanothermobacter Marburgensis In Complex With 2-naphthylisocyanide
 3C85 D ,72,9.8,0.0167,2.1,9.7,Crystal Structure Of Trka Domain Of Putative Glutathione- Regulated Potassium-Efflux Kefb From Vibrio Parahaemolyticus
 2AYX A 1,59,8.9,0.0017,2.1,8.5,Solution Structure Of The E.Coli Rcsc C-Terminus (Residues 700-949) Containing Linker Region And Phosphoreceiver Domain
 4LGL A 5,60,9.4,0.0022,2.1,8.3,Crystal Structure Of Glycine Decarboxylase P-protein From Synechocystis Sp. Pcc 6803, Apo Form
