@@ -6,8 +6,8 @@ source('scoring_rupee.R')
 
 grid_arrange_shared_legend <-
   function(...,
-           ncol = 2,
-           nrow = 1,
+           ncol = 2, 
+           nrow = 1, 
            position = c("bottom", "right")) {
     
     plots <- list(...)
@@ -36,18 +36,24 @@ grid_arrange_shared_legend <-
     )
   }
 
-plot_1 <- get_scoring_plot(
-        'scop_d360 benchmark',
+plot1 <- get_scoring_plot(
+        'All vs. Top (benchmark scop_d360)',
         'scoring_rupee_scop_d360.txt',
-        c(0.85, 1.00)
+        c('RUPEE All-Aligned','RUPEE Top-Aligned'),
+        c(1, 100),
+        c(1,10,20,30,40,50,60,70,80,90,100),
+        c(0.85, 1.0)
 )
-plot_2 <- get_scoring_plot(
-        'casp_d250 benchmark',
-        'scoring_rupee_casp_d250.txt',
-        c(0.40, 0.55)
+plot2 <- get_scoring_plot(
+        'All vs. Top (benchmark casp_d250)',
+        'scoring_rupee_casp_d250.txt', 
+        c('RUPEE All-Aligned','RUPEE Top-Aligned'),
+        c(1, 100),
+        c(1,10,20,30,40,50,60,70,80,90,100),
+        c(0.4, 0.55)
 )
 
-combined <- grid_arrange_shared_legend(plot_1, plot_2)
+combined <- grid_arrange_shared_legend(plot1, plot2)
 
-ggsave('combined_scoring_rupee.eps', plot = combined, width = 5.2, height = 2.25, dpi = 300)
+ggsave('combined_scoring_rupee.eps', plot = combined, width = 7.5, height = 3.25, dpi = 300)
 

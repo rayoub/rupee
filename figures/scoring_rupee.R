@@ -5,14 +5,13 @@ library(plyr)
 # clear environment
 rm(list = ls())
 
-get_scoring_plot <- function(p_title, p_file, p_limits) {
+get_scoring_plot <- function(p_title, p_file, p_levels, p_xlimits, p_xbreaks, p_ylimits) {
 
     # read in data files
     df <- read.csv(p_file)
-    refs <- read.csv('scoring_refs.txt')
 
     # reorder factor levels 
-    df$app <- factor(df$app, levels = c('RUPEE All-Aligned', 'RUPEE Top-Aligned'))
+    df$app <- factor(df$app, levels = p_levels)
 
     # *** plot
 
@@ -24,38 +23,45 @@ get_scoring_plot <- function(p_title, p_file, p_limits) {
         geom_line(
             size = rel(0.5)
         ) + 
+        geom_hline(
+            yintercept = 0.50,
+            colour = 'grey50', 
+            size = rel(0.15)
+        ) +
+        geom_hline(
+            yintercept = 0.17,
+            colour = 'grey50', 
+            size = rel(0.15)
+        ) + 
 
         # scales        
         scale_color_manual(
-            values = c("#e41a1c", "#377eb8"),
+            values = c("#e41a1c","#377eb8"),
             labels = c("RUPEE All-Aligned","RUPEE Top-Aligned")
         ) + 
         scale_linetype_manual(
-            values = c("solid", "dashed"),
+            values = c("solid","dashed"),
             labels = c("RUPEE All-Aligned","RUPEE Top-Aligned")
         ) + 
         scale_x_continuous(
-            limits = c(1,100),
-            breaks = c(1, seq(10, 100, by = 10))
+            limits = p_xlimits,
+            breaks = p_xbreaks
         ) + 
         scale_y_continuous(
-            limits = p_limits
+            limits = p_ylimits
         ) + 
 
         # guides
         guides(linetype = guide_legend(override.aes = list(size = rel(0.5)))) + 
 
-        # axis labels
-        labs(
-             x = 'rank', 
-             y = 'value'
-        ) +
+        # axis label
+        ylab('TM-score (avg)') + 
 
         # title
         ggtitle(p_title)
 
     # *** theme
-
+    
     theme <-  
 
         # default theme 
@@ -70,7 +76,8 @@ get_scoring_plot <- function(p_title, p_file, p_limits) {
             panel.spacing = unit(4,'mm'),
             
             axis.text = element_text(size = 7), 
-            axis.title = element_blank(),
+            axis.title.x = element_blank(), 
+            axis.title.y = element_text(size = 8),
             
             legend.text = element_text(size = 7, margin = margin(0,10,0,0)),
             legend.title = element_blank(), 
@@ -79,8 +86,8 @@ get_scoring_plot <- function(p_title, p_file, p_limits) {
             legend.spacing = unit(0,'mm')
         ) 
 
-    theme <- theme + theme(strip.text = element_text(size = 8))
-
     plot + theme
 }
+
+
 
