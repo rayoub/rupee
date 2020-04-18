@@ -19,8 +19,6 @@
 1Q4O A ,41,7.0,0.0010,2.0,14.6,The Structure Of The Polo Box Domain Of Human Plk1
 1Q4O A 1,41,7.0,10e-5.1,2.0,14.6,The Structure Of The Polo Box Domain Of Human Plk1
 1CT9 D 1,34,7.0,0.0026,2.3,0.0,Crystal Structure Of Asparagine Synthetase B From Escherichia Coli
-5DMV C ,39,7.0,0.0010,2.3,0.0,Polo-box Domain Of Mouse Polo-like Kinase 1 Complexed With Emi2 (146- 177)
-5DMV C 1,39,7.0,10e-5.1,2.3,0.0,Polo-box Domain Of Mouse Polo-like Kinase 1 Complexed With Emi2 (146- 177)
 1VAX D ,43,7.0,0.0111,2.1,4.7,Crystal Structure Of Uricase From Arthrobacter Globiformis
 2POR A ,34,7.0,0.0436,1.8,2.9,Structure Of Porin Refined At 1.8 Angstroms Resolution
 3BZI A ,35,7.0,0.0010,1.9,5.7,Molecular And Structural Basis Of Polo-Like Kinase 1 Substrate Recognition: Implications In Centrosomal Localization
@@ -30,24 +28,26 @@
 2YZB E ,45,7.0,0.0080,2.1,4.4,Crystal Structure Of Uricase From Arthrobacter Globiformis In Complex With Uric Acid (Substrate)
 2YZC B ,46,7.0,0.0080,2.9,4.3,Crystal Structure Of Uricase From Arthrobacter Globiformis In Complex With Allantoate
 2YZC D ,43,7.0,0.0111,2.1,4.7,Crystal Structure Of Uricase From Arthrobacter Globiformis In Complex With Allantoate
+3A1Z C ,38,7.0,0.0080,3.2,7.9,Crystal Structure Of Juvenile Hormone Binding Protein From Sÿ
+3A1Z A ,34,7.0,0.0080,3.0,5.9,Crystal Structure Of Juvenile Hormone Binding Protein From Sÿ
 2YZC G ,45,7.0,0.0111,2.8,4.4,Crystal Structure Of Uricase From Arthrobacter Globiformis In Complex With Allantoate
 2YZE D ,43,7.0,0.0111,2.1,4.7,Crystal Structure Of Uricase From Arthrobacter Globiformis
 3CKG A ,33,7.0,0.0201,1.6,6.1,The Crystal Structure Of Ospa Deletion Mutantÿ
-3A1Z C ,38,7.0,0.0080,3.2,7.9,Crystal Structure Of Juvenile Hormone Binding Protein From Sÿ
-3A1Z A ,34,7.0,0.0080,3.0,5.9,Crystal Structure Of Juvenile Hormone Binding Protein From Sÿ
 2I5Z O ,43,7.0,0.0264,2.4,4.7,The Crystal Structure Of Ospa Mutant
 4E9D A ,34,7.0,0.0010,2.2,0.0,The Structure Of The Polo-Box Domain (Pbd) Of Polo-Like Kinase 1 (Plk1) In Complex With 3-(1-Benzothiophen-2-Yl)propanoyl-Derivatized Dpplhspta Peptide
 4E9D A 1,34,7.0,10e-5.1,2.2,0.0,The Structure Of The Polo-Box Domain (Pbd) Of Polo-Like Kinase 1 (Plk1) In Complex With 3-(1-Benzothiophen-2-Yl)propanoyl-Derivatized Dpplhspta Peptide
-2NS9 B ,45,7.0,0.0010,3.3,2.2,Crystal Structure Of Hypothetical Protein Ape2225 From Aeropyrum Pernix K1
-2NS9 B 1,45,7.0,0.0010,3.3,2.2,Crystal Structure Of Hypothetical Protein Ape2225 From Aeropyrum Pernix K1
 1FJ1 E ,41,7.0,0.0264,2.1,4.9,Lyme Disease Antigen Ospa In Complex With Neutralizing Antibody Fab La-2
 1FJ1 F ,41,7.0,0.0264,2.1,4.9,Lyme Disease Antigen Ospa In Complex With Neutralizing Antibody Fab La-2
+2NS9 B ,45,7.0,0.0010,3.3,2.2,Crystal Structure Of Hypothetical Protein Ape2225 From Aeropyrum Pernix K1
+2NS9 B 1,45,7.0,0.0010,3.3,2.2,Crystal Structure Of Hypothetical Protein Ape2225 From Aeropyrum Pernix K1
 2RQF A ,36,7.0,0.0039,2.4,8.3,Solution Structure Of Juvenile Hormone Binding Protein From In Complex With Jh Iiiÿ
 4BXR A ,36,7.0,0.0201,1.9,5.6,Structure Of The Wild-type Tcp10 Domain Of Danio Rerio Cpap In Complex With A Peptide Of Danio Rerio Stil
 4N7V A ,34,7.0,0.0057,1.7,2.9,Crystal Structure Of Human Plk4 Cryptic Polo Box (cpb) In Complex With A Cep152 N-terminal Fragment
 4N7V A 2,34,7.0,10e-4.6,1.7,2.9,Crystal Structure Of Human Plk4 Cryptic Polo Box (cpb) In Complex With A Cep152 N-terminal Fragment
 4WHK A 1,35,7.0,10e-5.1,1.9,5.7,A New Class Of Peptidomimetics Targeting The Polo-box Domain Of Polo- Like Kinase 1
 4WHK A ,35,7.0,0.0010,1.9,5.7,A New Class Of Peptidomimetics Targeting The Polo-box Domain Of Polo- Like Kinase 1
+5DMV C ,39,7.0,0.0010,2.3,0.0,Polo-box Domain Of Mouse Polo-like Kinase 1 Complexed With Emi2 (146- 177)
+5DMV C 1,39,7.0,10e-5.1,2.3,0.0,Polo-box Domain Of Mouse Polo-like Kinase 1 Complexed With Emi2 (146- 177)
 2YZE B ,43,7.0,0.0113,2.1,4.7,Crystal Structure Of Uricase From Arthrobacter Globiformis
 1WS2 D ,47,7.0,0.0113,2.4,2.1,Urate Oxidase From Aspergillus Flavus Complexed With 5,6- Diaminouracil
 2YZD A ,45,7.0,0.0085,2.1,4.4,Crystal Structure Of Uricase From Arthrobacter Globiformis In Complex With 8-Azaxanthin (Inhibitor)
@@ -60,15 +60,15 @@
 2YZB A ,45,7.0,0.0086,2.1,4.4,Crystal Structure Of Uricase From Arthrobacter Globiformis In Complex With Uric Acid (Substrate)
 1XXJ B ,48,7.0,0.0120,2.4,2.1,Urate Oxidase From Aspergillus Flavus Complexed With 5- Amino 6-Nitro Uracil
 1VAY G ,45,7.0,0.0088,2.1,4.4,Crystal Structure Of Uricase From Arthrobacter Globiformis With Inhibitor 8-Azaxanthine
+2YZC E ,48,7.0,0.0087,2.6,6.2,Crystal Structure Of Uricase From Arthrobacter Globiformis In Complex With Allantoate
 2YZY A ,41,7.0,0.0043,2.8,7.3,Crystal Structure Of Uncharacterized Conserved Protein From Thermus Thermophilus Hb8
 2YZY A 2,41,7.0,10e-4.1,2.8,7.3,Crystal Structure Of Uncharacterized Conserved Protein From Thermus Thermophilus Hb8
-2YZC E ,48,7.0,0.0087,2.6,6.2,Crystal Structure Of Uricase From Arthrobacter Globiformis In Complex With Allantoate
 2YZE G ,41,7.0,0.0122,2.3,4.9,Crystal Structure Of Uricase From Arthrobacter Globiformis
-4HCO A ,41,7.0,0.0011,2.0,14.6,Human Plk1-Pbd In Complex With Thymoquinone At The Phophopeptide Binding Site
-4HCO A 1,41,7.0,10e-5.1,2.0,14.6,Human Plk1-Pbd In Complex With Thymoquinone At The Phophopeptide Binding Site
 1VAX E ,46,7.0,0.0089,2.9,4.3,Crystal Structure Of Uricase From Arthrobacter Globiformis
 1VAX A ,45,7.0,0.0063,2.1,4.4,Crystal Structure Of Uricase From Arthrobacter Globiformis
 1CT9 A 1,34,7.0,0.0029,2.3,0.0,Crystal Structure Of Asparagine Synthetase B From Escherichia Coli
+4HCO A ,41,7.0,0.0011,2.0,14.6,Human Plk1-Pbd In Complex With Thymoquinone At The Phophopeptide Binding Site
+4HCO A 1,41,7.0,10e-5.1,2.0,14.6,Human Plk1-Pbd In Complex With Thymoquinone At The Phophopeptide Binding Site
 4MPZ A ,33,7.0,0.0043,2.3,6.1,Crystal Structure Of Tcp10c Domain Of Drosophila Melanogaster Sas-4
 4LD1 A ,34,7.0,0.0090,2.2,2.9,Structural Analysis Of The Microcephaly Protein Cpap G-box Domain Suggests A Role In Centriole Elongation
 4B2Z B ,50,7.0,0.0125,2.3,8.0,Structure Of Osh6 In Complex With Phosphatidylserine
@@ -83,41 +83,41 @@
 4B2Z A 1,48,7.0,0.0127,2.3,8.3,Structure Of Osh6 In Complex With Phosphatidylserine
 4PH7 B ,49,7.0,0.0176,2.2,8.2,Structure Of Osh6p In Complex With Phosphatidylinositol 4-phosphate
 4PH7 B 1,49,7.0,0.0176,2.3,6.1,Structure Of Osh6p In Complex With Phosphatidylinositol 4-phosphate
-1WS2 C ,48,7.0,0.0066,2.4,2.1,Urate Oxidase From Aspergillus Flavus Complexed With 5,6- Diaminouracil
 2YZC A ,45,7.0,0.0130,2.1,4.4,Crystal Structure Of Uricase From Arthrobacter Globiformis In Complex With Allantoate
+1WS2 C ,48,7.0,0.0066,2.4,2.1,Urate Oxidase From Aspergillus Flavus Complexed With 5,6- Diaminouracil
 3CKU A ,47,7.0,0.0094,2.4,2.1,Urate Oxidase From Aspergillus Flavus Complexed With Its Inhibitor 8-Azaxanthin And Chloride
 4NKB A ,38,7.0,0.0012,1.9,13.2,Crystal Structure Of The Cryptic Polo Box (cpb)of Zyg-1
 4NKB A 2,38,7.0,10e-5.0,1.9,13.2,Crystal Structure Of The Cryptic Polo Box (cpb)of Zyg-1
+4BXR B ,35,7.0,0.0241,1.9,8.6,Structure Of The Wild-type Tcp10 Domain Of Danio Rerio Cpap In Complex With A Peptide Of Danio Rerio Stil
 4RCP A ,35,7.0,0.0012,1.9,5.7,Crystal Structure Of Plk1 Polo-box Domain In Complex With Pl-2
 4RCP A 1,35,7.0,10e-5.0,1.9,5.7,Crystal Structure Of Plk1 Polo-box Domain In Complex With Pl-2
-4BXR B ,35,7.0,0.0241,1.9,8.6,Structure Of The Wild-type Tcp10 Domain Of Danio Rerio Cpap In Complex With A Peptide Of Danio Rerio Stil
-3HIK A ,35,7.0,0.0012,1.9,5.7,Structure Of Human Plk1-Pbd In Complex With Plhsptÿ
-3HIK A 1,35,7.0,10e-5.0,1.9,5.7,Structure Of Human Plk1-Pbd In Complex With Plhsptÿ
 4E9C A ,35,7.0,0.0012,1.9,5.7,The Structure Of The Polo-Box Domain (Pbd) Of Polo-Like Kinase 1 (Plk1) In Complex With Ldpplhspta Phosphopeptide
 4E9C A 1,39,7.0,10e-5.0,2.3,0.0,The Structure Of The Polo-Box Domain (Pbd) Of Polo-Like Kinase 1 (Plk1) In Complex With Ldpplhspta Phosphopeptide
-3HIH B ,41,7.0,0.0012,2.1,14.6,Structure Of Human Plk1-Pbd With Glycerol And Sulfate In The Phophopeptide Binding Siteÿ
-3HIH B 1,41,7.0,10e-5.0,2.1,14.6,Structure Of Human Plk1-Pbd With Glycerol And Sulfate In The Phophopeptide Binding Siteÿ
+3HIK A ,35,7.0,0.0012,1.9,5.7,Structure Of Human Plk1-Pbd In Complex With Plhsptÿ
+3HIK A 1,35,7.0,10e-5.0,1.9,5.7,Structure Of Human Plk1-Pbd In Complex With Plhsptÿ
 2YZE H ,43,7.0,0.0097,2.1,4.7,Crystal Structure Of Uricase From Arthrobacter Globiformis
 2YZE E ,45,7.0,0.0097,2.1,4.4,Crystal Structure Of Uricase From Arthrobacter Globiformis
+3HIH B ,41,7.0,0.0012,2.1,14.6,Structure Of Human Plk1-Pbd With Glycerol And Sulfate In The Phophopeptide Binding Siteÿ
+3HIH B 1,41,7.0,10e-5.0,2.1,14.6,Structure Of Human Plk1-Pbd With Glycerol And Sulfate In The Phophopeptide Binding Siteÿ
+4LZF A ,34,7.0,0.0098,1.9,2.9,A Novel Domain In The Microcephaly Protein Cpap Suggests A Role In Centriole Architecture
+1VAY B ,43,7.0,0.0135,2.1,4.7,Crystal Structure Of Uricase From Arthrobacter Globiformis With Inhibitor 8-Azaxanthine
 3P37 C ,41,7.0,0.0013,2.1,14.6,Polo-Like Kinase I Polo-Box Domain In Complex With Fdpplhspta Phosphopeptide From Pbip1ÿ
 3P37 C 1,41,7.0,10e-5.0,2.1,14.6,Polo-Like Kinase I Polo-Box Domain In Complex With Fdpplhspta Phosphopeptide From Pbip1ÿ
-1VAY B ,43,7.0,0.0135,2.1,4.7,Crystal Structure Of Uricase From Arthrobacter Globiformis With Inhibitor 8-Azaxanthine
-4LZF A ,34,7.0,0.0098,1.9,2.9,A Novel Domain In The Microcephaly Protein Cpap Suggests A Role In Centriole Architecture
+1OSP O ,44,7.0,0.0327,2.5,2.3,Crystal Structure Of Outer Surface Protein A Of Borrelia Burgdorferi Complexed With A Murine Monoclonal Antibody Fab
 4LKM C ,39,7.0,0.0013,2.3,0.0,Crystal Structure Of Plk1 Polo-box Domain In Complex With Pl-74
 4LKM C 1,39,7.0,10e-5.0,2.3,0.0,Crystal Structure Of Plk1 Polo-box Domain In Complex With Pl-74
-1OSP O ,44,7.0,0.0327,2.5,2.3,Crystal Structure Of Outer Surface Protein A Of Borrelia Burgdorferi Complexed With A Murine Monoclonal Antibody Fab
 3C5L A ,39,7.0,0.0013,2.3,0.0,Polo-Like Kinase 1 Polo Box Domain In Complex With Pphspt Peptideÿ
 3C5L A 1,35,7.0,10e-5.0,1.9,5.7,Polo-Like Kinase 1 Polo Box Domain In Complex With Pphspt Peptideÿ
 2YZD H ,45,7.0,0.0102,2.4,4.4,Crystal Structure Of Uricase From Arthrobacter Globiformis In Complex With 8-Azaxanthin (Inhibitor)
 4PH7 D ,50,7.0,0.0192,2.2,8.0,Structure Of Osh6p In Complex With Phosphatidylinositol 4-phosphate
 4PH7 D 1,49,7.0,0.0192,2.2,8.2,Structure Of Osh6p In Complex With Phosphatidylinositol 4-phosphate
+4BY2 C ,33,7.0,0.0050,2.2,6.1,Sas-4 (dcpap) Tcp Domain In Complex With A Proline Rich Motif Of Ana2 (dstil) Of Drosophila Melanogaster
 4N7Z A ,35,7.0,0.0103,1.7,2.9,Crystal Structure Of Human Plk4 Cryptic Polo Box (cpb) In Complex With A Cep192 N-terminal Fragment
 4N7Z A 2,35,7.0,10e-4.5,1.7,2.9,Crystal Structure Of Human Plk4 Cryptic Polo Box (cpb) In Complex With A Cep192 N-terminal Fragment
-4BY2 C ,33,7.0,0.0050,2.2,6.1,Sas-4 (dcpap) Tcp Domain In Complex With A Proline Rich Motif Of Ana2 (dstil) Of Drosophila Melanogaster
-1VAY F ,45,7.0,0.0103,2.1,4.4,Crystal Structure Of Uricase From Arthrobacter Globiformis With Inhibitor 8-Azaxanthine
 1XXJ C 1,44,7.0,0.0073,2.2,6.8,Urate Oxidase From Aspergillus Flavus Complexed With 5- Amino 6-Nitro Uracil
-2E0W A ,36,7.0,0.0443,2.6,8.3,T391a Precursor Mutant Protein Of Gamma- Glutamyltranspeptidase From Escherichia Coli
-2E0W A 1,36,7.0,0.0144,2.6,8.3,T391a Precursor Mutant Protein Of Gamma- Glutamyltranspeptidase From Escherichia Coli
+1VAY F ,45,7.0,0.0103,2.1,4.4,Crystal Structure Of Uricase From Arthrobacter Globiformis With Inhibitor 8-Azaxanthine
+3P35 C ,35,7.0,0.0013,1.9,5.7,Polo-Like Kinase I Polo-Box Domain In Complex With Mqspspl Phosphopeptideÿ
+3P35 C 1,35,7.0,10e-5.0,1.9,5.7,Polo-Like Kinase I Polo-Box Domain In Complex With Mqspspl Phosphopeptideÿ
 1VAX H ,43,7.0,0.0051,2.1,4.7,Crystal Structure Of Uricase From Arthrobacter Globiformis
 2E0W A ,36,7.0,0.0443,2.6,8.3,T391a Precursor Mutant Protein Of Gamma- Glutamyltranspeptidase From Escherichia Coli
 2E0W A 1,36,7.0,0.0144,2.6,8.3,T391a Precursor Mutant Protein Of Gamma- Glutamyltranspeptidase From Escherichia Coli
@@ -125,18 +125,18 @@
 4X9R A 1,36,7.0,10e-5.0,1.9,5.6,Plk-1 Polo-box Domain In Complex With Bioactive Imidazolium-containing Phosphopeptide Macrocycle 3b
 2YZC H ,45,7.0,0.0106,2.4,4.4,Crystal Structure Of Uricase From Arthrobacter Globiformis In Complex With Allantoate
 1VAY H ,45,7.0,0.0148,2.1,4.4,Crystal Structure Of Uricase From Arthrobacter Globiformis With Inhibitor 8-Azaxanthine
-3UTM B 2,22,7.0,10e-4.4,2.7,4.5,Crystal Structure Of A Mouse Tankyrase-Axin Complexÿ
+3UTM B 2,22,7.0,10e-4.4,2.7,4.5,Crystal Structure Of A Mouse Tankyrase-Axin Complexя
 5DNJ A ,35,7.0,0.0014,1.9,5.7,Mouse Polo-box Domain And Peptide Analog 702
 5DNJ A 1,35,7.0,10e-5.0,1.9,5.7,Mouse Polo-box Domain And Peptide Analog 702
 2R1A H ,34,7.0,0.0076,2.3,2.9,Crystal Structure Of The Periplasmic Lipopolysaccharide Transport Protein Lpta (Yhbn), Trigonal Form
-3AOT A ,37,7.0,0.0110,3.1,8.1,Crystal Structure Of Juvenile Hormone Binding Protein From Silkworm In Its Apo Formÿ
+3AOT A ,37,7.0,0.0110,3.1,8.1,Crystal Structure Of Juvenile Hormone Binding Protein From Silkworm In Its Apo Formя
 4PH7 C ,48,7.0,0.0205,2.1,6.2,Structure Of Osh6p In Complex With Phosphatidylinositol 4-phosphate
 4PH7 C 1,51,7.0,0.0205,2.3,7.8,Structure Of Osh6p In Complex With Phosphatidylinositol 4-phosphate
 2YZB B ,43,7.0,0.0151,2.1,4.7,Crystal Structure Of Uricase From Arthrobacter Globiformis In Complex With Uric Acid (Substrate)
 1VAX G ,45,7.0,0.0153,2.1,4.4,Crystal Structure Of Uricase From Arthrobacter Globiformis
 2YZD B ,45,7.0,0.0155,2.1,4.4,Crystal Structure Of Uricase From Arthrobacter Globiformis In Complex With 8-Azaxanthin (Inhibitor)
 2YZB G ,45,7.0,0.0156,2.1,4.4,Crystal Structure Of Uricase From Arthrobacter Globiformis In Complex With Uric Acid (Substrate)
-3A1Z D ,37,7.0,0.0112,2.7,8.1,Crystal Structure Of Juvenile Hormone Binding Protein From Sÿ
+3A1Z D ,37,7.0,0.0112,2.7,8.1,Crystal Structure Of Juvenile Hormone Binding Protein From Sя
 4X9W A ,35,7.0,0.0014,1.9,5.7,Plk-1 Polo-box Domain In Complex With Bioactive Imidazolium-containing Phosphopeptide Macrocycle 4c
 4X9W A 1,35,7.0,10e-5.0,1.9,5.7,Plk-1 Polo-box Domain In Complex With Bioactive Imidazolium-containing Phosphopeptide Macrocycle 4c
 4FSK A ,48,7.0,0.0157,2.4,2.1,Urate Oxidase-azide Complex In Anaerobic Conditions
@@ -153,21 +153,21 @@
 1WS2 A ,45,7.0,0.0166,2.0,2.2,Urate Oxidase From Aspergillus Flavus Complexed With 5,6- Diaminouracil
 2YZD G ,45,7.0,0.0168,2.1,4.4,Crystal Structure Of Uricase From Arthrobacter Globiformis In Complex With 8-Azaxanthin (Inhibitor)
 1WS3 D ,47,7.0,0.0085,2.4,2.1,Urate Oxidase From Aspergillus Flavus Complexed With Uracil
-3P37 A ,41,7.0,0.0016,2.0,14.6,Polo-Like Kinase I Polo-Box Domain In Complex With Fdpplhspta Phosphopeptide From Pbip1ÿ
-3P37 A 1,41,7.0,10e-4.9,2.0,14.6,Polo-Like Kinase I Polo-Box Domain In Complex With Fdpplhspta Phosphopeptide From Pbip1ÿ
+3P37 A ,41,7.0,0.0016,2.0,14.6,Polo-Like Kinase I Polo-Box Domain In Complex With Fdpplhspta Phosphopeptide From Pbip1я
+3P37 A 1,41,7.0,10e-4.9,2.0,14.6,Polo-Like Kinase I Polo-Box Domain In Complex With Fdpplhspta Phosphopeptide From Pbip1я
 2R1A E ,33,7.0,0.0089,2.3,9.1,Crystal Structure Of The Periplasmic Lipopolysaccharide Transport Protein Lpta (Yhbn), Trigonal Form
-3P2W A ,35,7.0,0.0016,1.9,5.7,Unliganded Form Of Polo-Like Kinase I Polo-Box Domainÿ
-3P2W A 1,35,7.0,10e-4.9,1.9,5.7,Unliganded Form Of Polo-Like Kinase I Polo-Box Domainÿ
+3P2W A ,35,7.0,0.0016,1.9,5.7,Unliganded Form Of Polo-Like Kinase I Polo-Box Domainя
+3P2W A 1,35,7.0,10e-4.9,1.9,5.7,Unliganded Form Of Polo-Like Kinase I Polo-Box Domainя
 1XXJ D ,48,7.0,0.0091,2.4,2.1,Urate Oxidase From Aspergillus Flavus Complexed With 5- Amino 6-Nitro Uracil
-3TFZ D ,48,7.0,0.0005,2.6,6.2,Crystal Structure Of Zhui AromataseCYCLASE FROM STREPTOMCYES SP. R1128ÿ
-3HIK A 2,41,6.9,10e-4.9,2.2,2.4,Structure Of Human Plk1-Pbd In Complex With Plhsptÿ
-3HIK A ,41,6.9,0.0017,2.2,2.4,Structure Of Human Plk1-Pbd In Complex With Plhsptÿ
-3A1Z B ,33,6.9,0.0133,3.0,6.1,Crystal Structure Of Juvenile Hormone Binding Protein From Sÿ
+3TFZ D ,48,7.0,0.0005,2.6,6.2,Crystal Structure Of Zhui AromataseCYCLASE FROM STREPTOMCYES SP. R1128я
+3HIK A 2,41,6.9,10e-4.9,2.2,2.4,Structure Of Human Plk1-Pbd In Complex With Plhsptя
+3HIK A ,41,6.9,0.0017,2.2,2.4,Structure Of Human Plk1-Pbd In Complex With Plhsptя
+3A1Z B ,33,6.9,0.0133,3.0,6.1,Crystal Structure Of Juvenile Hormone Binding Protein From Sя
 3BJP A ,47,6.9,0.0094,2.4,2.1,Urate Oxidase Cyanide Uric Acid Ternary Complex
 4BXQ A ,34,6.9,0.0249,1.8,8.8,Structure Of The E1021v Mutant Of The Tcp10 Domain Of Danio Rerio Cpap
 4Y1Q K ,30,6.9,0.0043,2.0,3.3,Crystal Structure Of Hasa Mutant Y75a Monomer From Yersinia Pseudotuberculosis
-3P2Z A ,39,6.9,0.0017,2.3,0.0,Polo-Like Kinase I Polo-Box Domain In Complex With Plhspta Phosphopeptide From Pbip1ÿ
-3P2Z A 1,39,6.9,10e-4.9,2.3,0.0,Polo-Like Kinase I Polo-Box Domain In Complex With Plhspta Phosphopeptide From Pbip1ÿ
+3P2Z A ,39,6.9,0.0017,2.3,0.0,Polo-Like Kinase I Polo-Box Domain In Complex With Plhspta Phosphopeptide From Pbip1я
+3P2Z A 1,39,6.9,10e-4.9,2.3,0.0,Polo-Like Kinase I Polo-Box Domain In Complex With Plhspta Phosphopeptide From Pbip1я
 1UMW B ,35,6.9,0.0017,1.9,5.7,Structure Of A Human Plk1 Polo-Box DomainPHOSPHOPEPTIDE Complex
 1UMW B 1,35,6.9,10e-4.9,1.9,5.7,Structure Of A Human Plk1 Polo-Box DomainPHOSPHOPEPTIDE Complex
 2OL8 O ,40,6.9,0.0444,2.1,7.5,The Crystal Structure Of Ospa Mutant

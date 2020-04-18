@@ -15,8 +15,8 @@
 2JKT A ,122,10.5,0.0302,3.9,13.1,Ap2 Clathrin Adaptor Core With Cd4 Dileucine Peptide Rm( Phosphos)eikrllse Q To E Mutant
 3IYV B 18,104,10.4,10e-7.3,2.9,7.7,Clathrin D6 Coatÿ
 3IYV I 18,115,10.4,10e-7.3,3.1,7.0,Clathrin D6 Coatÿ
-3IYV C 18,115,10.4,10e-7.3,3.3,7.8,Clathrin D6 Coatÿ
 3IYV F 19,107,10.4,10e-7.3,3.0,7.5,Clathrin D6 Coatÿ
+3IYV C 18,115,10.4,10e-7.3,3.3,7.8,Clathrin D6 Coatÿ
 4DZS A ,117,10.4,0.0012,3.3,10.3,Crystal Structure Of Yeast Puf4p Rna Binding Domain In Complex With Ho-4be Mutant Rnaÿ
 2XA7 A ,129,10.4,0.0261,3.8,13.2,Ap2 Clathrin Adaptor Core In Active Complex With Cargo Peptidesÿ
 5BZU A ,142,10.4,0.0013,3.2,8.5,Crystal Structure Of The Rna-binding Domain Of Yeast Puf5p Bound To Aat2 Rna
@@ -32,8 +32,8 @@
 2NYL B ,137,10.3,0.0003,3.3,9.5,Crystal Structure Of Protein Phosphatase 2a (Pp2a) Holoenzyme With The Catalytic Subunit Carboxyl Terminus Truncatedÿ
 3BX2 A ,113,10.3,0.0030,3.2,6.2,Puf4 Rna Binding Domain Bound To Ho Endonuclease Rna 3' Utr Recognition Sequence
 1DCE C ,119,10.3,0.0002,4.0,11.8,Crystal Structure Of Rab Geranylgeranyltransferase From Rat Brain
-1MZC A ,130,10.3,10e-4.0,4.1,4.6,Co-Crystal Structure Of Human Farnesyltransferase With Farnesyldiphosphate And Inhibitor Compound 33a
 3DSW A ,132,10.3,10e-4.0,4.0,11.4,Crystal Structure Of Rabggtase(Delta Lrr; Delta Ig)in Complex With Mono-Prenylated Peptide Ser-Cys(Gg)-Ser-Cys Derivated From Rab7
+1MZC A ,130,10.3,10e-4.0,4.1,4.6,Co-Crystal Structure Of Human Farnesyltransferase With Farnesyldiphosphate And Inhibitor Compound 33a
 4GTV A ,129,10.3,10e-4.0,4.6,8.5,Engineered Rabggtase In Complex With Bms Analogue 13
 2IEJ A ,128,10.3,10e-4.0,4.1,4.7,Human Protein Farnesyltransferase Complexed With Inhibitor Compound Stn-48 And Fpp Analog At 1.8a Resolution
 2H6I A ,129,10.3,10e-4.0,4.1,4.7,W102tY365F PROTEIN FARNESYLTRANSFERASE DOUBLE MUTANT Complexed With A Geranylgeranylated Ddptasacvls Peptide Product At 3.0a

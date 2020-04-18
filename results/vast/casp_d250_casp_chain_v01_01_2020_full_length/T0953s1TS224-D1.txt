@@ -118,18 +118,18 @@
 3J05 B 1,42,7.7,0.0091,2.4,2.4,Three-Dimensional Structure Of Dengue Virus Serotype 1 Complexed With Hmab 14c10 Fab
 4BOB A ,39,7.7,0.0431,2.8,10.3,Structure Of Complement Regulator-acquiring Surface Protein 3 (crasp-3, Erpp Or Bbn38) From Borrelia Burgdorferi
 3SBQ B 2,34,7.7,0.0005,2.2,8.8,Pseudomonas Stutzeri Nitrous Oxide Reductase, P65 Crystal Formÿ
-3SBR F 2,34,7.7,0.0446,2.2,8.8,Pseudomonas Stutzeri Nitrous Oxide Reductase, P1 Crystal Form With Substrateя
+3SBR F 2,34,7.7,0.0446,2.2,8.8,Pseudomonas Stutzeri Nitrous Oxide Reductase, P1 Crystal Form With Substrateÿ
 3J6S C 1,39,7.7,0.0218,2.1,7.7,Cryo-em Structure Of Dengue Virus Serotype 3 At 28 Degrees C
 4BOD A ,39,7.7,0.0463,2.8,10.3,Complement Regulator Acquiring Outer Surface Protein Bbcrasp-4 Or Erpc From Borrelia Burgdorferi
 3W9P B ,40,7.7,0.0054,2.5,7.5,Crystal Structure Of Monomeric Frac (second Crystal Form)
 4M3J A ,43,7.7,0.0109,2.9,4.7,Structure Of A Single-domain Camelid Antibody Fragment Cab-h7s Specific Of The Blap Beta-lactamase From Bacillus Licheniformis
 4C05 A 2,32,7.7,0.0110,2.7,9.4,Crystal Structure Of M. Musculus Protein Arginine Methyltransferase Prmt6 With Sah
 4GQ2 P 2,36,7.7,0.0002,3.1,11.1,S. Pombe Nup120-Nup37 Complex
-1AOQ B 3,35,7.7,0.0015,3.1,2.9,Cytochrome Cd1 Nitrite Reductase With Substrate And Product Bound
 4UM8 C 3,31,7.7,0.0346,2.2,6.5,Crystal Structure Of Alpha V Beta 6
+1AOQ B 3,35,7.7,0.0015,3.1,2.9,Cytochrome Cd1 Nitrite Reductase With Substrate And Product Bound
 4UTA A 1,49,7.7,0.0122,2.4,12.2,Crystal Structure Of Dengue 2 Virus Envelope Glycoprotein In Complex With The Fab Fragment Of The Broadly Neutralizing Human Antibody Ede1 C8
 3J6S E 1,37,7.7,0.0279,2.0,8.1,Cryo-em Structure Of Dengue Virus Serotype 3 At 28 Degrees C
-3SFZ A 8,38,7.7,0.0067,3.3,5.3,Crystal Structure Of Full-Length Murine Apaf-1я
+3SFZ A 8,38,7.7,0.0067,3.3,5.3,Crystal Structure Of Full-Length Murine Apaf-1ÿ
 1GQ1 B 3,36,7.7,0.0015,3.1,2.8,Cytochrome Cd1 Nitrite Reductase, Y25s Mutant, Oxidised Form
 4EE7 B ,39,7.6,0.0016,2.0,5.1,Crystal Structure Of The Novel Phenazine Prenyltransferase Epzp In Complex With S-Thiolodiphosphate (Methylated)
 1K32 C 5,32,7.6,0.0002,2.7,3.1,Crystal Structure Of The Tricorn Protease
@@ -145,7 +145,7 @@
 4TSL B ,40,7.6,0.0087,2.5,7.5,Crystal Structure Of Frac With Poc Bound (crystal Form I)
 4J86 A 1,38,7.6,0.0164,3.0,13.2,Crystal Structure Of Beta'-cop/ywbp1 Complex
 1NEX D 3,35,7.6,0.0167,2.4,5.7,Crystal Structure Of Scskp1-Sccdc4-Cpd Peptide Complex
-3G7G D ,37,7.6,0.0292,2.4,2.7,Crystal Structure Of The Protein With Unknown Function From Clostridium Acetobutylicum Atcc 824я
+3G7G D ,37,7.6,0.0292,2.4,2.7,Crystal Structure Of The Protein With Unknown Function From Clostridium Acetobutylicum Atcc 824ÿ
 1QKS B 3,35,7.6,0.0021,3.0,2.9,Cytochrome Cd1 Nitrite Reductase, Oxidised Form
 3VWI C ,39,7.6,0.0092,2.5,7.7,High Resolution Crystal Structure Of Frac In The Monomeric Form
 4TSN B ,40,7.6,0.0093,2.5,7.5,Crystal Structure Of Frac With Poc Bound (crystal Form Ii)
@@ -166,15 +166,15 @@
 4TSN A ,40,7.5,0.0107,2.5,7.5,Crystal Structure Of Frac With Poc Bound (crystal Form Ii)
 4WRN A 3,34,7.5,0.0024,1.8,5.9,Crystal Structure Of The Polymerization Region Of Human Uromodulin/tamm-horsfall Protein
 4ZG9 A 3,49,7.5,0.0196,2.8,6.1,Structural Basis For Inhibition Of Human Autotaxin By Four Novel Compounds
-3LIM D ,32,7.5,0.0207,2.2,0.0,Crystal Structure Of The Pore Forming Toxin Frac From Sea Anemone Actinia Fragaceaя
+3LIM D ,32,7.5,0.0207,2.2,0.0,Crystal Structure Of The Pore Forming Toxin Frac From Sea Anemone Actinia Fragaceaÿ
 4BOD B ,39,7.5,0.0457,2.8,10.3,Complement Regulator Acquiring Outer Surface Protein Bbcrasp-4 Or Erpc From Borrelia Burgdorferi
 4WDC A ,39,7.5,0.0113,2.5,7.7,High-resolution Crystal Structure Of Water-soluble Frac (mutation F16p)
 4ZG6 A 3,49,7.5,0.0206,2.8,6.1,Structural Basis For Inhibition Of Human Autotaxin By Four Novel Compounds
-3LV4 B 2,43,7.5,0.0081,3.3,4.7,Crystal Structure Of The Glycoside Hydrolase, Family 43 Yxia Protein From Bacillus Licheniformis. Northeast Structural Genomics Consortium Target Bir14я
-2YBA B 3,36,7.5,0.0004,2.6,2.8,Crystal Structure Of Nurf55 In Complex With Histone H3я
+3LV4 B 2,43,7.5,0.0081,3.3,4.7,Crystal Structure Of The Glycoside Hydrolase, Family 43 Yxia Protein From Bacillus Licheniformis. Northeast Structural Genomics Consortium Target Bir14ÿ
+2YBA B 3,36,7.5,0.0004,2.6,2.8,Crystal Structure Of Nurf55 In Complex With Histone H3ÿ
+3SBR A 2,34,7.5,0.0027,2.2,8.8,Pseudomonas Stutzeri Nitrous Oxide Reductase, P1 Crystal Form With Substrateÿ
 1AOM A 1,35,7.5,0.0027,3.1,2.9,Substrate And Product Bound To Cytochrome Cd1 Nitrite Reductase
-3SBR A 2,34,7.5,0.0027,2.2,8.8,Pseudomonas Stutzeri Nitrous Oxide Reductase, P1 Crystal Form With Substrateя
-1WV3 A 3,37,7.5,0.0487,2.7,16.2,Crystal Structure Of N-Terminal Domain Of Hypothetical Protein Sav0287 From Staphylococcus Aureus
 4C04 A 2,31,7.5,0.0224,2.5,9.7,Crystal Structure Of M. Musculus Protein Arginine Methyltransferase Prmt6 With Inhibitor
+1WV3 A 3,37,7.5,0.0487,2.7,16.2,Crystal Structure Of N-Terminal Domain Of Hypothetical Protein Sav0287 From Staphylococcus Aureus
 4R7A B 3,31,7.5,0.0229,2.3,6.5,Crystal Structure Of Rbbp4 Bound To Phf6 Peptide
-3G7G H ,40,7.5,0.0404,2.3,5.0,Crystal Structure Of The Protein With Unknown Function From Clostridium Acetobutylicum Atcc 824я
+3G7G H ,40,7.5,0.0404,2.3,5.0,Crystal Structure Of The Protein With Unknown Function From Clostridium Acetobutylicum Atcc 824ÿ
