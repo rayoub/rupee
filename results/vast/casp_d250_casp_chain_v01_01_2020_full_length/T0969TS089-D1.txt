@@ -1,3 +1,4 @@
+
 4JJ4 A ,176,15.6,10e-8.9,3.4,11.9,Crystal Structure Of A Catalytic Mutant Of Axe2 (axe2-d191a), An Acetylxylan Esterase From Geobacillus Stearothermophilus
 4JKO B ,170,15.4,10e-9.7,3.2,10.6,Crystal Structure Of A Catalytic Mutant Of Axe2 (axe2_s15a), An Acetylxylan Esterase From Geobacillus Stearothermophilus
 5COB C ,139,15.4,10e-4.3,2.9,10.1,Crystal Structure Of Iridoid Synthase In Complex With Nadp+ And 8- Oxogeranial At 2.65-angstrom Resolution
@@ -51,15 +52,16 @@
 3NRS A 1,122,14.9,10e-5.3,3.8,5.7,Crystal Structure Of Ligand-Free Bifunctional Folylpolyglutamate SynthaseDIHYDROFOLATE SYNTHASE FROM YERSINIA PESTIS C092ÿ
 3AM3 A ,148,14.9,10e-5.6,4.1,8.1,A372m Mutant Of Enoyl-Acp Reductase From Plasmodium Falciparum (Pfenr) In Complex With Triclosanÿ
 5DCY B ,130,14.9,0.0003,2.8,10.0,Iridoid Synthase G150a Mutant From Catharanthus Roseus - Binary Complex With Nadp+
-4Q7Q A ,160,14.9,10e-6.8,3.2,4.4,The Crystal Structure Of A Possible Lipase From Chitinophaga Pinensis Dsm 2588
 3N2A A ,120,14.9,0.0110,3.9,5.8,Crystal Structure Of Bifunctional Folylpolyglutamate SynthaseDIHYDROFOLATE SYNTHASE FROM YERSINIA PESTIS CO92ÿ
 3N2A A 1,119,14.9,10e-5.3,3.7,5.0,Crystal Structure Of Bifunctional Folylpolyglutamate SynthaseDIHYDROFOLATE SYNTHASE FROM YERSINIA PESTIS CO92ÿ
+4Q7Q A ,160,14.9,10e-6.8,3.2,4.4,The Crystal Structure Of A Possible Lipase From Chitinophaga Pinensis Dsm 2588
 5DBG A ,131,14.9,0.0003,2.8,9.9,Crystal Structure Of Iridoid Synthase From Cantharanthus Roseus In Complex With Nad+
 3DC7 B ,148,14.8,10e-9.3,2.9,10.1,Crystal Structure Of The Protein Q88sr8 From Lactobacillus Plantarum. Northeast Structural Genomics Consortium Target Lpr109
 5COA B ,131,14.8,0.0003,2.7,8.4,Crystal Structure Of Iridoid Synthase At 2.2-angstrom Resolution
 4OAO A ,178,14.8,10e-8.6,3.6,12.4,A Mutant Of Axe2 (r55a), And Acetyl-xylooligosaccharide Esterase From Geobacillus Stearmophilus
-1PLL A ,106,14.8,10e-9.0,3.0,9.4,Crystallographic Studies On P21h-Ras Using Synchrotron Laue Method: Improvement Of Crystal Quality And Monitoring Of The Gtpase Reaction At Different Time Points
+
 1YO6 D ,132,14.8,10e-7.8,2.6,10.6,Crystal Structure Of The Putative Carbonyl Reductase Sniffer Of Caenorhabditis Elegans
+1PLL A ,106,14.8,10e-9.0,3.0,9.4,Crystallographic Studies On P21h-Ras Using Synchrotron Laue Method: Improvement Of Crystal Quality And Monitoring Of The Gtpase Reaction At Different Time Points
 5DBF A ,130,14.8,0.0003,2.8,9.2,Crystal Structure Of Iridoid Synthase From Cantharanthus Roseus In Complex With Nadph
 5DCU A ,131,14.8,0.0003,2.8,10.7,Iridoid Synthase From Catharanthus Roseus - Ternary Complex With Nadp+ And Triethylene Glycol Carboxylic Acid
 3DC7 A ,143,14.8,10e-9.2,2.6,9.8,Crystal Structure Of The Protein Q88sr8 From Lactobacillus Plantarum. Northeast Structural Genomics Consortium Target Lpr109
@@ -83,10 +85,10 @@
 5DF1 B ,127,14.8,0.0004,2.5,9.4,Iridoid Synthase From Catharanthus Roseus - Ternary Complex With Nadp+ And Geranic Acid
 1YO6 C ,138,14.8,10e-7.7,2.8,10.9,Crystal Structure Of The Putative Carbonyl Reductase Sniffer Of Caenorhabditis Elegans
 2GF0 D ,131,14.8,10e-8.5,3.5,7.6,The Crystal Structure Of The Human Diras1 Gtpase In The Inactive Gdp Bound State
-4FBG B ,163,14.7,0.0020,3.8,9.8,Crystal Structure Of Treponema Denticola Trans-2-Enoyl-Coa Reductase In Complex With Nad
-4FBG B 1,161,14.7,0.0003,3.7,9.9,Crystal Structure Of Treponema Denticola Trans-2-Enoyl-Coa Reductase In Complex With Nad
 4FBG M ,157,14.7,0.0077,3.5,10.2,Crystal Structure Of Treponema Denticola Trans-2-Enoyl-Coa Reductase In Complex With Nad
 4FBG M 1,161,14.7,0.0013,3.8,10.6,Crystal Structure Of Treponema Denticola Trans-2-Enoyl-Coa Reductase In Complex With Nad
+4FBG B ,163,14.7,0.0020,3.8,9.8,Crystal Structure Of Treponema Denticola Trans-2-Enoyl-Coa Reductase In Complex With Nad
+4FBG B 1,161,14.7,0.0003,3.7,9.9,Crystal Structure Of Treponema Denticola Trans-2-Enoyl-Coa Reductase In Complex With Nad
 4GGO B ,166,14.7,0.0020,4.3,9.0,Crystal Structure Of Trans-2-Enoyl-Coa Reductase From Treponema Denticola
 4GGO B 1,162,14.7,0.0003,3.8,9.3,Crystal Structure Of Trans-2-Enoyl-Coa Reductase From Treponema Denticola
 2ERX B ,126,14.7,10e-8.8,3.3,7.9,Crystal Structure Of Diras2 In Complex With Gdp And Inorganic Phosphateÿ
@@ -118,6 +120,7 @@
 1W7K A 1,121,14.6,10e-4.9,3.9,9.1,E.Coli Folc In Complex With Adp, Without Folate Substrateÿ
 3AM4 A ,149,14.6,10e-5.2,4.0,10.1,A372m Mutant Of Enoyl-Acp Reductase From Plasmodium Falciparum (Pfenr) In Complex With Triclosan Variant T1ÿ
 1Z45 A 1,135,14.6,10e-4.8,3.1,8.1,Crystal Structure Of The Gal10 Fusion Protein Galactose MutarotaseUDP-Galactose 4-Epimerase From Saccharomyces Cerevisiae Complexed With Nad, Udp-Glucose, And Galactose
+
 3DXF A ,130,14.6,0.0029,2.7,10.0,Crystal Structure Of The Hscarg R37a Mutantÿ
 2GAS B ,133,14.5,0.0004,3.1,9.8,Crystal Structure Of Isoflavone Reductase
 4HNH A ,125,14.5,10e-6.2,2.7,12.0,The Crystal Structure Of A Short-Chain DehydrogenasesREDUCTASE (WIDE Type) From Veillonella Parvula Dsm 2008 In Complex With Nadp
@@ -140,29 +143,29 @@
 4LHS A ,151,14.5,0.0024,2.9,7.3,Crystal Structure Of A Hypothetical Protein (bacova_00914) From Bacteroides Ovatus Atcc 8483 At 1.40 A Resolution
 4ALN F ,131,14.5,10e-7.1,3.0,9.2,Crystal Structure Of S. Aureus Fabi (P32)
 4CVM A 2,135,14.5,10e-4.7,3.8,8.1,Pamurf In Complex With Amp-pnp And Udp-murnac-tripeptide (mdap)
+2P91 D ,139,14.5,10e-7.1,3.1,5.0,Crystal Structure Of Enoyl-[acyl-Carrier-Protein] Reductase (Nadh) From Aquifex Aeolicus Vf5
 4FBG F ,164,14.5,0.0040,4.0,10.4,Crystal Structure Of Treponema Denticola Trans-2-Enoyl-Coa Reductase In Complex With Nad
 4FBG F 1,163,14.5,0.0006,3.9,9.2,Crystal Structure Of Treponema Denticola Trans-2-Enoyl-Coa Reductase In Complex With Nad
-2P91 D ,139,14.5,10e-7.1,3.1,5.0,Crystal Structure Of Enoyl-[acyl-Carrier-Protein] Reductase (Nadh) From Aquifex Aeolicus Vf5
 1O5Z A ,132,14.5,0.0385,3.9,6.1,Crystal Structure Of Folylpolyglutamate Synthase (Tm0166) From Thermotoga Maritima At 2.10 A Resolution
 1O5Z A 1,123,14.5,10e-4.5,3.8,4.1,Crystal Structure Of Folylpolyglutamate Synthase (Tm0166) From Thermotoga Maritima At 2.10 A Resolution
 4CVK A 2,125,14.5,10e-4.7,3.6,8.8,Pamurf In Complex With Udp-murnac-tripeptide (mdap)
-3LT0 A ,147,14.5,10e-5.1,3.9,10.2,Enoyl-Acp Reductase From Plasmodium Falciparum (Pfenr) In Co Triclosan Variant T1ÿ
 3OJF B ,145,14.5,10e-6.5,3.4,6.9,Crystal Structure Of The Bacillus Cereus Enoyl-Acyl Carrier Protein Reductase With Nadp+ And Indole Naphthyridinone (Complex Form)ÿ
+3LT0 A ,147,14.5,10e-5.1,3.9,10.2,Enoyl-Acp Reductase From Plasmodium Falciparum (Pfenr) In Co Triclosan Variant T1ÿ
 4GGP A ,157,14.5,0.0041,3.7,10.8,Crystal Structure Of Selenomethionine Containing Trans-2-Enoyl-Coa Reductase From Treponema Denticola
 4GGP A 1,160,14.5,0.0007,3.7,10.6,Crystal Structure Of Selenomethionine Containing Trans-2-Enoyl-Coa Reductase From Treponema Denticola
 2P91 C ,138,14.5,10e-7.1,3.2,5.8,Crystal Structure Of Enoyl-[acyl-Carrier-Protein] Reductase (Nadh) From Aquifex Aeolicus Vf5
 4Q9A B ,167,14.5,10e-8.0,3.1,7.2,Crystal Structure Of A Putative Gdsl-like Lipase (parmer_00689) From Parabacteroides Merdae Atcc 43184 At 2.86 A Resolution
 3HP4 A ,160,14.5,10e-8.9,2.9,4.4,Crystal Structure Of Psychrotrophic Esterase Esta From Pseudoalteromonas Sp. 643a Inhibited By Monoethylphosphonateÿ
-4ALN J ,128,14.5,10e-6.5,3.1,9.4,Crystal Structure Of S. Aureus Fabi (P32)
 2Q45 A ,137,14.5,10e-6.8,2.8,8.8,Ensemble Refinement Of The Protein Crystal Structure Of Putative Tropinone Reductase From Arabidopsis Thaliana Gene At1g07440
 2Q45 A 1,135,14.5,10e-7.5,2.8,8.9,Ensemble Refinement Of The Protein Crystal Structure Of Putative Tropinone Reductase From Arabidopsis Thaliana Gene At1g07440
+4ALN J ,128,14.5,10e-6.5,3.1,9.4,Crystal Structure Of S. Aureus Fabi (P32)
 1EK6 B ,127,14.5,0.0002,2.8,4.7,Structure Of Human Udp-Galactose 4-Epimerase Complexed With Nadh And Udp-Glucose
 4R1U B ,123,14.5,0.0006,2.6,8.1,Crystal Structure Of Medicago Truncatula Cinnamoyl-coa Reductase
 1V35 A ,138,14.5,10e-5.1,3.3,8.7,Crystal Structure Of Eoyl-Acp Reductase With Nadh
+1ZW1 A ,139,14.5,10e-5.0,3.6,7.9,Synthesis, Biological Activity, And X-Ray Crystal Structural Analysis Of Diaryl Ether Inhibitors Of Malarial Enoyl Acp Reductase. Part 1:4'-Substituted Triclosan Derivatives
+4BKP D ,146,14.5,0.0002,3.1,3.4,Crystal Structure Of Human Gdp-l-fucose Synthase With Bound Nadp
 4BL5 L ,162,14.5,0.0003,3.8,2.5,Crystal Structure Of Human Gdp-l-fucose Synthase With Bound Nadp And Product Gdp-l-fucose
 3GNT A ,128,14.5,10e-7.3,3.2,6.2,Crystal Structure Of The Staphylococcus Aureus Enoyl-Acyl Carrier Protein Reductase (Fabi) In Apo Form (Two Molecules In Au)ÿ
-4BKP D ,146,14.5,0.0002,3.1,3.4,Crystal Structure Of Human Gdp-l-fucose Synthase With Bound Nadp
-1ZW1 A ,139,14.5,10e-5.0,3.6,7.9,Synthesis, Biological Activity, And X-Ray Crystal Structural Analysis Of Diaryl Ether Inhibitors Of Malarial Enoyl Acp Reductase. Part 1:4'-Substituted Triclosan Derivatives
 4BL5 J ,155,14.5,0.0002,3.6,2.6,Crystal Structure Of Human Gdp-l-fucose Synthase With Bound Nadp And Product Gdp-l-fucose
 1SNY A ,139,14.5,10e-6.7,2.9,12.9,Carbonyl Reductase Sniffer Of D. Melanogaster
 4BL5 B ,148,14.4,0.0002,3.2,3.4,Crystal Structure Of Human Gdp-l-fucose Synthase With Bound Nadp And Product Gdp-l-fucose
@@ -171,8 +174,8 @@
 3ZU5 A ,150,14.4,0.0092,3.8,8.7,Structure Of The Enoyl-Acp Reductase Fabv From Yersinia Pestis With The Cofactor Nadh And The 2-Pyridone Inhibitor Pt173ÿ
 3ZL8 A 2,116,14.4,10e-5.3,3.4,8.6,Crystal Structure Of Murf Ligase From Thermotoga Maritima In Complex With Adp
 2XIQ B 2,132,14.4,10e-9.0,3.0,6.1,Crystal Structure Of Human Methylmalonyl-Coa Mutase In Complex With Adenosylcobalamin And Malonyl-Coaÿ
-4E5Y A ,133,14.4,10e-4.5,2.8,4.5,Structure Of Human Fx Protein, The Key Enzyme In The Biosynthesis Of Gdp-l-fucose
 4BKO A ,146,14.4,0.0277,3.4,11.0,Enoyl-acp Reducatase Fabv From Burkholderia Pseudomallei (apo)
+4E5Y A ,133,14.4,10e-4.5,2.8,4.5,Structure Of Human Fx Protein, The Key Enzyme In The Biosynthesis Of Gdp-l-fucose
 3F4B A ,137,14.4,10e-6.4,3.5,8.8,Crystal Structure Of Plasmodium Berghei Enoyl-Acyl-Carrier- Protein Reductase With Triclosanÿ
 2AWD B ,123,14.4,0.0059,3.6,4.9,Crystal Structure Of Lacc From Enterococcus Faecalisÿ
 2P91 A ,140,14.4,10e-6.4,3.2,5.0,Crystal Structure Of Enoyl-[acyl-Carrier-Protein] Reductase (Nadh) From Aquifex Aeolicus Vf5
