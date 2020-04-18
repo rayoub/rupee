@@ -1,4 +1,3 @@
-
 3ZYV D 4,19,4.9,0.0216,1.1,0.0,Crystal Structure Of The Mouse Liver Aldehyde Oxydase 3 (Maox3)
 4KOO C 2,25,4.9,0.0173,1.1,8.0,Crystal Structure Of Why1 From Arabidopsis Thaliana
 1L0O B ,20,5.1,0.0328,1.1,5.0,Crystal Structure Of The Bacillus Stearothermophilus Anti- Sigma Factor Spoiiab With The Sporulation Sigma Factor Sigmaf
@@ -59,7 +58,6 @@
 1M5Q Y 2,22,5.0,0.0160,1.3,9.1,Crystal Structure Of A Novel Sm-Like Archaeal Protein From Pyrobaculum Aerophilum
 1KLU A 1,24,4.7,0.0423,1.3,0.0,Crystal Structure Of Hla-Dr1TPI(23-37) Complexed With Staphylococcal Enterotoxin C3 Variant 3b2 (Sec3-3b2)ÿ
 1D6E A 1,24,5.0,0.0112,1.3,0.0,Crystal Structure Of Hla-Dr4 Complex With Peptidomimetic And Seb
-
 4P2Q A 1,26,4.8,0.0377,1.3,0.0,Crystal Structure Of The 5cc7 Tcr In Complex With 5c2/i-ek
 4X5X D 1,29,5.0,0.0138,1.3,6.9,Hla-dr1 Mutant Bn82a With Covalently Linked Clip106-120(m107w)
 1R5V A 1,26,5.1,0.0054,1.3,0.0,Evidence That Structural Rearrangements AndOR FLEXIBILITY During Tcr Binding Can Contribute To T-Cell Activation
@@ -120,7 +118,6 @@
 3ULE F ,24,4.9,0.0224,1.4,8.3,Structure Of Bos Taurus Arp2/3 Complex With Bound Inhibitor Ck-869 And Atp
 2P9I F ,24,4.9,0.0204,1.4,8.3,Crystal Structure Of Bovine Arp23 COMPLEX CO-Crystallized With Adp And Crosslinked With Gluteraldehyde
 4P57 C 1,25,5.2,0.0022,1.4,0.0,Mhc Tcr Peptide Complex
-
 1JMX B 2,23,4.2,0.0451,1.4,21.7,Crystal Structure Of A Quinohemoprotein Amine Dehydrogenase From Pseudomonas Putida
 1U2V F ,24,4.9,0.0216,1.4,8.3,Crystal Structure Of Arp23 COMPLEX WITH BOUND ADP AND Calcium
 3DXM F ,24,4.9,0.0213,1.4,8.3,Structure Of Bos Taurus Arp23 COMPLEX WITH BOUND INHIBITOR Ck0993548я

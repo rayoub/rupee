@@ -119,62 +119,62 @@
 2BKU D 2,47,5.0,0.0420,2.0,12.8,Kap95p:rangtp Complex
 2H4M B 1,50,5.0,0.0391,2.0,6.0,Karyopherin Beta2TRANSPORTIN-M9nls
 4K5P A 7,48,5.0,0.0469,2.0,10.4,Phosphonic Arginine Mimetics As Inhibitors Of The M1 Aminopeptidases From Plasmodium Falciparum
-3Q44 A 7,49,5.0,0.0487,2.0,10.2,X-Ray Crystal Structure Of Pfa-M1 Bound To Bestatin Derivative 16я
+3Q44 A 7,49,5.0,0.0487,2.0,10.2,X-Ray Crystal Structure Of Pfa-M1 Bound To Bestatin Derivative 16ÿ
 2JAB C ,45,6.7,0.0448,2.0,11.1,A Designed Ankyrin Repeat Protein Evolved To Picomolar Affinity To Her2
 4G8K B 4,46,6.5,0.0061,2.0,6.5,Intact Sensor Domain Of Human Rnase L In The Inactive Signaling State
 4K5N A 7,48,5.0,0.0390,2.0,10.4,Phosphonic Arginine Mimetics As Inhibitors Of The M1 Aminopeptidases From Plasmodium Falciparum
 5DIS A 2,46,5.0,0.0428,2.0,10.9,Crystal Structure Of A Crm1-rangtp-spn1 Export Complex Bound To A 113 Amino Acid Fg-repeat Containing Fragment Of Nup214
 4K5O A 7,48,5.0,0.0436,2.0,10.4,Phosphonic Arginine Mimetics As Inhibitors Of The M1 Aminopeptidases From Plasmodium Falciparum
-3EBH A 7,49,5.0,0.0453,2.0,10.2,Structure Of The M1 Alanylaminopeptidase From Malaria Complexed With Bestatinя
-3LKU A 1,43,5.8,0.0024,2.0,7.0,Crystal Structure Of S. Cerevisiae Get4 In Complex With An N-Terminal Fragment Of Get5я
+3EBH A 7,49,5.0,0.0453,2.0,10.2,Structure Of The M1 Alanylaminopeptidase From Malaria Complexed With Bestatinÿ
+3LKU A 1,43,5.8,0.0024,2.0,7.0,Crystal Structure Of S. Cerevisiae Get4 In Complex With An N-Terminal Fragment Of Get5ÿ
 4PWX C 1,44,5.4,0.0118,2.0,9.1,Crystal Structure Of An Atp-bound Get3-get4-get5 Complex From S.cerevisiae
 2F8Y B 1,35,6.7,0.0033,2.0,14.3,Crystal Structure Of Human Notch1 Ankyrin Repeats To 1.55a Resolution
-3Q75 A 2,37,5.0,0.0474,2.0,2.7,Cryptococcus Neoformans Protein Farnesyltransferase In Complex With Fpt-Ii And Tkcvvm Peptideя
+3Q75 A 2,37,5.0,0.0474,2.0,2.7,Cryptococcus Neoformans Protein Farnesyltransferase In Complex With Fpt-Ii And Tkcvvm Peptideÿ
 4C0D A 2,35,5.7,0.0037,2.0,17.1,Structure Of The Not Module Of The Human Ccr4-not Complex (cnot1-cnot2-cnot3)
-2XEN A ,37,6.2,0.0133,2.0,8.1,Structural Determinants For Improved Thermal Stability Of Designed Ankyrin Repeat Proteins With A Redesigned C- Capping Moduleя
+2XEN A ,37,6.2,0.0133,2.0,8.1,Structural Determinants For Improved Thermal Stability Of Designed Ankyrin Repeat Proteins With A Redesigned C- Capping Moduleÿ
 4R5T A 7,49,5.1,0.0371,2.0,10.2,Structure Of The M1 Alanylaminopeptidase From Malaria Complexed With A Hydroxamic Acid-based Inhibitor
 4O1O A 3,42,6.0,0.0426,2.0,7.1,Crystal Structure Of Rnase L In Complex With 2-5a
 2QC9 A 1,35,6.7,0.0037,2.0,14.3,Mouse Notch 1 Ankyrin Repeat Intracellular Domain
-3Q43 A 7,50,5.0,0.0450,2.0,10.0,X-Ray Crystal Structure Of Pfa-M1 Bound To Bestatin Derivative 15я
-3T8V A 7,50,5.1,0.0347,2.0,10.0,A Bestatin-Based Chemical Biology Strategy Reveals Distinct Roles For Malaria M1- And M17-Family Aminopeptidasesя
+3Q43 A 7,50,5.0,0.0450,2.0,10.0,X-Ray Crystal Structure Of Pfa-M1 Bound To Bestatin Derivative 15ÿ
+3T8V A 7,50,5.1,0.0347,2.0,10.0,A Bestatin-Based Chemical Biology Strategy Reveals Distinct Roles For Malaria M1- And M17-Family Aminopeptidasesÿ
 2F37 B 1,41,6.8,0.0281,2.1,14.6,Crystal Structure Of The Ankyrin Repeat Domain Of Human Trpv2
 2HE0 A 1,33,6.7,0.0034,2.1,15.2,Crystal Structure Of A Human Notch1 Ankyrin Domain Mutant
-2XZD H ,36,6.2,0.0489,2.1,19.4,Caspase-3 In Complex With An Inhibitory Darpin-3.4я
+2XZD H ,36,6.2,0.0489,2.1,19.4,Caspase-3 In Complex With An Inhibitory Darpin-3.4ÿ
 2HE0 B 1,36,6.7,0.0037,2.1,13.9,Crystal Structure Of A Human Notch1 Ankyrin Domain Mutant
 1YYH B 1,36,6.7,0.0038,2.1,13.9,Crystal Structure Of The Human Notch 1 Ankyrin Domain
 1Z3X A 1,49,6.6,0.0006,2.1,14.3,Structure Of Gun4 From Thermosynechococcus Elongatus
 1OYZ A 4,42,5.2,0.0224,2.1,4.8,X-Ray Structure Of Yiba_ecoli Northeast Structural Genomics Consortium Target Et31
 2QC9 B 1,39,6.8,0.0030,2.1,12.8,Mouse Notch 1 Ankyrin Repeat Intracellular Domain
-3SO8 A 2,42,6.3,0.0120,2.1,2.4,Crystal Structure Of Ankraя
+3SO8 A 2,42,6.3,0.0120,2.1,2.4,Crystal Structure Of Ankraÿ
 4O1O D 3,43,6.0,0.0420,2.1,7.0,Crystal Structure Of Rnase L In Complex With 2-5a
 1YYH A 1,33,6.7,0.0036,2.1,15.2,Crystal Structure Of The Human Notch 1 Ankyrin Domain
 4JBS B 7,46,5.5,0.0079,2.1,6.5,Crystal Structure Of The Human Endoplasmic Reticulum Aminopeptidase 2 In Complex With Phosphinic Pseudotripeptide Inhibitor
-2XZT H ,36,6.3,0.0406,2.1,19.4,Caspase-3 In Complex With Darpin-3.4_i78sя
+2XZT H ,36,6.3,0.0406,2.1,19.4,Caspase-3 In Complex With Darpin-3.4_i78sÿ
 4OAU C 4,45,6.2,0.0138,2.1,6.7,Complete Human Rnase L In Complex With Biological Activators
-2XZT G ,36,6.4,0.0352,2.1,19.4,Caspase-3 In Complex With Darpin-3.4_i78sя
+2XZT G ,36,6.4,0.0352,2.1,19.4,Caspase-3 In Complex With Darpin-3.4_i78sÿ
 4BEP A 3,41,7.1,0.0111,2.1,12.2,Crystal Structure Of The Legionella Pneumophila Fic Domain- Containing Effector Ankx Protein (apo-form)
-4G8L A 4,47,6.5,0.0057,2.1,6.4,Active State Of Intact Sensor Domain Of Human Rnase L With 2-5a Bound
 4G8L C 4,47,6.5,0.0055,2.1,6.4,Active State Of Intact Sensor Domain Of Human Rnase L With 2-5a Bound
+4G8L A 4,47,6.5,0.0057,2.1,6.4,Active State Of Intact Sensor Domain Of Human Rnase L With 2-5a Bound
 4G8L B 4,47,6.5,0.0056,2.1,6.4,Active State Of Intact Sensor Domain Of Human Rnase L With 2-5a Bound
 3ZKJ D 2,36,6.0,0.0287,2.1,5.6,Crystal Structure Of Ankyrin Repeat And Socs Box-containing Protein 9 (asb9) In Complex With Elonginb And Elonginc
 4XKC A 1,51,5.8,0.0172,2.1,21.6,Crystal Structure Of Genomes Uncoupled 4 (gun4) In Complex With Magnesium Deuteroporphyrin Ix
-3ND2 A 3,71,7.3,0.0353,2.1,12.7,Structure Of Yeast Importin-Beta (Kap95p)я
-2AXU A 3,35,5.3,0.0147,2.1,14.3,Structure Of Prgxя
-3V2X A 2,41,6.3,0.0125,2.1,14.6,Crystal Structure Of The Peptide Bound Complex Of The Ankyrin Repeat Domains Of Human Ankra2я
+3ND2 A 3,71,7.3,0.0353,2.1,12.7,Structure Of Yeast Importin-Beta (Kap95p)ÿ
+2AXU A 3,35,5.3,0.0147,2.1,14.3,Structure Of Prgxÿ
+3V2X A 2,41,6.3,0.0125,2.1,14.6,Crystal Structure Of The Peptide Bound Complex Of The Ankyrin Repeat Domains Of Human Ankra2ÿ
 4OAV D 3,46,5.9,0.0437,2.1,6.5,Complete Human Rnase L In Complex With 2-5a (5'-ppp Heptamer), Amppcp And Rna Substrate
 1BLX B ,42,7.0,0.0379,2.1,9.5,P19ink4dCDK6 COMPLEX
 1BLX B 2,42,7.0,0.0013,2.1,9.5,P19ink4dCDK6 COMPLEX
 4O1O C 3,45,5.9,0.0449,2.1,6.7,Crystal Structure Of Rnase L In Complex With 2-5a
 4OT9 A 2,37,7.0,0.0047,2.1,8.1,Crystal Structure Of The C-terminal Domain Of P100/nf-kb2
-1Z3Y A 1,52,6.6,0.0008,2.1,15.4,Structure Of Gun4-1 From Thermosynechococcus Elongatus
 1OT8 B 1,31,6.7,0.0039,2.1,12.9,Structure Of The Ankyrin Domain Of The Drosophila Notch Receptor
+1Z3Y A 1,52,6.6,0.0008,2.1,15.4,Structure Of Gun4-1 From Thermosynechococcus Elongatus
 4G8L D 4,46,6.6,0.0054,2.1,6.5,Active State Of Intact Sensor Domain Of Human Rnase L With 2-5a Bound
 4IN3 D 2,48,5.6,0.0043,2.1,6.2,Crystal Structure Of The Chs5-bch1 Exomer Cargo Adaptor Complex
-2AXU G 3,38,5.5,0.0075,2.2,13.2,Structure Of Prgxя
+2AXU G 3,38,5.5,0.0075,2.2,13.2,Structure Of Prgxÿ
 5AB2 A 8,46,5.8,0.0023,2.2,6.5,Crystal Structure Of Aminopeptidase Erap2 With Ligand
-2AXU E 3,34,5.4,0.0118,2.2,14.7,Structure Of Prgxя
-3NOG D 2,32,6.2,0.0181,2.2,15.6,Designed Ankyrin Repeat Protein (Darpin) Binders To Acrb: Plasticity Of The Interfaceя
+2AXU E 3,34,5.4,0.0118,2.2,14.7,Structure Of Prgxÿ
+3NOG D 2,32,6.2,0.0181,2.2,15.6,Designed Ankyrin Repeat Protein (Darpin) Binders To Acrb: Plasticity Of The Interfaceÿ
 1IXV A 1,35,6.5,0.0072,2.2,5.7,Crystal Structure Analysis Of Homolog Of Oncoprotein Gankyrin, An Interactor Of Rb And Cdk46
-3V79 K 1,35,6.7,0.0453,2.2,14.3,Structure Of Human Notch1 Transcription Complex Including Csl, Ram, Ank, And Maml-1 On Hes-1 Promoter Dna Sequenceя
+3V79 K 1,35,6.7,0.0453,2.2,14.3,Structure Of Human Notch1 Transcription Complex Including Csl, Ram, Ank, And Maml-1 On Hes-1 Promoter Dna Sequenceÿ
 4IN3 B 2,48,5.6,0.0316,2.2,6.2,Crystal Structure Of The Chs5-bch1 Exomer Cargo Adaptor Complex
 4YDY A 2,32,6.0,0.0381,2.2,18.8,Crystal Structure Of Darpin 44c12v5 In Complex With Human Il-4
