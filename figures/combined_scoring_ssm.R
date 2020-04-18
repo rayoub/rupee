@@ -55,7 +55,7 @@ plot2 <- get_scoring_plot(
         c('RUPEE All-Aligned','RUPEE Top-Aligned','SSM'), 
         c(1, 100),
         c(1,10,20,30,40,50,60,70,80,90,100),
-        c(0.1, 0.55), 
+        c(0.25, 0.55), 
         TRUE
 )
 plot3 <- get_scoring_plot(

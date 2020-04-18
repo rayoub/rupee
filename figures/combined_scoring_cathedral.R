@@ -6,7 +6,7 @@ source('scoring.R')
 
 grid_arrange_shared_legend <-
   function(...,
-           ncol = 2, 
+           ncol = 3, 
            nrow = 1, 
            position = c("bottom", "right")) {
     
@@ -37,29 +37,40 @@ grid_arrange_shared_legend <-
   }
 
 plot1 <- get_scoring_plot(
-        'VAST',
-        'vs. VAST (search by VAST-score)',
-        'TM-score (avg)',
-        'scoring_vast_fl.txt', # _ce, _fatcat, _fl
-        c('RUPEE All-Aligned','RUPEE Top-Aligned','VAST'), 
+        'CATHEDRAL',
+        'vs. CATHEDRAL',
+        'SSAP-score',
+        'scoring_cathedral_ssap.txt', # _ce, _fatcat, _fl, _ssap
+        c('RUPEE All-Aligned','RUPEE Top-Aligned','CATHEDRAL'), 
         c(1, 100),
         c(1,10,20,30,40,50,60,70,80,90,100),
-        c(0.3, 0.6), 
-        TRUE
+        c(60, 75), # c(0, 5), c(0.30, 0.55) or c(60, 75)
+        FALSE
 )
 plot2 <- get_scoring_plot(
-        'VAST',
-        'vs. VAST (search by RMSD)',
-        'RMSD',
-        'scoring_vast_ce.txt', # _ce, _fatcat, _fl
-        c('RUPEE All-Aligned','RUPEE Top-Aligned','VAST'), 
+        'CATHEDRAL',
+        'vs. CATHEDRAL',
+        'TM-score (avg)',
+        'scoring_cathedral_fl.txt', # _ce, _fatcat, _fl, _ssap
+        c('RUPEE All-Aligned','RUPEE Top-Aligned','CATHEDRAL'), 
         c(1, 100),
         c(1,10,20,30,40,50,60,70,80,90,100),
-        c(0, 5), 
+        c(0.3, 0.55), 
+        TRUE
+)
+plot3 <- get_scoring_plot(
+        'CATHEDRAL',
+        'vs. CATHEDRAL',
+        'RMSD',
+        'scoring_cathedral_ce.txt', # _ce, _fatcat, _fl, _ssap
+        c('RUPEE All-Aligned','RUPEE Top-Aligned','CATHEDRAL'), 
+        c(1, 100),
+        c(1,10,20,30,40,50,60,70,80,90,100),
+        c(0, 5), # c(0, 5), c(0.30, 0.55) or c(60, 75)
         FALSE
 )
 
-combined <- grid_arrange_shared_legend(plot1, plot2)
+combined <- grid_arrange_shared_legend(plot1, plot2, plot3)
 
-ggsave('combined_scoring_vast.eps', plot = combined, width = 7.5, height = 3.25, dpi = 300)
+ggsave('combined_scoring_cathedral.eps', plot = combined, width = 7.5, height = 2.25, dpi = 300)
 
