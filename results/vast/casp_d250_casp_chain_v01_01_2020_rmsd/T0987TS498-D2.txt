@@ -1,0 +1,37 @@
+3WCN B 3,17,3.5,0.0477,1.4,0.0,Crystal Structure Of The Depentamerized Mutant Of Selenocysteine Synthase Sela
+3W1J D 2,16,3.5,0.0477,1.5,0.0,Crystal Structure Of The N-terminal Truncated Selenocysteine Synthase Sela In Complex With Thiosulfate
+3W1J C 3,17,3.5,0.0477,1.5,0.0,Crystal Structure Of The N-terminal Truncated Selenocysteine Synthase Sela In Complex With Thiosulfate
+3WCO B 2,18,3.5,0.0477,1.5,0.0,Crystal Structure Of The Depentamerized Mutant Of N-terminal Truncated Selenocysteine Synthase Sela
+3WCO A 2,18,3.5,0.0477,1.5,0.0,Crystal Structure Of The Depentamerized Mutant Of N-terminal Truncated Selenocysteine Synthase Sela
+3W1J A 2,17,3.5,0.0477,1.5,0.0,Crystal Structure Of The N-terminal Truncated Selenocysteine Synthase Sela In Complex With Thiosulfate
+3W1H A 3,17,3.5,0.0477,1.5,0.0,Crystal Structure Of The Selenocysteine Synthase Sela From Aquifex Aeolicus
+3W1H D 2,14,3.5,0.0477,1.6,0.0,Crystal Structure Of The Selenocysteine Synthase Sela From Aquifex Aeolicus
+3W1K D 3,14,3.5,0.0477,1.6,0.0,Crystal Structure Of The Selenocysteine Synthase Sela And Trnasec Complex
+3W1K B 3,14,3.5,0.0477,1.6,0.0,Crystal Structure Of The Selenocysteine Synthase Sela And Trnasec Complex
+3W1K A 3,14,3.5,0.0477,1.6,0.0,Crystal Structure Of The Selenocysteine Synthase Sela And Trnasec Complex
+2E8Z B 1,32,6.8,0.0448,1.6,9.4,Crystal Structure Of Pullulanase Type I From Bacillus Subtilis Str. 168 Complexed With Alpha-Cyclodextrin
+2E8Y B 1,31,6.7,0.0454,1.6,9.7,Crystal Structure Of Pullulanase Type I From Bacillus Subtilis Str. 168
+2E8Z A 1,31,6.8,0.0385,1.7,9.7,Crystal Structure Of Pullulanase Type I From Bacillus Subtilis Str. 168 Complexed With Alpha-Cyclodextrin
+3W1I C 2,21,3.5,0.0477,1.7,4.8,Crystal Structure Of The N-terminal Truncated Selenocysteine Synthase Sela
+2E8Y A 1,31,6.8,0.0356,1.7,9.7,Crystal Structure Of Pullulanase Type I From Bacillus Subtilis Str. 168
+3W1J F 2,21,3.5,0.0477,1.7,4.8,Crystal Structure Of The N-terminal Truncated Selenocysteine Synthase Sela In Complex With Thiosulfate
+3W1K E 3,22,3.5,0.0477,1.8,4.5,Crystal Structure Of The Selenocysteine Synthase Sela And Trnasec Complex
+2RA1 A 4,42,7.3,0.0050,2.2,9.5,Crystal Structure Of The N-Terminal Part Of The Bacterial S- Layer Protein Sbsc
+4XVO C 1,36,7.1,0.0214,2.5,0.0,L,d-transpeptidase From Mycobacterium Smegmatis
+4XVO A 1,36,7.1,0.0251,2.5,0.0,L,d-transpeptidase From Mycobacterium Smegmatis
+4XVO B 1,36,7.1,0.0258,2.5,0.0,L,d-transpeptidase From Mycobacterium Smegmatis
+3JV5 D ,33,7.7,0.0037,2.5,9.1,Crystal Structure Of The Dimerization Domains P52 Homodimerÿ
+4ZPP B 1,31,6.5,0.0394,2.5,0.0,Crystal Structure Of Protocadherin Gamma C5 Ec1-3
+1PD6 A ,34,7.0,0.0369,2.6,2.9,The Nmr Structure Of Domain C2 Of Human Cardiac Myosin Binding Protein C
+2FHC A 1,30,7.2,0.0070,2.6,6.7,Crystal Structure Analysis Of Klebsiella Pneumoniae Pullulanase Complexed With Maltotriose
+3JV6 F ,33,7.2,0.0219,2.7,6.1,Crystal Structure Of The Dimerization Domains P52 And Relbÿ
+2X1W M 1,30,6.7,0.0483,2.8,0.0,Crystal Structure Of Vegf-C In Complex With Domains 2 And 3 Of Vegfr2ÿ
+3MJG X 2,31,6.8,0.0372,2.9,6.5,The Structure Of A Platelet Derived Growth Factor Receptor Cÿ
+3MJG Y 2,31,6.7,0.0447,2.9,6.5,The Structure Of A Platelet Derived Growth Factor Receptor Cÿ
+1BQU A 2,34,7.3,0.0150,3.0,5.9,Cytokyne-Binding Region Of Gp130
+2X1W O 1,36,7.0,0.0456,3.0,0.0,Crystal Structure Of Vegf-C In Complex With Domains 2 And 3 Of Vegfr2ÿ
+2O26 U 2,39,6.8,0.0110,3.0,5.1,Structure Of A Class Iii Rtk Signaling Assembly
+2O26 X 2,41,6.8,0.0111,3.0,7.3,Structure Of A Class Iii Rtk Signaling Assembly
+2FHB A 1,36,7.1,0.0086,3.1,5.6,Crystal Structure Analysis Of Klebsiella Pneumoniae Pullulanase Complexed With Maltose
+2YOC A 1,40,7.2,0.0064,3.3,2.5,Crystal Structure Of Pula From Klebsiella Oxytoca
+2YOC B 1,40,7.2,0.0076,3.3,2.5,Crystal Structure Of Pula From Klebsiella Oxytoca
