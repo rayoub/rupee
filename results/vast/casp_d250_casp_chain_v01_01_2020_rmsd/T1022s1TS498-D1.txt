@@ -1,4 +1,3 @@
-
 4F9B D 1,12,3.5,0.0159,0.7,0.0,Human Cdc7 Kinase In Complex With Dbf4 And Pha767491
 3J1B N 5,12,3.5,0.0318,0.8,8.3,Cryo-em Structure Of 8-fold Symmetric Ratcpn-alpha In Apo State
 2A1S D 2,30,5.1,0.0175,0.9,16.7,Crystal Structure Of Native Parn Nuclease Domain
@@ -59,7 +58,6 @@
 4FQM J 2,16,3.5,0.0229,1.3,12.5,Structure Of BBRISBANE602008 INFLUENZA HEMAGGLUTININ
 2CW7 A 7,36,5.0,0.0202,1.3,16.7,Crystal Structure Of Intein Homing Endonuclease Ii
 4KNY B 3,23,5.2,0.0097,1.3,13.0,Crystal Structure Of The Response Regulator Kdpe Complexed To Dna In An Active-like Conformation
-
 4UER H 1,32,4.9,0.0392,1.3,3.1,40s-eif1-eif1a-eif3-eif3j Translation Initiation Complex From Lachancea Kluyveri
 4KZX W 1,33,4.9,0.0400,1.3,3.0,Rabbit 40s Ribosomal Subunit In Complex With Eif1
 4KZY W 1,33,4.9,0.0401,1.3,3.0,Rabbit 40s Ribosomal Subunit In Complex With Eif1 And Eif1a
@@ -120,7 +118,6 @@
 2DJW I ,32,5.2,0.0375,1.5,3.1,Crystal Structure Of Ttha0845 From Thermus Thermophilus Hb8
 2DJW C ,32,5.2,0.0315,1.5,3.1,Crystal Structure Of Ttha0845 From Thermus Thermophilus Hb8
 1WHR A ,31,5.0,0.0281,1.5,16.1,Solution Structure Of The R3h Domain From Human Hypothetical Protein Baa76846
-
 2DJW G ,33,5.2,0.0363,1.5,3.0,Crystal Structure Of Ttha0845 From Thermus Thermophilus Hb8
 4CR3 S ,30,6.0,0.0043,1.5,10.0,Deep Classification Of A Large Cryo-em Dataset Defines The Conformational Landscape Of The 26s Proteasome
 3DRX A 3,35,5.2,0.0042,1.6,14.3,X-Ray Crystal Structure Of Human Kctd5 Protein Crystallized In High-Salt Bufferя

@@ -1,4 +1,3 @@
-
 2X8K A ,58,9.4,0.0015,2.5,13.8,Crystal Structure Of Spp1 Dit (Gp 19.1) Protein, A Paradigm Of Hub Adsorption Apparatus In Gram-Positive Infecting Phagesÿ
 3PFT A ,67,9.3,0.0001,2.0,13.4,Crystal Structure Of Untagged C54a Mutant Flavin Reductase (Dszd) In Complex With Fmn From Mycobacterium Goodiiÿ
 3PFT B ,68,9.2,0.0001,2.1,13.2,Crystal Structure Of Untagged C54a Mutant Flavin Reductase (Dszd) In Complex With Fmn From Mycobacterium Goodiiÿ
@@ -59,7 +58,6 @@
 1VR8 A ,39,7.1,0.0396,1.9,2.6,Crystal Structure Of Gtp Binding Regulator (Tm1622) From Thermotoga Maritima At 1.75 A Resolution
 2K4Q A ,81,7.0,0.0242,2.9,9.9,The Solution Structure Of Gpv, The Major Tail Protein From Bacteriophage Lambdaÿ
 5H8A A ,55,7.0,0.0071,2.9,1.8,Mmi1 Yth Domain
-
 5HFZ B ,55,6.9,0.0112,2.9,1.8,Mmi1 Yth Domain
 3N99 O 2,49,6.8,0.0053,2.4,8.2,Crystal Structure Of Tm1086ÿ
 3DCL B 1,51,6.8,0.0055,2.6,9.8,Crystal Structure Of Tm1086
@@ -120,7 +118,6 @@
 5AFU 1 ,21,6.0,0.0178,1.5,0.0,Cryo-em Structure Of Dynein Tail-dynactin-bicd2n Complex
 4D18 I ,30,6.0,0.0041,2.0,13.3,Crystal Structure Of The Cop9 Signalosome
 4D10 I ,30,6.0,0.0041,2.0,13.3,Crystal Structure Of The Cop9 Signalosome
-
 4D18 A ,30,6.0,0.0041,1.9,13.3,Crystal Structure Of The Cop9 Signalosome
 4D10 A ,30,6.0,0.0041,2.0,13.3,Crystal Structure Of The Cop9 Signalosome
 2OCE A 2,30,6.0,0.0020,1.6,13.3,Crystal Structure Of Hypothetical Protein Pa5201 From Pseudomonas Aeruginosa
