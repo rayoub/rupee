@@ -106,7 +106,13 @@ public class VastDriver extends DriverBase {
                 System.out.println("... status is done");
 
                 // click link to results
-                driver.findElement(By.linkText("entire chain")).click();
+                try {
+                    driver.findElement(By.linkText("entire chain")).click();
+                }
+                catch (Exception e) {
+                    System.out.println("EXCLUDE: " + dbId);
+                    throw new InterruptedException();
+                }
 
                 // wait for page to load
                 Thread.sleep(5000);
@@ -141,13 +147,13 @@ public class VastDriver extends DriverBase {
         driver.findElement(By.name("table")).click();
         new Select(driver.findElement(By.name("sort"))).selectByIndex(sortIndex);
         driver.findElement(By.name("sort")).click();
-           /* 
 
-              I don't think this is needed because when you click the dispsub it will reset as needed
-        // originally
-        new Select(driver.findElement(By.name("doclistpage"))).selectByIndex(0);
-        driver.findElement(By.name("doclistpage")).click();
-        */
+        // there may only be one pages so check existence here
+        List<WebElement> eles = driver.findElements(By.name("doclistpage"));
+        if (eles.size() > 0) {
+            new Select(eles.get(0)).selectByIndex(0);
+            eles.get(0).click();
+        }
 
         // display the first page
         driver.findElement(By.name("dispsub")).click();
