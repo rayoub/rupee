@@ -26,7 +26,7 @@ public class VastDownloadDriver extends VastDriver {
             String fileNameRmsd = Constants.VAST_PATH_RMSD + dbId + ".txt";
             String fileNameVastScore = Constants.VAST_PATH_VAST_SCORE + dbId + ".txt";
 
-            if (Files.notExists(Paths.get(fileNameRmsd))) {
+            if (Files.notExists(Paths.get(fileNameRmsd)) || Files.notExists(Paths.get(fileNameVastScore))) {
             
                 System.out.println("Processing request for: " + dbId);
 
@@ -35,7 +35,7 @@ public class VastDownloadDriver extends VastDriver {
                     VastResults results = doSearchDownload(dbId, link);
 
                     if (!results.ResultsRmsd.isEmpty()) {
-                        
+                    
                         FileOutputStream outputStream = new FileOutputStream(fileNameRmsd);
                         OutputStreamWriter outputWriter = new OutputStreamWriter(outputStream);
 
