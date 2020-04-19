@@ -59,7 +59,6 @@ public class VastDownloadDriver extends VastDriver {
                 catch (Exception e) { 
 
                     System.out.println("... got the too much traffic page");
-                    System.out.println(dbId + "," + link);
                 }
             }
         }

@@ -45,5 +45,39 @@ public class Benchmarks {
 
         return dbIds;
     }
+    
+    public static List<String> getSplit(String name, int splitCount, int splitIndex) {
+
+        List<String> dbIds = new ArrayList<>();
+
+        PGSimpleDataSource ds = Db.getDataSource();
+
+        try {
+
+            Connection conn = ds.getConnection();
+            conn.setAutoCommit(false);
+       
+            PreparedStatement stmt = conn.prepareCall("SELECT db_id FROM get_benchmark_split(?,?,?);");
+            stmt.setString(1, name);
+            stmt.setInt(2, splitCount);
+            stmt.setInt(3, splitIndex);
+            
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+
+                String dbId = rs.getString("db_id");
+                dbIds.add(dbId);
+            }
+
+            rs.close();
+            stmt.close();
+            conn.close();
+
+        } catch (SQLException e) {
+            Logger.getLogger(Benchmarks.class.getName()).log(Level.SEVERE, null, e);
+        }
+
+        return dbIds;
+    }
 }
 

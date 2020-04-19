@@ -14,6 +14,15 @@ import edu.umkc.rupee.lib.Constants;
 
 public class VastCombinedDriver extends VastDriver {
 
+    private int splitCount;
+    private int splitIndex;
+
+    public VastCombinedDriver(int splitCount, int splitIndex) {
+        
+        this.splitCount = splitCount;
+        this.splitIndex = splitIndex;
+    }
+
     public VastResults doSearch(String dbId) {
 
         String link = "";
@@ -79,7 +88,7 @@ public class VastCombinedDriver extends VastDriver {
 
         int EARLY_EXIT = 100;
 
-        List<String> dbIds = Benchmarks.get("casp_d250");
+        List<String> dbIds = Benchmarks.getSplit("casp_d250", this.splitCount, this.splitIndex);
 
         int count = 0;
         for (int i = 0; i < dbIds.size(); i++) {

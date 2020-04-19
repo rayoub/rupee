@@ -35,7 +35,7 @@ public class Constants {
     public final static String VAST_PATH_RMSD 
         = VAST_PATH + "casp_d250_casp_chain_v01_01_2020_rmsd/";
     public final static String VAST_PATH_VAST_SCORE 
-        = VAST_PATH + "casp_d250_casp_chain_v01_01_2020_vast_score/";
+        = VAST_PATH + "casp_d250_casp_chain_v01_01_2020_full_length/";
     
     public final static String CASP_PATH = "/home/ayoub/git/rupee/data/casp/eu_preds/";
     
