@@ -1,0 +1,180 @@
+2DS7 A ,18,3.5,0.0062,0.7,16.7,Structure Of The Zbd In The Hexagonal Crystal Form
+2DS8 A ,18,3.5,0.0062,0.8,16.7,Structure Of The Zbd-Xb Complex
+2DS5 A ,17,3.5,0.0062,0.8,17.6,Structure Of The Zbd In The Orthorhomibic Crystal From
+2DS5 B ,18,3.5,0.0062,0.8,16.7,Structure Of The Zbd In The Orthorhomibic Crystal From
+2DS6 B ,18,3.5,0.0062,0.8,16.7,Structure Of The Zbd In The Tetragonal Crystal Form
+3PIF C 6,19,3.5,0.0062,0.8,0.0,Crystal Structure Of The 5'->3' Exoribonuclease Xrn1, E178q Mutant In Complex With Manganeseÿ
+2DS6 A ,18,3.5,0.0062,0.9,16.7,Structure Of The Zbd In The Tetragonal Crystal Form
+2JKC A 3,16,3.5,0.0122,0.9,6.2,Crystal Structure Of E346d Of Tryptophan 7-Halogenase (Prna)
+2J6P E 2,15,3.5,0.0062,0.9,0.0,Structure Of As-Sb Reductase From Leishmania Major
+2J6P B 2,15,3.5,0.0062,0.9,0.0,Structure Of As-Sb Reductase From Leishmania Major
+2F2S A 2,18,3.5,0.0062,0.9,5.6,Human Mitochondrial Acetoacetyl-Coa Thiolaseÿ
+3G7F H 1,22,3.4,0.0352,0.9,9.1,Crystal Structure Of Blastochloris Viridis Heterodimer Mutant Reaction Centerÿ
+2JBL H 1,21,3.4,0.0327,0.9,9.5,Photosynthetic Reaction Center From Blastochloris Viridis
+2J6P D 2,15,3.5,0.0062,0.9,0.0,Structure Of As-Sb Reductase From Leishmania Major
+2EX3 B 1,21,3.5,0.0479,1.0,4.8,Bacteriophage Phi29 Dna Polymerase Bound To Terminal Protein
+2IBW B 2,18,3.5,0.0062,1.0,5.6,Crystallographic And Kinetic Studies Of Human Mitochondrial Acetoacetyl-Coa Thiolase (T2): The Importance Of Potassium And Chloride For Its Structure And Function
+3PRC H 1,20,3.4,0.0238,1.0,10.0,Photosynthetic Reaction Center From Rhodopseudomonas Viridis (Qb-Depleted)
+2IBW D 2,18,3.5,0.0062,1.0,5.6,Crystallographic And Kinetic Studies Of Human Mitochondrial Acetoacetyl-Coa Thiolase (T2): The Importance Of Potassium And Chloride For Its Structure And Function
+1DXR H 1,21,3.4,0.0416,1.0,9.5,Photosynthetic Reaction Center From Rhodopseudomonas Viridis-His L168 Phe Mutant (Terbutryn Complex)
+2IBW C 2,18,3.5,0.0062,1.0,5.6,Crystallographic And Kinetic Studies Of Human Mitochondrial Acetoacetyl-Coa Thiolase (T2): The Importance Of Potassium And Chloride For Its Structure And Function
+2EX3 H 1,21,3.5,0.0479,1.0,4.8,Bacteriophage Phi29 Dna Polymerase Bound To Terminal Protein
+3D38 H 1,21,3.4,0.0321,1.0,9.5,Crystal Structure Of New Trigonal Form Of Photosynthetic Reaction Center From Blastochloris Viridis. Crystals Grown In Microfluidics By Detergent Capture
+3T6D H 1,22,3.5,0.0175,1.0,9.1,Crystal Structure Of The Reaction Centre From Blastochloris Viridis Strain Dsm 133 (Atcc 19567) Substrain-08ÿ
+1VRN H 1,22,3.4,0.0231,1.0,9.1,Photosynthetic Reaction Center Blastochloris Viridis (Atcc)
+5PRC H 1,22,3.4,0.0413,1.0,9.1,Photosynthetic Reaction Center From Rhodopseudomonas Viridis (Atrazine Complex)
+2X5U H 1,20,3.5,0.0092,1.0,10.0,80 Microsecond Laue Diffraction Snapshot From Crystals Of A Photosynthetic Reaction Centre Without Illuminationÿ
+2IB9 B 2,18,3.5,0.0062,1.1,5.6,Crystallographic And Kinetic Studies Of Human Mitochondrial Acetoacetyl-Coa Thiolase (T2): The Importance Of Potassium And Chloride For Its Structure And Function
+1F36 B 1,21,3.5,0.0062,1.1,4.8,The Crystal Structure Of Fis Mutant K36e Reveals That The Transactivation Region Of The Fis Protein Contains Extended Mobile Beta-Hairpin Arms
+4KFZ B 3,13,3.5,0.0069,1.1,7.7,Crystal Structure Of Lmo2 And Anti-lmo2 Vh Complex
+5E3N A 1,20,3.4,0.0350,1.1,5.0,Crystal Structure Of Fis Bound To 27bp Dna F31 (aaatttgtaggaattttctgcaaattt)
+3JRG B 1,20,3.4,0.0342,1.1,5.0,Crystal Structure Of Fis Bound To 27 Bp Non Consensus Sequenÿ
+1OVX A ,16,3.5,0.0062,1.1,18.8,Nmr Structure Of The E. Coli Clpx Chaperone Zinc Binding Domain Dimer
+1OVX B ,16,3.5,0.0062,1.1,18.8,Nmr Structure Of The E. Coli Clpx Chaperone Zinc Binding Domain Dimer
+4KFZ A 3,15,3.5,0.0062,1.1,13.3,Crystal Structure Of Lmo2 And Anti-lmo2 Vh Complex
+3ORG B 4,16,3.5,0.0062,1.2,18.8,Crystal Structure Of A Eukaryotic Clc Transporterÿ
+1ETQ D 1,21,3.5,0.0112,1.2,4.8,The Crystal Structure Of E. Coli Fis Mutant R71y
+3JRC A 1,19,3.4,0.0395,1.3,5.3,Crystal Structure Of Fis Bound To 27 Bp Dna F29 Containing 5 Centerÿ
+1ETQ A 1,20,3.5,0.0128,1.3,5.0,The Crystal Structure Of E. Coli Fis Mutant R71y
+4BJN F 1,32,3.9,0.0205,1.3,12.5,Crystal Structure Of The Flax-rust Effector Avrm-a
+3L72 E 1,13,3.5,0.0348,1.3,0.0,Chicken Cytochrome Bc1 Complex With Kresoxym-I-Dimethyl Boundÿ
+3JRI A 1,18,3.4,0.0351,1.4,5.6,Crystal Structure Of Fis Bound To 27 Bp Non Consensus Sequenÿ
+4DR4 N ,17,3.5,0.0071,1.4,17.6,Crystal Structure Of The Thermus Thermophilus (Hb8) 30s Ribosomal Subunit With Codon, Cognate Transfer Rna Anticodon Stem-Loop And Multiple Copies Of Paromomycin Molecules Bound
+4R10 A 5,32,5.9,0.0040,1.4,6.2,A Conserved Phosphorylation Switch Controls The Interaction Between Cadherin And Beta-catenin In Vitro And In Vivo
+4HBD A 1,18,5.7,0.0172,1.4,5.6,Crystal Structure Of Kank2 Ankyrin Repeats
+4WT8 N 1,14,3.5,0.0062,1.4,21.4,Crystal Structure Of Bactobolin A Bound To 70s Ribosome-trna Complex
+3T1H N ,14,3.4,0.0299,1.4,21.4,Structure Of The Thermus Thermophilus 30s Ribosomal Subunit Complexed With A Human Anti-Codon Stem Loop (Hasl) Of Transfer Rna Lysine 3 (Trnalys3) Bound To An Mrna With An Aaa-Codon In The A-Site And Paromomycinÿ
+4R0Z A 5,32,5.9,0.0046,1.4,6.2,A Conserved Phosphorylation Switch Controls The Interaction Between Cadherin And Beta-catenin In Vitro And In Vivo
+3SCK B 2,18,3.5,0.0479,1.4,5.6,Crystal Structure Of Spike Protein Receptor-Binding Domain From A Predicted Sars Coronavirus Civet Strain Complexed With Human-Civet Chimeric Receptor Ace2ÿ
+3SCK A 3,18,3.5,0.0479,1.4,5.6,Crystal Structure Of Spike Protein Receptor-Binding Domain From A Predicted Sars Coronavirus Civet Strain Complexed With Human-Civet Chimeric Receptor Ace2ÿ
+4LF4 N ,17,3.5,0.0083,1.4,17.6,Crystal Structure Of 30s Ribosomal Subunit From Thermus Thermophilus
+1K3Z D 2,20,5.5,0.0029,1.4,0.0,X-Ray Crystal Structure Of The IkbbNF-Kb P65 Homodimer Complex
+3JUE A 2,18,5.4,0.0131,1.4,5.6,Crystal Structure Of Arfgap And Ank Repeat Domain Of Acap1ÿ
+2DZO C 1,20,5.2,0.0110,1.4,0.0,Crystal Structure Analysis Of Yeast Nas6p Complexed With The Proteasome Subunit, Rpt3
+3JR9 A 1,20,3.4,0.0313,1.4,5.0,Crystal Structure Of Fis Bound To 27 Bp Optimal Binding Sequÿ
+4HAR A ,12,3.5,0.0425,1.4,0.0,Crystal Structure Of Rubella Virus Capsid Protein (residues 127-277)
+4HAR B ,12,3.5,0.0425,1.4,0.0,Crystal Structure Of Rubella Virus Capsid Protein (residues 127-277)
+1MX4 A 2,18,5.0,0.0052,1.4,11.1,Structure Of P18ink4c (F82q)
+2D4Z B 2,17,3.5,0.0184,1.4,5.9,Crystal Structure Of The Cytoplasmic Domain Of The Chloride Channel Clc-0
+4LFB N ,17,3.5,0.0062,1.4,17.6,Crystal Structure Of 30s Ribosomal Subunit From Thermus Thermophilus
+3JRD A 1,21,3.4,0.0327,1.4,4.8,Crystal Structure Of Fis Bound To 27 Bp Dna F25 Containing T Sequence At Centerÿ
+2DZO A 1,17,6.0,0.0171,1.4,0.0,Crystal Structure Analysis Of Yeast Nas6p Complexed With The Proteasome Subunit, Rpt3
+3UTM B 2,18,5.7,0.0350,1.4,16.7,Crystal Structure Of A Mouse Tankyrase-Axin Complexĸ
+2F8Y A 1,18,5.2,0.0169,1.4,11.1,Crystal Structure Of Human Notch1 Ankyrin Repeats To 1.55a Resolution
+2DZN E 1,18,5.8,0.0026,1.4,0.0,Crystal Structure Analysis Of Yeast Nas6p Complexed With The Proteasome Subunit, Rpt3
+4DR5 N ,17,3.5,0.0123,1.4,17.6,Crystal Structure Of The Thermus Thermophilus (Hb8) 30s Ribosomal Subunit With Codon, Crystallographically Disordered Cognate Transfer Rna Anticodon Stem-Loop And Streptomycin Bound
+2VQF N ,18,3.5,0.0100,1.4,22.2,Modified Uridines With C5-Methylene Substituents At The First Position Of The Trna Anticodon Stabilize U-G Wobble Pairing During Decoding
+4F1P A 2,18,5.4,0.0104,1.4,5.6,Crystal Structure Of Mutant S554d For Arfgap And Ank Repeat Domain Of Acap1
+1XMO N ,17,3.5,0.0148,1.4,17.6,Crystal Structure Of Mnm5u34t6a37-Trnalysuuu Complexed With Aag-Mrna In The Decoding Center
+4R11 A 4,31,5.7,0.0092,1.4,6.5,A Conserved Phosphorylation Switch Controls The Interaction Between Cadherin And Beta-catenin In Vitro And In Vivo
+4GXW A 2,20,4.0,0.0156,1.4,5.0,Crystal Structure Of A Cog1816 Amidohydrolase (Target Efi-505188) From Burkhoderia Ambifaria, With Bound Zn
+1N33 N ,18,3.5,0.0062,1.5,22.2,Structure Of The Thermus Thermophilus 30s Ribosomal Subunit Bound To Codon And Near-Cognate Transfer Rna Anticodon Stem-Loop Mismatched At The Second Codon Position At The A Site With Paromomycin
+2JAB A 1,20,5.1,0.0133,1.5,5.0,A Designed Ankyrin Repeat Protein Evolved To Picomolar Affinity To Her2
+1HNZ N ,14,3.5,0.0171,1.5,21.4,Structure Of The Thermus Thermophilus 30s Ribosomal Subunit In Complex With Hygromycin B
+2QKD A 4,35,4.9,0.0048,1.5,5.7,Crystal Structure Of Tandem Zpr1 Domains
+3SO8 A 1,18,5.1,0.0180,1.5,0.0,Crystal Structure Of Ankraĸ
+2FO1 E 1,18,5.4,0.0224,1.5,5.6,Crystal Structure Of The Csl-Notch-Mastermind Ternary Complex Bound To Dnaĸ
+2VQE N ,18,3.5,0.0112,1.5,22.2,Modified Uridines With C5-Methylene Substituents At The First Position Of The Trna Anticodon Stabilize U-G Wobble Pairing During Decoding
+4IHV A 1,20,3.4,0.0346,1.5,5.0,Crystal Structure Of Fis Bound To 27 Bp Sequence Dna F28 (aaatttgtttgagcgttgagcaaattt)
+4DV6 N ,17,3.5,0.0152,1.5,17.6,Crystal Structure Of The Thermus Thermophilus 30s Ribosomal Subunit With A 16s Rrna Mutation, A915g
+1IBM N ,18,3.5,0.0092,1.5,22.2,Structure Of The Thermus Thermophilus 30s Ribosomal Subunit In Complex With A Messenger Rna Fragment And Cognate Transfer Rna Anticodon Stem-Loop Bound At The A Siteĸ
+4LF9 N ,18,3.5,0.0062,1.5,22.2,Crystal Structure Of 30s Ribosomal Subunit From Thermus Thermophilus
+4LFC N ,18,3.5,0.0072,1.5,22.2,Crystal Structure Of 30s Ribosomal Subunit From Thermus Thermophilus
+3V2X A 1,18,5.1,0.0172,1.5,0.0,Crystal Structure Of The Peptide Bound Complex Of The Ankyrin Repeat Domains Of Human Ankra2ĸ
+4O1O B 3,18,5.4,0.0390,1.5,5.6,Crystal Structure Of Rnase L In Complex With 2-5a
+4O1O D 3,18,5.4,0.0395,1.5,5.6,Crystal Structure Of Rnase L In Complex With 2-5a
+4O1O A 3,18,5.5,0.0379,1.5,5.6,Crystal Structure Of Rnase L In Complex With 2-5a
+4GXW B 2,14,4.0,0.0194,1.5,7.1,Crystal Structure Of A Cog1816 Amidohydrolase (Target Efi-505188) From Burkhoderia Ambifaria, With Bound Zn
+5C3Q C 2,15,3.4,0.0296,1.5,0.0,Crystal Structure Of The Full-length Neurospora Crassa T7h In Complex With Alpha-kg And Thymine (t)
+3JRG A 1,20,3.4,0.0363,1.5,5.0,Crystal Structure Of Fis Bound To 27 Bp Non Consensus Sequenĸ
+4K5B A 2,18,4.9,0.0387,1.5,0.0,Co-crystallization With Conformation-specific Designed Ankyrin Repeat Proteins Explains The Conformational Flexibility Of Bcl-w
+4KVB N ,17,3.3,0.0430,1.5,23.5,Thermus Thermophilus Hb27 30s Ribosomal Subunit Lacking Ribosomal Protein S17
+4RLV A 7,21,5.0,0.0065,1.5,4.8,Crystal Structure Of Ankb 24 Ankyrin Repeats In Complex With Ankr Autoinhibition Segment
+1N32 N ,18,3.5,0.0062,1.5,22.2,Structure Of The Thermus Thermophilus 30s Ribosomal Subunit Bound To Codon And Near-Cognate Transfer Rna Anticodon Stem-Loop Mismatched At The First Codon Position At The A Site With Paromomycin
+4GKK N ,17,3.3,0.0446,1.5,17.6,Structure Of The Thermus Thermophilus 30s Ribosomal Subunit Complexed With A Human Mitochondrial Anticodon Stem Loop (asl) Of Transfer Rna Methionine (trnamet) Bound To An Mrna With An Aua-codon In The A-site And Paromomycin
+3PIE C 6,20,3.5,0.0062,1.5,5.0,Crystal Structure Of The 5'->3' Exoribonuclease Xrn1, E178q Mutantĸ
+1XNR N ,18,3.5,0.0116,1.5,22.2,Crystal Structure Of An Inosine-Cytosine Wobble Base Pair In The Context Of The Decoding Center
+3KEA A 2,18,4.8,0.0134,1.5,5.6,Structure Function Studies Of Vaccinia Virus Host-Range Protein K1 Reveal A Novel Ankyrin Repeat Interaction Surface For K1s Functionĸ
+3KEA B 2,18,4.8,0.0140,1.5,5.6,Structure Function Studies Of Vaccinia Virus Host-Range Protein K1 Reveal A Novel Ankyrin Repeat Interaction Surface For K1s Functionĸ
+5C3P C 2,15,3.4,0.0380,1.5,0.0,Crystal Structure Of The Full-length Neurospora Crassa T7h In Complex With Alpha-kg
+1WDY A 2,21,5.6,0.0063,1.5,9.5,Crystal Structure Of Ribonuclease
+5C3S A 2,16,3.3,0.0456,1.5,6.2,Crystal Structure Of The Full-length Neurospora Crassa T7h In Complex With Alpha-kg And 5-formyluracil (5fu)
+5C3S B 2,16,3.4,0.0247,1.5,6.2,Crystal Structure Of The Full-length Neurospora Crassa T7h In Complex With Alpha-kg And 5-formyluracil (5fu)
+4U95 E 1,21,4.9,0.0436,1.5,4.8,Coupling Of Remote Alternating-access Transport Mechanisms For Protons And Substrates In The Multidrug Efflux Pump Acrb
+3HRA A 2,18,5.5,0.0300,1.5,11.1,Crystal Structure Of Ef0377 An Ankyrin Repeat Proteinĸ
+4G8K A 2,21,5.6,0.0058,1.5,9.5,Intact Sensor Domain Of Human Rnase L In The Inactive Signaling State
+1ZHC A ,38,3.7,0.0486,1.5,5.3,Solution Structure Of Hp1242 From Helicobacter Pyloriĸ
+4RLV A 5,20,5.1,0.0172,1.5,5.0,Crystal Structure Of Ankb 24 Ankyrin Repeats In Complex With Ankr Autoinhibition Segment
+5C3R A 2,16,3.4,0.0327,1.5,6.2,Crystal Structure Of The Full-length Neurospora Crassa T7h In Complex With Alpha-kg And 5-hydroxymethyluracil (5hmu)
+4LFA N ,18,3.5,0.0127,1.5,22.2,Crystal Structure Of 30s Ribosomal Subunit From Thermus Thermophilus
+1XMQ N ,18,3.5,0.0074,1.5,22.2,Crystal Structure Of T6a37-Asllysuuu Aaa-Mrna Bound To The Decoding Center
+5C3P D 2,15,3.4,0.0206,1.5,0.0,Crystal Structure Of The Full-length Neurospora Crassa T7h In Complex With Alpha-kg
+3JRE A 1,21,3.4,0.0347,1.5,4.8,Crystal Structure Of Fis Bound To 27 Bp Dna F26 Containing A Centerĸ
+4OX9 N ,18,3.5,0.0179,1.5,22.2,Crystal Structure Of The Aminoglycoside Resistance Methyltransferase Npma Bound To The 30s Ribosomal Subunit
+1J5E N ,18,3.5,0.0180,1.5,22.2,Structure Of The Thermus Thermophilus 30s Ribosomal Subunit
+4DX5 E 1,21,5.1,0.0124,1.5,4.8,Transport Of Drugs By The Multidrug Transporter Acrb Involves An Access And A Deep Binding Pocket That Are Separated By A Switch-Loop
+4OAV D 3,18,5.4,0.0420,1.5,5.6,Complete Human Rnase L In Complex With 2-5a (5'-ppp Heptamer), Amppcp And Rna Substrate
+4QQI A 1,18,5.1,0.0151,1.5,0.0,Crystal Structure Of Ankra2-rfx7 Complex
+4KHP N 1,18,3.4,0.0273,1.5,22.2,Structure Of The Thermus Thermophilus 30s Ribosomal Subunit In Complex With De-6-msa-pactamycin
+4DX7 D 1,21,5.1,0.0129,1.5,4.8,Transport Of Drugs By The Multidrug Transporter Acrb Involves An Access And A Deep Binding Pocket That Are Separated By A Switch-Loop
+1ZQ1 D 3,37,4.4,0.0033,1.5,13.5,Structure Of Gatde Trna-Dependent Amidotransferase From Pyrococcus Abyssiĸ
+4U95 D 1,21,5.1,0.0132,1.5,4.8,Coupling Of Remote Alternating-access Transport Mechanisms For Protons And Substrates In The Multidrug Efflux Pump Acrb
+4XD0 A 4,20,5.0,0.0002,1.5,10.0,X-ray Structure Of The N-formyltransferase Qdtf From Providencia Alcalifaciens
+5CZY A 4,33,5.5,0.0201,1.5,9.1,Crystal Structure Of Legas4
+1IBL N ,17,3.5,0.0103,1.5,23.5,Structure Of The Thermus Thermophilus 30s Ribosomal Subunit In Complex With A Messenger Rna Fragment And Cognate Transfer Rna Anticodon Stem-Loop Bound At The A Site And With The Antibiotic Paromomycin˙
+5C3P A 2,18,3.4,0.0330,1.5,5.6,Crystal Structure Of The Full-length Neurospora Crassa T7h In Complex With Alpha-kg
+4K0K N 1,18,3.4,0.0282,1.5,22.2,Crystal Structure Of The Thermus Thermophilus 30s Ribosomal Subunit Complexed With A Serine-asl And Mrna Containing A Stop Codon
+4G8K B 4,18,5.6,0.0199,1.5,5.6,Intact Sensor Domain Of Human Rnase L In The Inactive Signaling State
+4JI4 N ,15,3.4,0.0245,1.5,20.0,Crystal Structure Of 30s Ribosomal Subunit From Thermus Thermophilus
+1HNX N ,18,3.5,0.0107,1.5,22.2,Structure Of The Thermus Thermophilus 30s Ribosomal Subunit In Complex With Pactamycin
+4XD1 A 4,20,5.0,0.0003,1.5,10.0,X-ray Structure Of The N-formyltransferase Qdtf From Providencia Alcalifaciens, W305a Mutant, In The Presence Of Tdp-qui3n And N5-thf
+4XCZ A 4,20,5.0,0.0003,1.5,10.0,X-ray Structure Of The N-formyltransferase Qdtf From Providencia Alcalifaciens In Complex With Tdp-qui3n And N5-thf
+2Q5H A 3,30,4.9,0.0027,1.6,3.3,Crystal Structure Of Apo-Wildtype Glycyl-Trna Synthetase
+4G8L D 2,21,5.1,0.0284,1.6,9.5,Active State Of Intact Sensor Domain Of Human Rnase L With 2-5a Bound
+4G8L A 2,21,5.5,0.0073,1.6,9.5,Active State Of Intact Sensor Domain Of Human Rnase L With 2-5a Bound
+4JYA N 1,18,3.4,0.0353,1.6,22.2,Crystal Structures Of Pseudouridinilated Stop Codons With Asls
+4U96 E 1,21,5.1,0.0126,1.6,4.8,Coupling Of Remote Alternating-access Transport Mechanisms For Protons And Substrates In The Multidrug Efflux Pump Acrb
+4G8L B 2,21,5.5,0.0073,1.6,9.5,Active State Of Intact Sensor Domain Of Human Rnase L With 2-5a Bound
+4G8L C 2,21,5.1,0.0286,1.6,9.5,Active State Of Intact Sensor Domain Of Human Rnase L With 2-5a Bound
+1IBK N ,18,3.4,0.0237,1.6,22.2,Structure Of The Thermus Thermophilus 30s Ribosomal Subunit In Complex With The Antibiotic Paromomycin
+5C3P B 2,16,3.4,0.0272,1.6,6.2,Crystal Structure Of The Full-length Neurospora Crassa T7h In Complex With Alpha-kg
+4OAV B 3,18,5.4,0.0492,1.6,5.6,Complete Human Rnase L In Complex With 2-5a (5'-ppp Heptamer), Amppcp And Rna Substrate
+4KQE A 3,36,4.7,0.0055,1.6,5.6,Complex Structure Reveals Multiple Conformations Of Glycyl-trna Synthetase In Glycylation
+5CEA D 2,18,5.1,0.0182,1.6,11.1,Bd3460 Immunity Protein From Bdellovibrio Bacteriovorus
+1HR0 N ,18,3.3,0.0429,1.6,22.2,Crystal Structure Of Initiation Factor If1 Bound To The 30s Ribosomal Subunit
+2PME A 4,35,4.8,0.0045,1.6,5.7,The Apo Crystal Structure Of The Glycyl-Trna Synthetase
+3GQ2 B 2,24,5.6,0.0378,1.6,8.3,Crystal Structure Of The Dimer Of The P115 Tether Globular Head Domain˙
+5AJ3 N 2,16,3.5,0.0135,1.6,6.2,Structure Of The Small Subunit Of The Mammalian Mitoribosome
+5CEA A 2,18,5.0,0.0050,1.6,11.1,Bd3460 Immunity Protein From Bdellovibrio Bacteriovorus
+2HHH N ,18,3.5,0.0117,1.6,22.2,Crystal Structure Of Kasugamycin Bound To The 30s Ribosomal Subunit
+4DR7 N ,15,3.4,0.0252,1.6,20.0,Crystal Structure Of The Thermus Thermophilus (Hb8) 30s Ribosomal Subunit With Codon, Crystallographically Disordered Near-Cognate Transfer Rna Anticodon Stem-Loop Mismatched At The Second Codon Position, And Streptomycin Bound
+4DX2 B 2,31,5.8,0.0136,1.6,0.0,Crystal Structure Of The Human Trpv4 Ankyrin Repeat Domain
+3ZUV B 2,20,5.0,0.0076,1.6,10.0,Crystal Structure Of A Designed Selected Ankyrin Repeat Protein In Complex With The Phosphorylated Map Kinase Erk2
+2ZT7 A 3,30,4.9,0.0021,1.6,3.3,Crystal Structure Of Human Glycyl-Trna Synthetase (Glyrs) In Complex With Glycine And Atp˙
+3W9G D 2,30,5.6,0.0277,1.6,3.3,Vanilloid Receptor-related Osmotically Activated Channel Proteinto Be Announced
+1FJG N ,15,3.5,0.0190,1.6,20.0,Structure Of The Thermus Thermophilus 30s Ribosomal Subunit In Complex With The Antibiotics Streptomycin, Spectinomycin, And Paromomycin˙
+4R11 E 4,41,5.7,0.0290,1.6,12.2,A Conserved Phosphorylation Switch Controls The Interaction Between Cadherin And Beta-catenin In Vitro And In Vivo
+1I96 N ,17,3.5,0.0132,1.6,17.6,Crystal Structure Of The 30s Ribosomal Subunit From Thermus Thermophilus In Complex With The Translation Initiation Factor If3 (C-Terminal Domain)
+1HNW N ,18,3.5,0.0079,1.6,22.2,Structure Of The Thermus Thermophilus 30s Ribosomal Subunit In Complex With Tetracycline
+4LF7 N ,19,3.5,0.0063,1.6,21.1,Crystal Structure Of 30s Ribosomal Subunit From Thermus Thermophilus
+4LF8 N ,19,3.5,0.0063,1.6,21.1,Crystal Structure Of 30s Ribosomal Subunit From Thermus Thermophilus
+4GKJ N ,18,3.4,0.0366,1.6,16.7,Structure Of The Thermus Thermophilus 30s Ribosomal Subunit Complexed With A Human Mitochondrial Anticodon Stem Loop (asl) Of Transfer Rna Methionine (trnamet) Bound To An Mrna With An Aug-codon In The A-site And Paromomycin
+3JRB A 1,20,3.4,0.0330,1.6,5.0,Crystal Structure Of Fis Bound To 27 Bp Dna F24 Containing T Center˙
+4DUY N ,18,3.5,0.0149,1.6,22.2,Crystal Structure Of The Thermus Thermophilus 30s Ribosomal Subunit With A 16s Rrna Mutation, U13c
+3W9G B 2,30,5.6,0.0205,1.6,3.3,Vanilloid Receptor-related Osmotically Activated Channel Proteinto Be Announced
+4HBO E ,12,3.5,0.0425,1.6,0.0,Crystal Structure Of Rubella Virus Capsid Protein (residues 127-277)
+1DQN B 1,15,3.4,0.0352,1.6,6.7,Crystal Structure Of Giardia Guanine Phosphoribosyltransferase Complexed With A Transition State Analogue
+1DQP B 1,15,3.4,0.0366,1.6,6.7,Crystal Structure Of Giardia Guanine Phosphoribosyltransferase Complexed With Immucilling
+2UUA N ,19,3.5,0.0079,1.6,21.1,Structure Of The Thermus Thermophilus 30s Ribosomal Subunit Complexed With A Valine-Asl With Cmo5u In Position 34 Bound To An Mrna With A Guc-Codon In The A-Site And Paromomycin
+3W9G C 2,30,5.6,0.0249,1.6,3.3,Vanilloid Receptor-related Osmotically Activated Channel Proteinto Be Announced
+4HBE A ,15,3.5,0.0425,1.6,0.0,Crystal Structure Of Rubella Virus Capsid Protein (residues 127-277)
+2ZM6 N ,14,3.4,0.0308,1.6,21.4,Crystal Structure Of The Thermus Thermophilus 30s Ribosomal Subunit˙
+3W9G A 2,31,5.6,0.0232,1.6,3.2,Vanilloid Receptor-related Osmotically Activated Channel Proteinto Be Announced
+5ET0 A 2,21,5.0,0.0333,1.6,4.8,Crystal Structure Of Myo3b-arb2 In Complex With Espin1-ar
+2ZT5 A 2,30,4.8,0.0048,1.6,3.3,Crystal Structure Of Human Glycyl-Trna Synthetase (Glyrs) In Complex With Ap4a (Cocrystallized With Atp)˙
+4QFV A 2,18,5.1,0.0182,1.6,0.0,Crystal Structure Of A Unique Ankyrin
+4LF6 N ,19,3.5,0.0062,1.6,21.1,Crystal Structure Of 30s Ribosomal Subunit From Thermus Thermophilus
+4DR6 N ,19,3.5,0.0092,1.6,21.1,Crystal Structure Of The Thermus Thermophilus (Hb8) 30s Ribosomal Subunit With Codon, Near-Cognate Transfer Rna Anticodon Stem-Loop Mismatched At The First Codon Position And Streptomycin Bound
+4FDM A 2,16,3.5,0.0151,1.6,18.8,Crystallization And 3d Structure Elucidation Of Thermostable L2 Lipase From Thermophilic Locally Isolated Bacillus Sp. L2
+2ZT6 A 2,30,4.7,0.0056,1.6,3.3,Crystal Structure Of Human Glycyl-Trna Synthetase (Glyrs) In Complex With Ampcpp˙
+1XNQ N ,19,3.5,0.0115,1.6,21.1,Structure Of An Inosine-Adenine Wobble Base Pair Complex In The Context Of The Decoding Center
