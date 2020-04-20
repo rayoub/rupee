@@ -38,7 +38,7 @@ grid_arrange_shared_legend <-
 
 plot1 <- get_scoring_plot(
         'mTM-align',
-        'vs. mTM-align',
+        'vs: mTM-align\nbenchmark: casp_mtm_d246\nRUPEE search type: Contained-In',
         'TM-score (q)',
         'scoring_mtm_ci.txt', # _rmsd, _ci
         c('RUPEE All-Aligned','RUPEE Top-Aligned','mTM'), 
@@ -49,7 +49,7 @@ plot1 <- get_scoring_plot(
 )
 plot2 <- get_scoring_plot(
         'mTM-align',
-        'vs. mTM-align',
+        'vs: mTM-align\nbenchmark: casp_mtm_d246\nRUPEE search type: RMSD',
         'RMSD',
         'scoring_mtm_rmsd.txt', # _rmsd, _ci
         c('RUPEE All-Aligned','RUPEE Top-Aligned','mTM'), 
@@ -61,5 +61,5 @@ plot2 <- get_scoring_plot(
 
 combined <- grid_arrange_shared_legend(plot1, plot2)
 
-ggsave('combined_scoring_mtm.eps', plot = combined, width = 7.5, height = 3.25, dpi = 300)
+ggsave('combined_scoring_mtm.eps', plot = combined, width = 5.2, height = 2.4, dpi = 300)
 

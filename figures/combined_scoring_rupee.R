@@ -37,7 +37,7 @@ grid_arrange_shared_legend <-
   }
 
 plot1 <- get_scoring_plot(
-        'All vs. Top (benchmark scop_d360)',
+        'All vs. Top\nbenchmark: scop_d360',
         'scoring_rupee_scop_d360.txt',
         c('RUPEE All-Aligned','RUPEE Top-Aligned'),
         c(1, 100),
@@ -45,7 +45,7 @@ plot1 <- get_scoring_plot(
         c(0.85, 1.0)
 )
 plot2 <- get_scoring_plot(
-        'All vs. Top (benchmark casp_d250)',
+        'All vs. Top\nbenchmark: casp_d250',
         'scoring_rupee_casp_d250.txt', 
         c('RUPEE All-Aligned','RUPEE Top-Aligned'),
         c(1, 100),
@@ -55,5 +55,5 @@ plot2 <- get_scoring_plot(
 
 combined <- grid_arrange_shared_legend(plot1, plot2)
 
-ggsave('combined_scoring_rupee.eps', plot = combined, width = 7.5, height = 3.25, dpi = 300)
+ggsave('combined_scoring_rupee.eps', plot = combined, width = 5.2, height = 2.4, dpi = 300)
 

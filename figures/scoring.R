@@ -71,7 +71,7 @@ get_scoring_plot <- function(p_comp_to, p_title, p_ylab, p_file, p_levels, p_xli
 
         # default override
         theme(
-            plot.title = element_text(size = 8, hjust = 0.5),
+            plot.title = element_text(size = 7),
             plot.margin = margin(5,15,0,0), 
 
             panel.grid = element_blank(),
@@ -79,7 +79,7 @@ get_scoring_plot <- function(p_comp_to, p_title, p_ylab, p_file, p_levels, p_xli
             
             axis.text = element_text(size = 7), 
             axis.title.x = element_blank(), 
-            axis.title.y = element_text(size = 8),
+            axis.title.y = element_text(size = 7),
             
             legend.text = element_text(size = 7, margin = margin(0,10,0,0)),
             legend.title = element_blank(), 

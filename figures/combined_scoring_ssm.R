@@ -38,7 +38,7 @@ grid_arrange_shared_legend <-
 
 plot1 <- get_scoring_plot(
         'SSM',
-        'vs. SSM (search by Q-score)',
+        'vs: SSM\nbenchmark: casp_ssm_q_d240\nRUPEE search type: Q-score\nSSM search type: Q-score',
         'Q-score',
         'scoring_ssm_q.txt', # _ce, _fatcat, _fl, _q
         c('RUPEE All-Aligned','RUPEE Top-Aligned','SSM'), 
@@ -49,7 +49,7 @@ plot1 <- get_scoring_plot(
 )
 plot2 <- get_scoring_plot(
         'SSM',
-        'vs. SSM (search by Q-score)',
+        'vs: SSM\nbenchmark: casp_ssm_q_d240\nRUPEE search type: Full-Length\nSSM search type: Q-score',
         'TM-score (avg)',
         'scoring_ssm_fl.txt', # _ce, _fatcat, _fl, _q
         c('RUPEE All-Aligned','RUPEE Top-Aligned','SSM'), 
@@ -60,7 +60,7 @@ plot2 <- get_scoring_plot(
 )
 plot3 <- get_scoring_plot(
         'SSM',
-        'vs. SSM (search by RMSD)',
+        'vs: SSM\nbenchmark: casp_ssm_rmsd_d233\nRUPEE search type: RMSD\nSSM search type: RMSD',
         'RMSD',
         'scoring_ssm_ce.txt', # _ce, _fatcat, _fl, _q
         c('RUPEE All-Aligned','RUPEE Top-Aligned','SSM'), 

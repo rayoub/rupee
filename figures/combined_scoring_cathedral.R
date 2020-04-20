@@ -38,7 +38,7 @@ grid_arrange_shared_legend <-
 
 plot1 <- get_scoring_plot(
         'CATHEDRAL',
-        'vs. CATHEDRAL',
+        'vs: CATHEDRAL\nbenchmark: casp_cathedral_d247\nRUPEE search type: SSAP-score',
         'SSAP-score',
         'scoring_cathedral_ssap.txt', # _ce, _fatcat, _fl, _ssap
         c('RUPEE All-Aligned','RUPEE Top-Aligned','CATHEDRAL'), 
@@ -49,7 +49,7 @@ plot1 <- get_scoring_plot(
 )
 plot2 <- get_scoring_plot(
         'CATHEDRAL',
-        'vs. CATHEDRAL',
+        'vs: CATHEDRAL\nbenchmark: casp_cathedral_d247\nRUPEE search type: Full-Length',
         'TM-score (avg)',
         'scoring_cathedral_fl.txt', # _ce, _fatcat, _fl, _ssap
         c('RUPEE All-Aligned','RUPEE Top-Aligned','CATHEDRAL'), 
@@ -60,7 +60,7 @@ plot2 <- get_scoring_plot(
 )
 plot3 <- get_scoring_plot(
         'CATHEDRAL',
-        'vs. CATHEDRAL',
+        'vs: CATHEDRAL\nbenchmark: casp_cathedral_d247\nRUPEE search type: RMSD',
         'RMSD',
         'scoring_cathedral_ce.txt', # _ce, _fatcat, _fl, _ssap
         c('RUPEE All-Aligned','RUPEE Top-Aligned','CATHEDRAL'), 
