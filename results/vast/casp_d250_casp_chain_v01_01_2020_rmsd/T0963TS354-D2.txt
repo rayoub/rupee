@@ -62,14 +62,14 @@
 4KSS E 3,40,7.0,0.0054,1.3,5.0,Crystal Structure Of Vibrio Cholerae Atpase Gspse Hexamer
 4KSS D 3,40,7.0,0.0061,1.3,5.0,Crystal Structure Of Vibrio Cholerae Atpase Gspse Hexamer
 4KSS C 3,40,6.9,0.0064,1.3,5.0,Crystal Structure Of Vibrio Cholerae Atpase Gspse Hexamer
-3U3X D 2,41,6.9,0.0002,1.3,4.9,Crystal Structure Of A Putative Oxidoreductase From Sinorhizobium Meliloti 1021˙
-4AHC A 4,21,5.0,0.0110,1.3,9.5,Crystal Structure Of An Evolved Replicating Dna Polymerase˙
+3U3X D 2,41,6.9,0.0002,1.3,4.9,Crystal Structure Of A Putative Oxidoreductase From Sinorhizobium Meliloti 1021ÿ
+4AHC A 4,21,5.0,0.0110,1.3,9.5,Crystal Structure Of An Evolved Replicating Dna Polymeraseÿ
 1Y12 C ,39,7.0,0.0057,1.3,5.1,Structure Of A Hemolysin-Corregulated Protein From Pseudomonas Aeruginosa
 3B77 C ,35,6.6,0.0022,1.3,2.9,Crystal Structure Of Protein Of Unknown Function (Duf1696) With Pleckstrin-Homology Domain (Zp_00539245.1) From Exiguobacterium Sibiricum 255-15 At 2.42 A Resolution
 1P6P A ,39,6.5,0.0451,1.3,5.1,Crystal Structure Of Toad Liver Basic Fatty Acid-Binding Protein
 4FQX A 1,27,4.8,0.0285,1.3,3.7,Crystal Structure Of Hla-Dm Bound To Hla-Dr1
 2OPE B ,30,5.9,0.0036,1.3,10.0,Crystal Structure Of The Neisseria Meningitidis Minor Type Iv Pilin, Pilx, In Space Group P43
-3A5P D 2,27,5.2,0.0152,1.3,3.7,Crystal Structure Of Hemagglutinin˙
+3A5P D 2,27,5.2,0.0152,1.3,3.7,Crystal Structure Of Hemagglutininÿ
 1IMA A 1,42,5.9,0.0411,1.3,7.1,Inositol Monophosphatase (E.C.3.1.3.25) Complexed With Gadolinium And D-Myo-Inositol-1-Phosphate
 4XGW B 1,30,6.1,0.0195,1.4,10.0,Crystal Structure Of Escherichia Coli Flavin Trafficking Protein, An Fmn Transferase, E169k Mutant
 4I3E A 1,40,6.6,0.0018,1.4,12.5,Crystal Structure Of Staphylococcal Impase - I Complexed With Products
@@ -79,42 +79,42 @@
 4XHJ A 2,38,6.9,0.0020,1.4,2.6,Ghgl Of Varicella-zoster Virus In Complex With Human Neutralizing Antibodies
 4I40 B 1,40,6.4,0.0058,1.4,12.5,Crystal Structure Of Staphylococcal Inositol Monophosphatase-1: 50mm Licl Inhibited Complex
 1NIJ A 2,31,5.2,0.0152,1.4,3.2,Yjia Protein
-3RYD C ,40,6.8,0.0196,1.4,12.5,Crystal Strucutre Of Ca Bound Impase Family Protein From Staphylococcus Aureus˙
+3RYD C ,40,6.8,0.0196,1.4,12.5,Crystal Strucutre Of Ca Bound Impase Family Protein From Staphylococcus Aureusÿ
 4G61 B 1,40,6.5,0.0031,1.4,12.5,Crystal Structure Of Impase/nadp Phosphatase Complexed With Mg2+ And Phosphate
 5A04 A 2,32,6.3,0.0385,1.4,15.6,Crystal Structure Of Aldose-aldose Oxidoreductase From Caulobacter Crescentus Complexed With Glucose
 5F24 B 1,40,6.4,0.0006,1.4,12.5,Crystal Structure Of Dual Specific Impase/nadp Phosphatase Bound With D-inositol-1-phosphate
 4PTK B 1,40,6.5,0.0038,1.4,12.5,Crystal Structure Of Staphylococcal Impase-i Complex With 3mg2+ And Phosphate
 4XHJ E 2,38,6.9,0.0020,1.4,2.6,Ghgl Of Varicella-zoster Virus In Complex With Human Neutralizing Antibodies
 4HAB C 1,34,5.4,0.0231,1.4,2.9,Crystal Structure Of Plk1 Polo-box Domain In Complex With Pl-49
-3HIK A 2,35,5.9,0.0042,1.4,2.9,Structure Of Human Plk1-Pbd In Complex With Plhspt˙
+3HIK A 2,35,5.9,0.0042,1.4,2.9,Structure Of Human Plk1-Pbd In Complex With Plhsptÿ
 4I40 A 1,40,6.5,0.0030,1.4,12.5,Crystal Structure Of Staphylococcal Inositol Monophosphatase-1: 50mm Licl Inhibited Complex
-3A5P A 2,27,5.2,0.0279,1.4,3.7,Crystal Structure Of Hemagglutinin˙
+3A5P A 2,27,5.2,0.0279,1.4,3.7,Crystal Structure Of Hemagglutininÿ
 4LD3 A ,38,7.0,0.0080,1.4,5.3,Structural Analysis Of The Microcephaly Protein Cpap G-box Domain Suggests A Role In Centriole Elongation
 1FSU A 2,30,5.2,0.0022,1.4,6.7,Crystal Structure Of 4-sulfatase (human)
-3KES A ,34,6.4,0.0111,1.4,2.9,Crystal Structure Of The Autoproteolytic Domain From The Nuclear Pore Complex Component Nup145 From Saccharomyces Cerevisiae In The Hexagonal, P61 Space Group˙
-3U3X A 2,41,6.5,0.0038,1.4,7.3,Crystal Structure Of A Putative Oxidoreductase From Sinorhizobium Meliloti 1021˙
-3EAA A ,41,6.8,0.0471,1.4,2.4,Structure Of A Type Six Secretion System Protein˙
+3KES A ,34,6.4,0.0111,1.4,2.9,Crystal Structure Of The Autoproteolytic Domain From The Nuclear Pore Complex Component Nup145 From Saccharomyces Cerevisiae In The Hexagonal, P61 Space Groupÿ
+3U3X A 2,41,6.5,0.0038,1.4,7.3,Crystal Structure Of A Putative Oxidoreductase From Sinorhizobium Meliloti 1021ÿ
+3EAA A ,41,6.8,0.0471,1.4,2.4,Structure Of A Type Six Secretion System Proteinÿ
 2HHM A 1,41,6.1,0.0183,1.4,7.3,Structure Of Inositol Monophosphatase, The Putative Target Of Lithium Therapy
 4UU4 A ,33,6.9,0.0205,1.4,6.1,Crystal Structure Of Lpth, The Lpta Homologous Periplasmic Component Of The Conserved Lipopolysaccharide Transport Device From Pseudomonas Aeruginosa
 3BEW A 1,33,6.3,0.0344,1.4,9.1,10mer Crystal Structure Of Chicken Mhc Class I Haplotype B21
-3KEP A ,34,6.4,0.0121,1.4,2.9,Crystal Structure Of The Autoproteolytic Domain From The Nuclear Pore Complex Component Nup145 From Saccharomyces Cerevisiae˙
+3KEP A ,34,6.4,0.0121,1.4,2.9,Crystal Structure Of The Autoproteolytic Domain From The Nuclear Pore Complex Component Nup145 From Saccharomyces Cerevisiaeÿ
 1QHT A 5,21,5.0,0.0107,1.4,9.5,Dna Polymerase From Thermococcus Sp. 9on-7 Archaeon
 5EYH B 1,40,6.4,0.0061,1.4,12.5,Crystal Structure Of Impase/nadp Phosphatase Complexed With Nadp And Ca2+ At Ph 7.0
 4G61 A 1,40,6.5,0.0046,1.4,12.5,Crystal Structure Of Impase/nadp Phosphatase Complexed With Mg2+ And Phosphate
 2Q74 C ,43,6.7,0.0376,1.4,9.3,Mycobacterium Tuberculosis Suhb
 1G0H B ,43,6.9,0.0079,1.4,4.7,Crystal Structure Of Mj0109 Gene Product Inositol Monophosphatase-Fructose 1,6 Bisphosphatase
 2O34 A ,31,6.6,0.0452,1.4,9.7,Crystal Structure Of The Hypothetical Protein From Desulfovibrio Vulgaris Hildenborough
-2PMU D 1,21,4.7,0.0442,1.4,9.5,Crystal Structure Of The Dna-Binding Domain Of Phop˙
+2PMU D 1,21,4.7,0.0442,1.4,9.5,Crystal Structure Of The Dna-Binding Domain Of Phopÿ
 2RNR B 1,26,4.9,0.0197,1.4,3.8,Solution Structure Of The Complex Between Tfiie Alpha C- Terminal Acidic Domain And Tfiih P62 Ph Domain
 4Q28 C 1,37,4.7,0.0483,1.4,0.0,Crystal Structure Of The Plectin 1 And 2 Repeats Of The Human Periplakin. Northeast Structural Genomics Consortium (nesg) Target Hr9083a
 4BY2 A ,41,7.0,0.0039,1.4,4.9,Sas-4 (dcpap) Tcp Domain In Complex With A Proline Rich Motif Of Ana2 (dstil) Of Drosophila Melanogaster
-2PMU A 1,21,4.7,0.0462,1.4,9.5,Crystal Structure Of The Dna-Binding Domain Of Phop˙
+2PMU A 1,21,4.7,0.0462,1.4,9.5,Crystal Structure Of The Dna-Binding Domain Of Phopÿ
 4IXN B 2,30,5.2,0.0152,1.4,3.3,Crystal Structure Of Zn(ii)-bound E37a,c66a,c67a Triple Mutant Yjia Gtpase
 4IXN A 2,30,5.2,0.0152,1.4,3.3,Crystal Structure Of Zn(ii)-bound E37a,c66a,c67a Triple Mutant Yjia Gtpase
-4A63 B 2,16,5.0,0.0141,1.4,12.5,Crystal Structure Of The P73-Aspp2 Complex At 2.6a Resolution˙
+4A63 B 2,16,5.0,0.0141,1.4,12.5,Crystal Structure Of The P73-Aspp2 Complex At 2.6a Resolutionÿ
 4G7N B 2,35,6.2,0.0014,1.4,11.4,The Structure Of The Plk4 Cryptic Polo Box Reveals Two Tandem Polo Boxes Required For Centriole Duplication
-4Q28 D 1,37,4.9,0.0166,1.4,0.0,Crystal Structure Of The Plectin 1 And 2 Repeats Of The Human Periplakin. Northeast Structural Genomics Consortium (nesg) Target Hr9083a
 4BY2 B ,42,7.0,0.0039,1.4,4.8,Sas-4 (dcpap) Tcp Domain In Complex With A Proline Rich Motif Of Ana2 (dstil) Of Drosophila Melanogaster
+4Q28 D 1,37,4.9,0.0166,1.4,0.0,Crystal Structure Of The Plectin 1 And 2 Repeats Of The Human Periplakin. Northeast Structural Genomics Consortium (nesg) Target Hr9083a
 4IXM A 2,30,5.2,0.0152,1.4,3.3,Crystal Structure Of Zn(ii)-bound Yjia Gtpase From E. Coli
 4RAA A 5,34,4.8,0.0298,1.4,2.9,Crystal Structure Of A Putative Exported Protein (bf0058) From Bacteroides Fragilis Nctc 9343 At 2.60 A Resolution
 5CWW A ,36,6.2,0.0163,1.4,2.8,Crystal Structure Of The Chaetomium Thermophilum Heterotrimeric Nup82 Ntd-nup159 Tail-nup145n Apd Complex
