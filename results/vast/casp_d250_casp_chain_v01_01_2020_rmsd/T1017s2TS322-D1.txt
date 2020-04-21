@@ -27,43 +27,43 @@
 4QN3 B 3,31,5.2,0.0308,1.0,6.5,Crystal Structure Of Neuraminidase N7
 3KIH D 2,26,5.2,0.0308,1.0,15.4,The Crystal Structures Of Two Fragments Truncated From 5-Bla Propeller Lectin, Tachylectin-2 (Lib2-D2-15)ÿ
 2XZG A 3,29,5.2,0.0308,1.1,6.9,Clathrin Terminal Domain Complexed With Pitstop 1ÿ
+5A9Q J 3,30,5.2,0.0308,1.1,13.3,Human Nuclear Pore Complex
 5A9Q S 3,30,5.2,0.0308,1.1,13.3,Human Nuclear Pore Complex
 5A9Q 1 3,30,5.2,0.0308,1.1,13.3,Human Nuclear Pore Complex
-5A9Q J 3,30,5.2,0.0308,1.1,13.3,Human Nuclear Pore Complex
 5A9Q a 3,30,5.2,0.0308,1.1,13.3,Human Nuclear Pore Complex
 4N7E A 5,27,5.2,0.0308,1.1,3.7,Crystal Structure Of The Vps10p Domain Of Human Sortilin/nts3 In Complex With Af38469
 4S04 B 2,18,5.2,0.0308,1.1,16.7,Crystal Structure Of Klebsiella Pneumoniae Pmra In Complex With Pmra Box Dna
 1C9L A 6,28,5.2,0.0308,1.1,7.1,Peptide-In-Groove Interactions Link Target Proteins To The B-Propeller Of Clathrin
-1BPO B 3,29,5.2,0.0396,1.1,6.9,Clathrin Heavy-Chain Terminal Domain And Linker
-1XI5 H 3,29,5.2,0.0395,1.1,6.9,Clathrin D6 Coat With Auxilin J-Domain
-3IYV C 3,29,5.2,0.0398,1.1,6.9,Clathrin D6 Coatÿ
 1XI4 D 3,29,5.2,0.0397,1.1,6.9,Clathrin D6 Coat
-1XI4 G 3,29,5.2,0.0397,1.1,6.9,Clathrin D6 Coat
-1XI4 H 3,29,5.2,0.0397,1.1,6.9,Clathrin D6 Coat
 1XI5 D 3,29,5.2,0.0395,1.1,6.9,Clathrin D6 Coat With Auxilin J-Domain
 1XI5 F 3,29,5.2,0.0396,1.1,6.9,Clathrin D6 Coat With Auxilin J-Domain
+1XI5 H 3,29,5.2,0.0395,1.1,6.9,Clathrin D6 Coat With Auxilin J-Domain
+1XI4 G 3,29,5.2,0.0397,1.1,6.9,Clathrin D6 Coat
+1XI4 H 3,29,5.2,0.0397,1.1,6.9,Clathrin D6 Coat
 3IYV A 3,29,5.2,0.0397,1.1,6.9,Clathrin D6 Coatÿ
+3IYV C 3,29,5.2,0.0398,1.1,6.9,Clathrin D6 Coatÿ
 3IYV E 3,29,5.2,0.0398,1.1,6.9,Clathrin D6 Coatÿ
 3IYV F 3,29,5.2,0.0398,1.1,6.9,Clathrin D6 Coatÿ
+1BPO B 3,29,5.2,0.0396,1.1,6.9,Clathrin Heavy-Chain Terminal Domain And Linker
+1D6U A 2,26,6.3,0.0079,1.1,0.0,Crystal Structure Of E. Coli Amine Oxidase Anaerobically Reduced With Beta-Phenylethylamine
+1BPO A 3,29,5.2,0.0377,1.1,6.9,Clathrin Heavy-Chain Terminal Domain And Linker
 3IYV G 3,29,5.2,0.0398,1.1,6.9,Clathrin D6 Coatÿ
 3IYV H 3,29,5.2,0.0398,1.1,6.9,Clathrin D6 Coatÿ
 3IYV I 3,29,5.2,0.0396,1.1,6.9,Clathrin D6 Coatÿ
+3IYV D 3,29,5.2,0.0397,1.1,6.9,Clathrin D6 Coatÿ
 3IYV B 3,29,5.2,0.0397,1.1,6.9,Clathrin D6 Coatÿ
-1XI5 G 3,29,5.2,0.0395,1.1,6.9,Clathrin D6 Coat With Auxilin J-Domain
-1XI5 E 3,29,5.2,0.0395,1.1,6.9,Clathrin D6 Coat With Auxilin J-Domain
 1XI4 I 3,29,5.2,0.0397,1.1,6.9,Clathrin D6 Coat
 1XI5 A 3,29,5.2,0.0395,1.1,6.9,Clathrin D6 Coat With Auxilin J-Domain
 1XI5 B 3,29,5.2,0.0396,1.1,6.9,Clathrin D6 Coat With Auxilin J-Domain
 1XI5 C 3,29,5.2,0.0396,1.1,6.9,Clathrin D6 Coat With Auxilin J-Domain
-1XI4 E 3,29,5.2,0.0397,1.1,6.9,Clathrin D6 Coat
-1XI4 F 3,29,5.2,0.0398,1.1,6.9,Clathrin D6 Coat
 1XI4 A 3,29,5.2,0.0398,1.1,6.9,Clathrin D6 Coat
+1XI4 B 3,29,5.2,0.0396,1.1,6.9,Clathrin D6 Coat
+1XI4 B 3,29,5.2,0.0396,1.1,6.9,Clathrin D6 Coat
 1XI4 C 3,29,5.2,0.0398,1.1,6.9,Clathrin D6 Coat
+3IYV D 3,29,5.2,0.0397,1.1,6.9,Clathrin D6 Coatÿ
 1XI5 I 3,29,5.2,0.0396,1.1,6.9,Clathrin D6 Coat With Auxilin J-Domain
-1XI5 G 3,29,5.2,0.0395,1.1,6.9,Clathrin D6 Coat With Auxilin J-Domain
-1XI5 E 3,29,5.2,0.0395,1.1,6.9,Clathrin D6 Coat With Auxilin J-Domain
-1XI4 E 3,29,5.2,0.0397,1.1,6.9,Clathrin D6 Coat
-1XI4 F 3,29,5.2,0.0398,1.1,6.9,Clathrin D6 Coat
+1D6U A 2,26,6.3,0.0079,1.1,0.0,Crystal Structure Of E. Coli Amine Oxidase Anaerobically Reduced With Beta-Phenylethylamine
+1BPO A 3,29,5.2,0.0377,1.1,6.9,Clathrin Heavy-Chain Terminal Domain And Linker
 2WGQ A 2,26,6.2,0.0121,1.1,0.0,Zinc Substituted E Coli Copper Amine Oxidase, A Model For The Precursor For 2,4,5-Trihydroxyphenylalaninequinone Formationÿ
 4MSL A 5,27,5.2,0.0333,1.1,3.7,Crystal Structure Of The Vps10p Domain Of Human Sortilin/nts3 In Complex With Af40431
 4HH4 F 2,31,5.2,0.0495,1.1,6.5,Structure Of The Ccbj Methyltransferase From Streptomyces Caelestis
@@ -97,10 +97,10 @@
 4IMM A 4,23,5.2,0.0308,1.2,0.0,The Crystal Structure Of Bamb From Moraxella Catarrhalis
 3DW8 E 4,29,5.2,0.0345,1.2,6.9,Structure Of A Protein Phosphatase 2a Holoenzyme With B55 Subunitÿ
 1DYU B 2,27,6.2,0.0135,1.2,0.0,The Active Site Base Controls Cofactor Reactivity In Escherichia Coli Amine Oxidase: X-Ray Crystallographic Studies With Mutational Variants
-2YH3 A 4,25,5.2,0.0324,1.2,4.0,The Structure Of Bamb From E. Coliÿ
-1OAC B 2,27,6.2,0.0136,1.2,0.0,Oxidoreductase, Copper, Tpq, Periplasmic, Signal Mol_id: 1; Molecule: Copper Amine Oxidase; Chain: A, B; Ec: 1.4.3.6
-2FKJ C 2,33,6.0,0.0247,1.2,9.1,The Crystal Structure Of Engineered Ospa
 3KIH E 1,26,5.2,0.0308,1.2,11.5,The Crystal Structures Of Two Fragments Truncated From 5-Bla Propeller Lectin, Tachylectin-2 (Lib2-D2-15)ÿ
+1OAC B 2,27,6.2,0.0136,1.2,0.0,Oxidoreductase, Copper, Tpq, Periplasmic, Signal Mol_id: 1; Molecule: Copper Amine Oxidase; Chain: A, B; Ec: 1.4.3.6
+2YH3 A 4,25,5.2,0.0324,1.2,4.0,The Structure Of Bamb From E. Coliÿ
+2FKJ C 2,33,6.0,0.0247,1.2,9.1,The Crystal Structure Of Engineered Ospa
 4XMM E 3,34,5.2,0.0308,1.2,5.9,Structure Of The Yeast Coat Nucleoporin Complex
 2PMZ R 3,32,6.7,0.0429,1.2,9.4,Archaeal Rna Polymerase From Sulfolobus Solfataricus
 4IMM B 5,24,5.2,0.0308,1.2,0.0,The Crystal Structure Of Bamb From Moraxella Catarrhalis

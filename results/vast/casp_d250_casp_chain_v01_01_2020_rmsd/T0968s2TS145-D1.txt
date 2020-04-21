@@ -61,39 +61,39 @@
 4RS6 A 2,40,6.9,0.0109,1.6,5.0,Crystal Structure Of The C Domain Of Polo Like Kinase Ii In Homo Sapiens
 4O6W A 2,39,7.0,0.0060,1.6,12.8,Peptide-based Inhibitors Of Plk1 Polo-box Domain
 2PMZ B 3,34,6.2,0.0330,1.6,5.9,Archaeal Rna Polymerase From Sulfolobus Solfataricus
-3P36 A 2,38,7.0,0.0060,1.6,13.2,Polo-Like Kinase I Polo-Box Domain In Complex With Dpplhspta Phosphopeptide From Pbip1ÿ
+3P36 A 2,38,7.0,0.0060,1.6,13.2,Polo-Like Kinase I Polo-Box Domain In Complex With Dpplhspta Phosphopeptide From Pbip1я
 4BGF E 1,37,6.9,0.0234,1.7,5.4,The 3d-structure Of Arylamine-n-acetyltransferase From M. Tuberculosis
-3CWX A 1,38,6.4,0.0161,1.7,10.5,Crystal Structure Of Cagd From Helicobacter Pylori Pathogenicity Islandÿ
+3CWX A 1,38,6.4,0.0161,1.7,10.5,Crystal Structure Of Cagd From Helicobacter Pylori Pathogenicity Islandя
 4E9C A 2,39,6.9,0.0074,1.7,12.8,The Structure Of The Polo-Box Domain (Pbd) Of Polo-Like Kinase 1 (Plk1) In Complex With Ldpplhspta Phosphopeptide
-3RQ7 A 2,39,7.0,0.0060,1.7,12.8,Polo-Like Kinase 1 Polo Box Domain In Complex With A C6h5(Ch2)8- Derivatized Peptide Inhibitorÿ
+3RQ7 A 2,39,7.0,0.0060,1.7,12.8,Polo-Like Kinase 1 Polo Box Domain In Complex With A C6h5(Ch2)8- Derivatized Peptide Inhibitorя
 4BGF F 1,37,6.9,0.0274,1.7,5.4,The 3d-structure Of Arylamine-n-acetyltransferase From M. Tuberculosis
 4BGF A 1,37,6.9,0.0222,1.7,5.4,The 3d-structure Of Arylamine-n-acetyltransferase From M. Tuberculosis
 4QQQ A 3,41,6.5,0.0337,1.7,2.4,Crystal Structure Of Pneumolysin From Streptococcus Pneumoniae, In Complex With Mannose As A Component Of Cell Membrane
 4O9W A 2,40,6.8,0.0182,1.7,10.0,Crystal Structure Of Polo-like Kinase(plk1)pbd In Complex With Phospho Peptide
 4C8H A 1,34,6.7,0.0023,1.7,17.6,Crystal Structure Of The C-terminal Region Of Yeast Ctf4, Selenomethionine Protein
-3P35 B 2,41,6.9,0.0115,1.7,9.8,Polo-Like Kinase I Polo-Box Domain In Complex With Mqspspl Phosphopeptideÿ
+3P35 B 2,41,6.9,0.0115,1.7,9.8,Polo-Like Kinase I Polo-Box Domain In Complex With Mqspspl Phosphopeptideя
 4BGF D 1,37,6.9,0.0200,1.7,5.4,The 3d-structure Of Arylamine-n-acetyltransferase From M. Tuberculosis
 5DMS A 2,40,6.9,0.0121,1.7,10.0,Mouse Polo-box Domain And Emi2 (169-177)
-3UNH K 2,38,6.6,0.0067,1.7,5.3,Mouse 20s Immunoproteasomeÿ
-3Q1I A 2,41,6.9,0.0100,1.7,9.8,Polo-Like Kinase I Polo-Box Domain In Complex With Fmpppmspsm Phosphopeptide From Tcerg1ÿ
-3UNH Y 2,38,6.6,0.0067,1.7,5.3,Mouse 20s Immunoproteasomeÿ
+3Q1I A 2,41,6.9,0.0100,1.7,9.8,Polo-Like Kinase I Polo-Box Domain In Complex With Fmpppmspsm Phosphopeptide From Tcerg1я
+3UNH K 2,38,6.6,0.0067,1.7,5.3,Mouse 20s Immunoproteasomeя
+3UNH Y 2,38,6.6,0.0067,1.7,5.3,Mouse 20s Immunoproteasomeя
 4RS6 B 2,38,7.0,0.0067,1.7,5.3,Crystal Structure Of The C Domain Of Polo Like Kinase Ii In Homo Sapiens
 4X9V A 2,40,6.8,0.0205,1.7,10.0,Plk-1 Polo-box Domain In Complex With Bioactive Imidazolium-containing Phosphopeptide Macrocycle 3c
 2K4V A ,38,6.1,0.0383,1.7,2.6,Solution Structure Of Uncharacterized Protein Pa1076 From Pseudomonas Aeruginosa. Northeast Structural Genomics Consortium (Nesg) Target Pat3, Ontario Center For Structural Proteomics Target Pa1076
 4LKL A 2,40,6.8,0.0127,1.7,10.0,Crystal Structure Of Plk1 Polo-box Domain In Complex With Pl-55
 4WHH A 2,41,6.9,0.0094,1.7,9.8,A New Class Of Peptidomimetics Targeting The Polo-box Domain Of Polo- Like Kinase 1
-3P35 C 2,41,6.9,0.0078,1.7,9.8,Polo-Like Kinase I Polo-Box Domain In Complex With Mqspspl Phosphopeptideÿ
-3P2Z A 2,41,6.9,0.0108,1.7,9.8,Polo-Like Kinase I Polo-Box Domain In Complex With Plhspta Phosphopeptide From Pbip1ÿ
 2OJX A 2,39,7.0,0.0060,1.7,12.8,Molecular And Structural Basis Of Polo-Like Kinase 1 Substrate Recognition: Implications In Centrosomal Localization
-4AID A 1,37,6.7,0.0280,1.7,5.4,Crystal Structure Of C. Crescentus Pnpase Bound To Rnase E Recognition Peptideÿ
+3P35 C 2,41,6.9,0.0078,1.7,9.8,Polo-Like Kinase I Polo-Box Domain In Complex With Mqspspl Phosphopeptideя
+3P2Z A 2,41,6.9,0.0108,1.7,9.8,Polo-Like Kinase I Polo-Box Domain In Complex With Plhspta Phosphopeptide From Pbip1я
+4AID A 1,37,6.7,0.0280,1.7,5.4,Crystal Structure Of C. Crescentus Pnpase Bound To Rnase E Recognition Peptideя
 5DNJ A 2,41,6.8,0.0227,1.7,9.8,Mouse Polo-box Domain And Peptide Analog 702
-3EE1 A 2,37,6.7,0.0034,1.7,13.5,Novel Fold Of Vira, A Type Iii Secretion System Effector Protein From Shigella Flexneriÿ
+3EE1 A 2,37,6.7,0.0034,1.7,13.5,Novel Fold Of Vira, A Type Iii Secretion System Effector Protein From Shigella Flexneriя
 4LKM A 2,40,6.7,0.0295,1.7,10.0,Crystal Structure Of Plk1 Polo-box Domain In Complex With Pl-74
 2M3X A 2,47,7.0,0.0380,1.7,6.4,Solution Structure Of Ph1500: A Homohexameric Protein Centered On A 12-bladed Beta-propeller
 4HY2 A 2,41,6.9,0.0104,1.7,9.8,Crystal Structure Of Plk1 Polo-box Domain In Complex With Pl-42
 4C8S B 1,34,6.8,0.0013,1.7,17.6,Crystal Structure Of The C-terminal Region Of Yeast Ctf4
 2M3X C 2,48,7.8,0.0032,1.7,8.3,Solution Structure Of Ph1500: A Homohexameric Protein Centered On A 12-bladed Beta-propeller
-3C5L A 2,41,6.8,0.0190,1.7,9.8,Polo-Like Kinase 1 Polo Box Domain In Complex With Pphspt Peptideÿ
+3C5L A 2,41,6.8,0.0190,1.7,9.8,Polo-Like Kinase 1 Polo Box Domain In Complex With Pphspt Peptideя
 4X9W A 2,41,6.9,0.0103,1.7,9.8,Plk-1 Polo-box Domain In Complex With Bioactive Imidazolium-containing Phosphopeptide Macrocycle 4c
 4C93 C 1,32,6.7,0.0040,1.7,15.6,Crystal Structure Of The Carboxy-terminal Domain Of Yeast Ctf4 Bound To Pol Alpha
 4NKB B 2,34,6.7,0.0266,1.8,0.0,Crystal Structure Of The Cryptic Polo Box (cpb)of Zyg-1
@@ -101,24 +101,24 @@
 4G7N B 2,37,6.7,0.0343,1.8,5.4,The Structure Of The Plk4 Cryptic Polo Box Reveals Two Tandem Polo Boxes Required For Centriole Duplication
 1HLA A 1,33,7.0,0.0407,1.8,3.0,Human Class I Histocompatibility Antigen A2 (HLA-A2, Human Leucocyte Antigen)
 3BZI A 2,39,6.7,0.0281,1.8,7.7,Molecular And Structural Basis Of Polo-Like Kinase 1 Substrate Recognition: Implications In Centrosomal Localization
-3P37 B 2,41,6.8,0.0222,1.8,9.8,Polo-Like Kinase I Polo-Box Domain In Complex With Fdpplhspta Phosphopeptide From Pbip1ÿ
 4H71 A 2,41,6.8,0.0167,1.8,7.3,Human Plk1-Pbd In Complex With Poloxime ((E)-4-(Hydroxyimino)-2- Isopropyl-5-Methylcyclohexa-2,5-Dienone)
+3P37 B 2,41,6.8,0.0222,1.8,9.8,Polo-Like Kinase I Polo-Box Domain In Complex With Fdpplhspta Phosphopeptide From Pbip1я
 4RCP A 2,41,6.8,0.0179,1.8,7.3,Crystal Structure Of Plk1 Polo-box Domain In Complex With Pl-2
-3P37 A 2,40,6.8,0.0200,1.8,7.5,Polo-Like Kinase I Polo-Box Domain In Complex With Fdpplhspta Phosphopeptide From Pbip1ÿ
+3P37 A 2,40,6.8,0.0200,1.8,7.5,Polo-Like Kinase I Polo-Box Domain In Complex With Fdpplhspta Phosphopeptide From Pbip1я
 4WHL A 2,41,6.9,0.0115,1.8,9.8,A New Class Of Peptidomimetics Targeting The Polo-box Domain Of Polo- Like Kinase 1
 4E67 A 2,41,6.9,0.0108,1.8,7.3,The Structure Of The Polo-Box Domain (Pbd) Of Polo-Like Kinase 1 (Plk1) In Complex With Hydrocinnamoyl-Derivatized Plhspta Peptide
-3HIK A 2,42,6.8,0.0157,1.8,7.1,Structure Of Human Plk1-Pbd In Complex With Plhsptÿ
-3P2W A 2,41,6.8,0.0138,1.8,7.3,Unliganded Form Of Polo-Like Kinase I Polo-Box Domainÿ
+3HIK A 2,42,6.8,0.0157,1.8,7.1,Structure Of Human Plk1-Pbd In Complex With Plhsptя
+3P2W A 2,41,6.8,0.0138,1.8,7.3,Unliganded Form Of Polo-Like Kinase I Polo-Box Domainя
 4C95 C 1,34,6.7,0.0036,1.8,17.6,Crystal Structure Of The Carboxy-terminal Domain Of Yeast Ctf4 Bound To Sld5
 4C8S A 1,38,6.7,0.0026,1.8,5.3,Crystal Structure Of The C-terminal Region Of Yeast Ctf4
-2PMZ R 3,32,6.2,0.0324,1.8,0.0,Archaeal Rna Polymerase From Sulfolobus Solfataricus
 4E9D A 2,38,7.0,0.0060,1.8,13.2,The Structure Of The Polo-Box Domain (Pbd) Of Polo-Like Kinase 1 (Plk1) In Complex With 3-(1-Benzothiophen-2-Yl)propanoyl-Derivatized Dpplhspta Peptide
+2PMZ R 3,32,6.2,0.0324,1.8,0.0,Archaeal Rna Polymerase From Sulfolobus Solfataricus
 2M3X E 2,48,7.0,0.0434,1.8,8.3,Solution Structure Of Ph1500: A Homohexameric Protein Centered On A 12-bladed Beta-propeller
 4CDB A 3,41,6.9,0.0024,1.8,9.8,Crystal Structure Of Listeriolysin O
-4X9R A 2,41,6.7,0.0230,1.8,7.3,Plk-1 Polo-box Domain In Complex With Bioactive Imidazolium-containing Phosphopeptide Macrocycle 3b
 1Q4K C 2,40,7.0,0.0060,1.8,12.5,The Polo-Box Domain Of Plk1 In Complex With A Phospho- Peptide
+4X9R A 2,41,6.7,0.0230,1.8,7.3,Plk-1 Polo-box Domain In Complex With Bioactive Imidazolium-containing Phosphopeptide Macrocycle 3b
 1UMW A 2,41,6.8,0.0188,1.8,7.3,Structure Of A Human Plk1 Polo-Box DomainPHOSPHOPEPTIDE Complex
-3P37 C 2,42,6.8,0.0145,1.8,9.5,Polo-Like Kinase I Polo-Box Domain In Complex With Fdpplhspta Phosphopeptide From Pbip1ÿ
+3P37 C 2,42,6.8,0.0145,1.8,9.5,Polo-Like Kinase I Polo-Box Domain In Complex With Fdpplhspta Phosphopeptide From Pbip1я
 4H63 Q 3,46,7.6,0.0012,1.8,6.5,Structure Of The Schizosaccharomyces Pombe Mediator Head Module
 5DMS C 2,42,6.9,0.0106,1.8,7.1,Mouse Polo-box Domain And Emi2 (169-177)
 2OGQ A 2,41,6.8,0.0192,1.8,7.3,Molecular And Structural Basis Of Plk1 Substrate Recognition: Implications In Centrosomal Localization
@@ -127,51 +127,51 @@
 4HAB B 2,41,6.8,0.0143,1.8,7.3,Crystal Structure Of Plk1 Polo-box Domain In Complex With Pl-49
 2O5I M 4,30,6.2,0.0318,1.8,10.0,Crystal Structure Of The T. Thermophilus Rna Polymerase Elongation Complex
 1Q4O B 2,42,6.9,0.0117,1.8,9.5,The Structure Of The Polo Box Domain Of Human Plk1
-3FY6 C 1,32,6.8,0.0019,1.8,9.4,Structure From The Mobile Metagenome Of V. Cholerae. Integron Cassette Protein Vch_cass3ÿ
+3FY6 C 1,32,6.8,0.0019,1.8,9.4,Structure From The Mobile Metagenome Of V. Cholerae. Integron Cassette Protein Vch_cass3я
 1W6F D 1,39,6.9,0.0214,1.8,7.7,Arylamine N-Acetyltransferase From Mycobacterium Smegmatis With The Anti-Tubercular Drug Isoniazid Bound In The Active Site
 4ZGH A 3,42,6.9,0.0031,1.8,9.5,Structure Of Sugar Binding Protein Pneumolysin
 1UMW B 2,40,6.8,0.0228,1.8,7.5,Structure Of A Human Plk1 Polo-Box DomainPHOSPHOPEPTIDE Complex
-3TC9 B 3,31,6.6,0.0468,1.8,9.7,Crystal Structure Of A Hypothetical Hydrolase (Bt_3476) From Bacteroides Thetaiotaomicron Vpi-5482 At 2.23 A Resolutionÿ
+3TC9 B 3,31,6.6,0.0468,1.8,9.7,Crystal Structure Of A Hypothetical Hydrolase (Bt_3476) From Bacteroides Thetaiotaomicron Vpi-5482 At 2.23 A Resolutionя
 4H5X A 2,43,6.8,0.0197,1.8,7.0,Human Plk1-Pbd With A Glycerol Bound At The Phophopeptide Binding Site
-3P34 A 2,41,6.8,0.0226,1.8,7.3,Polo-Like Kinase I Polo-Box Domain In Complex With Mqsptpl Phosphopeptideÿ
+3P34 A 2,41,6.8,0.0226,1.8,7.3,Polo-Like Kinase I Polo-Box Domain In Complex With Mqsptpl Phosphopeptideя
 4C95 A 1,40,6.7,0.0027,1.8,5.0,Crystal Structure Of The Carboxy-terminal Domain Of Yeast Ctf4 Bound To Sld5
 4H71 B 2,43,6.8,0.0187,1.8,7.0,Human Plk1-Pbd In Complex With Poloxime ((E)-4-(Hydroxyimino)-2- Isopropyl-5-Methylcyclohexa-2,5-Dienone)
-3HIH A 2,43,6.8,0.0179,1.8,7.0,Structure Of Human Plk1-Pbd With Glycerol And Sulfate In The Phophopeptide Binding Siteÿ
-3TC9 A 3,31,6.6,0.0497,1.8,9.7,Crystal Structure Of A Hypothetical Hydrolase (Bt_3476) From Bacteroides Thetaiotaomicron Vpi-5482 At 2.23 A Resolutionÿ
+3HIH A 2,43,6.8,0.0179,1.8,7.0,Structure Of Human Plk1-Pbd With Glycerol And Sulfate In The Phophopeptide Binding Siteя
+3TC9 A 3,31,6.6,0.0497,1.8,9.7,Crystal Structure Of A Hypothetical Hydrolase (Bt_3476) From Bacteroides Thetaiotaomicron Vpi-5482 At 2.23 A Resolutionя
 1Q4K A 2,43,6.8,0.0145,1.8,7.0,The Polo-Box Domain Of Plk1 In Complex With A Phospho- Peptide
 1K1Y B 4,36,6.9,0.0006,1.8,0.0,Crystal Structure Of Thermococcus Litoralis 4-Alpha- Glucanotransferase Complexed With Acarbose
 3DXJ C 4,36,6.9,0.0009,1.8,0.0,Crystal Structure Of Thermus Thermophilus Rna Polymerase Holoenzyme In Complex With The Antibiotic Myxopyronin
-4HCO A 2,43,6.8,0.0172,1.8,7.0,Human Plk1-Pbd In Complex With Thymoquinone At The Phophopeptide Binding Site
 1W6F B 1,39,7.0,0.0093,1.8,7.7,Arylamine N-Acetyltransferase From Mycobacterium Smegmatis With The Anti-Tubercular Drug Isoniazid Bound In The Active Site
-4HCO B 2,41,7.0,0.0060,1.8,12.2,Human Plk1-Pbd In Complex With Thymoquinone At The Phophopeptide Binding Site
+4HCO A 2,43,6.8,0.0172,1.8,7.0,Human Plk1-Pbd In Complex With Thymoquinone At The Phophopeptide Binding Site
 4H5X B 2,43,6.8,0.0221,1.8,7.0,Human Plk1-Pbd With A Glycerol Bound At The Phophopeptide Binding Site
+4HCO B 2,41,7.0,0.0060,1.8,12.2,Human Plk1-Pbd In Complex With Thymoquinone At The Phophopeptide Binding Site
 1K1X B 3,36,6.9,0.0386,1.8,0.0,Crystal Structure Of 4-Alpha-Glucanotransferase From Thermococcus Litoralis
 4C93 A 1,40,6.7,0.0025,1.8,5.0,Crystal Structure Of The Carboxy-terminal Domain Of Yeast Ctf4 Bound To Pol Alpha
-3NCT A ,46,6.9,0.0274,1.9,2.2,X-Ray Crystal Structure Of The Bacterial Conjugation Factor Psib, A Negative Regulator Of Recaÿ
-4B55 A 1,37,6.9,0.0231,1.9,0.0,Crystal Structure Of The Covalent Adduct Formed Between Mycobacterium Marinum Aryalamine N-acetyltransferase And Phenyl Vinyl Ketone A Derivative Of Piperidinols
+3NCT A ,46,6.9,0.0274,1.9,2.2,X-Ray Crystal Structure Of The Bacterial Conjugation Factor Psib, A Negative Regulator Of Recaя
 1W5R A 1,39,7.0,0.0193,1.9,7.7,X-Ray Crystallographic Strcuture Of A C70q Mycobacterium Smegmatis N-Arylamine Acetyltransferase
+4B55 A 1,37,6.9,0.0231,1.9,0.0,Crystal Structure Of The Covalent Adduct Formed Between Mycobacterium Marinum Aryalamine N-acetyltransferase And Phenyl Vinyl Ketone A Derivative Of Piperidinols
 5DMV C 2,43,6.8,0.0135,1.9,7.0,Polo-box Domain Of Mouse Polo-like Kinase 1 Complexed With Emi2 (146- 177)
 2O5J C 4,34,6.3,0.0216,1.9,0.0,Crystal Structure Of The T. Thermophilus Rnap Polymerase Elongation Complex With The Ntp Substrate Analog
 2O5J M 4,34,6.4,0.0125,1.9,0.0,Crystal Structure Of The T. Thermophilus Rnap Polymerase Elongation Complex With The Ntp Substrate Analog
 2VFB A 1,38,7.0,0.0169,1.9,0.0,The Structure Of Mycobacterium Marinum Arylamine N- Acetyltransferase
 4BGF B 1,38,6.9,0.0272,1.9,5.3,The 3d-structure Of Arylamine-n-acetyltransferase From M. Tuberculosis
 1GX3 B 1,39,6.9,0.0198,1.9,7.7,M. Smegmatis Arylamine N-Acetyl Transferase
-4C95 B 1,40,6.7,0.0028,1.9,5.0,Crystal Structure Of The Carboxy-terminal Domain Of Yeast Ctf4 Bound To Sld5
 2FUT A 4,58,10.4,0.0122,1.9,10.3,Crystal Structure Of Heparinase Ii Complexed With A Disaccharide Product
+4C95 B 1,40,6.7,0.0028,1.9,5.0,Crystal Structure Of The Carboxy-terminal Domain Of Yeast Ctf4 Bound To Sld5
 4C8H B 1,40,6.7,0.0034,1.9,5.0,Crystal Structure Of The C-terminal Region Of Yeast Ctf4, Selenomethionine Protein
 4HAB A 2,43,6.9,0.0119,1.9,7.0,Crystal Structure Of Plk1 Polo-box Domain In Complex With Pl-49
 1W5R B 1,39,7.0,0.0187,1.9,7.7,X-Ray Crystallographic Strcuture Of A C70q Mycobacterium Smegmatis N-Arylamine Acetyltransferase
 1GX3 C 1,38,6.9,0.0305,1.9,7.9,M. Smegmatis Arylamine N-Acetyl Transferase
-3NCT B ,46,6.9,0.0343,1.9,2.2,X-Ray Crystal Structure Of The Bacterial Conjugation Factor Psib, A Negative Regulator Of Recaÿ
-3I9V H ,42,7.5,0.0131,1.9,11.9,Crystal Structure Of The Hydrophilic Domain Of Respiratory Complex I From Thermus Thermophilus, Oxidized, 2 MolASUÿ
-3M9S 7 ,42,7.5,0.0134,1.9,11.9,Crystal Structure Of Respiratory Complex I From Thermus Therÿ
-3M9S J ,42,7.5,0.0134,1.9,11.9,Crystal Structure Of Respiratory Complex I From Thermus Therÿ
+3NCT B ,46,6.9,0.0343,1.9,2.2,X-Ray Crystal Structure Of The Bacterial Conjugation Factor Psib, A Negative Regulator Of Recaя
+3I9V H ,42,7.5,0.0131,1.9,11.9,Crystal Structure Of The Hydrophilic Domain Of Respiratory Complex I From Thermus Thermophilus, Oxidized, 2 MolASUя
 1W6F C 1,38,6.9,0.0220,1.9,7.9,Arylamine N-Acetyltransferase From Mycobacterium Smegmatis With The Anti-Tubercular Drug Isoniazid Bound In The Active Site
-3HIH B 2,37,6.6,0.0368,1.9,8.1,Structure Of Human Plk1-Pbd With Glycerol And Sulfate In The Phophopeptide Binding Siteÿ
+3M9S 7 ,42,7.5,0.0134,1.9,11.9,Crystal Structure Of Respiratory Complex I From Thermus Therя
+3M9S J ,42,7.5,0.0134,1.9,11.9,Crystal Structure Of Respiratory Complex I From Thermus Therя
 2GHO C 3,36,6.1,0.0415,1.9,11.1,Recombinant Thermus Aquaticus Rna Polymerase For Structural Studies
+3HIH B 2,37,6.6,0.0368,1.9,8.1,Structure Of Human Plk1-Pbd With Glycerol And Sulfate In The Phophopeptide Binding Siteя
 4LKM C 2,43,6.8,0.0195,1.9,9.3,Crystal Structure Of Plk1 Polo-box Domain In Complex With Pl-74
 1W6F A 1,39,6.9,0.0197,1.9,7.7,Arylamine N-Acetyltransferase From Mycobacterium Smegmatis With The Anti-Tubercular Drug Isoniazid Bound In The Active Site
-3E80 A 4,58,10.6,0.0064,1.9,10.3,Structure Of Heparinase Ii Complexed With Heparan Sulfate Degradation Disaccharide Productÿ
+3E80 A 4,58,10.6,0.0064,1.9,10.3,Structure Of Heparinase Ii Complexed With Heparan Sulfate Degradation Disaccharide Productя
 1GX3 A 1,39,6.9,0.0206,1.9,7.7,M. Smegmatis Arylamine N-Acetyl Transferase
 4BGF H 1,39,7.0,0.0192,1.9,5.1,The 3d-structure Of Arylamine-n-acetyltransferase From M. Tuberculosis
 4BGF G 1,38,7.0,0.0191,1.9,5.3,The 3d-structure Of Arylamine-n-acetyltransferase From M. Tuberculosis

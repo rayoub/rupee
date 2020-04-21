@@ -134,8 +134,8 @@
 2OND B 3,46,5.0,0.0455,2.0,6.5,Crystal Structure Of The Hat-C Domain Of Murine Cstf-77
 2VGL B 3,57,5.0,0.0490,2.0,10.5,Ap2 Clathrin Adaptor Core
 4LCT A 1,47,5.6,0.0055,2.0,2.1,Crystal Structure And Versatile Functional Roles Of The Cop9 Signalosome Subunit 1
-2F8X K 1,32,6.3,0.0115,2.0,6.2,Crystal Structure Of Activated Notch, Csl And Maml On Hes-1 Promoter Dna Sequenceÿ
 1OY3 D 2,38,6.2,0.0143,2.0,7.9,Crystal Structure Of An IkbbetaNF-Kb P65 Homodimer Complex
+2F8X K 1,32,6.3,0.0115,2.0,6.2,Crystal Structure Of Activated Notch, Csl And Maml On Hes-1 Promoter Dna Sequenceÿ
 4O60 B 1,47,6.7,0.0450,2.0,10.6,Structure Of Ankyrin Repeat Protein
 3LJN A 2,41,5.1,0.0327,2.0,7.3,Ankyrin Repeat Protein From Leishmania Majorÿ
 3UI2 A ,40,7.3,0.0179,2.0,15.0,Crystal Structure Of The Cpsrp54 Tail Bound To Cpsrp43ÿ
@@ -143,20 +143,20 @@
 3NBN B 1,39,6.4,0.0095,2.0,20.5,Crystal Structure Of A Dimer Of Notch Transcription Complex Trimers On Hes1 Dnaÿ
 3NBN E 1,39,6.2,0.0132,2.0,20.5,Crystal Structure Of A Dimer Of Notch Transcription Complex Trimers On Hes1 Dnaÿ
 4LCT C 1,48,5.5,0.0080,2.0,2.1,Crystal Structure And Versatile Functional Roles Of The Cop9 Signalosome Subunit 1
-4M59 A 1,52,5.8,0.0163,2.0,5.8,Crystal Structure Of The Pentatricopeptide Repeat Protein Ppr10 In Complex With An 18-nt Psaj Rna Element
 3LVR E 2,43,6.2,0.0171,2.0,11.6,The Crystal Structure Of Asap3 In Complex With Arf6 In Trans State Soaked With Calciumÿ
+4M59 A 1,52,5.8,0.0163,2.0,5.8,Crystal Structure Of The Pentatricopeptide Repeat Protein Ppr10 In Complex With An 18-nt Psaj Rna Element
 3ZNG D 2,35,6.3,0.0437,2.0,5.7,Ankyrin Repeat And Socs-box Protein 9 (asb9) In Complex With Elonginb And Elonginc
 2DZN C 1,45,5.9,0.0449,2.0,13.3,Crystal Structure Analysis Of Yeast Nas6p Complexed With The Proteasome Subunit, Rpt3
-4UQI B 4,61,5.0,0.0393,2.0,11.5,Ap2 Controls Clathrin Polymerization With A Membrane- Activated Switch
 4LCT D 1,46,5.4,0.0131,2.0,2.2,Crystal Structure And Versatile Functional Roles Of The Cop9 Signalosome Subunit 1
+4UQI B 4,61,5.0,0.0393,2.0,11.5,Ap2 Controls Clathrin Polymerization With A Membrane- Activated Switch
 2UV8 C 5,60,5.8,0.0025,2.1,10.0,Crystal Structure Of Yeast Fatty Acid Synthase With Stalled Acyl Carrier Protein At 3.1 Angstrom Resolution
-1XI4 G 9,48,5.0,0.0420,2.1,10.4,Clathrin D6 Coat
 3IYV A 9,48,5.0,0.0420,2.1,10.4,Clathrin D6 Coatÿ
+1XI4 G 9,48,5.0,0.0420,2.1,10.4,Clathrin D6 Coat
 4OE1 A 1,54,5.8,0.0163,2.1,5.6,Crystal Structure Of The Pentatricopeptide Repeat Protein Ppr10 (c256s/c430s/c449s) In Complex With An 18-nt Psaj Rna Element
-3I4R B 6,40,5.2,0.0258,2.1,5.0,Nup107(Aa658-925)NUP133(AA517-1156) Complex, H.Sapiensÿ
 5A9Q 3 6,40,5.2,0.0258,2.1,5.0,Human Nuclear Pore Complex
 5A9Q C 4,40,5.2,0.0258,2.1,5.0,Human Nuclear Pore Complex
 5A9Q L 5,40,5.2,0.0258,2.1,5.0,Human Nuclear Pore Complex
+3I4R B 6,40,5.2,0.0258,2.1,5.0,Nup107(Aa658-925)NUP133(AA517-1156) Complex, H.Sapiensÿ
 5A9Q U 6,40,5.2,0.0259,2.1,5.0,Human Nuclear Pore Complex
 3CQC B 2,40,5.1,0.0296,2.1,5.0,Nucleoporin Nup107NUP133 INTERACTION COMPLEX
 4O60 B 2,34,6.1,0.0234,2.1,20.6,Structure Of Ankyrin Repeat Protein
@@ -176,5 +176,5 @@
 4N5Q A 1,54,5.6,0.0341,2.1,14.8,Crystal Structure Of The N-terminal Ankyrin Repeat Domain Of Trpv3
 3DEP A 2,42,6.8,0.0303,2.1,14.3,Structural Basis For Specific Substrate Recognition By The Chloroplast Signal Recognition Particle Protein Cpsrp43
 5BUZ E 3,53,5.7,0.0256,2.1,3.8,Crystal Structure Of A Complex Between The Snare Vam3 And The Hops Vps33-vps16 Subcomplex From Chaetomium Thermophilum
-1BLX B 2,45,6.5,0.0065,2.1,6.7,P19ink4dCDK6 COMPLEX
 4M59 B 1,55,6.7,0.0407,2.1,3.6,Crystal Structure Of The Pentatricopeptide Repeat Protein Ppr10 In Complex With An 18-nt Psaj Rna Element
+1BLX B 2,45,6.5,0.0065,2.1,6.7,P19ink4dCDK6 COMPLEX

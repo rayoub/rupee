@@ -65,8 +65,8 @@
 2I91 A 3,40,5.1,0.0319,1.6,15.0,60kda Ro Autoantigen In Complex With A Fragment Of Misfolded Rna
 3CQG B 2,33,5.0,0.0415,1.6,9.1,Nucleoporin Nup107NUP133 INTERACTION COMPLEX, DELTA FINGER Mutant
 4F1P B 3,39,5.5,0.0094,1.6,5.1,Crystal Structure Of Mutant S554d For Arfgap And Ank Repeat Domain Of Acap1
-5AMQ A 1,42,5.2,0.0270,1.6,9.5,Structure Of The La Crosse Bunyavirus Polymerase In Complex With The 3' And 5' Viral Rna
 3ZUV B 2,35,5.1,0.0303,1.6,20.0,Crystal Structure Of A Designed Selected Ankyrin Repeat Protein In Complex With The Phosphorylated Map Kinase Erk2
+5AMQ A 1,42,5.2,0.0270,1.6,9.5,Structure Of The La Crosse Bunyavirus Polymerase In Complex With The 3' And 5' Viral Rna
 4F1P A 3,39,5.5,0.0067,1.6,5.1,Crystal Structure Of Mutant S554d For Arfgap And Ank Repeat Domain Of Acap1
 2UY1 A 4,47,5.1,0.0277,1.6,4.3,Crystal Structure Of Cstf-77ÿ
 3JUE A 3,39,5.5,0.0071,1.6,5.1,Crystal Structure Of Arfgap And Ank Repeat Domain Of Acap1ÿ
@@ -84,19 +84,19 @@
 4DX7 D 1,42,5.2,0.0225,1.7,14.3,Transport Of Drugs By The Multidrug Transporter Acrb Involves An Access And A Deep Binding Pocket That Are Separated By A Switch-Loop
 4U96 E 1,39,5.2,0.0271,1.7,15.4,Coupling Of Remote Alternating-access Transport Mechanisms For Protons And Substrates In The Multidrug Efflux Pump Acrb
 3B7R L 5,54,5.4,0.0115,1.7,5.6,Leukotriene A4 Hydrolase Complexed With Inhibitor Rb3040
-3FHE A 5,54,5.3,0.0139,1.7,5.6,Leukotriene A4 Hydrolase Complexed With Inhibitor N-[3-(4- Benzylphenoxy)propyl]-N-Methyl-Beta-Alanineÿ
 3U9W A 5,54,5.4,0.0129,1.7,5.6,Structure Of Human Leukotriene A4 Hydrolase In Complex With Inhibitor Sc57461a
 3FH8 A 5,54,5.4,0.0130,1.7,5.6,Leukotriene A4 Hydrolase Complexed With Inhibitor 1-[2-(4- Benzylphenoxy)ethyl]pyrrolidineÿ
+3FHE A 5,54,5.3,0.0139,1.7,5.6,Leukotriene A4 Hydrolase Complexed With Inhibitor N-[3-(4- Benzylphenoxy)propyl]-N-Methyl-Beta-Alanineÿ
 3CHO A 5,54,5.4,0.0132,1.7,5.6,Crystal Structure Of Leukotriene A4 Hydrolase In Complex With 2-Amino-N-[4-(Phenylmethoxy)phenyl]-Acetamide
 3FUE A 5,54,5.3,0.0138,1.7,5.6,Leukotriene A4 Hydrolase In Complex With Fragment 5- Chloroindole And Bestatinÿ
 3FUH A 5,54,5.4,0.0129,1.7,5.6,Leukotriene A4 Hydrolase In Complex With Fragment 5- Hydroxyindole And Bestatinÿ
 3FTV A 5,54,5.4,0.0134,1.7,5.6,Leukotriene A4 Hydrolase In Complex With Fragment N- (Pyridin-3-Ylmethyl)anilineÿ
-4U8V E 1,39,5.0,0.0426,1.7,15.4,Coupling Of Remote Alternating-access Transport Mechanisms For Protons And Substrates In The Multidrug Efflux Pump Acrb
 4R7L A 5,54,5.4,0.0125,1.7,5.6,Structure Of Human Leukotriene A4 Hydrolase In Complex With Inhibitor H1
-3FUN A 5,54,5.4,0.0129,1.7,5.6,Leukotriene A4 Hydrolase In Complex With {4-[(2r)- Pyrrolidin-2-Ylmethoxy]phenyl}(4-Thiophen-3-Ylphenyl) Methanoneÿ
+4U8V E 1,39,5.0,0.0426,1.7,15.4,Coupling Of Remote Alternating-access Transport Mechanisms For Protons And Substrates In The Multidrug Efflux Pump Acrb
 3FH7 A 5,54,5.4,0.0135,1.7,5.6,Leukotriene A4 Hydrolase Complexed With Inhibitor 4-[(2s)-2- {[4-(4-Chlorophenoxy)phenoxy]methyl}pyrrolidin-1- Yl]butanoateÿ
-2BKK D 2,37,5.9,0.0012,1.7,13.5,Crystal Structure Of Aminoglycoside Phosphotransferase Aph (3')-Iiia In Complex With The Inhibitor Ar_3a
+3FUN A 5,54,5.4,0.0129,1.7,5.6,Leukotriene A4 Hydrolase In Complex With {4-[(2r)- Pyrrolidin-2-Ylmethoxy]phenyl}(4-Thiophen-3-Ylphenyl) Methanoneÿ
 4ARE A 3,40,5.3,0.0151,1.7,17.5,Crystal Structure Of The Collagenase Unit Of Collagenase G From Clostridium Histolyticum At 2.19 Angstrom Resolution
+2BKK D 2,37,5.9,0.0012,1.7,13.5,Crystal Structure Of Aminoglycoside Phosphotransferase Aph (3')-Iiia In Complex With The Inhibitor Ar_3a
 3FU0 A 5,54,5.3,0.0139,1.7,5.6,Leukotriene A4 Hydrolase In Complex With Fragment 4-(4- Fluorobenzoyl)pyridineÿ
 2UY1 B 5,48,5.0,0.0430,1.7,4.2,Crystal Structure Of Cstf-77ÿ
 3FTY A 5,54,5.4,0.0138,1.7,5.6,Leukotriene A4 Hydrolase In Complex With Fragment 3- (Benzyloxy)pyridin-2-Amineÿ
@@ -106,15 +106,15 @@
 3ZUV B 1,41,5.1,0.0366,1.7,14.6,Crystal Structure Of A Designed Selected Ankyrin Repeat Protein In Complex With The Phosphorylated Map Kinase Erk2
 2R59 A 5,54,5.4,0.0120,1.7,5.6,Leukotriene A4 Hydrolase Complexed With Inhibitor Rb3041
 3FUF A 5,54,5.3,0.0142,1.7,5.6,Leukotriene A4 Hydrolase In Complex With Fragment 5- Fluoroindole And Bestatinÿ
-3FUK A 5,54,5.3,0.0149,1.7,5.6,Leukotriene A4 Hydrolase In Complex With 1-[2-(1h-Indol-5- Yloxy)ethyl]piperidine-4-Carboxylic Acidÿ
 3FTX A 5,54,5.4,0.0122,1.7,5.6,Leukotriene A4 Hydrolase In Complex With Dihydroresveratrol And Bestatinÿ
+3FUK A 5,54,5.3,0.0149,1.7,5.6,Leukotriene A4 Hydrolase In Complex With 1-[2-(1h-Indol-5- Yloxy)ethyl]piperidine-4-Carboxylic Acidÿ
 4RVB A 5,54,5.4,0.0132,1.7,5.6,Crystal Structure Analysis Of The Human Leukotriene A4 Hydrolase
 4D10 I 1,54,5.0,0.0432,1.7,5.6,Crystal Structure Of The Cop9 Signalosome
-3FUD A 5,54,5.3,0.0146,1.7,5.6,Leukotriene A4 Hydrolase In Complex With N-Methyl-1-(2- Thiophen-2-Ylphenyl)methanamineÿ
 1H19 A 5,54,5.3,0.0140,1.7,5.6,Structure Of [e271q] Leukotriene A4 Hydrolase
+3FUD A 5,54,5.3,0.0146,1.7,5.6,Leukotriene A4 Hydrolase In Complex With N-Methyl-1-(2- Thiophen-2-Ylphenyl)methanamineÿ
 1GW6 A 5,54,5.4,0.0136,1.7,5.6,Structure Of Leukotriene A4 Hydrolase D375n Mutant
-3FU6 A 5,54,5.3,0.0149,1.7,5.6,Leukotriene A4 Hydrolase In Complex With Fragment (4- Thiophen-2-Ylphenyl)methanamineÿ
 3QNF B 7,37,5.2,0.0247,1.7,8.1,Crystal Structure Of The Open State Of Human Endoplasmic Reticulum Aminopeptidase 1 Erap1ÿ
+3FU6 A 5,54,5.3,0.0149,1.7,5.6,Leukotriene A4 Hydrolase In Complex With Fragment (4- Thiophen-2-Ylphenyl)methanamineÿ
 3FUJ A 5,54,5.4,0.0132,1.7,5.6,Leukotriene A4 Hydrolase In Complex With 5-[2-(1h-Pyrrol-1- Yl)ethoxy]-1h-Indoleÿ
 1HS6 A 5,54,5.4,0.0126,1.7,5.6,Structure Of Leukotriene A4 Hydrolase Complexed With Bestatin.
 2DZO A 2,31,5.6,0.0348,1.7,19.4,Crystal Structure Analysis Of Yeast Nas6p Complexed With The Proteasome Subunit, Rpt3

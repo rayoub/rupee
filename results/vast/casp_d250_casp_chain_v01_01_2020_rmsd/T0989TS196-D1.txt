@@ -69,24 +69,24 @@
 3AZP A 2,26,5.1,0.0243,1.0,7.7,Crystal Structure Of Puromycin Hydrolase S511a Mutantÿ
 3KIH D 2,23,5.2,0.0066,1.0,0.0,The Crystal Structures Of Two Fragments Truncated From 5-Bla Propeller Lectin, Tachylectin-2 (Lib2-D2-15)ÿ
 5AJA A 4,21,5.2,0.0066,1.0,0.0,Crystal Structure Of Mandrill Samhd1 (amino Acid Residues 1-114) Bound To Vpx Isolated From Mandrill And Human Dcaf1 (amino Acid Residues 1058-1396)
-3MKQ C 7,24,5.2,0.0066,1.0,4.2,Crystal Structure Of Yeast AlphaBETAPRIME-Cop Subcomplex Of The Copi Vesicular Coatÿ
 2IOU C 1,20,5.1,0.0173,1.0,5.0,Major Tropism Determinant P1 (Mtd-P1) Variant Complexed With Bordetella Brochiseptica Virulence Factor Pertactin Extracellular Domain (Prn-E)
+3MKQ C 7,24,5.2,0.0066,1.0,4.2,Crystal Structure Of Yeast AlphaBETAPRIME-Cop Subcomplex Of The Copi Vesicular Coatÿ
 1LWF A 2,21,5.2,0.0171,1.0,14.3,Crystal Structure Of A Mutant Hiv-1 Reverse Transcriptase (Rtmq+m184v: M41lD67NK70RM184VT215Y) IN COMPLEX WITH Nevirapine
-4TZ4 A 4,24,5.0,0.0462,1.0,8.3,Crystal Structure Of Human Cereblon In Complex With Ddb1 And Lenalidomide
 2OAJ A 4,29,5.2,0.0119,1.0,0.0,Crystal Structure Of Sro7 From S. Cerevisiae
-3S94 A 3,21,5.0,0.0306,1.0,4.8,Crystal Structure Of Lrp6-E1e2ÿ
+4TZ4 A 4,24,5.0,0.0462,1.0,8.3,Crystal Structure Of Human Cereblon In Complex With Ddb1 And Lenalidomide
 3V9F B 2,27,5.2,0.0118,1.0,3.7,Crystal Structure Of The Extracellular Domain Of The Putative Hybrid Two Component System Bt3049 From B. Thetaiotaomicronÿ
+3S94 A 3,21,5.0,0.0306,1.0,4.8,Crystal Structure Of Lrp6-E1e2ÿ
 2I7F A 2,19,5.1,0.0215,1.0,0.0,Sphingomonas Yanoikuyae B1 Ferredoxin
 1GOG A 4,23,5.1,0.0172,1.0,4.3,Novel Thioether Bond Revealed By A 1.7 Angstroms Crystal Structure Of Galactose Oxidase
 1S1V A 2,21,5.2,0.0391,1.0,14.3,Crystal Structure Of L100i Mutant Hiv-1 Reverse Transcriptase In Complex With Tnk-651
 4Z8L D 3,21,5.2,0.0148,1.0,0.0,Crystal Structure Of Dcaf1/siv-mnd Vpx/mnd Samhd1 Ntd Ternary Complex
 1RTJ A 2,21,5.2,0.0196,1.0,9.5,Mechanism Of Inhibition Of Hiv-1 Reverse Transcriptase By Non-Nucleoside Inhibitorsÿ
 1JLC A 2,21,5.2,0.0066,1.0,14.3,Crystal Structure Of Y181c Mutant Hiv-1 Reverse Transcriptase In Complex With Pett-2
-3WJ9 B 3,23,5.2,0.0066,1.0,0.0,Crystal Structure Of The Eukaryotic Initiation Factor
 2K2J A 1,24,5.2,0.0066,1.0,4.2,Nmr Solution Structure Of The Split Ph Domain From Phospholipase C Gamma 2
+3WJ9 B 3,23,5.2,0.0066,1.0,0.0,Crystal Structure Of The Eukaryotic Initiation Factor
 3JBT C 12,27,5.2,0.0066,1.0,3.7,Atomic Structure Of The Apaf-1 Apoptosome
-3JBT A 12,27,5.2,0.0066,1.0,3.7,Atomic Structure Of The Apaf-1 Apoptosome
 3JBT G 12,27,5.2,0.0066,1.0,3.7,Atomic Structure Of The Apaf-1 Apoptosome
+3JBT A 12,27,5.2,0.0066,1.0,3.7,Atomic Structure Of The Apaf-1 Apoptosome
 3JBT I 12,27,5.2,0.0066,1.0,3.7,Atomic Structure Of The Apaf-1 Apoptosome
 3JBT K 12,27,5.2,0.0066,1.0,3.7,Atomic Structure Of The Apaf-1 Apoptosome
 3JBT M 12,27,5.2,0.0066,1.0,3.7,Atomic Structure Of The Apaf-1 Apoptosome
@@ -106,8 +106,8 @@
 4ZFN A 1,12,3.3,0.0220,1.1,0.0,Hypoxanthine-guanine-xanthine Phosphoribosyltransferase (hgxprt) From Sulfolobus Solfataricus Containing Gmp Complexed In Two Different Ways Together With One Or Two Mg2+
 5BQP C 1,12,3.2,0.0485,1.1,0.0,Hypoxanthine-guanine-xanthine Phosphoribosyltransferase (hgxprt) From Sulfolobus Solfataricus With Xanthosine And Phosphate Bound In The Nucleotide Binding Site And With Sulfate Bound In The Pyrophosphate Binding Site
 2IOU E 1,21,5.1,0.0154,1.1,4.8,Major Tropism Determinant P1 (Mtd-P1) Variant Complexed With Bordetella Brochiseptica Virulence Factor Pertactin Extracellular Domain (Prn-E)
-4NFA A 1,29,5.2,0.0071,1.1,0.0,Structure Of The C-terminal Doamin Of Knl1
 3MKQ A 5,23,5.2,0.0066,1.1,0.0,Crystal Structure Of Yeast AlphaBETAPRIME-Cop Subcomplex Of The Copi Vesicular Coatÿ
+4NFA A 1,29,5.2,0.0071,1.1,0.0,Structure Of The C-terminal Doamin Of Knl1
 5FGO F ,33,5.1,0.0222,1.1,0.0,Crystal Structure Of D. Melanogaster Pur-alpha Repeat Iii
 5FGO F 1,33,5.1,0.0222,1.1,0.0,Crystal Structure Of D. Melanogaster Pur-alpha Repeat Iii
 4PXW A 4,21,5.2,0.0066,1.1,0.0,Crystal Structure Of Human Dcaf1 Wd40 Repeats (q1250l)
@@ -116,8 +116,8 @@
 3KIH A 1,23,5.2,0.0066,1.1,0.0,The Crystal Structures Of Two Fragments Truncated From 5-Bla Propeller Lectin, Tachylectin-2 (Lib2-D2-15)ÿ
 4IMM A 5,27,5.2,0.0066,1.1,3.7,The Crystal Structure Of Bamb From Moraxella Catarrhalis
 1TL2 A 2,23,5.2,0.0066,1.1,0.0,Tachylectin-2 From Tachypleus Tridentatus (Japanese Horseshoe Crab)
-4PXW B 4,21,5.2,0.0115,1.1,0.0,Crystal Structure Of Human Dcaf1 Wd40 Repeats (q1250l)
 2DCM A 1,25,5.2,0.0066,1.1,8.0,The Crystal Structure Of S603a Mutated Prolyl Tripeptidyl Aminopeptidase Complexed With Substrate
+4PXW B 4,21,5.2,0.0115,1.1,0.0,Crystal Structure Of Human Dcaf1 Wd40 Repeats (q1250l)
 2AJB C 2,25,5.2,0.0066,1.1,0.0,Porcine Dipeptidyl Peptidase Iv (Cd26) In Complex With The Tripeptide Tert-Butyl-Gly-L-Pro-L-Ile (Tbu-Gpi)
 4MH1 B 4,24,5.2,0.0107,1.1,20.8,Crystal Structure And Functional Studies Of Quinoprotein L-sorbose Dehydrogenase From Ketogulonicigenium Vulgare Y25
 3WJ9 B 2,25,5.2,0.0135,1.1,4.0,Crystal Structure Of The Eukaryotic Initiation Factor

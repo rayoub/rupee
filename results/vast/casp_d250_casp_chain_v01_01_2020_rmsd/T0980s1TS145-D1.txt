@@ -102,22 +102,22 @@
 3V9Y A ,17,6.0,0.0120,1.4,0.0,Crystal Structure Of The Ppargamma-Lbd Complexed With A Cercosporamide Derivative Modulatorÿ
 4F9M A ,17,6.0,0.0120,1.4,0.0,Crystal Structure Of The Ppargamma-Lbd Complexed With A Cercosporamide Derivative Modulator
 3B1M A ,17,6.0,0.0120,1.4,0.0,Crystal Structure Of The Ppargamma-Lbd Complexed With A Cercosporamide Derivative Modulator Cerco-Aÿ
-4YT1 B ,19,6.0,0.0120,1.4,0.0,Human Ppar Gamma Ligand Binding Domain In Complex With A Gammma Selective Synthetic Partial Agonist Mekt76
+1NYX A ,17,5.9,0.0262,1.4,0.0,Ligand Binding Domain Of The Human Peroxisome Proliferator Activated Receptor Gamma In Complex With An Agonist
+3SZ1 A ,18,6.0,0.0120,1.4,0.0,Human Ppar Gamma Ligand Binding Domain In Complex With Luteolin And Myristic Acidÿ
 4L98 B ,17,6.0,0.0150,1.4,0.0,Crystal Structure Of The Complex Of F360l Ppargamma Mutant With The Ligand Lt175
 4L98 B 1,17,6.0,0.0150,1.4,0.0,Crystal Structure Of The Complex Of F360l Ppargamma Mutant With The Ligand Lt175
-3SZ1 A ,18,6.0,0.0120,1.4,0.0,Human Ppar Gamma Ligand Binding Domain In Complex With Luteolin And Myristic Acidÿ
-1NYX A ,17,5.9,0.0262,1.4,0.0,Ligand Binding Domain Of The Human Peroxisome Proliferator Activated Receptor Gamma In Complex With An Agonist
+4YT1 B ,19,6.0,0.0120,1.4,0.0,Human Ppar Gamma Ligand Binding Domain In Complex With A Gammma Selective Synthetic Partial Agonist Mekt76
+2F4B A ,17,6.0,0.0120,1.4,0.0,Crystal Structure Of The Ligand Binding Domain Of Human Ppar-Gamma In Complex With An Agonist
 1ZGY A ,19,6.0,0.0120,1.4,0.0,Structural And Biochemical Basis For Selective Repression Of The Orphan Nuclear Receptor Lrh-1 By Shp
 2OM9 C ,19,6.0,0.0134,1.4,0.0,Ajulemic Acid, A Synthetic Cannabinoid Bound To Ppar Gamma
-2F4B A ,17,6.0,0.0120,1.4,0.0,Crystal Structure Of The Ligand Binding Domain Of Human Ppar-Gamma In Complex With An Agonist
 3CS8 A ,19,6.0,0.0120,1.4,0.0,Structural And Biochemical Basis For The Binding Selectivity Of Pparg To Pgc-1a
-3WMH A ,17,6.0,0.0140,1.4,0.0,Human Pprr Gamma Ligand Binding Domain In Complex With A Gammma Selective Synthetic Partial Agonist Mekt75
 4HEE X ,17,6.0,0.0120,1.4,0.0,Crystal Structure Of Ppargamma In Complex With Compound 13
+3WMH A ,17,6.0,0.0140,1.4,0.0,Human Pprr Gamma Ligand Binding Domain In Complex With A Gammma Selective Synthetic Partial Agonist Mekt75
 2Q6S A ,18,6.0,0.0141,1.4,0.0,2.4 Angstrom Crystal Structure Of Ppar Gamma Complexed To Bvt.13 Without Co-Activator Peptides
-2POB B ,19,6.0,0.0120,1.4,0.0,Ppargamma Ligand Binding Domain Complexed With A Farglitazar Analogue Gw4709
-3NFF F ,22,5.0,0.0160,1.4,18.2,Crystal Structure Of Extended Dimerization Module Of Rna Polymerase I Subcomplex A49A34.5ÿ
 2HWR A ,19,6.0,0.0120,1.4,0.0,Structural Basis For The Structure-Activity Relationships Of Peroxisome Proliferator-Activated Receptor Agonists
 3ADT A ,18,6.0,0.0157,1.4,0.0,Human Ppargamma Ligand-Binding Domain In Complex With 5-Hydroxy-Indole Acetateÿ
+3NFF F ,22,5.0,0.0160,1.4,18.2,Crystal Structure Of Extended Dimerization Module Of Rna Polymerase I Subcomplex A49A34.5ÿ
+2POB B ,19,6.0,0.0120,1.4,0.0,Ppargamma Ligand Binding Domain Complexed With A Farglitazar Analogue Gw4709
 4Y29 A ,19,6.0,0.0155,1.4,0.0,Identification Of A Novel Pparg Ligand That Regulates Metabolism
 3WJ4 B ,19,6.0,0.0120,1.4,0.0,Crystal Structure Of Ppargamma Ligand Binding Domain In Complex With Tributyltin
 3WJ5 B ,19,5.8,0.0303,1.4,0.0,Crystal Structure Of Ppargamma Ligand Binding Domain In Complex With Triphenyltin

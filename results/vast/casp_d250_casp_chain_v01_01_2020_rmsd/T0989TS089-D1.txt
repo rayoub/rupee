@@ -126,8 +126,8 @@
 2W0Q A 2,33,6.5,0.0017,1.2,6.1,E. Coli Copper Amine Oxidase In Complex With Xenonÿ
 2KD2 A 1,30,5.2,0.0269,1.2,0.0,Nmr Structure Of Faim-Ctdÿ
 5AJA A 5,30,5.2,0.0216,1.2,20.0,Crystal Structure Of Mandrill Samhd1 (amino Acid Residues 1-114) Bound To Vpx Isolated From Mandrill And Human Dcaf1 (amino Acid Residues 1058-1396)
-3S29 F 1,30,6.6,0.0373,1.3,13.3,The Crystal Structure Of Sucrose Synthase-1 From Arabidopsis Thaliana And Its Functional Implicationsÿ
 4NBE E 3,22,5.1,0.0458,1.3,9.1,Fluorene-bound Oxygenase With Phe275 Replaced By Trp And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase (form2)
+3S29 F 1,30,6.6,0.0373,1.3,13.3,The Crystal Structure Of Sucrose Synthase-1 From Arabidopsis Thaliana And Its Functional Implicationsÿ
 4E5Z A 3,28,5.1,0.0424,1.3,7.1,Damaged Dna Induced Uv-Damaged Dna-Binding Protein (Uv-Ddb) Dimerization And Its Roles In Chromatinized Dna Repair
 3WSX A 5,26,5.2,0.0154,1.3,3.8,Sorla Vps10p Domain In Ligand-free Form
 3EI4 A 2,30,5.1,0.0423,1.3,0.0,Structure Of The Hsddb1-Hsddb2 Complexÿ
@@ -141,8 +141,8 @@
 5A9Q S 3,28,5.2,0.0154,1.3,3.6,Human Nuclear Pore Complex
 3VT0 E 4,31,6.2,0.0049,1.3,3.2,Crystal Structure Of Ct1,3gal43a In Complex With Lactose
 4A11 A 2,30,5.1,0.0381,1.3,0.0,Structure Of The Hsddb1-Hscsa Complexÿ
-4NBD E 3,22,5.1,0.0415,1.3,9.1,Carbazole-bound Oxygenase With Phe275 Replaced By Trp And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase (form2)
 3I7K A 2,31,5.1,0.0395,1.3,0.0,Crystal Structure Of Ddb1 In Complex With The H-Box Motif Of Whxÿ
+4NBD E 3,22,5.1,0.0415,1.3,9.1,Carbazole-bound Oxygenase With Phe275 Replaced By Trp And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase (form2)
 4NBD D 2,22,5.1,0.0472,1.3,9.1,Carbazole-bound Oxygenase With Phe275 Replaced By Trp And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase (form2)
 3VA6 B 6,30,5.2,0.0154,1.3,16.7,Crystal Structure Of The Extracellular Domain Of The Putative Hybrid Two Component System Bt4673 From B. Thetaiotaomicron
 4Z8L A 4,30,5.2,0.0350,1.3,20.0,Crystal Structure Of Dcaf1/siv-mnd Vpx/mnd Samhd1 Ntd Ternary Complex
@@ -156,13 +156,13 @@
 3I7P A 2,30,5.1,0.0405,1.3,0.0,Crystal Structure Of Ddb1 In Complex With The H-Box Motif Of Wdr40aÿ
 2J55 H 4,30,5.6,0.0329,1.3,16.7,X-Ray Reduced Paraccocus Denitrificans Methylamine Dehydrogenase O-Quinone In Complex With Amicyaninÿ
 2HAW B 2,34,6.7,0.0253,1.3,11.8,Crystal Structure Of Family Ii Inorganic Pyrophosphatase In Complex With Pnp
-5AJA A 4,30,5.1,0.0352,1.3,6.7,Crystal Structure Of Mandrill Samhd1 (amino Acid Residues 1-114) Bound To Vpx Isolated From Mandrill And Human Dcaf1 (amino Acid Residues 1058-1396)
 2N19 A ,33,6.8,0.0026,1.3,3.0,Stil Binding To The Polo-box Domain 3 Of Plk4 Regulates Centriole Duplication
+5AJA A 4,30,5.1,0.0352,1.3,6.7,Crystal Structure Of Mandrill Samhd1 (amino Acid Residues 1-114) Bound To Vpx Isolated From Mandrill And Human Dcaf1 (amino Acid Residues 1058-1396)
 2FVU A 1,25,5.1,0.0416,1.3,4.0,Structure Of The Yeast Sir3 Bah Domain
 1UTC A 2,29,5.2,0.0185,1.3,6.9,Clathrin Terminal Domain Complexed With Tlpwdlwtt
 4FHN D 4,30,5.1,0.0429,1.3,0.0,Nup37-Nup120 Full-Length Complex From Schizosaccharomyces Pombe
-4Z8L A 3,27,5.1,0.0466,1.3,7.4,Crystal Structure Of Dcaf1/siv-mnd Vpx/mnd Samhd1 Ntd Ternary Complex
 3KIF F 1,20,5.1,0.0490,1.3,10.0,The Crystal Structures Of Two Fragments Truncated From 5-Bla Propeller Lectin, Tachylectin-2 (Lib1-B7-18 And Lib2-D2-15)ÿ
+4Z8L A 3,27,5.1,0.0466,1.3,7.4,Crystal Structure Of Dcaf1/siv-mnd Vpx/mnd Samhd1 Ntd Ternary Complex
 1C9L B 4,23,5.1,0.0372,1.3,0.0,Peptide-In-Groove Interactions Link Target Proteins To The B-Propeller Of Clathrin
 4NBH D 2,22,5.1,0.0445,1.3,9.1,Carbazole-bound Oxygenase With Gln282 Replaced By Tyr And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
 4FHN B 4,30,5.1,0.0433,1.3,0.0,Nup37-Nup120 Full-Length Complex From Schizosaccharomyces Pombe

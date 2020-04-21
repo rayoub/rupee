@@ -1,0 +1,180 @@
+2I7F A ,31,8.4,0.0002,1.3,19.4,Sphingomonas Yanoikuyae B1 Ferredoxin
+3C0D H ,36,8.4,0.0002,1.7,0.0,Crystal Structure Of The Putative Nitrite Reductase Nadph (Small Subunit) Oxidoreductase Protein Q87hb1. Northeast Structural Genomics Consortium Target Vpr162
+3C0D H 2,36,8.4,10e-6.6,1.7,0.0,Crystal Structure Of The Putative Nitrite Reductase Nadph (Small Subunit) Oxidoreductase Protein Q87hb1. Northeast Structural Genomics Consortium Target Vpr162
+3DQY A ,36,8.3,0.0004,1.5,8.3,Crystal Structure Of Toluene 2,3-Dioxygenase Ferredoxinÿ
+3DQY A 2,33,8.3,10e-4.4,1.3,9.1,Crystal Structure Of Toluene 2,3-Dioxygenase Ferredoxinÿ
+2I7F B ,31,8.3,0.0005,1.3,19.4,Sphingomonas Yanoikuyae B1 Ferredoxin
+4NBB E ,31,8.2,0.0008,1.3,19.4,Carbazole- And Oxygen-bound Oxygenase With Ile262 Replaced By Val And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
+4NBB E 2,35,8.2,10e-4.1,1.6,2.9,Carbazole- And Oxygen-bound Oxygenase With Ile262 Replaced By Val And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
+3VMG E ,31,8.2,0.0008,1.3,19.4,Reduced Carbazole-Bound Complex Between Oxygenase And Ferredoxin In Carbazole 1,9a-Dioxygenase
+3VMG E 2,31,8.2,10e-4.1,1.3,19.4,Reduced Carbazole-Bound Complex Between Oxygenase And Ferredoxin In Carbazole 1,9a-Dioxygenase
+4NBA E ,32,8.1,0.0009,1.3,18.8,Carbazole-bound Oxygenase With Ile262 Replaced By Val And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
+4NBA E 2,32,8.1,10e-4.1,1.3,18.8,Carbazole-bound Oxygenase With Ile262 Replaced By Val And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
+2E4P B ,32,8.1,0.0011,1.3,12.5,Crystal Structure Of Bpha3 (Oxidized Form)
+2E4Q C ,32,8.1,0.0013,1.2,9.4,Crystal Structure Of Bpha3 (Reduced Form)
+2E4Q C 2,32,8.1,0.0001,1.2,9.4,Crystal Structure Of Bpha3 (Reduced Form)
+4NBF E ,32,8.0,0.0014,1.4,18.8,Oxygenase With Gln282 Replaced By Asn And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
+4NBF E 2,32,8.0,0.0001,1.4,18.8,Oxygenase With Gln282 Replaced By Asn And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
+4EMJ B ,36,8.0,0.0014,1.5,8.3,Complex Between The Reductase And Ferredoxin Components Of Toluene Dioxygenase
+1VCK A ,32,8.0,0.0016,1.3,18.8,Crystal Structure Of Ferredoxin Component Of Carbazole 1,9a- Dioxygenase Of Pseudomonas Resinovorans Strain Ca10
+1VCK A 2,32,8.0,0.0001,1.3,18.8,Crystal Structure Of Ferredoxin Component Of Carbazole 1,9a- Dioxygenase Of Pseudomonas Resinovorans Strain Ca10
+2QPZ A ,34,8.0,0.0017,1.5,11.8,Naphthalene 1,2-Dioxygenase Rieske Ferredoxin
+2QPZ A 2,33,8.0,0.0002,1.4,12.1,Naphthalene 1,2-Dioxygenase Rieske Ferredoxin
+4NB8 E ,31,8.0,0.0018,1.3,19.4,Oxygenase With Ile262 Replaced By Leu And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
+4NB8 E 2,31,8.0,0.0002,1.3,19.4,Oxygenase With Ile262 Replaced By Leu And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
+3VMG D ,31,7.9,0.0021,1.3,19.4,Reduced Carbazole-Bound Complex Between Oxygenase And Ferredoxin In Carbazole 1,9a-Dioxygenase
+3VMG D 2,31,7.9,0.0002,1.3,19.4,Reduced Carbazole-Bound Complex Between Oxygenase And Ferredoxin In Carbazole 1,9a-Dioxygenase
+2RT9 A ,31,7.9,10e-5.6,2.4,16.1,Solution Structure Of A Regulatory Domain Of Meiosis Inhibitor
+2YVJ B ,32,7.9,0.0023,1.2,9.4,Crystal Structure Of The Ferredoxin-Ferredoxin Reductase (Bpha3-Bpha4)complex
+1FQT A ,32,7.9,0.0024,1.3,12.5,Crystal Structure Of The Rieske-Type Ferredoxin Associated With Biphenyl Dioxygenase
+1FQT A 2,32,7.9,0.0002,1.3,12.5,Crystal Structure Of The Rieske-Type Ferredoxin Associated With Biphenyl Dioxygenase
+4NB9 F ,31,7.8,0.0034,1.3,19.4,Oxygenase With Ile262 Replaced By Val And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
+1FQT B ,32,7.8,0.0035,1.3,12.5,Crystal Structure Of The Rieske-Type Ferredoxin Associated With Biphenyl Dioxygenase
+1FQT B 2,32,7.8,0.0003,1.3,12.5,Crystal Structure Of The Rieske-Type Ferredoxin Associated With Biphenyl Dioxygenase
+4NBH F ,31,7.8,0.0035,1.3,19.4,Carbazole-bound Oxygenase With Gln282 Replaced By Tyr And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
+4NBC E ,31,7.8,0.0037,1.3,19.4,Oxygenase With Phe275 Replaced By Trp And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase (form1)
+4NBA F ,31,7.8,0.0039,1.3,19.4,Carbazole-bound Oxygenase With Ile262 Replaced By Val And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
+4NBH E ,31,7.8,0.0039,1.3,19.4,Carbazole-bound Oxygenase With Gln282 Replaced By Tyr And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
+4NBH E 2,31,7.8,0.0004,1.3,19.4,Carbazole-bound Oxygenase With Gln282 Replaced By Tyr And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
+2DE7 F ,32,7.8,0.0039,1.3,18.8,The Substrate-Bound Complex Between Oxygenase And Ferredoxin In Carbazole 1,9a-Dioxygenase
+3VMI E ,31,7.8,0.0039,1.3,19.4,Carbazole- And Oxygen-Bound Complex Between Oxygenase And Ferredoxin In Carbazole 1,9a-Dioxygenase
+3VMI E 2,31,7.8,0.0004,1.3,19.4,Carbazole- And Oxygen-Bound Complex Between Oxygenase And Ferredoxin In Carbazole 1,9a-Dioxygenase
+4NBG E ,32,7.8,0.0040,1.3,18.8,Oxygenase With Gln282 Replaced By Tyr And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
+4NBG E 2,32,7.8,0.0004,1.3,18.8,Oxygenase With Gln282 Replaced By Tyr And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
+4NBD E ,32,7.8,0.0040,1.3,18.8,Carbazole-bound Oxygenase With Phe275 Replaced By Trp And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase (form2)
+2DE7 E ,32,7.8,0.0040,1.4,18.8,The Substrate-Bound Complex Between Oxygenase And Ferredoxin In Carbazole 1,9a-Dioxygenase
+3VMI F ,32,7.8,0.0040,1.3,18.8,Carbazole- And Oxygen-Bound Complex Between Oxygenase And Ferredoxin In Carbazole 1,9a-Dioxygenase
+2DE5 E ,31,7.8,0.0040,1.3,19.4,Crystal Structure Of The Electron Transfer Complex Between Oxygenase And Ferredoxin In Carbazole 1,9a-Dioxygenase
+2E4Q A ,32,7.8,0.0041,1.3,12.5,Crystal Structure Of Bpha3 (Reduced Form)
+4NB9 E ,31,7.8,0.0041,1.3,19.4,Oxygenase With Ile262 Replaced By Val And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
+4NBE E ,32,7.8,0.0043,1.3,18.8,Fluorene-bound Oxygenase With Phe275 Replaced By Trp And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase (form2)
+4NBG F ,31,7.8,0.0043,1.3,19.4,Oxygenase With Gln282 Replaced By Tyr And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
+4P1B H ,33,7.8,0.0044,1.6,18.2,Crystal Structure Of The Toluene 4-monooxygenase Hydroxylase- Ferredoxin C7s E16c C84a C85a Variant Electron-transfer Complex
+3VMG F ,31,7.8,0.0044,1.3,19.4,Reduced Carbazole-Bound Complex Between Oxygenase And Ferredoxin In Carbazole 1,9a-Dioxygenase
+4NBD D ,31,7.8,0.0044,1.3,19.4,Carbazole-bound Oxygenase With Phe275 Replaced By Trp And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase (form2)
+3VMH E ,31,7.8,0.0045,1.3,19.4,Oxygen-Bound Complex Between Oxygenase And Ferredoxin In Carbazole 1, 9a-Dioxygenase
+4NBC F ,31,7.8,0.0045,1.3,19.4,Oxygenase With Phe275 Replaced By Trp And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase (form1)
+4NBF F ,31,7.8,0.0045,1.3,19.4,Oxygenase With Gln282 Replaced By Asn And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
+2DE6 F ,31,7.8,0.0045,1.3,19.4,The Reduced Complex Between Oxygenase And Ferredoxin In Carbazole 1,9a-Dioxygenase
+4NBG D ,31,7.8,0.0045,1.3,19.4,Oxygenase With Gln282 Replaced By Tyr And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
+4NBG D 2,32,7.8,0.0004,1.4,18.8,Oxygenase With Gln282 Replaced By Tyr And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
+2DE6 E ,31,7.8,0.0046,1.3,19.4,The Reduced Complex Between Oxygenase And Ferredoxin In Carbazole 1,9a-Dioxygenase
+3VMH F ,31,7.8,0.0046,1.3,19.4,Oxygen-Bound Complex Between Oxygenase And Ferredoxin In Carbazole 1, 9a-Dioxygenase
+4NB8 F ,31,7.8,0.0046,1.3,19.4,Oxygenase With Ile262 Replaced By Leu And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
+4NB8 F 2,31,7.8,0.0004,1.3,19.4,Oxygenase With Ile262 Replaced By Leu And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
+2DE6 D ,32,7.8,0.0046,1.4,18.8,The Reduced Complex Between Oxygenase And Ferredoxin In Carbazole 1,9a-Dioxygenase
+4NBA D ,31,7.7,0.0048,1.3,19.4,Carbazole-bound Oxygenase With Ile262 Replaced By Val And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
+4NBA D 2,31,7.7,0.0004,1.3,19.4,Carbazole-bound Oxygenase With Ile262 Replaced By Val And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
+4P1B I ,32,7.7,0.0048,1.5,18.8,Crystal Structure Of The Toluene 4-monooxygenase Hydroxylase- Ferredoxin C7s E16c C84a C85a Variant Electron-transfer Complex
+3AD9 D ,37,7.7,0.0007,2.2,10.8,Heterotetrameric Sarcosine Oxidase From Corynebacterium Sp. U-96 Sarcosine-Reduced Formÿ
+3ADA D ,37,7.7,0.0007,2.2,10.8,Heterotetrameric Sarcosine Oxidase From Corynebacterium Sp. U-96 In Complex With Sulfiteÿ
+3VMH D ,31,7.7,0.0049,1.4,19.4,Oxygen-Bound Complex Between Oxygenase And Ferredoxin In Carbazole 1, 9a-Dioxygenase
+3VMH D 2,31,7.7,0.0004,1.4,19.4,Oxygen-Bound Complex Between Oxygenase And Ferredoxin In Carbazole 1, 9a-Dioxygenase
+2HU9 A ,31,7.7,0.0017,1.5,16.1,X-Ray Structure Of The Archaeoglobus Fulgidus Copz N- Terminal Domain
+2HU9 A 1,31,7.7,0.0002,1.5,16.1,X-Ray Structure Of The Archaeoglobus Fulgidus Copz N- Terminal Domain
+4NBB F ,31,7.7,0.0050,1.3,19.4,Carbazole- And Oxygen-bound Oxygenase With Ile262 Replaced By Val And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
+4NBB F 2,31,7.7,0.0005,1.3,19.4,Carbazole- And Oxygen-bound Oxygenase With Ile262 Replaced By Val And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
+2DE5 F ,31,7.7,0.0050,1.3,19.4,Crystal Structure Of The Electron Transfer Complex Between Oxygenase And Ferredoxin In Carbazole 1,9a-Dioxygenase
+2DE5 F 2,31,7.7,0.0005,1.3,19.4,Crystal Structure Of The Electron Transfer Complex Between Oxygenase And Ferredoxin In Carbazole 1,9a-Dioxygenase
+4NB8 D ,31,7.7,0.0051,1.3,19.4,Oxygenase With Ile262 Replaced By Leu And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
+4NB8 D 2,32,7.7,0.0005,1.4,18.8,Oxygenase With Ile262 Replaced By Leu And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
+4NBH D ,32,7.7,0.0051,1.4,18.8,Carbazole-bound Oxygenase With Gln282 Replaced By Tyr And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
+4P1C H ,33,7.7,0.0051,1.6,18.2,Crystal Structure Of The Toluene 4-monooxygenase Hydroxylase- Ferredoxin C7s, C84a, C85a Variant Electron-transfer Complex
+4NBC D ,31,7.7,0.0051,1.4,19.4,Oxygenase With Phe275 Replaced By Trp And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase (form1)
+2JNY A ,32,7.7,10e-4.4,2.2,9.4,Solution Nmr Structure Of Protein Uncharacterized Bcr, Northeast Structural Genomics Consortium Target Cgr1
+4NBB D ,31,7.7,0.0053,1.3,19.4,Carbazole- And Oxygen-bound Oxygenase With Ile262 Replaced By Val And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
+2DE7 D ,32,7.7,0.0054,1.4,18.8,The Substrate-Bound Complex Between Oxygenase And Ferredoxin In Carbazole 1,9a-Dioxygenase
+1X31 D ,36,7.7,0.0008,2.0,5.6,Crystal Structure Of Heterotetrameric Sarcosine Oxidase From Corynebacterium Sp. U-96
+3AD7 D ,36,7.7,0.0008,2.0,5.6,Heterotetrameric Sarcosine Oxidase From Corynebacterium Sp. U-96 In Complex With Methylthio Acetateÿ
+4P1C I ,33,7.7,0.0059,1.6,18.2,Crystal Structure Of The Toluene 4-monooxygenase Hydroxylase- Ferredoxin C7s, C84a, C85a Variant Electron-transfer Complex
+3AD8 D ,37,7.7,0.0009,2.2,10.8,Heterotetrameric Sarcosine Oxidase From Corynebacterium Sp. U-96 In Complex With Pyrrole 2-Carboxylateÿ
+4NB9 D ,32,7.7,0.0062,1.4,18.8,Oxygenase With Ile262 Replaced By Val And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
+4NBF D ,32,7.7,0.0064,1.4,18.8,Oxygenase With Gln282 Replaced By Asn And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase
+2DE5 D ,31,7.7,0.0064,1.3,19.4,Crystal Structure Of The Electron Transfer Complex Between Oxygenase And Ferredoxin In Carbazole 1,9a-Dioxygenase
+1VM9 A ,33,7.7,0.0065,1.6,18.2,The X-Ray Structure Of The Cys84ala Cys85ala Double Mutant Of The [2fe-2s] Ferredoxin Subunit Of Toluene-4- Monooxygenase From Pseudomonas Mendocina Kr1
+3AAA A 2,33,7.7,10e-5.1,1.7,3.0,Crystal Structure Of Actin Capping Protein In Complex With V-1ÿ
+3VMI D ,31,7.6,0.0070,1.4,19.4,Carbazole- And Oxygen-Bound Complex Between Oxygenase And Ferredoxin In Carbazole 1,9a-Dioxygenase
+4D6U R ,30,7.6,0.0226,2.1,6.7,Cytochrome Bc1 Bound To The 4(1h)-pyridone Gsk932121
+4D6U R 3,30,7.6,10e-5.1,2.1,6.7,Cytochrome Bc1 Bound To The 4(1h)-pyridone Gsk932121
+4NBE D ,31,7.6,0.0074,1.4,19.4,Fluorene-bound Oxygenase With Phe275 Replaced By Trp And Ferredoxin Complex Of Carbazole 1,9a-dioxygenase (form2)
+1L0N E ,30,7.6,0.0040,2.4,10.0,Native Structure Of Bovine Mitochondrial Cytochrome Bc1 Complex
+1L0N E 2,30,7.6,0.0002,2.4,10.0,Native Structure Of Bovine Mitochondrial Cytochrome Bc1 Complex
+1VRQ D ,37,7.6,0.0012,2.2,5.4,Crystal Structure Of Heterotetrameric Sarcosine Oxidase From Corynebacterium Sp. U-96 In Complex With Folinic Acid
+3V4P A 1,35,7.6,0.0020,2.0,5.7,Crystal Structure Of A4b7 Headpiece Complexed With Fab Act-1ÿ
+3V4P C 1,35,7.6,0.0020,2.0,5.7,Crystal Structure Of A4b7 Headpiece Complexed With Fab Act-1ÿ
+4AKR A 1,32,7.6,10e-5.0,1.5,9.4,Crystal Structure Of The Cytoplasmic Actin Capping Protein Cap32_34 From Dictyostelium Discoideum
+4AKR C 1,33,7.5,10e-4.9,1.7,9.1,Crystal Structure Of The Cytoplasmic Actin Capping Protein Cap32_34 From Dictyostelium Discoideum
+4AYD F 2,31,7.5,0.0012,2.2,3.2,Structure Of A Complex Between Ccps 6 And 7 Of Human Complement Factor H And Neisseria Meningitidis Fhbp Variant 1 R106a Mutant
+4AYD C 2,31,7.5,0.0012,2.2,3.2,Structure Of A Complex Between Ccps 6 And 7 Of Human Complement Factor H And Neisseria Meningitidis Fhbp Variant 1 R106a Mutant
+1AOF B 3,37,7.5,0.0031,2.2,5.4,Cytochrome Cd1 Nitrite Reductase, Reduced Form
+1QKS A 3,36,7.4,0.0069,2.0,5.6,Cytochrome Cd1 Nitrite Reductase, Oxidised Form
+1QCR E ,32,7.4,0.0005,2.5,12.5,Crystal Structure Of Bovine Mitochondrial Cytochrome Bc1 Complex, Alpha Carbon Atoms Only
+1QCR E 2,29,7.4,10e-4.8,2.5,10.3,Crystal Structure Of Bovine Mitochondrial Cytochrome Bc1 Complex, Alpha Carbon Atoms Only
+1TYE E 3,42,7.2,0.0271,2.4,9.5,Structural Basis For Allostery In Integrins And Binding Of Ligand-Mimetic Therapeutics To The Platelet Receptor For Fibrinogen
+1AOQ B 3,36,7.2,0.0066,2.0,5.6,Cytochrome Cd1 Nitrite Reductase With Substrate And Product Bound
+3C0D A ,36,7.2,0.0297,1.6,0.0,Crystal Structure Of The Putative Nitrite Reductase Nadph (Small Subunit) Oxidoreductase Protein Q87hb1. Northeast Structural Genomics Consortium Target Vpr162
+3C0D A 2,36,7.2,10e-4.5,1.6,0.0,Crystal Structure Of The Putative Nitrite Reductase Nadph (Small Subunit) Oxidoreductase Protein Q87hb1. Northeast Structural Genomics Consortium Target Vpr162
+1TYE A 3,42,7.2,0.0304,2.4,9.5,Structural Basis For Allostery In Integrins And Binding Of Ligand-Mimetic Therapeutics To The Platelet Receptor For Fibrinogen
+3C0D C ,35,7.2,0.0313,1.6,0.0,Crystal Structure Of The Putative Nitrite Reductase Nadph (Small Subunit) Oxidoreductase Protein Q87hb1. Northeast Structural Genomics Consortium Target Vpr162
+4AYN A ,33,7.1,0.0184,2.4,3.0,Structure Of The C-Terminal Barrel Of Neisseria Meningitidis Fhbp Variant 2
+3GL0 A 2,32,7.1,10e-4.3,1.3,3.1,Crystal Structure Of Dicamba Monooxygenase Bound To 3,6 Dichlorosalicylic Acid (Dcsa)ÿ
+4WK2 A 3,40,7.1,0.0374,2.4,12.5,Metal Ion And Ligand Binding Of Integrin
+3GKE B 2,32,7.1,0.0036,1.3,3.1,Crystal Structure Of Dicamba Monooxygenaseÿ
+1NIR B 5,42,7.1,0.0036,2.6,7.1,Oxydized Nitrite Reductase From Pseudomonas Aeruginosa
+3GL0 B 2,32,7.1,0.0037,1.3,3.1,Crystal Structure Of Dicamba Monooxygenase Bound To 3,6 Dichlorosalicylic Acid (Dcsa)ÿ
+3GCE A ,32,7.1,0.0403,1.3,9.4,Ferredoxin Of Carbazole 1,9a-Dioxygenase From Nocardioides Aromaticivorans Ic177ÿ
+4AYM C 2,33,7.1,0.0100,2.3,3.0,Structure Of A Complex Between Ccps 6 And 7 Of Human Complement Factor H And Neisseria Meningitidis Fhbp Variant 3 P106a Mutant
+3GL2 B 2,31,7.1,0.0041,1.3,3.2,Crystal Structure Of Dicamba Monooxygenase Bound To Dicambaÿ
+3GOB B 1,32,7.1,0.0433,1.3,3.1,Crystal Structure Of Dicamba Monooxygenase With Non-Heme Cobalt And Dcsaÿ
+3GOB A 1,32,7.1,0.0444,1.3,3.1,Crystal Structure Of Dicamba Monooxygenase With Non-Heme Cobalt And Dcsaÿ
+3GOB C 1,32,7.1,0.0445,1.3,3.1,Crystal Structure Of Dicamba Monooxygenase With Non-Heme Cobalt And Dcsaÿ
+1M1X A 1,37,7.1,0.0043,1.8,5.4,Crystal Structure Of The Extracellular Segment Of Integrin Alpha Vbeta3 Bound To Mn2+
+1NNO A 5,42,7.1,0.0043,2.5,7.1,Conformational Changes Occurring Upon No Binding In Nitrite Reductase From Pseudomonas Aeruginosa
+3GTE A 2,32,7.1,0.0043,1.3,3.1,Crystal Structure Of Dicamba Monooxygenase With Non-Heme Ironÿ
+3GTE B 2,32,7.1,0.0044,1.3,3.1,Crystal Structure Of Dicamba Monooxygenase With Non-Heme Ironÿ
+2Y7S A 2,33,7.1,0.0112,2.3,3.0,Structure Of A Designed Meningococcal Antigen (Factor H Binding Protein, Mutant G1) Inducing Broad Protective Immunityÿ
+3GTE C 2,32,7.1,0.0046,1.3,3.1,Crystal Structure Of Dicamba Monooxygenase With Non-Heme Ironÿ
+3GKE A 1,32,7.1,0.0486,1.3,3.1,Crystal Structure Of Dicamba Monooxygenaseÿ
+3GB4 A 2,32,7.0,0.0048,1.3,3.1,Crystal Structure Of Dicamba Monooxygenase With Non-Heme Cobalt And Dicambaÿ
+3GB4 B 2,32,7.0,0.0049,1.3,3.1,Crystal Structure Of Dicamba Monooxygenase With Non-Heme Cobalt And Dicambaÿ
+3GB4 C 2,32,7.0,0.0049,1.3,3.1,Crystal Structure Of Dicamba Monooxygenase With Non-Heme Cobalt And Dicambaÿ
+3GTS B 2,32,7.0,0.0049,1.3,3.1,Crystal Structure Of Dicamba Monooxygenase With Non-Heme Iron And Dicambaÿ
+4Z3T B 2,32,7.0,0.0122,2.3,3.1,Meningococcal Factor H Binding Protein Mutant L130r/g133d
+3GL2 C 2,32,7.0,0.0050,1.3,3.1,Crystal Structure Of Dicamba Monooxygenase Bound To Dicambaÿ
+3GTS A 2,32,7.0,0.0050,1.3,3.1,Crystal Structure Of Dicamba Monooxygenase With Non-Heme Iron And Dicambaÿ
+2Y7S B 2,33,7.0,0.0125,2.3,3.0,Structure Of A Designed Meningococcal Antigen (Factor H Binding Protein, Mutant G1) Inducing Broad Protective Immunityÿ
+2QKR A 1,35,7.0,0.0039,2.4,5.7,Cryptosporidium Parvum Cyclin-Dependent Kinase Cgd5_2510 With Indirubin 3'-Monoxime Bound
+3GTS C 2,32,7.0,0.0052,1.3,3.1,Crystal Structure Of Dicamba Monooxygenase With Non-Heme Iron And Dicambaÿ
+2ZYL A 2,31,7.0,0.0053,1.3,3.2,Crystal Structure Of 3-Ketosteroid-9-Alpha-Hydroxylase (Ksha) From M. Tuberculosisÿ
+3GKE C 2,32,7.0,0.0055,1.3,3.1,Crystal Structure Of Dicamba Monooxygenaseÿ
+1FWX C 4,40,7.0,0.0344,2.5,7.5,Crystal Structure Of Nitrous Oxide Reductase From P. Denitrificans
+4QDC A 2,31,7.0,0.0058,1.3,9.7,Crystal Structure Of 3-ketosteroid-9-alpha-hydroxylase 5 (ksha5) From R. Rhodochrous In Complex With Fe2/s2 (inorganic) Cluster
+2IWF A 4,40,7.0,0.0364,2.6,10.0,Resting Form Of Pink Nitrous Oxide Reductase From Achromobacter Cycloclastes
+4AYI D 2,32,7.0,0.0150,2.2,3.1,Structure Of A Complex Between Ccps 6 And 7 Of Human Complement Factor H And Neisseria Meningitidis Fhbp Variant 3 Wild Type
+4Z8L D 2,34,7.0,0.0022,2.0,8.8,Crystal Structure Of Dcaf1/siv-mnd Vpx/mnd Samhd1 Ntd Ternary Complex
+3GL0 C 2,32,7.0,0.0065,1.3,3.1,Crystal Structure Of Dicamba Monooxygenase Bound To 3,6 Dichlorosalicylic Acid (Dcsa)ÿ
+3GKQ B 2,28,7.0,0.0001,1.3,7.1,Terminal Oxygenase Of Carbazole 1,9a-Dioxygenase From Novosphingobium Sp. Ka1ÿ
+2IWK B 4,40,7.0,0.0418,2.5,10.0,Inhibitor-Bound Form Of Nitrous Oxide Reductase From Achromobacter Cycloclastes At 1.7 Angstrom Resolution
+4BM9 A 3,21,6.9,10e-4.4,1.4,9.5,Structure Of The Autoinhibited Parkin Catalytic Domain
+3FOU B 2,29,6.9,10e-4.8,1.4,6.9,Low Ph Structure Of The Rieske Protein From Thermus Thermophilus At 2.1 Aÿ
+3FOU A 2,29,6.9,10e-4.7,1.4,6.9,Low Ph Structure Of The Rieske Protein From Thermus Thermophilus At 2.1 Aÿ
+3VI4 C 3,43,6.9,0.0428,2.5,11.6,Crystal Structure Of Alpha5beta1 Integrin Headpiece In Complex With Rgd Peptideÿ
+4AYE D 2,40,6.9,0.0232,2.6,0.0,Structure Of A Complex Between Ccps 6 And 7 Of Human Complement Factor H And Neisseria Meningitidis Fhbp Variant 1 E283ae304a Mutant
+4KC9 A 1,29,6.9,0.0036,1.4,27.6,Structure Of Hhari, A Ring-ibr-ring Ubiquitin Ligase: Autoinhibition Of An Ariadne-family E3 And Insights Into Ligation Mechanism
+4GD9 D ,39,6.9,0.0493,3.0,7.7,Circular Permuted Streptavidin N49/g48
+4AYE F 2,40,6.9,0.0102,2.7,0.0,Structure Of A Complex Between Ccps 6 And 7 Of Human Complement Factor H And Neisseria Meningitidis Fhbp Variant 1 E283ae304a Mutant
+1N90 B 5,42,6.9,0.0104,2.6,7.1,Following The C Heme Reduction In Nitrite Reductase From Pseudomonas Aeruginosa
+4KC9 A 5,31,6.9,10e-4.4,1.7,19.4,Structure Of Hhari, A Ring-ibr-ring Ubiquitin Ligase: Autoinhibition Of An Ariadne-family E3 And Insights Into Ligation Mechanism
+4AYM D 2,41,6.9,0.0275,2.7,0.0,Structure Of A Complex Between Ccps 6 And 7 Of Human Complement Factor H And Neisseria Meningitidis Fhbp Variant 3 P106a Mutant
+4PXW B 3,34,6.9,0.0047,2.1,8.8,Crystal Structure Of Human Dcaf1 Wd40 Repeats (q1250l)
+2B1X A 3,26,6.9,0.0125,1.2,26.9,Crystal Structure Of Naphthalene 1,2-Dioxygenase From Rhodococcus Spÿ
+2KDY A 2,38,6.9,0.0125,2.6,5.3,Nmr Structure Of Lp2086-B01ÿ
+3HX6 A 3,37,6.8,0.0305,2.6,10.8,Crystal Structure Of Pseudomonas Aeruginosa Pily1 C-Terminal Domainÿ
+2D0V I 1,41,6.8,0.0134,2.8,4.9,Crystal Structure Of Methanol Dehydrogenase From Hyphomicrobium Denitrificans
+4AYE C 2,36,6.8,0.0309,2.4,5.6,Structure Of A Complex Between Ccps 6 And 7 Of Human Complement Factor H And Neisseria Meningitidis Fhbp Variant 1 E283ae304a Mutant
+4QDF A 2,31,6.8,0.0140,1.3,9.7,Crystal Structure Of Apo Ksha5 And Ksha1 In Complex With 1,4-30q-coa From R. Rhodochrous
+2D0V A 2,35,6.8,0.0326,2.9,2.9,Crystal Structure Of Methanol Dehydrogenase From Hyphomicrobium Denitrificans
+5CAW C 3,28,6.8,0.0102,1.6,21.4,Structure Of Pediculus Humanus Parkin Bound To Phospho-ubiquitin
+2W81 C 2,40,6.8,0.0354,2.6,0.0,Structure Of A Complex Between Neisseria Meningitidis Factor H Binding Protein And Ccps 6-7 Of Human Complement Factor Hÿ
+5CAW A 5,29,6.8,10e-4.2,1.8,20.7,Structure Of Pediculus Humanus Parkin Bound To Phospho-ubiquitin
+1SWG C ,38,6.8,0.0368,2.9,7.9,Circular Permuted Streptavidin E51A46 IN COMPLEX WITH Biotin

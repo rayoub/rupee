@@ -124,14 +124,14 @@
 3HIH A 1,37,6.2,0.0012,1.4,5.4,Structure Of Human Plk1-Pbd With Glycerol And Sulfate In The Phophopeptide Binding Siteÿ
 1Q4K B 1,34,5.7,0.0068,1.4,5.9,The Polo-Box Domain Of Plk1 In Complex With A Phospho- Peptide
 3C5L A 1,34,6.3,0.0009,1.4,5.9,Polo-Like Kinase 1 Polo Box Domain In Complex With Pphspt Peptideÿ
-4H5X B 1,37,6.2,0.0017,1.4,5.4,Human Plk1-Pbd With A Glycerol Bound At The Phophopeptide Binding Site
 3P35 B 1,34,6.2,0.0012,1.4,5.9,Polo-Like Kinase I Polo-Box Domain In Complex With Mqspspl Phosphopeptideÿ
+4H5X B 1,37,6.2,0.0017,1.4,5.4,Human Plk1-Pbd With A Glycerol Bound At The Phophopeptide Binding Site
 2FIO A ,16,5.2,0.0272,1.4,0.0,Phage Phi29 Transcription Regulator P4-Dna Complexÿ
 3AX0 B ,16,5.1,0.0346,1.4,0.0,Crystal Structure Of Streptomyces Tyrosinase In A Complex With Caddie Y98f Mutant Soaked In A Cu(Ii)-Containing Solution For 80 Hrÿ
-4R3O E ,33,6.4,0.0330,1.4,3.0,Human Constitutive 20s Proteasome
 4R3O S ,33,6.4,0.0333,1.4,3.0,Human Constitutive 20s Proteasome
-3PQH B 2,20,5.2,0.0022,1.4,5.0,Crystal Structure Of The C-Terminal Fragment Of The Bacteriophage Phi92 Membrane-Piercing Protein Gp138ÿ
+4R3O E ,33,6.4,0.0330,1.4,3.0,Human Constitutive 20s Proteasome
 4NHJ B 1,18,5.2,0.0022,1.4,0.0,Crystal Structure Of Klebsiella Pneumoniae Rsta Dna-binding Domain In Complex With Rsta Box
+3PQH B 2,20,5.2,0.0022,1.4,5.0,Crystal Structure Of The C-Terminal Fragment Of The Bacteriophage Phi92 Membrane-Piercing Protein Gp138ÿ
 1TK7 A 1,26,5.0,0.0151,1.5,3.8,Nmr Structure Of Ww Domains (Ww3-4) From Suppressor Of Deltex
 3P37 C 1,37,5.7,0.0085,1.5,5.4,Polo-Like Kinase I Polo-Box Domain In Complex With Fdpplhspta Phosphopeptide From Pbip1ÿ
 1UMW B 1,37,5.6,0.0099,1.5,8.1,Structure Of A Human Plk1 Polo-Box DomainPHOSPHOPEPTIDE Complex
@@ -148,14 +148,14 @@
 3GPT S ,34,6.3,0.0356,1.5,0.0,Crystal Structure Of The Yeast 20s Proteasome In Complex With Salinosporamide Derivatives: Slow Substrate Ligandÿ
 3GPT E ,34,6.3,0.0354,1.5,0.0,Crystal Structure Of The Yeast 20s Proteasome In Complex With Salinosporamide Derivatives: Slow Substrate Ligandÿ
 3P34 A 1,37,6.2,0.0015,1.5,8.1,Polo-Like Kinase I Polo-Box Domain In Complex With Mqsptpl Phosphopeptideÿ
-4O6W A 1,37,6.2,0.0016,1.5,8.1,Peptide-based Inhibitors Of Plk1 Polo-box Domain
 5DMS C 1,38,6.2,0.0012,1.5,7.9,Mouse Polo-box Domain And Emi2 (169-177)
+4O6W A 1,37,6.2,0.0016,1.5,8.1,Peptide-based Inhibitors Of Plk1 Polo-box Domain
 1UMW A 1,37,6.2,0.0017,1.5,8.1,Structure Of A Human Plk1 Polo-Box DomainPHOSPHOPEPTIDE Complex
 4LKL A 1,37,5.7,0.0087,1.5,8.1,Crystal Structure Of Plk1 Polo-box Domain In Complex With Pl-55
-3NZX E ,34,6.3,0.0447,1.5,0.0,Crystal Structure Of The Yeast 20s Proteasome In Complex With Ligand 2cÿ
 1JD2 E ,34,6.4,0.0331,1.5,0.0,Crystal Structure Of The Yeast 20s Proteasome:tmc-95a Complex: A Non- Covalent Proteasome Inhibitor
-1G65 E ,34,6.4,0.0271,1.5,0.0,Crystal Structure Of Epoxomicin:20s Proteasome Reveals A Molecular Basis For Selectivity Of Alpha,Beta-Epoxyketone Proteasome Inhibitorsÿ
+3NZX E ,34,6.3,0.0447,1.5,0.0,Crystal Structure Of The Yeast 20s Proteasome In Complex With Ligand 2cÿ
 3NZX S ,34,6.3,0.0453,1.5,0.0,Crystal Structure Of The Yeast 20s Proteasome In Complex With Ligand 2cÿ
+1G65 E ,34,6.4,0.0271,1.5,0.0,Crystal Structure Of Epoxomicin:20s Proteasome Reveals A Molecular Basis For Selectivity Of Alpha,Beta-Epoxyketone Proteasome Inhibitorsÿ
 4YFK I 3,31,5.0,0.0115,1.5,9.7,Escherichia Coli Rna Polymerase In Complex With Squaramide Compound 8
 5EM2 C 2,25,5.2,0.0152,1.5,0.0,Crystal Structure Of The Erb1-ytm1 Complex
 3UN4 S ,34,6.3,0.0395,1.5,0.0,Yeast 20s Proteasome In Complex With Pr-957 (Morpholine)ÿ
@@ -167,14 +167,14 @@
 3B77 E ,29,6.5,0.0035,1.5,3.4,Crystal Structure Of Protein Of Unknown Function (Duf1696) With Pleckstrin-Homology Domain (Zp_00539245.1) From Exiguobacterium Sibiricum 255-15 At 2.42 A Resolution
 3L72 R 3,19,5.1,0.0084,1.5,0.0,Chicken Cytochrome Bc1 Complex With Kresoxym-I-Dimethyl Boundÿ
 2ORC A ,23,5.1,0.0059,1.5,8.7,Cro Repressor Insertion Mutant K56-[dgevk], Nmr, 32 Structures
-4YFX I 3,30,5.1,0.0079,1.5,10.0,Escherichia Coli Rna Polymerase In Complex With Myxopyronin B
-4TQO C 5,20,4.7,0.0464,1.5,5.0,The Crystal Structure Of Methanol Dehydrogenase From Methylococcus Capsulatus (bath)
 3HYE D ,33,6.3,0.0377,1.5,3.0,Crystal Structure Of 20s Proteasome In Complex With Hydroxylated Salinosporamideÿ
+4TQO C 5,20,4.7,0.0464,1.5,5.0,The Crystal Structure Of Methanol Dehydrogenase From Methylococcus Capsulatus (bath)
+4YFX I 3,30,5.1,0.0079,1.5,10.0,Escherichia Coli Rna Polymerase In Complex With Myxopyronin B
 2P9S D 2,20,5.2,0.0158,1.5,0.0,Structure Of Bovine Arp23 COMPLEX CO-Crystallized With AtpMG2+
 4FZG S ,34,6.8,0.0022,1.5,0.0,20s Yeast Proteasome In Complex With Glidobactin
 4FZG E ,34,6.8,0.0021,1.5,0.0,20s Yeast Proteasome In Complex With Glidobactin
+4E67 A 1,37,5.7,0.0076,1.5,8.1,The Structure Of The Polo-Box Domain (Pbd) Of Polo-Like Kinase 1 (Plk1) In Complex With Hydrocinnamoyl-Derivatized Plhspta Peptide
 1S1T A 2,16,4.7,0.0454,1.5,6.2,Crystal Structure Of L100i Mutant Hiv-1 Reverse Transcriptase In Complex With Uc-781
 4Q1S D ,33,6.3,0.0375,1.5,3.0,Yeast 20s Proteasome In Complex With Kendomycin
-4E67 A 1,37,5.7,0.0076,1.5,8.1,The Structure Of The Polo-Box Domain (Pbd) Of Polo-Like Kinase 1 (Plk1) In Complex With Hydrocinnamoyl-Derivatized Plhspta Peptide
 4QWU S ,34,6.8,0.0019,1.5,0.0,Ycp Beta5-c52f Mutant In Complex With Bortezomib
 4QWU E ,34,6.8,0.0019,1.5,0.0,Ycp Beta5-c52f Mutant In Complex With Bortezomib

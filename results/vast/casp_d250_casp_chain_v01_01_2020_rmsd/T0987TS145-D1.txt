@@ -62,20 +62,20 @@
 2J1U B ,37,8.6,0.0108,2.0,5.4,Structure Of A Streptococcus Pneumoniae Fucose Binding Module In Complex With The Blood Group A-Tetrasaccharide
 2DI9 A ,51,7.9,0.0087,2.0,11.8,Solution Structure Of The 9th Filamin Domain From Human Filamin-B
 3DVN L 2,38,7.1,0.0367,2.0,5.3,Crystal Structure Of K63-Specific Fab Apu2.16 Bound To K63- Linked Di-Ubiquitin
-5F9F C 4,21,5.2,0.0441,2.0,4.8,Structural Basis For M7g Recognition And 2-o-methyl Discrimination In Capped Rnas By The Innate Immune Receptor Rig-i
 3BES R 1,40,7.5,0.0023,2.0,5.0,Structure Of A Poxvirus IfngbpIFNG COMPLEX
+5F9F C 4,21,5.2,0.0441,2.0,4.8,Structural Basis For M7g Recognition And 2-o-methyl Discrimination In Capped Rnas By The Innate Immune Receptor Rig-i
 4A39 A 1,30,7.5,0.0329,2.0,16.7,Metallo-Carboxypeptidase From Pseudomonas Aeruginosa In Complex With (2-Guanidinoethylmercapto)succinic Acid
 4A39 B 1,30,7.5,0.0307,2.0,16.7,Metallo-Carboxypeptidase From Pseudomonas Aeruginosa In Complex With (2-Guanidinoethylmercapto)succinic Acid
 2J1T B ,37,8.5,0.0119,2.0,5.4,Structure Of A Streptococcus Pneumoniae Fucose Binding Module In Complex With The Lewis Y Antigen
-4U48 A 3,33,6.8,0.0302,2.0,6.1,Crystal Structure Of Salmonella Alpha-2-macroglobulin
 4JFE A 2,33,7.0,0.0476,2.0,9.1,Preservation Of Peptide Specificity During Tcr-mhc Contact Dominated Affinity Enhancement Of A Melanoma-specific Tcr
+4U48 A 3,33,6.8,0.0302,2.0,6.1,Crystal Structure Of Salmonella Alpha-2-macroglobulin
 4JO1 M 2,37,7.1,0.0389,2.0,2.7,Crystal Structure Of Rabbit Mab R56 Fab In Complex With V3 Crown Of Hiv-1 Jr-fl Gp120
 4A38 A 1,30,7.5,0.0303,2.0,16.7,Metallo-Carboxypeptidase From Pseudomonas Aureginosa In Complex With L-Benzylsuccinic Acid
 4JO1 L 2,37,7.1,0.0389,2.0,2.7,Crystal Structure Of Rabbit Mab R56 Fab In Complex With V3 Crown Of Hiv-1 Jr-fl Gp120
 4A37 B 1,30,7.5,0.0327,2.0,16.7,Metallo-Carboxypeptidase From Pseudomonas Aeruginosa
 4A37 A 1,30,7.5,0.0330,2.0,16.7,Metallo-Carboxypeptidase From Pseudomonas Aeruginosa
-5DSC D 2,37,7.1,0.0354,2.1,2.7,Context-independent Anti-hypusine Antibody Fabhpu24.b In Complex With Hypusine
 4QGB A 1,42,7.3,0.0175,2.1,16.7,Crystal Structure Of Mutant Ribosomal Protein G219v Tthl1
+5DSC D 2,37,7.1,0.0354,2.1,2.7,Context-independent Anti-hypusine Antibody Fabhpu24.b In Complex With Hypusine
 2V5Y A 3,40,7.2,0.0310,2.1,5.0,Crystal Structure Of The Receptor Protein Tyrosine Phosphatase Mu Ectodomain
 5DS8 L 2,37,7.2,0.0292,2.1,2.7,Context-independent Anti-hypusine Antibody Fabhpu98 In Complex With Hypusine
 4F9T A 1,42,7.8,0.0040,2.1,14.3,Ribosomal Protein L1 From Thermus Thermophilus With Substitution Thr217ala
@@ -84,12 +84,12 @@
 3S8W A ,30,6.8,0.0390,2.1,10.0,D2 Domain Of Human Ifnar2ÿ
 1QXP A 4,40,7.8,0.0346,2.1,5.0,Crystal Structure Of A Mu-Like Calpain
 4OV6 F ,39,7.4,0.0140,2.1,10.3,Crystal Structure Of Pcsk9(53-451) With Adnectin
-2ATY A 3,39,7.1,0.0408,2.1,7.7,Complement Receptor Chimaeric Conjugate Cr2-Ig
 1IGY D 3,39,7.1,0.0408,2.1,7.7,Structure Of Immunoglobulin
-1IGY B 3,39,7.1,0.0405,2.1,7.7,Structure Of Immunoglobulin
+2ATY A 3,39,7.1,0.0408,2.1,7.7,Complement Receptor Chimaeric Conjugate Cr2-Ig
 2ATY B 3,39,7.1,0.0405,2.1,7.7,Complement Receptor Chimaeric Conjugate Cr2-Ig
-5DUB L 2,37,7.2,0.0243,2.1,2.7,Context-independent Anti-hypusine Antibody Fabhpu98 In Complex With Deoxyhypusine
 1RZI A 2,37,7.2,0.0288,2.1,5.4,Crystal Structure Of Human Anti-Hiv-1 Gp120-Reactive Antibody 47e Fab
+1IGY B 3,39,7.1,0.0405,2.1,7.7,Structure Of Immunoglobulin
+5DUB L 2,37,7.2,0.0243,2.1,2.7,Context-independent Anti-hypusine Antibody Fabhpu98 In Complex With Deoxyhypusine
 4GL2 A 4,21,5.2,0.0308,2.1,0.0,Structural Basis For Dsrna Duplex Backbone Recognition By Mda5
 3LB6 C 1,36,6.8,0.0408,2.1,5.6,The Structure Of Il-13 In Complex With Il-13ralpha2ÿ
 1ANU A ,46,8.2,0.0079,2.1,10.9,Cohesin-2 Domain Of The Cellulosome From Clostridium Thermocellum

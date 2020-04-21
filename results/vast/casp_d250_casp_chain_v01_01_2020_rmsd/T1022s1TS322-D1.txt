@@ -58,7 +58,7 @@
 2C37 S 3,34,6.3,0.0055,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With U8 Rnaÿ
 2C37 U 3,34,6.3,0.0055,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With U8 Rnaÿ
 2C37 K 3,34,6.3,0.0055,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With U8 Rnaÿ
-2C37 Q 3,34,6.3,0.0054,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With U8 Rnaÿ
+2C37 Q 3,34,6.3,0.0054,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With U8 Rnaя
 2BR2 U 3,34,6.3,0.0050,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome
 2BR2 A 3,34,6.4,0.0048,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome
 2BR2 C 3,34,6.4,0.0050,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome
@@ -67,19 +67,19 @@
 2BR2 O 3,34,6.3,0.0050,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome
 2BR2 S 3,34,6.3,0.0051,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome
 2BR2 K 3,34,6.3,0.0050,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome
-2C37 O 3,34,6.3,0.0055,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With U8 Rnaÿ
-2C37 I 3,34,6.3,0.0057,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With U8 Rnaÿ
-2C37 C 3,34,6.3,0.0056,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With U8 Rnaÿ
+2C37 O 3,34,6.3,0.0055,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With U8 Rnaя
+2C37 I 3,34,6.3,0.0057,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With U8 Rnaя
+2C37 C 3,34,6.3,0.0056,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With U8 Rnaя
 4JRK C ,32,6.5,0.0344,1.4,15.6,Crystal Structure Of Escherichia Coli Hfq Surface Mutant
-2C37 W 3,34,6.3,0.0055,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With U8 Rnaÿ
+2C37 W 3,34,6.3,0.0055,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome In Complex With U8 Rnaя
 2BR2 W 3,34,6.4,0.0050,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome
 1N3J A 2,23,5.2,0.0189,1.4,0.0,Structure And Substrate Of A Histone H3 Lysine Methyltransferase From Paramecium Bursaria Chlorella Virus 1
 1N3J B 2,23,5.2,0.0189,1.4,0.0,Structure And Substrate Of A Histone H3 Lysine Methyltransferase From Paramecium Bursaria Chlorella Virus 1
 2BR2 Q 3,34,6.4,0.0049,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome
 2BR2 M 3,34,6.3,0.0051,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome
 2BR2 I 3,34,6.3,0.0050,1.4,5.9,Rnase Ph Core Of The Archaeal Exosome
-3L7Z G 1,34,6.3,0.0075,1.4,5.9,Crystal Structure Of The S. Solfataricus Archaeal Exosomeÿ
-3L7Z D 3,34,6.3,0.0067,1.4,5.9,Crystal Structure Of The S. Solfataricus Archaeal Exosomeÿ
+3L7Z G 1,34,6.3,0.0075,1.4,5.9,Crystal Structure Of The S. Solfataricus Archaeal Exosomeя
+3L7Z D 3,34,6.3,0.0067,1.4,5.9,Crystal Structure Of The S. Solfataricus Archaeal Exosomeя
 4I86 B ,51,8.7,0.0003,1.4,7.8,Crystal Structure Of Pilz Domain Of Cesa From Cellulose Synthesizing Bacterium
 4CNJ A 2,16,3.5,0.0318,1.4,0.0,L-aminoacetone Oxidase From Streptococcus Oligofermentans Belongs To A New 3-domain Family Of Bacterial Flavoproteins
 4JUV F ,32,6.4,0.0500,1.4,15.6,Crystal Structure Of Escherichia Coli Hfq Distal Face 1 Mutant
@@ -90,30 +90,30 @@
 4J5Y A ,33,6.4,0.0480,1.4,15.2,Crystal Structure Of Hfq From Pseudomonas Aeruginosa In Complex With Atp
 4CNK A 2,14,3.5,0.0318,1.5,0.0,L-aminoacetone Oxidase From Streptococcus Oligofermentans Belongs To A New 3-domain Family Of Bacterial Flavoproteins
 4CNK B 2,14,3.5,0.0318,1.5,0.0,L-aminoacetone Oxidase From Streptococcus Oligofermentans Belongs To A New 3-domain Family Of Bacterial Flavoproteins
-3QHS D ,32,6.5,0.0346,1.5,15.6,Crystal Structure Of Full-Length Hfq From Escherichia Coliÿ
+3QHS D ,32,6.5,0.0346,1.5,15.6,Crystal Structure Of Full-Length Hfq From Escherichia Coliя
 3VR4 F 1,42,7.4,0.0164,1.5,4.8,Crystal Structure Of Enterococcus Hirae V1-atpase [ev1]
 5AFR A ,29,7.7,0.0001,1.5,6.9,N-terminal Fragment Of Dynein Heavy Chain
 5AFR A 1,29,6.7,0.0007,1.5,6.9,N-terminal Fragment Of Dynein Heavy Chain
-2WNR A 1,34,6.1,0.0129,1.5,5.9,The Structure Of Methanothermobacter Thermautotrophicus Exosome Core Assemblyÿ
+2WNR A 1,34,6.1,0.0129,1.5,5.9,The Structure Of Methanothermobacter Thermautotrophicus Exosome Core Assemblyя
 1LJO A ,34,6.7,0.0497,1.5,20.6,Crystal Structure Of An Sm-Like Protein (Af-Sm2) From Archaeoglobus Fulgidus At 1.95a Resolution
 1XDN A 1,23,5.2,0.0308,1.5,4.3,High Resolution Crystal Structure Of An Editosome Enzyme From Trypanosoma Brucei: Rna Editing Ligase 1
 4CNJ C 2,15,3.5,0.0318,1.5,0.0,L-aminoacetone Oxidase From Streptococcus Oligofermentans Belongs To A New 3-domain Family Of Bacterial Flavoproteins
-3RER F ,29,6.5,0.0284,1.5,13.8,Crystal Structure Of E. Coli Hfq In Complex With Au6a Rna And Adpÿ
-3LB6 C 3,21,5.2,0.0308,1.5,4.8,The Structure Of Il-13 In Complex With Il-13ralpha2ÿ
-3QHS B ,32,6.6,0.0182,1.5,15.6,Crystal Structure Of Full-Length Hfq From Escherichia Coliÿ
+3RER F ,29,6.5,0.0284,1.5,13.8,Crystal Structure Of E. Coli Hfq In Complex With Au6a Rna And Adpя
+3LB6 C 3,21,5.2,0.0308,1.5,4.8,The Structure Of Il-13 In Complex With Il-13ralpha2я
+3QHS B ,32,6.6,0.0182,1.5,15.6,Crystal Structure Of Full-Length Hfq From Escherichia Coliя
 3B4T A 2,34,5.9,0.0246,1.5,0.0,Crystal Structure Of Mycobacterium Tuberculosis Rnase Ph, The Mycobacterium Tuberculosis Structural Genomics Consortium Target Rv1340
 4EWV B 2,27,3.5,0.0318,1.5,11.1,Crystal Structure Of Gh3.12 In Complex With Ampcpp
-1I6U A 1,32,5.2,0.0249,1.6,6.2,Rna-Protein Interactions: The Crystal Structure Of Ribosomal Protein S8RRNA COMPLEX FROM METHANOCOCCUS Jannaschiiÿ
-3CW2 F 3,37,8.0,0.0139,1.6,10.8,Crystal Structure Of The Intact Archaeal Translation Initiation Factor 2 From Sulfolobus Solfataricus ÿ
+1I6U A 1,32,5.2,0.0249,1.6,6.2,Rna-Protein Interactions: The Crystal Structure Of Ribosomal Protein S8RRNA COMPLEX FROM METHANOCOCCUS Jannaschiiя
+3CW2 F 3,37,8.0,0.0139,1.6,10.8,Crystal Structure Of The Intact Archaeal Translation Initiation Factor 2 From Sulfolobus Solfataricus я
 4UER H 1,34,5.2,0.0269,1.6,2.9,40s-eif1-eif1a-eif3-eif3j Translation Initiation Complex From Lachancea Kluyveri
-3LPP C 1,12,3.5,0.0318,1.6,8.3,Crystal Complex Of N-Terminal Sucrase-Isomaltase With Kotalanolÿ
+3LPP C 1,12,3.5,0.0318,1.6,8.3,Crystal Complex Of N-Terminal Sucrase-Isomaltase With Kotalanolя
 4KZX W 1,34,5.2,0.0274,1.6,2.9,Rabbit 40s Ribosomal Subunit In Complex With Eif1
 4KZY W 1,34,5.2,0.0274,1.6,2.9,Rabbit 40s Ribosomal Subunit In Complex With Eif1 And Eif1a
 4KZZ W 1,34,5.2,0.0274,1.6,2.9,Rabbit 40s Ribosomal Subunit In Complex With Mrna, Initiator Trna And Eif1a
 2V1N A ,30,5.2,0.0440,1.6,13.3,Solution Structure Of The Region 51-160 Of Human Kin17 Reveals A Winged Helix Fold
 4B3F X 1,42,7.5,0.0334,1.6,2.4,Crystal Structure Of 1ghmbp2 Helicase
 4B3G A 2,43,8.2,0.0029,1.6,4.7,Crystal Structure Of Ighmbp2 Helicase In Complex With Rna
-3G2E A 1,33,3.5,0.0318,1.6,12.1,Structure Of Putative Oorc Subunit Of 2- Oxoglutarate:acceptor Oxidoreductase From Campylobacter Jejuniÿ
+3G2E A 1,33,3.5,0.0318,1.6,12.1,Structure Of Putative Oorc Subunit Of 2- Oxoglutarate:acceptor Oxidoreductase From Campylobacter Jejuniя
 3JAM W 1,34,5.2,0.0176,1.6,2.9,Cryoem Structure Of 40s-eif1a-eif1 Complex From Yeast
 4QJV D ,52,6.4,0.0340,1.6,7.7,The X-ray Crystal Structure Of Rpo3/rpo11 Heterodimer Of Euryarchaeal Rna Polymerase From Thermococcus Kodakarensis
 1SFO C 1,50,6.3,0.0389,1.6,10.0,Rna Polymerase Ii Strand Separated Elongation Complex

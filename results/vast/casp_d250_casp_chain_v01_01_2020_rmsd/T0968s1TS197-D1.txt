@@ -78,18 +78,18 @@
 1PU7 A 1,31,4.0,0.0390,1.3,12.9,Crystal Structure Of H.Pylori 3-Methyladenine Dna Glycosylase (Magiii) Bound To 3,9-Dimethyladenine
 3SJL D 2,40,6.3,0.0040,1.3,17.5,Crystal Structure Of The P107s-MaugPRE-Methylamine Dehydrogenase Complex
 3SWS F 2,40,6.2,0.0048,1.3,17.5,Crystal Structure Of The Quinone Form Of Methylamine Dehydrogenase In Complex With The Diferric Form Of Maug
-3PXT D 2,40,6.2,0.0045,1.3,17.5,Crystal Structure Of Ferrous Co Adduct Of Maug In Complex With Pre- Methylamine Dehydrogenaseя
-2J56 H 2,40,6.2,0.0046,1.3,17.5,X-Ray Reduced Paraccocus Denitrificans Methylamine Dehydrogenase N-Semiquinone In Complex With Amicyaninя
-3ORV F 2,40,6.3,0.0040,1.3,17.5,Crystal Structure Of The Y294h-MaugPRE-Methylamine Dehydrogenase Complexя
-3PXW F 2,40,6.2,0.0044,1.3,17.5,Crystal Structure Of Ferrous No Adduct Of Maug In Complex With Pre- Methylamine Dehydrogenaseя
-3PXS D 2,40,6.3,0.0041,1.3,17.5,Crystal Structure Of Diferrous Maug In Complex With Pre-Methylamine Dehydrogenase:я
-3L4O D 2,40,6.3,0.0042,1.3,17.5,Crystal Structure Of The MaugPRE-Methylamine Dehydrogenase Complex After Treatment With Hydrogen Peroxideя
+3PXT D 2,40,6.2,0.0045,1.3,17.5,Crystal Structure Of Ferrous Co Adduct Of Maug In Complex With Pre- Methylamine Dehydrogenaseÿ
+2J56 H 2,40,6.2,0.0046,1.3,17.5,X-Ray Reduced Paraccocus Denitrificans Methylamine Dehydrogenase N-Semiquinone In Complex With Amicyaninÿ
+3ORV F 2,40,6.3,0.0040,1.3,17.5,Crystal Structure Of The Y294h-MaugPRE-Methylamine Dehydrogenase Complexÿ
+3PXW F 2,40,6.2,0.0044,1.3,17.5,Crystal Structure Of Ferrous No Adduct Of Maug In Complex With Pre- Methylamine Dehydrogenaseÿ
+3PXS D 2,40,6.3,0.0041,1.3,17.5,Crystal Structure Of Diferrous Maug In Complex With Pre-Methylamine Dehydrogenase:ÿ
+3L4O D 2,40,6.3,0.0042,1.3,17.5,Crystal Structure Of The MaugPRE-Methylamine Dehydrogenase Complex After Treatment With Hydrogen Peroxideÿ
 1MG2 M 2,40,6.3,0.0037,1.3,17.5,Mutation Of Alpha Phe55 Of Methylamine Dehydrogenase Alters The Reorganization Energy And Electronic Coupling For Its Electron Transfer Reaction With Amicyanin
-3PXS F 2,40,6.2,0.0043,1.3,17.5,Crystal Structure Of Diferrous Maug In Complex With Pre-Methylamine Dehydrogenase:я
+3PXS F 2,40,6.2,0.0043,1.3,17.5,Crystal Structure Of Diferrous Maug In Complex With Pre-Methylamine Dehydrogenase:ÿ
 1MG2 I 2,40,6.2,0.0045,1.3,17.5,Mutation Of Alpha Phe55 Of Methylamine Dehydrogenase Alters The Reorganization Energy And Electronic Coupling For Its Electron Transfer Reaction With Amicyanin
 4FA4 D 2,40,6.3,0.0035,1.3,17.5,Crystal Structure Of Wt Maug In Complex With Pre-methylamine Dehydrogenase Aged 10 Days
-3PXW D 2,40,6.3,0.0040,1.3,17.5,Crystal Structure Of Ferrous No Adduct Of Maug In Complex With Pre- Methylamine Dehydrogenaseя
-3PXT F 2,40,6.2,0.0045,1.3,17.5,Crystal Structure Of Ferrous Co Adduct Of Maug In Complex With Pre- Methylamine Dehydrogenaseя
+3PXW D 2,40,6.3,0.0040,1.3,17.5,Crystal Structure Of Ferrous No Adduct Of Maug In Complex With Pre- Methylamine Dehydrogenaseÿ
+3PXT F 2,40,6.2,0.0045,1.3,17.5,Crystal Structure Of Ferrous Co Adduct Of Maug In Complex With Pre- Methylamine Dehydrogenaseÿ
 4L3G D 2,40,6.3,0.0037,1.3,17.5,Crystal Structure Of The E113q-maug/pre-methylamine Dehydrogenase Complex Aged 120 Days
 1MG2 E 2,40,6.2,0.0043,1.3,17.5,Mutation Of Alpha Phe55 Of Methylamine Dehydrogenase Alters The Reorganization Energy And Electronic Coupling For Its Electron Transfer Reaction With Amicyanin
 2J57 G 2,40,6.2,0.0045,1.3,17.5,X-Ray Reduced Paraccocus Denitrificans Methylamine Dehydrogenase N-Quinol In Complex With Amicyanin
@@ -101,23 +101,23 @@
 4FA1 F 2,40,6.3,0.0031,1.3,17.5,Crystal Structure Of Wt Maug In Complex With Pre-methylamine Dehydrogenase Aged 130 Days
 2GC7 M 2,40,6.2,0.0044,1.3,17.5,Substrate Reduced, Copper Free Complex Of Methylamine Dehydrogenase, Amicyanin And Cytochrome C551i From Paracoccus Denitrificans
 3SLE F 2,41,6.2,0.0048,1.4,17.1,Crystal Structure Of The P107c-MaugPRE-Methylamine Dehydrogenase Complex
-3Q5P A 1,17,4.7,0.0399,1.4,0.0,Crystal Structure Of Bmrr Bound To Tetracyclineя
+3Q5P A 1,17,4.7,0.0399,1.4,0.0,Crystal Structure Of Bmrr Bound To Tetracyclineÿ
 3SLE D 2,41,6.2,0.0043,1.4,17.1,Crystal Structure Of The P107c-MaugPRE-Methylamine Dehydrogenase Complex
-3A58 A 1,43,6.8,0.0122,1.4,11.6,Crystal Structure Of Sec3p - Rho1p Complex From Saccharomyces Cerevisiaeя
-3A58 E 1,43,6.8,0.0145,1.4,11.6,Crystal Structure Of Sec3p - Rho1p Complex From Saccharomyces Cerevisiaeя
-3A58 C 1,44,6.9,0.0090,1.4,11.4,Crystal Structure Of Sec3p - Rho1p Complex From Saccharomyces Cerevisiaeя
-3HGK B 1,30,6.2,0.0354,1.5,0.0,Crystal Structure Of Effect Protein Avrptob Complexed With Kinase Ptoя
-3HGK C 1,29,6.1,0.0463,1.5,0.0,Crystal Structure Of Effect Protein Avrptob Complexed With Kinase Ptoя
+3A58 A 1,43,6.8,0.0122,1.4,11.6,Crystal Structure Of Sec3p - Rho1p Complex From Saccharomyces Cerevisiaeÿ
+3A58 E 1,43,6.8,0.0145,1.4,11.6,Crystal Structure Of Sec3p - Rho1p Complex From Saccharomyces Cerevisiaeÿ
+3A58 C 1,44,6.9,0.0090,1.4,11.4,Crystal Structure Of Sec3p - Rho1p Complex From Saccharomyces Cerevisiaeÿ
+3HGK B 1,30,6.2,0.0354,1.5,0.0,Crystal Structure Of Effect Protein Avrptob Complexed With Kinase Ptoÿ
+3HGK C 1,29,6.1,0.0463,1.5,0.0,Crystal Structure Of Effect Protein Avrptob Complexed With Kinase Ptoÿ
 1INW A 3,30,5.8,0.0225,1.5,3.3,A Sialic Acid Derived Phosphonate Analog Inhibits Different Strains Of Influenza Virus Neuraminidase With Different Efficiencies
-3KXE A ,41,6.9,0.0318,1.5,7.3,A Conserved Mode Of Protein Recognition And Binding In A Pard-Pare Toxin-Antitoxin Complexя
+3KXE A ,41,6.9,0.0318,1.5,7.3,A Conserved Mode Of Protein Recognition And Binding In A Pard-Pare Toxin-Antitoxin Complexÿ
 4H53 A 3,30,5.7,0.0261,1.5,0.0,Insight Into The Enzymatic Mechanism Of Influenza Virus Neuraminidase And The Development Of A Covalently-bound Inhibitor
 4K1H B 3,30,5.7,0.0284,1.5,0.0,Induced Opening Of Influenza Virus Neuraminidase N2 150-loop Suggests An Important Role In Inhibitor Binding
-3Q04 A 1,30,6.8,0.0321,1.5,10.0,Crystal Structure Of The Apo-Form Of Human Ck2 Alpha At Ph 8.5я
-3TIC C 3,30,5.7,0.0252,1.5,0.0,Crystal Structure Of 1957 Pandemic H2n2 Neuraminidase Complexed With Zanamivirя
-3TIC A 3,30,5.7,0.0263,1.5,0.0,Crystal Structure Of 1957 Pandemic H2n2 Neuraminidase Complexed With Zanamivirя
+3Q04 A 1,30,6.8,0.0321,1.5,10.0,Crystal Structure Of The Apo-Form Of Human Ck2 Alpha At Ph 8.5ÿ
+3TIC C 3,30,5.7,0.0252,1.5,0.0,Crystal Structure Of 1957 Pandemic H2n2 Neuraminidase Complexed With Zanamivirÿ
+3TIC A 3,30,5.7,0.0263,1.5,0.0,Crystal Structure Of 1957 Pandemic H2n2 Neuraminidase Complexed With Zanamivirÿ
 4YON A 2,41,7.2,0.0497,1.5,4.9,P-rex1:rac1 Complex
-3TIC B 3,30,5.7,0.0236,1.6,0.0,Crystal Structure Of 1957 Pandemic H2n2 Neuraminidase Complexed With Zanamivirя
-3TIC D 3,30,5.7,0.0234,1.6,0.0,Crystal Structure Of 1957 Pandemic H2n2 Neuraminidase Complexed With Zanamivirя
+3TIC B 3,30,5.7,0.0236,1.6,0.0,Crystal Structure Of 1957 Pandemic H2n2 Neuraminidase Complexed With Zanamivirÿ
+3TIC D 3,30,5.7,0.0234,1.6,0.0,Crystal Structure Of 1957 Pandemic H2n2 Neuraminidase Complexed With Zanamivirÿ
 3KXE B ,41,7.0,0.0286,1.6,9.8,A Conserved Mode Of Protein Recognition And Binding In A Pard-Pare Toxin-Antitoxin Complexÿ
 4GUU A 1,23,3.8,0.0275,1.6,8.7,Crystal Structure Of Lsd2-npac With Tranylcypromine
 3PUF O ,30,6.6,0.0259,1.7,3.3,Crystal Structure Of Human Rnase H2 Complexÿ

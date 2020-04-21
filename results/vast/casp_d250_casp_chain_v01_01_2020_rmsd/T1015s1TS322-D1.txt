@@ -63,7 +63,7 @@
 1R9M D 2,19,5.0,0.0292,1.1,10.5,Crystal Structure Of Human Dipeptidyl Peptidase Iv At 2.1 Ang. Resolution
 2JID B 2,19,5.2,0.0066,1.1,10.5,Human Dipeptidyl Peptidase Iv In Complex With 1-(3,4- Dimethoxy-Phenyl)-3-M-Tolyl-Piperidine-4-Ylamine
 5C1Z A 6,19,5.2,0.0072,1.1,21.1,Parkin (ublr0rbr)
-3KWF B 2,19,5.2,0.0117,1.1,10.5,Human Dpp-Iv With Carmegliptin (S)-1-((2s,3s,11bs)-2-Amino- 9,10-Dimethoxy-1,3,4,6,7,11b-Hexahydro-2h-Pyrido[2,1- A]isoquinolin-3-Yl)-4-Fluoromethyl-Pyrrolidin-2-Oneя
+3KWF B 2,19,5.2,0.0117,1.1,10.5,Human Dpp-Iv With Carmegliptin (S)-1-((2s,3s,11bs)-2-Amino- 9,10-Dimethoxy-1,3,4,6,7,11b-Hexahydro-2h-Pyrido[2,1- A]isoquinolin-3-Yl)-4-Fluoromethyl-Pyrrolidin-2-Oneÿ
 5C1Z B 6,19,5.2,0.0069,1.1,21.1,Parkin (ublr0rbr)
 5AF6 G ,19,5.2,0.0084,1.1,31.6,Structure Of Lys33-linked Diub Bound To Trabid Nzf1
 1RWQ B 2,19,5.2,0.0066,1.1,10.5,Human Dipeptidyl Peptidase Iv In Complex With 5-Aminomethyl- 6-(2,4-Dichloro-Phenyl)-2-(3,5-Dimethoxy-Phenyl)-Pyrimidin- 4-Ylamine
@@ -75,29 +75,29 @@
 5C4X I 2,29,5.0,0.0409,1.1,13.8,Crystal Structure Of A Transcribing Rna Polymerase Ii Complex Reveals A Complete Transcription Bubble
 4KR0 A 2,21,5.2,0.0066,1.1,14.3,Complex Structure Of Mers-cov Spike Rbd Bound To Cd26
 5AF6 J ,17,5.2,0.0118,1.1,35.3,Structure Of Lys33-linked Diub Bound To Trabid Nzf1
-3S9J A 3,24,5.2,0.0066,1.1,0.0,Crystal Structure Of A Member Of Duf4221 Family (Bvu_1028) From Bacteroides Vulgatus At 1.75 A Resolutionя
-3Q0T A 2,21,5.2,0.0066,1.1,14.3,Crystal Structure Of Human Dpp-Iv In Complex Withsa-(+)- Methyl2-(3- (Aminomethyl)-4-(2,4-Dichlorophenyl)-2-Methyl- 7-Oxo-5h-Pyrrolo[3,4- B]pyridin-6(7h)-Yl)acetateя
-3OC0 A 2,21,5.2,0.0066,1.2,14.3,Structure Of Human Dpp-Iv With Hts Hit (2s,3s,11bs)-3-Butyl-9,10- Dimethoxy-1,3,4,6,7,11b-Hexahydro-2h-Pyrido[2,1-A]isoquinolin-2- Ylamineя
-3R4Y A 2,22,5.0,0.0298,1.2,9.1,Crystal Structure Of Alpha-Neoagarobiose Hydrolase (Alpha-Nabh) From Saccharophagus Degradans 2-40я
-2B1X A 3,26,6.9,0.0125,1.2,26.9,Crystal Structure Of Naphthalene 1,2-Dioxygenase From Rhodococcus Spя
-3R4Z A 3,22,5.0,0.0366,1.2,9.1,Crystal Structure Of Alpha-Neoagarobiose Hydrolase (Alpha-Nabh) In Complex With Alpha-D-Galactopyranose From Saccharophagus Degradans 2- 40я
+3S9J A 3,24,5.2,0.0066,1.1,0.0,Crystal Structure Of A Member Of Duf4221 Family (Bvu_1028) From Bacteroides Vulgatus At 1.75 A Resolutionÿ
+3Q0T A 2,21,5.2,0.0066,1.1,14.3,Crystal Structure Of Human Dpp-Iv In Complex Withsa-(+)- Methyl2-(3- (Aminomethyl)-4-(2,4-Dichlorophenyl)-2-Methyl- 7-Oxo-5h-Pyrrolo[3,4- B]pyridin-6(7h)-Yl)acetateÿ
+3OC0 A 2,21,5.2,0.0066,1.2,14.3,Structure Of Human Dpp-Iv With Hts Hit (2s,3s,11bs)-3-Butyl-9,10- Dimethoxy-1,3,4,6,7,11b-Hexahydro-2h-Pyrido[2,1-A]isoquinolin-2- Ylamineÿ
+3R4Y A 2,22,5.0,0.0298,1.2,9.1,Crystal Structure Of Alpha-Neoagarobiose Hydrolase (Alpha-Nabh) From Saccharophagus Degradans 2-40ÿ
+2B1X A 3,26,6.9,0.0125,1.2,26.9,Crystal Structure Of Naphthalene 1,2-Dioxygenase From Rhodococcus Spÿ
+3R4Z A 3,22,5.0,0.0366,1.2,9.1,Crystal Structure Of Alpha-Neoagarobiose Hydrolase (Alpha-Nabh) In Complex With Alpha-D-Galactopyranose From Saccharophagus Degradans 2- 40ÿ
 5C23 B 6,21,5.2,0.0103,1.2,19.0,Parkin (s65dublr0rbr)
 2AJ8 A 2,21,5.2,0.0081,1.2,14.3,Porcine Dipeptidyl Peptidase Iv (Cd26) In Complex With 7- Benzyl-1,3-Dimethyl-8-Piperazin-1-Yl-3,7-Dihydro-Purine-2, 6-Dione (Bdpx)
 1N1M A 2,24,5.2,0.0066,1.2,8.3,Human Dipeptidyl Peptidase IvCD26 IN COMPLEX WITH AN Inhibitor
-3R4Y B 2,22,5.0,0.0295,1.2,9.1,Crystal Structure Of Alpha-Neoagarobiose Hydrolase (Alpha-Nabh) From Saccharophagus Degradans 2-40я
+3R4Y B 2,22,5.0,0.0295,1.2,9.1,Crystal Structure Of Alpha-Neoagarobiose Hydrolase (Alpha-Nabh) From Saccharophagus Degradans 2-40ÿ
 4BM9 A 4,25,5.2,0.0066,1.2,20.0,Structure Of The Autoinhibited Parkin Catalytic Domain
 1NU8 B 2,24,5.2,0.0080,1.2,8.3,Crystal Structure Of Human Dipeptidyl Peptidase Iv (Dpp-Iv) In Complex With Diprotin A (Ili)
-3OPM D 2,21,5.0,0.0405,1.2,14.3,Crystal Structure Of Human Dpp4 Bound To Tak-294я
-3G0B D 2,21,5.0,0.0343,1.2,14.3,Crystal Structure Of Dipeptidyl Peptidase Iv In Complex With Tak-322я
+3OPM D 2,21,5.0,0.0405,1.2,14.3,Crystal Structure Of Human Dpp4 Bound To Tak-294ÿ
+3G0B D 2,21,5.0,0.0343,1.2,14.3,Crystal Structure Of Dipeptidyl Peptidase Iv In Complex With Tak-322ÿ
 1TKR A 2,24,5.2,0.0066,1.2,8.3,Human Dipeptidyl Peptidase IvCD26 INHIBITED WITH Diisopropyl Fluorophosphate
-3OTT B 7,27,5.0,0.0290,1.2,0.0,Crystal Structure Of The Extracellular Domain Of The Putative One Component System Bt4673 From B. Thetaiotaomicronя
-3QBJ A 2,21,5.1,0.0221,1.2,14.3,Crystal Structure Of Dipeptidyl Peptidase Iv In Complex With Inhibitorя
+3OTT B 7,27,5.0,0.0290,1.2,0.0,Crystal Structure Of The Extracellular Domain Of The Putative One Component System Bt4673 From B. Thetaiotaomicronÿ
+3QBJ A 2,21,5.1,0.0221,1.2,14.3,Crystal Structure Of Dipeptidyl Peptidase Iv In Complex With Inhibitorÿ
 2E4Q C ,32,8.1,0.0013,1.2,9.4,Crystal Structure Of Bpha3 (Reduced Form)
 2E4Q C 2,32,8.1,0.0001,1.2,9.4,Crystal Structure Of Bpha3 (Reduced Form)
 4A2M C 7,26,5.1,0.0156,1.2,7.7,Structure Of The Periplasmic Domain Of The Heparin And Heparan Sulphate Sensing Hybrid Two Component System Bt4663 In Apo And Ligand Bound Forms
-3O95 A 2,21,5.1,0.0203,1.2,14.3,Crystal Structure Of Human Dpp4 Bound To Tak-100я
+3O95 A 2,21,5.1,0.0203,1.2,14.3,Crystal Structure Of Human Dpp4 Bound To Tak-100ÿ
 2YVJ B ,32,7.9,0.0023,1.2,9.4,Crystal Structure Of The Ferredoxin-Ferredoxin Reductase (Bpha3-Bpha4)complex
-3K1F I 1,27,5.3,0.0286,1.2,11.1,Crystal Structure Of Rna Polymerase Ii In Complex With Tfiibя
+3K1F I 1,27,5.3,0.0286,1.2,11.1,Crystal Structure Of Rna Polymerase Ii In Complex With Tfiibÿ
 2QKY B 2,21,5.0,0.0461,1.2,14.3,Complex Structure Of Dipeptidyl Peptidase Iv And A Oxadiazolyl Ketone
 4U1F A 2,17,5.1,0.0233,1.2,5.9,Crystal Structure Of Middle Domain Of Eukaryotic Translation Initiation Factor Eif3b
 2J04 D 4,26,5.0,0.0383,1.2,11.5,The Tau60-Tau91 Subcomplex Of Yeast Transcription Factor Iiic
@@ -108,20 +108,20 @@
 2GBI B 2,25,5.2,0.0146,1.2,12.0,Rat Dpp-Iv With Xanthine Inhibitor 4
 3EIO A 2,25,5.2,0.0066,1.2,8.0,Crystal Structure Analysis Of Dppiv Inhibitor
 2OGZ B 2,25,5.2,0.0066,1.2,8.0,Crystal Structure Of Dpp-Iv Complexed With Lilly Aryl Ketone Inhibitor
-3GTJ I 1,27,5.7,0.0083,1.2,11.1,Backtracked Rna Polymerase Ii Complex With 13mer Rnaя
-3GTK I 1,27,5.6,0.0099,1.2,11.1,Backtracked Rna Polymerase Ii Complex With 18mer Rnaя
+3GTJ I 1,27,5.7,0.0083,1.2,11.1,Backtracked Rna Polymerase Ii Complex With 13mer Rnaÿ
+3GTK I 1,27,5.6,0.0099,1.2,11.1,Backtracked Rna Polymerase Ii Complex With 18mer Rnaÿ
 2C6B A ,19,5.2,0.0120,1.2,21.1,Solution Structure Of The C4 Zinc-Finger Domain Of Hdm2
 2I3Z B 2,24,5.2,0.0066,1.2,12.5,Rat Dpp-Iv With Xanthine Mimetic Inhibitor #7
-4A3E I 1,27,5.9,0.0036,1.2,11.1,Rna Polymerase Ii Initial Transcribing Complex With A 5nt Dna-Rna Hybrid And Soaked With Ampcppя
+4A3E I 1,27,5.9,0.0036,1.2,11.1,Rna Polymerase Ii Initial Transcribing Complex With A 5nt Dna-Rna Hybrid And Soaked With Ampcppÿ
 2I3Z A 2,24,5.2,0.0084,1.2,12.5,Rat Dpp-Iv With Xanthine Mimetic Inhibitor #7
 2JA7 U 1,27,5.3,0.0376,1.2,11.1,Cpd Lesion Containing Rna Polymerase Ii Elongation Complex C
 2GBG B 2,25,5.2,0.0090,1.2,12.0,Rat Dpp-Iv With Alkynyl Cyanopyrrolidine #2
 2BGN D 1,25,5.1,0.0179,1.2,8.0,Hiv-1 Tat Protein Derived N-Terminal Nonapeptide Trp2-Tat (1-9) Bound To The Active Site Of Dipeptidyl Peptidase Iv (Cd26)
-3H3V J 1,27,6.3,0.0010,1.2,11.1,Yeast Rnap Ii Containing Poly(A)-Signal Sequence In The Active Siteя
-4PV7 A 2,20,5.1,0.0252,1.2,15.0,Cocrystal Structure Of Dipeptidyl-peptidase 4 With An Indole Scaffold Inhibitor
-3K7A I 1,27,6.1,0.0018,1.2,11.1,Crystal Structure Of An Rna Polymerase Ii-Tfiib Complexÿ
-2OQI A 2,25,5.1,0.0240,1.2,8.0,Human Dipeptidyl Peptidase Iv (Dpp4) With Piperidinone- Constrained Phenethylamine
+3H3V J 1,27,6.3,0.0010,1.2,11.1,Yeast Rnap Ii Containing Poly(A)-Signal Sequence In The Active Siteÿ
 2EBQ A ,22,5.1,0.0190,1.2,18.2,Solution Structure Of The Second Zf-Ranbp Domain From Human Nuclear Pore Complex Protein Nup153
+4PV7 A 2,20,5.1,0.0252,1.2,15.0,Cocrystal Structure Of Dipeptidyl-peptidase 4 With An Indole Scaffold Inhibitor
+2OQI A 2,25,5.1,0.0240,1.2,8.0,Human Dipeptidyl Peptidase Iv (Dpp4) With Piperidinone- Constrained Phenethylamine
+3K7A I 1,27,6.1,0.0018,1.2,11.1,Crystal Structure Of An Rna Polymerase Ii-Tfiib Complexÿ
 4JH0 B 2,25,5.2,0.0066,1.2,8.0,Crystal Structure Of Dipeptidyl-peptidase 4 (cd26, Adenosine Deaminase Complexing Protein 2) (dpp-iv-wt) Complex With Bms-767778 Aka 2-(3- (aminomethyl)-4-(2,4- Dichlorophenyl)-2-methyl-5-oxo-5,7-dihydro-6h- Pyrrolo[3,4- B]pyridin-6-yl)-n,n-dimethylacetam
 2GBC B 2,24,5.2,0.0066,1.3,12.5,Native Dpp-Iv (Cd26) From Rat
 2GBC A 2,24,5.2,0.0066,1.3,12.5,Native Dpp-Iv (Cd26) From Rat
@@ -149,9 +149,9 @@
 1SFO I ,27,6.6,0.0163,1.3,14.8,Rna Polymerase Ii Strand Separated Elongation Complex
 1SFO I 1,27,6.6,0.0002,1.3,14.8,Rna Polymerase Ii Strand Separated Elongation Complex
 1N1M B 2,25,5.2,0.0076,1.3,8.0,Human Dipeptidyl Peptidase IvCD26 IN COMPLEX WITH AN Inhibitor
-2B63 I 1,27,5.5,0.0145,1.3,11.1,Complete Rna Polymerase Ii-Rna Inhibitor Complexÿ
-2QKY D 2,26,5.1,0.0235,1.3,7.7,Complex Structure Of Dipeptidyl Peptidase Iv And A Oxadiazolyl Ketone
 3W2T B 2,25,5.2,0.0066,1.3,8.0,Crystal Structure Of Human Depiptidyl Peptidase Iv (dpp-4) In Complex With Vildagliptin
+2QKY D 2,26,5.1,0.0235,1.3,7.7,Complex Structure Of Dipeptidyl Peptidase Iv And A Oxadiazolyl Ketone
+2B63 I 1,27,5.5,0.0145,1.3,11.1,Complete Rna Polymerase Ii-Rna Inhibitor Complexÿ
 2I7F A ,31,8.4,0.0002,1.3,19.4,Sphingomonas Yanoikuyae B1 Ferredoxin
 3GTG I 1,27,5.7,0.0073,1.3,11.1,Backtracked Rna Polymerase Ii Complex With 12mer Rnaÿ
 2QFG A 5,18,5.2,0.0136,1.3,0.0,Solution Structure Of The N-Terminal Scr-15 FRAGMENT OF Complement Factor H
@@ -164,17 +164,17 @@
 3GKE B 2,32,7.1,0.0036,1.3,3.1,Crystal Structure Of Dicamba Monooxygenaseÿ
 3GL0 B 2,32,7.1,0.0037,1.3,3.1,Crystal Structure Of Dicamba Monooxygenase Bound To 3,6 Dichlorosalicylic Acid (Dcsa)ÿ
 4K7D B 5,27,5.2,0.0066,1.3,22.2,Crystal Structure Of Parkin C-terminal Ring Domains
-3GOB A 1,32,7.1,0.0444,1.3,3.1,Crystal Structure Of Dicamba Monooxygenase With Non-Heme Cobalt And Dcsaÿ
 3HOU U 1,27,5.8,0.0059,1.3,11.1,Complete Rna Polymerase Ii Elongation Complex I With A T-U Mismatchÿ
+3GOB A 1,32,7.1,0.0444,1.3,3.1,Crystal Structure Of Dicamba Monooxygenase With Non-Heme Cobalt And Dcsaÿ
 3GOB C 1,32,7.1,0.0445,1.3,3.1,Crystal Structure Of Dicamba Monooxygenase With Non-Heme Cobalt And Dcsaÿ
 2R92 I 1,27,5.8,0.0050,1.3,11.1,Elongation Complex Of Rna Polymerase Ii With Artificial Rdrp Scaffold
-3GB4 C 2,32,7.0,0.0049,1.3,3.1,Crystal Structure Of Dicamba Monooxygenase With Non-Heme Cobalt And Dicambaÿ
 3GOB B 1,32,7.1,0.0433,1.3,3.1,Crystal Structure Of Dicamba Monooxygenase With Non-Heme Cobalt And Dcsaÿ
+3GB4 C 2,32,7.0,0.0049,1.3,3.1,Crystal Structure Of Dicamba Monooxygenase With Non-Heme Cobalt And Dicambaÿ
 3GB4 A 2,32,7.0,0.0048,1.3,3.1,Crystal Structure Of Dicamba Monooxygenase With Non-Heme Cobalt And Dicambaÿ
 3GB4 B 2,32,7.0,0.0049,1.3,3.1,Crystal Structure Of Dicamba Monooxygenase With Non-Heme Cobalt And Dicambaÿ
 3HOW I 1,27,5.5,0.0151,1.3,11.1,Complete Rna Polymerase Ii Elongation Complex Iii With A T-U Mismatch And A Frayed Rna 3'-Uridineÿ
 1Z68 A 2,18,5.2,0.0121,1.3,5.6,Crystal Structure Of Human Fibroblast Activation Protein Alpha
 4A3F I 1,27,5.9,0.0045,1.3,11.1,Rna Polymerase Ii Initial Transcribing Complex With A 6nt Dna-Rna Hybrid And Soaked With Ampcppÿ
 4UER b 3,23,5.1,0.0231,1.3,0.0,40s-eif1-eif1a-eif3-eif3j Translation Initiation Complex From Lachancea Kluyveri
-2GBF B 2,25,5.2,0.0124,1.3,12.0,Rat Dpp-Iv With Alkynyl Cyanopyrrolidine #1
 3P2N A 2,22,5.0,0.0290,1.3,4.5,Discovery And Structural Characterization Of A New Glycoside Hydrolase Family Abundant In Coastal Waters That Was Annotated As 'hypothetical Protein'ÿ
+3GL2 B 2,31,7.1,0.0041,1.3,3.2,Crystal Structure Of Dicamba Monooxygenase Bound To Dicambaÿ

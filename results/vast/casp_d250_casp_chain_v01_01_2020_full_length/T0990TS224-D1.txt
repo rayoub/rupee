@@ -1,0 +1,45 @@
+4U98 A 4,45,5.1,0.0004,2.1,11.1,Structure Of Mycobacterial Maltokinase, The Missing Link In The Essential Glge-pathway (appcp Complex)
+4WZY A 4,49,5.1,0.0004,1.8,12.2,Structure Of Mycobacterial Maltokinase, The Missing Link In The Essential Glge-pathway (atp Complex)
+4U94 A 4,40,5.1,0.0005,2.0,7.5,Structure Of Mycobacterial Maltokinase, The Missing Link In The Essential Glge-pathway
+2JXU A ,30,5.0,0.0245,1.4,3.3,Nmr Solution Structure Of Kp-Terb, A Tellurite Resistance Protein From Klebsiella Pneumoniae
+5DUO B ,49,4.7,0.0238,3.2,12.2,Crystal Structure Of Native Translocator Protein 18kda (tspo) From Rhodobacter Sphaeroides (a139t Mutant) In C2 Space Group
+4UC1 A ,49,4.6,0.0268,3.1,12.2,High Resolution Crystal Structure Of Translocator Protein 18kda (tspo) From Rhodobacter Sphaeroides (a139t Mutant) In C2 Space Group
+4UC3 B ,35,4.5,0.0116,2.3,5.7,Translocator Protein 18 Kda (tspo) From Rhodobacter Sphaeroides Wild Type
+4UC2 B ,48,4.5,0.0388,2.8,10.4,Crystal Structure Of Translocator Protein 18kda (tspo) From Rhodobacter Sphaeroides (a139t Mutant) In P212121 Space Group
+4UC1 B ,48,4.5,0.0407,3.1,12.5,High Resolution Crystal Structure Of Translocator Protein 18kda (tspo) From Rhodobacter Sphaeroides (a139t Mutant) In C2 Space Group
+4UC2 A ,48,4.4,0.0418,3.1,12.5,Crystal Structure Of Translocator Protein 18kda (tspo) From Rhodobacter Sphaeroides (a139t Mutant) In P212121 Space Group
+2N02 A ,36,4.3,0.0195,2.2,8.3,Solution Structure Of The A147t Variant Of The Mitochondrial Translocator Protein (tspo) In Complex With Pk11195
+4M70 L ,37,4.2,0.0142,1.8,8.1,Crystal Structure Of Potato Rx-cc Domain In Complex With Rangap2-wpp Domain
+2KZS A ,41,4.2,0.0145,2.9,22.0,Daxx Helical Bundle (Dhb) Domainÿ
+4M70 I ,35,4.2,0.0164,1.5,8.6,Crystal Structure Of Potato Rx-cc Domain In Complex With Rangap2-wpp Domain
+4M70 H ,41,4.1,0.0255,1.8,2.4,Crystal Structure Of Potato Rx-cc Domain In Complex With Rangap2-wpp Domain
+4M70 Q ,31,4.1,0.0274,1.4,9.7,Crystal Structure Of Potato Rx-cc Domain In Complex With Rangap2-wpp Domain
+1BDC A ,40,4.0,0.0156,2.0,17.5,Staphylococcus Aureus Protein A, Immunoglobulin-Binding B Domain, Nmr, 10 Structures
+1BDD A ,39,4.0,0.0156,1.9,20.5,Staphylococcus Aureus Protein A, Immunoglobulin-Binding B Domain, Nmr, Minimized Average Structure
+4EZQ A 2,37,4.0,0.0167,1.7,13.5,Crystal Structure Of The Substrate Binding Domain Of E.coli Dnak In Complex With The C-terminal Part Of Pyrrhocoricin (residues 12 To 20)
+1K1Y B 3,37,3.9,0.0240,1.8,2.7,Crystal Structure Of Thermococcus Litoralis 4-Alpha- Glucanotransferase Complexed With Acarbose
+1K1W A 3,37,3.9,0.0253,1.8,2.7,Crystal Structure Of 4-Alpha-Glucanotransferase From Thermococcus Litoralis
+4EZT A 2,36,3.8,0.0261,1.8,13.9,Crystal Structure Of The Substrate Binding Domain Of E.coli Dnak In Complex With Heliocin (residues 14 To 21)
+2OO2 A ,44,3.8,0.0262,1.8,6.8,Crystal Structure Of The Hypothetical Af_1782 Protein From Archaeoglobus Fulgidus
+4NUZ A 5,41,3.8,0.0263,1.4,7.3,Crystal Structure Of A Glycosynthase Mutant (d233q) Of Endos, An Endo- Beta-n-acetyl-glucosaminidase From Streptococcus Pyogenes
+4EZU A 2,56,3.8,0.0294,3.3,10.7,Crystal Structure Of The Substrate Binding Domain Of E.coli Dnak In Complex With Pr-bombesin In Space Group I222
+4NUY A 5,41,3.8,0.0298,1.5,7.3,Crystal Structure Of Endos, An Endo-beta-n-acetyl-glucosaminidase From Streptococcus Pyogenes
+1K1Y A 3,38,3.8,0.0301,1.9,2.6,Crystal Structure Of Thermococcus Litoralis 4-Alpha- Glucanotransferase Complexed With Acarbose
+1K1X B 3,37,3.8,0.0339,1.8,2.7,Crystal Structure Of 4-Alpha-Glucanotransferase From Thermococcus Litoralis
+3R6Y D 3,44,3.8,0.0342,2.4,6.8,Crystal Structure Of Chymotrypsin-Treated Aspartase From Bacillus Sp. Ym55-1ÿ
+3R6Y C 2,39,3.8,0.0354,2.5,5.1,Crystal Structure Of Chymotrypsin-Treated Aspartase From Bacillus Sp. Ym55-1ÿ
+4UY3 A 2,41,3.8,0.0355,1.6,9.8,Cytoplasmic Domain Of Bacterial Cell Division Protein Ezra
+3R6Y G 3,43,3.7,0.0366,2.3,7.0,Crystal Structure Of Chymotrypsin-Treated Aspartase From Bacillus Sp. Ym55-1ÿ
+1K1X A 3,37,3.7,0.0383,1.8,2.7,Crystal Structure Of 4-Alpha-Glucanotransferase From Thermococcus Litoralis
+2D6F C 3,26,3.7,0.0383,1.5,19.2,Crystal Structure Of Glu-Trna(Gln) Amidotransferase In The Complex With Trna(Gln)ÿ
+3R6Q E 3,32,3.7,0.0397,2.5,6.2,A Triclinic-Lattice Structure Of Aspartase From Bacillus Sp. Ym55-1ÿ
+3R6Q A 2,44,3.7,0.0398,2.3,6.8,A Triclinic-Lattice Structure Of Aspartase From Bacillus Sp. Ym55-1ÿ
+2D6F D 3,27,3.7,0.0402,1.5,18.5,Crystal Structure Of Glu-Trna(Gln) Amidotransferase In The Complex With Trna(Gln)ÿ
+3R6V A 2,44,3.7,0.0405,2.3,6.8,Crystal Structure Of Aspartase From Bacillus Sp. Ym55-1 With Bound L- Aspartateÿ
+4H6H A ,56,3.7,0.0470,2.3,14.3,Crystal Structure Of Staphylococcal Complement Inhibitor Scin-B(4-85)
+4H6H B ,56,3.7,0.0472,2.3,14.3,Crystal Structure Of Staphylococcal Complement Inhibitor Scin-B(4-85)
+4H6H C ,50,3.7,0.0474,2.1,14.0,Crystal Structure Of Staphylococcal Complement Inhibitor Scin-B(4-85)
+2FEL B 3,42,3.7,0.0474,2.5,2.4,3-Carboxy-Cis,Cis-Muconate Lactonizing Enzyme From Agrobacterium Radiobacter S2
+2FEL H 2,43,3.7,0.0479,2.5,2.3,3-Carboxy-Cis,Cis-Muconate Lactonizing Enzyme From Agrobacterium Radiobacter S2
+4H6H D ,50,3.7,0.0485,2.1,14.0,Crystal Structure Of Staphylococcal Complement Inhibitor Scin-B(4-85)
+2FEL G 3,40,3.7,0.0485,2.6,7.5,3-Carboxy-Cis,Cis-Muconate Lactonizing Enzyme From Agrobacterium Radiobacter S2
