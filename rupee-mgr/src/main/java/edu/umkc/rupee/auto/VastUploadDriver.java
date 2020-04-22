@@ -2,7 +2,6 @@ package edu.umkc.rupee.auto;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -26,7 +25,7 @@ public class VastUploadDriver extends VastDriver {
 
             try {
 
-                if (!isExcluded(dbId) && Files.notExists(Paths.get(fileName))) {
+                if (Files.notExists(Paths.get(fileName))) {
                     
                     count++;
                     doSearchUpload(dbId);

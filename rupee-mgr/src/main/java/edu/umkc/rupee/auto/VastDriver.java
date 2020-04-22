@@ -1,7 +1,6 @@
 package edu.umkc.rupee.auto;
 
 import java.io.FileOutputStream;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -14,16 +13,6 @@ public class VastDriver extends DriverBase {
 
     public static int ONE_SECOND = 1000; 
     public static int ONE_MINUTE = 60 * ONE_SECOND; 
-
-    private static List<String> excludes = new ArrayList<>();
-    private static List<String> pendings = new ArrayList<>();
-    
-    static {
-
-        // excludes
-        
-        // pendings
-    }
 
     public String doSearchUpload(String dbId) throws InterruptedException {
 
@@ -229,30 +218,6 @@ public class VastDriver extends DriverBase {
         }
 
         return builder.toString();
-    }
-
-    public boolean isExcluded(String dbId) {
-
-        boolean isExcluded = false;
-        for (String exclude : excludes) {
-            if (dbId.startsWith(exclude)) {
-                isExcluded = true;
-                break;
-            }
-        }
-        return isExcluded;
-    }
-
-    public boolean isPending(String dbId) {
-
-        boolean isPending = false;
-        for (String pending : pendings) {
-            if (dbId.startsWith(pending)) {
-                isPending = true;
-                break;
-            }
-        }
-        return isPending;
     }
 
     public void appendRequest(String dbId, String link) {

@@ -100,7 +100,7 @@ public class VastCombinedDriver extends VastDriver {
             try {
 
                 // for now lets not redo the rmsd work again
-                if (!isExcluded(dbId) && !isPending(dbId) && Files.notExists(Paths.get(fileNameRmsd))) {
+                if (Files.notExists(Paths.get(fileNameVastScore))) {
             
                     count++;
                     System.out.println(count + ":Processing request for " + dbId);
