@@ -44,20 +44,20 @@
 4WHV K 1,31,6.3,0.0202,1.5,16.1,Rnf8/ubc13c87k~ub
 4WHV E ,31,6.3,0.0202,1.5,16.1,Rnf8/ubc13c87k~ub
 4WHV E 1,31,6.3,0.0202,1.5,16.1,Rnf8/ubc13c87k~ub
-4ORH B ,31,6.3,0.0202,1.5,16.1,Crystal Structure Of Rnf8 Bound To The Ubc13/mms2 Heterodimer
-4ORH B 1,31,6.3,0.0202,1.5,16.1,Crystal Structure Of Rnf8 Bound To The Ubc13/mms2 Heterodimer
 4ORH J ,31,6.3,0.0201,1.5,16.1,Crystal Structure Of Rnf8 Bound To The Ubc13/mms2 Heterodimer
 4ORH J 1,31,6.3,0.0201,1.5,16.1,Crystal Structure Of Rnf8 Bound To The Ubc13/mms2 Heterodimer
+4ORH B ,31,6.3,0.0202,1.5,16.1,Crystal Structure Of Rnf8 Bound To The Ubc13/mms2 Heterodimer
+4ORH B 1,31,6.3,0.0202,1.5,16.1,Crystal Structure Of Rnf8 Bound To The Ubc13/mms2 Heterodimer
 3KWJ B 3,22,6.9,0.0008,1.5,4.5,Strucutre Of Human Dpp-Iv With (2s,3s,11bs)-3-(3-Fluoromethyl-Phenyl)- 9,10-Dimethoxy-1,3,4,6,7,11b-Hexahydro-2h-Pyrido[2,1-A]isoquinolin-2- Ylamineÿ
-1BNI B ,25,6.2,0.0299,1.5,0.0,Barnase Wildtype Structure At Ph 6.0
-1B20 A ,26,6.4,0.0117,1.5,0.0,Deletion Of A Buried Salt-Bridge In Barnase
 2AJB D 3,22,6.8,0.0185,1.5,4.5,Porcine Dipeptidyl Peptidase Iv (Cd26) In Complex With The Tripeptide Tert-Butyl-Gly-L-Pro-L-Ile (Tbu-Gpi)
-3G0G A 3,22,6.8,0.0160,1.5,4.5,Crystal Structure Of Dipeptidyl Peptidase Iv In Complex With A Pyrimidinone Inhibitor 3ÿ
-1ORV B 3,22,6.7,0.0296,1.5,4.5,Crystal Structure Of Porcine Dipeptidyl Peptidase Iv (Cd26)
-3H0C B 3,22,6.7,0.0268,1.5,4.5,Crystal Structure Of Human Dipeptidyl Peptidase Iv (Cd26) In Complex With A Reversed Amide Inhibitorÿ
+1B20 A ,26,6.4,0.0117,1.5,0.0,Deletion Of A Buried Salt-Bridge In Barnase
+1BNI B ,25,6.2,0.0299,1.5,0.0,Barnase Wildtype Structure At Ph 6.0
 1J7D B ,31,6.3,0.0221,1.5,16.1,Crystal Structure Of Hmms2-Hubc13
 1J7D B 1,31,6.3,0.0221,1.5,16.1,Crystal Structure Of Hmms2-Hubc13
+3G0G A 3,22,6.8,0.0160,1.5,4.5,Crystal Structure Of Dipeptidyl Peptidase Iv In Complex With A Pyrimidinone Inhibitor 3ÿ
+3O9V D 3,22,6.8,0.0209,1.5,4.5,Crystal Structure Of Human Dpp4 Bound To Tak-986ÿ
 3G0C A 3,22,6.8,0.0157,1.5,4.5,Crystal Structure Of Dipeptidyl Peptidase Iv In Complex With A Pyrimidinedione Inhibitor 1ÿ
+1ORV B 3,22,6.7,0.0296,1.5,4.5,Crystal Structure Of Porcine Dipeptidyl Peptidase Iv (Cd26)
 3O9V D 3,22,6.8,0.0209,1.5,4.5,Crystal Structure Of Human Dpp4 Bound To Tak-986ÿ
 1ORW D 3,22,6.8,0.0207,1.5,4.5,Crystal Structure Of Porcine Dipeptidyl Peptidase Iv (Cd26) In Complex With A Peptidomimetic Inhibitor
 1ORV A 3,22,6.8,0.0217,1.5,4.5,Crystal Structure Of Porcine Dipeptidyl Peptidase Iv (Cd26)

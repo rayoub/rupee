@@ -137,8 +137,8 @@
 4NBQ A 5,33,4.5,0.0419,1.9,3.0,Structure Of The Polynucleotide Phosphorylase (cbu_0852) From Coxiella Burnetii
 2M7U A ,74,6.5,0.0499,1.9,12.2,Blue Light-absorbing State Of Tepixj, An Active Cyanobacteriochrome Domain
 4ETZ A 1,63,7.9,0.0005,1.9,9.5,Crystal Structure Of Peld 158-Ct From Pseudomonas Aeruginosa Pao1
-1VQK S ,36,5.7,0.0063,1.9,2.8,The Structure Of Ccda-Phe-Cap-Bio Bound To The A Site Of The Ribosomal Subunit Of Haloarcula Marismortuiÿ
 2BHR A 3,25,3.5,0.0092,1.9,0.0,Dengue Virus Rna Helicase
+1VQK S ,36,5.7,0.0063,1.9,2.8,The Structure Of Ccda-Phe-Cap-Bio Bound To The A Site Of The Ribosomal Subunit Of Haloarcula Marismortuiÿ
 2CRD A ,16,4.7,0.0183,1.9,0.0,Analysis Of Side-Chain Organization On A Refined Model Of Charybdotoxin: Structural And Functional Implications
 4N9F l 2,33,4.0,0.0390,1.9,12.1,Crystal Structure Of The Vif-cbfbeta-cul5-elob-eloc Pentameric Complex
 2MLD A ,23,4.9,0.0099,1.9,8.7,Solution Structure Of Bmktx-d19k/k6d
@@ -166,8 +166,8 @@
 2O0Y A 2,58,6.7,0.0460,2.0,13.8,Crystal Structure Of Putative Transcriptional Regulator Rha1_ro06953 (Iclr-Family) From Rhodococcus Sp
 2JLU B 4,27,3.5,0.0092,2.0,3.7,Dengue Virus 4 Ns3 Helicase In Complex With Ssrna
 4G3V B ,73,7.9,0.0010,2.0,13.7,Crystal Structure Of A. Aeolicus Nlh2 Gaf Domain In An Inactive State
-4MMN D ,58,6.8,0.0080,2.0,12.1,Structural And Biochemical Analysis Of Type Ii Free Methionine-r- Sulfoxide Reductase From Thermoplasma Acidophilum
 2JLX A 3,27,3.5,0.0092,2.0,3.7,Dengue Virus 4 Ns3 Helicase In Complex With Ssrna And Adp- Vanadate
+4MMN D ,58,6.8,0.0080,2.0,12.1,Structural And Biochemical Analysis Of Type Ii Free Methionine-r- Sulfoxide Reductase From Thermoplasma Acidophilum
 3R7W A 2,47,6.5,0.0467,2.0,8.5,Crystal Structure Of Gtr1p-Gtr2p Complexÿ
 1HP2 A ,18,4.8,0.0146,2.0,0.0,Solution Structure Of A Toxin From The Scorpion Tityus Serrulatus (Tstx-K Alpha) Determined By Nmr.
 1VEU B ,47,6.6,0.0098,2.0,4.3,Crystal Structure Of The P14MP1 COMPLEX AT 2.15 A Resolution

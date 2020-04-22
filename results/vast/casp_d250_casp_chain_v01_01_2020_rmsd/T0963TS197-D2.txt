@@ -51,13 +51,13 @@
 2OGQ A 1,40,6.0,0.0215,1.5,7.5,Molecular And Structural Basis Of Plk1 Substrate Recognition: Implications In Centrosomal Localization
 4RS6 B 1,40,5.9,0.0262,1.5,7.5,Crystal Structure Of The C Domain Of Polo Like Kinase Ii In Homo Sapiens
 3C6K B 1,34,6.3,0.0216,1.5,5.9,Crystal Structure Of Human Spermine Synthase In Complex With Spermidine And 5-Methylthioadenosine
-1TYQ F ,37,5.2,0.0121,1.5,8.1,Crystal Structure Of Arp23 COMPLEX WITH BOUND ATP AND Calcium
 4GUZ D 1,35,6.6,0.0016,1.5,2.9,Structure Of The Arylamine N-acetyltransferase From Mycobacterium Abscessus
+1TYQ F ,37,5.2,0.0121,1.5,8.1,Crystal Structure Of Arp23 COMPLEX WITH BOUND ATP AND Calcium
 3P37 C 1,38,5.9,0.0237,1.5,5.3,Polo-Like Kinase I Polo-Box Domain In Complex With Fdpplhspta Phosphopeptide From Pbip1ÿ
 1FSU A 2,30,5.0,0.0305,1.5,3.3,Crystal Structure Of 4-sulfatase (human)
 4NKB A 1,39,6.4,0.0037,1.5,0.0,Crystal Structure Of The Cryptic Polo Box (cpb)of Zyg-1
 2P9K F ,39,5.1,0.0156,1.5,7.7,Crystal Structure Of Bovine Arp23 COMPLEX CO-Crystallized With Atp And Crosslinked With Glutaraldehyde
-2P9L F ,39,5.1,0.0164,1.5,7.7,Crystal Structure Of Bovine Arp23 COMPLEX
+3DXK F ,38,5.2,0.0138,1.5,7.9,Structure Of Bos Taurus Arp23 COMPLEX WITH BOUND INHIBITOR Ck0944636ÿ
 2P9L F ,39,5.1,0.0164,1.5,7.7,Crystal Structure Of Bovine Arp23 COMPLEX
 2P9S F ,39,5.1,0.0160,1.5,7.7,Structure Of Bovine Arp23 COMPLEX CO-Crystallized With AtpMG2+
 4JKR I 3,31,5.2,0.0066,1.5,6.5,Crystal Structure Of E. Coli Rna Polymerase In Complex With Ppgpp
@@ -126,10 +126,10 @@
 4GUZ B 1,36,6.6,0.0015,1.6,2.8,Structure Of The Arylamine N-acetyltransferase From Mycobacterium Abscessus
 1WPT A ,42,5.8,0.0060,1.6,7.1,Crystal Structure Of Hutp, An Rna Binding Anti-Termination Protein
 4FMA C 1,39,5.4,0.0202,1.6,10.3,Espg Structure
-3D9W A 1,35,6.6,0.0002,1.6,2.9,Crystal Structure Analysis Of Nocardia Farcinica Arylamine N-Acetyltransferase
 3P2W A 1,41,5.8,0.0372,1.6,7.3,Unliganded Form Of Polo-Like Kinase I Polo-Box Domainÿ
-3P35 A 2,36,6.4,0.0036,1.6,11.1,Polo-Like Kinase I Polo-Box Domain In Complex With Mqspspl Phosphopeptideÿ
+3D9W A 1,35,6.6,0.0002,1.6,2.9,Crystal Structure Analysis Of Nocardia Farcinica Arylamine N-Acetyltransferase
 4WHK A 2,36,5.9,0.0221,1.6,11.1,A New Class Of Peptidomimetics Targeting The Polo-box Domain Of Polo- Like Kinase 1
+3P35 A 2,36,6.4,0.0036,1.6,11.1,Polo-Like Kinase I Polo-Box Domain In Complex With Mqspspl Phosphopeptideÿ
 4FMA E 1,39,5.4,0.0232,1.6,10.3,Espg Structure
 3P35 C 1,41,5.8,0.0377,1.6,7.3,Polo-Like Kinase I Polo-Box Domain In Complex With Mqspspl Phosphopeptideÿ
 3P35 C 2,36,6.1,0.0137,1.6,11.1,Polo-Like Kinase I Polo-Box Domain In Complex With Mqspspl Phosphopeptideÿ
@@ -156,25 +156,25 @@
 1R7A A 4,40,6.1,0.0025,1.6,2.5,Sucrose Phosphorylase From Bifidobacterium Adolescentis
 1GX3 D 1,34,6.7,0.0001,1.6,8.8,M. Smegmatis Arylamine N-Acetyl Transferase
 3S6G Y 2,31,5.2,0.0066,1.6,0.0,Crystal Structures Of Seleno-Substituted Mutant Mmnags In Space Group P212121ÿ
-5C8B B 4,37,5.6,0.0100,1.6,2.7,Structural Insights Into The Redesign Of A Sucrose Phosphorylase By Induced Loop Repositioning
 1W6F D 1,35,6.7,0.0002,1.6,11.4,Arylamine N-Acetyltransferase From Mycobacterium Smegmatis With The Anti-Tubercular Drug Isoniazid Bound In The Active Site
+5C8B B 4,37,5.6,0.0100,1.6,2.7,Structural Insights Into The Redesign Of A Sucrose Phosphorylase By Induced Loop Repositioning
 4XB0 B 1,36,5.9,0.0286,1.6,11.1,Structure Of The Plk2 Polo-box Domain
 3P37 B 1,42,6.0,0.0200,1.6,4.8,Polo-Like Kinase I Polo-Box Domain In Complex With Fdpplhspta Phosphopeptide From Pbip1ÿ
 2B0O F 2,18,5.4,0.0275,1.6,5.6,Crystal Structure Of Uplc1 Gap Domainÿ
 4H71 A 2,36,6.0,0.0188,1.6,11.1,Human Plk1-Pbd In Complex With Poloxime ((E)-4-(Hydroxyimino)-2- Isopropyl-5-Methylcyclohexa-2,5-Dienone)
 3P34 A 2,37,5.9,0.0296,1.6,10.8,Polo-Like Kinase I Polo-Box Domain In Complex With Mqsptpl Phosphopeptideÿ
-4X9W A 2,37,6.1,0.0153,1.6,10.8,Plk-1 Polo-box Domain In Complex With Bioactive Imidazolium-containing Phosphopeptide Macrocycle 4c
 4DX5 D 1,18,5.1,0.0207,1.6,11.1,Transport Of Drugs By The Multidrug Transporter Acrb Involves An Access And A Deep Binding Pocket That Are Separated By A Switch-Loop
+4X9W A 2,37,6.1,0.0153,1.6,10.8,Plk-1 Polo-box Domain In Complex With Bioactive Imidazolium-containing Phosphopeptide Macrocycle 4c
 4LKM A 1,43,5.9,0.0269,1.6,4.7,Crystal Structure Of Plk1 Polo-box Domain In Complex With Pl-74
 3P2Z A 1,42,5.9,0.0261,1.6,4.8,Polo-Like Kinase I Polo-Box Domain In Complex With Plhspta Phosphopeptide From Pbip1ÿ
 3HIK A 2,36,5.9,0.0242,1.6,11.1,Structure Of Human Plk1-Pbd In Complex With Plhsptÿ
-4U8V D 1,18,5.1,0.0179,1.6,11.1,Coupling Of Remote Alternating-access Transport Mechanisms For Protons And Substrates In The Multidrug Efflux Pump Acrb
 3P2W A 2,36,6.0,0.0164,1.6,11.1,Unliganded Form Of Polo-Like Kinase I Polo-Box Domainÿ
+4U8V D 1,18,5.1,0.0179,1.6,11.1,Coupling Of Remote Alternating-access Transport Mechanisms For Protons And Substrates In The Multidrug Efflux Pump Acrb
 4U8Y D 1,18,5.1,0.0166,1.6,11.1,Coupling Of Remote Alternating-access Transport Mechanisms For Protons And Substrates In The Multidrug Efflux Pump Acrb
 4WHH A 1,42,5.7,0.0454,1.6,4.8,A New Class Of Peptidomimetics Targeting The Polo-box Domain Of Polo- Like Kinase 1
 4O9W A 2,37,6.1,0.0141,1.6,10.8,Crystal Structure Of Polo-like Kinase(plk1)pbd In Complex With Phospho Peptide
 1Q4O B 2,37,6.0,0.0200,1.6,10.8,The Structure Of The Polo Box Domain Of Human Plk1
 4HY2 A 2,37,6.0,0.0195,1.6,10.8,Crystal Structure Of Plk1 Polo-box Domain In Complex With Pl-42
 4X9V A 2,37,5.9,0.0256,1.6,10.8,Plk-1 Polo-box Domain In Complex With Bioactive Imidazolium-containing Phosphopeptide Macrocycle 3c
-4HCO A 2,36,5.9,0.0235,1.6,11.1,Human Plk1-Pbd In Complex With Thymoquinone At The Phophopeptide Binding Site
 4H5X B 1,42,5.9,0.0221,1.6,4.8,Human Plk1-Pbd With A Glycerol Bound At The Phophopeptide Binding Site
+4HCO A 2,36,5.9,0.0235,1.6,11.1,Human Plk1-Pbd In Complex With Thymoquinone At The Phophopeptide Binding Site

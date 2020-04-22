@@ -17,8 +17,8 @@
 3JBT E 11,18,5.2,0.0308,1.2,16.7,Atomic Structure Of The Apaf-1 Apoptosome
 3JBT G 11,18,5.2,0.0308,1.2,16.7,Atomic Structure Of The Apaf-1 Apoptosome
 3JBT I 11,18,5.2,0.0308,1.2,16.7,Atomic Structure Of The Apaf-1 Apoptosome
-3JBT M 11,18,5.2,0.0308,1.2,16.7,Atomic Structure Of The Apaf-1 Apoptosome
 3JBT K 11,18,5.2,0.0308,1.2,16.7,Atomic Structure Of The Apaf-1 Apoptosome
+3JBT M 11,18,5.2,0.0308,1.2,16.7,Atomic Structure Of The Apaf-1 Apoptosome
 4WHK A 2,36,6.9,0.0135,1.2,5.6,A New Class Of Peptidomimetics Targeting The Polo-box Domain Of Polo- Like Kinase 1
 1TL2 A 5,24,5.2,0.0308,1.2,12.5,Tachylectin-2 From Tachypleus Tridentatus (Japanese Horseshoe Crab)
 4O6W A 2,36,6.9,0.0134,1.2,5.6,Peptide-based Inhibitors Of Plk1 Polo-box Domain
@@ -28,11 +28,11 @@
 3FY6 D 1,30,6.9,0.0085,1.2,13.3,Structure From The Mobile Metagenome Of V. Cholerae. Integron Cassette Protein Vch_cass3ÿ
 3JBT C 14,24,5.2,0.0308,1.2,8.3,Atomic Structure Of The Apaf-1 Apoptosome
 1TL2 A 2,26,5.2,0.0308,1.2,7.7,Tachylectin-2 From Tachypleus Tridentatus (Japanese Horseshoe Crab)
-5C2N A ,26,5.2,0.0337,1.2,11.5,The De Novo Evolutionary Emergence Of A Symmetrical Protein Is Shaped By Folding Constraints
 3P37 A 2,37,6.9,0.0174,1.2,5.4,Polo-Like Kinase I Polo-Box Domain In Complex With Fdpplhspta Phosphopeptide From Pbip1ÿ
+5C2N A ,26,5.2,0.0337,1.2,11.5,The De Novo Evolutionary Emergence Of A Symmetrical Protein Is Shaped By Folding Constraints
+3RQ7 A 2,36,6.9,0.0150,1.2,5.6,Polo-Like Kinase 1 Polo Box Domain In Complex With A C6h5(Ch2)8- Derivatized Peptide Inhibitorÿ
 3CWX A ,36,6.7,0.0189,1.2,8.3,Crystal Structure Of Cagd From Helicobacter Pylori Pathogenicity Islandÿ
 3CWX A 1,36,6.7,0.0017,1.2,8.3,Crystal Structure Of Cagd From Helicobacter Pylori Pathogenicity Islandÿ
-3RQ7 A 2,36,6.9,0.0150,1.2,5.6,Polo-Like Kinase 1 Polo Box Domain In Complex With A C6h5(Ch2)8- Derivatized Peptide Inhibitorÿ
 4AZR A 2,35,7.0,0.0137,1.2,11.4,Human Epidermal Fatty Acid-binding Protein (fabp5) In Complex With The Endocannabinoid Anandamide
 4NV7 B 1,32,6.3,0.0079,1.2,12.5,Crystal Structure Of Mesorhizobium Loti Arylamine N-acetyltransferase 1 In Complex With Coa
 5C2N H ,26,5.2,0.0308,1.2,11.5,The De Novo Evolutionary Emergence Of A Symmetrical Protein Is Shaped By Folding Constraints
@@ -51,11 +51,11 @@
 4NV8 B 1,32,6.3,0.0091,1.3,12.5,Crystal Structure Of Mesorhizobium Loti Arylamine N-acetyltransferase F42w Mutant
 5A9Q J 3,26,5.2,0.0308,1.3,11.5,Human Nuclear Pore Complex
 5A9Q a 3,26,5.2,0.0308,1.3,11.5,Human Nuclear Pore Complex
-3CWX B 1,36,6.7,0.0140,1.3,8.3,Crystal Structure Of Cagd From Helicobacter Pylori Pathogenicity Islandÿ
 4NV7 A 1,32,6.2,0.0126,1.3,12.5,Crystal Structure Of Mesorhizobium Loti Arylamine N-acetyltransferase 1 In Complex With Coa
+3CWX B 1,36,6.7,0.0140,1.3,8.3,Crystal Structure Of Cagd From Helicobacter Pylori Pathogenicity Islandÿ
 3FVH A 2,37,7.0,0.0113,1.3,5.4,Polo-Like Kinase 1 Polo Box Domain In Complex With Ac- Lhspta-Nh2 Peptideÿ
-5C2M A 2,26,5.2,0.0308,1.3,3.8,The De Novo Evolutionary Emergence Of A Symmetrical Protein Is Shaped By Folding Constraints
 5DMS A 2,37,6.8,0.0231,1.3,13.5,Mouse Polo-box Domain And Emi2 (169-177)
+5C2M A 2,26,5.2,0.0308,1.3,3.8,The De Novo Evolutionary Emergence Of A Symmetrical Protein Is Shaped By Folding Constraints
 3KIH A 1,26,5.2,0.0308,1.3,7.7,The Crystal Structures Of Two Fragments Truncated From 5-Bla Propeller Lectin, Tachylectin-2 (Lib2-D2-15)ÿ
 2BIW D 3,26,5.2,0.0308,1.3,15.4,Crystal Structure Of Apocarotenoid Cleavage Oxygenase From Synechocystis, Native Enzyme
 3P37 C 2,37,6.8,0.0284,1.3,5.4,Polo-Like Kinase I Polo-Box Domain In Complex With Fdpplhspta Phosphopeptide From Pbip1ÿ

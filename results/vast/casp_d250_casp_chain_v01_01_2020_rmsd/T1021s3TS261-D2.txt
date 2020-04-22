@@ -44,12 +44,12 @@
 2NY8 X ,12,3.5,0.0216,1.6,0.0,Nmr Structure Of Antibacterial Defensin Def-Aaa From The Insect Anopheles Gambiae
 5FJA K ,30,6.1,0.0004,1.6,16.7,Cryo-em Structure Of Yeast Rna Polymerase Iii At 4.7 A
 5FJA K 1,30,6.1,0.0004,1.6,16.7,Cryo-em Structure Of Yeast Rna Polymerase Iii At 4.7 A
-2OBQ C 1,20,5.2,0.0243,1.6,10.0,Discovery Of The Hcv Ns34A PROTEASE INHIBITOR SCH503034. Key Steps In Structure-Based Optimization
 1TT5 D 2,22,5.2,0.0163,1.6,13.6,Structure Of Appbp1-Uba3-Ubc12n26: A Unique E1-E2 Interaction Required For Optimal Conjugation Of The Ubiquitin-Like Protein Nedd8
+2OBQ C 1,20,5.2,0.0243,1.6,10.0,Discovery Of The Hcv Ns34A PROTEASE INHIBITOR SCH503034. Key Steps In Structure-Based Optimization
 4PKD B 2,40,5.7,0.0171,1.6,5.0,U1-70k In Complex With U1 Snrna Stem-loops 1 And U1-a Rrm In Complex With Stem-loop 2
+2CUY A 2,37,5.7,0.0022,1.6,8.1,Crystal Structure Of Malonyl Coa-Acyl Carrier Protein Transacylase From Thermus Thermophilus Hb8
 1MMF G ,14,4.0,0.0283,1.6,7.1,Crystal Structure Of Substrate Free Form Of Glycerol Dehydratase
 1MMF G 1,14,3.5,0.0042,1.6,7.1,Crystal Structure Of Substrate Free Form Of Glycerol Dehydratase
-2CUY A 2,37,5.7,0.0022,1.6,8.1,Crystal Structure Of Malonyl Coa-Acyl Carrier Protein Transacylase From Thermus Thermophilus Hb8
 4RU2 G ,45,6.4,0.0017,1.6,11.1,Crystal Structure Of A Rna-binding Protein 39 (rbm39) In Complex With Fragment Of Splicing Factor (u2af) From Mus Musculus At 2.20 A Resolution
 1WQH A 2,33,5.6,0.0110,1.6,15.2,Crystal Structure Of Ribosome Recycling Factor From Mycobacterium Tuberculosis
 5C44 C 1,32,5.7,0.0044,1.6,15.6,Crystal Structure Of A Transcribing Rna Polymerase Ii Complex Reveals A Complete Transcription Bubble

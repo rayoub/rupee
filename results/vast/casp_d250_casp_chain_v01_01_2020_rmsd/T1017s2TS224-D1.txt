@@ -43,13 +43,13 @@
 3DKY A 2,20,3.7,0.0384,1.5,10.0,Crystal Structure Of The Replication Initiator Protein Encoded On Plasmid Pmv158 (Repb), Tetragonal Form, To 3.6 Ang Resolutionÿ
 4EV6 D ,42,8.0,0.0469,1.5,2.4,The Complete Structure Of Cora Magnesium Transporter From Methanocaldococcus Jannaschii
 4EV6 D 1,42,8.0,0.0040,1.5,2.4,The Complete Structure Of Cora Magnesium Transporter From Methanocaldococcus Jannaschii
-1QIP C 2,32,5.8,0.0365,1.5,6.2,Human Glyoxalase I Complexed With S-P- Nitrobenzyloxycarbonylglutathione
 4CY4 D ,42,8.1,0.0339,1.5,2.4,The Cryo-electron Microscopy Structure Of The Cora Channel From Methanocaldococcus Jannaschii At 21.6 Angstrom In Low Magnesium
 4CY4 D 1,42,8.1,0.0028,1.5,2.4,The Cryo-electron Microscopy Structure Of The Cora Channel From Methanocaldococcus Jannaschii At 21.6 Angstrom In Low Magnesium
+1QIP C 2,32,5.8,0.0365,1.5,6.2,Human Glyoxalase I Complexed With S-P- Nitrobenzyloxycarbonylglutathione
 3W0T D 2,32,5.8,0.0334,1.5,6.2,Human Glyoxalase I With An N-hydroxypyridone Derivative Inhibitor
 4RCP A 2,34,7.0,0.0319,1.6,5.9,Crystal Structure Of Plk1 Polo-box Domain In Complex With Pl-2
-4KYH B 2,32,5.9,0.0312,1.6,6.2,Crystal Structure Of Mouse Glyoxalase I Complexed With Zopolrestat
 3DKY D 2,20,3.7,0.0386,1.6,10.0,Crystal Structure Of The Replication Initiator Protein Encoded On Plasmid Pmv158 (Repb), Tetragonal Form, To 3.6 Ang Resolutionÿ
+4KYH B 2,32,5.9,0.0312,1.6,6.2,Crystal Structure Of Mouse Glyoxalase I Complexed With Zopolrestat
 2UUG D ,38,6.3,0.0229,1.6,15.8,Escherichia Coli Uracil-Dna Glycosylase:inhibitor Complex With H187d Mutant Udg And Wild-Type Ugi
 4KYK A 2,32,5.9,0.0315,1.6,6.2,Crystal Structure Of Mouse Glyoxalase I Complexed With Indomethacin
 1WWS H ,34,5.8,0.0290,1.6,11.8,Crystal Structure Of Ttk003001566 From Thermus Thermophilus Hb8

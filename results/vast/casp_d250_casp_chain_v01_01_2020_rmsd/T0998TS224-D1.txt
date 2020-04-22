@@ -118,23 +118,23 @@
 4EXW D 2,20,5.9,0.0218,1.8,10.0,The Structure Of Ddrb From Deinococcus: A New Fold For Single-Stranded Dna Binding Proteins
 3KIF F 1,19,5.2,0.0124,1.8,0.0,The Crystal Structures Of Two Fragments Truncated From 5-Bla Propeller Lectin, Tachylectin-2 (Lib1-B7-18 And Lib2-D2-15)ÿ
 4A9G V 4,20,6.0,0.0289,1.8,10.0,Symmetrized Cryo-Em Reconstruction Of E. Coli Degq 24-Mer In Complex With Beta-Caseinÿ
-3C75 H 2,20,5.2,0.0318,1.8,0.0,Paracoccus Versutus Methylamine Dehydrogenase In Complex With Amicyanin˙
+3C75 H 2,20,5.2,0.0318,1.8,0.0,Paracoccus Versutus Methylamine Dehydrogenase In Complex With Amicyaninÿ
 5A9Q 1 3,22,4.9,0.0499,1.8,9.1,Human Nuclear Pore Complex
 4GEZ L 3,27,5.1,0.0261,1.8,7.4,Structure Of A Neuraminidase-Like Protein From ABATGUATEMALA1642009
-3OTT B 7,17,5.2,0.0308,1.8,0.0,Crystal Structure Of The Extracellular Domain Of The Putative One Component System Bt4673 From B. Thetaiotaomicron˙
+3OTT B 7,17,5.2,0.0308,1.8,0.0,Crystal Structure Of The Extracellular Domain Of The Putative One Component System Bt4673 From B. Thetaiotaomicronÿ
 1TK3 A 2,25,5.0,0.0338,1.8,8.0,Crystal Structure Of Human Apo Dipeptidyl Peptidase IvCD26
 3J2T B 13,18,5.2,0.0308,1.8,5.6,An Improved Model Of The Human Apoptosome
 3J2T C 13,18,5.2,0.0308,1.8,5.6,An Improved Model Of The Human Apoptosome
 3J2T D 13,18,5.2,0.0308,1.8,5.6,An Improved Model Of The Human Apoptosome
 3J2T E 13,18,5.2,0.0308,1.8,5.6,An Improved Model Of The Human Apoptosome
 3J2T F 13,18,5.2,0.0308,1.8,5.6,An Improved Model Of The Human Apoptosome
-2AU3 A 2,22,5.9,0.0373,1.8,22.7,Crystal Structure Of The Aquifex Aeolicus Primase (Zinc Binding And Rna Polymerase Domains)˙
-3TKN A 3,18,5.2,0.0487,1.8,0.0,Structure Of The Nup82-Nup159-Nup98 Heterotrimer˙
-3GJY A 1,18,5.2,0.0308,1.8,11.1,Crystal Structure Of A Probable Spermidine Synthase From Corynebacterium Glutamicum Atcc 13032˙
+2AU3 A 2,22,5.9,0.0373,1.8,22.7,Crystal Structure Of The Aquifex Aeolicus Primase (Zinc Binding And Rna Polymerase Domains)ÿ
+3TKN A 3,18,5.2,0.0487,1.8,0.0,Structure Of The Nup82-Nup159-Nup98 Heterotrimerÿ
+3GJY A 1,18,5.2,0.0308,1.8,11.1,Crystal Structure Of A Probable Spermidine Synthase From Corynebacterium Glutamicum Atcc 13032ÿ
 4U8V D 1,18,5.1,0.0461,1.8,0.0,Coupling Of Remote Alternating-access Transport Mechanisms For Protons And Substrates In The Multidrug Efflux Pump Acrb
 1FBV C 1,17,5.1,0.0385,1.8,11.8,Structure Of A Cbl-Ubch7 Complex: Ring Domain Function In Ubiquitin-Protein Ligases
 4FHN D 4,16,5.2,0.0278,1.8,12.5,Nup37-Nup120 Full-Length Complex From Schizosaccharomyces Pombe
-3NPE A 4,18,5.1,0.0249,1.8,0.0,Structure Of Vp14 In Complex With Oxygen˙
+3NPE A 4,18,5.1,0.0249,1.8,0.0,Structure Of Vp14 In Complex With Oxygenÿ
 2YMS D 1,21,5.1,0.0261,1.8,4.8,Structure And Assembly Of A B-propeller With Nine Blades And A New Conserved Repetitive Sequence Motif
 4A2M C 3,18,5.2,0.0308,1.8,5.6,Structure Of The Periplasmic Domain Of The Heparin And Heparan Sulphate Sensing Hybrid Two Component System Bt4663 In Apo And Ligand Bound Forms
 4DX5 D 1,18,5.1,0.0421,1.8,0.0,Transport Of Drugs By The Multidrug Transporter Acrb Involves An Access And A Deep Binding Pocket That Are Separated By A Switch-Loop
@@ -145,9 +145,9 @@
 2RE8 A 2,26,5.2,0.0112,1.8,7.7,Glutaminyl-Trna Synthetase Mutant C229r With Bound Analog 5'-O-[n-(L-Glutamyl)-Sulfamoyl]adenosine
 1SDE A 2,16,5.0,0.0414,1.8,18.8,Toward Better Antibiotics: Crystal Structure Of D-Ala-D-Ala Peptidase Inhibited By A Novel Bicyclic Phosphate Inhibitor
 1IKG A 2,16,5.0,0.0445,1.8,18.8,Michaelis Complex Of Streptomyces R61 Dd-Peptidase With A Specific Peptidoglycan Substrate Fragment
-3PE7 A 2,18,5.2,0.0308,1.8,5.6,Oligogalacturonate Lyase In Complex With Manganese˙
-3NOG E ,20,6.0,0.0448,1.8,0.0,Designed Ankyrin Repeat Protein (Darpin) Binders To Acrb: Plasticity Of The Interface˙
-3KIH D 2,20,5.2,0.0124,1.8,0.0,The Crystal Structures Of Two Fragments Truncated From 5-Bla Propeller Lectin, Tachylectin-2 (Lib2-D2-15)˙
+3PE7 A 2,18,5.2,0.0308,1.8,5.6,Oligogalacturonate Lyase In Complex With Manganeseÿ
+3NOG E ,20,6.0,0.0448,1.8,0.0,Designed Ankyrin Repeat Protein (Darpin) Binders To Acrb: Plasticity Of The Interfaceÿ
+3KIH D 2,20,5.2,0.0124,1.8,0.0,The Crystal Structures Of Two Fragments Truncated From 5-Bla Propeller Lectin, Tachylectin-2 (Lib2-D2-15)ÿ
 5A9Q S 3,19,5.2,0.0329,1.8,5.3,Human Nuclear Pore Complex
 1O0C A 2,24,5.2,0.0132,1.8,8.3,Crystal Structure Of L-Glutamate And Ampcpp Bound To Glutamine Aminoacyl Trna Synthetase
 1PWC A 2,16,5.0,0.0387,1.8,18.8,Penicilloyl Acyl Enzyme Complex Of The Streptomyces R61 Dd- Peptidase With Penicillin G
@@ -156,25 +156,25 @@
 4IMM A 6,16,5.2,0.0308,1.8,12.5,The Crystal Structure Of Bamb From Moraxella Catarrhalis
 4HDJ A 2,17,5.2,0.0308,1.8,0.0,Crystal Structure Of Bamb From Pseudomonas Aeruginosa
 2IY2 B 1,24,5.8,0.0152,1.9,16.7,Crystal Structure Of The N-Terminal Dimer Domain Of E.Coli Dsbg
-3IFV A 1,16,5.2,0.0144,1.9,12.5,Crystal Structure Of The Haloferax Volcanii Proliferating Cell Nuclear Antigen˙
+3IFV A 1,16,5.2,0.0144,1.9,12.5,Crystal Structure Of The Haloferax Volcanii Proliferating Cell Nuclear Antigenÿ
 4MC7 A 3,26,5.0,0.0303,1.9,3.8,Crystal Structure Of A Subtype N11 Neuraminidase-like Protein Of A/flat-faced Bat/peru/033/2010 (h18n11)
 1UI7 A 1,21,5.2,0.0308,1.9,14.3,Site-Directed Mutagenesis Of His433 Involved In Binding Of Copper Ion In Arthrobacter Globiformis Amine Oxidase
-3S94 A 3,18,5.1,0.0356,1.9,5.6,Crystal Structure Of Lrp6-E1e2˙
-3H1I R ,30,6.8,0.0411,1.9,3.3,Stigmatellin And Antimycin Bound Cytochrome Bc1 Complex From Chicken˙
-3H1I R 2,30,6.8,0.0024,1.9,3.3,Stigmatellin And Antimycin Bound Cytochrome Bc1 Complex From Chicken˙
+3S94 A 3,18,5.1,0.0356,1.9,5.6,Crystal Structure Of Lrp6-E1e2ÿ
+3H1I R ,30,6.8,0.0411,1.9,3.3,Stigmatellin And Antimycin Bound Cytochrome Bc1 Complex From Chickenÿ
+3H1I R 2,30,6.8,0.0024,1.9,3.3,Stigmatellin And Antimycin Bound Cytochrome Bc1 Complex From Chickenÿ
 1NJI 2 ,16,5.0,0.0453,1.9,12.5,Structure Of Chloramphenicol Bound To The 50s Ribosomal Subunit
 2QJR A 4,21,5.2,0.0486,1.9,0.0,Dipepdyl Peptidase Iv In Complex With Inhibitor Pzf
 3WSY A 4,24,5.2,0.0091,1.9,8.3,Sorla Vps10p Domain In Complex With Its Own Propeptide Fragment
-1GSG P 2,26,5.2,0.0141,1.9,7.7,Structure Of E.Coli Glutaminyl-Trna Synthetase Complexed With Trnagln And Atp At 2.8 Angstroms Resolution˙
+1GSG P 2,26,5.2,0.0141,1.9,7.7,Structure Of E.Coli Glutaminyl-Trna Synthetase Complexed With Trnagln And Atp At 2.8 Angstroms Resolutionÿ
 1QTQ A 2,26,5.1,0.0246,1.9,7.7,Glutaminyl-Trna Synthetase Complexed With Trna And An Amino Acid Analog
 1Z9W A ,21,5.2,0.0430,1.9,9.5,Tetrameric Structure Of Apo-7,8-Dihydroneopterin Aldolase From Mycobacterium Tuberculosis
 1ORW C 4,21,5.2,0.0476,1.9,0.0,Crystal Structure Of Porcine Dipeptidyl Peptidase Iv (Cd26) In Complex With A Peptidomimetic Inhibitor
 1JMZ B 2,21,5.2,0.0379,1.9,0.0,Crystal Structure Of A Quinohemoprotein Amine Dehydrogenase From Pseudomonas Putida With Inhibitor
 4MC7 C 3,26,5.0,0.0304,1.9,3.8,Crystal Structure Of A Subtype N11 Neuraminidase-like Protein Of A/flat-faced Bat/peru/033/2010 (h18n11)
 3VA6 B 6,17,5.2,0.0308,1.9,0.0,Crystal Structure Of The Extracellular Domain Of The Putative Hybrid Two Component System Bt4673 From B. Thetaiotaomicron
-3KWJ A 2,25,5.0,0.0444,1.9,8.0,Strucutre Of Human Dpp-Iv With (2s,3s,11bs)-3-(3-Fluoromethyl-Phenyl)- 9,10-Dimethoxy-1,3,4,6,7,11b-Hexahydro-2h-Pyrido[2,1-A]isoquinolin-2- Ylamine˙
-3Q7O A 5,19,5.2,0.0308,1.9,5.3,The Crystal Structure Of Bamb From The Bam Complex In Spacegroup P213˙
+3KWJ A 2,25,5.0,0.0444,1.9,8.0,Strucutre Of Human Dpp-Iv With (2s,3s,11bs)-3-(3-Fluoromethyl-Phenyl)- 9,10-Dimethoxy-1,3,4,6,7,11b-Hexahydro-2h-Pyrido[2,1-A]isoquinolin-2- Ylamineÿ
+3Q7O A 5,19,5.2,0.0308,1.9,5.3,The Crystal Structure Of Bamb From The Bam Complex In Spacegroup P213ÿ
 3C5M B 2,18,5.2,0.0308,1.9,5.6,Crystal Structure Of Oligogalacturonate Lyase (Vpa0088) From Vibrio Parahaemolyticus. Northeast Structural Genomics Consortium Target Vpr199
 1GTR A 2,26,5.1,0.0153,1.9,7.7,Structural Basis Of Anticodon Loop Recognition By Glutaminyl-Trna Synthetase
-1VQ7 1 ,16,5.0,0.0408,1.9,12.5,The Structure Of The Transition State Analogue "dca" Bound To The Large Ribosomal Subunit Of Haloarcula Marismortui˙
+1VQ7 1 ,16,5.0,0.0408,1.9,12.5,The Structure Of The Transition State Analogue "dca" Bound To The Large Ribosomal Subunit Of Haloarcula Marismortuiÿ
 1QRS A 2,26,5.1,0.0158,1.9,7.7,Glutaminyl-Trna Synthetase Mutant D235n Complexed With Glutamine Transfer Rna

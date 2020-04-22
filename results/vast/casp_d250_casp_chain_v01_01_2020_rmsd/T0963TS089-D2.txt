@@ -118,19 +118,19 @@
 4KSS A 3,40,6.8,0.0368,1.3,5.0,Crystal Structure Of Vibrio Cholerae Atpase Gspse Hexamer
 4KSR B 3,40,6.8,0.0173,1.3,5.0,Crystal Structure Of The Vibrio Cholerae Atpase Gspe Hexamer
 4BY2 B ,40,7.0,0.0039,1.3,5.0,Sas-4 (dcpap) Tcp Domain In Complex With A Proline Rich Motif Of Ana2 (dstil) Of Drosophila Melanogaster
+4KSS D 3,40,6.8,0.0397,1.3,5.0,Crystal Structure Of Vibrio Cholerae Atpase Gspse Hexamer
 4KSS E 3,40,6.8,0.0399,1.3,5.0,Crystal Structure Of Vibrio Cholerae Atpase Gspse Hexamer
-4BY2 B ,40,7.0,0.0039,1.3,5.0,Sas-4 (dcpap) Tcp Domain In Complex With A Proline Rich Motif Of Ana2 (dstil) Of Drosophila Melanogaster
 4LD3 A ,38,7.0,0.0080,1.3,5.3,Structural Analysis Of The Microcephaly Protein Cpap G-box Domain Suggests A Role In Centriole Elongation
 4KSS C 3,39,6.8,0.0414,1.3,5.1,Crystal Structure Of Vibrio Cholerae Atpase Gspse Hexamer
 3S6K A 2,30,4.8,0.0269,1.3,0.0,Crystal Structure Of Xcnagsÿ
 4LZF A ,36,7.0,0.0080,1.3,2.8,A Novel Domain In The Microcephaly Protein Cpap Suggests A Role In Centriole Architecture
-2R1A F ,34,7.0,0.0039,1.3,8.8,Crystal Structure Of The Periplasmic Lipopolysaccharide Transport Protein Lpta (Yhbn), Trigonal Form
 4GDI B 4,23,4.8,0.0363,1.3,8.7,A Subtype N10 Neuraminidase-Like Protein Of ALITTLE YELLOW-Shouldered BatGUATEMALA1642009
 4GDI C 4,23,4.7,0.0426,1.3,8.7,A Subtype N10 Neuraminidase-Like Protein Of ALITTLE YELLOW-Shouldered BatGUATEMALA1642009
+2R1A F ,34,7.0,0.0039,1.3,8.8,Crystal Structure Of The Periplasmic Lipopolysaccharide Transport Protein Lpta (Yhbn), Trigonal Form
 4XHJ A 2,36,6.6,0.0209,1.3,2.8,Ghgl Of Varicella-zoster Virus In Complex With Human Neutralizing Antibodies
 4GDI F 4,23,4.8,0.0322,1.3,8.7,A Subtype N10 Neuraminidase-Like Protein Of ALITTLE YELLOW-Shouldered BatGUATEMALA1642009
-3CXB A 1,33,7.0,10e-5.9,1.3,9.1,Crystal Structure Of Sifa And Skip
 2Z8P A ,27,6.0,0.0123,1.3,7.4,Structural Basis For The Catalytic Mechanism Of Phosphothreonine Lyase
+3CXB A 1,33,7.0,10e-5.9,1.3,9.1,Crystal Structure Of Sifa And Skip
 1Y12 C ,38,6.9,0.0099,1.3,5.3,Structure Of A Hemolysin-Corregulated Protein From Pseudomonas Aeruginosa
 2GIA D 1,34,4.7,0.0434,1.3,0.0,Crystal Structures Of Trypanosoma Bruciei Mrp1MRP2
 4BXQ A ,37,7.0,0.0202,1.3,5.4,Structure Of The E1021v Mutant Of The Tcp10 Domain Of Danio Rerio Cpap
@@ -177,4 +177,4 @@
 3KES A ,34,6.6,0.0066,1.4,2.9,Crystal Structure Of The Autoproteolytic Domain From The Nuclear Pore Complex Component Nup145 From Saccharomyces Cerevisiae In The Hexagonal, P61 Space Groupÿ
 2GID J 1,34,5.1,0.0082,1.4,0.0,Crystal Structures Of Trypanosoma Bruciei Mrp1MRP2
 3E9M D 2,34,5.9,0.0442,1.4,8.8,Crystal Structure Of An Oxidoreductase From Enterococcus Faecalis
-2QFL A ,43,6.6,0.0403,1.4,4.7,Structure Of Suhb: Inositol Monophosphatase And Extragenic Suppressor From E. Coli
+3U3X D 2,40,6.9,0.0002,1.4,5.0,Crystal Structure Of A Putative Oxidoreductase From Sinorhizobium Meliloti 1021ÿ
