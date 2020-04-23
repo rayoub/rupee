@@ -1,16 +1,12 @@
 
 ### Introduction
 
-RUPEE: A fast and accurate purely geometric protein structure search
-
-https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0213712
-
-This project contains code and data to accompany the PLoS ONE paper [RUPEE: A fast and accurate purely geometric protein structure search](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0213712). 
-RUPEE is under continual development.
+This project contains code and data to accompany the PLoS ONE paper 
+[RUPEE: A fast and accurate purely geometric protein structure search](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0213712). 
 
 RUPEE itself is available for use at <https://ayoubresearch.com>.
 
-Below, I will describe how to find your way around the RUPEE repo, directory by directory, in the order required for setting up RUPEE in your own environment. 
+Below, I describe how to find your way around the RUPEE repo, directory by directory, in the order required for setting up RUPEE in your own environment. 
 It is assumed that you are familiar with RUPEE and have read the paper. 
 
 With respect to software dependencies, Java 8 and an installation of postgreSQL 9.4 or above are required.
@@ -86,10 +82,10 @@ The following table briefly describes each command line option.
 
 Option | Description
 ------ | -----------
--i  | parse pdb files in the data directories and populate \_grams tables
--h  | min-hash grams in the \_grams tables and populate the \_hashes tables
+-i  | parse pdb files in the data directories and populate \*\_grams tables
+-h  | min-hash grams in the \*\_grams tables and populate the \*\_hashes tables
 -a  | align structures using a specific alignment algorithm
--t  | use Java rewrite of TM-align to align structures (currently, not used by RUPEE)
+-t  | use Java rewrite of TM-align to align structures 
 -f  | align structures using the LCS algorithm for a full-length search
 -c  | align structures using the LCS algorithm for a containment search
 -s  | search for similar structures 
