@@ -1,9 +1,12 @@
 
 ### Introduction
 
-This project contains code and data initially associated with the paper [RUPEE: Scalable protein structure search using run position encoded residue descriptors](http://ieeexplore.ieee.org/document/8217627/) published in the IEEE International Conference on Bioinformatics and Biomedicine of 2017. 
+RUPEE: A fast and accurate purely geometric protein structure search
+
+https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0213712
+
+This project contains code and data to accompany the PLoS ONE paper [RUPEE: A fast and accurate purely geometric protein structure search](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0213712). 
 RUPEE is under continual development.
-At this stage, the initial RUPEE paper serves only to describe the common basis for the current RUPEE operating modes, fast and top-aligned, which are described in a paper currently being prepared for submission. 
 
 RUPEE itself is available for use at <https://ayoubresearch.com>.
 
@@ -59,8 +62,9 @@ Usage: RUPEE
      -h,--hash <DB_TYPE>
      -a,--align <DB_ID_1>,<DB_ID_2>,<ALIGN>
      -t,--tm align <DB_ID_1>,<DB_ID_2>
-     -l,--lcs <DB_ID_1>,<DB_ID_2>
-     -s,--search <SEARCH_BY><DB_TYPE>,<DB_ID>,<LIMIT>,<REP1>,<REP2>,<REP3>,<DIFF1>,<DIFF2><DIFF3><MODE>,<SORT>
+     -f,--lcs-fulllength <DB_ID_1>,<DB_ID_2>
+     -c,--lcs-containment <DB_ID_1>,<DB_ID_2>
+     -s,--search <SEARCH_BY><DB_TYPE>,<DB_ID>,<LIMIT>,<REP1>,<REP2>,<REP3>,<DIFF1>,<DIFF2><DIFF3><SEARCH_MODE>,<SEARCH_TYPE>
      -u,--upload <FILE_PATH>
      -d,--debug
      -?,--help
@@ -70,12 +74,12 @@ Where
 
 ```
 <SEARCH_BY> = DB_ID | UPLOAD_ID
-<DB_TYPE>   = SCOP | CATH | ECOD | CHAIN
-<ALIGN>     = CE | CECP | FATCAT_RIGID | FATCAT_FLEXIBLE
-<MODE>      = FAST | TOP_ALIGNED
-<SORT>      = RMSD | TM_SCORE | SIMILARITY
-<REP#>      = TRUE | FALSE
-<DIFF#>     = TRUE | FALSE
+<DB_TYPE>       = SCOP | CATH | ECOD | CHAIN
+<ALIGN>         = CE | CECP | FATCAT_RIGID | FATCAT_FLEXIBLE
+<SEARCH_MODE>   = FAST | TOP_ALIGNED | ALL_ALIGNED
+<SEARCH_TYPE>   = FULL_LENGTH | CONTAINED_IN | CONTAINS | RMSD | Q_SCORE | SSAP_SCORE 
+<REP#>          = TRUE | FALSE
+<DIFF#>         = TRUE | FALSE
 ```
 
 The following table briefly describes each command line option.
@@ -86,7 +90,8 @@ Option | Description
 -h  | min-hash grams in the \_grams tables and populate the \_hashes tables
 -a  | align structures using a specific alignment algorithm
 -t  | use Java rewrite of TM-align to align structures (currently, not used by RUPEE)
--l  | align structures using the LCS algorithm
+-f  | align structures using the LCS algorithm for a full-length search
+-c  | align structures using the LCS algorithm for a containment search
 -s  | search for similar structures 
 -u  | upload a pdb file and obtain an internal identifier
 -d  | random code for miscellaneous task
@@ -112,7 +117,7 @@ data/cath/pdb/     | parsed pdb files based on cath definitions
 data/ecod/pdb/     | parsed pdb files based on ecod definitions
 data/upload/       | directory used for temporary storage of uploaded pdb files
 
-First, the data/pdb/pdb/ directory has to be populated with files downloaded from the wwpdb FTP site. 
+First, the data/pdb/ directory has to be populated with files downloaded from the wwpdb FTP site. 
 If using FileZilla, you should set the connection timeout to at least 1000 seconds in the File-Edit-Settings dialog. 
 Click the local data/pdb/ directory to select the destination for the files. 
 Click the remote /pub/pdb/data/structures/all/pdb/ directory containing the files you want to download. 
