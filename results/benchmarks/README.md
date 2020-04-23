@@ -1,5 +1,5 @@
 
-## Benchmarks from the 2019 PLoS ONE paper and hopefully a future paper.
+## Benchmarks from the 2019 PLoS ONE paper.
 
 ### SCOP benchmarks
 
@@ -41,7 +41,7 @@ CATH superfamily representatives of the 100 most diverse CATH superfamilies in C
 
 Subset of cath_d100 that includes all domains for which CATHEDRAL returns a response within 12 hours.
 
-## Benchmarks for a paper currently under development. 
+## Benchmarks for a paper currently under development.
 
 ### CASP-derived benchmarks
 
