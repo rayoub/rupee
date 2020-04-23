@@ -1,0 +1,180 @@
+2HZS E ,87,11.7,10e-5.3,2.4,8.0,Structure Of The Mediator Head Submodule Med8c1820
+2HZM C ,84,11.7,10e-5.1,2.2,10.7,Structure Of The Mediator Head Subcomplex Med1820
+2HZS G ,94,11.7,10e-5.2,2.8,10.6,Structure Of The Mediator Head Submodule Med8c1820
+2HZS A ,87,11.6,10e-5.2,2.4,8.0,Structure Of The Mediator Head Submodule Med8c1820
+4V1O Y ,86,11.6,10e-5.2,2.3,8.1,Architecture Of The Rna Polymerase Ii-mediator Core Transcription Initiation Complex
+2HZM E ,92,11.6,10e-5.6,2.5,10.9,Structure Of The Mediator Head Subcomplex Med1820
+2HZM E 1,86,11.6,10e-8.7,2.7,7.0,Structure Of The Mediator Head Subcomplex Med1820
+2HZM A ,87,11.6,10e-5.4,2.4,8.0,Structure Of The Mediator Head Subcomplex Med1820
+2HZM A 1,92,11.6,10e-8.5,2.4,9.8,Structure Of The Mediator Head Subcomplex Med1820
+2HZS C ,85,11.6,10e-5.1,2.3,8.2,Structure Of The Mediator Head Submodule Med8c1820
+2HZM G ,84,11.5,10e-4.9,2.4,8.3,Structure Of The Mediator Head Subcomplex Med1820
+4GWP F ,83,11.5,10e-5.3,2.4,9.6,Structure Of The Mediator Head Module From S. Cerevisiae
+4GWP F 1,86,11.5,10e-8.4,2.5,9.3,Structure Of The Mediator Head Module From S. Cerevisiae
+4GWQ F ,87,11.4,10e-5.2,2.4,8.0,Structure Of The Mediator Head Module From S. Cerevisiae In Complex With The Carboxy-Terminal Domain (Ctd) Of Rna Polymerase Ii Rpb1 Subunit
+4GWQ F 1,85,11.4,10e-8.4,2.5,9.4,Structure Of The Mediator Head Module From S. Cerevisiae In Complex With The Carboxy-Terminal Domain (Ctd) Of Rna Polymerase Ii Rpb1 Subunit
+4RF8 A 2,103,10.7,0.0002,3.4,8.7,Crystal Structure Of Double-domain Arginine Kinase From Anthopleura Japonicas In Complex With Adp
+4WO8 A 3,100,10.7,0.0004,3.5,9.0,The Substrate -free And -bound Crystal Structures Of The Duplicated Taurocyamine Kinase From The Human Parasite Schistosoma Mansoni
+4V1O O ,89,10.7,0.0002,3.0,10.1,Architecture Of The Rna Polymerase Ii-mediator Core Transcription Initiation Complex
+4V1N O ,90,10.7,0.0002,3.1,10.0,Architecture Of The Rna Polymerase Ii-mediator Core Transcription Initiation Complex
+1YTB A ,90,10.7,0.0002,3.0,10.0,Crystal Structure Of A Yeast TbpTATA-Box Complexÿ
+1NGM I ,90,10.7,10e-4.6,3.1,10.0,Crystal Structure Of A Yeast Brf1-Tbp-Dna Ternary Complexÿ
+1NGM A ,90,10.7,10e-4.7,3.2,10.0,Crystal Structure Of A Yeast Brf1-Tbp-Dna Ternary Complexÿ
+4WOD A 2,98,10.7,0.0005,3.3,7.1,The Substrate -free And -bound Crystal Structures Of The Duplicated Taurocyamine Kinase From The Human Parasite Schistosoma Mansoni
+1NH2 A ,91,10.6,10e-4.5,3.1,9.9,Crystal Structure Of A Yeast TfiiaTBPDNA COMPLEXÿ
+1TBA B ,88,10.6,10e-4.1,3.0,10.2,Solution Structure Of A Tbp-Tafii230 Complex: Protein Mimicry Of The Minor Groove Surface Of The Tata Box Unwound By Tbp, Nmr, 25 Structures
+1RM1 A ,90,10.6,10e-4.5,3.0,10.0,Structure Of A Yeast TfiiaTBPTATA-Box Dna Complexÿ
+4RF8 B 2,99,10.6,0.0020,3.2,10.1,Crystal Structure Of Double-domain Arginine Kinase From Anthopleura Japonicas In Complex With Adp
+4WOE A 3,95,10.6,0.0001,3.2,9.5,The Substrate -free And -bound Crystal Structures Of The Duplicated Taurocyamine Kinase From The Human Parasite Schistosoma Mansoni
+1YTF A ,91,10.6,0.0002,3.1,9.9,Yeast TfiiaTBPDNA COMPLEXÿ
+3JU5 A ,95,10.5,10e-4.3,2.9,7.4,Crystal Structure Of Dimeric Arginine Kinase At 1.75-A Resolutionÿ
+3JU5 A 1,98,10.5,10e-4.6,3.3,6.1,Crystal Structure Of Dimeric Arginine Kinase At 1.75-A Resolutionÿ
+1JFI C ,90,10.5,10e-4.4,3.1,8.9,Crystal Structure Of The Nc2-Tbp-Dna Ternary Complexÿ
+2J1Q A ,99,10.5,0.0038,3.4,10.1,Crystal Structure Of Trypanosoma Cruzi Arginine Kinase
+3JU5 D ,100,10.5,0.0001,3.4,5.0,Crystal Structure Of Dimeric Arginine Kinase At 1.75-A Resolutionÿ
+4WOE B 3,98,10.4,0.0010,3.3,9.2,The Substrate -free And -bound Crystal Structures Of The Duplicated Taurocyamine Kinase From The Human Parasite Schistosoma Mansoni
+3DRE B ,98,10.4,10e-4.0,3.1,9.2,Crystal Structure Of Human Brain-Type Creatine Kinaseÿ
+3DRE B 2,96,10.4,10e-4.5,3.0,8.3,Crystal Structure Of Human Brain-Type Creatine Kinaseÿ
+3JU6 A ,98,10.4,0.0003,3.2,7.1,Crystal Structure Of Dimeric Arginine Kinase In Complex With Amppnp And Arginineÿ
+3JU6 A 1,103,10.4,0.0002,3.9,6.8,Crystal Structure Of Dimeric Arginine Kinase In Complex With Amppnp And Arginineÿ
+3JU5 C ,100,10.4,0.0002,3.4,7.0,Crystal Structure Of Dimeric Arginine Kinase At 1.75-A Resolutionÿ
+3DRE A ,96,10.4,0.0014,3.1,8.3,Crystal Structure Of Human Brain-Type Creatine Kinaseÿ
+3DRE A 2,98,10.4,10e-4.5,3.3,8.2,Crystal Structure Of Human Brain-Type Creatine Kinaseÿ
+1TBP B ,88,10.4,10e-4.2,3.1,10.2,Tata-Binding Protein (Tbp, C-Terminal 179 Amino Acids)
+1CRK D ,97,10.4,0.0001,3.1,8.2,Mitochondrial Creatine Kinase
+1CRK D 1,97,10.4,10e-4.2,3.1,7.2,Mitochondrial Creatine Kinase
+3DRB A ,96,10.4,0.0010,3.1,8.3,Crystal Structure Of Human Brain-Type Creatine Kinaseÿ
+3DRB A 2,97,10.4,10e-4.4,3.2,8.2,Crystal Structure Of Human Brain-Type Creatine Kinaseÿ
+3B6R A ,96,10.4,0.0010,3.1,8.3,Crystal Structure Of Human Brain-Type Creatine Kinase
+3B6R A 2,96,10.4,10e-4.4,3.1,8.3,Crystal Structure Of Human Brain-Type Creatine Kinase
+1CRK C ,98,10.4,0.0001,3.2,8.2,Mitochondrial Creatine Kinase
+1CRK C 1,97,10.4,10e-4.1,3.1,8.2,Mitochondrial Creatine Kinase
+3JU6 C ,100,10.4,0.0002,3.4,7.0,Crystal Structure Of Dimeric Arginine Kinase In Complex With Amppnp And Arginineÿ
+4RF7 A 2,103,10.4,0.0002,3.4,9.7,Crystal Structure Of Double-domain Arginine Kinase From Anthopleura Japonicas In Complex With Substrate L-arginine
+1NGM E ,89,10.4,10e-4.2,3.1,10.1,Crystal Structure Of A Yeast Brf1-Tbp-Dna Ternary Complexÿ
+4Q2R B ,98,10.3,10e-4.0,3.2,8.2,Structural Proteomics From Crude Native Rod Outer Segments
+4Q2R B 1,95,10.3,10e-4.4,3.1,7.4,Structural Proteomics From Crude Native Rod Outer Segments
+1CRK A ,96,10.3,0.0002,3.0,8.3,Mitochondrial Creatine Kinase
+1CRK A 1,97,10.3,10e-4.1,3.1,7.2,Mitochondrial Creatine Kinase
+4Q2R A ,102,10.3,0.0001,3.5,7.8,Structural Proteomics From Crude Native Rod Outer Segments
+4Q2R A 1,97,10.3,10e-4.3,3.2,7.2,Structural Proteomics From Crude Native Rod Outer Segments
+1C9B F ,89,10.3,0.0001,3.1,9.0,Crystal Structure Of A Human Tbp Core Domain-Human Tfiib Core Domain Complex Bound To An Extended, Modified Adenoviral Major Late Promoter (Admlp)ÿ
+1C9B J ,89,10.3,0.0001,3.0,9.0,Crystal Structure Of A Human Tbp Core Domain-Human Tfiib Core Domain Complex Bound To An Extended, Modified Adenoviral Major Late Promoter (Admlp)ÿ
+1CDW A ,90,10.3,0.0001,3.1,8.9,Human Tbp Core Domain Complexed With Dnaÿ
+4BHL A ,104,10.3,0.0072,3.8,10.6,Crystal Structure Of Litopenaeus Vannamei Arginine Kinase In Binary Complex With Arginine
+4RF7 B 2,102,10.3,0.0003,3.3,7.8,Crystal Structure Of Double-domain Arginine Kinase From Anthopleura Japonicas In Complex With Substrate L-arginine
+1C9B B ,91,10.3,0.0001,3.2,8.8,Crystal Structure Of A Human Tbp Core Domain-Human Tfiib Core Domain Complex Bound To An Extended, Modified Adenoviral Major Late Promoter (Admlp)ÿ
+3JU5 B ,98,10.3,0.0002,3.4,6.1,Crystal Structure Of Dimeric Arginine Kinase At 1.75-A Resolutionÿ
+3JU5 B 1,102,10.3,0.0001,3.4,6.9,Crystal Structure Of Dimeric Arginine Kinase At 1.75-A Resolutionÿ
+4WO8 A 2,93,10.3,0.0001,3.0,8.6,The Substrate -free And -bound Crystal Structures Of The Duplicated Taurocyamine Kinase From The Human Parasite Schistosoma Mansoni
+1C9B R ,86,10.2,0.0001,2.9,9.3,Crystal Structure Of A Human Tbp Core Domain-Human Tfiib Core Domain Complex Bound To An Extended, Modified Adenoviral Major Late Promoter (Admlp)ÿ
+1C9B N ,88,10.2,0.0001,2.9,9.1,Crystal Structure Of A Human Tbp Core Domain-Human Tfiib Core Domain Complex Bound To An Extended, Modified Adenoviral Major Late Promoter (Admlp)ÿ
+3JU6 D ,99,10.2,0.0003,3.3,7.1,Crystal Structure Of Dimeric Arginine Kinase In Complex With Amppnp And Arginineÿ
+3JU6 B ,96,10.2,0.0002,3.1,6.2,Crystal Structure Of Dimeric Arginine Kinase In Complex With Amppnp And Arginineÿ
+3JU6 B 1,99,10.2,0.0001,3.7,6.1,Crystal Structure Of Dimeric Arginine Kinase In Complex With Amppnp And Arginineÿ
+3M10 A ,101,10.2,0.0021,3.7,7.9,Substrate-Free Form Of Arginine Kinaseÿ
+3M10 B ,100,10.2,0.0021,3.4,9.0,Substrate-Free Form Of Arginine Kinaseÿ
+1YTB B ,90,10.2,0.0001,3.2,10.0,Crystal Structure Of A Yeast TbpTATA-Box Complexÿ
+1U6R A ,98,10.2,0.0057,3.2,10.2,Transition State Analog Complex Of Muscle Creatine Kinase (R134k) Mutant
+1U6R A 2,96,10.2,0.0004,3.1,8.3,Transition State Analog Complex Of Muscle Creatine Kinase (R134k) Mutant
+1CRK B ,100,10.2,0.0003,3.5,8.0,Mitochondrial Creatine Kinase
+1CRK B 1,105,10.2,0.0001,3.5,6.7,Mitochondrial Creatine Kinase
+4WOD A 1,96,10.2,0.0001,3.1,8.3,The Substrate -free And -bound Crystal Structures Of The Duplicated Taurocyamine Kinase From The Human Parasite Schistosoma Mansoni
+4AM1 A ,99,10.2,0.0100,3.4,10.1,Crystal Structure Of The Marine Crustacean Decapod Shrimp ( Litopenaeus Vannamei) Arginine Kinase In The Absence Of Substrate Or Ligands
+1VRP A ,93,10.2,0.0017,3.0,11.8,The 2.1 Structure Of T. Californica Creatine Kinase Complexed With The Transition-State Analogue Complex, Adp- Mg 2+ NO3-CREATINE
+1VRP A 2,97,10.2,10e-4.1,3.6,9.3,The 2.1 Structure Of T. Californica Creatine Kinase Complexed With The Transition-State Analogue Complex, Adp- Mg 2+ NO3-CREATINE
+4WOE B 2,100,10.1,0.0002,3.3,10.0,The Substrate -free And -bound Crystal Structures Of The Duplicated Taurocyamine Kinase From The Human Parasite Schistosoma Mansoni
+1VOK A ,87,10.1,0.0002,3.1,8.0,Arabidopsis Thaliana Tbp (Dimer)
+1NVP A ,88,10.1,0.0002,3.1,8.0,Human TfiiaTBPDNA COMPLEXÿ
+4RF9 B 2,104,10.1,0.0004,3.4,8.7,Crystal Structure Of Double-domain Arginine Kinase From Anthopleura Japonicas In Complex With L-arginine And Atpgs
+4RF6 A 2,105,10.1,0.0005,3.5,8.6,Crystal Structure Of Double-domain Arginine Kinase From Anthopleura Japonicas
+2CRK A ,96,10.1,0.0014,3.1,10.4,Muscle Creatine Kinase
+2CRK A 1,97,10.1,0.0007,3.3,9.3,Muscle Creatine Kinase
+4RF6 B 2,104,10.1,0.0005,3.6,8.7,Crystal Structure Of Double-domain Arginine Kinase From Anthopleura Japonicas
+3L2D C ,97,10.0,0.0029,3.2,5.2,Glycocyamine Kinase, Beta-Beta Homodimer From Marine Worm Namalycastis Spÿ
+3L2D C 1,99,10.0,0.0018,3.5,5.1,Glycocyamine Kinase, Beta-Beta Homodimer From Marine Worm Namalycastis Spÿ
+1TGH A ,85,10.0,0.0003,2.7,9.4,Tata Binding Protein (Tbp)DNA COMPLEXÿ
+4RF8 A 1,103,10.0,0.0008,3.4,8.7,Crystal Structure Of Double-domain Arginine Kinase From Anthopleura Japonicas In Complex With Adp
+4RF8 B 1,101,10.0,0.0031,3.2,8.9,Crystal Structure Of Double-domain Arginine Kinase From Anthopleura Japonicas In Complex With Adp
+4RF9 A 2,99,10.0,0.0007,3.4,9.1,Crystal Structure Of Double-domain Arginine Kinase From Anthopleura Japonicas In Complex With L-arginine And Atpgs
+1QNC B ,85,10.0,0.0003,2.7,8.2,Crystal Structure Of The A(-31) Adenovirus Major Late Promoter Tata Box Variant Bound To Wild-Type Tbp (Arabidopsis Thaliana Tbp Isoform 2). Tata Element Recognition By The Tata Box-Binding Protein Has Been Conserved Throughout Evolution
+2Z8U B ,90,10.0,0.0003,3.1,8.9,Methanococcus Jannaschii Tbp
+4WOE A 2,97,10.0,0.0003,3.3,10.3,The Substrate -free And -bound Crystal Structures Of The Duplicated Taurocyamine Kinase From The Human Parasite Schistosoma Mansoni
+1QN8 B ,86,10.0,0.0003,2.9,8.1,Crystal Structure Of The T(-28) Adenovirus Major Late Promoter Tata Box Variant Bound To Wild-Type Tbp (Arabidopsis Thaliana Tbp Isoform 2). Tata Element Recognition By The Tata Box-Binding Protein Has Been Conserved Throughout Evolution
+1QN3 B ,87,10.0,0.0003,2.9,6.9,Crystal Structure Of The C(-25) Adenovirus Major Late Promoter Tata Box Variant Bound To Wild-Type Tbp (Arabidopsis Thaliana Tbp Isoform 2). Tata Element Recognition By The Tata Box-Binding Protein Has Been Conserved Throughout Evolution
+1I0E D ,96,10.0,0.0025,3.3,10.4,Crystal Structure Of Creatine Kinase From Human Muscle
+1I0E D 1,103,10.0,0.0015,3.7,8.7,Crystal Structure Of Creatine Kinase From Human Muscle
+1I0E B ,97,9.9,0.0025,3.3,10.3,Crystal Structure Of Creatine Kinase From Human Muscle
+1I0E B 1,97,9.9,0.0015,3.4,8.2,Crystal Structure Of Creatine Kinase From Human Muscle
+1QN7 A ,77,9.9,0.0004,2.6,9.1,Crystal Structure Of The T(-27) Adenovirus Major Late Promoter Tata Box Variant Bound To Wild-Type Tbp (Arabidopsis Thaliana Tbp Isoform 2). Tata Element Recognition By The Tata Box-Binding Protein Has Been Conserved Throughout Evolution
+1I0E A ,96,9.9,0.0026,3.3,8.3,Crystal Structure Of Creatine Kinase From Human Muscle
+1I0E A 1,96,9.9,0.0015,3.3,7.3,Crystal Structure Of Creatine Kinase From Human Muscle
+1I0E C ,97,9.9,0.0026,3.4,8.2,Crystal Structure Of Creatine Kinase From Human Muscle
+1I0E C 1,101,9.9,0.0015,3.6,8.9,Crystal Structure Of Creatine Kinase From Human Muscle
+3L2D D ,100,9.9,0.0092,3.5,5.0,Glycocyamine Kinase, Beta-Beta Homodimer From Marine Worm Namalycastis Spÿ
+3L2D D 1,96,9.9,0.0058,3.2,5.2,Glycocyamine Kinase, Beta-Beta Homodimer From Marine Worm Namalycastis Spÿ
+3L2D B ,96,9.9,0.0063,3.2,5.2,Glycocyamine Kinase, Beta-Beta Homodimer From Marine Worm Namalycastis Spÿ
+3L2D B 1,99,9.9,0.0036,3.5,5.1,Glycocyamine Kinase, Beta-Beta Homodimer From Marine Worm Namalycastis Spÿ
+1QN8 A ,84,9.9,0.0004,2.7,8.3,Crystal Structure Of The T(-28) Adenovirus Major Late Promoter Tata Box Variant Bound To Wild-Type Tbp (Arabidopsis Thaliana Tbp Isoform 2). Tata Element Recognition By The Tata Box-Binding Protein Has Been Conserved Throughout Evolution
+1QNB A ,87,9.9,0.0004,3.1,6.9,Crystal Structure Of The T(-25) Adenovirus Major Late Promoter Tata Box Variant Bound To Wild-Type Tbp (Arabidopsis Thaliana Tbp Isoform 2). Tata Element Recognition By The Tata Box-Binding Protein Has Been Conserved Throughout Evolution
+1G0W A ,93,9.9,0.0007,3.2,7.5,Crystal Structure Of Bovine Retinal Creatine Kinase
+1G0W A 1,94,9.9,0.0002,2.9,7.4,Crystal Structure Of Bovine Retinal Creatine Kinase
+3L2D A ,97,9.9,0.0048,3.1,5.2,Glycocyamine Kinase, Beta-Beta Homodimer From Marine Worm Namalycastis Spÿ
+3L2D A 1,95,9.9,0.0029,3.1,5.3,Glycocyamine Kinase, Beta-Beta Homodimer From Marine Worm Namalycastis Spÿ
+1QN4 A ,85,9.9,0.0005,2.7,8.2,Crystal Structure Of The T(-24) Adenovirus Major Late Promoter Tata Box Variant Bound To Wild-Type Tbp (Arabidopsis Thaliana Tbp Isoform 2). Tata Element Recognition By The Tata Box-Binding Protein Has Been Conserved Throughout Evolution
+3B6R B ,93,9.9,0.0041,3.2,8.6,Crystal Structure Of Human Brain-Type Creatine Kinase
+3B6R B 2,92,9.9,0.0019,2.9,8.7,Crystal Structure Of Human Brain-Type Creatine Kinase
+3L2E A ,99,9.9,0.0116,3.2,5.1,Glycocyamine Kinase, Alpha-Beta Heterodimer From Marine Worm Namalycastis Spÿ
+3L2E A 2,96,9.9,0.0042,3.2,5.2,Glycocyamine Kinase, Alpha-Beta Heterodimer From Marine Worm Namalycastis Spÿ
+1QN6 A ,80,9.8,0.0005,2.7,8.7,Crystal Structure Of The T(-26) Adenovirus Major Late Promoter Tata Box Variant Bound To Wild-Type Tbp (Arabidopsis Thaliana Tbp Isoform 2). Tata Element Recognition By The Tata Box-Binding Protein Has Been Conserved Throughout Evolution
+2Z8U P ,89,9.8,0.0002,3.0,9.0,Methanococcus Jannaschii Tbp
+3L2E B ,95,9.8,0.0012,3.1,5.3,Glycocyamine Kinase, Alpha-Beta Heterodimer From Marine Worm Namalycastis Spÿ
+3L2E B 1,97,9.8,0.0005,3.3,5.2,Glycocyamine Kinase, Alpha-Beta Heterodimer From Marine Worm Namalycastis Spÿ
+3L2E D ,97,9.8,0.0243,3.4,5.2,Glycocyamine Kinase, Alpha-Beta Heterodimer From Marine Worm Namalycastis Spÿ
+3L2E D 2,97,9.8,0.0020,3.2,5.2,Glycocyamine Kinase, Alpha-Beta Heterodimer From Marine Worm Namalycastis Spÿ
+2FPN A ,86,9.8,0.0046,3.0,5.8,The Crystal Structure Of The Ywmb Protein From Bacillus Subtilis
+2FPN A 1,85,9.8,10e-4.5,2.9,5.9,The Crystal Structure Of The Ywmb Protein From Bacillus Subtilis
+3DRB B ,94,9.8,0.0013,3.0,9.6,Crystal Structure Of Human Brain-Type Creatine Kinaseÿ
+3DRB B 2,92,9.8,0.0005,3.0,8.7,Crystal Structure Of Human Brain-Type Creatine Kinaseÿ
+1MP9 A ,71,9.8,0.0050,2.5,9.9,Tbp From A Mesothermophilic Archaeon, Sulfolobus Acidocaldarius
+1MP9 B ,69,9.8,0.0030,2.4,10.1,Tbp From A Mesothermophilic Archaeon, Sulfolobus Acidocaldarius
+1K8W A 2,79,9.8,0.0018,3.1,10.1,Crystal Structure Of The E. Coli Pseudouridine Synthase Trub Bound To A T Stem-Loop Rna
+1NGM M ,63,9.8,0.0010,2.6,7.9,Crystal Structure Of A Yeast Brf1-Tbp-Dna Ternary Complexÿ
+1VOL B ,84,9.8,0.0040,2.8,8.3,Tfiib (Human Core Domain)TBP (A.THALIANA)TATA ELEMENT Ternary Complexÿ
+3OC3 C ,81,9.7,0.0009,2.7,9.9,Structure Of A Transcriptional Regulatory Complexÿ
+4RF7 B 1,103,9.7,0.0025,3.4,8.7,Crystal Structure Of Double-domain Arginine Kinase From Anthopleura Japonicas In Complex With Substrate L-arginine
+4RF9 A 1,104,9.7,0.0026,3.4,8.7,Crystal Structure Of Double-domain Arginine Kinase From Anthopleura Japonicas In Complex With L-arginine And Atpgs
+1VRP B ,93,9.7,0.0017,3.2,9.7,The 2.1 Structure Of T. Californica Creatine Kinase Complexed With The Transition-State Analogue Complex, Adp- Mg 2+ NO3-CREATINE
+1VRP B 1,99,9.7,0.0009,3.8,7.1,The 2.1 Structure Of T. Californica Creatine Kinase Complexed With The Transition-State Analogue Complex, Adp- Mg 2+ NO3-CREATINE
+4RF7 A 1,100,9.7,0.0028,3.3,10.0,Crystal Structure Of Double-domain Arginine Kinase From Anthopleura Japonicas In Complex With Substrate L-arginine
+5A65 A ,74,9.7,0.0031,2.4,4.1,Crystal Structure Of Mouse Thiamine Triphosphatase In Complex With Thiamine Diphosphate, Orthophosphate And Magnesium Ions
+1NGM A ,91,9.7,0.0008,3.2,5.5,Crystal Structure Of A Yeast Brf1-Tbp-Dna Ternary Complexÿ
+3P0L A ,84,9.7,0.0018,3.2,7.1,Human Steroidogenic Acute Regulatory Proteinÿ
+3P0L B ,77,9.7,0.0018,3.1,5.2,Human Steroidogenic Acute Regulatory Proteinÿ
+3BHD B ,77,9.7,0.0011,2.6,5.2,Crystal Structure Of Human Thiamine Triphosphatase (Thtpa)
+3L2E C ,97,9.6,0.0275,3.3,5.2,Glycocyamine Kinase, Alpha-Beta Heterodimer From Marine Worm Namalycastis Spÿ
+3L2E C 2,97,9.6,0.0142,3.2,5.2,Glycocyamine Kinase, Alpha-Beta Heterodimer From Marine Worm Namalycastis Spÿ
+4RF9 B 1,100,9.6,0.0032,3.3,11.0,Crystal Structure Of Double-domain Arginine Kinase From Anthopleura Japonicas In Complex With L-arginine And Atpgs
+4BG4 A ,99,9.6,0.0032,3.7,10.1,Crystal Structure Of Litopenaeus Vannamei Arginine Kinase In Ternary Complex With Arginine, Adp-mg And No3
+4BG4 B ,100,9.6,0.0157,3.7,10.0,Crystal Structure Of Litopenaeus Vannamei Arginine Kinase In Ternary Complex With Arginine, Adp-mg And No3
+1QN3 A ,81,9.6,0.0012,2.8,8.6,Crystal Structure Of The C(-25) Adenovirus Major Late Promoter Tata Box Variant Bound To Wild-Type Tbp (Arabidopsis Thaliana Tbp Isoform 2). Tata Element Recognition By The Tata Box-Binding Protein Has Been Conserved Throughout Evolution
+2DC4 B ,75,9.6,0.0019,2.3,8.0,Structure Of Ph1012 Protein From Pyrococcus Horikoshii Ot3
+1U6R B ,96,9.6,0.0028,3.4,9.4,Transition State Analog Complex Of Muscle Creatine Kinase (R134k) Mutant
+1XSZ A ,76,9.6,0.0024,2.9,6.6,The Structure Of Ralf
+1XSZ A 3,77,9.6,0.0002,2.8,5.2,The Structure Of Ralf
+2G5F A 1,61,9.6,0.0019,2.3,8.2,The Structure Of Mbti From Mycobacterium Tuberculosis, The First Enzyme In The Synthesis Of Mycobactin, Reveals It To Be A Salicylate Synthase
+4RF6 A 1,102,9.6,0.0037,3.4,8.8,Crystal Structure Of Double-domain Arginine Kinase From Anthopleura Japonicas
+2DC4 A ,74,9.6,0.0021,2.2,6.8,Structure Of Ph1012 Protein From Pyrococcus Horikoshii Ot3
+5A64 B ,74,9.6,0.0092,2.8,4.1,Crystal Structure Of Mouse Thiamine Triphosphatase In Complex With Thiamine Triphosphate
+4PSB A ,83,9.6,0.0003,2.9,9.6,Crystal Structure Of Phytohormone Binding Protein From Vigna Radiata In Complex With Gibberellic Acid (ga3)
+1XSZ B ,78,9.5,0.0029,2.9,5.1,The Structure Of Ralf
+1XSZ B 3,71,9.5,0.0002,2.7,5.6,The Structure Of Ralf
+1D3U A ,66,9.5,0.0009,2.6,10.6,Tata-Binding ProteinTRANSCRIPTION FACTOR (II)BBRE+TATA- Box Complex From Pyrococcus Woeseiÿ
+2EY4 B 2,75,9.5,0.0344,2.6,9.3,Crystal Structure Of A Cbf5-Nop10-Gar1 Complex
+1M15 A ,100,9.5,0.0247,3.9,8.0,Transition State Structure Of Arginine Kinase
+3OC3 D ,67,9.5,0.0021,2.9,10.4,Structure Of A Transcriptional Regulatory Complexÿ
+2ACA B ,66,9.5,0.0086,2.4,4.5,X-Ray Structure Of A Putative Adenylate Cyclase Q87nv8 From Vibrio Parahaemolyticus At The 2.25 A Resolution. Northeast Structural Genomics Target Vpr19
+2ACA B 1,66,9.5,0.0061,2.4,4.5,X-Ray Structure Of A Putative Adenylate Cyclase Q87nv8 From Vibrio Parahaemolyticus At The 2.25 A Resolution. Northeast Structural Genomics Target Vpr19
+1QNC A ,75,9.5,0.0011,2.7,8.0,Crystal Structure Of The A(-31) Adenovirus Major Late Promoter Tata Box Variant Bound To Wild-Type Tbp (Arabidopsis Thaliana Tbp Isoform 2). Tata Element Recognition By The Tata Box-Binding Protein Has Been Conserved Throughout Evolution
+5A65 B ,76,9.5,0.0063,2.5,3.9,Crystal Structure Of Mouse Thiamine Triphosphatase In Complex With Thiamine Diphosphate, Orthophosphate And Magnesium Ions
+2Z8U Q ,90,9.5,0.0022,3.0,8.9,Methanococcus Jannaschii Tbp

@@ -39,10 +39,10 @@
 4PU2 A 7,52,5.0,0.0442,1.7,3.8,Crystal Structure Of Aminopeptidase N In Complex With The Phosphonic Acid Analogue Of Leucine L-(r)-leup
 1N4Q I 2,52,5.4,0.0137,1.7,7.7,Protein Geranylgeranyltransferase Type-I Complexed With A Ggpp Analog And A Kkksktkcvil Peptide
 1NI1 A 2,52,5.1,0.0327,1.7,7.7,Imidazole And Cyanophenyl Farnesyl Transferase Inhibitors
-5A9Q C 4,35,5.2,0.0261,1.7,8.6,Human Nuclear Pore Complex
 3I4R B 6,35,5.2,0.0261,1.7,8.6,Nup107(Aa658-925)NUP133(AA517-1156) Complex, H.Sapiensÿ
-5A9Q U 6,35,5.2,0.0263,1.7,8.6,Human Nuclear Pore Complex
+5A9Q C 4,35,5.2,0.0261,1.7,8.6,Human Nuclear Pore Complex
 5A9Q 3 6,35,5.2,0.0262,1.7,8.6,Human Nuclear Pore Complex
+5A9Q U 6,35,5.2,0.0263,1.7,8.6,Human Nuclear Pore Complex
 1HS6 A 5,42,5.7,0.0027,1.7,2.4,Structure Of Leukotriene A4 Hydrolase Complexed With Bestatin.
 4N0A H 1,56,5.6,0.0373,1.7,14.3,Crystal Structure Of Lsm2-3-pat1c Complex From Saccharomyces Cerevisiae
 3KSY A 5,64,5.7,0.0235,1.7,3.1,Crystal Structure Of The Histone Domain, Dh-Ph Unit, And Catalytic Unit Of The Ras Activator Son Of Sevenless (Sos)ÿ

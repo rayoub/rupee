@@ -61,9 +61,9 @@
 3QXW D ,72,10.3,0.0263,2.4,6.9,Free Structure Of An Anti-Methotrexate Cdr1-4 Graft Vhh Antibodyÿ
 4ZRX A 3,52,10.4,0.0041,2.4,1.9,Crystal Structure Of A Putative Alpha-l-fucosidase (bacova_04357) From Bacteroides Ovatus Atcc 8483 At 1.59 A Resolution
 4HXB L 2,52,8.8,0.0388,2.4,13.5,Crystal Structure Of 6b9 Fab
-2AJU H 1,73,10.5,0.0484,2.4,5.5,Cyrstal Structure Of Cocaine Catalytic Antibody 7a1 Fab'
-3G5X A 2,51,9.0,0.0209,2.4,17.6,Antibodies Specifically Targeting A Locally Misfolded Region Of Tumor Associated Egfrÿ
 4JG0 H 1,72,10.1,0.0440,2.4,5.6,Structure Of Phosphoserine/threonine (pstab) Scaffold Bound To Pser Peptide
+3G5X A 2,51,9.0,0.0209,2.4,17.6,Antibodies Specifically Targeting A Locally Misfolded Region Of Tumor Associated Egfrÿ
+2AJU H 1,73,10.5,0.0484,2.4,5.5,Cyrstal Structure Of Cocaine Catalytic Antibody 7a1 Fab'
 4JZJ D 3,60,9.6,0.0023,2.4,11.7,Crystal Structure Of Receptor-fab Complex
 3IGA A 1,75,10.1,0.0471,2.4,9.3,Potassium Channel Kcsa-Fab Complex In Li+ And K+ÿ
 3M17 G 2,53,9.4,0.0060,2.4,7.5,Crystal Structure Of Human Fcrn With A Monomeric Peptide Inhÿ
@@ -82,8 +82,8 @@
 2VKX F 1,74,9.5,0.0307,2.5,10.8,Human Ncam, Fn3 Domains 1 And 2, M610r Mutant
 2GEE A 2,81,9.1,0.0144,2.5,11.1,Crystal Structure Of Human Type Iii Fibronectin Extradomain B And Domain 8
 4N0U A 2,54,9.1,0.0137,2.5,7.4,Ternary Complex Between Neonatal Fc Receptor, Serum Albumin And Fc
-3IJS C 2,55,8.8,0.0351,2.5,12.7,Structure Of S67-27 In Complex With Tsbpÿ
 3RKD D 1,78,10.4,0.0194,2.5,5.1,Hepatitis E Virus E2s Domain (Genotype I) In Complex With A Neutralizing Antibodyÿ
+3IJS C 2,55,8.8,0.0351,2.5,12.7,Structure Of S67-27 In Complex With Tsbpÿ
 3QXV A ,73,10.1,0.0464,2.5,6.8,Structure Of An Anti-Methotrexate Cdr1-4 Graft Vhh Antibody In Complex With Methotrexateÿ
 4I18 H 1,77,10.2,0.0324,2.5,5.2,Crystal Structure Of Human Prolactin Receptor Complexed With Fab Fragment
 4BYH A 1,59,8.5,0.0460,2.5,11.9,Crystal Structure Of Sialylated Igg Fc
@@ -96,12 +96,12 @@
 4KFZ C ,71,10.9,0.0127,2.5,5.6,Crystal Structure Of Lmo2 And Anti-lmo2 Vh Complex
 4Y1A D 1,73,10.5,0.0147,2.5,6.8,Immune Complex
 1QG3 B 1,74,9.1,0.0168,2.5,0.0,Crystal Structure Of A Tandem Pair Of Fibronectin Type Iii Domains From The Cytoplasmic Tail Of Integrin Alpha6 Beta4
-1HXM E 1,71,9.9,0.0219,2.5,9.9,Crystal Structure Of A Human Vgamma9VDELTA2 T CELL RECEPTOR
 1FNH A 3,73,9.7,0.0117,2.5,11.0,Crystal Structure Of Heparin And Integrin Binding Segment Of Human Fibronectin
+1HXM E 1,71,9.9,0.0219,2.5,9.9,Crystal Structure Of A Human Vgamma9VDELTA2 T CELL RECEPTOR
 4DOH B 1,73,9.6,0.0143,2.5,9.6,Il20IL201IL20R2 TERNARY COMPLEX
 2DKU A ,53,9.3,0.0379,2.5,5.7,Solution Structure Of The Third Ig-Like Domain Of Human Kiaa1556 Protein
-1W0Y T 1,66,8.9,0.0034,2.5,4.5,Tf7a_3771 Complex
 4JFZ H 1,73,10.3,0.0290,2.5,5.5,Structure Of Phosphoserine (psab) Scaffold Bound To Pser Peptide
+1W0Y T 1,66,8.9,0.0034,2.5,4.5,Tf7a_3771 Complex
 1NTL A 5,52,9.2,0.0113,2.5,11.5,Model Of Mouse Crry-Ig Determined By Solution Scattering, Curve Fitting And Homology Modelling
 3FRP A 2,56,9.0,0.0227,2.5,8.9,Crystal Structure Of Cobra Venom Factor, A Co-Factor For C3- And C5 Convertase Cvfbbÿ
 1W2K T 1,66,8.9,0.0028,2.5,4.5,Tf7a_4380 Complex
@@ -120,11 +120,11 @@
 3F7R A 1,76,9.0,0.0181,2.5,0.0,First Pair Of Fibronectin Type Iii Domains And Part Of The Connecting Segment Of The Integrin Beta4ÿ
 1CXH A 4,62,10.8,0.0060,2.5,6.5,Complex Of Cgtase With Maltotetraose At Room Temperature And Ph 9.6 Based On Diffraction Data Of A Crystal Soaked With Maltoheptaose
 3IJY C 2,55,8.8,0.0431,2.5,12.7,Structure Of S67-27 In Complex With Kdo(2.8)kdoя
-1ZWI A 1,73,10.1,0.0472,2.5,9.6,Structure Of Mutant Kcsa Potassium Channel
 4R4H H 1,77,10.4,0.0193,2.5,7.8,Crystal Structure Of Non-neutralizing, A32-like Antibody 2.2c In Complex With Hiv-1 Env Gp120
+1ZWI A 1,73,10.1,0.0472,2.5,9.6,Structure Of Mutant Kcsa Potassium Channel
 2AJ3 B 1,77,10.4,0.0050,2.5,6.5,Crystal Structure Of A Cross-Reactive Hiv-1 Neutralizing Cd4-Binding Site Antibody Fab M18
-2I9L A 2,54,9.0,0.0197,2.5,14.8,Structure Of Fab 7d11 From A Neutralizing Antibody Against The Poxvirus L1 Protein
 4IML A 2,54,8.9,0.0245,2.5,14.8,Crossfab Binding To Human Angiopoietin 2
+2I9L A 2,54,9.0,0.0197,2.5,14.8,Structure Of Fab 7d11 From A Neutralizing Antibody Against The Poxvirus L1 Protein
 1BOY A 1,62,8.5,0.0157,2.5,4.8,Extracellular Region Of Human Tissue Factor
 1D7F B 4,59,10.3,0.0250,2.5,13.6,Crystal Structure Of Asparagine 233-Replaced Cyclodextrin Glucanotransferase From Alkalophilic Bacillus Sp. 1011 Determined At 1.9 A Resolution
 4R4N C 1,76,10.1,0.0432,2.5,7.9,Crystal Structure Of The Anti-hiv-1 Antibody 2.2c In Complex With Hiv- 1 93ug037 Gp120
@@ -132,10 +132,10 @@
 3QS9 G 1,48,8.5,0.0153,2.5,4.2,Crystal Structure Of A Human Flt3 Ligand-Receptor Ternary Complexя
 2AJ3 D 1,77,10.5,0.0033,2.5,6.5,Crystal Structure Of A Cross-Reactive Hiv-1 Neutralizing Cd4-Binding Site Antibody Fab M18
 4KFZ D ,72,10.8,0.0181,2.5,5.6,Crystal Structure Of Lmo2 And Anti-lmo2 Vh Complex
-4TVP L 2,60,8.8,0.0430,2.5,10.0,Structure Of Bg505 Sosip.664 In Complex With Broadly Neutralizing Antibodies, Pgt122 And 35o22
-1G0D A 1,80,11.0,0.0030,2.5,11.2,Crystal Structure Of Red Sea Bream Transglutaminase
 1FC2 D 1,60,9.2,0.0286,2.5,13.3,Immunoglobulin Fc And Fragment B Of Protein A Complex
+4TVP L 2,60,8.8,0.0430,2.5,10.0,Structure Of Bg505 Sosip.664 In Complex With Broadly Neutralizing Antibodies, Pgt122 And 35o22
 3TT1 M 2,55,8.8,0.0443,2.5,16.4,Crystal Structure Of Leut In The Outward-Open Conformation In Complex With Fabя
+1G0D A 1,80,11.0,0.0030,2.5,11.2,Crystal Structure Of Red Sea Bream Transglutaminase
 2CR6 A ,63,9.4,0.0267,2.5,7.9,Solution Structure Of The Ig Domain (2998-3100) Of Human Obscurinя
 2CWR A ,71,9.0,0.0190,2.5,14.1,Crystal Structure Of Chitin Biding Domain Of Chitinase From Pyrococcus Furiosus
 2VH5 L ,64,10.9,0.0383,2.5,7.8,Crystal Structure Of Hras(G12v) - Anti-Ras Fv (Disulfide Free Mutant) Complex
@@ -144,25 +144,25 @@
 4LIQ E 2,63,10.4,0.0007,2.5,6.3,Structure Of The Extracellular Domain Of Human Csf-1 Receptor In Complex With The Fab Fragment Of Rg7155
 4M6A B ,62,8.5,0.0153,2.5,16.1,N-terminal Beta-strand Swapping In A Consensus Derived Alternative Scaffold Driven By Stabilizing Hydrophobic Interactions
 2IBG A 2,79,10.7,0.0019,2.5,3.8,Crystal Structure Of Hedgehog Bound To The Fniii Domains Of Ihog
-1EX0 A 1,70,9.9,0.0217,2.5,2.9,Human Factor Xiii, Mutant W279f Zymogen
 3N1G C ,77,9.9,0.0251,2.5,1.3,Crystal Structure Of Dhhn Bound To Bocfn3я
 4N0F A 2,53,9.2,0.0115,2.5,7.5,Human Fcrn Complexed With Human Serum Albumin
-4YDI L 2,54,8.7,0.0466,2.5,18.5,Crystal Structure Of Broad And Potently Neutralizing Vrc01-class Antibody Z258-vrc27.01, Isolated From Human Donor Z258, In Complex With Hiv-1 Gp120 From Clade A Strain Q23.17
-1PEZ A 3,61,10.1,0.0464,2.5,3.3,Bacillus Circulans Strain 251 Mutant A230v
+1EX0 A 1,70,9.9,0.0217,2.5,2.9,Human Factor Xiii, Mutant W279f Zymogen
 1V5J A ,75,9.7,0.0019,2.5,6.7,Solution Structure Of Rsgi Ruh-008, Fn3 Domain In Human Cdna
+1PEZ A 3,61,10.1,0.0464,2.5,3.3,Bacillus Circulans Strain 251 Mutant A230v
+4YDI L 2,54,8.7,0.0466,2.5,18.5,Crystal Structure Of Broad And Potently Neutralizing Vrc01-class Antibody Z258-vrc27.01, Isolated From Human Donor Z258, In Complex With Hiv-1 Gp120 From Clade A Strain Q23.17
 3M17 C 2,54,8.9,0.0275,2.5,7.4,Crystal Structure Of Human Fcrn With A Monomeric Peptide Inhя
 1EER B 1,58,8.7,0.0489,2.5,5.2,Crystal Structure Of Human Erythropoietin Complexed To Its Receptor At 1.9 Angstroms
 3TT1 L 2,53,8.8,0.0442,2.5,13.2,Crystal Structure Of Leut In The Outward-Open Conformation In Complex With Fabя
-4IRZ L 2,56,9.0,0.0189,2.5,17.9,Crystal Structure Of A4b7 Headpiece Complexed With Fab Natalizumab
 4QHM E 1,77,10.4,0.0199,2.5,6.5,I3.1 (unbound) From Ch103 Lineage
 4R4B B 1,76,10.2,0.0310,2.5,6.6,Crystal Structure Of The Anti-hiv-1 Antibody 2.2c
 4PBX A 5,78,11.0,0.0006,2.5,10.3,Crystal Structure Of The Six N-terminal Domains Of Human Receptor Protein Tyrosine Phosphatase Sigma
+4IRZ L 2,56,9.0,0.0189,2.5,17.9,Crystal Structure Of A4b7 Headpiece Complexed With Fab Natalizumab
 3OAZ H 1,73,10.2,0.0331,2.5,6.8,A Non-Self Sugar Mimic Of The Hiv Glycan Shield Shows Enhanced Antigenicityя
 1Q9W A 2,54,8.7,0.0457,2.5,13.0,S45-18 Fab Pentasaccharide Bisphosphate Complex
 3M17 E 2,55,9.1,0.0165,2.6,5.5,Crystal Structure Of Human Fcrn With A Monomeric Peptide Inhя
-1EO7 A 3,62,11.1,0.0021,2.6,6.5,Bacillus Circulans Strain 251 Cyclodextrin Glycosyltransferase In Complex With Maltohexaose
 4OBR A 3,77,8.8,0.0411,2.6,3.9,Crystal Structure Of Human Alpha-l-iduronidase Complex With Alpha-l- Iduronic Acid
 5DQ9 D 2,57,8.9,0.0313,2.6,12.3,Structure Of S55-3 Fab In Complex With Lipid A
+1EO7 A 3,62,11.1,0.0021,2.6,6.5,Bacillus Circulans Strain 251 Cyclodextrin Glycosyltransferase In Complex With Maltohexaose
 3BES R 1,72,8.6,0.0093,2.6,11.1,Structure Of A Poxvirus IfngbpIFNG COMPLEX
 2O26 X 2,54,8.9,0.0029,2.6,9.3,Structure Of A Class Iii Rtk Signaling Assembly
 2NZ9 F 1,76,10.2,0.0425,2.6,7.9,Crystal Structure Of Botulinum Neurotoxin Type A Complexed With Monoclonal Antibody Ar2

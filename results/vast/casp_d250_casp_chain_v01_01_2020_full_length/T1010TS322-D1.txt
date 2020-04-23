@@ -1,0 +1,180 @@
+1QJP A ,94,18.2,10e-12.1,2.8,5.3,High Resolution Structure Of The Outer Membrane Protein A (Ompa) Transmembrane Domain
+3NB3 A ,93,17.2,10e-9.6,2.9,5.4,The Host Outer Membrane Proteins Ompa And Ompc Are Packed At Specific Sites In The Shigella Phage Sf6 Virion As Structural Componentsÿ
+3NB3 C ,93,17.2,10e-9.6,2.7,5.4,The Host Outer Membrane Proteins Ompa And Ompc Are Packed At Specific Sites In The Shigella Phage Sf6 Virion As Structural Componentsÿ
+3NB3 B ,94,17.1,10e-9.4,2.8,5.3,The Host Outer Membrane Proteins Ompa And Ompc Are Packed At Specific Sites In The Shigella Phage Sf6 Virion As Structural Componentsÿ
+1BXW A ,118,15.9,10e-8.5,3.4,5.1,Outer Membrane Protein A (Ompa) Transmembrane Domain
+2LHF A ,108,15.3,10e-7.5,3.7,2.8,Solution Structure Of Outer Membrane Protein H (Oprh) From P. Aeruginosa In Dhpc Micellesÿ
+2N2L A ,113,15.0,10e-7.5,3.3,5.3,Nmr Structure Of Yersinia Pestis Ail (attachment Invasion Locus) In Decylphosphocholine Micelles Calculated With Implicit Membrane Solvation
+3WU2 o ,125,14.8,10e-4.1,3.9,4.0,Crystal Structure Analysis Of Photosystem Ii Complex
+5E7C o ,125,14.7,10e-4.1,4.0,4.8,Macromolecular Diffractive Imaging Using Imperfect Crystals - Bragg Data
+4PJ0 o ,122,14.6,0.0001,3.8,4.1,Structure Of T.elongatus Photosystem Ii, Rows Of Dimers Crystal Packing
+4PJ0 O ,126,14.6,0.0001,4.0,4.0,Structure Of T.elongatus Photosystem Ii, Rows Of Dimers Crystal Packing
+4PBU o ,126,14.5,0.0002,3.8,4.0,Serial Time-resolved Crystallography Of Photosystem Ii Using A Femtosecond X-ray Laser The S1 State
+4UB6 o ,121,14.4,0.0002,3.7,5.0,Native Structure Of Photosystem Ii (dataset-1) By A Femtosecond X-ray Laser
+2GIN B ,101,14.4,10e-6.5,3.9,5.0,X-Ray Structure Of The Wt Allene Oxide Cyclase 2 From Arabidopsis Thaliana
+4IXR O ,119,14.4,0.0003,3.7,4.2,Rt Fs X-ray Diffraction Of Photosystem Ii, First Illuminated State
+4IL6 O ,122,14.3,0.0004,3.9,5.7,Structure Of Sr-substituted Photosystem Ii
+4TNK o ,121,14.2,0.0005,3.8,4.1,Rt Xfel Structure Of Photosystem Ii 250 Microsec After The Third Illumination At 5.2 A Resolution
+2ERV B ,121,14.2,10e-4.3,3.6,4.1,Crystal Structure Of The Outer Membrane Enzyme Pagl
+4IXQ o ,121,14.2,0.0005,3.7,3.3,Rt Fs X-ray Diffraction Of Photosystem Ii, Dark State
+4IXR o ,121,14.2,0.0005,3.6,4.1,Rt Fs X-ray Diffraction Of Photosystem Ii, First Illuminated State
+4TNK O ,121,14.2,0.0006,3.8,4.1,Rt Xfel Structure Of Photosystem Ii 250 Microsec After The Third Illumination At 5.2 A Resolution
+4TNH o ,120,14.1,0.0006,3.7,5.0,Rt Xfel Structure Of Photosystem Ii In The Dark State At 4.9 A Resolution
+4TNJ o ,126,14.1,0.0006,4.0,4.8,Rt Xfel Structure Of Photosystem Ii 500 Ms After The 2nd Illumination (2f) At 4.5 A Resolution
+4TNI o ,124,14.1,0.0006,4.0,4.8,Rt Xfel Structure Of Photosystem Ii 500 Ms After The Third Illumination At 4.6 A Resolution
+4TNJ O ,127,14.1,0.0006,3.9,6.3,Rt Xfel Structure Of Photosystem Ii 500 Ms After The 2nd Illumination (2f) At 4.5 A Resolution
+4IXQ O ,121,14.1,0.0006,3.8,3.3,Rt Fs X-ray Diffraction Of Photosystem Ii, Dark State
+4TNH O ,122,14.1,0.0006,3.8,3.3,Rt Xfel Structure Of Photosystem Ii In The Dark State At 4.9 A Resolution
+4TNI O ,128,14.1,0.0006,4.1,7.0,Rt Xfel Structure Of Photosystem Ii 500 Ms After The Third Illumination At 4.6 A Resolution
+2GIN F ,102,14.1,10e-6.0,4.0,4.9,X-Ray Structure Of The Wt Allene Oxide Cyclase 2 From Arabidopsis Thaliana
+2N2M A ,111,14.0,10e-6.4,3.0,4.5,Nmr Structure Of Yersinia Pestis Ail (attachment Invasion Locus) In Decylphosphocholine Micelles
+4H69 B ,90,14.0,10e-4.8,3.2,5.6,Crystal Structure Of The Allene Oxide Cyclase 2 From Physcomitrella Patens Complexed With Substrate Analog
+2Q4I C ,86,14.0,10e-5.3,3.2,7.0,Ensemble Refinement Of The Protein Crystal Structure Of Allene Oxide Cyclase From Arabidopsis Thaliana At3g25770
+4H6A C ,88,14.0,10e-5.2,3.3,5.7,Crystal Structure Of The Allene Oxide Cyclase 2 From Physcomitrella Patens
+4UB8 O ,121,13.9,0.0012,3.9,4.1,Native Structure Of Photosystem Ii (dataset-2) By A Femtosecond X-ray Laser
+4H6A F ,91,13.9,10e-5.2,3.2,5.5,Crystal Structure Of The Allene Oxide Cyclase 2 From Physcomitrella Patens
+4UB6 O ,122,13.9,0.0013,3.9,4.9,Native Structure Of Photosystem Ii (dataset-1) By A Femtosecond X-ray Laser
+4H69 C ,86,13.9,10e-4.7,3.2,4.7,Crystal Structure Of The Allene Oxide Cyclase 2 From Physcomitrella Patens Complexed With Substrate Analog
+2BRJ B ,92,13.8,10e-4.6,3.4,5.4,X-Ray Structure Of The Allene Oxide Cyclase From Arabidopsis Thalianaÿ
+2JMM A ,100,13.8,10e-6.0,3.2,6.0,Nmr Solution Structure Of A Minimal Transmembrane Beta- Barrel Platform Protein
+1Z8K A ,109,13.8,10e-4.5,4.1,5.5,X-Ray Structure Of Allene Oxide Cyclase From Arabidopsis Thaliana At3g25770
+4CQ7 A ,104,13.7,10e-4.4,3.6,3.8,The Crystal Structure Of The Allene Oxide Cyclase 2 From Arabidopsis Thaliana With Bound Product - Opda
+2BRJ A ,92,13.7,10e-4.4,3.4,5.4,X-Ray Structure Of The Allene Oxide Cyclase From Arabidopsis Thalianaÿ
+5EE2 A ,104,13.6,10e-6.5,3.1,8.7,The Crystal Structure Of The C-terminal Beta-barrel Of Hpua From Neisseria Gonorrhoeae
+3A0B o ,109,13.6,0.0033,3.3,3.7,Crystal Structure Of Br-Substituted Photosystem Ii Complexÿ
+2F1T C ,121,13.6,0.0068,3.4,6.6,Outer Membrane Protein Ompw
+4H69 D ,89,13.6,10e-4.2,3.3,5.6,Crystal Structure Of The Allene Oxide Cyclase 2 From Physcomitrella Patens Complexed With Substrate Analog
+4RVY O ,123,13.6,0.0037,4.0,4.1,Serial Time Resolved Crystallography Of Photosystem Ii Using A Femtosecond X-ray Laser. The S State After Two Flashes (s3)
+4RVY o ,125,13.6,0.0037,4.0,4.0,Serial Time Resolved Crystallography Of Photosystem Ii Using A Femtosecond X-ray Laser. The S State After Two Flashes (s3)
+4PBU O ,122,13.5,0.0037,3.8,3.3,Serial Time-resolved Crystallography Of Photosystem Ii Using A Femtosecond X-ray Laser The S1 State
+2F1T B ,121,13.5,0.0075,3.4,6.6,Outer Membrane Protein Ompw
+2F1T A ,123,13.5,0.0079,3.5,6.5,Outer Membrane Protein Ompw
+4H6A D ,90,13.4,10e-4.5,3.3,5.6,Crystal Structure Of The Allene Oxide Cyclase 2 From Physcomitrella Patens
+4IL6 o ,122,13.4,0.0052,3.8,4.1,Structure Of Sr-substituted Photosystem Ii
+1S5L o ,116,13.4,10e-4.5,3.7,6.0,Architecture Of The Photosynthetic Oxygen Evolving Center
+5E7C O ,123,13.4,0.0059,3.8,4.1,Macromolecular Diffractive Imaging Using Imperfect Crystals - Bragg Data
+3DZM C ,88,13.4,0.0029,3.1,6.8,Crystal Structure Of A Major Outer Membrane Protein From Thermus Thermophilus Hb27ÿ
+1W5C O ,106,13.4,10e-4.4,3.6,0.0,Photosystem Ii From Thermosynechococcus Elongatus
+1W5C P ,103,13.4,10e-4.3,3.2,0.0,Photosystem Ii From Thermosynechococcus Elongatus
+4H6A B ,89,13.3,10e-4.3,3.3,5.6,Crystal Structure Of The Allene Oxide Cyclase 2 From Physcomitrella Patens
+1Z8K B ,91,13.3,0.0001,3.4,5.5,X-Ray Structure Of Allene Oxide Cyclase From Arabidopsis Thaliana At3g25770
+1S5L O ,121,13.3,0.0004,3.9,5.0,Architecture Of The Photosynthetic Oxygen Evolving Center
+4H69 E ,91,13.3,10e-4.3,3.4,5.5,Crystal Structure Of The Allene Oxide Cyclase 2 From Physcomitrella Patens Complexed With Substrate Analog
+4RLC A ,89,13.3,0.0002,2.7,2.2,Crystal Structure Of The N-terminal Beta-barrel Domain Of Pseudomonas Aeruginosa Oprf
+4H6A E ,95,13.3,10e-4.2,3.6,5.3,Crystal Structure Of The Allene Oxide Cyclase 2 From Physcomitrella Patens
+2GIN E ,93,13.2,10e-4.7,3.6,7.5,X-Ray Structure Of The Wt Allene Oxide Cyclase 2 From Arabidopsis Thaliana
+3KZI O ,103,13.2,0.0023,3.3,3.9,Crystal Structure Of Monomeric Form Of Cyanobacterial Photosÿ
+4UB8 o ,120,13.2,0.0097,3.7,4.2,Native Structure Of Photosystem Ii (dataset-2) By A Femtosecond X-ray Laser
+4H6B L ,96,13.2,0.0002,3.7,6.2,Structural Basis For Allene Oxide Cyclization In Moss
+3FZX A ,87,13.2,0.0025,3.8,3.4,Crystal Structure Of Putative Exported Protein With Ymcc- Like Fold (Yp_211880.1) From Bacteroides Fragilis Nctc 9343 At 2.22 A Resolutionÿ
+2DIO B ,107,13.2,10e-4.1,4.0,5.6,Crystal Structure Of The Allene Oxide Cyclase 2 With Bound Inhibitor Vernolic Acid
+2BRJ C ,101,13.2,10e-4.1,3.8,5.0,X-Ray Structure Of The Allene Oxide Cyclase From Arabidopsis Thalianaÿ
+4H69 A ,96,13.2,0.0002,3.7,4.2,Crystal Structure Of The Allene Oxide Cyclase 2 From Physcomitrella Patens Complexed With Substrate Analog
+4H6A A ,93,13.2,0.0006,3.6,4.3,Crystal Structure Of The Allene Oxide Cyclase 2 From Physcomitrella Patens
+4H6B J ,92,13.2,10e-4.1,3.4,4.3,Structural Basis For Allene Oxide Cyclization In Moss
+2GIN C ,96,13.2,10e-4.1,3.6,7.3,X-Ray Structure Of The Wt Allene Oxide Cyclase 2 From Arabidopsis Thaliana
+2Q4I B ,96,13.2,0.0002,3.8,8.3,Ensemble Refinement Of The Protein Crystal Structure Of Allene Oxide Cyclase From Arabidopsis Thaliana At3g25770
+1Z8K C ,100,13.1,10e-4.0,3.6,5.0,X-Ray Structure Of Allene Oxide Cyclase From Arabidopsis Thaliana At3g25770
+2GIN D ,103,13.1,10e-4.0,3.8,4.9,X-Ray Structure Of The Wt Allene Oxide Cyclase 2 From Arabidopsis Thaliana
+4H6C J ,92,13.1,10e-4.0,3.4,5.4,Crystal Structure Of The Allene Oxide Cyclase 1 From Physcomitrella Patens
+4H6B H ,91,13.1,0.0001,3.4,5.5,Structural Basis For Allene Oxide Cyclization In Moss
+4H6C A ,89,13.1,0.0001,3.3,4.5,Crystal Structure Of The Allene Oxide Cyclase 1 From Physcomitrella Patens
+4H6C H ,86,13.1,0.0001,3.2,5.8,Crystal Structure Of The Allene Oxide Cyclase 1 From Physcomitrella Patens
+3A0B O ,114,13.1,0.0294,3.8,4.4,Crystal Structure Of Br-Substituted Photosystem Ii Complexÿ
+4FBY O ,102,13.1,0.0080,3.3,3.9,Fs X-Ray Diffraction Of Photosystem Ii
+4H6B B ,94,13.1,0.0001,3.5,4.3,Structural Basis For Allene Oxide Cyclization In Moss
+4H6C B ,98,13.1,0.0001,3.5,4.1,Crystal Structure Of The Allene Oxide Cyclase 1 From Physcomitrella Patens
+3QRC A ,91,13.1,0.0001,2.7,5.5,The Crystal Structure Of Ail, The Attachment Invasion Locus Protein Of Yersinia Pestis, In Complex With The Heparin Analogue Sucrose Octasulfateÿ
+4H6B F ,97,13.1,0.0001,3.5,4.1,Structural Basis For Allene Oxide Cyclization In Moss
+4CQ7 C ,101,13.0,0.0001,4.0,7.9,The Crystal Structure Of The Allene Oxide Cyclase 2 From Arabidopsis Thaliana With Bound Product - Opda
+4FBY f ,128,13.0,0.0044,4.5,10.2,Fs X-Ray Diffraction Of Photosystem Ii
+4CQ6 C ,103,13.0,0.0001,3.6,3.9,The Crystal Structure Of The Allene Oxide Cyclase 2 From Arabidopsis Thaliana With Bound Inhibitor - Vernolic Acid
+4H6B C ,86,13.0,0.0001,3.2,5.8,Structural Basis For Allene Oxide Cyclization In Moss
+4H6B I ,91,13.0,0.0002,3.4,4.4,Structural Basis For Allene Oxide Cyclization In Moss
+1K24 A ,100,13.0,0.0407,3.0,1.0,Crystal Structure Of The Opca Outer Membrane AdhesinINVASIN FROM NEISSERIA MENINGITIDIS
+3GP6 A ,111,13.0,10e-4.2,3.3,4.5,Crystal Structure Of Pagp In SdsMPDÿ
+2LFU A ,80,13.0,10e-5.3,2.6,3.8,The Structure Of A N. Meningitides Protein Targeted For Vaccine Developmentÿ
+2LFU A 1,81,13.0,10e-6.9,2.6,3.7,The Structure Of A N. Meningitides Protein Targeted For Vaccine Developmentÿ
+4H6B D ,90,13.0,0.0002,3.4,4.4,Structural Basis For Allene Oxide Cyclization In Moss
+4H6C C ,96,13.0,0.0002,3.6,5.2,Crystal Structure Of The Allene Oxide Cyclase 1 From Physcomitrella Patens
+2DIO C ,94,13.0,0.0002,3.4,4.3,Crystal Structure Of The Allene Oxide Cyclase 2 With Bound Inhibitor Vernolic Acid
+4H6C D ,91,12.9,0.0002,3.4,4.4,Crystal Structure Of The Allene Oxide Cyclase 1 From Physcomitrella Patens
+4H6B E ,96,12.9,0.0002,3.5,5.2,Structural Basis For Allene Oxide Cyclization In Moss
+4H69 F ,93,12.9,0.0002,3.4,5.4,Crystal Structure Of The Allene Oxide Cyclase 2 From Physcomitrella Patens Complexed With Substrate Analog
+4H6C I ,89,12.9,0.0002,3.3,4.5,Crystal Structure Of The Allene Oxide Cyclase 1 From Physcomitrella Patens
+3MM0 A ,80,12.8,10e-6.7,2.6,8.7,Crystal Structure Of Chimeric Avidinÿ
+3WU2 O ,117,12.8,0.0356,3.7,5.1,Crystal Structure Analysis Of Photosystem Ii Complex
+3VGW H ,80,12.7,10e-6.3,2.5,7.5,Crystal Structure Of Monoac-Biotin-Avidin Complexÿ
+1QJ8 A ,96,12.6,0.0005,2.8,2.1,Crystal Structure Of The Outer Membrane Protein Ompx From Escherichia Coli
+2K0L A ,94,12.6,10e-5.5,3.1,4.3,Nmr Structure Of The Transmembrane Domain Of The Outer Membrane Protein A From Klebsiella Pneumoniae In Dhpc Micellesÿ
+2Q4I A ,105,12.6,0.0014,4.0,4.8,Ensemble Refinement Of The Protein Crystal Structure Of Allene Oxide Cyclase From Arabidopsis Thaliana At3g25770
+3MM0 M ,80,12.6,10e-7.4,2.6,8.7,Crystal Structure Of Chimeric Avidinÿ
+2FHL B ,81,12.6,10e-6.3,2.6,9.9,Avidin Related Protein (Avr4)-Bna Complex
+4H6C F ,93,12.6,0.0006,3.4,4.3,Crystal Structure Of The Allene Oxide Cyclase 1 From Physcomitrella Patens
+4H6C L ,92,12.6,0.0006,3.4,4.3,Crystal Structure Of The Allene Oxide Cyclase 1 From Physcomitrella Patens
+3VGW E ,86,12.6,10e-6.2,3.1,8.1,Crystal Structure Of Monoac-Biotin-Avidin Complexÿ
+3VGW G ,88,12.6,10e-6.2,3.0,5.7,Crystal Structure Of Monoac-Biotin-Avidin Complexÿ
+3VGW A ,87,12.6,10e-6.2,3.2,6.9,Crystal Structure Of Monoac-Biotin-Avidin Complexÿ
+4H6C G ,100,12.6,0.0007,3.6,6.0,Crystal Structure Of The Allene Oxide Cyclase 1 From Physcomitrella Patens
+3VHI A ,87,12.5,10e-6.1,3.1,8.0,Crystal Structure Of Monoz-Biotin-Avidin Complexÿ
+3QRC B ,92,12.5,0.0007,2.7,4.3,The Crystal Structure Of Ail, The Attachment Invasion Locus Protein Of Yersinia Pestis, In Complex With The Heparin Analogue Sucrose Octasulfateÿ
+3QRA A ,88,12.5,0.0003,2.5,8.0,The Crystal Structure Of Ail, The Attachment Invasion Locus Protein Of Yersinia Pestisÿ
+3DZM B ,86,12.5,0.0434,2.9,7.0,Crystal Structure Of A Major Outer Membrane Protein From Thermus Thermophilus Hb27ÿ
+4CQ6 B ,98,12.5,0.0008,3.7,7.1,The Crystal Structure Of The Allene Oxide Cyclase 2 From Arabidopsis Thaliana With Bound Inhibitor - Vernolic Acid
+4H6C E ,94,12.5,0.0008,3.5,4.3,Crystal Structure Of The Allene Oxide Cyclase 1 From Physcomitrella Patens
+4H6B K ,96,12.5,0.0008,3.5,4.2,Structural Basis For Allene Oxide Cyclization In Moss
+1Y55 Y ,80,12.5,10e-6.1,2.5,8.7,Crystal Structure Of The C122s Mutant Of E. Coli Expressed Avidin Related Protein 4 (Avr4)-Biotin Complex
+2DIO A ,93,12.5,0.0008,3.5,5.4,Crystal Structure Of The Allene Oxide Cyclase 2 With Bound Inhibitor Vernolic Acid
+4JHQ A ,83,12.5,10e-6.0,2.8,7.2,Crystal Structure Of Avidin - 6-(6-biotinamidohexanamido) Hexanoylferrocene Complex
+2OFB B ,82,12.5,10e-6.0,2.7,7.3,Crystal Structure Of Avr4 (R112lC122S)-Bna Complex
+2FHN Y ,80,12.4,10e-6.0,2.6,7.5,Avidin Related Protein Avr4 (C122s, K109i Mutant) In Complex With Bna
+3VGW C ,86,12.4,10e-6.0,3.0,8.1,Crystal Structure Of Monoac-Biotin-Avidin Complexÿ
+2Q03 A ,86,12.4,0.0025,2.8,7.0,Crystal Structure Of Uncharacterized Protein (Yp_563039.1) From Shewanella Denitrificans Os217 At 1.80 A Resolution
+2UYW D ,83,12.4,10e-7.0,2.7,3.6,Crystal Structure Of Xenavidin
+4CQ6 A ,88,12.4,0.0011,3.3,5.7,The Crystal Structure Of The Allene Oxide Cyclase 2 From Arabidopsis Thaliana With Bound Inhibitor - Vernolic Acid
+4H6C K ,90,12.4,0.0011,3.4,4.4,Crystal Structure Of The Allene Oxide Cyclase 1 From Physcomitrella Patens
+3MM0 B ,82,12.4,10e-7.0,2.8,8.5,Crystal Structure Of Chimeric Avidinÿ
+3VGW B ,81,12.4,10e-5.8,2.5,7.4,Crystal Structure Of Monoac-Biotin-Avidin Complexÿ
+1WBI F ,81,12.3,10e-5.8,2.6,6.2,Avr2ÿ
+4I60 A ,83,12.3,10e-5.8,2.7,8.4,Crystal Structure Of Avidin - Biotinylruthenocene Complex
+2UZ2 D ,84,12.3,10e-6.8,2.9,4.8,Crystal Structure Of Xenavidin
+3VHM A ,81,12.2,10e-5.7,2.8,6.2,Crystal Structure Of Npc-Biotin-Avidin Complexÿ
+1AVD A ,89,12.2,10e-5.6,3.2,7.9,Three-Dimensional Structure Of The Tetragonal Crystal Form Of Egg-White Avidin In Its Functional Complex With Biotin At 2.7 Angstroms Resolution
+3Q34 D ,80,12.2,0.0008,2.6,7.5,The Crystal Structure Of Ycei-Like Family Protein From Pseudomonas Syringaeÿ
+3G7G A ,102,12.2,0.0008,3.2,7.8,Crystal Structure Of The Protein With Unknown Function From Clostridium Acetobutylicum Atcc 824ÿ
+3G7G D ,105,12.2,0.0008,3.2,7.6,Crystal Structure Of The Protein With Unknown Function From Clostridium Acetobutylicum Atcc 824ÿ
+2Y32 B ,96,12.2,10e-4.1,3.2,8.3,Crystal Structure Of Bradavidinÿ
+2Y32 A ,96,12.1,10e-4.1,3.3,8.3,Crystal Structure Of Bradavidinÿ
+3VGW F ,82,12.1,10e-5.5,2.6,7.3,Crystal Structure Of Monoac-Biotin-Avidin Complexÿ
+2X34 B ,84,12.1,0.0009,2.7,9.5,Structure Of A Polyisoprenoid Binding Domain From Saccharophagus Degradans Implicated In Plant Cell Wall Breakdownÿ
+4BBO B ,82,12.1,10e-4.0,2.5,8.5,Crystal Structure Of Core-bradavidin
+2O62 A 2,89,12.1,0.0003,2.9,5.6,Crystal Structure Of Hypothetical Protein (Zp_00105914.2) From Nostoc Punctiforme Pcc 73102 At 1.75 A Resolution
+3Q34 A ,89,12.1,0.0012,2.9,6.7,The Crystal Structure Of Ycei-Like Family Protein From Pseudomonas Syringaeÿ
+4BBO A ,91,12.1,0.0001,3.0,7.7,Crystal Structure Of Core-bradavidin
+4GGZ A ,80,12.0,10e-4.6,2.7,6.2,The Structure Of Bradavidin2-biotin Complex
+4BBO D ,81,12.0,10e-4.5,2.5,8.6,Crystal Structure Of Core-bradavidin
+4GET A ,88,12.0,0.0005,2.8,8.0,Crystal Structure Of Biogenic Amine Binding Protein From Rhodnius Prolixus
+4HFO A ,88,12.0,0.0005,2.9,9.1,Biogenic Amine-Binding Protein Selenomethionine Derivative
+2X32 B ,90,12.0,0.0014,3.1,10.0,Structure Of A Polyisoprenoid Binding Domain From Saccharophagus Degradans Implicated In Plant Cell Wall Breakdownÿ
+4HFO I ,89,12.0,0.0005,2.9,7.9,Biogenic Amine-Binding Protein Selenomethionine Derivative
+3MM0 F ,83,12.0,10e-6.3,2.7,8.4,Crystal Structure Of Chimeric Avidinÿ
+2YPV A 2,101,12.0,10e-4.5,3.0,5.0,Crystal Structure Of The Meningococcal Vaccine Antigen Factor H Binding Protein In Complex With A Bactericidal Antibody
+4GE1 A ,86,12.0,0.0005,3.0,7.0,Structure Of The Tryptamine Complex Of The Amine Binding Protein Of Rhodnius Prolixus
+4H6B A ,105,12.0,0.0044,4.1,6.7,Structural Basis For Allene Oxide Cyclization In Moss
+2X32 A ,88,12.0,0.0017,2.8,10.2,Structure Of A Polyisoprenoid Binding Domain From Saccharophagus Degradans Implicated In Plant Cell Wall Breakdownÿ
+1VYO A ,80,11.9,10e-6.1,2.4,7.5,Crystal Structure Of Avidin
+3MM0 D ,81,11.9,10e-6.1,2.6,7.4,Crystal Structure Of Chimeric Avidinÿ
+3C5O A ,100,11.9,0.0018,3.1,8.0,Crystal Structure Of The Conserved Protein Of Unknown Function Rpa1785 From Rhodopseudomonas Palustris
+4H6B G ,103,11.9,0.0052,4.0,6.8,Structural Basis For Allene Oxide Cyclization In Moss
+1Y0G A ,119,11.9,0.0053,3.6,5.9,Crystal Structure Of The Escherichia Coli Ycei Protein, Structural Genomics
+2X34 A ,90,11.9,0.0021,3.1,6.7,Structure Of A Polyisoprenoid Binding Domain From Saccharophagus Degradans Implicated In Plant Cell Wall Breakdownÿ
+3G7G H ,95,11.9,0.0022,3.0,6.3,Crystal Structure Of The Protein With Unknown Function From Clostridium Acetobutylicum Atcc 824ÿ
+2AVI B ,83,11.9,10e-6.0,2.6,7.2,Avidin Complex With Biotin
+1Y0G B ,121,11.9,0.0061,3.7,7.4,Crystal Structure Of The Escherichia Coli Ycei Protein, Structural Genomics
+4CQ7 B ,88,11.9,0.0023,3.3,8.0,The Crystal Structure Of The Allene Oxide Cyclase 2 From Arabidopsis Thaliana With Bound Product - Opda
+3G7G E ,103,11.9,0.0023,3.2,7.8,Crystal Structure Of The Protein With Unknown Function From Clostridium Acetobutylicum Atcc 824ÿ
+2GIN A ,88,11.9,0.0063,3.3,5.7,X-Ray Structure Of The Wt Allene Oxide Cyclase 2 From Arabidopsis Thaliana
+1Y0G D ,118,11.8,0.0064,3.6,7.6,Crystal Structure Of The Escherichia Coli Ycei Protein, Structural Genomics
+1Y0G C ,115,11.8,0.0067,3.6,7.0,Crystal Structure Of The Escherichia Coli Ycei Protein, Structural Genomics
+3FDC B ,81,11.8,10e-5.9,2.5,7.4,Crystal Structure Of Avidinÿ
+1WUB A ,110,11.8,0.0071,3.3,8.2,Crystal Structure Of The Polyisoprenoid-Binding Protein, Tt1927b, From Thermus Thermophilus Hb8

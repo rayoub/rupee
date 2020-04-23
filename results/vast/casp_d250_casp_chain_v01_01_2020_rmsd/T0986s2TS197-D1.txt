@@ -58,8 +58,8 @@
 3FKU H 2,32,4.9,0.0099,1.8,12.5,Crystal Structure Of Influenza Hemagglutinin (H5) In Complex With A Broadly Neutralizing Antibody F10ÿ
 2N4C A ,35,4.9,0.0346,1.8,14.3,Ec-nmr Structure Of Agrobacterium Tumefaciens Atu1203 Determined By Combining Evolutionary Couplings (ec) And Sparse Nmr Data. Northeast Structural Genomics Consortium Target Att10
 3IY8 K ,40,6.6,0.0293,1.8,2.5,Leishmania Tarentolae Mitonchondrial Ribosome Small Subunitÿ
-4ADV K ,40,6.6,0.0293,1.8,2.5,Structure Of The E. Coli Methyltransferase Ksga Bound To The E. Coli 30s Ribosomal Subunitÿ
 4A2I K ,40,6.6,0.0293,1.8,2.5,Cryo-Electron Microscopy Structure Of The 30s Subunit In Complex With The Yjeq Biogenesis Factorÿ
+4ADV K ,40,6.6,0.0293,1.8,2.5,Structure Of The E. Coli Methyltransferase Ksga Bound To The E. Coli 30s Ribosomal Subunitÿ
 3TVI J 2,30,5.2,0.0357,1.8,10.0,Crystal Structure Of Clostridium Acetobutylicum Aspartate Kinase (Caak): An Important Allosteric Enzyme For Industrial Amino Acids Productionÿ
 4QQ0 A 2,36,5.6,0.0175,1.8,5.6,Cdsd - The Structural Protein Of The Type Iii Secretion System Of Chlamydia Trachomatis: C-terminal Domain
 4PSW A 1,41,8.0,0.0017,1.8,12.2,Crystal Structure Of Histone Acetyltransferase Complex
@@ -76,21 +76,21 @@
 5AEY D 2,35,5.9,0.0407,1.8,0.0,Actin-like Parm Protein Bound To Amppnp
 5AEY E 2,35,5.9,0.0397,1.8,0.0,Actin-like Parm Protein Bound To Amppnp
 5AI7 A 2,35,5.9,0.0397,1.8,0.0,Parm Doublet Model
-5AI7 E 2,35,5.9,0.0407,1.8,0.0,Parm Doublet Model
-5AI7 F 2,35,5.9,0.0396,1.8,0.0,Parm Doublet Model
-5AI7 G 2,35,5.9,0.0397,1.8,0.0,Parm Doublet Model
-5AI7 H 2,35,5.9,0.0397,1.8,0.0,Parm Doublet Model
 5AI7 K 2,35,5.9,0.0421,1.8,0.0,Parm Doublet Model
 5AI7 L 2,35,5.9,0.0408,1.8,0.0,Parm Doublet Model
 5AI7 M 2,35,5.9,0.0397,1.8,0.0,Parm Doublet Model
 5AI7 N 2,35,5.9,0.0398,1.8,0.0,Parm Doublet Model
-5AEY B 2,35,5.9,0.0425,1.8,0.0,Actin-like Parm Protein Bound To Amppnp
+5AI7 E 2,35,5.9,0.0407,1.8,0.0,Parm Doublet Model
+5AI7 F 2,35,5.9,0.0396,1.8,0.0,Parm Doublet Model
+5AI7 G 2,35,5.9,0.0397,1.8,0.0,Parm Doublet Model
+5AI7 H 2,35,5.9,0.0397,1.8,0.0,Parm Doublet Model
 5AI7 C 2,35,5.9,0.0426,1.8,0.0,Parm Doublet Model
 5AI7 D 2,35,5.9,0.0421,1.8,0.0,Parm Doublet Model
 5AI7 J 2,35,5.9,0.0426,1.8,0.0,Parm Doublet Model
+5AEY B 2,35,5.9,0.0425,1.8,0.0,Actin-like Parm Protein Bound To Amppnp
+5AEY A 2,35,5.9,0.0419,1.8,0.0,Actin-like Parm Protein Bound To Amppnp
 5AI7 B 2,35,5.9,0.0418,1.8,0.0,Parm Doublet Model
 5AI7 I 2,35,5.9,0.0419,1.8,0.0,Parm Doublet Model
-5AEY A 2,35,5.9,0.0419,1.8,0.0,Actin-like Parm Protein Bound To Amppnp
 2VDU F ,42,8.0,0.0335,1.9,4.8,Structure Of Trm8-Trm82, The Yeast Trna M7g Methylation Complex
 2VDU F 1,42,8.0,0.0107,1.9,4.8,Structure Of Trm8-Trm82, The Yeast Trna M7g Methylation Complex
 2JER B 4,33,5.1,0.0216,1.9,9.1,Agmatine Deiminase Of Enterococcus Faecalis Catalyzing Its Reaction
@@ -106,10 +106,10 @@
 3IKY F 2,31,5.9,0.0378,1.9,0.0,Structural Model Of Parm Filament In The Open State By Cryo- Emÿ
 3IKY L 2,31,5.9,0.0378,1.9,0.0,Structural Model Of Parm Filament In The Open State By Cryo- Emÿ
 1MWK A 2,31,5.9,0.0378,1.9,0.0,Parm From Plasmid R1 Apo Form
+3IKY E 2,31,5.9,0.0378,1.9,0.0,Structural Model Of Parm Filament In The Open State By Cryo- Emÿ
 2JER E 4,33,5.1,0.0208,1.9,9.1,Agmatine Deiminase Of Enterococcus Faecalis Catalyzing Its Reaction
 2JER F 5,33,5.1,0.0224,1.9,9.1,Agmatine Deiminase Of Enterococcus Faecalis Catalyzing Its Reaction
 2JER G 4,33,5.1,0.0176,1.9,9.1,Agmatine Deiminase Of Enterococcus Faecalis Catalyzing Its Reaction
-3IKY E 2,31,5.9,0.0378,1.9,0.0,Structural Model Of Parm Filament In The Open State By Cryo- Emÿ
 2JER H 4,33,5.1,0.0168,1.9,9.1,Agmatine Deiminase Of Enterococcus Faecalis Catalyzing Its Reaction
 2P4W B 2,21,3.5,0.0340,1.9,14.3,Crystal Structure Of Heat Shock Regulator From Pyrococcus Furiosus
 2JER D 4,33,5.1,0.0214,1.9,9.1,Agmatine Deiminase Of Enterococcus Faecalis Catalyzing Its Reaction

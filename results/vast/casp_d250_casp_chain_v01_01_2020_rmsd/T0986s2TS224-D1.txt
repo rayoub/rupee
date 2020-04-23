@@ -128,10 +128,10 @@
 2Y9K M 2,41,5.7,0.0427,2.0,9.8,Three-Dimensional Model Of Salmonella's Needle Complex At Subnanometer Resolutionÿ
 2Y9K N 2,41,5.7,0.0427,2.0,9.8,Three-Dimensional Model Of Salmonella's Needle Complex At Subnanometer Resolutionÿ
 2Y9K O 2,41,5.7,0.0427,2.0,9.8,Three-Dimensional Model Of Salmonella's Needle Complex At Subnanometer Resolutionÿ
+4PWU D ,58,7.9,10e-4.1,2.0,1.7,Crystal Structure Of A Modulator Protein Mzra (kpn_03524) From Klebsiella Pneumoniae Subsp. Pneumoniae Mgh 78578 At 2.45 A Resolution
+2XMV C ,49,5.9,0.0249,2.0,12.2,Copper Chaperone Atx1 From Synechocystis Pcc6803 (Cu1, Trimeric Form, His61tyr Mutant)ÿ
 3CW7 C 1,54,6.8,0.0352,2.0,5.6,Crystal Structure Of An Alka HostGUEST COMPLEX 8oxoguanine:cytosine Base Pair
 3CWU B 1,54,7.2,0.0085,2.0,5.6,Crystal Structure Of An Alka HostGUEST COMPLEX 2'-Fluoro- 2'-Deoxy-1,N6-Ethenoadenine:thymine Base Pair
-2XMV C ,49,5.9,0.0249,2.0,12.2,Copper Chaperone Atx1 From Synechocystis Pcc6803 (Cu1, Trimeric Form, His61tyr Mutant)ÿ
-4PWU D ,58,7.9,10e-4.1,2.0,1.7,Crystal Structure Of A Modulator Protein Mzra (kpn_03524) From Klebsiella Pneumoniae Subsp. Pneumoniae Mgh 78578 At 2.45 A Resolution
 3CWT B 1,54,6.8,0.0375,2.0,5.6,Crystal Structure Of An Alka HostGUEST COMPLEX 2'-Fluoro- 2'-Deoxyinosine:adenine Base Pair
 3CVT B 1,54,6.9,0.0283,2.0,5.6,Crystal Structure Of An Alka HostGUEST COMPLEX 8oxoguanine:cytosine Base Pair
 3CVS C 1,54,6.8,0.0347,2.0,5.6,Crystal Structure Of An Alka HostGUEST COMPLEX 8oxoguanine:adenine Base Pair
@@ -142,8 +142,8 @@
 1XXA D ,37,6.1,0.0474,2.0,8.1,C-Terminal Domain Of Escherichia Coli Arginine Repressor L- Arginine Complex; Pb Derivative
 1Y3J A ,52,7.7,0.0019,2.0,11.5,Solution Structure Of The Copper(I) Form Of The Fifth Domain Of Menkes Protein
 3CWA A 1,54,6.8,0.0461,2.0,5.6,Crystal Structure Of An Alka HostGUEST COMPLEX 8oxoguanine:cytosine Base Pair
-2XMT B ,51,5.8,0.0367,2.0,11.8,Copper Chaperone Atx1 From Synechocystis Pcc6803 (Cu1 Form)ÿ
 3A3P B ,39,5.9,0.0233,2.0,12.8,Crystal Structure Of Complex Between E201aSA-Subtilisin And Tk-Propeptideÿ
+2XMT B ,51,5.8,0.0367,2.0,11.8,Copper Chaperone Atx1 From Synechocystis Pcc6803 (Cu1 Form)ÿ
 3CWT A 1,54,6.9,0.0242,2.0,5.6,Crystal Structure Of An Alka HostGUEST COMPLEX 2'-Fluoro- 2'-Deoxyinosine:adenine Base Pair
 1WVQ B 2,49,7.2,0.0175,2.0,4.1,Structure Of Conserved Hypothetical Protein Pae2307 From Pyrobaculum Aerophilum
 1XXA C ,39,6.2,0.0358,2.0,7.7,C-Terminal Domain Of Escherichia Coli Arginine Repressor L- Arginine Complex; Pb Derivative
@@ -155,26 +155,26 @@
 2BZ2 A ,37,6.3,0.0498,2.0,2.7,Solution Structure Of Nelf E Rrm
 3S1N A 14,47,6.6,0.0150,2.0,6.4,Rna Polymerase Ii Initiation Complex With A 5-Nt Rna (Variant 2)ÿ
 3CVT D 1,54,6.8,0.0434,2.0,5.6,Crystal Structure Of An Alka HostGUEST COMPLEX 8oxoguanine:cytosine Base Pair
-1C7N G 3,29,5.2,0.0279,2.0,6.9,Crystal Structure Of Cystalysin From Treponema Denticola Contains A Pyridoxal 5'-Phosphate Cofactor
 3ST6 D 1,52,8.7,0.0318,2.0,5.8,Structure Of A M. Tuberculosis Synthase, Mbti, In Complex With An Isochorismate Analogue Inhibitor
+1C7N G 3,29,5.2,0.0279,2.0,6.9,Crystal Structure Of Cystalysin From Treponema Denticola Contains A Pyridoxal 5'-Phosphate Cofactor
 4C3J A 13,41,7.0,0.0021,2.0,4.9,Structure Of 14-subunit Rna Polymerase I At 3.35 A Resolution, Crystal Form C2-90
 2HRT C 6,56,7.8,0.0082,2.0,12.5,Asymmetric Structure Of Trimeric Acrb From Escherichia Coli
 3CWS D 1,54,6.7,0.0493,2.0,5.6,Crystal Structure Of An Alka HostGUEST COMPLEX 2'-Fluoro- 2'-Deoxyinosine:thymine Base Pair
 4C3H A 13,41,7.0,0.0019,2.0,4.9,Structure Of 14-subunit Rna Polymerase I At 3.27 A Resolution, Crystal Form C2-93
-4Y7N A 14,49,6.2,0.0307,2.0,6.1,The Structure Insight Into 5-carboxycytosine Recognition By Rna Polymerase Ii During Transcription Elongation
 2VZ8 B 4,41,6.8,0.0264,2.0,4.9,Crystal Structure Of Mammalian Fatty Acid Synthase
+4Y7N A 14,49,6.2,0.0307,2.0,6.1,The Structure Insight Into 5-carboxycytosine Recognition By Rna Polymerase Ii During Transcription Elongation
 2XMU A ,50,5.8,0.0337,2.0,12.0,Copper Chaperone Atx1 From Synechocystis Pcc6803 (Cu2 Form)ÿ
 2GGP A ,52,7.4,0.0005,2.0,9.6,Solution Structure Of The Atx1-Cu(I)-Ccc2a Complex
 1XXC C ,40,6.2,0.0305,2.0,7.5,C-Terminal Domain Of Escherichia Coli Arginine Repressor
 1FT8 E ,27,4.5,0.0329,2.0,7.4,Crystal Structure Of The Rna-Binding Domain Of The Mrna Export Factor Tap
 2Z56 B ,36,5.7,0.0435,2.0,11.1,Crystal Structure Of G56s-Propeptide:s324a-Subtilisin Complex
-1XXC D ,40,6.5,0.0107,2.0,7.5,C-Terminal Domain Of Escherichia Coli Arginine Repressor
 4X67 A 12,48,6.6,0.0077,2.0,6.2,Crystal Structure Of Elongating Yeast Rna Polymerase Ii Stalled At Oxidative Cyclopurine Dna Lesions
+1XXC D ,40,6.5,0.0107,2.0,7.5,C-Terminal Domain Of Escherichia Coli Arginine Repressor
 1KTV A 3,41,7.4,0.0007,2.0,9.8,Crystal Structure Of Elongation Factor G Dimer Without Nucleotide
 3LPE C ,57,8.0,10e-4.1,2.0,3.5,Crystal Structure Of Spt45NGN HETERODIMER COMPLEX FROM Methanococcus Jannaschiiÿ
 1XXB A ,39,6.1,0.0470,2.0,7.7,C-Terminal Domain Of Escherichia Coli Arginine Repressor L- Arginine Complex
 1C7N E 4,30,5.2,0.0282,2.0,6.7,Crystal Structure Of Cystalysin From Treponema Denticola Contains A Pyridoxal 5'-Phosphate Cofactor
-1C7O H 3,29,5.2,0.0384,2.0,6.9,Crystal Structure Of Cystalysin From Treponema Denticola Contains A Pyridoxal 5'-Phosphate-L-Aminoethoxyvinylglycine Complex
 4CNJ B 3,28,8.4,0.0061,2.0,17.9,L-aminoacetone Oxidase From Streptococcus Oligofermentans Belongs To A New 3-domain Family Of Bacterial Flavoproteins
+1C7O H 3,29,5.2,0.0384,2.0,6.9,Crystal Structure Of Cystalysin From Treponema Denticola Contains A Pyridoxal 5'-Phosphate-L-Aminoethoxyvinylglycine Complex
 3AB4 N ,56,8.1,0.0404,2.0,12.5,Crystal Structure Of Feedback Inhibition Resistant Mutant Of Aspartate Kinase From Corynebacterium Glutamicum In Complex With Lysine And Threonineÿ
 1C7N F 3,30,5.2,0.0247,2.0,10.0,Crystal Structure Of Cystalysin From Treponema Denticola Contains A Pyridoxal 5'-Phosphate Cofactor

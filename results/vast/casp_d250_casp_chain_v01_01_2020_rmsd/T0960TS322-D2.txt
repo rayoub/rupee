@@ -21,8 +21,8 @@
 3Q9S A 2,16,5.2,0.0022,0.8,31.2,Crystal Structure Of Rra(1-215) From Deinococcus Radioduransÿ
 1M5Q O 2,21,4.7,0.0491,0.9,0.0,Crystal Structure Of A Novel Sm-Like Archaeal Protein From Pyrobaculum Aerophilum
 1M5Q G 2,21,4.8,0.0352,0.9,0.0,Crystal Structure Of A Novel Sm-Like Archaeal Protein From Pyrobaculum Aerophilum
-1M5Q D 2,21,5.1,0.0067,0.9,0.0,Crystal Structure Of A Novel Sm-Like Archaeal Protein From Pyrobaculum Aerophilum
 3CM1 B 2,25,4.8,0.0293,0.9,8.0,Crystal Structure Of Ssga-Like Sporulation-Specific Cell Division Protein (Yp_290167.1) From Thermobifida Fusca Yx- Er1 At 2.60 A Resolution
+1M5Q D 2,21,5.1,0.0067,0.9,0.0,Crystal Structure Of A Novel Sm-Like Archaeal Protein From Pyrobaculum Aerophilum
 1HQE A 2,18,5.1,0.0084,0.9,5.6,Human Immunodeficiency Virus Type 1
 1M5Q A 2,21,4.7,0.0480,0.9,0.0,Crystal Structure Of A Novel Sm-Like Archaeal Protein From Pyrobaculum Aerophilum
 1XFD B 1,20,4.7,0.0413,0.9,0.0,Structure Of A Human A-Type Potassium Channel Accelerating Factor Dppx, A Member Of The Dipeptidyl Aminopeptidase Family
@@ -122,9 +122,9 @@
 4AZV A 2,27,5.2,0.0152,1.0,14.8,Co-Crystal Structure Of Wbdd And Kinase Inhibitor Gw435821x
 4PY5 A 1,22,4.8,0.0394,1.0,0.0,Protein-nucleic Acid Complex
 1S1V A 2,18,4.8,0.0372,1.0,5.6,Crystal Structure Of L100i Mutant Hiv-1 Reverse Transcriptase In Complex With Tnk-651
+4P4R C 1,20,4.9,0.0240,1.0,5.0,Structural Basis Of Chronic Beryllium Disease: Bridging The Gap Between Allergic Hypersensitivity And Autoimmunity
 1M5Q N 2,20,5.0,0.0156,1.0,0.0,Crystal Structure Of A Novel Sm-Like Archaeal Protein From Pyrobaculum Aerophilum
 1JRQ A 2,28,5.2,0.0282,1.0,7.1,X-Ray Structure Analysis Of The Role Of The Conserved Tyrosine-369 In Active Site Of E. Coli Amine Oxidase
-4P4R C 1,20,4.9,0.0240,1.0,5.0,Structural Basis Of Chronic Beryllium Disease: Bridging The Gap Between Allergic Hypersensitivity And Autoimmunity
 4B54 A ,32,7.0,0.0060,1.0,3.1,The Structure Of The Inactive Mutant G153r Of Lptc From E.coli
 4AZS A 2,27,5.2,0.0152,1.1,14.8,High Resolution (2.2 A) Crystal Structure Of Wbdd
 1M5Q H 2,20,4.8,0.0277,1.1,0.0,Crystal Structure Of A Novel Sm-Like Archaeal Protein From Pyrobaculum Aerophilum
@@ -133,27 +133,27 @@
 4P4R A 1,20,4.9,0.0224,1.1,5.0,Structural Basis Of Chronic Beryllium Disease: Bridging The Gap Between Allergic Hypersensitivity And Autoimmunity
 4S04 B 2,16,4.9,0.0249,1.1,12.5,Crystal Structure Of Klebsiella Pneumoniae Pmra In Complex With Pmra Box Dna
 1JLA A 2,19,4.9,0.0213,1.1,5.3,Crystal Structure Of Y181c Mutant Hiv-1 Reverse Transcriptase In Complex With Tnk-651
-1M5Q W 2,20,5.0,0.0154,1.1,0.0,Crystal Structure Of A Novel Sm-Like Archaeal Protein From Pyrobaculum Aerophilum
 1D6U B 2,28,5.1,0.0336,1.1,7.1,Crystal Structure Of E. Coli Amine Oxidase Anaerobically Reduced With Beta-Phenylethylamine
+1M5Q W 2,20,5.0,0.0154,1.1,0.0,Crystal Structure Of A Novel Sm-Like Archaeal Protein From Pyrobaculum Aerophilum
 1NBE D 1,26,5.2,0.0152,1.1,0.0,Aspartate Transcarbomylase Regulatory Chain Mutant (T82a)
 4HW6 B 3,27,5.2,0.0152,1.1,7.4,Crystal Structure Of A Hypothetical Protein (Bacova_00264) From Bacteroides Ovatus Atcc 8483 At 1.70 A Resolution
 2QGF D 1,25,5.1,0.0349,1.1,0.0,Structure Of Regulatory Chain Mutant H20a Of Asparate Transcarbamoylase From E. Coli
 4WXS A 2,25,4.8,0.0385,1.1,0.0,Crystal Structure Of The E396d Snp Variant Of The Myocilin Olfactomedin Domain
 1M5Q 1 2,20,4.8,0.0272,1.1,0.0,Crystal Structure Of A Novel Sm-Like Archaeal Protein From Pyrobaculum Aerophilum
-2R19 A ,34,6.8,0.0474,1.1,11.8,Crystal Structure Of The Periplasmic Lipopolysaccharide Transport Protein Lpta (Yhbn), Orthorhombic Form
 2P0X A ,23,5.0,0.0147,1.1,4.3,Solution Structure Of A Non-Biological Atp-Binding Protein
 4B54 B ,33,7.0,0.0057,1.1,3.0,The Structure Of The Inactive Mutant G153r Of Lptc From E.coli
+2R19 A ,34,6.8,0.0474,1.1,11.8,Crystal Structure Of The Periplasmic Lipopolysaccharide Transport Protein Lpta (Yhbn), Orthorhombic Form
 2BE7 E 1,27,5.2,0.0152,1.1,0.0,Crystal Structure Of The Unliganded (T-State) Aspartate Transcarbamoylase Of The Psychrophilic Bacterium Moritella Profunda
 1M5Q K 2,20,5.1,0.0072,1.1,0.0,Crystal Structure Of A Novel Sm-Like Archaeal Protein From Pyrobaculum Aerophilum
 1M5Q X 2,20,4.9,0.0229,1.1,0.0,Crystal Structure Of A Novel Sm-Like Archaeal Protein From Pyrobaculum Aerophilum
-4FYW B 1,26,5.2,0.0256,1.1,0.0,E. Coli Aspartate Transcarbamoylase Complexed With Ctp
 1XJW B 1,26,5.2,0.0241,1.1,0.0,The Structure Of E. Coli Aspartate Transcarbamoylase Q137a Mutant In The R-State
+4FYW B 1,26,5.2,0.0256,1.1,0.0,E. Coli Aspartate Transcarbamoylase Complexed With Ctp
 2OGQ A ,37,6.8,0.0110,1.1,8.1,Molecular And Structural Basis Of Plk1 Substrate Recognition: Implications In Centrosomal Localization
 2OGQ A 1,37,6.8,10e-4.1,1.1,8.1,Molecular And Structural Basis Of Plk1 Substrate Recognition: Implications In Centrosomal Localization
-4UW0 A 2,30,5.2,0.0152,1.1,10.0,Low Resolution Structure Of Wbdd With C-terminal Bundle Ordered To Residue 505
 3WEX C 1,17,5.1,0.0073,1.1,0.0,Crystal Structure Of Hla-dp5 In Complex With Cry J 1-derived Peptide (residues 214-222)
-2YH3 A 4,24,5.2,0.0037,1.1,0.0,The Structure Of Bamb From E. Coliÿ
+4UW0 A 2,30,5.2,0.0152,1.1,10.0,Low Resolution Structure Of Wbdd With C-terminal Bundle Ordered To Residue 505
 2R1A H ,31,6.9,0.0189,1.1,0.0,Crystal Structure Of The Periplasmic Lipopolysaccharide Transport Protein Lpta (Yhbn), Trigonal Form
+2YH3 A 4,24,5.2,0.0037,1.1,0.0,The Structure Of Bamb From E. Coliÿ
 4H71 B ,37,6.6,0.0309,1.1,8.1,Human Plk1-Pbd In Complex With Poloxime ((E)-4-(Hydroxyimino)-2- Isopropyl-5-Methylcyclohexa-2,5-Dienone)
 4H71 B 1,37,6.6,0.0002,1.1,8.1,Human Plk1-Pbd In Complex With Poloxime ((E)-4-(Hydroxyimino)-2- Isopropyl-5-Methylcyclohexa-2,5-Dienone)
 1IT7 A 3,18,5.0,0.0118,1.1,0.0,Crystal Structure Of Archaeosine Trna-Guanine Transglycosylase Complexed With Guanine
@@ -166,9 +166,9 @@
 3WJ9 B 6,25,4.7,0.0421,1.1,4.0,Crystal Structure Of The Eukaryotic Initiation Factor
 3P2W A ,37,6.6,0.0318,1.1,8.1,Unliganded Form Of Polo-Like Kinase I Polo-Box Domainÿ
 3P2W A 1,37,6.6,0.0002,1.1,8.1,Unliganded Form Of Polo-Like Kinase I Polo-Box Domainÿ
-3GYO A 2,23,5.0,0.0127,1.1,4.3,Se-Met Rtt106pÿ
 3HIH B ,37,6.6,0.0283,1.1,8.1,Structure Of Human Plk1-Pbd With Glycerol And Sulfate In The Phophopeptide Binding Siteÿ
 3HIH B 1,37,6.6,0.0002,1.1,8.1,Structure Of Human Plk1-Pbd With Glycerol And Sulfate In The Phophopeptide Binding Siteÿ
+3GYO A 2,23,5.0,0.0127,1.1,4.3,Se-Met Rtt106pÿ
 1TUG D 1,26,5.2,0.0152,1.1,0.0,Aspartate Transcarbamoylase Catalytic Chain Mutant E50a Complex With Phosphonoacetamide, Malonate, And Cytidine-5- Prime-Triphosphate (Ctp)
 2OJX A ,37,6.7,0.0169,1.1,8.1,Molecular And Structural Basis Of Polo-Like Kinase 1 Substrate Recognition: Implications In Centrosomal Localization
 2OJX A 1,37,6.7,0.0001,1.1,8.1,Molecular And Structural Basis Of Polo-Like Kinase 1 Substrate Recognition: Implications In Centrosomal Localization
@@ -176,5 +176,5 @@
 4AZT A 2,27,5.2,0.0152,1.1,14.8,Co-Crystal Structure Of Wbdd And Kinase Inhibitor Ly294002
 3WEX G 1,20,5.1,0.0086,1.1,5.0,Crystal Structure Of Hla-dp5 In Complex With Cry J 1-derived Peptide (residues 214-222)
 4HW6 A 3,27,5.2,0.0152,1.1,7.4,Crystal Structure Of A Hypothetical Protein (Bacova_00264) From Bacteroides Ovatus Atcc 8483 At 1.70 A Resolution
-4AX8 A 2,27,5.2,0.0152,1.1,14.8,Medium Resolution Structure Of The Bifunctional Kinase- Methyltransferase Wbdd
 3X29 C ,24,5.1,0.0055,1.1,4.2,Crystal Structure Of Mouse Claudin-19 In Complex With C-terminal Fragment Of Clostridium Perfringens Enterotoxin
+4AX8 A 2,27,5.2,0.0152,1.1,14.8,Medium Resolution Structure Of The Bifunctional Kinase- Methyltransferase Wbdd
