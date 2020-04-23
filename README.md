@@ -1,7 +1,7 @@
 
 ### Introduction
 
-This project contains code and data to accompany the PLoS ONE paper 
+This project contains code and data to accompany the PLoS ONE paper \newline
 [RUPEE: A fast and accurate purely geometric protein structure search](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0213712). 
 
 RUPEE itself is available for use at <https://ayoubresearch.com>.
