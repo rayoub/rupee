@@ -1,7 +1,5 @@
 
-## Benchmarks 
-
-Benchmarks from the 2019 PLoS ONE paper and hopefully a future paper.
+## Benchmarks from the 2019 PLoS ONE paper and hopefully a future paper.
 
 ### SCOP benchmarks
 
@@ -43,6 +41,8 @@ CATH superfamily representatives of the 100 most diverse CATH superfamilies in C
 
 Subset of cath_d100 that includes all domains for which CATHEDRAL returns a response within 12 hours.
 
+## Benchmarks for a paper currently under development. 
+
 ### CASP-derived benchmarks
 
 #### casp_d250
@@ -55,11 +55,11 @@ The selected groups consist of the top 10 groups ranked by the Assessors' formul
 Subset of casp_d250 that includes all domains for which mTM returned results. 
 For all benchmark structures, mTM returned 10 or more results. 
 
-#### casp_ssm_d240
+#### casp_ssm_q_d240
 
 Subset of casp_d250 that includes all domains for which SSM, based on Q-score, returned 100 or more results.
 
-#### casp_ssm_d233
+#### casp_ssm_rmsd_d233
 
 Subset of casp_d250 that includes all domains for which SSM, based on RMSD, returned 100 or more results.
 
@@ -67,5 +67,8 @@ Subset of casp_d250 that includes all domains for which SSM, based on RMSD, retu
 
 Subset of casp_d250 that includes all domains for which CATHEDRAL returned 100 or more results.
 
+#### casp_vast_d199
+
+Subset of casp_d250 that includes all domains for which VAST returned 100 or more results.
 
 
