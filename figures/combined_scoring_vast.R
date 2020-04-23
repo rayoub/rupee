@@ -38,25 +38,23 @@ grid_arrange_shared_legend <-
 
 plot1 <- get_scoring_plot(
         'VAST',
-        'vs: VAST\nbenchmark: casp_vast_fl_d51\nRUPEE search type: Full-Length\nVAST search type: VAST-score', 
+        'vs: VAST\nbenchmark: casp_vast_d199\nRUPEE search type: Full-Length\nVAST search type: VAST-score', 
         'TM-score (avg)',
         'scoring_vast_fl.txt', # _ce, _fatcat, _fl
         c('RUPEE All-Aligned','RUPEE Top-Aligned','VAST'), 
         c(1, 100),
         c(1,10,20,30,40,50,60,70,80,90,100),
-        c(0.3, 0.6), 
-        TRUE
+        c(0.3, 0.6)
 )
 plot2 <- get_scoring_plot(
         'VAST',
-        'vs: VAST\nbenchmark: casp_vast_rmsd_d113\nRUPEE search type: RMSD\nVAST search type: RMSD', 
+        'vs: VAST\nbenchmark: casp_vast_d199\nRUPEE search type: RMSD\nVAST search type: RMSD', 
         'RMSD',
         'scoring_vast_ce.txt', # _ce, _fatcat, _fl
         c('RUPEE All-Aligned','RUPEE Top-Aligned','VAST'), 
         c(1, 100),
         c(1,10,20,30,40,50,60,70,80,90,100),
-        c(0, 5), 
-        FALSE
+        c(0, 5) 
 )
 
 combined <- grid_arrange_shared_legend(plot1, plot2)

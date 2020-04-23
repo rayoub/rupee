@@ -44,8 +44,7 @@ plot1 <- get_scoring_plot(
         c('RUPEE All-Aligned','RUPEE Top-Aligned','CATHEDRAL'), 
         c(1, 100),
         c(1,10,20,30,40,50,60,70,80,90,100),
-        c(60, 75), # c(0, 5), c(0.30, 0.55) or c(60, 75)
-        FALSE
+        c(60, 75) # c(0, 5), c(0.30, 0.55) or c(60, 75)
 )
 plot2 <- get_scoring_plot(
         'CATHEDRAL',
@@ -55,8 +54,7 @@ plot2 <- get_scoring_plot(
         c('RUPEE All-Aligned','RUPEE Top-Aligned','CATHEDRAL'), 
         c(1, 100),
         c(1,10,20,30,40,50,60,70,80,90,100),
-        c(0.3, 0.55), 
-        TRUE
+        c(0.3, 0.55) 
 )
 plot3 <- get_scoring_plot(
         'CATHEDRAL',
@@ -66,8 +64,7 @@ plot3 <- get_scoring_plot(
         c('RUPEE All-Aligned','RUPEE Top-Aligned','CATHEDRAL'), 
         c(1, 100),
         c(1,10,20,30,40,50,60,70,80,90,100),
-        c(0, 5), # c(0, 5), c(0.30, 0.55) or c(60, 75)
-        FALSE
+        c(0, 5) # c(0, 5), c(0.30, 0.55) or c(60, 75)
 )
 
 combined <- grid_arrange_shared_legend(plot1, plot2, plot3)

@@ -5,7 +5,7 @@ library(plyr)
 # clear environment
 rm(list = ls())
 
-get_scoring_plot <- function(p_comp_to, p_title, p_ylab, p_file, p_levels, p_xlimits, p_xbreaks, p_ylimits, p_ref_lines) {
+get_scoring_plot <- function(p_comp_to, p_title, p_ylab, p_file, p_levels, p_xlimits, p_xbreaks, p_ylimits) {
 
     # read in data files
     df <- read.csv(p_file)
@@ -23,18 +23,6 @@ get_scoring_plot <- function(p_comp_to, p_title, p_ylab, p_file, p_levels, p_xli
         geom_line(
             size = rel(0.5)
         ) + 
-        {if (p_ref_lines) { 
-            geom_hline(
-                yintercept = 0.50,
-                colour = 'grey50', 
-                size = rel(0.15)
-        )}} +
-        {if (p_ref_lines) { 
-            geom_hline(
-                yintercept = 0.17,
-                colour = 'grey50', 
-                size = rel(0.15)
-        )}} +
 
         # scales        
         scale_color_manual(

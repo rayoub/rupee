@@ -23,16 +23,6 @@ get_scoring_plot <- function(p_title, p_file, p_levels, p_xlimits, p_xbreaks, p_
         geom_line(
             size = rel(0.5)
         ) + 
-        geom_hline(
-            yintercept = 0.50,
-            colour = 'grey50', 
-            size = rel(0.15)
-        ) +
-        geom_hline(
-            yintercept = 0.17,
-            colour = 'grey50', 
-            size = rel(0.15)
-        ) + 
 
         # scales        
         scale_color_manual(

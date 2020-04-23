@@ -44,8 +44,7 @@ plot1 <- get_scoring_plot(
         c('RUPEE All-Aligned','RUPEE Top-Aligned','mTM'), 
         c(1, 100),
         c(1,10,20,30,40,50,60,70,80,90,100),
-        c(0.10, 0.65), 
-        TRUE
+        c(0.10, 0.65)
 )
 plot2 <- get_scoring_plot(
         'mTM-align',
@@ -55,8 +54,7 @@ plot2 <- get_scoring_plot(
         c('RUPEE All-Aligned','RUPEE Top-Aligned','mTM'), 
         c(1, 10),
         c(2,4,6,8,10),
-        c(0, 5),
-        FALSE
+        c(0, 5)
 )
 
 combined <- grid_arrange_shared_legend(plot1, plot2)

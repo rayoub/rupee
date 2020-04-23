@@ -44,8 +44,7 @@ plot1 <- get_scoring_plot(
         c('RUPEE All-Aligned','RUPEE Top-Aligned','SSM'), 
         c(1, 100),
         c(1,10,20,30,40,50,60,70,80,90,100),
-        c(0.05, 0.25),
-        FALSE
+        c(0.05, 0.25)
 )
 plot2 <- get_scoring_plot(
         'SSM',
@@ -55,8 +54,7 @@ plot2 <- get_scoring_plot(
         c('RUPEE All-Aligned','RUPEE Top-Aligned','SSM'), 
         c(1, 100),
         c(1,10,20,30,40,50,60,70,80,90,100),
-        c(0.25, 0.55), 
-        TRUE
+        c(0.25, 0.55)
 )
 plot3 <- get_scoring_plot(
         'SSM',
@@ -66,8 +64,7 @@ plot3 <- get_scoring_plot(
         c('RUPEE All-Aligned','RUPEE Top-Aligned','SSM'), 
         c(1, 100),
         c(1,10,20,30,40,50,60,70,80,90,100),
-        c(0, 6), 
-        FALSE
+        c(0, 6)
 )
 
 combined <- grid_arrange_shared_legend(plot1, plot2, plot3)
