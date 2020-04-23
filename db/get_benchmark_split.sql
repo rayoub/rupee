@@ -15,11 +15,8 @@ BEGIN
             ROW_NUMBER() OVER (ORDER BY b.db_id) AS n
         FROM
             benchmark b
-            LEFT JOIN vast_done d
-                ON d.db_id = b.db_id
         WHERE
-            d.db_id IS NULL
-            AND b.name = p_name
+            b.name = p_name
         ORDER BY
             b.db_id
     )
