@@ -80,6 +80,62 @@ public class DbId {
             return id;
         }
     }
+    
+    public static String getAlternateId(String id) {
+
+        String alt = "";
+        
+        if (isCathId(id)) {
+            String suffix = id.substring(4, id.length());
+            if (isStringLowerCase(suffix)) {
+                suffix = suffix.toUpperCase();
+            }
+            else {
+                suffix = suffix.toLowerCase();
+            }
+            alt = id.substring(0,4).toLowerCase() + suffix; 
+        }
+        else if (isEcodId(id)) {
+            String suffix = id.substring(5, id.length());
+            if (isStringLowerCase(suffix)) {
+                suffix = suffix.toUpperCase();
+            }
+            else {
+                suffix = suffix.toLowerCase();
+            }
+            alt = id.substring(0,5).toLowerCase() + suffix;
+        }
+        else if (isChainId(id)) {
+            String suffix = id.substring(4, id.length());
+            if (isStringLowerCase(suffix)) {
+                suffix = suffix.toUpperCase();
+            }
+            else {
+                suffix = suffix.toLowerCase();
+            }
+            alt = id.substring(0,4).toLowerCase() + suffix;
+        }
+        else {
+            alt = id;
+        }
+
+        return alt;
+    }
+
+    public static boolean isStringLowerCase(String str){
+        
+        // convert String to char array
+        char[] charArray = str.toCharArray();
+        
+        for(int i = 0; i < charArray.length; i++){
+            
+            // if any character is not in lower case, return false
+            if(!Character.isDigit(charArray[i]) && !Character.isLowerCase(charArray[i]))
+                return false;
+        }
+        
+        return true;
+    }
 
     public static boolean doesIdExist(String id) {
 
