@@ -16,7 +16,7 @@ rupee_vs_mtm AS
             ON r.db_id_1 = s.db_id_1
             AND r.db_id_2 = s.db_id_2
             AND r.version = s.version
-            AND r.search_type = 'contained_in' 
+            AND r.search_type = 'full_length' -- less check only full length matches to be fair to the others
     WHERE
         r.version = 'casp_chain_v01_01_2020'
 ),
@@ -152,8 +152,10 @@ comps AS
         rv.rv_best_score,
         v.v_best_match,
         v.v_best_score,
-        GREATEST(rm.rm_best_score, rs.rs_best_score, rc.rc_best_score, rv.rv_best_score) AS r_best_score,
+        GREATEST(rs.rs_best_score, rc.rc_best_score, rv.rv_best_score) AS r_best_score,
         GREATEST(m.m_best_score, s.s_best_score, c.c_best_score, v.v_best_score) AS vs_best_score
+        --GREATEST(rm.rm_best_score, rs.rs_best_score, rc.rc_best_score, rv.rv_best_score) AS r_best_score,
+        --GREATEST(m.m_best_score, s.s_best_score, c.c_best_score, v.v_best_score) AS vs_best_score
     FROM
         rupee_vs_mtm rm
         INNER JOIN rupee_vs_ssm rs
@@ -170,19 +172,65 @@ comps AS
             ON rm.rm_db_id_1 = c.c_db_id_1
         INNER JOIN vs_vast v
             ON rm.rm_db_id_1 = v.v_db_id_1
+),
+filtered_comps AS
+(
+    SELECT
+        db_id_1,
+        rm_diff,
+        rs_diff,
+        rc_diff,
+        rv_diff,
+        rm_best_match,
+        rm_best_score,
+        m_best_match,
+        m_best_score,
+        rs_best_match,
+        rs_best_score,
+        s_best_match,
+        s_best_score,
+        rc_best_match,
+        rc_best_score,
+        c_best_match,
+        c_best_score,
+        rv_best_match,
+        rv_best_score,
+        v_best_match,
+        v_best_score,
+        r_best_score,
+        vs_best_score,
+        CASE
+        WHEN r_best_score = rm_best_score THEN rm_best_match 
+        WHEN r_best_score = rs_best_score THEN rs_best_match 
+        WHEN r_best_score = rc_best_score THEN rc_best_match 
+        WHEN r_best_score = rv_best_score THEN rv_best_match 
+        END AS r_best_match
+    FROM
+        comps
+    WHERE
+        1 = 1
+        AND
+        (rm_diff > 0.02 AND rs_diff > 0.02 AND rc_diff > 0.02 AND rv_diff > 0.02)
+    --    (
+    --    (rs_diff > 0.06 AND rc_diff > 0.06 AND rv_diff > 0.06)
+    --    OR
+    --    (rm_diff > 0.06 AND rc_diff > 0.06 AND rv_diff > 0.06)
+    --    OR
+    --    (rm_diff > 0.06 AND rs_diff > 0.06 AND rv_diff > 0.06)
+    --    OR
+    --    (rm_diff > 0.06 AND rs_diff > 0.06 AND rc_diff > 0.06)
+    --    )
 )
 SELECT
-    *
+    db_id_1,
+    LEAST(rm_diff, rs_diff, rc_diff, rv_diff) AS least_diff,
+    r_best_score,
+    r_best_match
 FROM
-    comps
-WHERE
-    1 = 1
-    AND rm_diff > 0.04
-    AND rs_diff > 0.04
-    AND rc_diff > 0.04
-    AND rv_diff > 0.04
---    AND db_id_1 IN ('T0980s1TS196-D1','T0990TS197-D1','T0960TS354-D2', 'T1000TS145-D2')
+    filtered_comps
 ORDER BY
     db_id_1;
+
+
 
 

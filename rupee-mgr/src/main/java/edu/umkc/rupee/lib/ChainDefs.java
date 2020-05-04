@@ -83,7 +83,7 @@ public class ChainDefs {
         });
     }
 
-    public static void printChains(Structure structure) {
+    private static void printChains(Structure structure) {
 
         // iterate chains
         List<Chain> chains = structure.getModel(0);
