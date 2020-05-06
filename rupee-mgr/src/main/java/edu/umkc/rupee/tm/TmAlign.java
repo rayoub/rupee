@@ -13,6 +13,9 @@ import org.biojava.nbio.structure.Atom;
 import org.biojava.nbio.structure.Chain;
 import org.biojava.nbio.structure.Group;
 import org.biojava.nbio.structure.Structure;
+import org.biojava.nbio.structure.StructureException;
+import org.biojava.nbio.structure.secstruc.SecStrucCalc;
+import org.biojava.nbio.structure.secstruc.SecStrucInfo;
 
 import edu.umkc.rupee.lib.QScore;
 import edu.umkc.rupee.ssap.Alignment;
@@ -28,6 +31,8 @@ public class TmAlign {
     private Kabsch _kabsch; 
 
     // structure privates
+    private Structure _xstruct;
+    private Structure _ystruct;
     private String _xname;
     private String _yname;
     private Chain _xchain;
@@ -53,6 +58,8 @@ public class TmAlign {
 
     public TmAlign(Structure xstruct, Structure ystruct, TmMode mode, Kabsch kabsch) {
 
+        _xstruct = xstruct;
+        _ystruct = ystruct;
         _mode = mode;
         _kabsch = kabsch;
 
@@ -533,6 +540,20 @@ public class TmAlign {
         }
         else if (_mode == TmMode.ALIGN_3D) {
 
+            // assign secondary structure
+            SecStrucCalc xssCalc = new SecStrucCalc();
+            try {
+                xssCalc.calculate(_xstruct, true);
+            } catch (StructureException e) {
+                // do nothing
+            }
+            SecStrucCalc yssCalc = new SecStrucCalc();
+            try {
+                yssCalc.calculate(_ystruct, true);
+            } catch (StructureException e) {
+                // do nothing
+            }
+
             int xlenreal = 0;
             for(Group g : _xgroups) {
                
@@ -632,6 +653,12 @@ public class TmAlign {
 
             StringBuilder sb = new StringBuilder();
 
+            // set sec structs
+            setHelices(sb, _xgroups, "A");
+            setHelices(sb, _ygroups, "B");
+            setStrands(sb, _xgroups, "A");
+            setStrands(sb, _ygroups, "B");
+
             // iterate x atoms for chain A
             j = 0;
             for (int i = 0; i < _xgroups.size(); i++) {
@@ -665,6 +692,9 @@ public class TmAlign {
                     j++;
                 }
             }
+
+            // chain termination
+            sb.append("TER\n");
 
             // iterate y atoms for chain B
             j = 0;
@@ -701,7 +731,7 @@ public class TmAlign {
             }
             
             results.setOutput(sb.toString());
-        }
+        } // _mode == TmMode.ALIGN_3D
         
         return results;
     }
@@ -1879,6 +1909,110 @@ public class TmAlign {
             }
         }
         System.out.println(map);
+    }
+
+    public String map8state(String ss8) {
+
+        String ss3;
+        switch(ss8) {
+            case "G":
+            case "H":
+            case "I":
+                ss3 = "HELIX";
+                break;
+            case "E":
+                ss3 = "STRAND";
+                break;
+            default:
+                ss3 = "LOOP";
+        }
+        return ss3;
+    }
+
+    public String get3state(Group g) {
+
+        String ss8 = "";
+        Object obj = g.getProperty(Group.SEC_STRUC);
+        if (obj instanceof SecStrucInfo) {
+           SecStrucInfo info = (SecStrucInfo)obj;
+           ss8 = String.valueOf(info.getType().type).trim();
+        }
+        return map8state(ss8);
+    }
+
+    public String spaces(int n) {
+        
+        StringBuilder sb = new StringBuilder("");
+        for (int i = 0; i < n; i++) {
+            sb.append(" "); 
+        }
+        return sb.toString();
+    }
+
+    public void setHelices(StringBuilder sb, List<Group> groups, String chainId) {
+
+        // iterate helices
+        boolean lastWasHelix = false;
+        int lastResidue = Integer.MIN_VALUE;
+        for (int i = 0; i < groups.size(); i++) {
+
+            Group group = groups.get(i);
+            String ss = get3state(group);
+            if (ss.equals("HELIX")) {
+
+                if (!lastWasHelix) {
+
+                    sb.append("HELIX");
+                    sb.append(spaces(14));
+                    sb.append(chainId);
+                    sb.append(String.format("%5d", group.getResidueNumber().getSeqNum()));
+                    sb.append(spaces(8));
+                }
+                lastWasHelix = true;
+            }
+            else {
+
+                if (lastWasHelix) {
+                    sb.append(String.format("%4d", lastResidue));
+                    sb.append("\n");
+                }
+                lastWasHelix = false;
+            }
+            lastResidue = group.getResidueNumber().getSeqNum();
+        }
+    }
+
+    public void setStrands(StringBuilder sb, List<Group> groups, String chainId) {
+
+        // iterate helices
+        boolean lastWasStrand = false;
+        int lastResidue = Integer.MIN_VALUE;
+        for (int i = 0; i < groups.size(); i++) {
+
+            Group group = groups.get(i);
+            String ss = get3state(group);
+            if (ss.equals("STRAND")) {
+
+                if (!lastWasStrand) {
+
+                    sb.append("SHEET");
+                    sb.append(spaces(16));
+                    sb.append(chainId);
+                    sb.append(String.format("%4d", group.getResidueNumber().getSeqNum()));
+                    sb.append(spaces(7));
+                }
+                lastWasStrand = true;
+            }
+            else {
+
+                if (lastWasStrand) {
+                    sb.append(String.format("%4d", lastResidue));
+                    sb.append("\n");
+                }
+                lastWasStrand = false;
+            }
+            lastResidue = group.getResidueNumber().getSeqNum();
+        }
     }
 }
 
