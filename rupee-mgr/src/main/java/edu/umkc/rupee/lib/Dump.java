@@ -9,6 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.zip.GZIPInputStream;
 
 import org.biojava.nbio.structure.AminoAcid;
@@ -465,6 +466,14 @@ public class Dump {
         }
     }
 
+    public static void dumpColumnOfNumbers(int lines) {
+
+        Random random = new Random();
+        for (int i = 0; i < lines; i++) {
+            //System.out.println(random.nextInt(900) + 100);
+            System.out.println(random.nextInt(9000) + 1000);
+        } 
+    }
 
 
 
