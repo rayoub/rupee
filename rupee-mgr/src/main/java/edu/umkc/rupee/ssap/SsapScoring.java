@@ -1,6 +1,6 @@
 package edu.umkc.rupee.ssap;
 
-public class Ssap {
+public class SsapScoring {
 
     // constants
     private static double FINAL_SCORE_SCALING = 1000.0;
@@ -20,7 +20,7 @@ public class Ssap {
     private double[][]  _batoms;
     private int _alen, _blen;
 
-    public Ssap(double[][] aatoms, double[][] batoms) { 
+    public SsapScoring(double[][] aatoms, double[][] batoms) { 
 
         _aatoms = aatoms; 
         _batoms = batoms; 
@@ -29,7 +29,7 @@ public class Ssap {
         _blen = _batoms.length;
     }
 
-    public double getScore(Alignment alignment) {
+    public double getScore(SsapAlignment alignment) {
 
         // score matrix
         int maxAlignLen = _alen + _blen + 10;

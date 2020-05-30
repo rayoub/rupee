@@ -5,9 +5,17 @@ import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.javatuples.Pair;
+import org.postgresql.ds.PGSimpleDataSource;
 
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
@@ -16,7 +24,7 @@ public class VastDownloadDriver extends VastDriver {
 
     public void doSearchBatch() {
 
-        List<Pair<String,String>> pairs = Db.getVastRequestIds(); 
+        List<Pair<String,String>> pairs = getVastRequestIds(); 
 
         for (int i = 0; i < pairs.size(); i++) {
 
@@ -62,6 +70,35 @@ public class VastDownloadDriver extends VastDriver {
                 }
             }
         }
+    }
+    
+    public static List<Pair<String,String>> getVastRequestIds() {
+
+        List<Pair<String, String>> pairs = new ArrayList<>();
+
+        try {
+
+            PGSimpleDataSource ds = Db.getDataSource();
+            Connection conn = ds.getConnection();
+
+            PreparedStatement stmt = conn.prepareCall("SELECT db_id, request_id FROM vast_request ORDER BY db_id");
+
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+
+                Pair<String, String> pair = Pair.with(rs.getString("db_id") , rs.getString("request_id"));
+                pairs.add(pair);
+            }
+
+            rs.close();
+            stmt.close();
+            conn.close();
+        
+        } catch (SQLException e) {
+            Logger.getLogger(VastDownloadDriver.class.getName()).log(Level.WARNING, null, e);
+        }
+
+        return pairs;
     }
 }
 

@@ -1,4 +1,4 @@
-package edu.umkc.rupee.lib;
+package edu.umkc.rupee.eval;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

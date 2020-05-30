@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import edu.umkc.rupee.lib.Benchmarks;
+import edu.umkc.rupee.eval.Benchmarks;
 import edu.umkc.rupee.lib.Constants;
 
 public class VastCombinedDriver extends VastDriver {

@@ -8,7 +8,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -25,7 +24,6 @@ import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
 import edu.umkc.rupee.lib.Grams;
 import edu.umkc.rupee.lib.Importing;
-import edu.umkc.rupee.lib.Log;
 import edu.umkc.rupee.lib.Residue;
 
 public abstract class Import {
@@ -77,8 +75,6 @@ public abstract class Import {
 
             // *** iterate split
             
-            List<Log> logs = new ArrayList<>();
-
             while (rs.next()) {
                
                 String dbId = "";
@@ -122,10 +118,6 @@ public abstract class Import {
                     System.out.println("Split: " + splitIndex + ", Processed: "
                             + (Constants.PROCESSED_INCREMENT * (processed / Constants.PROCESSED_INCREMENT)));
                 }
-            }
-
-            if (!logs.isEmpty()) {
-                Db.saveLogs(logs, conn);
             }
 
             rs.close();

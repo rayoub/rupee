@@ -1,4 +1,4 @@
-package edu.umkc.rupee.lib;
+package edu.umkc.rupee.eval;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -18,6 +18,7 @@ import org.biojava.nbio.structure.secstruc.SecStrucCalc;
 import org.biojava.nbio.structure.secstruc.SecStrucInfo;
 
 import edu.umkc.rupee.defs.DbType;
+import edu.umkc.rupee.lib.Importing;
 
 public class Labels {
 

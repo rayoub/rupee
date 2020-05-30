@@ -18,8 +18,8 @@ import org.biojava.nbio.structure.secstruc.SecStrucCalc;
 import org.biojava.nbio.structure.secstruc.SecStrucInfo;
 
 import edu.umkc.rupee.lib.QScore;
-import edu.umkc.rupee.ssap.Alignment;
-import edu.umkc.rupee.ssap.Ssap;
+import edu.umkc.rupee.ssap.SsapAlignment;
+import edu.umkc.rupee.ssap.SsapScoring;
 
 public class TmAlign {
 
@@ -772,10 +772,10 @@ public class TmAlign {
             ya_all[i][2] = ca.getZ();
         }
        
-        Ssap ssap = new Ssap(xt_all, ya_all); 
+        SsapScoring ssap = new SsapScoring(xt_all, ya_all); 
 
         // build alignment
-        Alignment alignment = new Alignment();
+        SsapAlignment alignment = new SsapAlignment();
         
         int i, j, k;
         int i_old = 0;
@@ -787,12 +787,12 @@ public class TmAlign {
             for (i = i_old; i < m1[k]; i++) {
 
                 // align x to gap
-                alignment.add(i, Alignment.NULL_POS);
+                alignment.add(i, SsapAlignment.NULL_POS);
             }
             for (j = j_old; j < m2[k]; j++) {
 
                 // align y to gap
-                alignment.add(Alignment.NULL_POS, j);
+                alignment.add(SsapAlignment.NULL_POS, j);
             }
 
             // aligned pair
@@ -806,12 +806,12 @@ public class TmAlign {
         for (i = i_old; i < xlen; i++) {
             
             // align x to gap
-            alignment.add(i, Alignment.NULL_POS);
+            alignment.add(i, SsapAlignment.NULL_POS);
         }
         for (j = j_old; j < ylen; j++) {
         
             // align y to gap
-            alignment.add(Alignment.NULL_POS, j);
+            alignment.add(SsapAlignment.NULL_POS, j);
         }
 
         // DEBUG

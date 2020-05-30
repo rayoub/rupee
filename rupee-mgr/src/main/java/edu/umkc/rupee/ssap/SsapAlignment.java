@@ -3,7 +3,7 @@ package edu.umkc.rupee.ssap;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Alignment {
+public class SsapAlignment {
 
     public static int NULL_POS = -1;
 

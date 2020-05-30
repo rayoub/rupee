@@ -13,7 +13,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.support.ui.Select;
 
-import edu.umkc.rupee.lib.Benchmarks;
+import edu.umkc.rupee.eval.Benchmarks;
 import edu.umkc.rupee.lib.Constants;
 
 public class SSMDriver extends DriverBase {

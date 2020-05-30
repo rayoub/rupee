@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 
-import edu.umkc.rupee.lib.Benchmarks;
+import edu.umkc.rupee.eval.Benchmarks;
 import edu.umkc.rupee.lib.Constants;
 
 public class CathedralDriver extends DriverBase {

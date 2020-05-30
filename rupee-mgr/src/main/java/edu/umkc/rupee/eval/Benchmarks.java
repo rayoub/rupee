@@ -1,4 +1,4 @@
-package edu.umkc.rupee.lib;
+package edu.umkc.rupee.eval;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -25,7 +25,6 @@ import org.postgresql.ds.PGSimpleDataSource;
 import edu.umkc.rupee.bio.Parser;
 import edu.umkc.rupee.defs.DbType;
 import edu.umkc.rupee.defs.SearchBy;
-import edu.umkc.rupee.defs.SearchFrom;
 import edu.umkc.rupee.defs.SearchMode;
 import edu.umkc.rupee.defs.SearchType;
 import edu.umkc.rupee.defs.SortBy;
@@ -69,7 +68,7 @@ public abstract class Search {
     // Instance Methods
     // *********************************************************************
  
-    public List<SearchRecord> search(SearchCriteria criteria, SearchFrom searchFrom) throws Exception {
+    public List<SearchRecord> search(SearchCriteria criteria) throws Exception {
 
         List<SearchRecord> records = new ArrayList<>();
 

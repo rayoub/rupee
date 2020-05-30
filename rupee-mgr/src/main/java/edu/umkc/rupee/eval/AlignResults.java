@@ -1,4 +1,4 @@
-package edu.umkc.rupee.lib;
+package edu.umkc.rupee.eval;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -23,6 +23,9 @@ import org.postgresql.ds.PGSimpleDataSource;
 
 import edu.umkc.rupee.defs.AlignmentType;
 import edu.umkc.rupee.defs.DbType;
+import edu.umkc.rupee.lib.AlignRecord;
+import edu.umkc.rupee.lib.Aligning;
+import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.tm.Kabsch;
 import edu.umkc.rupee.tm.TmAlign;
 import edu.umkc.rupee.tm.TmMode;
