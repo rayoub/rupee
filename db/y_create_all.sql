@@ -1,9 +1,7 @@
 
 -- create tables and indexes
 \i alignment_scores.sql
-\i astral.sql
 \i benchmark.sql
-\i cath_diverse_sf.sql
 \i cath_domain.sql
 \i cathedral_result.sql
 \i cath_grams.sql
@@ -75,3 +73,4 @@
 \i insert_scop_hashes.sql
 \i insert_upload_grams.sql
 \i insert_upload_hashes.sql
+
