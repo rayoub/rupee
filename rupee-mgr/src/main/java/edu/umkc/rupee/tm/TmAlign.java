@@ -428,7 +428,7 @@ public class TmAlign {
         results.setRmsd(rmsd);
         results.setQScore(qScore);
 
-        // TODO: avoid unnecessary calculation
+        // TODO: remove this at some point - total waste - no one needs ssap score
         results.setSsapScore(calculateSsap(align_len, m1, m2));
 
         if (this._mode == TmMode.ALIGN_TEXT) {
@@ -736,93 +736,6 @@ public class TmAlign {
         } // _mode == TmMode.ALIGN_3D
         
         return results;
-    }
-
-    public double calculateSsap(int align_len, int m1[], int m2[]) {
-    
-        // just CA atoms
-        int xlen = _xgroups.size();
-        double[][] xa_all = new double[xlen][3];
-        double[][] xt_all = new double[xlen][3];
-        
-        // iterate x atoms for xa_all
-        for (int i = 0; i < _xgroups.size(); i++) {
-            
-            Group group = _xgroups.get(i);
-
-            Atom ca = group.getAtom("CA");
-            xa_all[i][0] = ca.getX();
-            xa_all[i][1] = ca.getY();
-            xa_all[i][2] = ca.getZ();
-        }
-
-        // transform xa_all into xt_all
-        Functions.do_rotation(xa_all, xt_all, xlen, _t, _u);
-
-        // just CA atoms
-        int ylen = _ygroups.size();
-        double[][] ya_all = new double[ylen][3];
-        
-        // iterate y atoms for ya_all
-        for (int i = 0; i < _ygroups.size(); i++) {
-            
-            Group group = _ygroups.get(i);
-
-            Atom ca = group.getAtom("CA");
-            ya_all[i][0] = ca.getX();
-            ya_all[i][1] = ca.getY();
-            ya_all[i][2] = ca.getZ();
-        }
-       
-        SsapScoring ssap = new SsapScoring(xt_all, ya_all); 
-
-        // build alignment
-        SsapAlignment alignment = new SsapAlignment();
-        
-        int i, j, k;
-        int i_old = 0;
-        int j_old = 0;
-        
-        for (k = 0; k < align_len; k++) {
-      
-            // gaps 
-            for (i = i_old; i < m1[k]; i++) {
-
-                // align x to gap
-                alignment.add(i, SsapAlignment.NULL_POS);
-            }
-            for (j = j_old; j < m2[k]; j++) {
-
-                // align y to gap
-                alignment.add(SsapAlignment.NULL_POS, j);
-            }
-
-            // aligned pair
-            alignment.add(m1[k], m2[k]);
-
-            i_old = m1[k] + 1;
-            j_old = m2[k] + 1;
-        }
-
-        // end gaps if any
-        for (i = i_old; i < xlen; i++) {
-            
-            // align x to gap
-            alignment.add(i, SsapAlignment.NULL_POS);
-        }
-        for (j = j_old; j < ylen; j++) {
-        
-            // align y to gap
-            alignment.add(SsapAlignment.NULL_POS, j);
-        }
-
-        // DEBUG
-        //System.out.println(alignment.toString());
-
-        // score alignment
-        double ssapScore = ssap.getScore(alignment);
-
-        return ssapScore;
     }
 
     public double alignDescriptors(int[] invmap, double normalizeBy) { 
@@ -1877,41 +1790,9 @@ public class TmAlign {
         return num_sat;
     }
 
-    public void printMap(int xlen, int ylen, int[] invmap) {
-
-        String map = "";
-        for (int j = 0; j < ylen; j++) {
-            if (invmap[j] >= 0) {
-                map += "1";
-            }
-            else {
-                map += "0";
-            }
-        }
-        System.out.println(map);
-    }
-    
-    public void printReverseMap(int xlen, int ylen, int[] invmap) {
-
-        String map = "";
-        for (int i = 0; i < xlen; i++) {
-
-            boolean mapped = false;
-            for (int j = 0; j < ylen; j++) {
-                if (invmap[j] == i) {
-                    mapped = true;
-                    break;
-                } 
-            }
-            if (mapped) {
-                map += "1";
-            }
-            else {
-                map += "0";
-            }
-        }
-        System.out.println(map);
-    }
+    // **********************************************************************************
+    // output functions
+    // **********************************************************************************
 
     public String map8state(String ss8) {
 
@@ -2015,6 +1896,137 @@ public class TmAlign {
             }
             lastResidue = group.getResidueNumber().getSeqNum();
         }
+    }
+
+    // **********************************************************************************
+    // debug functions
+    // **********************************************************************************
+
+    public void printMap(int xlen, int ylen, int[] invmap) {
+
+        String map = "";
+        for (int j = 0; j < ylen; j++) {
+            if (invmap[j] >= 0) {
+                map += "1";
+            }
+            else {
+                map += "0";
+            }
+        }
+        System.out.println(map);
+    }
+    
+    public void printReverseMap(int xlen, int ylen, int[] invmap) {
+
+        String map = "";
+        for (int i = 0; i < xlen; i++) {
+
+            boolean mapped = false;
+            for (int j = 0; j < ylen; j++) {
+                if (invmap[j] == i) {
+                    mapped = true;
+                    break;
+                } 
+            }
+            if (mapped) {
+                map += "1";
+            }
+            else {
+                map += "0";
+            }
+        }
+        System.out.println(map);
+    }
+    
+    // **********************************************************************************
+    // TBD - to be deprecated
+    // **********************************************************************************
+
+    public double calculateSsap(int align_len, int m1[], int m2[]) {
+    
+        // just CA atoms
+        int xlen = _xgroups.size();
+        double[][] xa_all = new double[xlen][3];
+        double[][] xt_all = new double[xlen][3];
+        
+        // iterate x atoms for xa_all
+        for (int i = 0; i < _xgroups.size(); i++) {
+            
+            Group group = _xgroups.get(i);
+
+            Atom ca = group.getAtom("CA");
+            xa_all[i][0] = ca.getX();
+            xa_all[i][1] = ca.getY();
+            xa_all[i][2] = ca.getZ();
+        }
+
+        // transform xa_all into xt_all
+        Functions.do_rotation(xa_all, xt_all, xlen, _t, _u);
+
+        // just CA atoms
+        int ylen = _ygroups.size();
+        double[][] ya_all = new double[ylen][3];
+        
+        // iterate y atoms for ya_all
+        for (int i = 0; i < _ygroups.size(); i++) {
+            
+            Group group = _ygroups.get(i);
+
+            Atom ca = group.getAtom("CA");
+            ya_all[i][0] = ca.getX();
+            ya_all[i][1] = ca.getY();
+            ya_all[i][2] = ca.getZ();
+        }
+       
+        SsapScoring ssap = new SsapScoring(xt_all, ya_all); 
+
+        // build alignment
+        SsapAlignment alignment = new SsapAlignment();
+        
+        int i, j, k;
+        int i_old = 0;
+        int j_old = 0;
+        
+        for (k = 0; k < align_len; k++) {
+      
+            // gaps 
+            for (i = i_old; i < m1[k]; i++) {
+
+                // align x to gap
+                alignment.add(i, SsapAlignment.NULL_POS);
+            }
+            for (j = j_old; j < m2[k]; j++) {
+
+                // align y to gap
+                alignment.add(SsapAlignment.NULL_POS, j);
+            }
+
+            // aligned pair
+            alignment.add(m1[k], m2[k]);
+
+            i_old = m1[k] + 1;
+            j_old = m2[k] + 1;
+        }
+
+        // end gaps if any
+        for (i = i_old; i < xlen; i++) {
+            
+            // align x to gap
+            alignment.add(i, SsapAlignment.NULL_POS);
+        }
+        for (j = j_old; j < ylen; j++) {
+        
+            // align y to gap
+            alignment.add(SsapAlignment.NULL_POS, j);
+        }
+
+        // DEBUG
+        //System.out.println(alignment.toString());
+
+        // score alignment
+        double ssapScore = ssap.getScore(alignment);
+
+        return ssapScore;
     }
 }
 
