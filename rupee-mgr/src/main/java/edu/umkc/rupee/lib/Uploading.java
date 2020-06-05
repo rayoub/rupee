@@ -79,7 +79,7 @@ public class Uploading {
         Structure structure = reader.getStructure(stream);
 
         // get grams
-        List<Residue> residues = Importing.parseStructure(structure);
+        List<Residue> residues = Importing.parseResidues(structure);
         Grams grams = Grams.fromResidues(residues);
 
         return grams;

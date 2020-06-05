@@ -15,7 +15,7 @@ import org.biojava.nbio.structure.secstruc.SecStrucInfo;
 
 public class Importing {
 
-    public static List<Residue> parseStructure(Structure structure) {
+    public static List<Residue> parseResidues(Structure structure) {
 
         List<Residue> residues = new ArrayList<>();
             
@@ -367,5 +367,10 @@ public class Importing {
         }
             
         return region;
+    }
+
+    public static List<Double> parseCoords(Structure structure) {
+   
+       return null; 
     }
 }

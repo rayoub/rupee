@@ -100,7 +100,7 @@ public abstract class Import {
                     Structure structure = reader.getStructure(gzipInputStream); 
                     structure.setPDBCode(pdbId);
                 
-                    List<Residue> residues = Importing.parseStructure(structure);
+                    List<Residue> residues = Importing.parseResidues(structure);
                     Grams grams = Grams.fromResidues(residues); 
 
                     saveGrams(dbId, grams, conn);
