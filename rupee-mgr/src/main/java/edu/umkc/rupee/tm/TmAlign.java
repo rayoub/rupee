@@ -141,6 +141,10 @@ public class TmAlign {
 
     public TmAlign(double[][] xa, double[][] ya, TmMode mode, Kabsch kabsch) {
 
+        if (mode == TmMode.ALIGN_TEXT || mode == TmMode.ALIGN_3D) {
+            throw new IllegalArgumentException("ALIGN_TEXT and ALIGN_3D modes not supported by this constructor");
+        }
+
         _mode = mode; 
         _kabsch = kabsch;
 
@@ -156,8 +160,6 @@ public class TmAlign {
         _xtm = new double[_minlen][3];
         _ytm = new double[_minlen][3];
         _xt = new double[_xlen][3];
-        _seqx = new char[_xlen];
-        _seqy = new char[_ylen];
         _secx = new int[_xlen];
         _secy = new int[_ylen];
         _r1 = new double[_minlen][3];
