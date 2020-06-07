@@ -200,6 +200,12 @@ public abstract class Search {
                 // fast alignments
                 records.stream().parallel().forEach(record -> align(criteria, record, queryStructure, TmMode.FAST));
 
+                // alternate search type record
+                SearchRecord fastAlternate = null;
+                if (criteria.searchType == SearchType.FULL_LENGTH) {
+                    fastAlternate = records.stream().collect(Collectors.minBy(getContainedInComparator())).get();
+                }
+
                 // sort and filter for regular alignments
                 records = records.stream()
                     .sorted(comparator)
@@ -208,12 +214,6 @@ public abstract class Search {
                 
                 // regular alignments
                 records.stream().parallel().forEach(record -> align(criteria, record, queryStructure, TmMode.REGULAR));
-
-                // final sort using comparator
-                records = records.stream()
-                        .sorted(comparator)
-                        .limit(criteria.limit)
-                        .collect(Collectors.toList());
 
                 // alternate search type record
                 if (criteria.searchType == SearchType.FULL_LENGTH) {
@@ -225,7 +225,21 @@ public abstract class Search {
                     if (alternate.getTmScoreQ() - top.getTmScore() >= CROSSOVER) {
                         suggestAlternate = true;
                     } 
+                    else { // check the fast alternate
+
+                        System.out.println(fastAlternate.getDbId());
+                        align(criteria, fastAlternate, queryStructure, TmMode.REGULAR);            
+                        if (fastAlternate.getTmScoreQ() - top.getTmScore() >= CROSSOVER) {
+                            suggestAlternate = true;
+                        }   
+                    }
                 }
+
+                // final sort using comparator
+                records = records.stream()
+                        .sorted(comparator)
+                        .limit(criteria.limit)
+                        .collect(Collectors.toList());
             } 
             else { 
 
