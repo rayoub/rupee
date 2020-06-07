@@ -68,9 +68,10 @@ public abstract class Search {
     // Instance Methods
     // *********************************************************************
  
-    public List<SearchRecord> search(SearchCriteria criteria) throws Exception {
+    public SearchResults search(SearchCriteria criteria) throws Exception {
 
         List<SearchRecord> records = new ArrayList<>();
+        boolean suggestAlternate = false;
 
         // enforce assumptions
         if (criteria.searchMode == SearchMode.FAST) {
@@ -208,13 +209,33 @@ public abstract class Search {
                 // regular alignments
                 records.stream().parallel().forEach(record -> align(criteria, record, queryStructure, TmMode.REGULAR));
 
-            } 
+                // final sort using comparator
+                records = records.stream()
+                        .sorted(comparator)
+                        .limit(criteria.limit)
+                        .collect(Collectors.toList());
 
-            // sort using comparator from above
-            records = records.stream()
-                    .sorted(comparator)
-                    .limit(criteria.limit)
-                    .collect(Collectors.toList());
+                // alternate search type record
+                if (criteria.searchType == SearchType.FULL_LENGTH) {
+
+                    SearchRecord top = records.get(0);
+                    SearchRecord alternate = records.stream().filter(r -> !r.getDbId().equals(top.getDbId())).collect(Collectors.minBy(getContainedInComparator())).get();
+
+                    double CROSSOVER = 0.05;
+                    if (alternate.getTmScoreQ() - top.getTmScore() >= CROSSOVER) {
+                        suggestAlternate = true;
+                    } 
+                }
+            } 
+            else { 
+
+                // final sort using comparator
+                records = records.stream()
+                        .sorted(comparator)
+                        .limit(criteria.limit)
+                        .collect(Collectors.toList());
+            }
+
 
             // query db id should be first
             if (criteria.searchBy == SearchBy.DB_ID) {
@@ -231,7 +252,7 @@ public abstract class Search {
                     SearchRecord record = records.get(i);
                     records.remove(i);
                     records.add(0, record);
-                    if (criteria.searchMode == SearchMode.TOP_ALIGNED) {
+                    if (criteria.searchMode != SearchMode.FAST) {
                         records.get(0).setRmsd(0.0);
                         records.get(0).setTmScore(1.0);
                     }
@@ -242,7 +263,12 @@ public abstract class Search {
             augment(records);
         }
 
-        return records;
+        SearchResults results = new SearchResults();
+        
+        results.setRecords(records);
+        results.setSuggestAlternate(suggestAlternate);
+
+        return results;
     }
 
     private int alignmentFilter(TmMode mode, int gramCount) {
@@ -291,6 +317,11 @@ public abstract class Search {
         return comparator;
     }
 
+    private Comparator<SearchRecord> getContainedInComparator() {
+
+        return Comparator.comparingDouble(SearchRecord::getTmScoreQ).reversed().thenComparing(SearchRecord::getSortKey);
+    }
+
     private void align(SearchCriteria criteria, SearchRecord record, Structure queryStructure, TmMode mode) {
 
         try {
@@ -316,6 +347,7 @@ public abstract class Search {
 
             if (criteria.searchType == SearchType.FULL_LENGTH) {
                 record.setTmScore(results.getTmScoreAvg());    
+                record.setTmScoreQ(results.getTmScoreQ());    
             }
             else if (criteria.searchType == SearchType.CONTAINED_IN) {
                 record.setTmScore(results.getTmScoreQ());    
@@ -456,7 +488,7 @@ public abstract class Search {
         return records;
     }
     
-    private void augment(List<SearchRecord> bandRecords) {
+    private void augment(List<SearchRecord> records) {
 
         try {
 
@@ -465,7 +497,7 @@ public abstract class Search {
             Connection conn = ds.getConnection();
             conn.setAutoCommit(true);
        
-            Object[] objDbIds = bandRecords.stream().map(record -> record.getDbId()).toArray();
+            Object[] objDbIds = records.stream().map(record -> record.getDbId()).toArray();
 
             String[] dbIds = Arrays.copyOf(objDbIds, objDbIds.length, String[].class);
 
@@ -480,7 +512,7 @@ public abstract class Search {
 
                 // WITH ORDINALITY clause will ensure they are ordered correctly
 
-                SearchRecord record = bandRecords.get(n-1);
+                SearchRecord record = records.get(n-1);
 
                 record.setN(n++);
 

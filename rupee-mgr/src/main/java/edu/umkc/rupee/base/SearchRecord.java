@@ -8,10 +8,11 @@ public class SearchRecord {
     private String sortKey;
     private double similarity;
     private double tmScore;
+    private double tmScoreQ;
     private double rmsd;
     private double qScore;
     private double ssapScore;
-    
+
     public int getN() {
         return n;
     }
@@ -58,6 +59,14 @@ public class SearchRecord {
 
     public void setTmScore(double tmScore) {
         this.tmScore = tmScore;
+    }
+
+    public double getTmScoreQ() {
+        return tmScoreQ;
+    }
+
+    public void setTmScoreQ(double tmScoreQ) {
+        this.tmScoreQ = tmScoreQ;
     }
 
     public double getRmsd() {

@@ -24,6 +24,7 @@ import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 
 import edu.umkc.rupee.base.SearchRecord;
+import edu.umkc.rupee.base.SearchResults;
 import edu.umkc.rupee.cath.CathHash;
 import edu.umkc.rupee.cath.CathImport;
 import edu.umkc.rupee.cath.CathSearch;
@@ -554,7 +555,9 @@ public class Main {
             if (timing) {
                 start = System.currentTimeMillis(); 
             }
-            List<SearchRecord> records = scopSearch.search(criteria);
+            SearchResults results = scopSearch.search(criteria);
+            System.out.println("Suggest Alternate = " + results.getSuggestAlternate());
+            List<SearchRecord> records = results.getRecords();
             if (timing) {
                 stop = System.currentTimeMillis();
                 System.out.println(criteria.dbId + "," + (stop - start));
@@ -608,7 +611,9 @@ public class Main {
             if (timing) {
                 start = System.currentTimeMillis(); 
             }
-            List<SearchRecord> records = cathSearch.search(criteria);
+            SearchResults results = cathSearch.search(criteria);
+            System.out.println("Suggest Alternate = " + results.getSuggestAlternate());
+            List<SearchRecord> records = results.getRecords();
             if (timing) {
                 stop = System.currentTimeMillis();
                 System.out.println(criteria.dbId + "," + (stop - start));
@@ -654,7 +659,9 @@ public class Main {
             criteria.differentF = diff3;
 
             EcodSearch ecodSearch = new EcodSearch();
-            List<SearchRecord> records = ecodSearch.search(criteria);
+            SearchResults results = ecodSearch.search(criteria);
+            System.out.println("Suggest Alternate = " + results.getSuggestAlternate());
+            List<SearchRecord> records = results.getRecords();
         
             for (SearchRecord baseRecord : records) {
            
@@ -692,7 +699,9 @@ public class Main {
             criteria.sortBy = sortBy;
 
             ChainSearch chainSearch = new ChainSearch();
-            List<SearchRecord> records = chainSearch.search(criteria);
+            SearchResults results = chainSearch.search(criteria);
+            System.out.println("Suggest Alternate = " + results.getSuggestAlternate());
+            List<SearchRecord> records = results.getRecords();
         
             for (SearchRecord baseRecord : records) {
            
