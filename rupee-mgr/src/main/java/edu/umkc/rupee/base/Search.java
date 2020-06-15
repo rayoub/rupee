@@ -49,6 +49,7 @@ public abstract class Search {
 
     private static int INITIAL_FILTER = 40000;
     private static int FINAL_FILTER = 8000;
+    private static int LCS_ALTERNATES = 10;
 
     // *********************************************************************
     // Abstract Methods 
@@ -71,6 +72,7 @@ public abstract class Search {
     public SearchResults search(SearchCriteria criteria) throws Exception {
 
         List<SearchRecord> records = new ArrayList<>();
+        List<SearchRecord> alternates = new ArrayList<>();
         boolean suggestAlternate = false;
 
         // enforce assumptions
@@ -110,6 +112,34 @@ public abstract class Search {
         final Hashes hashes1 = hashes;
 
         if (grams1 != null && hashes1 != null) {
+            
+            // parse query structure
+            PDBFileReader reader = new PDBFileReader();
+            reader.setFetchBehavior(FetchBehavior.LOCAL_ONLY);
+
+            String fileName = "";
+            Structure structure = null;
+            if (criteria.searchBy == SearchBy.DB_ID) {
+
+                fileName = criteria.idDbType.getImportPath() + criteria.dbId + ".pdb.gz";
+                
+                FileInputStream queryFile = new FileInputStream(fileName);
+                GZIPInputStream queryFileGz = new GZIPInputStream(queryFile);
+
+                structure = reader.getStructure(queryFileGz);
+
+                queryFileGz.close();
+                queryFile.close();
+            }
+            else { // UPLOAD
+                
+                fileName = Constants.UPLOAD_PATH + criteria.uploadId + ".pdb";
+                FileInputStream queryFile = new FileInputStream(fileName);
+
+                structure = reader.getStructure(queryFile);
+                
+                queryFile.close();
+            }
 
             if (criteria.searchMode != SearchMode.ALL_ALIGNED) {
 
@@ -131,19 +161,45 @@ public abstract class Search {
                     .forEach(record -> {
 
                         if (map.containsKey(record.getDbId())) {
+
                             Grams grams2 = map.get(record.getDbId());
                             double score = LCS.getLCSScore(grams1.getGramsAsList(), grams2.getGramsAsList(), criteria.searchType);
                             record.setSimilarity(score);
+
+                            if (criteria.searchType == SearchType.FULL_LENGTH) {
+                                
+                                // set alternate CONTAINED_IN search type score
+                                double scoreQ = LCS.getLCSScore(grams1.getGramsAsList(), grams2.getGramsAsList(), SearchType.CONTAINED_IN);
+                                record.setSimilarityQ(scoreQ);
+                            }
                         }
                     });
 
                 // sort lcs candidates
                 records = records.stream()
                     .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
+                    .collect(Collectors.toList());
+
+                if (criteria.searchType == SearchType.FULL_LENGTH) {
+
+                    // get lcs alternates
+                    SearchRecord top = records.get(0);
+                    List<SearchRecord> lcsAlternates = records.stream()
+                        .filter(r -> !r.getDbId().equals(top.getDbId()))
+                        .sorted(Comparator.comparingDouble(SearchRecord::getSimilarityQ).reversed().thenComparing(SearchRecord::getSortKey))
+                        .limit(LCS_ALTERNATES) 
+                        .collect(Collectors.toList());
+                    alternates.addAll(lcsAlternates);
+                }
+
+                // filter lcs candidates
+                records = records.stream()
                     .limit(FINAL_FILTER) 
                     .collect(Collectors.toList());
             } 
             else {
+
+                // ALL_ALIGNED
 
                 // initial filtering based on simple LCS plus tm-align on aligned descriptors
                 records = IntStream.range(0, Constants.SEARCH_SPLIT_COUNT).boxed().parallel()
@@ -159,97 +215,74 @@ public abstract class Search {
             // alignments
             if (criteria.searchMode == SearchMode.ALL_ALIGNED || criteria.searchMode == SearchMode.TOP_ALIGNED) {
 
-                // *** parse query structure
-       
-                PDBFileReader reader = new PDBFileReader();
-                reader.setFetchBehavior(FetchBehavior.LOCAL_ONLY);
-
-                String fileName = "";
-                Structure structure = null;
-                if (criteria.searchBy == SearchBy.DB_ID) {
-
-                    fileName = criteria.idDbType.getImportPath() + criteria.dbId + ".pdb.gz";
-                    
-                    FileInputStream queryFile = new FileInputStream(fileName);
-                    GZIPInputStream queryFileGz = new GZIPInputStream(queryFile);
-
-                    structure = reader.getStructure(queryFileGz);
-
-                    queryFileGz.close();
-                    queryFile.close();
-                }
-                else { // UPLOAD
-                    
-                    fileName = Constants.UPLOAD_PATH + criteria.uploadId + ".pdb";
-                    FileInputStream queryFile = new FileInputStream(fileName);
-
-                    structure = reader.getStructure(queryFile);
-                    
-                    queryFile.close();
-                }
-
                 Structure queryStructure = structure;
 
-                // *** perform alignments
+                // *** filter, align, sort
                 
                 // filter for fast alignments 
                 records = records.stream()
                     .limit(alignmentFilter(TmMode.FAST, grams1.getLength()))
                     .collect(Collectors.toList());
                 
-                // fast alignments
+                // perform fast alignments
                 records.stream().parallel().forEach(record -> align(criteria, record, queryStructure, TmMode.FAST));
 
-                // alternate search type record
-                SearchRecord fastAlternate = null;
-                if (criteria.searchType == SearchType.FULL_LENGTH) {
-                    fastAlternate = records.stream().collect(Collectors.minBy(getContainedInComparator())).get();
-                }
-
-                // sort and filter for regular alignments
+                // sort by fast alignments
                 records = records.stream()
                     .sorted(comparator)
-                    .limit(criteria.limit) 
                     .collect(Collectors.toList());
                 
-                // regular alignments
+                // *** 
+
+                if (criteria.searchType == SearchType.FULL_LENGTH) {
+                    
+                    // fast alternate search type record
+                    SearchRecord top = records.get(0);
+                    SearchRecord fastAlternate = records.stream()
+                        .filter(r -> !r.getDbId().equals(top.getDbId()))
+                        .collect(
+                            Collectors.minBy(Comparator.comparingDouble(SearchRecord::getTmScoreQ).reversed().thenComparing(SearchRecord::getSortKey))
+                        ).get();
+                    alternates.add(fastAlternate);
+                }
+                
+                // *** filter, align, sort
+
+                // filter for regular alignments
+                records = records.stream()
+                    .limit(criteria.limit)
+                    .collect(Collectors.toList());
+
+                // perform regular alignments
                 records.stream().parallel().forEach(record -> align(criteria, record, queryStructure, TmMode.REGULAR));
 
-                // alternate search type record
+                // sort by regular alignments
+                records = records.stream()
+                    .sorted(comparator)
+                    .collect(Collectors.toList());
+                
+                // *** 
+
                 if (criteria.searchType == SearchType.FULL_LENGTH) {
 
+                    // regular alternate search type record
                     SearchRecord top = records.get(0);
-                    SearchRecord alternate = records.stream().filter(r -> !r.getDbId().equals(top.getDbId())).collect(Collectors.minBy(getContainedInComparator())).get();
-
-                    double CROSSOVER = 0.05;
-                    if (alternate.getTmScoreQ() - top.getTmScore() >= CROSSOVER) {
-                        suggestAlternate = true;
-                    } 
-                    else { // check the fast alternate
-
-                        System.out.println(fastAlternate.getDbId());
-                        align(criteria, fastAlternate, queryStructure, TmMode.REGULAR);            
-                        if (fastAlternate.getTmScoreQ() - top.getTmScore() >= CROSSOVER) {
-                            suggestAlternate = true;
-                        }   
-                    }
+                    SearchRecord regularAlternate = records.stream()
+                        .filter(r -> !r.getDbId().equals(top.getDbId()))
+                        .collect(
+                            Collectors.minBy(Comparator.comparingDouble(SearchRecord::getTmScoreQ).reversed().thenComparing(SearchRecord::getSortKey))
+                        ).get();
+                    alternates.add(regularAlternate);
                 }
-
-                // final sort using comparator
-                records = records.stream()
-                        .sorted(comparator)
-                        .limit(criteria.limit)
-                        .collect(Collectors.toList());
             } 
             else { 
 
                 // final sort using comparator
                 records = records.stream()
-                        .sorted(comparator)
-                        .limit(criteria.limit)
-                        .collect(Collectors.toList());
+                    .sorted(comparator)
+                    .limit(criteria.limit)
+                    .collect(Collectors.toList());
             }
-
 
             // query db id should be first
             if (criteria.searchBy == SearchBy.DB_ID) {
@@ -269,6 +302,22 @@ public abstract class Search {
                     if (criteria.searchMode != SearchMode.FAST) {
                         records.get(0).setRmsd(0.0);
                         records.get(0).setTmScore(1.0);
+                    }
+                }
+            }
+
+            // suggest alternate or not
+            if (alternates.size() > 0) {
+
+                double CROSSOVER = 0.05;
+                SearchRecord top = records.get(0);
+                for (SearchRecord alternate : alternates) {
+
+                    if (!alternate.getDbId().equals(top.getDbId())) {
+                        align(criteria, alternate, structure, TmMode.REGULAR);            
+                        if (alternate.getTmScoreQ() - top.getTmScore() >= CROSSOVER) {
+                            suggestAlternate = true;
+                        }   
                     }
                 }
             }
@@ -329,11 +378,6 @@ public abstract class Search {
         comparator = comparator.thenComparing(SearchRecord::getSortKey);
 
         return comparator;
-    }
-
-    private Comparator<SearchRecord> getContainedInComparator() {
-
-        return Comparator.comparingDouble(SearchRecord::getTmScoreQ).reversed().thenComparing(SearchRecord::getSortKey);
     }
 
     private void align(SearchCriteria criteria, SearchRecord record, Structure queryStructure, TmMode mode) {

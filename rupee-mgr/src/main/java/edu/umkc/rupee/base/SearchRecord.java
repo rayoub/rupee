@@ -7,6 +7,7 @@ public class SearchRecord {
     private String pdbId;
     private String sortKey;
     private double similarity;
+    private double similarityQ;
     private double tmScore;
     private double tmScoreQ;
     private double rmsd;
@@ -51,6 +52,14 @@ public class SearchRecord {
 
     public void setSimilarity(double similarity) {
         this.similarity = similarity;
+    }
+
+    public double getSimilarityQ() {
+        return similarityQ;
+    }
+
+    public void setSimilarityQ(double similarityQ) {
+        this.similarityQ = similarityQ;
     }
 
     public double getTmScore() {
