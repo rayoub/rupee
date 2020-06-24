@@ -1,4 +1,4 @@
-package edu.umkc.rupee.tm;
+package edu.umkc.tm;
 
 import java.util.Arrays;
 import java.util.Formatter;
@@ -16,10 +16,6 @@ import org.biojava.nbio.structure.Structure;
 import org.biojava.nbio.structure.StructureException;
 import org.biojava.nbio.structure.secstruc.SecStrucCalc;
 import org.biojava.nbio.structure.secstruc.SecStrucInfo;
-
-import edu.umkc.rupee.lib.QScore;
-import edu.umkc.rupee.ssap.SsapAlignment;
-import edu.umkc.rupee.ssap.SsapScoring;
 
 public class TmAlign {
 

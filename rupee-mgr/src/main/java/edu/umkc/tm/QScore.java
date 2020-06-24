@@ -1,4 +1,4 @@
-package edu.umkc.rupee.lib;
+package edu.umkc.tm;
 
 public class QScore {
 

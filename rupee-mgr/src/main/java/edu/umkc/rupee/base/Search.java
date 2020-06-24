@@ -34,11 +34,11 @@ import edu.umkc.rupee.lib.Grams;
 import edu.umkc.rupee.lib.Hashes;
 import edu.umkc.rupee.lib.LCS;
 import edu.umkc.rupee.lib.Similarity;
-import edu.umkc.rupee.tm.Kabsch;
-import edu.umkc.rupee.tm.KabschTLS;
-import edu.umkc.rupee.tm.TmAlign;
-import edu.umkc.rupee.tm.TmMode;
-import edu.umkc.rupee.tm.TmResults;
+import edu.umkc.tm.Kabsch;
+import edu.umkc.tm.KabschTLS;
+import edu.umkc.tm.TmAlign;
+import edu.umkc.tm.TmMode;
+import edu.umkc.tm.TmResults;
 
 // ASSUMPTIONS: 
 // 1. if search mode == FAST sort by must be SIMILARITY

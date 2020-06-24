@@ -1,4 +1,4 @@
-package edu.umkc.rupee.ssap;
+package edu.umkc.tm;
 
 public class SsapScoring {
 
@@ -36,9 +36,6 @@ public class SsapScoring {
         double[][] scoreMatrix = new double[maxAlignLen][maxAlignLen];
 
         // distance calculations
-        int aligned = 0;
-        int comparable = 0;
-        int nonzero = 0;
         for (int i = 0; i < alignment.getLength(); i++) {
 
             if (alignment.hasBothPositions(i)) {
@@ -46,8 +43,6 @@ public class SsapScoring {
                 int iaPos = alignment.getAPosition(i);
                 int ibPos = alignment.getBPosition(i);
                         
-                aligned++;
-
                 for (int j = 0; j < alignment.getLength(); j++) {
 
                     if (alignment.hasBothPositions(j)) {
@@ -56,8 +51,6 @@ public class SsapScoring {
                         int jbPos = alignment.getBPosition(j);
 
                         if (isComparable(iaPos, jaPos) && isComparable(ibPos, jbPos)) {
-
-                            comparable++;
 
                             double[] fromAtomA = _aatoms[iaPos];
                             double[] fromAtomB = _batoms[ibPos];
@@ -82,18 +75,11 @@ public class SsapScoring {
                                 score = scaledA / (sumOfSquares + scaledB);
                             }
                             scoreMatrix[jbPos][jaPos] += score;
-                            if (score > 0) {
-                                nonzero++;
-                            }
                         }
                     }
                 }
             }
         }
-
-        //System.out.println("aligned = " + aligned);
-        //System.out.println("comparable = " + comparable);
-        //System.out.println("nonzero = " + nonzero);
 
         boolean isFirstWithBothPos = true;
         boolean prevHadBothPos = false;
