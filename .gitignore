@@ -44,6 +44,7 @@ results/vast/vast_results_rmsd.txt
 
 # build ignores
 rupee-mgr/target/
+tm-java/target/
 
 # file types
 **/*.swp
@@ -64,6 +65,10 @@ rupee-mgr/.settings/
 rupee-mgr/.classpath
 rupee-mgr/.project
 rupee-mgr/.gitignore
+tm-java/.settings/
+tm-java/.classpath
+tm-java/.project
+tm-java/.gitignore
 
 # ssap
 results/ssap/cath-ssap
