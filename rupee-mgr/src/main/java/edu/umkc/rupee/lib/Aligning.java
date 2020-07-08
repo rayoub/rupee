@@ -19,10 +19,10 @@ import org.biojava.nbio.structure.io.PDBFileReader;
 
 import edu.umkc.rupee.defs.AlignmentType;
 import edu.umkc.rupee.defs.DbType;
-import edu.umkc.tm.Kabsch;
-import edu.umkc.tm.TmAlign;
-import edu.umkc.tm.TmMode;
-import edu.umkc.tm.TmResults;
+import edu.umkc.rupee.tm.Kabsch;
+import edu.umkc.rupee.tm.TmAlign;
+import edu.umkc.rupee.tm.TmMode;
+import edu.umkc.rupee.tm.TmResults;
 
 public class Aligning
 {

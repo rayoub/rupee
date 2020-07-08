@@ -26,10 +26,10 @@ import edu.umkc.rupee.defs.DbType;
 import edu.umkc.rupee.lib.AlignRecord;
 import edu.umkc.rupee.lib.Aligning;
 import edu.umkc.rupee.lib.Constants;
-import edu.umkc.tm.Kabsch;
-import edu.umkc.tm.TmAlign;
-import edu.umkc.tm.TmMode;
-import edu.umkc.tm.TmResults;
+import edu.umkc.rupee.tm.Kabsch;
+import edu.umkc.rupee.tm.TmAlign;
+import edu.umkc.rupee.tm.TmMode;
+import edu.umkc.rupee.tm.TmResults;
 
 public class AlignResults
 {

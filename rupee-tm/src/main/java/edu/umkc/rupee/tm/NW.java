@@ -1,4 +1,4 @@
-package edu.umkc.tm;
+package edu.umkc.rupee.tm;
 
 public class NW {
 

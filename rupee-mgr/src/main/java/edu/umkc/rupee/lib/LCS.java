@@ -7,10 +7,10 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 import edu.umkc.rupee.defs.SearchType;
-import edu.umkc.tm.KabschTLS;
-import edu.umkc.tm.TmAlign;
-import edu.umkc.tm.Kabsch;
-import edu.umkc.tm.TmMode;
+import edu.umkc.rupee.tm.KabschTLS;
+import edu.umkc.rupee.tm.TmAlign;
+import edu.umkc.rupee.tm.Kabsch;
+import edu.umkc.rupee.tm.TmMode;
 
 public class LCS {
     
