@@ -12,11 +12,11 @@ import java.util.stream.IntStream;
 
 import org.postgresql.ds.PGSimpleDataSource;
 
+import edu.umkc.rupee.core.Hasher;
 import edu.umkc.rupee.defs.DbType;
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
 import edu.umkc.rupee.lib.Hashes;
-import edu.umkc.rupee.lib.Hashing;
 
 public abstract class Hash {
 
@@ -109,6 +109,9 @@ public abstract class Hash {
     
     public static Hashes getHashes(Integer[] grams) {
 
+        // *** gram are more propertly gram hashes (not min- or band- hashes yet)
+
+        // map gram hash to count for multiset
         Map<Integer, Integer> gramMap = new HashMap<>();
         for(int i = 0; i < grams.length; i++) {
 
@@ -121,8 +124,9 @@ public abstract class Hash {
             }
         }
 
-        Integer minHashes[] = Hashing.getMinHashes(gramMap);
-        Integer bandHashes[] = Hashing.getBandHashes(minHashes);
+        Hasher hasher = new Hasher(Constants.MIN_HASH_COUNT, Constants.BAND_HASH_COUNT);
+        Integer minHashes[] = hasher.getMinHashes(gramMap, Constants.DEC_POW_5);
+        Integer bandHashes[] = hasher.getBandHashes(minHashes);
 
         Hashes hashes = new Hashes();
         hashes.setMinHashes(minHashes);

@@ -42,7 +42,6 @@ public class Constants {
     public final static int MIN_GRAM_COUNT = 10;
     public final static int MIN_HASH_COUNT = 99;
     public final static int BAND_HASH_COUNT = 33;
-    public final static int BAND_CHECK_COUNT = BAND_HASH_COUNT;
     
     public final static double SIMILARITY_THRESHOLD = 0.10;
 

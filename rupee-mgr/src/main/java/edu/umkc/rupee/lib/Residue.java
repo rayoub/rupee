@@ -9,8 +9,8 @@ public class Residue {
     private int residueNumber;
     private String insertCode;
     private String residueCode;
-    private String ssa;
-    private String sse;
+    private String ss8;
+    private String ss3;
     private float x;
     private float y;
     private float z;
@@ -73,20 +73,20 @@ public class Residue {
         this.residueCode = residueCode;
     }
 
-    public String getSSA() {
-        return ssa;
+    public String getSs8() {
+        return ss8;
     }
 
-    public void setSSA(String ssa) {
-        this.ssa = ssa;
+    public void setSs8(String ss8) {
+        this.ss8 = ss8;
     }
 
-    public String getSSE() {
-        return sse;
+    public String getSs3() {
+        return ss3;
     }
 
-    public void setSSE(String sse) {
-        this.sse = sse;
+    public void setSs3(String ss3) {
+        this.ss3 = ss3;
     }
 
     public float getX() {
@@ -194,19 +194,19 @@ public class Residue {
     }
 
     public boolean isHelix() {
-        return sse.equals("Helix");
+        return ss3.equals("Helix");
     }
     
     public boolean isStrand() {
-        return sse.equals("Strand");
+        return ss3.equals("Strand");
     }
     
     public boolean isTurn() {
-        return sse.equals("Turn");
+        return ss3.equals("Turn");
     }
    
     public boolean isBridge() {
-        return sse.equals("Bridge");
+        return ss3.equals("Bridge");
     }
 }
 

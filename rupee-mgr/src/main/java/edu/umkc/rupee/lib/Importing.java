@@ -13,6 +13,8 @@ import org.biojava.nbio.structure.StructureException;
 import org.biojava.nbio.structure.secstruc.SecStrucCalc;
 import org.biojava.nbio.structure.secstruc.SecStrucInfo;
 
+import edu.umkc.rupee.core.Descriptor;
+
 public class Importing {
 
     public static List<Residue> parseResidues(Structure structure) {
@@ -49,35 +51,35 @@ public class Importing {
                 }
                 
                 // get secondary structure assignment
-                String ssa = "C";
+                String ss8 = "C";
                 Object obj = g2.getProperty(Group.SEC_STRUC);
                 if (obj instanceof SecStrucInfo) {
                    SecStrucInfo info = (SecStrucInfo)obj;
-                   ssa = String.valueOf(info.getType().type).trim();
-                   if (ssa.isEmpty()) {
-                       ssa = "C";
+                   ss8 = String.valueOf(info.getType().type).trim();
+                   if (ss8.isEmpty()) {
+                       ss8 = "C";
                     }
                 }
 
                 // map to extension coding
-                String sse;
-                switch(ssa) {
+                String ss3;
+                switch(ss8) {
                     case "G":
                     case "H":
                     case "I":
                     case "T":
-                        sse = "Helix";
+                        ss3 = "H";
                         break;
                     case "E":
                     case "B":
-                        sse = "Strand";
+                        ss3 = "S";
                         break;
                     case "S":
                     case "C":
-                        sse = "Loop";
+                        ss3 = "C";
                         break;
                     default:
-                        sse = "Loop";
+                        ss3 = "C";
                 }
 
                 // get coordinates
@@ -87,8 +89,8 @@ public class Importing {
                 float z = (float) ca.getZ();
                 
                 // calculate torsion angles
-                double phi = 360.0;
-                double psi = 360.0;
+                double phi = Descriptor.NULL_ANGLE;
+                double psi = Descriptor.NULL_ANGLE;
                 boolean breakBefore = false;
                 boolean breakAfter = false;
                 try {
@@ -117,14 +119,14 @@ public class Importing {
                 residue.setResidueNumber(g2.getResidueNumber().getSeqNum());
                 residue.setInsertCode(String.valueOf(g2.getResidueNumber().getInsCode()));
                 residue.setResidueCode(residueCode);
-                residue.setSSA(ssa);
-                residue.setSSE(sse);
+                residue.setSs8(ss8);
+                residue.setSs3(ss3);
                 residue.setX(x);
                 residue.setY(y);
                 residue.setZ(z);
                 residue.setPhi(phi);
                 residue.setPsi(psi);
-                residue.setDescriptor(calculateRegion(phi,psi,sse));
+                residue.setDescriptor(Descriptor.toDescriptor(phi,psi,ss3));
                 residue.setBreakBefore(breakBefore);
                 residue.setBreakAfter(breakAfter);
 
@@ -204,173 +206,5 @@ public class Importing {
                 }
             }
         }
-    }
-    
-    public static int calculateRegion(double phi, double psi, String sse) {
-
-        if (phi == 360 || psi == 360) 
-            return calculateDefaultRegion(sse);
-        
-        // helix 0, 1, 2, 3
-        else if (sse.equals("Helix")) {
-            return calculateHelixRegion(phi, psi);
-        }
-
-        // strand 4, 5, 6
-        else if (sse.equals("Strand")) {
-            return calculateStrandRegion(phi, psi);
-        }
-     
-        // loop 7, 8, 9
-        else { 
-            return calculateLoopRegion(phi, psi);
-        }
-    }
-
-    public static int calculateDefaultRegion(String sse) {
-        
-        // helix 0, 1, 2, 3
-        if (sse.equals("Helix")) {
-            return 2;
-        }
-
-        // strand 4, 5, 6
-        else if (sse.equals("Strand")) {
-            return 4;
-        }
-      
-        // loop 7, 8, 9
-        else {  
-            return 7;
-        }
-    }
-
-    public static int calculateHelixRegion(double phi, double psi) {
-
-        int region = -1;
-
-        if (psi >= -180 && psi < -135) {
-            if (phi >= 0 && phi < 180) {
-                region = 3;
-            }
-            else {
-                region = 0; 
-            }
-        }
-        else if (psi >= -135 && psi < -75) {
-            if (phi >= 0 && phi < 180) {
-                region = 3;
-            }
-            else {
-                region = 2;
-            }
-        }
-        else if (psi >= -75 && psi < 90) {
-            if (phi >= 0 && phi < 180) {
-                region = 1;
-            }
-            else {
-                region = 2;
-            }
-        }
-        else if (psi >= 90 && psi < 120) {
-            if (phi >= 0 && phi < 180) {
-                region = 1;
-            }
-            else {
-                region = 0;
-            }
-        }
-        else if (psi >= 120 && psi < 180) {
-            if (phi >= 0 && phi < 180) {
-                region = 3;
-            }
-            else {
-                region = 0;
-            }
-        }
-        
-        return region;
-    }
-
-    public static int calculateStrandRegion(double phi, double psi) {
-
-        int region = -1;
-
-        if (psi >= -180 && psi < -110) {
-            region = 4;
-        }
-        else if (psi >= -110 && psi < -60) {
-            if (phi >= 0 && phi < 180) {
-                region = 4;
-            }
-            else {
-                region = 6;
-            }
-        }
-        else if (psi >= -60 && psi < 60) {
-            if (phi >= 0 && phi < 180) {
-                region = 5;
-            }
-            else {
-                region = 6;
-            }
-        }
-        else if (psi >= 60 && psi < 90) {
-            if (phi >= 0 && phi < 180) {
-                region = 5;
-            }
-            else {
-                region = 4;
-            }
-        }
-        else if (psi >= 90 && psi < 180) {
-            region = 4;
-        }
-
-        return region;
-    }
-    
-    public static int calculateLoopRegion(double phi, double psi) {
-
-        int region = -1;
-
-        if (psi >= -180 && psi < -100) {
-            region = 7;
-        }
-        else if (psi >= -100 && psi < -90) {
-            if (phi >= 0 && phi < 180) {
-                region = 7;
-            }
-            else {
-                region = 9;
-            }
-        }
-        else if (psi >= -90 && psi < 60) {
-            if (phi >= 0 && phi < 180) {
-                region = 8;
-            }
-            else {
-                region = 9;
-            }
-        }
-        else if (psi >= 60 && psi < 90) {
-            if (phi >= 0 && phi < 180) {
-                region = 8;
-            }
-            else {
-                region = 7;
-            }
-        }
-        else if (psi >= 90 && psi < 180) {
-            region = 7;
-        }
-            
-        return region;
-    }
-
-    public static List<Double> parseCoords(Structure structure) {
-   
-       return null; 
     }
 }

@@ -1,8 +1,9 @@
-package edu.umkc.rupee.lib;
+package edu.umkc.rupee.core;
 
+import java.util.List;
 import java.util.Map;
 
-public class Hashing {
+public class Hasher {
 
     private final static long[] PRIMES = { 
         2654435761L, 2654435789L, 2654435803L, 2654435809L, 2654435813L, 2654435821L, 2654435827L, 2654435851L, 2654435909L, 2654435933L,
@@ -30,52 +31,82 @@ public class Hashing {
         117203424, 940692191, 896841430, 510430869, 815152112, 825178102, 251076477, 877379191, 563452498, 894270271 
     };
 
-    public static Integer[] getMinHashes(Map<Integer,Integer> gramMap) {
-        
-        Integer[] minHashes = new Integer[Constants.MIN_HASH_COUNT];
+    private int minHashCount;
+    private int bandHashCount;
+
+    public Hasher(int minHashCount, int bandHashCount) {
+
+        this.minHashCount = minHashCount;
+        this.bandHashCount = bandHashCount;
+    }
+   
+    // for sets 
+    public Integer[] getMinHashes(List<Integer> hashes) {
+
+        Integer[] minHashes = new Integer[this.minHashCount];
 
         // initialize min-hashes
-        for (int i = 0; i < Constants.MIN_HASH_COUNT; i++) {
+        for (int i = 0; i < minHashes.length; i++) {
             minHashes[i] = Integer.MAX_VALUE;
         }
 
-        // iterate grams and update min-hashes
-        for (Integer key : gramMap.keySet()) {
+        // iterate hashes and update min-hashes
+        for (Integer hash : hashes) {
 
-            // gramMap.get(key) is the count for that rpe hash
-            for (int i = 0; i < gramMap.get(key); i++) {
-                updateMinHashes(minHashes, key + (i * Constants.DEC_POW_5)); 
+            updateMinHashes(minHashes, hash); 
+        }
+
+        return minHashes;
+    }
+
+    // for multisets (aka bags)
+    public Integer[] getMinHashes(Map<Integer,Integer> hashMap, int DEC_POW_X) {
+        
+        Integer[] minHashes = new Integer[this.minHashCount];
+
+        // initialize min-hashes
+        for (int i = 0; i < minHashes.length; i++) {
+            minHashes[i] = Integer.MAX_VALUE;
+        }
+
+        // iterate hashes and update min-hashes
+        for (Integer hash : hashMap.keySet()) {
+
+            // hashMap.get(hash) is the count index for that hash
+            for (int i = 0; i < hashMap.get(hash); i++) {
+                updateMinHashes(minHashes, hash + (i * DEC_POW_X)); 
             }
         }
 
         return minHashes;
     }
 
-    private static void updateMinHashes(Integer[] minHashes, Integer gram) {
+    private void updateMinHashes(Integer[] minHashes, Integer hash) {
         
         for (int i = 0; i < minHashes.length; i++) {         
 
             // throw exception if the long result overflows an int
-            Integer hash = Math.toIntExact((gram * PRIMES[i]) % RANDOM_NUMBERS[i]);
+            Integer minHash = Math.toIntExact((hash * PRIMES[i]) % RANDOM_NUMBERS[i]);
             
-            minHashes[i] = Math.min(minHashes[i], hash);
+            minHashes[i] = Math.min(minHashes[i], minHash);
         }
     }
    
-    public static Integer[] getBandHashes(Integer[] minHashes) {
+    public Integer[] getBandHashes(Integer[] minHashes) {
 
-        Integer[] bandHashes = new Integer[Constants.BAND_HASH_COUNT];
+        Integer[] bandHashes = new Integer[this.bandHashCount];
         
         // initialize band hashes
-        for (int i = 0; i < Constants.BAND_HASH_COUNT; i++) {
+        for (int i = 0; i < bandHashes.length; i++) {
             bandHashes[i] = 0;
         }
 
         // update band hashes
-        for (int i = 0; i < Constants.MIN_HASH_COUNT; i++) {
-            bandHashes[i % Constants.BAND_HASH_COUNT] += minHashes[i];
+        for (int i = 0; i < this.minHashCount; i++) {
+            bandHashes[i % bandHashes.length] += minHashes[i];
         }
 
         return bandHashes;
     }
 }
+

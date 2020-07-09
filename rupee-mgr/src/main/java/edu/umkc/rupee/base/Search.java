@@ -146,7 +146,7 @@ public abstract class Search {
                 // TOP_ALIGNED and FAST
 
                 // parallel band match searches to gather lsh candidates
-                records = IntStream.range(0, Constants.BAND_CHECK_COUNT).boxed().parallel()
+                records = IntStream.range(0, Constants.BAND_HASH_COUNT).boxed().parallel()
                     .flatMap(bandIndex -> searchBand(bandIndex, criteria, hashes1).stream())
                     .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
                     .limit(INITIAL_FILTER) 

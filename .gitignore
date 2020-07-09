@@ -44,6 +44,7 @@ results/vast/vast_results_rmsd.txt
 
 # build ignores
 rupee-mgr/target/
+rupee-core/target/
 rupee-tm/target/
 
 # file types
@@ -65,6 +66,10 @@ rupee-mgr/.settings/
 rupee-mgr/.classpath
 rupee-mgr/.project
 rupee-mgr/.gitignore
+rupee-core/.settings/
+rupee-core/.classpath
+rupee-core/.project
+rupee-core/.gitignore
 rupee-tm/.settings/
 rupee-tm/.classpath
 rupee-tm/.project
