@@ -1,6 +1,5 @@
 package edu.umkc.rupee.mgr;
 
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -107,15 +106,16 @@ public class Main {
                 .valueSeparator(',')
                 .build());
         group.addOption(Option.builder("s")
-                .longOpt("search")
-                .numberOfArgs(12)
-                .argName("SEARCH_BY>,<DB_TYPE>,<DB_ID>,<LIMIT>,<REP1>,<REP2>,<REP3>,<DIFF1>,<DIFF2>,<DIFF3>,<SEARCH_MODE>,<SEARCH_TYPE")
+                .longOpt("search-dbid")
+                .numberOfArgs(10)
+                .argName("DB_TYPE>,<DB_ID>,<REP1>,<REP2>,<REP3>,<DIFF1>,<DIFF2>,<DIFF3>,<SEARCH_MODE>,<SEARCH_TYPE")
                 .valueSeparator(',')
                 .build());
         group.addOption(Option.builder("u")
-                .longOpt("upload")
-                .numberOfArgs(1)
-                .argName("FILE_PATH")
+                .longOpt("search-upload")
+                .numberOfArgs(10)
+                .argName("DB_TYPE>,<FILE_PATH>,<REP1>,<REP2>,<REP3>,<DIFF1>,<DIFF2>,<DIFF3>,<SEARCH_MODE>,<SEARCH_TYPE")
+                .valueSeparator(',')
                 .build());
         group.addOption(Option.builder("d")
                 .longOpt("debug")
@@ -406,84 +406,99 @@ public class Main {
     
     private static void option_s(CommandLine line) throws Exception {
 
-        Set<String> searchByNames = new HashSet<>(Arrays.stream(SearchBy.values()).map(v -> v.name()).collect(Collectors.toList()));
+        option_s_and_u("s", SearchBy.DB_ID, 400, line); 
+    }
+    
+    private static void option_u(CommandLine line) throws Exception {
+       
+        option_s_and_u("u", SearchBy.UPLOAD, 400, line); 
+    }
+    
+    private static void option_s_and_u(String option, SearchBy searchBy, int limit, CommandLine line) throws Exception {
+
         Set<String> dbTypeNames = new HashSet<>(Arrays.stream(DbType.values()).map(v -> v.name()).collect(Collectors.toList()));
         Set<String> searchModeNames = new HashSet<>(Arrays.stream(SearchMode.values()).map(v -> v.name()).collect(Collectors.toList()));
         Set<String> searchTypeNames = new HashSet<>(Arrays.stream(SearchType.values()).map(v -> v.name()).collect(Collectors.toList()));
 
-        String[] args = line.getOptionValues("s");
+        String[] args = line.getOptionValues(option);
        
-        if (!searchByNames.contains(args[0])) {
-            System.err.println("The <SEARCH_BY> argument must be one of " + searchByNames.toString());
-            return;
-        }
-        if (!dbTypeNames.contains(args[1])) {
+        if (!dbTypeNames.contains(args[0])) {
             System.err.println("The <DB_TYPE> argument must be one of " + dbTypeNames.toString());
             return;
         }
        
-        SearchBy searchBy = SearchBy.valueOf(args[0]); 
-        DbType dbType = DbType.valueOf(args[1]);
+        DbType dbType = DbType.valueOf(args[0]);
 
-        // id
-        String id = args[2];
-        DbType idDbType = DbId.getIdDbType(id);
+        // id or path
+        int uploadId = -1;
+        String idOrPath = args[1];
+        DbType idDbType = DbType.INVALID;
+        if (searchBy == SearchBy.DB_ID) {
+            idDbType = DbId.getIdDbType(idOrPath);  
+        }
+        else { // searchBy == SearchBy.UPLOAD
 
-        // limit
-        int limit = tryParseInt(args[3]);
-        if (limit == -1) {
-            System.err.println("The <LIMIT> argument must be a positive integer.");
-            return;
+            if (Files.notExists(Paths.get(idOrPath))) {
+                System.out.println("File Not Found: " + idOrPath);
+                return;
+            }
+
+            Path path = Paths.get(idOrPath);
+            byte[] bytes = Files.readAllBytes(path);
+            String content = new String(bytes);
+            uploadId = Uploading.upload(content);
+
+            idOrPath = path.getFileName().toString().replace(".pdb","");
         }
 
         // booleans
-        if (!args[4].equals("TRUE") && !args[4].equals("FALSE")) {
+        if (!args[2].equals("TRUE") && !args[2].equals("FALSE")) {
             System.err.println("The <REP1> argument must be TRUE or FALSE");
             return;
         }
-        if (!args[5].equals("TRUE") && !args[5].equals("FALSE")) {
+        if (!args[3].equals("TRUE") && !args[3].equals("FALSE")) {
             System.err.println("The <REP2> argument must be TRUE or FALSE");
             return;
         }
-        if (!args[6].equals("TRUE") && !args[6].equals("FALSE")) {
+        if (!args[4].equals("TRUE") && !args[4].equals("FALSE")) {
             System.err.println("The <REP3> argument must be TRUE or FALSE");
             return;
         }
-        if (!args[7].equals("TRUE") && !args[7].equals("FALSE")) {
+        if (!args[5].equals("TRUE") && !args[5].equals("FALSE")) {
             System.err.println("The <DIFF1> argument must be TRUE or FALSE");
             return;
         }
-        if (!args[8].equals("TRUE") && !args[8].equals("FALSE")) {
+        if (!args[6].equals("TRUE") && !args[6].equals("FALSE")) {
             System.err.println("The <DIFF2> argument must be TRUE or FALSE");
             return;
         }
-        if (!args[9].equals("TRUE") && !args[9].equals("FALSE")) {
+        if (!args[7].equals("TRUE") && !args[7].equals("FALSE")) {
             System.err.println("The <DIFF3> argument must be TRUE or FALSE");
             return;
         }
 
-        boolean rep1 = Boolean.parseBoolean(args[4]);
-        boolean rep2 = Boolean.parseBoolean(args[5]);
-        boolean rep3 = Boolean.parseBoolean(args[6]);
-        boolean diff1 = Boolean.parseBoolean(args[7]);
-        boolean diff2 = Boolean.parseBoolean(args[8]);
-        boolean diff3 = Boolean.parseBoolean(args[9]);
+        boolean rep1 = Boolean.parseBoolean(args[2]);
+        boolean rep2 = Boolean.parseBoolean(args[3]);
+        boolean rep3 = Boolean.parseBoolean(args[4]);
+        boolean diff1 = Boolean.parseBoolean(args[5]);
+        boolean diff2 = Boolean.parseBoolean(args[6]);
+        boolean diff3 = Boolean.parseBoolean(args[7]);
 
         // search mode
-        if (!searchModeNames.contains(args[10])) {
+        if (!searchModeNames.contains(args[8])) {
             System.err.println("The <SEARCH_MODE> argument must be one of " + searchModeNames.toString());
             return;
         }
 
-        SearchMode searchMode = SearchMode.valueOf(args[10]);
+        SearchMode searchMode = SearchMode.valueOf(args[8]);
 
         // search type 
-        if (!searchTypeNames.contains(args[11])) {
+        if (!searchTypeNames.contains(args[9])) {
             System.err.println("The <SEARCH_TYPE> argument must be one of " + searchTypeNames.toString());
             return;
         }
 
-        SearchType searchType = SearchType.valueOf(args[11]);
+        SearchType searchType = SearchType.valueOf(args[9]);
 
         // enforce assumptions
         SortBy sortBy;
@@ -504,31 +519,10 @@ public class Main {
         }
         
         //*************************************************************
-        //***  UPLOAD
-        //*************************************************************
-
-        int uploadId = -1;
-        if (searchBy == SearchBy.UPLOAD) {
-
-            if (Files.notExists(Paths.get(id))) {
-                System.out.println("File Not Found: " + id);
-                return;
-            }
-
-            Path path = Paths.get(id);
-            byte[] bytes = Files.readAllBytes(path);
-            String content = new String(bytes);
-            uploadId = Uploading.upload(content);
-
-            id = path.getFileName().toString().replace(".pdb","");
-        }
-
-        //*************************************************************
         //***  OUTPUT
         //*************************************************************
 
-        boolean timing = false;
-
+        boolean printColumns = true;
         if (dbType == DbType.SCOP) { 
 
             ScopSearchCriteria criteria = new ScopSearchCriteria();
@@ -536,7 +530,7 @@ public class Main {
             criteria.searchBy = searchBy;
             criteria.idDbType = idDbType;
             criteria.searchDbType = dbType;
-            criteria.dbId = id;
+            criteria.dbId = idOrPath;
             if (criteria.searchBy == SearchBy.UPLOAD) {
                 criteria.uploadId = uploadId;
             }
@@ -551,19 +545,18 @@ public class Main {
 
             ScopSearch scopSearch = new ScopSearch();
 
-            long start = 0, stop = 0;
-            if (timing) {
-                start = System.currentTimeMillis(); 
-            }
             SearchResults results = scopSearch.search(criteria);
-            System.out.println("Suggest Alternate = " + results.getSuggestAlternate());
             List<SearchRecord> records = results.getRecords();
-            if (timing) {
-                stop = System.currentTimeMillis();
-                System.out.println(criteria.dbId + "," + (stop - start));
-                return;
-            }
-        
+      
+            // column headers 
+            if (printColumns) {
+                String columns = "n,db_id_1,db_id_2,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
+                if (searchBy == SearchBy.UPLOAD) {
+                    columns = "n,file_name,db_id,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
+                }
+                System.out.println(columns);
+            }   
+
             for (SearchRecord baseRecord : records) {
            
                 ScopSearchRecord record = (ScopSearchRecord) baseRecord;
@@ -589,7 +582,7 @@ public class Main {
             criteria.searchBy = searchBy;
             criteria.idDbType = idDbType;
             criteria.searchDbType = dbType;
-            criteria.dbId = id;
+            criteria.dbId = idOrPath;
             if (criteria.searchBy == SearchBy.UPLOAD) {
                 criteria.uploadId = uploadId;
             }
@@ -607,18 +600,17 @@ public class Main {
 
             CathSearch cathSearch = new CathSearch();
 
-            long start = 0, stop = 0;
-            if (timing) {
-                start = System.currentTimeMillis(); 
-            }
             SearchResults results = cathSearch.search(criteria);
-            System.out.println("Suggest Alternate = " + results.getSuggestAlternate());
             List<SearchRecord> records = results.getRecords();
-            if (timing) {
-                stop = System.currentTimeMillis();
-                System.out.println(criteria.dbId + "," + (stop - start));
-                return;
-            }
+
+            // column headers 
+            if (printColumns) {
+                String columns = "n,db_id_1,db_id_2,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
+                if (searchBy == SearchBy.UPLOAD) {
+                    columns = "n,file_name,db_id,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
+                }
+                System.out.println(columns);
+            }   
 
             for (SearchRecord baseRecord : records) {
              
@@ -645,7 +637,7 @@ public class Main {
             criteria.searchBy = searchBy;
             criteria.idDbType = idDbType;
             criteria.searchDbType = dbType;
-            criteria.dbId = id;
+            criteria.dbId = idOrPath;
             if (criteria.searchBy == SearchBy.UPLOAD) {
                 criteria.uploadId = uploadId;
             }
@@ -660,8 +652,16 @@ public class Main {
 
             EcodSearch ecodSearch = new EcodSearch();
             SearchResults results = ecodSearch.search(criteria);
-            System.out.println("Suggest Alternate = " + results.getSuggestAlternate());
             List<SearchRecord> records = results.getRecords();
+
+            // column headers 
+            if (printColumns) {
+                String columns = "n,db_id_1,db_id_2,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
+                if (searchBy == SearchBy.UPLOAD) {
+                    columns = "n,file_name,db_id,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
+                }
+                System.out.println(columns);
+            }   
         
             for (SearchRecord baseRecord : records) {
            
@@ -688,7 +688,7 @@ public class Main {
             criteria.searchBy = searchBy;
             criteria.idDbType = idDbType;
             criteria.searchDbType = dbType;
-            criteria.dbId = id;
+            criteria.dbId = idOrPath;
             if (criteria.searchBy == SearchBy.UPLOAD) {
                 criteria.uploadId = uploadId;
             }
@@ -700,8 +700,16 @@ public class Main {
 
             ChainSearch chainSearch = new ChainSearch();
             SearchResults results = chainSearch.search(criteria);
-            System.out.println("Suggest Alternate = " + results.getSuggestAlternate());
             List<SearchRecord> records = results.getRecords();
+
+            // column headers 
+            if (printColumns) {
+                String columns = "n,db_id_1,db_id_2,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
+                if (searchBy == SearchBy.UPLOAD) {
+                    columns = "n,file_name,db_id,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
+                }
+                System.out.println(columns);
+            }   
         
             for (SearchRecord baseRecord : records) {
            
@@ -721,24 +729,6 @@ public class Main {
                 );
             }
         }
-    }
-    
-    private static void option_u(CommandLine line) throws IOException {
-        
-        String[] args = line.getOptionValues("u");
-        
-        String path = args[0];
-
-        if (Files.notExists(Paths.get(path))) {
-            System.out.println("File Not Found: " + path);
-            return;
-        }
-
-        byte[] bytes = Files.readAllBytes(Paths.get(path));
-        String content = new String(bytes);
-        int uploadId = Uploading.upload(content);
-
-        System.out.println("Upload Successful. Upload Id: " + uploadId);
     }
 
     private static void option_d(CommandLine line) throws Exception {
