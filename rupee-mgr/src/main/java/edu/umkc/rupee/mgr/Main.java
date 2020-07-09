@@ -85,7 +85,7 @@ public class Main {
         group.addOption(Option.builder("a")
                 .longOpt("align")
                 .numberOfArgs(3)
-                .argName("DB_ID_1>,<DB_ID_2><ALIGN")
+                .argName("DB_ID_1>,<DB_ID_2>,<ALIGN_TYPE")
                 .valueSeparator(',')
                 .build());
         group.addOption(Option.builder("t")

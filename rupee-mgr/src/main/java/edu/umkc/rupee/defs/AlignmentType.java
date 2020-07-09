@@ -9,14 +9,14 @@ import org.biojava.nbio.structure.align.fatcat.FatCatFlexible;
 import org.biojava.nbio.structure.align.fatcat.FatCatRigid;
 import org.biojava.nbio.structure.align.fatcat.calc.FatCatParameters;
 
+// only for aligning with CE and FATCAT from CLI
+
 public enum AlignmentType {
 
     CE(CeMain.algorithmName, new CeParameters()),
     CECP(CeCPMain.algorithmName, new CECPParameters()),
     FATCAT_FLEXIBLE(FatCatFlexible.algorithmName, new FatCatParameters()),
-    FATCAT_RIGID(FatCatRigid.algorithmName, new FatCatParameters()),
-    TM_Q_ALIGN(null, null),
-    TM_AVG_ALIGN(null, null);
+    FATCAT_RIGID(FatCatRigid.algorithmName, new FatCatParameters());
 
     private String algorithmName;
     private ConfigStrucAligParams params; 
