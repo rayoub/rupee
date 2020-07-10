@@ -2,8 +2,6 @@ package edu.umkc.rupee.base;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -22,6 +20,7 @@ import org.postgresql.ds.PGSimpleDataSource;
 import edu.umkc.rupee.defs.DbType;
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
+import edu.umkc.rupee.lib.FileUtils;
 import edu.umkc.rupee.lib.Grams;
 import edu.umkc.rupee.lib.Importing;
 import edu.umkc.rupee.lib.Residue;
@@ -49,8 +48,6 @@ public abstract class Import {
     private void importGramsSplit(int splitIndex) {
 
         int processed = 0;
-
-        String fileName = "";
 
         PGSimpleDataSource ds = Db.getDataSource();
 
@@ -84,20 +81,28 @@ public abstract class Import {
                
                     dbId = rs.getString("db_id");
                     pdbId = rs.getString("pdb_id");
-                    fileName = dbType.getImportPath() + dbId + ".pdb.gz";
 
-                    if (Files.notExists(Paths.get(fileName))) {
-                        System.out.println("File Not Found: " + fileName);
+                    String fileName = dbType.getImportPath() + dbId;
+                    String fileNameWithExt = FileUtils.appendExt(fileName);
+                    if (fileNameWithExt.isEmpty()) {
+                        System.out.println("File not found for: " + dbId);
                         continue;
-                    }
-
-                    InputStream inputStream = new FileInputStream(fileName);
-                    GZIPInputStream gzipInputStream = new GZIPInputStream(inputStream);
+                    } 
 
                     PDBFileReader reader = new PDBFileReader();
                     reader.setFetchBehavior(FetchBehavior.LOCAL_ONLY);
 
-                    Structure structure = reader.getStructure(gzipInputStream); 
+                    InputStream inputStream = new FileInputStream(fileNameWithExt);
+                    GZIPInputStream gzipInputStream = null; 
+
+                    Structure structure = null;
+                    if (fileNameWithExt.endsWith("gz")) {
+                        gzipInputStream = new GZIPInputStream(inputStream);
+                        structure = reader.getStructure(gzipInputStream); 
+                    }
+                    else {
+                        structure = reader.getStructure(inputStream); 
+                    }
                     structure.setPDBCode(pdbId);
                 
                     List<Residue> residues = Importing.parseResidues(structure);
@@ -106,7 +111,9 @@ public abstract class Import {
                     saveGrams(dbId, grams, conn);
 
                     inputStream.close();
-                    gzipInputStream.close();
+                    if (gzipInputStream != null) {
+                        gzipInputStream.close();
+                    }
 
                 } catch (Exception e) {
                     Logger.getLogger(Import.class.getName()).log(Level.SEVERE, pdbId, e);

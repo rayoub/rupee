@@ -40,6 +40,11 @@ import edu.umkc.rupee.defs.SearchBy;
 import edu.umkc.rupee.defs.SearchMode;
 import edu.umkc.rupee.defs.SearchType;
 import edu.umkc.rupee.defs.SortBy;
+import edu.umkc.rupee.dir.DirHash;
+import edu.umkc.rupee.dir.DirImport;
+import edu.umkc.rupee.dir.DirSearch;
+import edu.umkc.rupee.dir.DirSearchCriteria;
+import edu.umkc.rupee.dir.DirSearchRecord;
 import edu.umkc.rupee.ecod.EcodHash;
 import edu.umkc.rupee.ecod.EcodImport;
 import edu.umkc.rupee.ecod.EcodSearch;
@@ -68,7 +73,7 @@ public class Main {
     public static void main(String[] args) {
 
         Options options = new Options();
-    
+        
         OptionGroup group = new OptionGroup();
 
         group.addOption(Option.builder("i")
@@ -169,7 +174,7 @@ public class Main {
         }
     }
     
-    private static void option_i(CommandLine line) {
+    private static void option_i(CommandLine line) throws Exception {
 
         Set<String> dbTypeNames = new HashSet<>(Arrays.stream(DbType.values()).map(v -> v.name()).collect(Collectors.toList()));
         
@@ -194,9 +199,17 @@ public class Main {
             EcodImport ecodImport = new EcodImport();
             ecodImport.importGrams();
         }
-        else { // CHAIN
+        else if (dbType == DbType.CHAIN) { 
             ChainImport chainImport = new ChainImport();
             chainImport.importGrams();
+        }
+        else { // DIR
+
+            // first initialize dir tables
+            Db.initDir(); 
+
+            DirImport dirImport = new DirImport();
+            dirImport.importGrams();
         }
         
         System.out.println("Done importing!");
@@ -227,9 +240,13 @@ public class Main {
             EcodHash ecodHash = new EcodHash();
             ecodHash.hash();
         }
-        else { // CHAIN
+        else if (dbType == DbType.CHAIN) { 
             ChainHash chainHash = new ChainHash();
             chainHash.hash(); 
+        }
+        else { // DIR
+            DirHash dirHash = new DirHash();
+            dirHash.hash();
         }
         
         System.out.println("Done hashing!");
@@ -434,7 +451,15 @@ public class Main {
         String idOrPath = args[1];
         DbType idDbType = DbType.INVALID;
         if (searchBy == SearchBy.DB_ID) {
-            idDbType = DbId.getIdDbType(idOrPath);  
+            
+            if (dbType == DbType.DIR) {
+
+                // if we are searching DIR the id has to be DIR
+                idDbType = DbType.DIR;
+            }
+            else {
+                idDbType = DbId.getIdDbType(idOrPath);  
+            }
         }
         else { // searchBy == SearchBy.UPLOAD
 
@@ -681,7 +706,7 @@ public class Main {
                 );
             }
         }
-        else { // CHAIN
+        else if (dbType == DbType.CHAIN) { // CHAIN
             
             ChainSearchCriteria criteria = new ChainSearchCriteria();
             
@@ -729,10 +754,58 @@ public class Main {
                 );
             }
         }
+        else { // DIR
+            
+            DirSearchCriteria criteria = new DirSearchCriteria();
+            
+            criteria.searchBy = searchBy;
+            criteria.idDbType = idDbType;
+            criteria.searchDbType = dbType;
+            criteria.dbId = idOrPath;
+            if (criteria.searchBy == SearchBy.UPLOAD) {
+                criteria.uploadId = uploadId;
+            }
+
+            criteria.limit = limit;
+            criteria.searchType = searchType;
+            criteria.searchMode = searchMode;
+            criteria.sortBy = sortBy;
+
+            DirSearch dirSearch = new DirSearch();
+            SearchResults results = dirSearch.search(criteria);
+            List<SearchRecord> records = results.getRecords();
+
+            // column headers 
+            if (printColumns) {
+                String columns = "n,db_id_1,db_id_2,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
+                if (searchBy == SearchBy.UPLOAD) {
+                    columns = "n,file_name,db_id,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
+                }
+                System.out.println(columns);
+            }   
+        
+            for (SearchRecord baseRecord : records) {
+           
+                DirSearchRecord record = (DirSearchRecord) baseRecord;
+
+                // gathering results
+                System.out.printf("%d,%s,%s,%.4f,%.4f,%.4f,%.4f,%s,%s\n",
+                    record.getN(),
+                    criteria.dbId,
+                    record.getDbId(),
+                    record.getRmsd(),
+                    record.getTmScore(),
+                    record.getQScore(),
+                    record.getSsapScore(),
+                    criteria.searchMode.name().toLowerCase(),
+                    criteria.searchType.name().toLowerCase()
+                );
+            }
+        }
     }
 
     private static void option_d(CommandLine line) throws Exception {
-       
+      
         /*
         ChainDefs.printChains("/home/ayoub/git/rupee/data/pdb/pdb");
         ChainDefs.printChains("/home/ayoub/git/rupee/data/pdb/obsolete");

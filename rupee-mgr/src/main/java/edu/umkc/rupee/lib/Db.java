@@ -1,5 +1,8 @@
 package edu.umkc.rupee.lib;
 
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -177,6 +180,33 @@ public class Db {
         conn.close();
 
         return hashes;
+    }
+    
+    // *********************************************************************
+    // User-Defined DIR
+    // *********************************************************************
+
+    public static void initDir() throws Exception {
+
+        String[] chains = Files.list(Paths.get(Constants.DIR_PATH))
+            .map(Path::getFileName)
+            .map(Path::toString)
+            .filter(f -> f.endsWith(".pdb"))
+            .map(f -> f.substring(0, f.length() - ".pdb".length()))
+            .sorted()
+            .toArray(String[]::new);
+    
+        PGSimpleDataSource ds = Db.getDataSource();
+
+        Connection conn = ds.getConnection();
+        conn.setAutoCommit(true);
+
+        PreparedStatement updt = conn.prepareCall("SELECT insert_dir_chains(?);");
+        updt.setArray(1, conn.createArrayOf("VARCHAR", chains));
+        updt.execute();
+
+        updt.close();
+        conn.close();
     }
 }
 

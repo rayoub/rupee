@@ -30,6 +30,7 @@ import edu.umkc.rupee.defs.SearchType;
 import edu.umkc.rupee.defs.SortBy;
 import edu.umkc.rupee.lib.Constants;
 import edu.umkc.rupee.lib.Db;
+import edu.umkc.rupee.lib.FileUtils;
 import edu.umkc.rupee.lib.Grams;
 import edu.umkc.rupee.lib.Hashes;
 import edu.umkc.rupee.lib.LCS;
@@ -117,28 +118,37 @@ public abstract class Search {
             PDBFileReader reader = new PDBFileReader();
             reader.setFetchBehavior(FetchBehavior.LOCAL_ONLY);
 
-            String fileName = "";
             Structure structure = null;
             if (criteria.searchBy == SearchBy.DB_ID) {
 
-                fileName = criteria.idDbType.getImportPath() + criteria.dbId + ".pdb.gz";
+                String fileName = criteria.idDbType.getImportPath() + criteria.dbId;
+                String fileNameWithExt = FileUtils.appendExt(fileName);
                 
-                FileInputStream queryFile = new FileInputStream(fileName);
-                GZIPInputStream queryFileGz = new GZIPInputStream(queryFile);
+                FileInputStream inputStream = new FileInputStream(fileNameWithExt);
+                GZIPInputStream gzipInputStream = null;
+                
+                if (fileNameWithExt.endsWith("gz")) {
+                    gzipInputStream = new GZIPInputStream(inputStream);
+                    structure = reader.getStructure(gzipInputStream);
+                } 
+                else {
+                    structure = reader.getStructure(inputStream); 
+                }
 
-                structure = reader.getStructure(queryFileGz);
-
-                queryFileGz.close();
-                queryFile.close();
+                inputStream.close();
+                if (gzipInputStream != null) {
+                    gzipInputStream.close();
+                }
             }
             else { // UPLOAD
                 
-                fileName = Constants.UPLOAD_PATH + criteria.uploadId + ".pdb";
-                FileInputStream queryFile = new FileInputStream(fileName);
+                String fileName = Constants.UPLOAD_PATH + criteria.uploadId + ".pdb";
 
-                structure = reader.getStructure(queryFile);
+                FileInputStream inputStream = new FileInputStream(fileName);
+
+                structure = reader.getStructure(inputStream);
                 
-                queryFile.close();
+                inputStream.close();
             }
 
             if (criteria.searchMode != SearchMode.ALL_ALIGNED) {
@@ -151,7 +161,7 @@ public abstract class Search {
                     .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
                     .limit(INITIAL_FILTER) 
                     .collect(Collectors.toList());
-              
+
                 // cache map of residue grams
                 List<String> dbIds = records.stream().map(SearchRecord::getDbId).collect(Collectors.toList());
                 Map<String, Grams> map = Db.getGrams(dbIds, criteria.searchDbType, false);
@@ -174,7 +184,7 @@ public abstract class Search {
                             }
                         }
                     });
-
+                
                 // sort lcs candidates
                 records = records.stream()
                     .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
@@ -223,7 +233,7 @@ public abstract class Search {
                 records = records.stream()
                     .limit(alignmentFilter(TmMode.FAST, grams1.getLength()))
                     .collect(Collectors.toList());
-                
+               
                 // perform fast alignments
                 records.stream().parallel().forEach(record -> align(criteria, record, queryStructure, TmMode.FAST));
 
@@ -384,15 +394,27 @@ public abstract class Search {
 
         try {
        
-            FileInputStream targetFile = new FileInputStream(getDbType().getImportPath() + record.getDbId() + ".pdb.gz");
-            GZIPInputStream targetFileGz = new GZIPInputStream(targetFile);
-
             Parser parser = new Parser(); 
 
-            Structure targetStructure = parser.parsePdbFile(targetFileGz);
+            String fileName = getDbType().getImportPath() + record.getDbId();
+            String fileNameWithExt = FileUtils.appendExt(fileName);
 
-            targetFileGz.close();
+            FileInputStream targetFile = new FileInputStream(fileNameWithExt);
+            GZIPInputStream targetFileGz = null;
+
+            Structure targetStructure = null;
+            if (fileNameWithExt.endsWith("gz")) {
+                targetFileGz = new GZIPInputStream(targetFile);
+                targetStructure = parser.parsePdbFile(targetFileGz);
+            } 
+            else {
+                targetStructure = parser.parsePdbFile(targetFile);
+            }
+
             targetFile.close();
+            if (targetFileGz != null) {
+                targetFileGz.close();
+            }
 
             Kabsch kabsch = KabschTLS.get();     
             TmAlign tm = new TmAlign(queryStructure, targetStructure, mode, kabsch);

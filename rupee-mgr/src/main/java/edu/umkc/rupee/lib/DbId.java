@@ -84,7 +84,7 @@ public class DbId {
     public static String getAlternateId(String id) {
 
         String alt = "";
-        
+
         if (isCathId(id)) {
             String suffix = id.substring(4, id.length());
             if (isStringLowerCase(suffix)) {
@@ -122,7 +122,7 @@ public class DbId {
         return alt;
     }
 
-    public static boolean isStringLowerCase(String str){
+    private static boolean isStringLowerCase(String str){
         
         // convert String to char array
         char[] charArray = str.toCharArray();

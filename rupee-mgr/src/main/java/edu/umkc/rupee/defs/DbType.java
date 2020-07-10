@@ -3,8 +3,9 @@ package edu.umkc.rupee.defs;
 import edu.umkc.rupee.lib.Constants;
 
 public enum DbType {
-    
-    INVALID(0, "Invalid", "invalid", ""),
+   
+    INVALID(-1, "Invalid", "invalid", ""),  
+    DIR(0, "Directory", "dir", Constants.DIR_PATH),
     SCOP(1, "SCOPe", "scop", Constants.SCOP_PATH),
     CATH(2, "CATH", "cath", Constants.CATH_PATH),
     ECOD(3, "ECOD", "ecod", Constants.ECOD_PATH),
@@ -39,7 +40,10 @@ public enum DbType {
     }
 
     public static DbType fromId(int id) {
-        if (id == SCOP.getId()) {
+        if (id == DIR.getId()) {
+            return DIR;
+        }
+        else if (id == SCOP.getId()) {
             return SCOP;
         }
         else if (id == CATH.getId()) {
