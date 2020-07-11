@@ -1,0 +1,100 @@
+2XSN B 2,19,3.5,0.0070,0.8,10.5,Crystal Structure Of Human Tyrosine Hydroxylase Catalytic Domainÿ
+2XSN D 2,19,3.5,0.0062,0.9,10.5,Crystal Structure Of Human Tyrosine Hydroxylase Catalytic Domainÿ
+2TOH A 3,19,3.5,0.0062,0.9,10.5,Tyrosine Hydroxylase Catalytic And Tetramerization Domains From Rat
+1TOH A 3,19,3.5,0.0062,0.9,10.5,Tyrosine Hydroxylase Catalytic And Tetramerization Domains From Rat
+2XSN A 2,19,3.5,0.0064,0.9,10.5,Crystal Structure Of Human Tyrosine Hydroxylase Catalytic Domainÿ
+2XSN C 2,19,3.5,0.0062,0.9,10.5,Crystal Structure Of Human Tyrosine Hydroxylase Catalytic Domainÿ
+4YC7 B 1,17,3.7,0.0481,1.0,23.5,Crystal Structure Of Human Fmnl2 Gbd-fh3 Domains Bound To Cdc42-gppnhp
+2X4L A 2,12,3.5,0.0425,1.2,8.3,Crystal Structure Of Dese, A Ferric-Siderophore Receptor Protein From Streptomyces Coelicolorÿ
+1E9Z A 3,12,3.5,0.0121,1.2,16.7,Crystal Structure Of Helicobacter Pylori Urease
+2RNR A ,16,4.2,0.0044,1.2,0.0,Solution Structure Of The Complex Between Tfiie Alpha C- Terminal Acidic Domain And Tfiih P62 Ph Domain
+1Y64 A 3,17,3.5,0.0479,1.4,5.9,Bni1p Formin Homology 2 Domain Complexed With Atp-Actin
+3PIC A 1,13,3.4,0.0412,1.4,7.7,Glucuronoyl Esterase Catalytic Domain (Cip2_ge) From Hypocrea Jecorinaÿ
+3PIC B 1,13,3.3,0.0471,1.5,7.7,Glucuronoyl Esterase Catalytic Domain (Cip2_ge) From Hypocrea Jecorinaÿ
+2GJW B 3,18,4.2,0.0169,1.5,16.7,Rna Recognition And Cleavage By An Splicing Endonucleaseÿ
+2GJW C 3,18,4.1,0.0178,1.5,16.7,Rna Recognition And Cleavage By An Splicing Endonucleaseÿ
+2QR4 A 3,23,4.5,0.0020,1.5,0.0,Crystal Structure Of Oligoendopeptidase-F From Enterococcus Faecium
+2QR4 B 3,26,4.3,0.0039,1.5,0.0,Crystal Structure Of Oligoendopeptidase-F From Enterococcus Faecium
+4FZ2 A 3,23,4.7,0.0381,1.5,4.3,Crystal Structure Of The Fourth Type Of Archaeal Trna Splicing Endonuclease From Candidatus Micrarchaeum Acidiphilum Arman-2
+2KQ9 A 1,14,3.5,0.0479,1.6,7.1,Solution Structure Of Dnak Suppressor Protein From Agrobacterium Tumefaciens C58. Northeast Structural Genomics Consortium Target Att12ONTARIO CENTER FOR Structural Proteomics Target Atc0888ÿ
+3G4S B 1,30,4.4,0.0284,1.6,10.0,Co-Crystal Structure Of Tiamulin Bound To The Large Ribosomal Subunitÿ
+1VQO B 1,30,4.4,0.0310,1.6,10.0,The Structure Of Ccpmn Bound To The Large Ribosomal Subunit Haloarcula Marismortui
+3CC4 B 1,30,4.5,0.0215,1.6,10.0,Co-Crystal Structure Of Anisomycin Bound To The 50s Ribosomal Subunit
+3G71 B 1,30,4.5,0.0236,1.6,10.0,Co-Crystal Structure Of Bruceantin Bound To The Large Ribosomal Subunitÿ
+3CCE B 1,30,4.5,0.0228,1.6,10.0,Structure Of Anisomycin Resistant 50s Ribosomal Subunit: 23s Rrna Mutation U2535a
+3CC7 B 1,30,4.4,0.0263,1.6,10.0,Structure Of Anisomycin Resistant 50s Ribosomal Subunit: 23s Rrna Mutation C2487u
+3I56 B 1,30,4.5,0.0216,1.6,10.0,Co-Crystal Structure Of Triacetyloleandomcyin Bound To The Large Ribosomal Subunitÿ
+3G6E B 1,30,4.4,0.0249,1.6,10.0,Co-Crystal Structure Of Homoharringtonine Bound To The Large Ribosomal Subunitÿ
+3CD6 B 1,30,4.4,0.0272,1.6,10.0,Co-Cystal Of Large Ribosomal Subunit Mutant G2616a With Cc- Puromycin
+1YIT B 1,31,4.4,0.0297,1.6,9.7,Crystal Structure Of Virginiamycin M And S Bound To The 50s Ribosomal Subunit Of Haloarcula Marismortuiÿ
+1VQ4 B 1,31,4.4,0.0290,1.7,9.7,The Structure Of The Transition State Analogue "daa" Bound To The Large Ribosomal Subunit Of Haloarcula Marismortuiÿ
+4BJN F 1,41,4.0,0.0156,1.7,12.2,Crystal Structure Of The Flax-rust Effector Avrm-a
+3IEY A 1,17,4.1,0.0180,1.7,0.0,Crystal Structure Of The Functional Nanoarchaeum Equitans Trna Splicing Endonucleaseÿ
+3CCJ B 1,35,4.4,0.0380,1.7,11.4,Structure Of Anisomycin Resistant 50s Ribosomal Subunit: 23s Rrna Mutation C2534u
+2O3E A 3,31,5.2,10e-4.3,1.7,9.7,Crystal Structure Of Engineered Neurolysin With Thimet Oligopeptidase Specificity For Neurotensin Cleavage Site
+1U2Z C 1,19,4.6,0.0039,1.7,5.3,Crystal Structure Of Histone K79 Methyltransferase Dot1p From Yeast
+3K1L A 5,12,3.5,0.0089,1.8,8.3,E3 Ligaseÿ
+4KA8 A 3,34,4.1,0.0308,1.8,8.8,Structure Of Organellar Oligopeptidase
+4KA7 A 3,33,4.5,0.0088,1.8,9.1,Structure Of Organellar Oligopeptidase (e572q) In Complex With An Endogenous Substrate
+4FZ2 B 3,29,4.7,0.0421,1.8,3.4,Crystal Structure Of The Fourth Type Of Archaeal Trna Splicing Endonuclease From Candidatus Micrarchaeum Acidiphilum Arman-2
+3T4R A ,35,4.7,0.0068,1.9,11.4,Lettuce Necrotic Yellow Virus Phosphoprotein C-terminal Domain
+3PIC C 1,13,3.3,0.0440,1.9,15.4,Glucuronoyl Esterase Catalytic Domain (Cip2_ge) From Hypocrea Jecorinaÿ
+2OXO A ,24,4.6,0.0310,1.9,4.2,Crystallization And Structure Determination Of The Core- Binding Domain Of Bacteriophage Lambda Integrase
+3ON6 A 1,31,3.7,0.0362,1.9,3.2,Crystal Structure Of A Bacterial Protein Of Unknown Function (Bacova_03626) From Bacteroides Ovatus At 1.70 A Resolutionÿ
+2YRF B 1,30,4.4,0.0475,1.9,16.7,Crystal Structure Of 5-Methylthioribose 1-Phosphate Isomerase From Bacillus Subtilis Complexed With Sulfate Ion
+1ZQ1 C 3,28,4.3,0.0071,1.9,10.7,Structure Of Gatde Trna-Dependent Amidotransferase From Pyrococcus Abyssiÿ
+4PUT A 2,33,4.3,0.0193,1.9,9.1,Crystal Structure Of The Arabidopsis Thaliana Top2 Oligopeptidase
+1S4B P 3,33,5.2,0.0003,1.9,9.1,Crystal Structure Of Human Thimet Oligopeptidase
+2PLA A 2,35,5.0,0.0385,1.9,8.6,Crystal Structure Of Human Glycerol-3-Phosphate Dehydrogenase 1-Like Protein
+2O36 A 3,33,5.2,0.0003,1.9,9.1,Crystal Structure Of Engineered Thimet Oligopeptidase With Neurolysin Specificity In Neurotensin Cleavage Site
+2PLA B 2,35,5.2,0.0214,1.9,8.6,Crystal Structure Of Human Glycerol-3-Phosphate Dehydrogenase 1-Like Protein
+1YJ8 C 2,38,5.2,0.0230,2.0,10.5,Initial Structural Analysis Of Plasmodium Falciparum Glycerol-3-Phosphate Dehydrogenase
+1YJ8 B 2,38,5.2,0.0225,2.0,10.5,Initial Structural Analysis Of Plasmodium Falciparum Glycerol-3-Phosphate Dehydrogenase
+2LXW A ,23,3.5,0.0062,2.0,4.3,The Solution Structure Of Xiap(ring)-binding Domain Of Human Xaf1
+1YJ8 A 2,39,5.2,0.0262,2.0,10.3,Initial Structural Analysis Of Plasmodium Falciparum Glycerol-3-Phosphate Dehydrogenase
+1ZQ1 D 3,33,4.2,0.0152,2.0,9.1,Structure Of Gatde Trna-Dependent Amidotransferase From Pyrococcus Abyssiÿ
+1U2Z B 1,19,4.6,0.0039,2.0,5.3,Crystal Structure Of Histone K79 Methyltransferase Dot1p From Yeast
+4LJQ D 1,26,4.7,0.0293,2.1,7.7,Crystal Structure Of The Catalytic Core Of E3 Ligase Hoip
+4LJQ A 1,26,4.6,0.0299,2.1,7.7,Crystal Structure Of The Catalytic Core Of E3 Ligase Hoip
+4LJQ C 1,26,4.8,0.0220,2.1,7.7,Crystal Structure Of The Catalytic Core Of E3 Ligase Hoip
+1WPQ A 2,37,5.2,0.0262,2.1,8.1,Ternary Complex Of Glycerol 3-Phosphate Dehydrogenase 1 With Nad And Dihydroxyactone
+1U2Z A 1,20,4.5,0.0051,2.1,5.0,Crystal Structure Of Histone K79 Methyltransferase Dot1p From Yeast
+1X0X A 2,37,5.1,0.0313,2.1,8.1,Co-Structure Of Homo Sspiens Glycerol-3-Phosphate Dehydrogenase 1 Complex With Nad
+2X48 C ,24,3.8,0.0433,2.1,0.0,Orf 55 From Sulfolobus Islandicus Rudivirus 1ÿ
+1WPQ B 2,37,5.2,0.0224,2.1,8.1,Ternary Complex Of Glycerol 3-Phosphate Dehydrogenase 1 With Nad And Dihydroxyactone
+1Z1G D 2,30,4.4,0.0467,2.1,6.7,Crystal Structure Of A Lambda Integrase Tetramer Bound To A Holliday Junctionÿ
+1X0V A 2,36,5.1,0.0331,2.1,8.3,Crystal Structure Of Homo Sapien Glycerol-3-Phosphate Dehydrogenase 1
+1I1I P 3,35,5.3,0.0001,2.1,8.6,Neurolysin (Endopeptidase 24.16) Crystal Structure
+5DEN A 4,21,3.5,0.0062,2.2,9.5,The First Structure Of A Full-length Mammalian Phenylalanine Hydroxylase Reveals The Architecture Of An Auto-inhibited Tetramer
+5DEN D 4,21,3.5,0.0094,2.2,9.5,The First Structure Of A Full-length Mammalian Phenylalanine Hydroxylase Reveals The Architecture Of An Auto-inhibited Tetramer
+1ZHC A ,41,3.9,0.0230,2.2,4.9,Solution Structure Of Hp1242 From Helicobacter Pyloriÿ
+1Z82 A 2,40,5.2,0.0221,2.3,10.0,Crystal Structure Of Glycerol-3-Phosphate Dehydrogenase (Tm0378) From Thermotoga Maritima At 2.00 A Resolution
+2FM9 A 1,42,4.6,0.0021,2.3,2.4,Structure Of Salmonella Sipa Residues 48-264
+3CKD A 1,27,4.2,0.0372,2.3,11.1,Crystal Structure Of The C-Terminal Domain Of The Shigella Type Iii Effector Ipah
+4V06 B 2,12,3.5,0.0062,2.4,16.7,Crystal Structure Of Human Tryptophan Hydroxylase 2 (tph2), Catalytic Domain
+2LWX A ,49,5.2,0.0004,2.4,2.0,Solution Structure Of The C-Terminal Pdr1-Activating Domain Of The J- Protein Zuo1
+2X48 A ,29,4.0,0.0237,2.4,6.9,Orf 55 From Sulfolobus Islandicus Rudivirus 1ÿ
+1OD2 A 2,12,3.5,0.0425,2.5,0.0,Acetyl-Coa Carboxylase Carboxyltransferase Domain
+2X48 B ,31,3.8,0.0404,2.5,6.5,Orf 55 From Sulfolobus Islandicus Rudivirus 1ÿ
+1E9Y A 3,21,3.4,0.0422,2.6,9.5,Crystal Structure Of Helicobacter Pylori Urease In Complex With Acetohydroxamic Acid
+3SCK B 2,32,3.5,0.0473,2.7,6.2,Crystal Structure Of Spike Protein Receptor-Binding Domain From A Predicted Sars Coronavirus Civet Strain Complexed With Human-Civet Chimeric Receptor Ace2ÿ
+5DEN B 4,12,3.4,0.0240,2.7,8.3,The First Structure Of A Full-length Mammalian Phenylalanine Hydroxylase Reveals The Architecture Of An Auto-inhibited Tetramer
+3SCL A 2,32,3.8,0.0144,2.7,6.2,Crystal Structure Of Spike Protein Receptor-Binding Domain From Sars Coronavirus Epidemic Strain Complexed With Human-Civet Chimeric Receptor Ace2ÿ
+3D0G B 2,32,3.5,0.0494,2.7,6.2,Crystal Structure Of Spike Protein Receptor-Binding Domain From The 2002-2003 Sars Coronavirus Human Strain Complexed With Human-Civet Chimeric Receptor Ace2
+5DEN C 4,12,3.4,0.0374,2.7,8.3,The First Structure Of A Full-length Mammalian Phenylalanine Hydroxylase Reveals The Architecture Of An Auto-inhibited Tetramer
+2MXE A ,24,3.7,0.0248,2.7,4.2,Solution Structure Of The C-terminal Domain Of Mvat
+3SCI A 2,32,3.6,0.0431,2.7,6.2,Crystal Structure Of Spike Protein Receptor-Binding Domain From A Predicted Sars Coronavirus Human Strain Complexed With Human Receptor Ace2ÿ
+2AJF A 3,32,3.7,0.0191,2.7,6.2,Structure Of Sars Coronavirus Spike Receptor-Binding Domain Complexed With Its Receptorÿ
+3D0G A 3,32,3.7,0.0173,2.7,6.2,Crystal Structure Of Spike Protein Receptor-Binding Domain From The 2002-2003 Sars Coronavirus Human Strain Complexed With Human-Civet Chimeric Receptor Ace2
+1R42 A 3,32,3.6,0.0265,2.7,6.2,Native Human Angiotensin Converting Enzyme-Related Carboxypeptidase (Ace2)
+3D0H A 3,32,3.6,0.0305,2.7,6.2,Crystal Structure Of Spike Protein Receptor-Binding Domain From The 2002-2003 Sars Coronavirus Civet Strain Complexed With Human-Civet Chimeric Receptor Ace2
+2W4S D ,24,5.2,0.0487,2.7,8.3,Novel Rna-Binding Domain In Cryptosporidium Parvum At 2.5 Angstrom Resolutionÿ
+3D0I A 3,32,3.6,0.0327,2.7,6.2,Crystal Structure Of Spike Protein Receptor-Binding Domain From The 2005-2006 Sars Coronavirus Civet Strain Complexed With Human-Civet Chimeric Receptor Ace2
+2YQY B ,49,5.0,0.0153,2.8,8.2,Crystal Structure Of Tt2238, A Four-Helix Bundle Protein
+2MXF A ,24,3.6,0.0284,2.9,4.2,Structure Of The Dna Complex Of The C-terminal Domain Of Mvat
+3SEO B 2,44,5.5,0.0107,3.0,6.8,Crystal Structure Of Vopl C Terminal Domainÿ
+4M63 B 2,44,5.2,0.0342,3.0,9.1,Crystal Structure Of A Filament-like Actin Trimer Bound To The Bacterial Effector Vopl
+3NRO B 2,34,4.4,0.0481,3.0,2.9,Crystal Structure Of Putative Transcriptional Factor Lmo1026 From Listeria Monocytogenes (Fragment 52-321), Northeast Structural Genomics Consortium Target Lmr194ÿ
+1H18 B 4,28,4.5,0.0430,3.0,14.3,Pyruvate Formate-Lyase (E.Coli) In Complex With Pyruvate
+3SEO A 2,43,5.1,0.0111,3.3,7.0,Crystal Structure Of Vopl C Terminal Domainÿ
+1R4L A 3,30,3.6,0.0300,3.4,10.0,Inhibitor Bound Human Angiotensin Converting Enzyme-Related Carboxypeptidase (Ace2)

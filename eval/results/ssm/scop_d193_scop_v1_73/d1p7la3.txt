@@ -1,0 +1,19 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;"> PDBe Fold v2.59. (src3) 14 Apr 2014 result file.
+
+                   RESULT SUMMARY
+
+   ##      Q-score      P-score     Z-score   RMSD    Nalgn Nsse Ngaps Seq-%     Nmd Nres-Q Nsse-Q Nres-T Nsse-T Query Target
+    1           1       32.97       17.19     0.000   152    8    0           1    0    152      8    152      8    SCOP d1p7la3  SCOP d1rg9a3
+    2           1       32.97       17.19     0.000   152    8    0           1    0    152      8    152      8    SCOP d1p7la3  SCOP d1p7la3
+    3      0.9998       21.83       13.98     0.039   152    8    0           1    0    152      8    152      9    SCOP d1p7la3  SCOP d1rg9b3
+    4      0.9998       21.83       13.98     0.039   152    8    0           1    0    152      8    152      9    SCOP d1p7la3  SCOP d1p7lb3
+    5      0.9997       28.29        15.9     0.052   152    8    0           1    0    152      8    152      8    SCOP d1p7la3  SCOP d1rg9c3
+    6      0.9997       28.29        15.9     0.052   152    8    0           1    0    152      8    152      8    SCOP d1p7la3  SCOP d1p7lc3
+    7      0.9997        21.9       13.94     0.054   152    8    0           1    0    152      8    152      8    SCOP d1p7la3  SCOP d1p7ld3
+    8      0.9997       21.72       13.94     0.054   152    8    0           1    0    152      8    152      9    SCOP d1p7la3  SCOP d1rg9d3
+    9      0.9226       11.69       11.27     0.000   146    6    1           1    0    152      8    152      8    SCOP d1p7la3  SCOP d1xraa3
+   10        0.91       12.51       12.21     0.000   145    6    1           1    0    152      8    152      8    SCOP d1p7la3  SCOP d1xrca3
+   11      0.8975       11.23       10.97     0.000   144    6    1           1    0    152      8    152      8    SCOP d1p7la3  SCOP d1mxaa3
+   12      0.8975       11.23       10.97     0.000   144    6    1           1    0    152      8    152      8    SCOP d1p7la3  SCOP d1xrba3
+   13      0.8975       11.23       10.97     0.000   144    6    1           1    0    152      8    152      8    SCOP d1p7la3  SCOP d1mxba3
+</pre></body></html>

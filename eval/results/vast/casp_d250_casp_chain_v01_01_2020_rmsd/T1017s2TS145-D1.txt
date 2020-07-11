@@ -1,0 +1,180 @@
+2JPB A 1,17,5.2,0.0308,0.9,5.9,Solution Structure Of Ompr-C Dna Binding Protein
+3EB8 B 1,34,6.7,0.0012,0.9,17.6,Vira
+2RV8 A 1,16,5.2,0.0308,0.9,0.0,Solution Structure Of The Phop Dna-binding Domain From Mycobacterium Tuberculosis
+3EE1 A 2,35,7.0,10e-4.1,1.0,14.3,Novel Fold Of Vira, A Type Iii Secretion System Effector Protein From Shigella Flexneriÿ
+3EE1 B 2,35,7.0,10e-4.1,1.0,14.3,Novel Fold Of Vira, A Type Iii Secretion System Effector Protein From Shigella Flexneriÿ
+2PMU B 1,16,5.2,0.0355,1.0,18.8,Crystal Structure Of The Dna-Binding Domain Of Phopÿ
+2PMU E 1,16,5.2,0.0366,1.0,18.8,Crystal Structure Of The Dna-Binding Domain Of Phopÿ
+4NHJ B 1,16,5.2,0.0308,1.0,12.5,Crystal Structure Of Klebsiella Pneumoniae Rsta Dna-binding Domain In Complex With Rsta Box
+2PMU F 1,16,5.2,0.0308,1.1,18.8,Crystal Structure Of The Dna-Binding Domain Of Phopÿ
+2PMU C 1,16,5.2,0.0308,1.1,18.8,Crystal Structure Of The Dna-Binding Domain Of Phopÿ
+3NPE A 2,20,5.2,0.0340,1.2,20.0,Structure Of Vp14 In Complex With Oxygenÿ
+3WSX A 5,20,5.2,0.0308,1.2,10.0,Sorla Vps10p Domain In Ligand-free Form
+2J57 I 4,23,5.2,0.0462,1.2,0.0,X-Ray Reduced Paraccocus Denitrificans Methylamine Dehydrogenase N-Quinol In Complex With Amicyanin
+3UNH K 2,31,7.0,0.0047,1.2,9.7,Mouse 20s Immunoproteasomeÿ
+3UNH Y 2,31,7.0,0.0047,1.2,9.7,Mouse 20s Immunoproteasomeÿ
+3PQH A 2,16,5.2,0.0415,1.2,25.0,Crystal Structure Of The C-Terminal Fragment Of The Bacteriophage Phi92 Membrane-Piercing Protein Gp138ÿ
+4AZM A 2,34,6.9,0.0193,1.2,8.8,Human Epidermal Fatty Acid-binding Protein (fabp5) In Complex With The Inhibitor Bms-309413
+1L9U C 4,23,5.2,0.0308,1.2,13.0,Thermus Aquaticus Rna Polymerase Holoenzyme At 4 A Resolution
+1L9U L 4,23,5.2,0.0308,1.2,13.0,Thermus Aquaticus Rna Polymerase Holoenzyme At 4 A Resolution
+3P37 C 2,35,7.0,0.0117,1.2,5.7,Polo-Like Kinase I Polo-Box Domain In Complex With Fdpplhspta Phosphopeptide From Pbip1ÿ
+4AZR A 2,35,6.9,0.0248,1.3,11.4,Human Epidermal Fatty Acid-binding Protein (fabp5) In Complex With The Endocannabinoid Anandamide
+1Q79 A 2,36,8.0,0.0020,1.3,11.1,Crystal Structure Of Mammalian Poly(A) Polymerase
+4AZM B 2,35,6.8,0.0075,1.3,8.6,Human Epidermal Fatty Acid-binding Protein (fabp5) In Complex With The Inhibitor Bms-309413
+1EWJ F 1,30,5.7,0.0377,1.3,13.3,Crystal Structure Of Bleomycin-Binding Protein Complexed With Bleomycin
+1EWJ D 1,30,5.7,0.0407,1.3,13.3,Crystal Structure Of Bleomycin-Binding Protein Complexed With Bleomycin
+2GU1 A 1,32,6.5,0.0468,1.3,9.4,Crystal Structure Of A Zinc Containing Peptidase From Vibrio Cholerae
+4NKB B 1,35,6.8,0.0240,1.3,2.9,Crystal Structure Of The Cryptic Polo Box (cpb)of Zyg-1
+4E9D A 2,35,6.8,0.0284,1.4,5.7,The Structure Of The Polo-Box Domain (Pbd) Of Polo-Like Kinase 1 (Plk1) In Complex With 3-(1-Benzothiophen-2-Yl)propanoyl-Derivatized Dpplhspta Peptide
+1EWJ A 1,30,5.6,0.0454,1.4,13.3,Crystal Structure Of Bleomycin-Binding Protein Complexed With Bleomycin
+1UTC A 2,28,5.2,0.0446,1.4,3.6,Clathrin Terminal Domain Complexed With Tlpwdlwtt
+4HAB C 1,31,7.0,0.0107,1.4,6.5,Crystal Structure Of Plk1 Polo-box Domain In Complex With Pl-49
+3F7F D 3,31,5.2,0.0500,1.4,6.5,Structure Of Nup120ÿ
+1ECS B 1,31,6.2,0.0086,1.4,12.9,The 1.7 A Crystal Structure Of A Bleomycin Resistance Determinant Encoded On The Transposon Tn5
+4NKB A 1,36,6.9,0.0167,1.4,2.8,Crystal Structure Of The Cryptic Polo Box (cpb)of Zyg-1
+2BIW B 2,23,5.2,0.0308,1.4,8.7,Crystal Structure Of Apocarotenoid Cleavage Oxygenase From Synechocystis, Native Enzyme
+4NKT B 2,42,8.0,0.0005,1.4,9.5,Structure Of Cid1 In Complex With The Utp Analog Umpnpp
+4AZR B 2,33,6.9,0.0196,1.4,12.1,Human Epidermal Fatty Acid-binding Protein (fabp5) In Complex With The Endocannabinoid Anandamide
+4NKU B 2,42,7.7,0.0021,1.4,9.5,Structure Of Cid1 In Complex With Its Short Product Apu
+4FMC C 1,39,6.9,0.0184,1.4,20.5,Espg-Rab1 Complex
+1F5A A 2,37,7.9,0.0050,1.4,8.1,Crystal Structure Of Mammalian Poly(A) Polymerase
+5CJ3 A 1,33,5.8,0.0308,1.4,18.2,Crystal Structure Of The Zorbamycin Binding Protein (zbma) From Streptomyces Flavoviridis With Zorbamycin
+1Q4O B 2,36,7.0,0.0107,1.4,5.6,The Structure Of The Polo Box Domain Of Human Plk1
+4FMA D 1,39,6.9,0.0113,1.4,20.5,Espg Structure
+4FMA C 1,39,6.9,0.0139,1.4,20.5,Espg Structure
+4FMA H 1,38,6.9,0.0117,1.4,21.1,Espg Structure
+1JIE B 1,33,5.6,0.0459,1.4,9.1,Crystal Structure Of Bleomycin-Binding Protein From Bleomycin-Producing Streptomyces Verticillus Complexed With Metal-Free Bleomycin
+4HY2 A 2,36,7.0,0.0107,1.4,5.6,Crystal Structure Of Plk1 Polo-box Domain In Complex With Pl-42
+2KD2 A 2,30,6.1,0.0230,1.4,10.0,Nmr Structure Of Faim-Ctdÿ
+4HAB A 2,37,7.0,0.0107,1.4,5.4,Crystal Structure Of Plk1 Polo-box Domain In Complex With Pl-49
+1Q4K A 2,36,6.9,0.0165,1.4,5.6,The Polo-Box Domain Of Plk1 In Complex With A Phospho- Peptide
+4FMA F 1,39,6.9,0.0119,1.4,20.5,Espg Structure
+4FMC E 1,39,7.0,0.0104,1.4,20.5,Espg-Rab1 Complex
+4FMA G 1,39,6.9,0.0136,1.5,20.5,Espg Structure
+1XRK B 1,33,5.7,0.0381,1.5,12.1,Crystal Structure Of A Mutant Bleomycin Binding Protein From Streptoalloteichus Hindustanus Displaying Increased Thermostability
+4FMA E 1,39,7.0,0.0098,1.5,20.5,Espg Structure
+4FMA K 1,39,7.0,0.0106,1.5,20.5,Espg Structure
+5DMS C 2,36,6.9,0.0141,1.5,5.6,Mouse Polo-box Domain And Emi2 (169-177)
+4H71 A 2,36,6.9,0.0179,1.5,5.6,Human Plk1-Pbd In Complex With Poloxime ((E)-4-(Hydroxyimino)-2- Isopropyl-5-Methylcyclohexa-2,5-Dienone)
+2ZW6 B 2,31,5.9,0.0185,1.5,0.0,Crystal Structure Of Bleomycin N-Acetyltransferase From Bleomycin-Producing Streptomyces Verticillus Atcc15003ÿ
+4E67 A 2,36,7.0,0.0113,1.5,5.6,The Structure Of The Polo-Box Domain (Pbd) Of Polo-Like Kinase 1 (Plk1) In Complex With Hydrocinnamoyl-Derivatized Plhspta Peptide
+4X9W A 2,36,6.9,0.0138,1.5,5.6,Plk-1 Polo-box Domain In Complex With Bioactive Imidazolium-containing Phosphopeptide Macrocycle 4c
+5DNJ A 2,36,6.7,0.0437,1.5,5.6,Mouse Polo-box Domain And Peptide Analog 702
+4XB0 A 2,36,6.7,0.0385,1.5,11.1,Structure Of The Plk2 Polo-box Domain
+4FMA I 1,39,7.0,0.0106,1.5,20.5,Espg Structure
+4HAB B 2,36,7.0,0.0116,1.5,5.6,Crystal Structure Of Plk1 Polo-box Domain In Complex With Pl-49
+4LKL A 2,36,6.8,0.0228,1.5,5.6,Crystal Structure Of Plk1 Polo-box Domain In Complex With Pl-55
+4RCP A 2,36,7.0,0.0120,1.5,5.6,Crystal Structure Of Plk1 Polo-box Domain In Complex With Pl-2
+4XB0 B 2,34,6.8,0.0288,1.5,8.8,Structure Of The Plk2 Polo-box Domain
+1XRK A 1,33,5.6,0.0480,1.5,12.1,Crystal Structure Of A Mutant Bleomycin Binding Protein From Streptoalloteichus Hindustanus Displaying Increased Thermostability
+2ZW7 A 2,31,6.0,0.0128,1.5,0.0,Crystal Structure Of Bleomycin N-Acetyltransferase Complexed With Bleomycin A2 And Coenzyme Aÿ
+4X9R A 2,36,6.8,0.0214,1.5,5.6,Plk-1 Polo-box Domain In Complex With Bioactive Imidazolium-containing Phosphopeptide Macrocycle 3b
+3KLI A 2,20,5.2,0.0436,1.5,5.0,Crystal Structure Of Unliganded Azt-Resistant Hiv-1 Reverse Transcriptaseÿ
+5DMS A 2,36,6.8,0.0223,1.5,5.6,Mouse Polo-box Domain And Emi2 (169-177)
+5DMV C 2,36,6.8,0.0205,1.5,5.6,Polo-box Domain Of Mouse Polo-like Kinase 1 Complexed With Emi2 (146- 177)
+4LKM C 2,36,6.8,0.0274,1.5,5.6,Crystal Structure Of Plk1 Polo-box Domain In Complex With Pl-74
+4FMA B 1,39,6.9,0.0136,1.5,20.5,Espg Structure
+4X9V A 2,36,6.7,0.0351,1.5,5.6,Plk-1 Polo-box Domain In Complex With Bioactive Imidazolium-containing Phosphopeptide Macrocycle 3c
+3P37 A 2,36,7.0,0.0115,1.5,5.6,Polo-Like Kinase I Polo-Box Domain In Complex With Fdpplhspta Phosphopeptide From Pbip1ÿ
+4WHK A 2,36,6.8,0.0209,1.5,5.6,A New Class Of Peptidomimetics Targeting The Polo-box Domain Of Polo- Like Kinase 1
+4FMA L 1,39,7.0,0.0101,1.5,20.5,Espg Structure
+4HCO A 2,36,6.9,0.0150,1.5,5.6,Human Plk1-Pbd In Complex With Thymoquinone At The Phophopeptide Binding Site
+3HIH A 2,36,7.0,0.0122,1.5,5.6,Structure Of Human Plk1-Pbd With Glycerol And Sulfate In The Phophopeptide Binding Siteÿ
+2ZW7 B 2,31,5.9,0.0231,1.5,0.0,Crystal Structure Of Bleomycin N-Acetyltransferase Complexed With Bleomycin A2 And Coenzyme Aÿ
+1UMW A 2,36,6.9,0.0140,1.5,5.6,Structure Of A Human Plk1 Polo-Box DomainPHOSPHOPEPTIDE Complex
+4RS6 A 2,36,7.0,0.0107,1.5,11.1,Crystal Structure Of The C Domain Of Polo Like Kinase Ii In Homo Sapiens
+4J7B E 2,36,6.8,0.0328,1.5,2.8,Crystal Structure Of Polo-like Kinase 1
+3P35 C 2,36,7.0,0.0107,1.5,5.6,Polo-Like Kinase I Polo-Box Domain In Complex With Mqspspl Phosphopeptideÿ
+4CR3 D 2,30,6.7,0.0160,1.5,0.0,Deep Classification Of A Large Cryo-em Dataset Defines The Conformational Landscape Of The 26s Proteasome
+5A5B D 2,30,6.7,0.0160,1.5,0.0,Structure Of The 26s Proteasome-ubp6 Complex
+3FVH A 2,36,6.9,0.0164,1.5,5.6,Polo-Like Kinase 1 Polo Box Domain In Complex With Ac- Lhspta-Nh2 Peptideÿ
+4H5X B 2,36,6.8,0.0273,1.5,5.6,Human Plk1-Pbd With A Glycerol Bound At The Phophopeptide Binding Site
+4FMA J 1,39,7.0,0.0103,1.5,20.5,Espg Structure
+4WHH A 2,36,7.0,0.0107,1.5,5.6,A New Class Of Peptidomimetics Targeting The Polo-box Domain Of Polo- Like Kinase 1
+4O6W A 2,36,6.8,0.0237,1.5,5.6,Peptide-based Inhibitors Of Plk1 Polo-box Domain
+4E9C A 2,36,6.9,0.0125,1.5,5.6,The Structure Of The Polo-Box Domain (Pbd) Of Polo-Like Kinase 1 (Plk1) In Complex With Ldpplhspta Phosphopeptide
+3P36 A 2,36,6.8,0.0263,1.5,5.6,Polo-Like Kinase I Polo-Box Domain In Complex With Dpplhspta Phosphopeptide From Pbip1ÿ
+3RCE A 5,30,6.3,0.0105,1.5,6.7,Bacterial Oligosaccharyltransferase Pglbÿ
+3RQ7 A 2,36,6.8,0.0316,1.5,5.6,Polo-Like Kinase 1 Polo Box Domain In Complex With A C6h5(Ch2)8- Derivatized Peptide Inhibitorÿ
+1Q4O A 2,36,6.9,0.0186,1.5,5.6,The Structure Of The Polo Box Domain Of Human Plk1
+3BZI A 2,36,6.7,0.0468,1.5,5.6,Molecular And Structural Basis Of Polo-Like Kinase 1 Substrate Recognition: Implications In Centrosomal Localization
+4WHL A 2,37,6.8,0.0228,1.5,5.4,A New Class Of Peptidomimetics Targeting The Polo-box Domain Of Polo- Like Kinase 1
+3C5L A 2,36,6.9,0.0176,1.5,5.6,Polo-Like Kinase 1 Polo Box Domain In Complex With Pphspt Peptideÿ
+4H5X A 2,36,6.9,0.0200,1.5,5.6,Human Plk1-Pbd With A Glycerol Bound At The Phophopeptide Binding Site
+3P37 B 2,36,6.9,0.0196,1.5,5.6,Polo-Like Kinase I Polo-Box Domain In Complex With Fdpplhspta Phosphopeptide From Pbip1ÿ
+3P34 A 2,36,6.8,0.0275,1.5,5.6,Polo-Like Kinase I Polo-Box Domain In Complex With Mqsptpl Phosphopeptideÿ
+4WQT H 3,30,6.7,0.0191,1.5,13.3,Thermus Thermophilus Rna Polymerase Complexed With An Rna Cleavage Stimulating Factor (a Grea/gfh1 Chimeric Protein)
+4H71 B 2,36,6.8,0.0243,1.5,5.6,Human Plk1-Pbd In Complex With Poloxime ((E)-4-(Hydroxyimino)-2- Isopropyl-5-Methylcyclohexa-2,5-Dienone)
+1MDA J 3,29,5.2,0.0308,1.5,10.3,Crystal Structure Of An Electron-Transfer Complex Between Methylamine Dehydrogenase And Amicyanin
+4J7B B 2,36,6.8,0.0283,1.6,2.8,Crystal Structure Of Polo-like Kinase 1
+3ALA F 3,30,6.0,0.0242,1.6,3.3,Crystal Structure Of Vascular Adhesion Protein-1 In Space Group C2ÿ
+3P2Z A 2,37,6.9,0.0148,1.6,5.4,Polo-Like Kinase I Polo-Box Domain In Complex With Plhspta Phosphopeptide From Pbip1ÿ
+3P35 A 2,36,6.8,0.0232,1.6,5.6,Polo-Like Kinase I Polo-Box Domain In Complex With Mqspspl Phosphopeptideÿ
+4BTY A 2,30,6.2,0.0119,1.6,3.3,Crystal Structure Of Human Vascular Adhesion Protein-1 In Complex With Pyridazinone Inhibitors
+3A5P D 2,37,6.2,0.0139,1.6,13.5,Crystal Structure Of Hemagglutininÿ
+4NVS A 1,29,6.5,0.0147,1.6,6.9,Crystal Structure Of The Q18cp6_clod6 Protein From Glyoxalase Family. Northeast Structural Genomics Consortium Target Cfr3
+4NVS B 1,29,6.5,0.0151,1.6,6.9,Crystal Structure Of The Q18cp6_clod6 Protein From Glyoxalase Family. Northeast Structural Genomics Consortium Target Cfr3
+3P35 B 2,37,7.0,0.0107,1.6,5.4,Polo-Like Kinase I Polo-Box Domain In Complex With Mqspspl Phosphopeptideÿ
+3CWY A ,33,6.9,0.0315,1.6,9.1,Structure Of Cagd From H. Pylori Pathogenicity Island Crystallized In The Presence Of Cu(Ii) Ionsÿ
+3CWY A 1,33,6.9,0.0041,1.6,9.1,Structure Of Cagd From H. Pylori Pathogenicity Island Crystallized In The Presence Of Cu(Ii) Ionsÿ
+3CWX A ,33,6.6,0.0274,1.6,9.1,Crystal Structure Of Cagd From Helicobacter Pylori Pathogenicity Islandÿ
+3CWX A 1,33,6.6,0.0027,1.6,9.1,Crystal Structure Of Cagd From Helicobacter Pylori Pathogenicity Islandÿ
+2WO0 A 2,27,6.4,0.0053,1.6,0.0,Edta Treated E. Coli Copper Amine Oxidaseÿ
+1OAC B 2,27,6.3,0.0095,1.6,0.0,Oxidoreductase, Copper, Tpq, Periplasmic, Signal Mol_id: 1; Molecule: Copper Amine Oxidase; Chain: A, B; Ec: 1.4.3.6
+4O9W A 2,36,6.7,0.0339,1.6,5.6,Crystal Structure Of Polo-like Kinase(plk1)pbd In Complex With Phospho Peptide
+3P2W A 2,36,6.8,0.0227,1.6,5.6,Unliganded Form Of Polo-Like Kinase I Polo-Box Domainÿ
+1MDA H 3,30,5.2,0.0308,1.6,10.0,Crystal Structure Of An Electron-Transfer Complex Between Methylamine Dehydrogenase And Amicyanin
+2W0Q A 2,27,6.3,0.0081,1.6,0.0,E. Coli Copper Amine Oxidase In Complex With Xenonÿ
+3Q2P A ,38,6.9,0.0202,1.6,2.6,Reduced Sweetness Of A Monellin (Mnei) Mutant Results From Increased Protein Flexibility And Disruption Of A Distant Poly-(L-Proline) Ii Helixÿ
+2D0V A 6,22,5.2,0.0440,1.6,4.5,Crystal Structure Of Methanol Dehydrogenase From Hyphomicrobium Denitrificans
+5A9Q J 2,33,6.2,0.0145,1.6,15.2,Human Nuclear Pore Complex
+5A9Q S 2,33,6.2,0.0145,1.6,15.2,Human Nuclear Pore Complex
+2Q0F B 2,39,8.1,0.0028,1.6,17.9,Terminal Uridylyl Transferase 4 From Trypanosoma Brucei With Bound Utp And Ump
+2PNC B 2,30,6.0,0.0321,1.6,3.3,Crystal Structure Of Bovine Plasma Copper-Containing Amine Oxidase In Complex With Clonidine
+2Z2R A 3,26,5.2,0.0348,1.6,3.8,Nucleosome Assembly Proteins I (Nap-1, 74-365)
+3ITW B 1,34,6.0,0.0172,1.6,5.9,Crystal Structure Of Tiox From Micromonospora Sp. Ml1ÿ
+2OJX A 2,37,6.8,0.0281,1.6,5.4,Molecular And Structural Basis Of Polo-Like Kinase 1 Substrate Recognition: Implications In Centrosomal Localization
+3A5P A 2,37,6.2,0.0120,1.6,13.5,Crystal Structure Of Hemagglutininÿ
+1DYU B 2,27,6.3,0.0098,1.6,0.0,The Active Site Base Controls Cofactor Reactivity In Escherichia Coli Amine Oxidase: X-Ray Crystallographic Studies With Mutational Variants
+4JD1 B 1,41,5.8,0.0255,1.7,19.5,Crystal Structure Of Metallothiol Transferase Fosb 2 From Bacillus Anthracis Str. Ames
+1IV7 B ,38,6.7,0.0497,1.7,2.6,Crystal Structure Of Single Chain Monellin
+1MOL A ,38,6.7,0.0495,1.7,0.0,Monellin (Single-Chain, Fused)
+1Z3K A ,36,6.9,0.0047,1.7,11.1,Structural Insight Into The Binding Diversity Between The Tyr-Phosphorylated Human Ephrinbs And Nck2 Sh2 Domain
+4E7X B 2,49,7.8,0.0011,1.7,12.2,Structural Basis For The Activity Of A Cytoplasmic Rna Terminal U- Transferase
+3ITW A 1,36,6.1,0.0113,1.7,8.3,Crystal Structure Of Tiox From Micromonospora Sp. Ml1ÿ
+4IR0 A 1,39,5.9,0.0211,1.7,20.5,Crystal Structure Of Metallothiol Transferase Fosb 2 From Bacillus Anthracis Str. Ames
+4X4P E 1,33,6.7,0.0345,1.7,9.1,Crystal Structure Of The A.fulgidus Cca-adding Enzyme In Complex With A G70a Arginyl-trna Minihelix Ending In Ccac
+3PYJ A ,38,7.0,0.0110,1.7,0.0,Reduced Sweetness Of A Monellin (Mnei) Mutant Results From Increased Protein Flexibility And Disruption Of A Distant Poly-(L-Proline) Ii Helixÿ
+1UMW B 2,37,6.7,0.0430,1.7,5.4,Structure Of A Human Plk1 Polo-Box DomainPHOSPHOPEPTIDE Complex
+4E7X D 2,48,7.8,0.0013,1.7,10.4,Structural Basis For The Activity Of A Cytoplasmic Rna Terminal U- Transferase
+2EYY A 1,30,6.5,0.0490,1.7,13.3,Ct10-Regulated Kinase Isoform I
+5F6Q A 1,41,5.9,0.0224,1.7,19.5,Crystal Structure Of Metallothiol Transferase From Bacillus Anthracis Str. Ames
+4JD1 A 1,39,5.8,0.0259,1.7,20.5,Crystal Structure Of Metallothiol Transferase Fosb 2 From Bacillus Anthracis Str. Ames
+1NKI B 1,36,5.7,0.0388,1.7,11.1,Crystal Strucure Of The Fosfomycin Resistance Protein A (Fosa) Containing Bound Phosphonoformate
+2Q48 B 1,35,6.0,0.0162,1.7,5.7,Ensemble Refinement Of The Protein Crystal Structure Of Gene Product From Arabidopsis Thaliana At5g48480
+1XY7 B 1,35,6.1,0.0104,1.7,5.7,X-Ray Structure Of Gene Product From Arabidopsis Thaliana At5g48480
+1Q4K C 2,38,6.7,0.0339,1.7,5.3,The Polo-Box Domain Of Plk1 In Complex With A Phospho- Peptide
+4YLP C 4,34,6.5,0.0311,1.7,5.9,E. Coli Transcription Initiation Complex - 16-bp Spacer And 5-nt Rna
+1MH6 B 1,30,6.1,0.0094,1.7,10.0,Solution Structure Of The Transposon Tn5-Encoding Bleomycin- Binding Protein, Blmt
+1IV9 B ,38,6.7,0.0421,1.7,2.6,Crystal Structure Of Single Chain Monellin
+1MH6 A 1,30,6.1,0.0094,1.7,10.0,Solution Structure Of The Transposon Tn5-Encoding Bleomycin- Binding Protein, Blmt
+5F6Q B 1,41,6.0,0.0129,1.7,19.5,Crystal Structure Of Metallothiol Transferase From Bacillus Anthracis Str. Ames
+5C2M A 4,16,5.2,0.0430,1.7,0.0,The De Novo Evolutionary Emergence Of A Symmetrical Protein Is Shaped By Folding Constraints
+5A2W B 1,41,7.1,0.0220,1.7,7.3,Crystal Structure Of Mtpap In Complex With Atpgammas
+4WC1 B 1,42,7.7,0.0362,1.7,11.9,Structure Of Trna-processing Enzyme With Ctp
+1FRS B 1,34,6.4,0.0369,1.7,2.9,Mol_id: 1; Molecule: Bacteriophage Fr Capsid; Chain: A, B, C; Engineered: Yes
+2ZW5 B 2,33,6.1,0.0089,1.7,0.0,Crystal Structure Of Bleomycin N-Acetyltransferase Complexed With Coenzyme A In The Trigonal Crystalÿ
+4FH3 A 2,50,8.4,0.0001,1.7,10.0,Crystal Structures Of The Cid1 Poly (U) Polymerase Reveal The Mechanism For Utp Selectivity
+3Q2P B ,39,6.8,0.0343,1.7,2.6,Reduced Sweetness Of A Monellin (Mnei) Mutant Results From Increased Protein Flexibility And Disruption Of A Distant Poly-(L-Proline) Ii Helixÿ
+4RS6 B 2,36,6.7,0.0372,1.7,11.1,Crystal Structure Of The C Domain Of Polo Like Kinase Ii In Homo Sapiens
+3C66 A 2,41,7.4,0.0462,1.7,12.2,Yeast Poly(A) Polymerase In Complex With Fip1 Residues 80- 105
+4JH2 A 1,40,5.9,0.0215,1.7,17.5,Crystal Structure Of Fosb From Bacillus Cereus With Zinc And Sulfate At 1.27 A Resolution
+4MYM A 1,34,6.2,0.0461,1.7,14.7,Crystal Structure Of A Glyoxalase/ Bleomycin Resistance Protein/ Dioxygenase From Nocardioides
+4EP7 B ,49,8.6,0.0247,1.7,10.2,Functional Implications From The Cid1 Poly(U) Polymerase Crystal Structure
+2AU3 A 2,30,5.8,0.0499,1.7,20.0,Crystal Structure Of The Aquifex Aeolicus Primase (Zinc Binding And Rna Polymerase Domains)ÿ
+1F32 A 1,30,5.9,0.0350,1.7,6.7,Crystal Structure Of Ascaris Pepsin Inhibitor-3
+2P7K A 1,37,5.8,0.0282,1.7,8.1,Crystal Structure Of Genomically Encoded Fosfomycin Resistance Protein, Fosx, From Listeria Monocytogenes (Hexagonal Form)
+2P7K B 1,37,5.8,0.0286,1.7,8.1,Crystal Structure Of Genomically Encoded Fosfomycin Resistance Protein, Fosx, From Listeria Monocytogenes (Hexagonal Form)
+1K1Y B 4,29,6.3,0.0084,1.7,13.8,Crystal Structure Of Thermococcus Litoralis 4-Alpha- Glucanotransferase Complexed With Acarbose
+4JH1 A 1,37,5.8,0.0324,1.7,18.9,Crystal Structure Of Fosb From Bacillus Cereus With Zinc And Sulfate At 1.55 A Resolution -sad Phasing
+4IR0 B 1,38,5.8,0.0266,1.7,21.1,Crystal Structure Of Metallothiol Transferase Fosb 2 From Bacillus Anthracis Str. Ames

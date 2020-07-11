@@ -1,0 +1,180 @@
+3CIA A 4,38,5.1,0.0353,1.2,5.3,Crystal Structure Of Cold-Aminopeptidase From Colwellia Psychrerythraea
+5DLL A 7,37,5.0,0.0434,1.3,16.2,Aminopeptidase N (pepn) From Francisella Tularensis Subsp. Tularensis Schu S4
+3UZD A 1,39,5.2,0.0249,1.5,15.4,Crystal Structure Of 14-3-3 Gammaÿ
+4BG6 A 1,42,5.0,0.0497,1.5,9.5,14-3-3 Interaction With Rnd3 Prenyl-phosphorylation Motif
+1QJB A 1,40,5.1,0.0328,1.5,10.0,14-3-3 ZetaPHOSPHOPEPTIDE COMPLEX (MODE 1)ÿ
+3HXB A 3,41,5.2,0.0215,1.6,7.3,Engineered Rabggtase In Complex With A Peptidomimetic Inhibitor (Compound 6)ÿ
+2C23 A 1,38,5.3,0.0179,1.6,13.2,14-3-3 Protein Beta (Human) In Complex With Exoenzyme S Peptideÿ
+3GS3 A 2,51,5.5,0.0093,1.6,9.8,Structure Of The N-Terminal Heat Domain Of Symplekin From D. Melanogasterÿ
+3DST A 3,42,5.2,0.0226,1.6,9.5,Crystal Structure Of Rabggtase(Delta Lrr; Delta Ig)in Complex With Geranylgeranyl Pyrophosphate
+2B05 F 1,40,5.0,0.0492,1.6,15.0,Crystal Structure Of 14-3-3 Gamma In Complex With A Phosphoserine Peptideÿ
+4O46 F 1,40,5.2,0.0247,1.6,15.0,14-3-3-gamma In Complex With Influenza Ns1 C-terminal Tail Phosphorylated At S228
+4O46 C 1,40,5.0,0.0406,1.6,15.0,14-3-3-gamma In Complex With Influenza Ns1 C-terminal Tail Phosphorylated At S228
+4GTT A 2,42,5.1,0.0298,1.6,9.5,Engineered Rabggtase In Complex With Bms Analogue 12
+4IEA A 1,38,5.3,0.0184,1.6,13.2,14-3-3 Isoform Sigma In Complex With A Phosphorylated C-raf Peptide
+1W63 B 1,39,5.1,0.0319,1.6,10.3,Ap1 Clathrin Adaptor Core
+1W63 D 1,39,5.1,0.0319,1.6,10.3,Ap1 Clathrin Adaptor Core
+1W63 F 1,39,5.1,0.0319,1.6,10.3,Ap1 Clathrin Adaptor Core
+1W63 H 1,39,5.1,0.0319,1.6,10.3,Ap1 Clathrin Adaptor Core
+1W63 J 1,39,5.1,0.0319,1.6,10.3,Ap1 Clathrin Adaptor Core
+1W63 L 1,39,5.1,0.0319,1.6,10.3,Ap1 Clathrin Adaptor Core
+4O46 B 1,41,5.0,0.0441,1.6,14.6,14-3-3-gamma In Complex With Influenza Ns1 C-terminal Tail Phosphorylated At S228
+3QIL A 1,37,5.5,0.0093,1.6,13.5,Crystal Structure Analysis Of The Clathrin Trimerization Domainÿ
+4ZDR A 1,42,5.1,0.0315,1.6,9.5,Crystal Structure Of 14-3-3[zeta]-lkb1 Fusion Protein
+3QIL J 1,37,5.3,0.0165,1.6,13.5,Crystal Structure Analysis Of The Clathrin Trimerization Domainÿ
+4DHO A 1,39,5.3,0.0189,1.6,10.3,Small-molecule Inhibitors Of 14-3-3 Protein-protein Interactions From Virtual Screening
+4LNB A 2,41,5.6,0.0054,1.6,0.0,Aspergillus Fumigatus Protein Farnesyltransferase Ternary Complex With Farnesyldiphosphate And Ethylenediamine Scaffold Inhibitor 5
+3O8I A 1,38,5.3,0.0144,1.6,10.5,Structure Of 14-3-3 Isoform Sigma In Complex With A C-Raf1 Peptide And A Stabilizing Small Molecule Fragmentÿ
+4L9P A 2,41,5.6,0.0056,1.6,0.0,Crystal Structure Of Aspergillus Fumigatus Protein Farnesyltransferase Complexed With The Fii Analog, Fpt-ii, And The Kcvvm Peptide
+3S4Z B 8,44,5.1,0.0332,1.6,4.5,Structure Of A Y Dna-Fanci Complexÿ
+4LNG A 2,41,5.6,0.0055,1.6,0.0,Aspergillus Fumigatus Protein Farnesyltransferase Complex With Farnesyldiphosphate And Tipifarnib
+3QIL V ,37,5.5,0.0493,1.6,13.5,Crystal Structure Analysis Of The Clathrin Trimerization Domainÿ
+3QIL V 1,37,5.5,0.0076,1.6,13.5,Crystal Structure Analysis Of The Clathrin Trimerization Domainÿ
+1Z3X A 1,57,6.6,0.0007,1.6,21.1,Structure Of Gun4 From Thermosynechococcus Elongatus
+4XKC A 1,54,6.6,0.0008,1.7,18.5,Crystal Structure Of Genomes Uncoupled 4 (gun4) In Complex With Magnesium Deuteroporphyrin Ix
+3QIL D ,38,5.6,0.0393,1.7,13.2,Crystal Structure Analysis Of The Clathrin Trimerization Domainÿ
+3QIL D 1,38,5.6,0.0059,1.7,13.2,Crystal Structure Analysis Of The Clathrin Trimerization Domainÿ
+3QIL G ,38,5.6,0.0395,1.7,13.2,Crystal Structure Analysis Of The Clathrin Trimerization Domainÿ
+3QIL G 1,38,5.6,0.0060,1.7,13.2,Crystal Structure Analysis Of The Clathrin Trimerization Domainÿ
+3QIL M 1,38,5.2,0.0205,1.7,13.2,Crystal Structure Analysis Of The Clathrin Trimerization Domainÿ
+3QIL S ,38,5.6,0.0414,1.7,13.2,Crystal Structure Analysis Of The Clathrin Trimerization Domainÿ
+3QIL S 1,38,5.6,0.0063,1.7,13.2,Crystal Structure Analysis Of The Clathrin Trimerization Domainÿ
+3IQU A 1,40,5.2,0.0249,1.7,12.5,Crystal Structure Of Human 14-3-3 Sigma In Complex With Raf1 Peptide (6mer)ÿ
+2BTP A 1,43,5.0,0.0403,1.7,11.6,14-3-3 Protein Theta (Human) Complexed To Peptide
+3QIL P ,38,5.6,0.0399,1.7,13.2,Crystal Structure Analysis Of The Clathrin Trimerization Domainÿ
+3QIL P 1,38,5.6,0.0060,1.7,13.2,Crystal Structure Analysis Of The Clathrin Trimerization Domainÿ
+4GTS A 2,42,5.2,0.0211,1.7,7.1,Engineered Rabggtase In Complex With Bms Analogue 16
+4EHM A 2,42,5.1,0.0276,1.7,7.1,Rabggtase In Complex With Covalently Bound Psoromic Acid
+3SFY A 2,44,5.8,0.0021,1.7,6.8,Cryptococcus Neoformans Protein Farnesyltransferase In Complex With Fpt-Ii And Ethylenediamine Inhibitor 2ÿ
+5DYF A 7,43,5.1,0.0366,1.7,4.7,The Crystal Structure Of Aminopeptidase N In Complex With N-benzyl-1, 2-diaminoethylphosphonic Acid
+3Q7A A 2,44,5.8,0.0022,1.7,6.8,Cryptococcus Neoformans Protein Farnesyltransferase In Complex With Fpp And L-778,123ÿ
+3PZ2 A 2,39,5.0,0.0483,1.7,7.7,Crystal Structure Of Rabggtase(Delta Lrr; Delta Ig) In Complex With Bms3 And Lipid Substrate Ggppÿ
+2XQ0 A 5,53,5.6,0.0044,1.7,17.0,Structure Of Yeast Lta4 Hydrolase In Complex With Bestatinÿ
+2WMO A 3,53,5.5,0.0430,1.7,11.3,Structure Of The Complex Between Dock9 And Cdc42ÿ
+3DSV A 3,42,5.1,0.0340,1.7,7.1,Crystal Structure Of Rabggtase(Delta Lrr; Delta Ig)in Complex With Mono-Prenylated Peptide Ser-Cys-Ser-Cys(Gg) Derivated From Rab7
+3Q7F A 2,44,5.8,0.0022,1.7,6.8,Cryptococcus Neoformans Protein Farnesyltransferase In Complex With Fpp And Ethylenediamine Inhibitor 1ÿ
+3Q75 A 2,44,5.8,0.0021,1.7,6.8,Cryptococcus Neoformans Protein Farnesyltransferase In Complex With Fpt-Ii And Tkcvvm Peptideÿ
+3SFX A 2,45,5.8,0.0022,1.7,6.7,Cryptococcus Neoformans Protein Farnesyltransferase In Complex With Fpt-Ii And Tipifarnibÿ
+4PWX E 1,49,5.3,0.0164,1.7,16.3,Crystal Structure Of An Atp-bound Get3-get4-get5 Complex From S.cerevisiae
+3Q79 A 2,44,5.8,0.0021,1.7,6.8,Cryptococcus Neoformans Protein Farnesyltransferase In Complex With Farnesyl-Ddptasacniq Productÿ
+3DSS A 3,43,5.2,0.0244,1.7,9.3,Crystal Structure Of Rabggtase(Delta Lrr; Delta Ig)
+4PWX C 1,48,5.5,0.0071,1.7,14.6,Crystal Structure Of An Atp-bound Get3-get4-get5 Complex From S.cerevisiae
+2BQ0 B 1,40,5.1,0.0313,1.7,12.5,14-3-3 Protein Beta (Human)
+3S4W A 7,46,5.3,0.0183,1.7,4.3,Structure Of The Fanci-Fancd2 Complexя
+2BQ0 A 1,45,5.1,0.0301,1.7,13.3,14-3-3 Protein Beta (Human)
+3DSX A 2,43,5.3,0.0187,1.7,9.3,Crystal Structure Of Rabggtase(Delta Lrr; Delta Ig)in Complex With Di-Prenylated Peptide Ser-Cys(Gg)-Ser-Cys(Gg) Derivated From Rab7
+3DSW A 3,43,5.3,0.0176,1.7,9.3,Crystal Structure Of Rabggtase(Delta Lrr; Delta Ig)in Complex With Mono-Prenylated Peptide Ser-Cys(Gg)-Ser-Cys Derivated From Rab7
+3C72 A 2,43,5.1,0.0284,1.7,9.3,Engineered Rabggtase In Complex With A Peptidomimetic Inhibitor
+3HXF A 3,43,5.2,0.0224,1.7,9.3,Engineered Rabggtase In Complex With A Peptidomimetic Inhibitor (Compound 38)я
+3HXD A 2,43,5.2,0.0245,1.7,9.3,Engineered Rabggtase In Complex With A Peptidomimetic Inhibitor (Compound 8)я
+3DSU A 2,43,5.2,0.0229,1.7,9.3,Crystal Structure Of Rabggtase(Delta Lrr; Delta Ig)in Complex With Farnesyl Pyrophosphate
+3PZ3 A 2,43,5.1,0.0296,1.7,9.3,Crystal Structure Of Rabggtase(Delta Lrr; Delta Ig) In Complex With Bms-Analogue 14я
+3PZ1 A 3,43,5.2,0.0242,1.7,9.3,Crystal Structure Of Rabggtase(Delta Lrr; Delta Ig) In Complex With Bms3я
+3HXC A 2,43,5.2,0.0240,1.7,9.3,Engineered Rabggtase In Complex With A Peptidomimetic Inhibitor (Compound 7)я
+3HXE A 2,43,5.2,0.0210,1.7,9.3,Engineered Rabggtase In Complex With A Peptidomimetic Inhibitor (Compound 32)я
+3LVH A 2,37,5.5,0.0426,1.7,16.2,Crystal Structure Of A Clathrin Heavy Chain And Clathrin Lig Complexя
+3LVH B 2,37,5.5,0.0424,1.7,16.2,Crystal Structure Of A Clathrin Heavy Chain And Clathrin Lig Complexя
+3LVH C 2,37,5.5,0.0424,1.7,16.2,Crystal Structure Of A Clathrin Heavy Chain And Clathrin Lig Complexя
+3LVG C 2,37,5.5,0.0450,1.7,16.2,Crystal Structure Of A Clathrin Heavy Chain And Clathrin Lig Complexя
+3NC0 D 1,39,5.0,0.0435,1.7,10.3,Protein Complexя
+2NPP B 2,71,8.2,10e-5.0,1.8,15.5,Structure Of The Protein Phosphatase 2a Holoenzymeя
+3T0L A 1,42,5.3,0.0187,1.8,11.9,Small-Molecule Inhibitors Of 14-3-3 Protein-Protein Interactions From Virtual Screening
+1DCE C 2,43,5.1,0.0301,1.8,9.3,Crystal Structure Of Rab Geranylgeranyltransferase From Rat Brain
+1LTX A 3,43,5.3,0.0149,1.8,7.0,Structure Of Rab Escort Protein-1 In Complex With Rab Geranylgeranyl Transferase And Isoprenoid
+2NYM E 2,72,8.0,10e-4.5,1.8,15.3,Crystal Structure Of Protein Phosphatase 2a (Pp2a) With C-Terminus Truncated Catalytic Subunitя
+4DHN A 1,41,5.3,0.0187,1.8,14.6,Small-molecule Inhibitors Of 14-3-3 Protein-protein Interactions From Virtual Screening
+4XKB A 1,54,6.8,0.0004,1.8,16.7,Crystal Structure Of Genomes Uncoupled 4 (gun4) In Complex With Deuteroporphyrin Ix
+3BSX B 3,61,6.9,0.0017,1.8,6.6,Crystal Structure Of Human Pumilio 1 In Complex With Puf5 Rna
+4O46 A 1,43,5.0,0.0431,1.8,14.0,14-3-3-gamma In Complex With Influenza Ns1 C-terminal Tail Phosphorylated At S228
+3T0M A 1,42,5.3,0.0185,1.8,14.3,Small-Molecule Inhibitors Of 14-3-3 Protein-Protein Interactions From Virtual Screening
+3HVE A 2,46,5.6,0.0051,1.8,10.9,Structures Of Spop-Substrate Complexes: Insights Into Molecular Architectures Of Btb-Cul3 Ubiquitin Ligases: Gigaxoninbtb3-Boxя
+4RHH C 2,48,5.7,0.0257,1.8,10.4,Crystal Structure Of The Catalytic Mutant Xyn52b2-e335g, A Gh52 Beta- D-xylosidase From Geobacillus Stearothermophilus T6
+2V7D A 1,42,5.1,0.0344,1.8,9.5,14-3-3 Protein Zeta In Complex With Thr758 Phosphorylated Integrin Beta2 Peptide
+4RHH B 2,48,5.7,0.0282,1.8,10.4,Crystal Structure Of The Catalytic Mutant Xyn52b2-e335g, A Gh52 Beta- D-xylosidase From Geobacillus Stearothermophilus T6
+4A3T B 2,40,5.9,0.0100,1.8,7.5,Yeast Regulatory Particle Proteasome Assembly Chaperone Hsm3я
+1OYZ A 4,48,5.0,0.0470,1.8,12.5,X-Ray Structure Of Yiba_ecoli Northeast Structural Genomics Consortium Target Et31
+3QNF B 7,30,5.3,0.0190,1.9,13.3,Crystal Structure Of The Open State Of Human Endoplasmic Reticulum Aminopeptidase 1 Erap1я
+3SPR A 1,43,5.2,0.0274,1.9,14.0,Crystal Structure Of Human 14-3-3 Sigma C38vN166H IN COMPLEX WITH Task-3 Peptide And Stabilizer Fc-Thf
+1LD7 A 3,40,5.5,0.0085,1.9,12.5,Co-Crystal Structure Of Human Farnesyltransferase With Farnesyldiphosphate And Inhibitor Compound 66
+1LD8 A 3,40,5.3,0.0144,1.9,12.5,Co-Crystal Structure Of Human Farnesyltransferase With Farnesyldiphosphate And Inhibitor Compound 49
+2H6H A 3,40,5.5,0.0088,1.9,12.5,Y365f Protein Farnesyltransferase Mutant Complexed With A Farnesylated Ddptasacvls Peptide Product At 1.8a
+4FJ3 B 1,46,5.0,0.0497,1.9,10.9,14-3-3 Isoform Zeta In Complex With A Diphoyphorylated C-Raf Peptide
+3HXE A 1,52,5.7,0.0239,1.9,19.2,Engineered Rabggtase In Complex With A Peptidomimetic Inhibitor (Compound 32)я
+3ZPJ A 1,42,5.1,0.0290,1.9,14.3,Crystal Structure Of Ton1535 From Thermococcus Onnurineus Na1
+2H6G A 3,40,5.5,0.0088,1.9,12.5,W102t Protein Farnesyltransferase Mutant Complexed With A Geranylgeranylated Ddptasacvls Peptide Product At 1.85a Resolution
+1MZC A 3,40,5.5,0.0083,1.9,12.5,Co-Crystal Structure Of Human Farnesyltransferase With Farnesyldiphosphate And Inhibitor Compound 33a
+4PVB A 7,49,5.0,0.0442,1.9,4.1,Crystal Structure Of Aminopeptidase N In Complex With The Phosphonic Acid Analogue Of Leucine (d-(s)-leup)
+2GTQ A 7,48,5.0,0.0382,1.9,4.2,Crystal Structure Of Aminopeptidase N From Human Pathogen N. Meningitides
+1TN6 A 3,40,5.5,0.0082,1.9,12.5,Protein Farnesyltransferase Complexed With A Rap2a Peptide Substrate And A Fpp Analog At 1.8a Resolution
+1IB1 A 1,46,5.2,0.0268,1.9,8.7,Crystal Structure Of The 14-3-3 Zeta:serotonin N- Acetyltransferase Complex
+2F0Y A 3,40,5.5,0.0079,1.9,12.5,Crystal Structure Of Human Protein Farnesyltransferase Complexed With Farnesyl Diphosphate And Hydantoin Derivative
+4FL5 A 1,43,5.3,0.0183,1.9,14.0,Crystal Structure Of Human 14-3-3 Sigma In Complex With A Tau-protein Peptide Surrounding Ps214
+3DPY A 3,39,5.5,0.0085,1.9,12.8,Protein Farnesyltransferase Complexed With Fpp And Caged Tkcvim Substrate
+2C1J A 1,48,5.0,0.0458,1.9,10.4,Molecular Basis For The Recognition Of Phosphorylated And Phosphoacetylated Histone H3 By 14-3-3я
+3MZL B 3,44,5.6,0.0050,1.9,15.9,Sec13SEC31 EDGE ELEMENT, LOOP DELETION MUTANTя
+3HXC A 1,52,5.7,0.0248,1.9,19.2,Engineered Rabggtase In Complex With A Peptidomimetic Inhibitor (Compound 7)я
+4FP7 B 2,43,5.9,0.0112,1.9,9.3,2.2a Resolution Structure Of Proteasome Assembly Chaperone Hsm3
+4J6S A 1,45,5.0,0.0374,1.9,15.6,14-3-3gamma Complexed With The N-terminal Sequence Of Tyrosine Hydroxylase (residues 1-43)
+4GNT A 1,47,5.1,0.0321,1.9,12.8,Complex Of Chrebp And 14-3-3beta
+1D8E A 3,39,5.4,0.0096,1.9,12.8,Zinc-Depleted Ftase Complexed With K-Ras4b Peptide Substrate And Fpp Analog.
+4Y21 A 2,64,6.0,0.0088,1.9,6.2,Crystal Structure Of Munc13-1 Mun Domain
+4Y21 A 2,64,6.0,0.0088,1.9,6.2,Crystal Structure Of Munc13-1 Mun Domain
+2B05 C 1,45,5.0,0.0484,1.9,15.6,Crystal Structure Of 14-3-3 Gamma In Complex With A Phosphoserine Peptideÿ
+3MZL H 3,44,5.6,0.0061,1.9,15.9,Sec13SEC31 EDGE ELEMENT, LOOP DELETION MUTANTÿ
+1HS6 A 5,48,5.4,0.0112,1.9,6.2,Structure Of Leukotriene A4 Hydrolase Complexed With Bestatin.
+4O46 E 1,46,5.0,0.0490,1.9,15.2,14-3-3-gamma In Complex With Influenza Ns1 C-terminal Tail Phosphorylated At S228
+2ZIS A 3,38,5.2,0.0205,1.9,13.2,Crystal Structure Of Rat Protein Farnesyltransferase Complexed With A Bezoruran Inhibitor And Fppÿ
+1IB1 D 1,48,5.0,0.0430,1.9,10.4,Crystal Structure Of The 14-3-3 Zeta:serotonin N- Acetyltransferase Complex
+2B05 A 1,44,5.0,0.0492,1.9,15.9,Crystal Structure Of 14-3-3 Gamma In Complex With A Phosphoserine Peptideÿ
+1JCR A 3,39,5.3,0.0159,1.9,12.8,Crystal Structure Of Rat Protein Farnesyltransferase Complexed With The Non-Substrate Tetrapeptide Inhibitor Cvfm And Farnesyl Diphosphate Substrate
+3VU7 H ,49,5.0,0.0464,1.9,10.2,Crystal Structure Of Rev1-Rev7-Rev3 Ternary Complex
+4J6S B 1,45,5.0,0.0380,1.9,15.6,14-3-3gamma Complexed With The N-terminal Sequence Of Tyrosine Hydroxylase (residues 1-43)
+1JCS A 3,39,5.3,0.0153,1.9,12.8,Crystal Structure Of Rat Protein Farnesyltransferase Complexed With The Peptide Substrate Tkcvfm And An Analog Of Farnesyl Diphosphate
+2NYM B 2,74,8.0,10e-4.6,1.9,16.2,Crystal Structure Of Protein Phosphatase 2a (Pp2a) With C-Terminus Truncated Catalytic Subunitÿ
+1JCQ A 3,41,5.4,0.0135,1.9,12.2,Crystal Structure Of Human Protein Farnesyltransferase Complexed With Farnesyl Diphosphate And The Peptidomimetic Inhibitor L-739,750
+3E33 A 3,39,5.5,0.0084,1.9,12.8,Protein Farnesyltransferase Complexed With Fpp And Ethylenediamine Scaffold Inhibitor 7ÿ
+3IYV I 15,44,5.2,0.0258,1.9,9.1,Clathrin D6 Coatÿ
+3IYV H 16,44,5.2,0.0258,1.9,9.1,Clathrin D6 Coatÿ
+3IYV F 16,44,5.2,0.0258,1.9,9.1,Clathrin D6 Coatÿ
+3IYV G 17,44,5.2,0.0257,1.9,9.1,Clathrin D6 Coatÿ
+3IYV B 15,44,5.2,0.0258,1.9,9.1,Clathrin D6 Coatÿ
+3IYV C 15,44,5.2,0.0258,1.9,9.1,Clathrin D6 Coatÿ
+3IYV D 16,44,5.2,0.0258,1.9,9.1,Clathrin D6 Coatÿ
+3IYV E 15,44,5.2,0.0258,1.9,9.1,Clathrin D6 Coatÿ
+3IYV A 16,44,5.2,0.0258,1.9,9.1,Clathrin D6 Coatÿ
+1XI4 A 16,44,5.2,0.0258,1.9,9.1,Clathrin D6 Coat
+1XI4 B 16,44,5.2,0.0257,1.9,9.1,Clathrin D6 Coat
+1XI4 C 16,44,5.2,0.0258,1.9,9.1,Clathrin D6 Coat
+1XI4 D 16,44,5.2,0.0257,1.9,9.1,Clathrin D6 Coat
+1XI4 E 16,44,5.2,0.0258,1.9,9.1,Clathrin D6 Coat
+1XI4 F 16,44,5.2,0.0258,1.9,9.1,Clathrin D6 Coat
+1XI4 G 16,44,5.2,0.0258,1.9,9.1,Clathrin D6 Coat
+1XI4 H 16,44,5.2,0.0258,1.9,9.1,Clathrin D6 Coat
+1XI4 I 16,44,5.2,0.0258,1.9,9.1,Clathrin D6 Coat
+1XI5 A 16,44,5.2,0.0258,1.9,9.1,Clathrin D6 Coat With Auxilin J-Domain
+1XI5 B 16,44,5.2,0.0258,1.9,9.1,Clathrin D6 Coat With Auxilin J-Domain
+1XI5 C 16,44,5.2,0.0258,1.9,9.1,Clathrin D6 Coat With Auxilin J-Domain
+1XI5 D 16,44,5.2,0.0258,1.9,9.1,Clathrin D6 Coat With Auxilin J-Domain
+1XI5 E 16,44,5.2,0.0258,1.9,9.1,Clathrin D6 Coat With Auxilin J-Domain
+1XI5 F 16,44,5.2,0.0258,1.9,9.1,Clathrin D6 Coat With Auxilin J-Domain
+1XI5 G 16,44,5.2,0.0258,1.9,9.1,Clathrin D6 Coat With Auxilin J-Domain
+1XI5 H 16,44,5.2,0.0258,1.9,9.1,Clathrin D6 Coat With Auxilin J-Domain
+1XI5 I 16,44,5.2,0.0258,1.9,9.1,Clathrin D6 Coat With Auxilin J-Domain
+1O1R A 3,39,5.3,0.0147,1.9,12.8,Structure Of Fpt Bound To Ggpp
+2UY1 B 2,43,5.9,0.0109,1.9,9.3,Crystal Structure Of Cstf-77ÿ
+4QLI A 1,44,5.2,0.0235,1.9,13.6,A Novel Phospho-switch In The Linker Region Of The Snail Zinc Finger Protein Which Regulates 14-3-3 Association, Dna Binding And Epithelial-mesenchymal Differentiation
+1KZO A 3,39,5.4,0.0118,1.9,12.8,Protein Farnesyltransferase Complexed With Farnesylated K- Ras4b Peptide Product And Farnesyl Diphosphate Substrate Bound Simultaneously
+2LSI A ,45,5.0,0.0455,1.9,4.4,Solution Structure Of Polymerase-interacting Domain Of Human Rev1 In Complex With Translesional Synthesis Polymerase Kappa
+4IHL B 1,49,5.0,0.0470,1.9,10.2,Human 14-3-3 Isoform Zeta In Complex With A Diphoyphorylated C-raf Peptide And Cotylenin A
+4DHM A 1,44,5.3,0.0190,1.9,13.6,Small-molecule Inhibitors Of 14-3-3 Protein-protein Interactions From Virtual Screening
+1O5M A 3,39,5.2,0.0260,1.9,12.8,Structure Of Fpt Bound To The Inhibitor Sch66336
+3PZ4 A 2,48,5.2,0.0227,1.9,6.2,Crystal Structure Of Ftase(Alpha-Subunit; Beta-Subunit Delta C10) In Complex With Bms3 And Lipid Substrate Fppÿ
+1O1T A 3,39,5.4,0.0096,1.9,12.8,Structure Of Fpt Bound To The Cvim-Fpp Product
+3P1S A 1,44,5.2,0.0231,1.9,13.6,Crystal Structure Of Human 14-3-3 Sigma C38nN166H IN COMPLEX WITH Task-3 Peptide And Stabilizer Fusicoccin Aÿ
+3KSL A 3,39,5.5,0.0087,1.9,12.8,Structure Of Fpt Bound To Datfp-Dh-Gppÿ
+1D8D A 3,39,5.4,0.0102,1.9,12.8,Co-Crystal Structure Of Rat Protein Farnesyltransferase Complexed With A K-Ras4b Peptide Substrate And Fpp Analog At 2.0a Resolution
+2H6F A 3,41,5.5,0.0089,1.9,12.2,Protein Farnesyltransferase Complexed With A Farnesylated Ddptasacvls Peptide Product At 1.5a Resolution
+1KZP A 3,39,5.4,0.0109,1.9,12.8,Protein Farnesyltransferase Complexed With A Farnesylated K- Ras4b Peptide Product
+1SA4 A 3,41,5.5,0.0088,1.9,12.2,Human Protein Farnesyltransferase Complexed With Fpp And R115777
+4J6S D 1,45,5.0,0.0385,1.9,13.3,14-3-3gamma Complexed With The N-terminal Sequence Of Tyrosine Hydroxylase (residues 1-43)
+3LW1 A 1,44,5.2,0.0238,1.9,13.6,Binary Complex Of 14-3-3 Sigma And P53 Pt387-Peptideÿ

@@ -1,0 +1,29 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;"> PDBe Fold v2.59. (src3) 14 Apr 2014 result file.
+
+                   RESULT SUMMARY
+
+   ##      Q-score      P-score     Z-score   RMSD    Nalgn Nsse Ngaps Seq-%     Nmd Nres-Q Nsse-Q Nres-T Nsse-T Query Target
+    1           1       58.35       22.98     0.000   164   14    0           1    0    164     14    164     14    SCOP d1g63i_  SCOP d1g63i_
+    2      0.9964       46.82       20.55     0.181   164   14    0           1    0    164     14    164     14    SCOP d1g63i_  SCOP d1g63g_
+    3      0.9964       46.82       20.55     0.181   164   14    0           1    0    164     14    164     16    SCOP d1g63i_  SCOP d1g5qg_
+    4      0.9932       38.88        18.7     0.248   164   14    0           1    0    164     14    164     16    SCOP d1g63i_  SCOP d1g63j_
+    5      0.9917       48.37       20.89     0.140   163   14    1           1    0    164     14    163     14    SCOP d1g63i_  SCOP d1g63e_
+    6      0.9912       48.37       20.89     0.155   163   14    1           1    0    164     14    163     14    SCOP d1g63i_  SCOP d1g63c_
+    7      0.9909       43.93        19.9     0.287   164   14    0           1    0    164     14    164     16    SCOP d1g63i_  SCOP d1g5ql_
+    8      0.9905       44.73       20.08     0.293   164   14    0           1    0    164     14    164     14    SCOP d1g63i_  SCOP d1g63h_
+    9      0.9873       36.94       18.22     0.245   163   14    1           1    0    164     14    163     14    SCOP d1g63i_  SCOP d1g63k_
+   10      0.9858       43.93        19.9     0.360   164   14    0           1    0    164     14    164     14    SCOP d1g63i_  SCOP d1g63a_
+   11      0.9858       43.93        19.9     0.360   164   14    0           1    0    164     14    164     16    SCOP d1g63i_  SCOP d1g5qa_
+   12      0.9701       45.67       20.29     0.228   161   14    1           1    0    164     14    162     14    SCOP d1g63i_  SCOP d1g63d_
+   13      0.9701       45.67       20.29     0.228   161   14    1           1    0    164     14    162     16    SCOP d1g63i_  SCOP d1g5qd_
+   14      0.9394       41.95       19.44     0.174   164   14    1           1    0    164     14    174     16    SCOP d1g63i_  SCOP d1g63b_
+   15      0.9393       46.82       20.55     0.177   164   14    1           1    0    164     14    174     16    SCOP d1g63i_  SCOP d1g63f_
+   16      0.9312       32.66       17.11     0.291   159   12    1           1    0    164     14    164     15    SCOP d1g63i_  SCOP d1g63l_
+   17     0.01556          -0   1.907e-06     9.818    70   14   11     0.07143    1    164     14    164     18    SCOP d1g63i_  SCOP d1mvna_
+   18     0.01313          -0   1.907e-06    11.094    72   13   11     0.08333    2    164     14    164     16    SCOP d1g63i_  SCOP d1e20a_
+   19      0.0129          -0   1.717e-05     9.524    62   12   11     0.04839    1    164     14    164     15    SCOP d1g63i_  SCOP d1mvla_
+   20     0.01223          -0   1.907e-06    10.334    67   12   10     0.02985    0    164     14    174     14    SCOP d1g63i_  SCOP d1qzub_
+   21     0.01186          -0   1.907e-06    10.355    64   12   11     0.07812    2    164     14    163     14    SCOP d1g63i_  SCOP d1qzuc_
+   22     0.01175          -0   1.907e-06    10.374    64   12   11     0.07812    2    164     14    164     14    SCOP d1g63i_  SCOP d1qzua_
+   23     0.01104          -0   6.294e-05    10.620    63   11   10     0.09524    1    164     14    162     14    SCOP d1g63i_  SCOP d1qzud_
+</pre></body></html>

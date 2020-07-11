@@ -1,0 +1,180 @@
+3IYV A 20,38,5.5,0.0457,1.4,5.3,Clathrin D6 Coatÿ
+3IYV D 20,38,5.5,0.0458,1.4,5.3,Clathrin D6 Coatÿ
+3IYV E 19,38,5.5,0.0458,1.4,5.3,Clathrin D6 Coatÿ
+3IYV G 21,38,5.5,0.0458,1.4,5.3,Clathrin D6 Coatÿ
+3IYV H 20,38,5.5,0.0457,1.4,5.3,Clathrin D6 Coatÿ
+5AN8 A 2,31,5.3,0.0150,1.4,19.4,Electron Cryo-microscopy Of A Trpv2 Channel
+5AN8 B 2,31,5.3,0.0149,1.4,19.4,Electron Cryo-microscopy Of A Trpv2 Channel
+5AN8 C 2,31,5.3,0.0150,1.4,19.4,Electron Cryo-microscopy Of A Trpv2 Channel
+5AN8 D 2,31,5.3,0.0150,1.4,19.4,Electron Cryo-microscopy Of A Trpv2 Channel
+3QIL D 1,32,5.0,0.0378,1.5,12.5,Crystal Structure Analysis Of The Clathrin Trimerization Domainÿ
+3LJN A 3,36,5.6,0.0045,1.5,22.2,Ankyrin Repeat Protein From Leishmania Majorÿ
+3QIL G 1,33,5.0,0.0449,1.5,12.1,Crystal Structure Analysis Of The Clathrin Trimerization Domainÿ
+4J7W B 2,26,5.3,0.0177,1.5,19.2,E3_5 Darpin L86a Mutant
+4ZHB A 1,43,5.2,0.0244,1.5,14.0,N-terminal Structure Of Ankyrin Repeat-containing Protein Lega11 From Legionella Pneumophila
+1MX2 B 2,33,5.1,0.0348,1.5,6.1,Structure Of F71n Mutant Of P18ink4c
+5A9Q U 3,40,5.3,0.0164,1.5,15.0,Human Nuclear Pore Complex
+5DIF C 4,49,5.5,0.0066,1.5,2.0,Crystal Structure Of Cpeb4 Nes Peptide In Complex With Crm1-ran-ranbp1
+2DZO C 2,29,5.5,0.0078,1.6,6.9,Crystal Structure Analysis Of Yeast Nas6p Complexed With The Proteasome Subunit, Rpt3
+4U96 E 1,34,5.2,0.0205,1.6,17.6,Coupling Of Remote Alternating-access Transport Mechanisms For Protons And Substrates In The Multidrug Efflux Pump Acrb
+2VXG A 2,57,5.2,0.0242,1.6,5.3,Crystal Structure Of The Conserved C-Terminal Region Of Ge- 1
+3QIL A 1,34,5.1,0.0367,1.6,11.8,Crystal Structure Analysis Of The Clathrin Trimerization Domainÿ
+4RLV A 7,33,5.2,0.0211,1.6,9.1,Crystal Structure Of Ankb 24 Ankyrin Repeats In Complex With Ankr Autoinhibition Segment
+5CWH A 2,54,5.5,0.0092,1.6,7.4,Crystal Structure Of De Novo Designed Helical Repeat Protein Dhr14
+1Z3Y A 1,55,6.9,0.0003,1.6,21.8,Structure Of Gun4-1 From Thermosynechococcus Elongatus
+4GAA A 5,56,5.4,0.0127,1.6,5.4,Structure Of Leukotriene A4 Hydrolase From Xenopus Laevis Complexed With Inhibitor Bestatin
+2FO1 E 3,31,5.5,0.0080,1.6,6.5,Crystal Structure Of The Csl-Notch-Mastermind Ternary Complex Bound To Dnaÿ
+3LVG B 2,46,5.7,0.0031,1.7,8.7,Crystal Structure Of A Clathrin Heavy Chain And Clathrin Lig Complexÿ
+4A63 F 1,44,5.7,0.0032,1.7,15.9,Crystal Structure Of The P73-Aspp2 Complex At 2.6a Resolutionÿ
+4A63 H 1,44,5.4,0.0116,1.7,15.9,Crystal Structure Of The P73-Aspp2 Complex At 2.6a Resolutionÿ
+5CER F 2,31,5.0,0.0466,1.7,25.8,Bd0816 Predatory Endopeptidase From Bdellovibrio Bacteriovorus In Complex With Immunity Protein Bd3460
+2PNN A 3,39,5.0,0.0376,1.7,10.3,Crystal Structure Of The Ankyrin Repeat Domain Of Trpv1
+1MX4 A 3,33,5.7,0.0038,1.7,6.1,Structure Of P18ink4c (F82q)
+2DZN E 1,34,5.4,0.0100,1.7,11.8,Crystal Structure Analysis Of Yeast Nas6p Complexed With The Proteasome Subunit, Rpt3
+4A63 D 1,44,5.6,0.0042,1.7,15.9,Crystal Structure Of The P73-Aspp2 Complex At 2.6a Resolutionÿ
+4OAU C 1,36,5.2,0.0273,1.7,13.9,Complete Human Rnase L In Complex With Biological Activators
+4A63 J 1,44,5.4,0.0132,1.7,15.9,Crystal Structure Of The P73-Aspp2 Complex At 2.6a Resolutionÿ
+3FH8 A 5,56,5.3,0.0143,1.7,5.4,Leukotriene A4 Hydrolase Complexed With Inhibitor 1-[2-(4- Benzylphenoxy)ethyl]pyrrolidineÿ
+3FH5 A 5,56,5.3,0.0147,1.7,5.4,Leukotriene A4 Hydrolase Complexed With Inhibitor (2r)-2- [(4-Benzylphenoxy)methyl]pyrrolidineÿ
+3B7B B 2,38,5.3,0.0158,1.7,15.8,Euhmt1 (Glp) Ankyrin Repeat Domain (Structure 1)
+3FHE A 5,56,5.3,0.0156,1.7,5.4,Leukotriene A4 Hydrolase Complexed With Inhibitor N-[3-(4- Benzylphenoxy)propyl]-N-Methyl-Beta-Alanineÿ
+3FUE A 5,56,5.3,0.0155,1.7,5.4,Leukotriene A4 Hydrolase In Complex With Fragment 5- Chloroindole And Bestatinÿ
+5A9Q L 2,44,5.3,0.0164,1.7,11.4,Human Nuclear Pore Complex
+2F8Y A 1,32,5.7,0.0036,1.7,15.6,Crystal Structure Of Human Notch1 Ankyrin Repeats To 1.55a Resolution
+3B7R L 5,56,5.4,0.0127,1.7,5.4,Leukotriene A4 Hydrolase Complexed With Inhibitor Rb3040
+3CHO A 5,56,5.3,0.0145,1.7,5.4,Crystal Structure Of Leukotriene A4 Hydrolase In Complex With 2-Amino-N-[4-(Phenylmethoxy)phenyl]-Acetamide
+3FUH A 5,56,5.3,0.0141,1.7,5.4,Leukotriene A4 Hydrolase In Complex With Fragment 5- Hydroxyindole And Bestatinÿ
+2R59 A 5,56,5.4,0.0130,1.7,5.4,Leukotriene A4 Hydrolase Complexed With Inhibitor Rb3041
+3FH7 A 5,56,5.3,0.0150,1.7,5.4,Leukotriene A4 Hydrolase Complexed With Inhibitor 4-[(2s)-2- {[4-(4-Chlorophenoxy)phenoxy]methyl}pyrrolidin-1- Yl]butanoateÿ
+3U9W A 5,56,5.3,0.0143,1.7,5.4,Structure Of Human Leukotriene A4 Hydrolase In Complex With Inhibitor Sc57461a
+3FUN A 5,56,5.3,0.0142,1.7,5.4,Leukotriene A4 Hydrolase In Complex With {4-[(2r)- Pyrrolidin-2-Ylmethoxy]phenyl}(4-Thiophen-3-Ylphenyl) Methanoneÿ
+3FTV A 5,56,5.3,0.0148,1.7,5.4,Leukotriene A4 Hydrolase In Complex With Fragment N- (Pyridin-3-Ylmethyl)anilineÿ
+3B7U X 5,56,5.4,0.0132,1.7,5.4,Leukotriene A4 Hydrolase Complexed With Kelatorphan
+1HS6 A 5,56,5.4,0.0138,1.7,5.4,Structure Of Leukotriene A4 Hydrolase Complexed With Bestatin.
+4R7L A 5,56,5.4,0.0138,1.7,5.4,Structure Of Human Leukotriene A4 Hydrolase In Complex With Inhibitor H1
+3FTW A 5,56,5.3,0.0196,1.7,5.4,Leukotriene A4 Hydrolase In Complex With Fragments N- (Pyridin-3-Ylmethyl)aniline And Acetateÿ
+3FU0 A 5,56,5.3,0.0153,1.7,5.4,Leukotriene A4 Hydrolase In Complex With Fragment 4-(4- Fluorobenzoyl)pyridineÿ
+4A63 B 1,44,5.3,0.0193,1.7,15.9,Crystal Structure Of The P73-Aspp2 Complex At 2.6a Resolutionÿ
+3FUI A 5,56,5.3,0.0161,1.7,5.4,Leukotriene A4 Hydrolase In Complex With N-Benzyl-4-[(2r)- Pyrrolidin-2-Ylmethoxy]anilineÿ
+3FTX A 5,56,5.4,0.0134,1.7,5.4,Leukotriene A4 Hydrolase In Complex With Dihydroresveratrol And Bestatinÿ
+3FTY A 5,56,5.3,0.0155,1.7,5.4,Leukotriene A4 Hydrolase In Complex With Fragment 3- (Benzyloxy)pyridin-2-Amineÿ
+3FUF A 5,56,5.3,0.0158,1.7,5.4,Leukotriene A4 Hydrolase In Complex With Fragment 5- Fluoroindole And Bestatinÿ
+1H19 A 5,56,5.3,0.0152,1.7,5.4,Structure Of [e271q] Leukotriene A4 Hydrolase
+4QFV C 2,43,5.7,0.0030,1.7,11.6,Crystal Structure Of A Unique Ankyrin
+3FUK A 5,56,5.3,0.0164,1.7,5.4,Leukotriene A4 Hydrolase In Complex With 1-[2-(1h-Indol-5- Yloxy)ethyl]piperidine-4-Carboxylic Acidÿ
+3FU6 A 5,56,5.3,0.0166,1.7,5.4,Leukotriene A4 Hydrolase In Complex With Fragment (4- Thiophen-2-Ylphenyl)methanamineÿ
+3FUD A 5,56,5.3,0.0163,1.7,5.4,Leukotriene A4 Hydrolase In Complex With N-Methyl-1-(2- Thiophen-2-Ylphenyl)methanamineÿ
+1SQM A 5,56,5.3,0.0186,1.7,5.4,Structure Of [r563a] Leukotriene A4 Hydrolase
+3CHP A 5,56,5.4,0.0133,1.7,5.4,Crystal Structure Of Leukotriene A4 Hydrolase In Complex With (3s)-3-Amino-4-Oxo-4-[(4-Phenylmethoxyphenyl) Amino]butanoic Acid
+4RLV A 5,33,5.0,0.0446,1.7,9.1,Crystal Structure Of Ankb 24 Ankyrin Repeats In Complex With Ankr Autoinhibition Segment
+3JUE B 2,47,5.7,0.0035,1.7,6.4,Crystal Structure Of Arfgap And Ank Repeat Domain Of Acap1ÿ
+2VJ8 A 5,56,5.3,0.0155,1.7,5.4,Complex Of Human Leukotriene A4 Hydrolase With A Hydroxamic Acid Inhibitor
+3FUL A 5,56,5.3,0.0173,1.7,5.4,Leukotriene A4 Hydrolase In Complex With Pyridin-4-Yl[4-(2- Pyrrolidin-1-Ylethoxy)phenyl]methanoneÿ
+4RSY A 5,56,5.3,0.0171,1.7,5.4,Crystal Structures Of The Human Leukotriene A4 Hydrolase Complex With A Potential Inhibitor H7
+3FUM A 5,56,5.2,0.0206,1.7,5.4,Leukotriene A4 Hydrolase In Complex With (R)-Pyridin-4-Yl[4- (2-Pyrrolidin-1-Ylethoxy)phenyl]methanolÿ
+1GW6 A 5,56,5.3,0.0142,1.7,5.4,Structure Of Leukotriene A4 Hydrolase D375n Mutant
+4RVB A 5,56,5.3,0.0146,1.7,5.4,Crystal Structure Analysis Of The Human Leukotriene A4 Hydrolase
+3FTS A 5,56,5.3,0.0142,1.7,5.4,Leukotriene A4 Hydrolase In Complex With Resveratrolÿ
+3FTZ A 5,56,5.3,0.0153,1.7,5.4,Leukotriene A4 Hydrolase In Complex With Fragment 2- (Pyridin-3-Ylmethoxy)anilineÿ
+4U1D B 2,68,5.9,0.0014,1.7,5.9,Structure Of The Pci Domain Of Translation Initiation Factor Eif3a
+3FU5 A 5,56,5.3,0.0157,1.7,5.4,Leukotriene A4 Hydrolase In Complex With (5-Thiophen-2- Ylthiophen-2-Yl)methylamineÿ
+4N5Q B 2,40,5.8,0.0026,1.7,17.5,Crystal Structure Of The N-terminal Ankyrin Repeat Domain Of Trpv3
+3CHQ A 5,56,5.3,0.0143,1.7,5.4,Crystal Structure Of Leukotriene A4 Hydrolase In Complex With N5-[4-(Phenylmethoxy)phenyl]-L-Glutamine
+1Z3X A 1,54,6.9,0.0003,1.7,24.1,Structure Of Gun4 From Thermosynechococcus Elongatus
+3IYV A 9,48,5.5,0.0066,1.7,8.3,Clathrin D6 Coatÿ
+1XI4 G 9,48,5.5,0.0066,1.7,8.3,Clathrin D6 Coat
+4DPR A 5,56,5.3,0.0173,1.7,5.4,Structure Of Human Leukotriene A4 Hydrolase In Complex With Inhibitor Captopril
+3FTU A 5,56,5.3,0.0149,1.7,5.4,Leukotriene A4 Hydrolase In Complex With Dihydroresveratrolÿ
+4MS6 A 5,56,5.3,0.0163,1.7,5.4,Human Leukotriene A4 Hydrolase In Complex With Pro-gly-pro Analogue
+5AEN A 5,56,5.3,0.0159,1.7,5.4,Structure Of Human Leukotriene A4 Hydrolase In Complex With Inhibitor Dimethyl(2-(4-phenoxyphenoxy)ethyl)amine
+4MKT A 5,56,5.3,0.0157,1.7,5.4,Human Leukotriene A4 Hydrolase In Complex With Pro-gly-pro Analogue And 4-(4-benzylphenyl)thiazol-2-amine
+3I4R B 3,45,5.3,0.0164,1.7,11.1,Nup107(Aa658-925)NUP133(AA517-1156) Complex, H.Sapiensÿ
+3FU3 A 5,56,5.3,0.0177,1.8,5.4,Leukotriene A4 Hydrolase In Complex With Fragment 4-(2- Amino-1,3-Thiazol-4-Yl)phenolÿ
+3QIL Q 1,36,5.5,0.0088,1.8,13.9,Crystal Structure Analysis Of The Clathrin Trimerization Domainÿ
+4F1P B 3,41,5.5,0.0077,1.8,7.3,Crystal Structure Of Mutant S554d For Arfgap And Ank Repeat Domain Of Acap1
+1WDY A 4,37,5.8,0.0018,1.8,16.2,Crystal Structure Of Ribonuclease
+5CWU C 2,59,6.9,0.0066,1.8,10.2,Crystal Structure Of Chaetomium Thermophilum Nup188 Tail Domain
+1OYZ A 4,51,5.7,0.0034,1.8,5.9,X-Ray Structure Of Yiba_ecoli Northeast Structural Genomics Consortium Target Et31
+3B7T A 5,56,5.2,0.0213,1.8,5.4,[e296q]lta4h In Complex With Arg-Ala-Arg Substrate
+3QIL N 1,36,5.5,0.0087,1.8,13.9,Crystal Structure Analysis Of The Clathrin Trimerization Domainÿ
+3QIL T 1,36,5.5,0.0094,1.8,13.9,Crystal Structure Analysis Of The Clathrin Trimerization Domainÿ
+4QFV A 2,42,5.7,0.0028,1.8,11.9,Crystal Structure Of A Unique Ankyrin
+4QFV D 2,43,5.7,0.0033,1.8,11.6,Crystal Structure Of A Unique Ankyrin
+3QIL H 1,36,5.5,0.0085,1.8,13.9,Crystal Structure Analysis Of The Clathrin Trimerization Domainÿ
+4UUC A 2,38,6.0,0.0076,1.8,7.9,Crystal Structure Of Human Asb11 Ankyrin Repeat Domain
+3QIL B 1,47,5.3,0.0185,1.8,10.6,Crystal Structure Analysis Of The Clathrin Trimerization Domainÿ
+4E6H A 7,60,5.9,0.0113,1.8,10.0,Crystal Structure Of The Hat Domain Of K. Lactis Rna14
+3FUJ A 5,57,5.3,0.0148,1.8,5.3,Leukotriene A4 Hydrolase In Complex With 5-[2-(1h-Pyrrol-1- Yl)ethoxy]-1h-Indoleÿ
+3KEA B 1,39,5.1,0.0324,1.8,10.3,Structure Function Studies Of Vaccinia Virus Host-Range Protein K1 Reveal A Novel Ankyrin Repeat Interaction Surface For K1s Functionÿ
+4QFV B 2,42,5.7,0.0027,1.8,11.9,Crystal Structure Of A Unique Ankyrin
+3JUE A 3,41,5.3,0.0148,1.8,7.3,Crystal Structure Of Arfgap And Ank Repeat Domain Of Acap1ÿ
+3B7S A 5,57,5.3,0.0164,1.8,5.3,[e296q]lta4h In Complex With Rsr Substrate
+5A9Q 3 3,42,5.3,0.0164,1.8,11.9,Human Nuclear Pore Complex
+4YDY A 1,43,5.4,0.0137,1.8,14.0,Crystal Structure Of Darpin 44c12v5 In Complex With Human Il-4
+3KEA B 3,44,5.0,0.0499,1.8,11.4,Structure Function Studies Of Vaccinia Virus Host-Range Protein K1 Reveal A Novel Ankyrin Repeat Interaction Surface For K1s Functionÿ
+4U8V E 1,40,5.2,0.0266,1.8,15.0,Coupling Of Remote Alternating-access Transport Mechanisms For Protons And Substrates In The Multidrug Efflux Pump Acrb
+3QIL K 1,37,5.5,0.0085,1.8,13.5,Crystal Structure Analysis Of The Clathrin Trimerization Domainÿ
+3QIL E 1,37,5.1,0.0303,1.8,13.5,Crystal Structure Analysis Of The Clathrin Trimerization Domainÿ
+4G8K A 1,48,5.2,0.0219,1.8,8.3,Intact Sensor Domain Of Human Rnase L In The Inactive Signaling State
+1WDY A 1,48,5.2,0.0272,1.8,8.3,Crystal Structure Of Ribonuclease
+5CWU D 2,60,7.4,0.0047,1.8,10.0,Crystal Structure Of Chaetomium Thermophilum Nup188 Tail Domain
+4K5B A 2,32,5.4,0.0133,1.8,12.5,Co-crystallization With Conformation-specific Designed Ankyrin Repeat Proteins Explains The Conformational Flexibility Of Bcl-w
+4L2L A 5,57,5.3,0.0173,1.8,5.3,Human Leukotriene A4 Hydrolase Complexed With Ligand 4-(4- Benzylphenyl)thiazol-2-amine
+5CWU G 2,60,7.7,0.0014,1.8,10.0,Crystal Structure Of Chaetomium Thermophilum Nup188 Tail Domain
+2BKK D 1,43,5.4,0.0136,1.8,14.0,Crystal Structure Of Aminoglycoside Phosphotransferase Aph (3')-Iiia In Complex With The Inhibitor Ar_3a
+4DX5 E 1,40,5.2,0.0263,1.8,15.0,Transport Of Drugs By The Multidrug Transporter Acrb Involves An Access And A Deep Binding Pocket That Are Separated By A Switch-Loop
+4U95 E 1,40,5.2,0.0236,1.8,15.0,Coupling Of Remote Alternating-access Transport Mechanisms For Protons And Substrates In The Multidrug Efflux Pump Acrb
+1TNY C 2,48,5.2,0.0264,1.8,2.1,Rat Protein Geranylgeranyltransferase Type-I Complexed With A Ggpp Analog And A Frekkffcail Peptide Derived From The Heterotrimeric G Protein Gamma-2 Subunit
+1JCS A 2,49,5.3,0.0175,1.8,2.0,Crystal Structure Of Rat Protein Farnesyltransferase Complexed With The Peptide Substrate Tkcvfm And An Analog Of Farnesyl Diphosphate
+4G8L A 1,48,5.3,0.0181,1.8,8.3,Active State Of Intact Sensor Domain Of Human Rnase L With 2-5a Bound
+4G8L C 1,48,5.2,0.0197,1.8,8.3,Active State Of Intact Sensor Domain Of Human Rnase L With 2-5a Bound
+4G8L B 1,48,5.2,0.0212,1.8,8.3,Active State Of Intact Sensor Domain Of Human Rnase L With 2-5a Bound
+4U95 D 1,43,5.4,0.0110,1.8,14.0,Coupling Of Remote Alternating-access Transport Mechanisms For Protons And Substrates In The Multidrug Efflux Pump Acrb
+4G8L D 1,48,5.2,0.0223,1.9,8.3,Active State Of Intact Sensor Domain Of Human Rnase L With 2-5a Bound
+2JAB A 2,37,5.3,0.0163,1.9,16.2,A Designed Ankyrin Repeat Protein Evolved To Picomolar Affinity To Her2
+1S70 B 2,57,6.8,0.0104,1.9,12.3,Complex Between Protein SerTHR PHOSPHATASE-1 (Delta) And The Myosin Phosphatase Targeting Subunit 1 (Mypt1)
+5BV1 B 4,31,5.3,0.0165,1.9,3.2,Crystal Structure Of A Vps33-vps16 Complex From Chaetomium Thermophilum
+4G8K B 1,45,5.2,0.0241,1.9,8.9,Intact Sensor Domain Of Human Rnase L In The Inactive Signaling State
+4YDW A 2,37,5.1,0.0302,1.9,10.8,Crystal Structure Of Anti-il4 Darpin 44c12v5
+4U8V D 1,43,5.5,0.0074,1.9,14.0,Coupling Of Remote Alternating-access Transport Mechanisms For Protons And Substrates In The Multidrug Efflux Pump Acrb
+5DYF A 7,53,5.1,0.0307,1.9,5.7,The Crystal Structure Of Aminopeptidase N In Complex With N-benzyl-1, 2-diaminoethylphosphonic Acid
+4G8K A 3,38,5.2,0.0198,1.9,23.7,Intact Sensor Domain Of Human Rnase L In The Inactive Signaling State
+4DX5 D 1,43,5.4,0.0111,1.9,14.0,Transport Of Drugs By The Multidrug Transporter Acrb Involves An Access And A Deep Binding Pocket That Are Separated By A Switch-Loop
+4OAU C 3,38,5.4,0.0107,1.9,23.7,Complete Human Rnase L In Complex With Biological Activators
+4PVB A 7,54,5.1,0.0308,1.9,5.6,Crystal Structure Of Aminopeptidase N In Complex With The Phosphonic Acid Analogue Of Leucine (d-(s)-leup)
+4PU2 A 7,54,5.2,0.0270,1.9,5.6,Crystal Structure Of Aminopeptidase N In Complex With The Phosphonic Acid Analogue Of Leucine L-(r)-leup
+5CWU B 2,64,7.4,0.0046,1.9,10.9,Crystal Structure Of Chaetomium Thermophilum Nup188 Tail Domain
+3T9K B 2,50,5.6,0.0394,1.9,6.0,Crystal Structure Of Acap1 C-Portion Mutant S554d Fused With Integrin Beta1 Peptide
+2JAB A 1,44,5.3,0.0167,1.9,13.6,A Designed Ankyrin Repeat Protein Evolved To Picomolar Affinity To Her2
+2IAE A 5,54,5.0,0.0444,1.9,11.1,Crystal Structure Of A Protein Phosphatase 2a (Pp2a) Holoenzymeÿ
+2LSJ A ,49,5.1,0.0326,1.9,8.2,Solution Structure Of The Mouse Rev1 Ctd In Complex With The Rev1- Interacting Region (Rir)of Pol Kappa
+4G8K B 3,38,5.8,0.0021,1.9,23.7,Intact Sensor Domain Of Human Rnase L In The Inactive Signaling State
+4G8L A 3,38,5.5,0.0091,1.9,23.7,Active State Of Intact Sensor Domain Of Human Rnase L With 2-5a Bound
+4G8L C 3,38,5.5,0.0093,1.9,23.7,Active State Of Intact Sensor Domain Of Human Rnase L With 2-5a Bound
+4G8L D 3,38,5.5,0.0088,1.9,23.7,Active State Of Intact Sensor Domain Of Human Rnase L With 2-5a Bound
+4G8L B 3,38,5.5,0.0087,1.9,23.7,Active State Of Intact Sensor Domain Of Human Rnase L With 2-5a Bound
+3QNF B 7,38,5.7,0.0040,1.9,5.3,Crystal Structure Of The Open State Of Human Endoplasmic Reticulum Aminopeptidase 1 Erap1ÿ
+2BKK B 1,43,5.6,0.0043,1.9,14.0,Crystal Structure Of Aminoglycoside Phosphotransferase Aph (3')-Iiia In Complex With The Inhibitor Ar_3a
+5CWU H 2,61,7.2,0.0030,1.9,9.8,Crystal Structure Of Chaetomium Thermophilum Nup188 Tail Domain
+1D8D A 2,49,5.3,0.0169,1.9,2.0,Co-Crystal Structure Of Rat Protein Farnesyltransferase Complexed With A K-Ras4b Peptide Substrate And Fpp Analog At 2.0a Resolution
+4U1D A 2,69,5.8,0.0023,1.9,5.8,Structure Of The Pci Domain Of Translation Initiation Factor Eif3a
+3Q0P A 1,58,7.7,0.0013,1.9,8.6,Crystal Structure Of The Pumilio-Homology Domain From Human Pumilio1 In Complex With Hunchback Nreÿ
+5CWH A 1,62,5.5,0.0079,1.9,8.1,Crystal Structure Of De Novo Designed Helical Repeat Protein Dhr14
+1JCQ A 2,49,5.2,0.0203,1.9,4.1,Crystal Structure Of Human Protein Farnesyltransferase Complexed With Farnesyl Diphosphate And The Peptidomimetic Inhibitor L-739,750
+4UER a 2,69,5.9,0.0014,1.9,5.8,40s-eif1-eif1a-eif3-eif3j Translation Initiation Complex From Lachancea Kluyveri
+3ZUV B 1,42,5.8,0.0026,1.9,14.3,Crystal Structure Of A Designed Selected Ankyrin Repeat Protein In Complex With The Phosphorylated Map Kinase Erk2
+3DPY A 2,49,5.3,0.0176,1.9,2.0,Protein Farnesyltransferase Complexed With Fpp And Caged Tkcvim Substrate
+4K5C B 1,43,5.3,0.0190,1.9,14.0,From Darpins To Loopdarpins: Novel Loopdarpin Design Allows The Selection Of Low Picomolar Binders In A Single Round Of Ribosome Display
+1SA5 A 2,49,5.3,0.0173,1.9,2.0,Rat Protein Farnesyltransferase Complexed With Fpp And Bms- 214662
+2BKK D 2,40,5.6,0.0051,1.9,12.5,Crystal Structure Of Aminoglycoside Phosphotransferase Aph (3')-Iiia In Complex With The Inhibitor Ar_3a
+1KZO A 2,49,5.3,0.0171,1.9,2.0,Protein Farnesyltransferase Complexed With Farnesylated K- Ras4b Peptide Product And Farnesyl Diphosphate Substrate Bound Simultaneously
+3KSL A 2,49,5.3,0.0173,1.9,2.0,Structure Of Fpt Bound To Datfp-Dh-Gppÿ
+1N4P I 2,52,5.2,0.0197,1.9,1.9,Protein Geranylgeranyltransferase Type-I Complexed With Geranylgeranyl Diphosphate
+1D8E A 2,52,5.3,0.0166,1.9,1.9,Zinc-Depleted Ftase Complexed With K-Ras4b Peptide Substrate And Fpp Analog.
+2ZIR A 2,49,5.3,0.0160,1.9,2.0,Crystal Structure Of Rat Protein Farnesyltransferase Complexed With A Bezoruran Inhibitor And Fppÿ
+4O1O A 2,42,5.3,0.0180,1.9,16.7,Crystal Structure Of Rnase L In Complex With 2-5a
+4O1O C 2,42,5.3,0.0172,1.9,16.7,Crystal Structure Of Rnase L In Complex With 2-5a
+2R2L A 2,50,5.3,0.0187,1.9,2.0,Structure Of Farnesyl Protein Transferase Bound To Pb-93
+1N4S I 2,47,5.2,0.0200,1.9,2.1,Protein Geranylgeranyltransferase Type-I Complexed With Ggpp And A Geranylgeranylated Kkksktkcvil Peptide Product
+1LD8 A 2,49,5.3,0.0178,1.9,4.1,Co-Crystal Structure Of Human Farnesyltransferase With Farnesyldiphosphate And Inhibitor Compound 49
+3IBV B 7,48,5.7,0.0239,1.9,8.3,Karyopherin Cytosolic Stateÿ

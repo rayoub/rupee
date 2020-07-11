@@ -1,0 +1,11 @@
+sse,phi,psi,label
+Helix,480,-170,1
+Helix,140,0,2
+Helix,480,-80,3
+Helix,140,180,4
+Strand,140,180,5
+Strand,140,0,6
+Strand,480,-80,7
+Bend/Coil,140,180,8
+Bend/Coil,140,0,9
+Bend/Coil,480,-80,10

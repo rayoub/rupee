@@ -1,0 +1,87 @@
+3U44 B ,279,28.4,10e-12.8,2.7,14.3,Crystal Structure Of Addab-Dna Complexÿ
+4CEH B ,276,27.3,10e-11.8,2.8,14.9,Crystal Structure Of Addab With A Forked Dna Substrate
+4CEJ B ,275,26.4,10e-10.3,2.8,15.3,Crystal Structure Of Addab-dna-adpnp Complex At 3 Angstrom Resolution
+4CEJ B 7,276,26.4,10e-18.7,2.9,14.9,Crystal Structure Of Addab-dna-adpnp Complex At 3 Angstrom Resolution
+4CEI B ,277,26.3,10e-10.4,2.8,15.5,Crystal Structure Of Adpnp-bound Addab With A Forked Dna Substrate
+4CEI B 7,279,26.3,10e-19.6,2.8,15.8,Crystal Structure Of Adpnp-bound Addab With A Forked Dna Substrate
+3U4Q B ,256,24.9,10e-10.1,2.8,14.8,Structure Of Addab-Dna Complex At 2.8 Angstromsÿ
+4CEH B 7,272,24.3,10e-17.6,2.9,15.4,Crystal Structure Of Addab With A Forked Dna Substrate
+4R5Q A ,125,18.2,10e-12.6,3.0,16.8,Crystal Structure And Nuclease Activity Of The Crispr-associated Cas4 Protein Pcal_0546 From Pyrobaculum Calidifontis Containing A [2fe-2s] Cluster
+5EAN A 2,165,17.6,10e-8.3,3.1,15.2,Crystal Structure Of Dna2 In Complex With A 5' Overhang Dna
+3H4R A ,176,17.1,10e-11.1,3.4,14.2,Crystal Structure Of E. Coli Rece Exonucleaseÿ
+3U44 B 7,226,16.6,10e-10.7,2.8,13.7,Crystal Structure Of Addab-Dna Complexÿ
+3U4Q B 7,214,16.5,10e-10.2,2.9,14.5,Structure Of Addab-Dna Complex At 2.8 Angstromsÿ
+3SM4 A ,130,16.5,10e-9.1,3.3,12.3,Crystal Structure Of The K131a Mutant Of Lambda Exonuclease In Complex With A 5'-Phosphorylated 14-Mer12-Mer Duplex And Magnesiumÿ
+3SM4 A 1,131,16.5,10e-9.2,3.3,11.5,Crystal Structure Of The K131a Mutant Of Lambda Exonuclease In Complex With A 5'-Phosphorylated 14-Mer12-Mer Duplex And Magnesiumÿ
+1W36 E 6,154,16.5,10e-8.4,3.6,11.7,Recbcd:dna Complex
+4WUZ C ,132,16.3,10e-8.9,3.3,12.9,Crystal Structure Of Lambda Exonuclease In Complex With Dna And Ca2+
+3SM4 B ,131,16.2,10e-8.4,3.2,13.0,Crystal Structure Of The K131a Mutant Of Lambda Exonuclease In Complex With A 5'-Phosphorylated 14-Mer12-Mer Duplex And Magnesiumÿ
+3SM4 B 1,134,16.2,10e-8.7,3.2,11.9,Crystal Structure Of The K131a Mutant Of Lambda Exonuclease In Complex With A 5'-Phosphorylated 14-Mer12-Mer Duplex And Magnesiumÿ
+3K70 E 5,153,15.8,10e-8.3,3.8,11.8,Crystal Structure Of The Complete Initiation Complex Of Recbcdÿ
+3K70 B 5,153,15.8,10e-8.2,3.7,11.8,Crystal Structure Of The Complete Initiation Complex Of Recbcdÿ
+3FHD A ,142,15.7,0.0028,3.9,11.3,Crystal Structure Of The Shutoff And Exonuclease Protein From Kaposis Sarcoma Associated Herpesvirusÿ
+1W36 B 6,128,15.4,10e-8.0,3.4,13.3,Recbcd:dna Complex
+4CEH A 6,134,15.3,10e-9.1,3.5,17.2,Crystal Structure Of Addab With A Forked Dna Substrate
+3FHD A 2,140,15.1,0.0008,3.6,11.4,Crystal Structure Of The Shutoff And Exonuclease Protein From Kaposis Sarcoma Associated Herpesvirusÿ
+3SM4 C ,126,14.9,10e-7.0,3.4,12.7,Crystal Structure Of The K131a Mutant Of Lambda Exonuclease In Complex With A 5'-Phosphorylated 14-Mer12-Mer Duplex And Magnesiumÿ
+3SM4 C 1,134,14.9,10e-7.4,3.7,11.9,Crystal Structure Of The K131a Mutant Of Lambda Exonuclease In Complex With A 5'-Phosphorylated 14-Mer12-Mer Duplex And Magnesiumÿ
+3SZ5 A ,131,14.9,10e-7.2,3.1,9.2,Crystal Structure Of Lhk-Exo In Complex With 5-Phosphorylated Oligothymidine (Dt)4ÿ
+4WUZ A ,129,14.8,10e-7.1,3.3,14.0,Crystal Structure Of Lambda Exonuclease In Complex With Dna And Ca2+
+4WUZ A 1,130,14.8,10e-7.4,3.3,13.1,Crystal Structure Of Lambda Exonuclease In Complex With Dna And Ca2+
+3SLP C ,134,14.8,10e-7.3,3.4,11.9,Crystal Structure Of Lambda Exonuclease In Complex With A 12 Bp Symmetric Dna Duplexÿ
+3U4Q A 7,123,14.7,10e-7.1,3.0,17.1,Structure Of Addab-Dna Complex At 2.8 Angstromsÿ
+3SLP B ,139,14.7,10e-7.0,3.8,13.7,Crystal Structure Of Lambda Exonuclease In Complex With A 12 Bp Symmetric Dna Duplexÿ
+4IC1 G ,124,14.6,10e-8.4,2.7,18.5,Crystal Structure Of Sso0001
+4IC1 G 1,124,14.6,10e-8.6,2.5,18.5,Crystal Structure Of Sso0001
+4WUZ B ,139,14.6,10e-6.9,3.7,14.4,Crystal Structure Of Lambda Exonuclease In Complex With Dna And Ca2+
+4IC1 F ,126,14.4,10e-8.1,2.7,18.3,Crystal Structure Of Sso0001
+4IC1 F 1,126,14.4,10e-8.3,2.7,18.3,Crystal Structure Of Sso0001
+3SYY A ,116,14.4,10e-6.5,2.8,8.6,Crystal Structure Of An Alkaline Exonuclease (Lhk-Exo) From Laribacter Hongkongensisÿ
+3SLP A ,132,14.4,10e-6.1,3.4,12.9,Crystal Structure Of Lambda Exonuclease In Complex With A 12 Bp Symmetric Dna Duplexÿ
+3SLP A 1,130,14.4,10e-6.5,3.3,12.3,Crystal Structure Of Lambda Exonuclease In Complex With A 12 Bp Symmetric Dna Duplexÿ
+3K93 A ,148,14.4,10e-6.1,3.3,8.1,Crystal Structure Of Phage Related Exonuclease (Yp_719632.1) From Haemophilus Somnus 129pt At 2.15 A Resolutionÿ
+4IC1 H ,132,14.4,10e-8.0,2.8,17.4,Crystal Structure Of Sso0001
+4IC1 H 1,131,14.4,10e-8.2,2.7,18.3,Crystal Structure Of Sso0001
+4IC1 C ,124,14.4,10e-7.9,2.5,18.5,Crystal Structure Of Sso0001
+4IC1 C 1,131,14.4,10e-8.1,2.8,18.3,Crystal Structure Of Sso0001
+3SZ4 A ,114,14.3,10e-6.3,2.8,7.0,Crystal Structure Of Lhk-Exo In Complex With Dampÿ
+4IC1 B ,128,14.2,10e-7.6,2.8,18.8,Crystal Structure Of Sso0001
+4IC1 B 1,126,14.2,10e-7.8,2.7,19.0,Crystal Structure Of Sso0001
+4IC1 A ,127,14.1,10e-7.5,2.8,18.9,Crystal Structure Of Sso0001
+4IC1 A 1,124,14.1,10e-7.7,2.6,18.5,Crystal Structure Of Sso0001
+3L0A A ,159,14.1,0.0002,3.2,14.5,Crystal Structure Of Putative Exonuclease (Rer070207002219) From Eubacterium Rectale At 2.19 A Resolutionÿ
+2W45 A 2,153,14.0,0.0136,4.3,14.4,Epstein-Barr Virus Alkaline Nucleaseÿ
+5EAW B 3,124,13.9,10e-4.7,2.9,15.3,Crystal Structure Of Dna2 Nuclease-helicase
+5EAX B 3,120,13.9,10e-4.6,2.7,15.0,Crystal Structure Of Dna2 In Complex With An Ssdna
+4IC1 D ,131,13.9,10e-7.1,2.8,18.3,Crystal Structure Of Sso0001
+5EAW A 3,120,13.9,10e-4.6,2.7,15.8,Crystal Structure Of Dna2 Nuclease-helicase
+4IC1 K ,126,13.7,10e-6.9,2.6,18.3,Crystal Structure Of Sso0001
+4IC1 K 1,127,13.7,10e-7.1,2.8,18.1,Crystal Structure Of Sso0001
+5EAX A 3,125,13.7,10e-4.3,2.9,14.4,Crystal Structure Of Dna2 In Complex With An Ssdna
+3POV A 2,123,13.2,0.0018,3.3,13.0,Crystal Structure Of A Sox-Dna Complexÿ
+4IC1 J ,127,13.2,10e-6.0,2.8,18.1,Crystal Structure Of Sso0001
+4IC1 J 1,127,13.2,10e-6.2,2.7,18.1,Crystal Structure Of Sso0001
+4IC1 I ,125,13.2,10e-6.0,2.6,18.4,Crystal Structure Of Sso0001
+4IC1 I 1,125,13.2,10e-6.2,2.6,18.4,Crystal Structure Of Sso0001
+3U44 A 7,123,13.0,10e-4.9,3.1,16.3,Crystal Structure Of Addab-Dna Complexÿ
+4CEI A 6,84,12.1,10e-7.6,1.9,21.4,Crystal Structure Of Adpnp-bound Addab With A Forked Dna Substrate
+4R5Q A 2,57,11.6,10e-7.5,1.9,26.3,Crystal Structure And Nuclease Activity Of The Crispr-associated Cas4 Protein Pcal_0546 From Pyrobaculum Calidifontis Containing A [2fe-2s] Cluster
+4CEJ A 7,91,11.6,10e-4.0,1.9,20.9,Crystal Structure Of Addab-dna-adpnp Complex At 3 Angstrom Resolution
+2VLD B 2,69,11.5,0.0001,3.0,18.8,Crystal Structure Of A Repair Endonuclease From Pyrococcus Abyssiÿ
+2VLD A 2,68,11.5,0.0002,2.9,19.1,Crystal Structure Of A Repair Endonuclease From Pyrococcus Abyssiÿ
+1XMX A 2,71,10.6,0.0461,3.2,9.9,Crystal Structure Of Hypothetical Protein Vc1899, Mcsg Apc26666
+3S1S A 2,55,10.2,0.0053,1.9,12.7,Characterization And Crystal Structure Of The Type Iig Restriction Endonuclease Bpusiÿ
+2OKF B ,70,9.7,0.0219,2.7,7.1,Crystal Structure Of Fdxn Element Excision Controlling Factor Protein (Yp_323815.1) From Anabaena Variabilis Atcc 29413 At 1.60 A Resolution
+2OKF A ,70,9.7,0.0220,2.7,5.7,Crystal Structure Of Fdxn Element Excision Controlling Factor Protein (Yp_323815.1) From Anabaena Variabilis Atcc 29413 At 1.60 A Resolution
+2INB A ,66,9.6,0.0321,2.4,9.1,Crystal Structure Of Hypothetical Protein (Zp_00107633.1) From Nostoc Punctiforme Pcc 73102 At 1.60 A Resolution
+3MOG A 3,58,9.4,0.0002,2.9,1.7,Crystal Structure Of 3-Hydroxybutyryl-Coa Dehydrogenase From Escherichia Coli K12 Substr. Mg1655ÿ
+3MOG B 3,56,9.3,0.0004,2.7,7.1,Crystal Structure Of 3-Hydroxybutyryl-Coa Dehydrogenase From Escherichia Coli K12 Substr. Mg1655ÿ
+3MOG C 3,60,9.1,0.0007,3.1,5.0,Crystal Structure Of 3-Hydroxybutyryl-Coa Dehydrogenase From Escherichia Coli K12 Substr. Mg1655ÿ
+2XI7 C 2,85,8.9,0.0258,3.5,11.8,N-Terminal Endonuclease Domain Of La Crosse Virus L-Proteinÿ
+3FOV A ,67,8.9,0.0050,2.3,13.4,Crystal Structure Of Protein Rpa0323 Of Unknown Function From Rhodopseudomonas Palustrisÿ
+3U44 B 8,109,8.8,0.0006,1.2,13.8,Crystal Structure Of Addab-Dna Complexÿ
+1WXW B 2,46,8.0,0.0476,2.4,6.5,Crystal Structure Of Tt1595, A Putative Sam-Dependent Methyltransferase From Thermus Thermophillus Hb8
+2ZYZ C ,51,8.0,0.0294,2.1,5.9,Pyrobaculum Aerophilum Splicing Endonucleaseÿ
+5AMQ A 2,90,7.8,0.0240,3.6,7.8,Structure Of The La Crosse Bunyavirus Polymerase In Complex With The 3' And 5' Viral Rna
+5AMR A 2,84,7.6,0.0457,3.4,11.9,Structure Of The La Crosse Bunyavirus Polymerase In Complex With The 3' Viral Rna
+2YX1 B 2,30,6.5,0.0318,1.8,3.3,Crystal Structure Of M.Jannaschii Trna M1g37 Methyltransferase

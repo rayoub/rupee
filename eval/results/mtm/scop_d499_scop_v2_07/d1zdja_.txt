@@ -1,0 +1,604 @@
+No., subject, TM-score, RMSD, Sequence Identity, Subject length, Aligned length, Description
+1, d1zdjA_, 1.0000, 0.00, 1.000, 129, 129, STRUCTURE OF BACTERIOPHAGE COAT PROTEIN-LOOP RNA COMPLEX
+2, d1zdhA_, 0.9992, 0.11, 1.000, 129, 129, MS2 COAT PROTEIN/RNA COMPLEX
+3, d1zdiA_, 0.9990, 0.13, 1.000, 129, 129, RNA BACTERIOPHAGE MS2 COAT PROTEIN/RNA COMPLEX
+4, d1aq3A_, 0.9990, 0.13, 0.992, 129, 129, BACTERIOPHAGE MS2 CAPSID PROTEIN/RNA COMPLEX
+5, d1mvbA_, 0.9988, 0.13, 0.992, 129, 129, STRUCTURE OF A PROTEIN CAPSID OF THE T59S MUTANT OF PHAGE MS2
+6, d1mvaA_, 0.9987, 0.14, 0.992, 129, 129, STRUCTURE OF A PROTEIN CAPSID OF THE T45A MUTANT OF PHAGE MS2
+7, d1mstA_, 0.9986, 0.15, 0.992, 129, 129, CRYSTAL STRUCTURE OF MS2 CAPSIDS WITH MUTATIONS IN THE SUBUNIT FG LOOP
+8, d1aq4A_, 0.9986, 0.16, 0.992, 129, 129, STRUCTURE OF A MS2 COAT PROTEIN MUTANT IN COMPLEX WITH AN RNA OPERATOR
+9, d1zdkA_, 0.9985, 0.15, 0.992, 129, 129, STRUCTURE OF BACTERIOPHAGE COAT PROTEIN-LOOP RNA COMPLEX
+10, d2ms2A_, 0.9984, 0.16, 1.000, 129, 129, THE REFINED STRUCTURE OF BACTERIOPHAGE MS2 AT 2.8 ANGSTROMS RESOLUTION
+11, d2iz9A_, 0.9984, 0.16, 1.000, 129, 129, MS2-RNA HAIRPIN (4ONE-5) COMPLEX
+12, d1dzsA_, 0.9984, 0.17, 1.000, 129, 129,  
+13, d1bmsA_, 0.9982, 0.17, 1.000, 129, 129, CRYSTAL STRUCTURE OF MS2 CAPSIDS WITH MUTATIONS IN THE SUBUNIT FG LOOP
+14, d7msfA_, 0.9978, 0.18, 0.992, 129, 129, MS2 PROTEIN CAPSID/RNA COMPLEX
+15, d2iznA_, 0.9978, 0.20, 1.000, 129, 129, MS2-RNA HAIRPIN (G-10) COMPLEX
+16, d2bu1A_, 0.9978, 0.20, 1.000, 129, 129, MS2-RNA HAIRPIN (5BRU-5) COMPLEX
+17, d1e6tA_, 0.9978, 0.20, 1.000, 129, 129,  
+18, d5msfA_, 0.9977, 0.20, 1.000, 129, 129, MS2 PROTEIN CAPSID/RNA COMPLEX
+19, d2b2gA_, 0.9977, 0.20, 1.000, 129, 129, MS2 WILD-TYPE RNA STEMLOOP COMPLEXED WITH AN N87S MUTANT MS2 CAPSID
+20, d2b2dA_, 0.9976, 0.20, 0.992, 129, 129, RNA STEMLOOP OPERATOR FROM BACTERIOPHAGE QBETA COMPLEXED WITH AN N87S E89K MUTANT MS2 CAPSID
+21, d6msfA_, 0.9975, 0.21, 0.984, 129, 129, F6 APTAMER MS2 COAT PROTEIN COMPLEX
+22, d2c4zA_, 0.9974, 0.21, 1.000, 129, 129, MS2-RNA HAIRPIN (2SU -5-6) COMPLEX
+23, d1hdwA_, 0.9974, 0.22, 1.000, 129, 129,  
+24, d2c4yA_, 0.9973, 0.22, 1.000, 129, 129, MS2-RNA HAIRPIN (2THIOURACIL-5) COMPLEX
+25, d1he0A_, 0.9973, 0.22, 1.000, 129, 129,  
+26, d2c4qA_, 0.9972, 0.22, 1.000, 129, 129, MS2-RNA HAIRPIN (2ONE -5) COMPLEX VIRUS
+27, d1e7xA_, 0.9972, 0.22, 1.000, 129, 129,  
+28, d2c51A_, 0.9971, 0.22, 1.000, 129, 129, MS2-RNA HAIRPIN (G -5) COMPLEX
+29, d1h8jA_, 0.9971, 0.23, 1.000, 129, 129,  
+30, d2izmA_, 0.9969, 0.23, 1.000, 129, 129, MS2-RNA HAIRPIN (C-10) COMPLEX
+31, d2iz8A1, 0.9968, 0.23, 1.000, 129, 129, MS2-RNA HAIRPIN (C-7) COMPLEX
+32, d2c50A_, 0.9968, 0.24, 1.000, 129, 129, MS2-RNA HAIRPIN (A -5) COMPLEX
+33, d1u1yA_, 0.9968, 0.24, 1.000, 129, 129, CRYSTAL STRUCTURE OF A COMPLEX BETWEEN WT BACTERIOPHAGE MS2 COAT PROTEIN AND AN F5 APTAMER RNA STEMLOOP WITH 2AMINOPURINE SUBSTITUTED AT THE-10 POSITION
+34, d2bs1A_, 0.9961, 0.24, 1.000, 129, 129, MS2 (N87AE89K MUTANT) - QBETA RNA HAIRPIN COMPLEX
+35, d2bnyA_, 0.9960, 0.26, 0.984, 129, 129, MS2 (N87A MUTANT) - RNA HAIRPIN COMPLEX
+36, d2b2eA_, 0.9954, 0.27, 0.992, 129, 129, RNA STEMLOOP FROM BACTERIOPHAGE MS2 COMPLEXED WITH AN N87S E89K MUTANT MS2 CAPSID
+37, d1frsA_, 0.9913, 0.29, 0.984, 129, 129, CRYSTAL STRUCTURE OF BACTERIOPHAGE FR CAPSIDS AT 3.5 ANGSTROMS RESOLUTION
+38, d2c50C_, 0.9812, 0.40, 0.868, 129, 129, MS2-RNA HAIRPIN (A -5) COMPLEX
+39, d1he6C_, 0.9812, 0.61, 1.000, 129, 129,  
+40, d1mstC_, 0.9810, 0.61, 1.000, 129, 129, CRYSTAL STRUCTURE OF MS2 CAPSIDS WITH MUTATIONS IN THE SUBUNIT FG LOOP
+41, d2c51C_, 0.9808, 0.62, 0.992, 129, 129, MS2-RNA HAIRPIN (G -5) COMPLEX
+42, d1h8jC_, 0.9808, 0.62, 1.000, 129, 129,  
+43, d1mvbC_, 0.9806, 0.62, 1.000, 129, 129, STRUCTURE OF A PROTEIN CAPSID OF THE T59S MUTANT OF PHAGE MS2
+44, d2c4zC_, 0.9805, 0.62, 0.992, 129, 129, MS2-RNA HAIRPIN (2SU -5-6) COMPLEX
+45, d1hdwC_, 0.9805, 0.62, 1.000, 129, 129,  
+46, d2bu1C_, 0.9804, 0.62, 1.000, 129, 129, MS2-RNA HAIRPIN (5BRU-5) COMPLEX
+47, d1e6tC_, 0.9804, 0.63, 1.000, 129, 129,  
+48, d7msfC_, 0.9802, 0.63, 1.000, 129, 129, MS2 PROTEIN CAPSID/RNA COMPLEX
+49, d2izmC_, 0.9802, 0.63, 1.000, 129, 129, MS2-RNA HAIRPIN (C-10) COMPLEX
+50, d6msfC_, 0.9801, 0.63, 1.000, 129, 129, F6 APTAMER MS2 COAT PROTEIN COMPLEX
+51, d2iz9C_, 0.9801, 0.63, 1.000, 129, 129, MS2-RNA HAIRPIN (4ONE-5) COMPLEX
+52, d2c4yC_, 0.9801, 0.63, 1.000, 129, 129, MS2-RNA HAIRPIN (2THIOURACIL-5) COMPLEX
+53, d1he0C_, 0.9801, 0.63, 1.000, 129, 129,  
+54, d1mvaC_, 0.9800, 0.63, 1.000, 129, 129, STRUCTURE OF A PROTEIN CAPSID OF THE T45A MUTANT OF PHAGE MS2
+55, d2b2dC_, 0.9799, 0.64, 0.992, 129, 129, RNA STEMLOOP OPERATOR FROM BACTERIOPHAGE QBETA COMPLEXED WITH AN N87S E89K MUTANT MS2 CAPSID
+56, d1zdjC_, 0.9799, 0.63, 0.984, 129, 129, STRUCTURE OF BACTERIOPHAGE COAT PROTEIN-LOOP RNA COMPLEX
+57, d2iznC_, 0.9798, 0.64, 1.000, 129, 129, MS2-RNA HAIRPIN (G-10) COMPLEX
+58, d2iz8C1, 0.9798, 0.64, 1.000, 129, 129, MS2-RNA HAIRPIN (C-7) COMPLEX
+59, d5msfC_, 0.9797, 0.64, 1.000, 129, 129, MS2 PROTEIN CAPSID/RNA COMPLEX
+60, d2ms2C_, 0.9796, 0.63, 1.000, 129, 129, THE REFINED STRUCTURE OF BACTERIOPHAGE MS2 AT 2.8 ANGSTROMS RESOLUTION
+61, d1zdkC_, 0.9796, 0.64, 1.000, 129, 129, STRUCTURE OF BACTERIOPHAGE COAT PROTEIN-LOOP RNA COMPLEX
+62, d1aq4C_, 0.9796, 0.64, 1.000, 129, 129, STRUCTURE OF A MS2 COAT PROTEIN MUTANT IN COMPLEX WITH AN RNA OPERATOR
+63, d2bnyC_, 0.9795, 0.64, 0.992, 129, 129, MS2 (N87A MUTANT) - RNA HAIRPIN COMPLEX
+64, d1aq3C_, 0.9795, 0.64, 0.992, 129, 129, BACTERIOPHAGE MS2 CAPSID PROTEIN/RNA COMPLEX
+65, d1zdhC_, 0.9792, 0.64, 0.992, 129, 129, MS2 COAT PROTEIN/RNA COMPLEX
+66, d1bmsC_, 0.9792, 0.65, 1.000, 129, 129, CRYSTAL STRUCTURE OF MS2 CAPSIDS WITH MUTATIONS IN THE SUBUNIT FG LOOP
+67, d2c4qC_, 0.9790, 0.65, 0.992, 129, 129, MS2-RNA HAIRPIN (2ONE -5) COMPLEX VIRUS
+68, d2b2gC_, 0.9790, 0.65, 1.000, 129, 129, MS2 WILD-TYPE RNA STEMLOOP COMPLEXED WITH AN N87S MUTANT MS2 CAPSID
+69, d1e7xC_, 0.9790, 0.64, 0.992, 129, 129,  
+70, d1zdiC_, 0.9789, 0.65, 1.000, 129, 129, RNA BACTERIOPHAGE MS2 COAT PROTEIN/RNA COMPLEX
+71, d1u1yC_, 0.9783, 0.65, 1.000, 129, 129, CRYSTAL STRUCTURE OF A COMPLEX BETWEEN WT BACTERIOPHAGE MS2 COAT PROTEIN AND AN F5 APTAMER RNA STEMLOOP WITH 2AMINOPURINE SUBSTITUTED AT THE-10 POSITION
+72, d2bs1C_, 0.9782, 0.66, 1.000, 129, 129, MS2 (N87AE89K MUTANT) - QBETA RNA HAIRPIN COMPLEX
+73, d2b2eC_, 0.9777, 0.66, 0.984, 129, 129, RNA STEMLOOP FROM BACTERIOPHAGE MS2 COMPLEXED WITH AN N87S E89K MUTANT MS2 CAPSID
+74, d1frsC_, 0.9712, 0.67, 0.984, 129, 129, CRYSTAL STRUCTURE OF BACTERIOPHAGE FR CAPSIDS AT 3.5 ANGSTROMS RESOLUTION
+75, d4zorE_, 0.9555, 0.76, 0.868, 129, 129, THE STRUCTURE OF THE S37P MS2 VIRAL CAPSID ASSEMBLY.
+76, d1gavX_, 0.9551, 1.01, 0.992, 129, 129, BACTERIOPHAGE GA PROTEIN CAPSID
+77, d1gavU_, 0.9551, 0.88, 0.617, 129, 128, BACTERIOPHAGE GA PROTEIN CAPSID
+78, d1gavR_, 0.9551, 0.88, 0.617, 129, 128, BACTERIOPHAGE GA PROTEIN CAPSID
+79, d1gavO_, 0.9551, 0.88, 0.617, 129, 128, BACTERIOPHAGE GA PROTEIN CAPSID
+80, d1gavL_, 0.9551, 0.88, 0.617, 129, 128, BACTERIOPHAGE GA PROTEIN CAPSID
+81, d1gavI_, 0.9551, 0.88, 0.617, 129, 128, BACTERIOPHAGE GA PROTEIN CAPSID
+82, d1gavF_, 0.9551, 0.88, 0.617, 129, 128, BACTERIOPHAGE GA PROTEIN CAPSID
+83, d1gavC_, 0.9551, 0.88, 0.617, 129, 128, BACTERIOPHAGE GA PROTEIN CAPSID
+84, d1gav7_, 0.9551, 0.88, 0.617, 129, 128, BACTERIOPHAGE GA PROTEIN CAPSID
+85, d1gav4_, 0.9551, 0.88, 0.617, 129, 128, BACTERIOPHAGE GA PROTEIN CAPSID
+86, d1gav1_, 0.9551, 0.88, 0.617, 129, 128, BACTERIOPHAGE GA PROTEIN CAPSID
+87, d1gav0_, 0.9551, 0.88, 0.617, 129, 128, BACTERIOPHAGE GA PROTEIN CAPSID
+88, d4zorA_, 0.9522, 0.88, 0.617, 129, 128, THE STRUCTURE OF THE S37P MS2 VIRAL CAPSID ASSEMBLY.
+89, d1gavY_, 0.9509, 0.94, 0.992, 128, 128, BACTERIOPHAGE GA PROTEIN CAPSID
+90, d1gavV_, 0.9509, 0.98, 0.617, 129, 128, BACTERIOPHAGE GA PROTEIN CAPSID
+91, d1gavS_, 0.9509, 0.98, 0.617, 129, 128, BACTERIOPHAGE GA PROTEIN CAPSID
+92, d1gavP_, 0.9509, 0.98, 0.617, 129, 128, BACTERIOPHAGE GA PROTEIN CAPSID
+93, d1gavM_, 0.9509, 0.98, 0.617, 129, 128, BACTERIOPHAGE GA PROTEIN CAPSID
+94, d1gavJ_, 0.9509, 0.98, 0.617, 129, 128, BACTERIOPHAGE GA PROTEIN CAPSID
+95, d1gavG_, 0.9509, 0.98, 0.617, 129, 128, BACTERIOPHAGE GA PROTEIN CAPSID
+96, d1gavD_, 0.9509, 0.98, 0.617, 129, 128, BACTERIOPHAGE GA PROTEIN CAPSID
+97, d1gavA_, 0.9509, 0.98, 0.617, 129, 128, BACTERIOPHAGE GA PROTEIN CAPSID
+98, d1gav8_, 0.9509, 0.98, 0.617, 129, 128, BACTERIOPHAGE GA PROTEIN CAPSID
+99, d1gav5_, 0.9509, 0.98, 0.617, 129, 128, BACTERIOPHAGE GA PROTEIN CAPSID
+100, d1gav2_, 0.9509, 0.98, 0.617, 129, 128, BACTERIOPHAGE GA PROTEIN CAPSID
+101, d4zorD_, 0.9482, 0.98, 0.617, 129, 128, THE STRUCTURE OF THE S37P MS2 VIRAL CAPSID ASSEMBLY.
+102, d1fr5A_, 0.9359, 0.77, 0.992, 126, 126, PHAGE FR CAPSIDS WITH A FOUR RESIDUE DELETION IN THE COAT PROTEIN FG LOOP
+103, d1fr5C_, 0.9327, 0.98, 0.864, 125, 125, PHAGE FR CAPSIDS WITH A FOUR RESIDUE DELETION IN THE COAT PROTEIN FG LOOP
+104, d4zorC_, 0.9277, 0.96, 0.864, 125, 125, THE STRUCTURE OF THE S37P MS2 VIRAL CAPSID ASSEMBLY.
+105, d4zorB_, 0.9162, 0.84, 0.992, 124, 124, THE STRUCTURE OF THE S37P MS2 VIRAL CAPSID ASSEMBLY.
+106, d2izmB_, 0.8962, 1.22, 0.992, 123, 123, MS2-RNA HAIRPIN (C-10) COMPLEX
+107, d2iz8B1, 0.8959, 1.50, 0.959, 129, 123, MS2-RNA HAIRPIN (C-7) COMPLEX
+108, d2c50B_, 0.8959, 1.69, 0.944, 129, 124, MS2-RNA HAIRPIN (A -5) COMPLEX
+109, d1he6B_, 0.8959, 1.69, 0.944, 129, 124,  
+110, d1zdiB_, 0.8957, 1.69, 0.944, 129, 124, RNA BACTERIOPHAGE MS2 COAT PROTEIN/RNA COMPLEX
+111, d6msfB_, 0.8956, 1.69, 0.944, 129, 124, F6 APTAMER MS2 COAT PROTEIN COMPLEX
+112, d5msfB_, 0.8955, 1.49, 0.959, 129, 123, MS2 PROTEIN CAPSID/RNA COMPLEX
+113, d1u1yB_, 0.8955, 1.49, 0.959, 129, 123, CRYSTAL STRUCTURE OF A COMPLEX BETWEEN WT BACTERIOPHAGE MS2 COAT PROTEIN AND AN F5 APTAMER RNA STEMLOOP WITH 2AMINOPURINE SUBSTITUTED AT THE-10 POSITION
+114, d2bu1B_, 0.8954, 1.69, 0.944, 129, 124, MS2-RNA HAIRPIN (5BRU-5) COMPLEX
+115, d1mstB_, 0.8954, 1.70, 0.944, 129, 124, CRYSTAL STRUCTURE OF MS2 CAPSIDS WITH MUTATIONS IN THE SUBUNIT FG LOOP
+116, d1e6tB_, 0.8954, 1.67, 0.944, 129, 124,  
+117, d2c4zB_, 0.8953, 1.70, 0.944, 129, 124, MS2-RNA HAIRPIN (2SU -5-6) COMPLEX
+118, d1zdhB_, 0.8953, 1.50, 0.959, 129, 123, MS2 COAT PROTEIN/RNA COMPLEX
+119, d1hdwB_, 0.8953, 1.50, 0.959, 129, 123,  
+120, d2c4qB_, 0.8952, 1.50, 0.959, 129, 123, MS2-RNA HAIRPIN (2ONE -5) COMPLEX VIRUS
+121, d1e7xB_, 0.8952, 1.70, 0.944, 129, 124,  
+122, d1aq3B_, 0.8952, 1.70, 0.944, 129, 124, BACTERIOPHAGE MS2 CAPSID PROTEIN/RNA COMPLEX
+123, d2c51B_, 0.8951, 1.50, 0.951, 129, 123, MS2-RNA HAIRPIN (G -5) COMPLEX
+124, d2bnyB_, 0.8951, 1.70, 0.944, 129, 124, MS2 (N87A MUTANT) - RNA HAIRPIN COMPLEX
+125, d1mvaB_, 0.8951, 1.70, 0.935, 129, 124, STRUCTURE OF A PROTEIN CAPSID OF THE T45A MUTANT OF PHAGE MS2
+126, d1h8jB_, 0.8951, 1.70, 0.935, 129, 124,  
+127, d2iznB_, 0.8949, 1.70, 0.944, 129, 124, MS2-RNA HAIRPIN (G-10) COMPLEX
+128, d1zdkB_, 0.8949, 1.70, 0.944, 129, 124, STRUCTURE OF BACTERIOPHAGE COAT PROTEIN-LOOP RNA COMPLEX
+129, d1aq4B_, 0.8949, 1.49, 0.959, 129, 123, STRUCTURE OF A MS2 COAT PROTEIN MUTANT IN COMPLEX WITH AN RNA OPERATOR
+130, d2c4yB_, 0.8946, 1.70, 0.935, 129, 124, MS2-RNA HAIRPIN (2THIOURACIL-5) COMPLEX
+131, d1he0B_, 0.8946, 1.70, 0.944, 129, 124,  
+132, d2ms2B_, 0.8944, 1.70, 0.944, 129, 124, THE REFINED STRUCTURE OF BACTERIOPHAGE MS2 AT 2.8 ANGSTROMS RESOLUTION
+133, d2b2gB_, 0.8944, 1.70, 0.944, 129, 124, MS2 WILD-TYPE RNA STEMLOOP COMPLEXED WITH AN N87S MUTANT MS2 CAPSID
+134, d1mvbB_, 0.8944, 1.70, 0.935, 129, 124, STRUCTURE OF A PROTEIN CAPSID OF THE T59S MUTANT OF PHAGE MS2
+135, d7msfB_, 0.8942, 1.70, 0.935, 129, 124, MS2 PROTEIN CAPSID/RNA COMPLEX
+136, d2b2dB_, 0.8939, 1.70, 0.944, 129, 124, RNA STEMLOOP OPERATOR FROM BACTERIOPHAGE QBETA COMPLEXED WITH AN N87S E89K MUTANT MS2 CAPSID
+137, d2iz9B_, 0.8937, 1.71, 0.927, 129, 124, MS2-RNA HAIRPIN (4ONE-5) COMPLEX
+138, d2b2eB_, 0.8937, 1.70, 0.944, 129, 124, RNA STEMLOOP FROM BACTERIOPHAGE MS2 COMPLEXED WITH AN N87S E89K MUTANT MS2 CAPSID
+139, d1zdjB_, 0.8936, 1.70, 0.927, 129, 124, STRUCTURE OF BACTERIOPHAGE COAT PROTEIN-LOOP RNA COMPLEX
+140, d1bmsB_, 0.8934, 1.71, 0.944, 129, 124, CRYSTAL STRUCTURE OF MS2 CAPSIDS WITH MUTATIONS IN THE SUBUNIT FG LOOP
+141, d2bs1B_, 0.8892, 1.69, 0.944, 129, 124, MS2 (N87AE89K MUTANT) - QBETA RNA HAIRPIN COMPLEX
+142, d1frsB_, 0.8851, 1.74, 0.927, 129, 124, CRYSTAL STRUCTURE OF BACTERIOPHAGE FR CAPSIDS AT 3.5 ANGSTROMS RESOLUTION
+143, d1gavZ_, 0.8722, 1.73, 0.823, 129, 124, BACTERIOPHAGE GA PROTEIN CAPSID
+144, d1gavW_, 0.8722, 1.79, 0.569, 129, 123, BACTERIOPHAGE GA PROTEIN CAPSID
+145, d1gavT_, 0.8722, 1.79, 0.569, 129, 123, BACTERIOPHAGE GA PROTEIN CAPSID
+146, d1gavQ_, 0.8722, 1.79, 0.569, 129, 123, BACTERIOPHAGE GA PROTEIN CAPSID
+147, d1gavN_, 0.8722, 1.79, 0.569, 129, 123, BACTERIOPHAGE GA PROTEIN CAPSID
+148, d1gavK_, 0.8722, 1.79, 0.569, 129, 123, BACTERIOPHAGE GA PROTEIN CAPSID
+149, d1gavH_, 0.8722, 1.79, 0.569, 129, 123, BACTERIOPHAGE GA PROTEIN CAPSID
+150, d1gavE_, 0.8722, 1.79, 0.569, 129, 123, BACTERIOPHAGE GA PROTEIN CAPSID
+151, d1gavB_, 0.8722, 1.79, 0.569, 129, 123, BACTERIOPHAGE GA PROTEIN CAPSID
+152, d1gav9_, 0.8722, 1.79, 0.569, 129, 123, BACTERIOPHAGE GA PROTEIN CAPSID
+153, d1gav6_, 0.8722, 1.79, 0.569, 129, 123, BACTERIOPHAGE GA PROTEIN CAPSID
+154, d1gav3_, 0.8722, 1.79, 0.569, 129, 123, BACTERIOPHAGE GA PROTEIN CAPSID
+155, d1fr5B_, 0.8714, 1.79, 0.569, 129, 123, PHAGE FR CAPSIDS WITH A FOUR RESIDUE DELETION IN THE COAT PROTEIN FG LOOP
+156, d1mscA_, 0.8590, 0.79, 0.871, 116, 116, CRYSTAL STRUCTURE OF MS2 COAT PROTEIN DIMER
+157, d2vtuL1, 0.8420, 2.05, 0.960, 129, 124, CRYSTAL STRUCTURE OF BACTERIOPHAGE MS2 COVALENT COAT PROTEIN DIMER
+158, d1unaA_, 0.8202, 2.01, 0.992, 128, 128, UNASSEMBLED VIRUS COAT PROTEIN DIMER BACTERIOPHAGE RNA- BINDING DIMER
+159, d1unaB_, 0.8186, 2.07, 0.592, 122, 120, UNASSEMBLED VIRUS COAT PROTEIN DIMER BACTERIOPHAGE RNA- BINDING DIMER
+160, d1qbeB_, 0.8097, 2.08, 0.600, 122, 120, BACTERIOPHAGE Q BETA CAPSID
+161, d2vtuJ1, 0.7921, 2.38, 0.208, 132, 125, CRYSTAL STRUCTURE OF BACTERIOPHAGE MS2 COVALENT COAT PROTEIN DIMER
+162, d1qbeA_, 0.7862, 2.38, 0.208, 132, 125, BACTERIOPHAGE Q BETA CAPSID
+163, d1dwnC_, 0.7839, 2.02, 1.000, 128, 115, STRUCTURE OF BACTERIOPHAGE PP7 FROM PSEUDOMONAS AERUGINOSA AT 3.7 A RESOLUTION
+164, d1dwnB_, 0.7830, 2.16, 0.203, 123, 118, STRUCTURE OF BACTERIOPHAGE PP7 FROM PSEUDOMONAS AERUGINOSA AT 3.7 A RESOLUTION
+165, d1dwnA_, 0.7817, 2.27, 0.132, 127, 121, STRUCTURE OF BACTERIOPHAGE PP7 FROM PSEUDOMONAS AERUGINOSA AT 3.7 A RESOLUTION
+166, d1qbeC_, 0.7808, 2.31, 0.140, 127, 121, BACTERIOPHAGE Q BETA CAPSID
+167, d2quxG1, 0.7745, 2.34, 0.149, 127, 121, PP7 COAT PROTEIN DIMER IN COMPLEX WITH RNA HAIRPIN
+168, d2quxD_, 0.7712, 2.34, 0.149, 127, 121, PP7 COAT PROTEIN DIMER IN COMPLEX WITH RNA HAIRPIN
+169, d2quxP_, 0.7705, 2.22, 0.195, 123, 118, PP7 COAT PROTEIN DIMER IN COMPLEX WITH RNA HAIRPIN
+170, d2quxA1, 0.7704, 2.11, 0.144, 122, 118, PP7 COAT PROTEIN DIMER IN COMPLEX WITH RNA HAIRPIN
+171, d2quxN_, 0.7676, 2.12, 0.144, 122, 118, PP7 COAT PROTEIN DIMER IN COMPLEX WITH RNA HAIRPIN
+172, d2quxE_, 0.7676, 2.12, 0.136, 122, 118, PP7 COAT PROTEIN DIMER IN COMPLEX WITH RNA HAIRPIN
+173, d2quxB_, 0.7654, 2.19, 0.136, 122, 118, PP7 COAT PROTEIN DIMER IN COMPLEX WITH RNA HAIRPIN
+174, d2qudA1, 0.7647, 1.91, 0.130, 119, 115, PP7 COAT PROTEIN DIMER
+175, d2quxJ1, 0.7631, 2.18, 0.136, 122, 118, PP7 COAT PROTEIN DIMER IN COMPLEX WITH RNA HAIRPIN
+176, d2quxK1, 0.7615, 2.19, 0.136, 121, 118, PP7 COAT PROTEIN DIMER IN COMPLEX WITH RNA HAIRPIN
+177, d2quxH_, 0.7594, 2.07, 0.137, 122, 117, PP7 COAT PROTEIN DIMER IN COMPLEX WITH RNA HAIRPIN
+178, d2quxM_, 0.7560, 2.25, 0.136, 122, 118, PP7 COAT PROTEIN DIMER IN COMPLEX WITH RNA HAIRPIN
+179, d2quxQ_, 0.7472, 2.16, 0.137, 121, 117, PP7 COAT PROTEIN DIMER IN COMPLEX WITH RNA HAIRPIN
+180, d2qudB_, 0.7469, 1.99, 0.130, 119, 115, PP7 COAT PROTEIN DIMER
+181, p4bp7FA_, 0.7429, 2.05, 0.129, 119, 116, 
+182, p4bp7JA_, 0.7352, 2.16, 0.123, 117, 114, 
+183, p4bp7E_, 0.7352, 2.00, 0.124, 117, 113, 
+184, p2bs0A_, 0.7329, 0.17, 1.000, 96, 96, MS2 (N87AE89K MUTANT) - VARIANT QBETA RNA HAIRPIN COMPLEX
+185, p4bp7Z_, 0.7274, 0.17, 1.000, 95, 95, 
+186, p4bp7Y_, 0.7274, 0.17, 1.000, 95, 95, 
+187, p4bp7XA_, 0.7274, 0.29, 0.979, 95, 95, 
+188, p4bp7X_, 0.7274, 0.17, 1.000, 94, 94, 
+189, p4bp7WA_, 0.7274, 0.17, 1.000, 94, 94, 
+190, p4bp7W_, 0.7274, 0.17, 1.000, 94, 94, 
+191, p4bp7VA_, 0.7274, 0.17, 1.000, 94, 94, 
+192, p4bp7V_, 0.7274, 0.17, 1.000, 94, 94, 
+193, p4bp7UA_, 0.7274, 0.17, 1.000, 94, 94, 
+194, p4bp7U_, 0.7274, 0.17, 1.000, 94, 94, 
+195, p4bp7T_, 0.7274, 0.17, 1.000, 94, 94, 
+196, p4bp7SA_, 0.7274, 0.17, 1.000, 94, 94, 
+197, p4bp7S_, 0.7274, 0.17, 1.000, 94, 94, 
+198, p4bp7RA_, 0.7274, 0.17, 1.000, 94, 94, 
+199, p4bp7R_, 0.7274, 0.17, 1.000, 94, 94, 
+200, p4bp7QA_, 0.7274, 0.17, 1.000, 94, 94, 
+201, p4bp7Q_, 0.7274, 0.17, 1.000, 94, 94, 
+202, p4bp7PA_, 0.7274, 0.17, 1.000, 94, 94, 
+203, p4bp7P_, 0.7274, 0.17, 1.000, 94, 94, 
+204, p4bp7OA_, 0.7274, 0.17, 1.000, 94, 94, 
+205, p4bp7O_, 0.7274, 0.17, 1.000, 94, 94, 
+206, p4bp7NA_, 0.7274, 0.17, 1.000, 94, 94, 
+207, p4bp7N_, 0.7274, 0.17, 1.000, 94, 94, 
+208, p4bp7MA_, 0.7274, 0.17, 1.000, 94, 94, 
+209, p4bp7M_, 0.7274, 0.17, 1.000, 94, 94, 
+210, p4bp7LA_, 0.7274, 0.17, 1.000, 94, 94, 
+211, p4bp7L_, 0.7274, 0.17, 1.000, 94, 94, 
+212, p4bp7KA_, 0.7274, 0.17, 1.000, 94, 94, 
+213, p4bp7K_, 0.7274, 0.17, 1.000, 94, 94, 
+214, p4bp7HB_, 0.7274, 0.17, 1.000, 94, 94, 
+215, p4bp7H_, 0.7274, 0.17, 1.000, 94, 94, 
+216, p4bp7GB_, 0.7274, 0.17, 1.000, 94, 94, 
+217, p4bp7G_, 0.7274, 0.17, 1.000, 94, 94, 
+218, p4bp7FB_, 0.7274, 0.17, 1.000, 94, 94, 
+219, p4bp7F_, 0.7274, 0.17, 1.000, 94, 94, 
+220, p4bp7EB_, 0.7274, 0.17, 1.000, 94, 94, 
+221, p4bp7DB_, 0.7274, 0.17, 1.000, 94, 94, 
+222, p4bp7DA_, 0.7274, 0.17, 1.000, 94, 94, 
+223, p4bp7D_, 0.7274, 0.17, 1.000, 94, 94, 
+224, p4bp7CB_, 0.7274, 0.17, 1.000, 94, 94, 
+225, p4bp7CA_, 0.7274, 0.17, 1.000, 94, 94, 
+226, p4bp7C_, 0.7274, 0.17, 1.000, 94, 94, 
+227, p4bp7BA_, 0.7274, 0.17, 1.000, 94, 94, 
+228, p4bp7B_, 0.7274, 0.17, 1.000, 94, 94, 
+229, p4bp7AB_, 0.7274, 0.17, 1.000, 94, 94, 
+230, p4bp7AA_, 0.7274, 0.17, 1.000, 94, 94, 
+231, p4bp7A_, 0.7274, 0.17, 1.000, 94, 94, 
+232, p2wbhA_, 0.7274, 0.17, 1.000, 94, 94, ICOSAHEDRAL PARTICLE OF COVALENT COAT PROTEIN DIMER OF BACTERIOPHAGE MS2
+233, p1zseA_, 0.7262, 0.17, 1.000, 94, 94, RNA STEMLOOP FROM BACTERIOPHAGE QBETA COMPLEXED WITH AN N87S MUTANT MS2 CAPSID
+234, p2bq5A_, 0.7243, 0.17, 1.000, 94, 94, MS2 (N87AE89K MUTANT) - RNA HAIRPIN COMPLEX
+235, p4bp7ZE_, 0.7217, 0.17, 1.000, 94, 94, 
+236, p5tc1F_, 0.7213, 0.24, 0.989, 94, 94, IN SITU STRUCTURES OF THE GENOME AND GENOME-DELIVERY APPARATUS IN SSRNA BACTERIOPHAGE MS2
+237, p5tc1A_, 0.7208, 0.33, 0.979, 94, 94, IN SITU STRUCTURES OF THE GENOME AND GENOME-DELIVERY APPARATUS IN SSRNA BACTERIOPHAGE MS2
+238, p4bp7YA_, 0.7197, 0.63, 1.000, 95, 95, 
+239, p4bp7YE_, 0.7141, 0.43, 1.000, 94, 94, 
+240, p4bp7YD_, 0.7141, 0.44, 1.000, 94, 94, 
+241, p4bp7WF_, 0.7141, 0.17, 1.000, 93, 93, 
+242, p4bp7WE_, 0.7141, 0.63, 1.000, 94, 94, 
+243, p4bp7VF_, 0.7141, 0.63, 1.000, 94, 94, 
+244, p4bp7UF_, 0.7141, 0.63, 1.000, 94, 94, 
+245, p4bp7TD_, 0.7141, 0.63, 1.000, 94, 94, 
+246, p4bp7SF_, 0.7141, 0.63, 1.000, 94, 94, 
+247, p4bp7RF_, 0.7141, 0.63, 1.000, 94, 94, 
+248, p4bp7RD_, 0.7141, 0.63, 1.000, 94, 94, 
+249, p4bp7QF_, 0.7141, 0.63, 1.000, 94, 94, 
+250, p4bp7QE_, 0.7141, 0.63, 1.000, 94, 94, 
+251, p4bp7PE_, 0.7141, 0.63, 1.000, 94, 94, 
+252, p4bp7NE_, 0.7141, 0.63, 1.000, 94, 94, 
+253, p4bp7LE_, 0.7141, 0.63, 1.000, 94, 94, 
+254, p4bp7KE_, 0.7141, 0.63, 1.000, 94, 94, 
+255, p4bp7JE_, 0.7141, 0.63, 1.000, 94, 94, 
+256, p4bp7IF_, 0.7141, 0.63, 1.000, 94, 94, 
+257, p4bp7IE_, 0.7141, 0.63, 1.000, 94, 94, 
+258, p4bp7HF_, 0.7141, 0.63, 1.000, 94, 94, 
+259, p4bp7HE_, 0.7141, 0.63, 1.000, 94, 94, 
+260, p4bp7GF_, 0.7141, 0.63, 1.000, 94, 94, 
+261, p4bp7FF_, 0.7141, 0.63, 1.000, 94, 94, 
+262, p4bp7CF_, 0.7141, 0.63, 1.000, 94, 94, 
+263, p4bp7BF_, 0.7141, 0.63, 1.000, 94, 94, 
+264, p4bp7BE_, 0.7141, 0.63, 1.000, 94, 94, 
+265, p4bp7AE_, 0.7141, 0.63, 1.000, 94, 94, 
+266, p2wbhC_, 0.7141, 0.63, 1.000, 94, 94, ICOSAHEDRAL PARTICLE OF COVALENT COAT PROTEIN DIMER OF BACTERIOPHAGE MS2
+267, p4bp7XF_, 0.7140, 0.63, 1.000, 94, 94, 
+268, p4bp7XE_, 0.7140, 0.63, 1.000, 94, 94, 
+269, p4bp7XD_, 0.7140, 0.63, 1.000, 94, 94, 
+270, p4bp7WD_, 0.7140, 0.63, 1.000, 94, 94, 
+271, p4bp7VD_, 0.7140, 0.63, 1.000, 94, 94, 
+272, p4bp7TF_, 0.7140, 0.63, 1.000, 94, 94, 
+273, p4bp7SD_, 0.7140, 0.63, 1.000, 94, 94, 
+274, p4bp7OE_, 0.7140, 0.63, 1.000, 94, 94, 
+275, p4bp7NF_, 0.7140, 0.63, 1.000, 94, 94, 
+276, p4bp7ME_, 0.7140, 0.63, 1.000, 94, 94, 
+277, p4bp7KF_, 0.7140, 0.63, 1.000, 94, 94, 
+278, p4bp7JF_, 0.7140, 0.63, 1.000, 94, 94, 
+279, p4bp7GE_, 0.7140, 0.63, 1.000, 94, 94, 
+280, p4bp7FE_, 0.7140, 0.63, 1.000, 94, 94, 
+281, p4bp7EF_, 0.7140, 0.63, 1.000, 94, 94, 
+282, p4bp7EE_, 0.7140, 0.63, 1.000, 94, 94, 
+283, p4bp7DF_, 0.7140, 0.63, 1.000, 94, 94, 
+284, p4bp7DE_, 0.7140, 0.63, 1.000, 94, 94, 
+285, p4bp7CE_, 0.7140, 0.63, 1.000, 94, 94, 
+286, p5tc1C_, 0.7126, 0.63, 1.000, 94, 94, IN SITU STRUCTURES OF THE GENOME AND GENOME-DELIVERY APPARATUS IN SSRNA BACTERIOPHAGE MS2
+287, p2bq5C_, 0.7114, 0.63, 1.000, 94, 94, MS2 (N87AE89K MUTANT) - RNA HAIRPIN COMPLEX
+288, p4bp7DD_, 0.7096, 0.63, 1.000, 94, 94, 
+289, p4bp7EA_, 0.7042, 0.65, 1.000, 94, 94, 
+290, p1gavf_, 0.7020, 0.68, 0.979, 94, 94, BACTERIOPHAGE GA PROTEIN CAPSID
+291, p1gavg_, 0.6974, 1.81, 0.929, 104, 99, BACTERIOPHAGE GA PROTEIN CAPSID
+292, p1gavd_, 0.6974, 0.18, 1.000, 91, 91, BACTERIOPHAGE GA PROTEIN CAPSID
+293, p1gava_, 0.6974, 0.75, 0.667, 93, 93, BACTERIOPHAGE GA PROTEIN CAPSID
+294, p4bp7ZD_, 0.6909, 0.89, 0.667, 93, 93, 
+295, p4bp7VE_, 0.6909, 0.89, 0.667, 93, 93, 
+296, p4bp7UE_, 0.6909, 0.89, 0.667, 93, 93, 
+297, p4bp7MF_, 0.6909, 0.64, 1.000, 91, 91, 
+298, p5tc1D_, 0.6782, 0.64, 1.000, 91, 91, IN SITU STRUCTURES OF THE GENOME AND GENOME-DELIVERY APPARATUS IN SSRNA BACTERIOPHAGE MS2
+299, p4bp7GA_, 0.6580, 0.64, 1.000, 91, 91, 
+300, p4bp7NB_, 0.6404, 0.64, 1.000, 91, 91, 
+301, p5tc1G_, 0.6375, 1.22, 1.000, 94, 93, IN SITU STRUCTURES OF THE GENOME AND GENOME-DELIVERY APPARATUS IN SSRNA BACTERIOPHAGE MS2
+302, p5tc1E_, 0.6344, 0.16, 1.000, 85, 85, IN SITU STRUCTURES OF THE GENOME AND GENOME-DELIVERY APPARATUS IN SSRNA BACTERIOPHAGE MS2
+303, p4bp7ZC_, 0.6328, 1.89, 0.922, 95, 90, 
+304, p4bp7ZB_, 0.6328, 0.63, 1.000, 84, 84, 
+305, p4bp7YC_, 0.6328, 1.90, 0.921, 94, 89, 
+306, p4bp7YB_, 0.6328, 1.89, 0.921, 94, 89, 
+307, p4bp7XC_, 0.6328, 1.89, 0.921, 94, 89, 
+308, p4bp7XB_, 0.6328, 1.89, 0.921, 94, 89, 
+309, p4bp7WC_, 0.6328, 1.89, 0.921, 94, 89, 
+310, p4bp7WB_, 0.6328, 1.89, 0.921, 94, 89, 
+311, p4bp7VC_, 0.6328, 1.89, 0.921, 94, 89, 
+312, p4bp7VB_, 0.6328, 1.89, 0.921, 94, 89, 
+313, p4bp7UC_, 0.6328, 1.89, 0.921, 94, 89, 
+314, p4bp7UB_, 0.6328, 1.89, 0.921, 94, 89, 
+315, p4bp7TC_, 0.6328, 1.89, 0.921, 94, 89, 
+316, p4bp7TB_, 0.6328, 1.89, 0.921, 94, 89, 
+317, p4bp7SC_, 0.6328, 1.89, 0.921, 94, 89, 
+318, p4bp7SB_, 0.6328, 1.89, 0.921, 94, 89, 
+319, p4bp7RC_, 0.6328, 1.89, 0.921, 94, 89, 
+320, p4bp7RB_, 0.6328, 1.89, 0.921, 94, 89, 
+321, p4bp7QC_, 0.6328, 1.89, 0.921, 94, 89, 
+322, p4bp7QB_, 0.6328, 1.89, 0.921, 94, 89, 
+323, p4bp7PD_, 0.6328, 1.89, 0.921, 94, 89, 
+324, p4bp7OD_, 0.6328, 1.89, 0.921, 94, 89, 
+325, p4bp7OC_, 0.6328, 1.89, 0.921, 94, 89, 
+326, p4bp7ND_, 0.6328, 1.89, 0.921, 94, 89, 
+327, p4bp7MD_, 0.6328, 1.89, 0.921, 94, 89, 
+328, p4bp7MB_, 0.6328, 1.89, 0.921, 94, 89, 
+329, p4bp7LD_, 0.6328, 1.89, 0.921, 94, 89, 
+330, p4bp7LB_, 0.6328, 1.89, 0.921, 94, 89, 
+331, p4bp7KD_, 0.6328, 1.89, 0.921, 94, 89, 
+332, p4bp7KC_, 0.6328, 1.89, 0.921, 94, 89, 
+333, p4bp7KB_, 0.6328, 1.89, 0.921, 94, 89, 
+334, p4bp7IC_, 0.6328, 1.89, 0.921, 94, 89, 
+335, p4bp7HC_, 0.6328, 1.89, 0.921, 94, 89, 
+336, p4bp7GD_, 0.6328, 1.89, 0.921, 94, 89, 
+337, p4bp7GC_, 0.6328, 1.89, 0.921, 94, 89, 
+338, p4bp7FD_, 0.6328, 1.89, 0.921, 94, 89, 
+339, p4bp7FC_, 0.6328, 1.89, 0.921, 94, 89, 
+340, p4bp7ED_, 0.6328, 1.89, 0.921, 94, 89, 
+341, p4bp7EC_, 0.6328, 1.89, 0.921, 94, 89, 
+342, p4bp7DC_, 0.6328, 1.89, 0.921, 94, 89, 
+343, p4bp7CD_, 0.6328, 1.89, 0.921, 94, 89, 
+344, p4bp7CC_, 0.6328, 1.89, 0.921, 94, 89, 
+345, p4bp7BD_, 0.6328, 1.89, 0.921, 94, 89, 
+346, p4bp7BC_, 0.6328, 1.89, 0.921, 94, 89, 
+347, p4bp7AD_, 0.6328, 1.89, 0.921, 94, 89, 
+348, p4bp7AC_, 0.6328, 1.89, 0.921, 94, 89, 
+349, p2wbhB_, 0.6328, 1.89, 0.921, 94, 89, ICOSAHEDRAL PARTICLE OF COVALENT COAT PROTEIN DIMER OF BACTERIOPHAGE MS2
+350, p1zseB_, 0.6325, 1.89, 0.921, 94, 89, RNA STEMLOOP FROM BACTERIOPHAGE QBETA COMPLEXED WITH AN N87S MUTANT MS2 CAPSID
+351, p5tc1B_, 0.6323, 1.89, 0.921, 94, 89, IN SITU STRUCTURES OF THE GENOME AND GENOME-DELIVERY APPARATUS IN SSRNA BACTERIOPHAGE MS2
+352, p2bq5B_, 0.6283, 1.89, 0.921, 94, 89, MS2 (N87AE89K MUTANT) - RNA HAIRPIN COMPLEX
+353, p2bs0B_, 0.6278, 1.90, 0.910, 94, 89, MS2 (N87AE89K MUTANT) - VARIANT QBETA RNA HAIRPIN COMPLEX
+354, p1gavh_, 0.6243, 1.93, 0.921, 94, 89, BACTERIOPHAGE GA PROTEIN CAPSID
+355, p1gave_, 0.6243, 1.95, 0.899, 94, 89, BACTERIOPHAGE GA PROTEIN CAPSID
+356, p5tc1H_, 0.6166, 1.94, 0.899, 94, 89, IN SITU STRUCTURES OF THE GENOME AND GENOME-DELIVERY APPARATUS IN SSRNA BACTERIOPHAGE MS2
+357, p4bp7MC_, 0.6102, 1.90, 0.602, 93, 88, 
+358, p4bp7JD_, 0.6102, 1.90, 0.602, 93, 88, 
+359, p4angC_, 0.6071, 2.50, 1.000, 94, 91, SMALL RNA PHAGE PRR1 IN COMPLEX WITH AN RNA OPERATOR FRAGMENT
+360, p4angA_, 0.6058, 1.92, 0.919, 91, 86, SMALL RNA PHAGE PRR1 IN COMPLEX WITH AN RNA OPERATOR FRAGMENT
+361, p2vf9C_, 0.6052, 1.92, 0.919, 91, 86, CRYSTAL STRUCTURE OF BACTERIOPHAGE PRR1
+362, p2vf9A_, 0.6050, 2.11, 0.293, 95, 92, CRYSTAL STRUCTURE OF BACTERIOPHAGE PRR1
+363, p4bp7HD_, 0.6025, 2.05, 0.286, 95, 91, 
+364, p4angB_, 0.5948, 2.12, 0.293, 95, 92, SMALL RNA PHAGE PRR1 IN COMPLEX WITH AN RNA OPERATOR FRAGMENT
+365, p2vf9B_, 0.5932, 2.04, 0.286, 95, 91, CRYSTAL STRUCTURE OF BACTERIOPHAGE PRR1
+366, p5vlyA_, 0.5825, 2.04, 0.286, 95, 91, ASYMMETRIC UNIT FOR THE COAT PROTEINS OF PHAGE QBETA
+367, p5vlyB_, 0.5823, 1.93, 0.918, 90, 85, ASYMMETRIC UNIT FOR THE COAT PROTEINS OF PHAGE QBETA
+368, p5kipA_, 0.5816, 2.11, 0.281, 95, 89, ASYMMETRIC UNIT FOR THE COAT PROTEINS OF PHAGE QBETA
+369, p5kipB_, 0.5815, 2.13, 0.281, 95, 89, ASYMMETRIC UNIT FOR THE COAT PROTEINS OF PHAGE QBETA
+370, p5kipC_, 0.5811, 2.04, 0.205, 96, 88, ASYMMETRIC UNIT FOR THE COAT PROTEINS OF PHAGE QBETA
+371, p4bp7TA_, 0.5805, 2.04, 0.205, 98, 88, 
+372, p5vlzZE_, 0.5796, 2.17, 0.213, 96, 89, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+373, p5vlzZD_, 0.5796, 2.17, 0.213, 98, 89, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+374, p5vlzZC_, 0.5796, 2.07, 0.205, 96, 88, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+375, p5vlzZB_, 0.5796, 0.16, 1.000, 75, 75, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+376, p5vlzZA_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+377, p5vlzZ_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+378, p5vlzYF_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+379, p5vlzYE_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+380, p5vlzYD_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+381, p5vlzYC_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+382, p5vlzYB_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+383, p5vlzYA_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+384, p5vlzY_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+385, p5vlzXF_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+386, p5vlzXE_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+387, p5vlzXD_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+388, p5vlzXC_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+389, p5vlzXB_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+390, p5vlzXA_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+391, p5vlzX_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+392, p5vlzWF_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+393, p5vlzWE_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+394, p5vlzWD_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+395, p5vlzWC_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+396, p5vlzWB_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+397, p5vlzWA_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+398, p5vlzW_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+399, p5vlzVF_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+400, p5vlzVE_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+401, p5vlzVD_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+402, p5vlzVC_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+403, p5vlzVB_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+404, p5vlzVA_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+405, p5vlzV_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+406, p5vlzUF_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+407, p5vlzUE_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+408, p5vlzUD_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+409, p5vlzUC_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+410, p5vlzUB_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+411, p5vlzUA_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+412, p5vlzU_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+413, p5vlzTF_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+414, p5vlzTE_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+415, p5vlzTD_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+416, p5vlzTC_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+417, p5vlzTB_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+418, p5vlzTA_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+419, p5vlzT_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+420, p5vlzSF_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+421, p5vlzSE_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+422, p5vlzSD_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+423, p5vlzSC_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+424, p5vlzSB_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+425, p5vlzSA_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+426, p5vlzS_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+427, p5vlzRF_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+428, p5vlzRD_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+429, p5vlzRC_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+430, p5vlzRB_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+431, p5vlzRA_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+432, p5vlzR_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+433, p5vlzQF_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+434, p5vlzQE_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+435, p5vlzQD_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+436, p5vlzQC_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+437, p5vlzQB_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+438, p5vlzQA_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+439, p5vlzQ_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+440, p5vlzPF_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+441, p5vlzPE_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+442, p5vlzPD_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+443, p5vlzPC_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+444, p5vlzPB_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+445, p5vlzPA_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+446, p5vlzP_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+447, p5vlzOF_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+448, p5vlzOE_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+449, p5vlzOD_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+450, p5vlzOC_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+451, p5vlzOB_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+452, p5vlzOA_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+453, p5vlzO_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+454, p5vlzNF_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+455, p5vlzNE_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+456, p5vlzND_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+457, p5vlzNC_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+458, p5vlzNA_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+459, p5vlzN_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+460, p5vlzMF_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+461, p5vlzME_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+462, p5vlzMD_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+463, p5vlzMC_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+464, p5vlzMB_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+465, p5vlzMA_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+466, p5vlzM_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+467, p5vlzLF_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+468, p5vlzLE_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+469, p5vlzLD_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+470, p5vlzLC_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+471, p5vlzLB_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+472, p5vlzL_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+473, p5vlzKF_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+474, p5vlzKE_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+475, p5vlzKD_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+476, p5vlzKC_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+477, p5vlzKB_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+478, p5vlzKA_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+479, p5vlzK_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+480, p5vlzJF_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+481, p5vlzJE_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+482, p5vlzJD_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+483, p5vlzJC_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+484, p5vlzJB_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+485, p5vlzJA_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+486, p5vlzJ_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+487, p5vlzIF_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+488, p5vlzIE_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+489, p5vlzID_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+490, p5vlzIC_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+491, p5vlzIB_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+492, p5vlzIA_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+493, p5vlzI_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+494, p5vlzHF_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+495, p5vlzHE_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+496, p5vlzHD_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+497, p5vlzHC_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+498, p5vlzHB_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+499, p5vlzHA_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+500, p5vlzH_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+501, p5vlzGF_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+502, p5vlzGE_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+503, p5vlzGD_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+504, p5vlzGC_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+505, p5vlzGB_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+506, p5vlzGA_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+507, p5vlzG_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+508, p5vlzFF_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+509, p5vlzFE_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+510, p5vlzFD_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+511, p5vlzFC_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+512, p5vlzFB_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+513, p5vlzFA_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+514, p5vlzF_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+515, p5vlzEF_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+516, p5vlzEE_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+517, p5vlzED_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+518, p5vlzEC_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+519, p5vlzEB_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+520, p5vlzEA_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+521, p5vlzE_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+522, p5vlzDF_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+523, p5vlzDE_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+524, p5vlzDD_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+525, p5vlzDC_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+526, p5vlzDB_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+527, p5vlzDA_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+528, p5vlzD_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+529, p5vlzCF_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+530, p5vlzCE_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+531, p5vlzCD_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+532, p5vlzCC_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+533, p5vlzCB_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+534, p5vlzCA_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+535, p5vlzC_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+536, p5vlzBE_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+537, p5vlzBD_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+538, p5vlzBC_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+539, p5vlzBB_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+540, p5vlzBA_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+541, p5vlzB_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+542, p5vlzAF_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+543, p5vlzAE_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+544, p5vlzAD_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+545, p5vlzAC_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+546, p5vlzAB_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+547, p5vlzAA_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+548, p5vlzA_, 0.5796, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+549, p5vlzNB_, 0.5795, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+550, p5vlzLA_, 0.5795, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+551, p5vlzBF_, 0.5795, 2.28, 0.222, 98, 90, struct.pdbx_descriptor               Minor capsid protein A1; Maturation protein A2  
+552, p5vlyC_, 0.5784, 2.28, 0.222, 98, 90, ASYMMETRIC UNIT FOR THE COAT PROTEINS OF PHAGE QBETA
+553, p4bp7TE_, 0.5780, 2.28, 0.222, 98, 90, 
+554, p4bp7UD_, 0.5703, 2.28, 0.222, 98, 90, 
+555, p4bp7SE_, 0.5703, 2.28, 0.222, 98, 90, 
+556, p4bp7RE_, 0.5703, 2.01, 0.207, 94, 87, 
+557, p4bp7PF_, 0.5703, 0.62, 1.000, 76, 76, 
+558, p4bp7OF_, 0.5703, 0.62, 1.000, 75, 75, 
+559, p1zseC_, 0.5703, 0.62, 1.000, 75, 75, RNA STEMLOOP FROM BACTERIOPHAGE QBETA COMPLEXED WITH AN N87S MUTANT MS2 CAPSID
+560, p2bs0C_, 0.5680, 0.62, 1.000, 75, 75, MS2 (N87AE89K MUTANT) - VARIANT QBETA RNA HAIRPIN COMPLEX
+561, p4bp7ZA_, 0.5573, 0.62, 1.000, 75, 75, 
+562, p4bp7J_, 0.5573, 0.62, 1.000, 75, 75, 
+563, p1gavi_, 0.5506, 0.62, 0.987, 75, 75, BACTERIOPHAGE GA PROTEIN CAPSID
+564, p4bp7HA_, 0.5495, 0.68, 0.973, 75, 75, 
+565, p4bp7QD_, 0.5473, 0.16, 1.000, 72, 72, 
+566, p4bp7AF_, 0.5473, 0.16, 1.000, 72, 72, 
+567, p4ph7A_, 0.5345, 0.77, 0.671, 73, 73, STRUCTURE OF OSH6P IN COMPLEX WITH PHOSPHATIDYLINOSITOL 4-PHOSPHATE
+568, p4b2zA_, 0.5341, 0.16, 1.000, 71, 71, STRUCTURE OF OSH6 IN COMPLEX WITH PHOSPHATIDYLSERINE
+569, p4ph7B_, 0.5310, 0.63, 1.000, 72, 72, STRUCTURE OF OSH6P IN COMPLEX WITH PHOSPHATIDYLINOSITOL 4-PHOSPHATE
+570, p4b2zB_, 0.5287, 0.63, 1.000, 72, 72, STRUCTURE OF OSH6 IN COMPLEX WITH PHOSPHATIDYLSERINE
+571, p4l8hA_, 0.5271, 4.18, 0.028, 401, 109, BACTERIOPHAGE QBETA COAT PROTEIN IN COMPLEX WITH RNA OPERATOR HAIRPIN
+572, p4l8hB_, 0.5265, 4.18, 0.028, 401, 109, BACTERIOPHAGE QBETA COAT PROTEIN IN COMPLEX WITH RNA OPERATOR HAIRPIN
+573, p5o8oA_, 0.5231, 4.34, 0.036, 399, 112, N. CRASSA TOM40 MODEL BASED ON CRYO-EM STRUCTURE OF THE TOM CORE COMPLEX AT 6.8 A
+574, p4ph7D_, 0.5231, 4.30, 0.036, 395, 111, STRUCTURE OF OSH6P IN COMPLEX WITH PHOSPHATIDYLINOSITOL 4-PHOSPHATE
+575, p2ynkA_, 0.5225, 3.89, 0.028, 400, 106, WZI AN OUTER MEMBRANE PROTEIN INVOLVED IN GROUP 1 CAPSULE ASSEMBLY IN ESCHERICHIA COLI IS A CARBOHYDRATE BINDING BETA-BARREL
+576, d3spwB_, 0.5222, 1.86, 0.221, 87, 77, STRUCTURE OF OSH4P/KES1P IN COMPLEX WITH PHOSPHATIDYLINOSITOL 4- PHOSPHATE
+577, d1zi7A1, 0.5210, 2.14, 0.203, 89, 79, STRUCTURE OF TRUNCATED YEAST OXYSTEROL BINDING PROTEIN OSH4
+578, d4jchA1, 0.5207, 4.26, 0.067, 321, 104, OSH4 BOUND TO AN ELECTROPHILIC OXYSTEROL
+579, p1gavc_, 0.5199, 4.26, 0.067, 321, 104, BACTERIOPHAGE GA PROTEIN CAPSID
+580, p4ctdA_, 0.5188, 4.50, 0.035, 396, 114, X-RAY STRUCTURE OF AN ENGINEERED OMPG LOOP6-DELETION
+581, d1zhxA2, 0.5161, 4.11, 0.058, 432, 104, STRUCTURE OF YEAST OXYSTEROL BINDING PROTEIN OSH4 IN COMPLEX WITH 25-HYDROXYCHOLESTEROL
+582, d4fesA1, 0.5157, 4.11, 0.058, 432, 104, STRUCTURE OF OSH4 IN COMPLEX WITH CHOLESTEROL ANALOGS
+583, d1zhwA2, 0.5155, 3.93, 0.098, 390, 102, STRUCTURE OF YEAST OXYSTEROL BINDING PROTEIN OSH4 IN COMPLEX WITH 20-HYDROXYCHOLESTEROL
+584, p2f1cX_, 0.5154, 4.05, 0.084, 402, 107, CRYSTAL STRUCTURE OF THE MONOMERIC PORIN OMPG
+585, d1zhyA2, 0.5151, 4.13, 0.073, 433, 109, STRUCTURE OF YEAST OXYSTEROL BINDING PROTEIN OSH4 IN COMPLEX WITH CHOLESTEROL
+586, d1zhtA1, 0.5145, 0.78, 0.652, 69, 69, STRUCTURE OF YEAST OXYSTEROL BINDING PROTEIN OSH4 IN COMPLEX WITH 7-HYDROXYCHOLESTEROL
+587, p4ph7C_, 0.5144, 4.13, 0.057, 234, 105, STRUCTURE OF OSH6P IN COMPLEX WITH PHOSPHATIDYLINOSITOL 4-PHOSPHATE
+588, d1zhzA2, 0.5141, 4.11, 0.065, 433, 108, STRUCTURE OF YEAST OXYSTEROL BINDING PROTEIN OSH4 IN COMPLEX WITH ERGOSTEROL
+589, d4f4bB1, 0.5131, 4.16, 0.074, 428, 108, STRUCTURE OF OSH4 WITH A CHOLESTEROL ANALOG
+590, d5fp1A_, 0.5130, 4.11, 0.065, 433, 108, CRYSTAL STRUCTURE OF THE SIDEROPHORE RECEPTOR PIUA FROM ACINETOBACTER BAUMANNII
+591, p2iwwB_, 0.5118, 4.03, 0.117, 252, 103, STRUCTURE OF THE MONOMERIC OUTER MEMBRANE PORIN OMPG IN THE OPEN AND CLOSED CONFORMATION
+592, d1zi7C_, 0.5118, 4.10, 0.065, 433, 108, STRUCTURE OF TRUNCATED YEAST OXYSTEROL BINDING PROTEIN OSH4
+593, d1zi7B_, 0.5112, 4.10, 0.065, 433, 108, STRUCTURE OF TRUNCATED YEAST OXYSTEROL BINDING PROTEIN OSH4
+594, d3spwA_, 0.5093, 4.10, 0.065, 433, 108, STRUCTURE OF OSH4P/KES1P IN COMPLEX WITH PHOSPHATIDYLINOSITOL 4- PHOSPHATE
+595, d4fesB1, 0.5091, 4.22, 0.009, 395, 110, STRUCTURE OF OSH4 IN COMPLEX WITH CHOLESTEROL ANALOGS
+596, p4q35A1, 0.5074, 4.10, 0.065, 433, 108, STRUCTURE OF A MEMBRANE PROTEIN
+597, d3sybA_, 0.5048, 4.12, 0.065, 422, 107, CRYSTAL STRUCTURE OF PSEUDOMONAS AERUGINOSA OCCD3 (OPDP)
+598, d4jchB1, 0.5043, 4.40, 0.046, 701, 108, OSH4 BOUND TO AN ELECTROPHILIC OXYSTEROL
+599, p4zgvA_, 0.5030, 4.40, 0.046, 701, 108, THE CRYSTAL STRUCTURE OF THE FERREDOXIN RECEPTOR FUSA FROM PECTOBACTERIUM ATROSEPTICUM SCRI1043
+600, p4zgvB_, 0.5016, 4.34, 0.047, 277, 107, THE CRYSTAL STRUCTURE OF THE FERREDOXIN RECEPTOR FUSA FROM PECTOBACTERIUM ATROSEPTICUM SCRI1043
+601, d1ujwA_, 0.5012, 4.17, 0.065, 398, 107, STRUCTURE OF THE COMPLEX BETWEEN BTUB AND COLICIN E3 RECEPTOR BINDING DOMAIN
+602, p5wvrA_, 0.5011, 4.14, 0.075, 398, 107, CRYSTAL STRUCTURE OF OSH1 ORD DOMAIN IN COMPLEX WITH CHOLESTEROL
+603, p5h2dA_, 0.5002, 3.99, 0.070, 398, 100, CRYSTAL STRUCTURE OF OSH1 ORD DOMAIN IN COMPLEX WITH ERGOSTEROL

@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;"> PDBe Fold v2.59. (src3) 14 Apr 2014 result file.
+
+                   RESULT SUMMARY
+
+   ##      Q-score      P-score     Z-score   RMSD    Nalgn Nsse Ngaps Seq-%     Nmd Nres-Q Nsse-Q Nres-T Nsse-T Query Target
+    1           1       83.47       27.55     0.000   304   26    0           1    0    304     26    304     26    SCOP d1uf5a_  SCOP d1uf8a_
+    2           1       100.5        30.3     0.000   304   24    0           1    0    304     26    304     25    SCOP d1uf5a_  SCOP d1uf7a_
+    3           1       100.5        30.3     0.000   304   24    0           1    0    304     26    304     25    SCOP d1uf5a_  SCOP d1uf4a_
+    4           1       109.3       31.57     0.000   304   26    0           1    0    304     26    304     26    SCOP d1uf5a_  SCOP d1erza_
+    5           1       109.3       31.57     0.000   304   26    0           1    0    304     26    304     26    SCOP d1uf5a_  SCOP d1uf5a_
+    6       0.976       74.66       26.09     0.401   303   24    0           1    0    304     26    304     25    SCOP d1uf5a_  SCOP d1uf5b_
+    7       0.976       81.09       27.15     0.401   303   26    0           1    0    304     26    304     26    SCOP d1uf5a_  SCOP d1erzb_
+    8       0.976       71.97       25.61     0.401   303   24    0           1    0    304     26    304     25    SCOP d1uf5a_  SCOP d1uf4b_
+    9       0.976       74.66       26.09     0.401   303   24    0           1    0    304     26    304     25    SCOP d1uf5a_  SCOP d1uf7b_
+   10       0.976       74.66       26.09     0.401   303   24    0           1    0    304     26    304     25    SCOP d1uf5a_  SCOP d1uf8b_
+   11      0.9357       26.95       15.58     0.655   301   26    3      0.9734    0    304     26    304     26    SCOP d1uf5a_  SCOP d1fo6a_
+   12      0.9292       25.66        15.2     0.657   299   25    3      0.9732    0    304     26    302     25    SCOP d1uf5a_  SCOP d2ggla1
+   13      0.9292       25.05       15.04     0.657   299   25    3      0.9732    0    304     26    302     25    SCOP d1uf5a_  SCOP d2ggka1
+   14      0.9137       25.42       15.15     0.770   300   25    3      0.9733    0    304     26    304     25    SCOP d1uf5a_  SCOP d1fo6b_
+   15      0.9135       26.65        15.5     0.771   299   26    3      0.9732    0    304     26    302     26    SCOP d1uf5a_  SCOP d2gglb1
+   16      0.9135       27.15       15.64     0.771   299   26    3      0.9732    0    304     26    302     26    SCOP d1uf5a_  SCOP d2ggkb1
+   17     0.01223          -0   1.907e-06    12.494   144   19   21     0.06944    0    304     26    304     22    SCOP d1uf5a_  SCOP d1j31a_
+   18    0.004594          -0           0    14.990   105   19   17     0.07619    0    304     26    304     22    SCOP d1uf5a_  SCOP d1j31b_
+</pre></body></html>

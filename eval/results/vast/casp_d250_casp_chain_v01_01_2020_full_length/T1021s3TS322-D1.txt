@@ -1,0 +1,180 @@
+4ACV A ,104,11.3,10e-8.9,2.7,11.5,Listeria Monocytogenes Antigen B
+4HUD E ,95,10.9,10e-6.2,2.3,12.6,Structure Of The Bacteriophage T4 Tail Terminator Protein, Gp15
+3J2M E ,97,10.9,10e-6.2,2.5,12.4,The X-ray Structure Of The Gp15 Hexamer And The Model Of The Gp18 Protein Fitted Into The Cryo-em Reconstruction Of The Extended T4 Tail
+3J2N E ,96,10.9,10e-6.2,2.4,12.5,The X-ray Structure Of The Gp15 Hexamer And The Model Of The Gp18 Protein Fitted Into The Cryo-em Reconstruction Of The Contracted T4 Tail
+4HUH E ,98,10.9,10e-6.2,2.5,12.2,Structure Of The Bacteriophage T4 Tail Terminator Protein, Gp15 (c- Terminal Truncation Mutant 1-261)
+4HUH C ,95,10.9,10e-6.2,2.3,12.6,Structure Of The Bacteriophage T4 Tail Terminator Protein, Gp15 (c- Terminal Truncation Mutant 1-261)
+4HUH D ,95,10.9,10e-6.2,2.3,12.6,Structure Of The Bacteriophage T4 Tail Terminator Protein, Gp15 (c- Terminal Truncation Mutant 1-261)
+4HUH B ,97,10.9,10e-6.2,2.4,12.4,Structure Of The Bacteriophage T4 Tail Terminator Protein, Gp15 (c- Terminal Truncation Mutant 1-261)
+4HUH F ,96,10.8,10e-6.1,2.4,12.5,Structure Of The Bacteriophage T4 Tail Terminator Protein, Gp15 (c- Terminal Truncation Mutant 1-261)
+3J2N F ,92,10.8,10e-6.1,2.3,13.0,The X-ray Structure Of The Gp15 Hexamer And The Model Of The Gp18 Protein Fitted Into The Cryo-em Reconstruction Of The Contracted T4 Tail
+3J2M F ,95,10.8,10e-6.1,2.4,12.6,The X-ray Structure Of The Gp15 Hexamer And The Model Of The Gp18 Protein Fitted Into The Cryo-em Reconstruction Of The Extended T4 Tail
+4HUD F ,92,10.8,10e-6.1,2.3,13.0,Structure Of The Bacteriophage T4 Tail Terminator Protein, Gp15
+4HUH A ,92,10.8,10e-6.1,2.3,13.0,Structure Of The Bacteriophage T4 Tail Terminator Protein, Gp15 (c- Terminal Truncation Mutant 1-261)
+4HUD A ,95,10.8,10e-6.1,2.3,12.6,Structure Of The Bacteriophage T4 Tail Terminator Protein, Gp15
+3J2N A ,96,10.8,10e-6.1,2.4,12.5,The X-ray Structure Of The Gp15 Hexamer And The Model Of The Gp18 Protein Fitted Into The Cryo-em Reconstruction Of The Contracted T4 Tail
+3J2M A ,97,10.8,10e-6.1,2.4,12.4,The X-ray Structure Of The Gp15 Hexamer And The Model Of The Gp18 Protein Fitted Into The Cryo-em Reconstruction Of The Extended T4 Tail
+4HUD B ,96,10.8,10e-6.1,2.4,12.5,Structure Of The Bacteriophage T4 Tail Terminator Protein, Gp15
+3J2N B ,95,10.8,10e-6.1,2.4,12.6,The X-ray Structure Of The Gp15 Hexamer And The Model Of The Gp18 Protein Fitted Into The Cryo-em Reconstruction Of The Contracted T4 Tail
+3J2M B ,92,10.8,10e-6.1,2.3,13.0,The X-ray Structure Of The Gp15 Hexamer And The Model Of The Gp18 Protein Fitted Into The Cryo-em Reconstruction Of The Extended T4 Tail
+3J2M D ,95,10.8,10e-6.1,2.3,12.6,The X-ray Structure Of The Gp15 Hexamer And The Model Of The Gp18 Protein Fitted Into The Cryo-em Reconstruction Of The Extended T4 Tail
+3J2N D ,93,10.8,10e-6.1,2.2,12.9,The X-ray Structure Of The Gp15 Hexamer And The Model Of The Gp18 Protein Fitted Into The Cryo-em Reconstruction Of The Contracted T4 Tail
+4HUD D ,91,10.8,10e-6.1,2.2,13.2,Structure Of The Bacteriophage T4 Tail Terminator Protein, Gp15
+4HUD C ,96,10.8,10e-6.0,2.4,12.5,Structure Of The Bacteriophage T4 Tail Terminator Protein, Gp15
+3J2M C ,96,10.8,10e-6.0,2.4,12.5,The X-ray Structure Of The Gp15 Hexamer And The Model Of The Gp18 Protein Fitted Into The Cryo-em Reconstruction Of The Extended T4 Tail
+3J2N C ,91,10.8,10e-6.0,2.3,13.2,The X-ray Structure Of The Gp15 Hexamer And The Model Of The Gp18 Protein Fitted Into The Cryo-em Reconstruction Of The Contracted T4 Tail
+2GJV A ,110,10.3,10e-7.0,2.7,10.0,Crystal Structure Of A Hypothetical Protein From Salmonella Typhimurium
+3FZB J ,89,9.7,10e-5.1,2.1,12.4,Crystal Structure Of The Tail Terminator Protein From Phage Lambda (Gpu-Wt)ÿ
+3FZB B ,92,9.7,10e-5.7,2.3,13.0,Crystal Structure Of The Tail Terminator Protein From Phage Lambda (Gpu-Wt)ÿ
+2GJV E ,111,9.7,10e-5.7,2.8,9.0,Crystal Structure Of A Hypothetical Protein From Salmonella Typhimurium
+2GJV D ,105,9.6,10e-5.5,2.7,9.5,Crystal Structure Of A Hypothetical Protein From Salmonella Typhimurium
+3FZ2 F ,102,9.5,10e-4.1,2.7,12.7,Crystal Structure Of The Tail Terminator Protein From Phage Lambda (Gpu-D74a)ÿ
+3FZ2 D ,97,9.5,10e-4.9,2.5,11.3,Crystal Structure Of The Tail Terminator Protein From Phage Lambda (Gpu-D74a)ÿ
+1YLU A ,94,9.4,10e-5.2,2.7,4.3,The Structure Of E. Coli Nitroreductase With Bound Acetate, Crystal Form 2
+2FRE B ,96,9.3,10e-4.4,2.7,3.1,The Crystal Structure Of The Oxidoreductase Containing Fmn
+2FRE B 1,93,9.3,10e-4.7,2.6,3.2,The Crystal Structure Of The Oxidoreductase Containing Fmn
+2GJV F ,103,9.3,10e-4.9,2.6,9.7,Crystal Structure Of A Hypothetical Protein From Salmonella Typhimurium
+3FZB H ,92,9.3,10e-4.5,2.4,12.0,Crystal Structure Of The Tail Terminator Protein From Phage Lambda (Gpu-Wt)ÿ
+3EOF A ,101,9.2,10e-5.2,2.8,10.9,Crystal Structure Of Putative Oxidoreductase (Yp_213212.1) From Bacteroides Fragilis Nctc 9343 At 1.99 A Resolution
+3OF4 A ,117,9.2,10e-4.3,3.8,7.7,Crystal Structure Of A FmnFAD- And Nad(P)h-Dependent Nitroreductase (Nfnb, Il2077) From Idiomarina Loihiensis L2tr At 1.90 A Resolutionÿ
+3EOF B ,100,9.2,10e-5.4,2.7,11.0,Crystal Structure Of Putative Oxidoreductase (Yp_213212.1) From Bacteroides Fragilis Nctc 9343 At 1.99 A Resolution
+3OF4 C ,107,9.2,10e-4.3,3.1,6.5,Crystal Structure Of A FmnFAD- And Nad(P)h-Dependent Nitroreductase (Nfnb, Il2077) From Idiomarina Loihiensis L2tr At 1.90 A Resolutionÿ
+4XOO A ,113,9.2,10e-5.7,3.1,4.4,Fmn Complex Of Coenzyme F420:l-glutamate Ligase (fbib) From Mycobacterium Tuberculosis (c-terminal Domain)
+4XOQ A ,116,9.2,10e-5.4,3.3,5.2,F420 Complex Of Coenzyme F420:l-glutamate Ligase (fbib) From Mycobacterium Tuberculosis (c-terminal Domain)
+4XOQ A 1,109,9.2,10e-5.7,2.9,5.5,F420 Complex Of Coenzyme F420:l-glutamate Ligase (fbib) From Mycobacterium Tuberculosis (c-terminal Domain)
+4XOO B ,112,9.2,10e-5.4,3.1,5.4,Fmn Complex Of Coenzyme F420:l-glutamate Ligase (fbib) From Mycobacterium Tuberculosis (c-terminal Domain)
+4XOO B 1,110,9.2,10e-5.7,2.9,5.5,Fmn Complex Of Coenzyme F420:l-glutamate Ligase (fbib) From Mycobacterium Tuberculosis (c-terminal Domain)
+2GJV B ,109,9.2,10e-4.8,2.8,9.2,Crystal Structure Of A Hypothetical Protein From Salmonella Typhimurium
+3OF4 B ,90,9.2,10e-4.2,2.3,6.7,Crystal Structure Of A FmnFAD- And Nad(P)h-Dependent Nitroreductase (Nfnb, Il2077) From Idiomarina Loihiensis L2tr At 1.90 A Resolutionÿ
+4XOM A ,110,9.2,10e-5.3,2.8,5.5,Coenzyme F420:l-glutamate Ligase (fbib) From Mycobacterium Tuberculosis (c-terminal Domain)
+4XOM A 1,113,9.2,10e-5.6,3.0,5.3,Coenzyme F420:l-glutamate Ligase (fbib) From Mycobacterium Tuberculosis (c-terminal Domain)
+3GH8 H ,93,9.2,10e-4.2,2.6,10.8,Crystal Structure Of Mus Musculus Iodotyrosine Deiodinase (Iyd) Bound To Fmn And Di-Iodotyrosine (Dit)ÿ
+1V5Y B ,101,9.1,10e-4.2,3.1,5.0,Binding Of Coumarins To Nad(P)h:fmn Oxidoreductase
+3GH8 F ,89,9.1,10e-4.2,2.4,12.4,Crystal Structure Of Mus Musculus Iodotyrosine Deiodinase (Iyd) Bound To Fmn And Di-Iodotyrosine (Dit)ÿ
+4XOO C ,109,9.1,10e-5.3,2.9,5.5,Fmn Complex Of Coenzyme F420:l-glutamate Ligase (fbib) From Mycobacterium Tuberculosis (c-terminal Domain)
+1V5Y A ,103,9.1,10e-4.3,3.3,4.9,Binding Of Coumarins To Nad(P)h:fmn Oxidoreductase
+4XOQ D ,109,9.1,10e-5.6,2.8,5.5,F420 Complex Of Coenzyme F420:l-glutamate Ligase (fbib) From Mycobacterium Tuberculosis (c-terminal Domain)
+4XOQ B ,113,9.1,10e-5.2,3.1,5.3,F420 Complex Of Coenzyme F420:l-glutamate Ligase (fbib) From Mycobacterium Tuberculosis (c-terminal Domain)
+4XOQ B 1,108,9.1,10e-5.5,3.0,6.5,F420 Complex Of Coenzyme F420:l-glutamate Ligase (fbib) From Mycobacterium Tuberculosis (c-terminal Domain)
+4XOM B ,111,9.1,10e-5.2,3.0,4.5,Coenzyme F420:l-glutamate Ligase (fbib) From Mycobacterium Tuberculosis (c-terminal Domain)
+4XOM B 1,112,9.1,10e-5.5,3.0,5.4,Coenzyme F420:l-glutamate Ligase (fbib) From Mycobacterium Tuberculosis (c-terminal Domain)
+1VFR B ,96,9.1,10e-4.1,2.9,5.2,The Major Nad(P)h:fmn Oxidoreductase From Vibrio Fischeri
+4XOM C ,114,9.1,10e-5.5,3.1,5.3,Coenzyme F420:l-glutamate Ligase (fbib) From Mycobacterium Tuberculosis (c-terminal Domain)
+1YKI D ,91,9.1,10e-4.8,2.5,4.4,The Structure Of E. Coli Nitroreductase Bound With The Antibiotic Nitrofurazone
+1NOX A ,111,9.1,10e-4.7,3.3,9.9,Nadh Oxidase From Thermus Thermophilus
+1VFR A ,94,9.1,10e-4.1,2.8,5.3,The Major Nad(P)h:fmn Oxidoreductase From Vibrio Fischeri
+1YWQ A ,98,9.1,10e-4.9,2.6,6.1,Crystal Structure Of A Nitroreductase Family Protein From Bacillus Cereus Atcc 14579
+3FZB D ,88,9.1,10e-4.1,2.2,12.5,Crystal Structure Of The Tail Terminator Protein From Phage Lambda (Gpu-Wt)я
+2GJV C ,107,9.0,10e-4.6,2.7,9.3,Crystal Structure Of A Hypothetical Protein From Salmonella Typhimurium
+2ISL G ,96,9.0,10e-5.3,2.6,7.3,Blub Bound To Reduced Flavin (Fmnh2) And Molecular Oxygen. (Clear Crystal Form)
+4XOO D ,116,9.0,10e-5.5,3.2,5.2,Fmn Complex Of Coenzyme F420:l-glutamate Ligase (fbib) From Mycobacterium Tuberculosis (c-terminal Domain)
+3BEM B ,110,9.0,10e-4.9,3.2,7.3,Crystal Structure Of Putative Nitroreductase Ydfn (2632848) From Bacillus Subtilis At 1.65 A Resolution
+3GH8 D ,101,9.0,10e-4.0,3.2,12.9,Crystal Structure Of Mus Musculus Iodotyrosine Deiodinase (Iyd) Bound To Fmn And Di-Iodotyrosine (Dit)я
+1KQB D ,92,9.0,10e-4.6,2.8,5.4,Structure Of Nitroreductase From E. Cloacae Complex With Inhibitor Benzoateя
+4XOM D ,114,9.0,10e-5.4,3.3,5.3,Coenzyme F420:l-glutamate Ligase (fbib) From Mycobacterium Tuberculosis (c-terminal Domain)
+4XOQ C ,115,9.0,10e-5.4,3.1,5.2,F420 Complex Of Coenzyme F420:l-glutamate Ligase (fbib) From Mycobacterium Tuberculosis (c-terminal Domain)
+2ISL H ,79,9.0,10e-5.1,2.3,8.9,Blub Bound To Reduced Flavin (Fmnh2) And Molecular Oxygen. (Clear Crystal Form)
+1KQC D ,99,9.0,10e-4.5,2.8,6.1,Structure Of Nitroreductase From E. Cloacae Complex With Inhibitor Acetateя
+1NEC C ,92,9.0,10e-4.6,2.8,5.4,Nitroreductase From Enterobacter Cloacae
+1NEC B ,91,9.0,10e-4.6,2.6,5.5,Nitroreductase From Enterobacter Cloacae
+3BEM A ,107,9.0,10e-4.8,3.0,7.5,Crystal Structure Of Putative Nitroreductase Ydfn (2632848) From Bacillus Subtilis At 1.65 A Resolution
+1KQD D ,94,9.0,10e-4.5,2.8,5.3,Structure Of Nitroreductase From E. Cloacae Bound With 2e- Reduced Flavin Mononucleotide (Fmn)я
+3KOQ B ,81,9.0,10e-4.0,2.2,4.9,Crystal Structure Of Nitroreductase Family Protein (Yp_001089872.1) From Clostridium Difficile 630 At 1.58 A Resolutionя
+2FRE A ,102,9.0,0.0001,3.7,4.9,The Crystal Structure Of The Oxidoreductase Containing Fmn
+2FRE A 1,92,9.0,10e-4.2,2.5,3.3,The Crystal Structure Of The Oxidoreductase Containing Fmn
+3X22 B ,101,9.0,10e-4.5,3.1,5.0,Crystal Structure Of Escherichia Coli Nitroreductase Nfsb Mutant N71s/f123a/f124w
+2ISL E ,85,9.0,10e-5.2,2.4,8.2,Blub Bound To Reduced Flavin (Fmnh2) And Molecular Oxygen. (Clear Crystal Form)
+3GFD B ,91,9.0,10e-4.4,2.6,13.2,Crystal Structure Of Mus Musculus Iodotyrosine Deiodinase (Iyd) Bound To Fmn And Mono-Iodotyrosine (Mit)я
+3HZN B ,89,9.0,10e-4.6,2.4,4.5,Structure Of The Salmonella Typhimurium Nfnb Dihydropteridine Reductaseя
+1KQB B ,92,9.0,10e-4.5,2.8,5.4,Structure Of Nitroreductase From E. Cloacae Complex With Inhibitor Benzoateя
+2LFP A ,92,9.0,10e-5.6,2.9,7.6,Structure Of Bacteriophage Spp1 Gp17 Proteinя
+3HZN H ,88,8.9,10e-4.5,2.4,4.5,Structure Of The Salmonella Typhimurium Nfnb Dihydropteridine Reductaseя
+3HZN D ,94,8.9,10e-4.4,2.8,4.3,Structure Of The Salmonella Typhimurium Nfnb Dihydropteridine Reductaseя
+1ICV D ,94,8.9,10e-4.4,2.8,4.3,The Structure Of Escherichia Coli Nitroreductase Complexed With Nicotinic Acid
+1KQB A ,96,8.9,10e-4.4,3.0,5.2,Structure Of Nitroreductase From E. Cloacae Complex With Inhibitor Benzoateя
+3GFA A ,108,8.9,10e-5.0,3.6,5.6,Crystal Structure Of Putative Nitroreductase In Complex With Fmn (Yp_001089721.1) From Clostridium Difficile 630 At 1.35 A Resolutionя
+1NEC A ,94,8.9,10e-4.5,2.9,5.3,Nitroreductase From Enterobacter Cloacae
+3GFD A ,92,8.9,0.0001,2.6,12.0,Crystal Structure Of Mus Musculus Iodotyrosine Deiodinase (Iyd) Bound To Fmn And Mono-Iodotyrosine (Mit)я
+1NEC D ,96,8.9,10e-4.5,2.9,5.2,Nitroreductase From Enterobacter Cloacae
+3GH8 C ,89,8.9,0.0001,2.4,13.5,Crystal Structure Of Mus Musculus Iodotyrosine Deiodinase (Iyd) Bound To Fmn And Di-Iodotyrosine (Dit)я
+3HZN F ,92,8.9,10e-4.4,2.8,4.3,Structure Of The Salmonella Typhimurium Nfnb Dihydropteridine Reductaseя
+1KQC A ,106,8.9,10e-4.5,3.4,6.6,Structure Of Nitroreductase From E. Cloacae Complex With Inhibitor Acetateя
+1KQC C ,102,8.9,10e-4.5,3.1,5.9,Structure Of Nitroreductase From E. Cloacae Complex With Inhibitor Acetateя
+1KQB C ,103,8.9,10e-4.5,2.9,5.8,Structure Of Nitroreductase From E. Cloacae Complex With Inhibitor Benzoateя
+2ISL A ,84,8.9,10e-4.9,2.8,8.3,Blub Bound To Reduced Flavin (Fmnh2) And Molecular Oxygen. (Clear Crystal Form)
+1YKI A ,91,8.9,10e-4.3,2.8,4.4,The Structure Of E. Coli Nitroreductase Bound With The Antibiotic Nitrofurazone
+1ICU D ,88,8.9,10e-4.3,2.5,4.5,The Structure Of Escherichia Coli Nitroreductase Complexed With Nicotinic Acid
+1KQD B ,91,8.9,10e-4.3,2.8,5.5,Structure Of Nitroreductase From E. Cloacae Bound With 2e- Reduced Flavin Mononucleotide (Fmn)я
+3TNZ B ,97,8.9,0.0002,3.0,12.4,Crystal Structure Of Mus Musculus Iodotyrosine Deiodinase (Iyd) C217a, C239a Bound To Fmn And Mono-Iodotyrosine (Mit)я
+1DS7 B ,105,8.9,10e-4.4,3.6,5.7,A Minor Fmn-Dependent Nitroreductase From Escherichia Coli B
+3TNZ A ,98,8.9,0.0002,3.2,11.2,Crystal Structure Of Mus Musculus Iodotyrosine Deiodinase (Iyd) C217a, C239a Bound To Fmn And Mono-Iodotyrosine (Mit)я
+2ISL D ,89,8.9,10e-4.9,2.6,7.9,Blub Bound To Reduced Flavin (Fmnh2) And Molecular Oxygen. (Clear Crystal Form)
+3X21 I ,91,8.9,10e-4.4,2.6,4.4,Crystal Structure Of Escherichia Coli Nitroreductase Nfsb Mutant T41l/n71s/f124w
+3HZN G ,88,8.9,10e-4.3,2.4,4.5,Structure Of The Salmonella Typhimurium Nfnb Dihydropteridine Reductaseя
+1KQC B ,94,8.9,10e-4.3,2.9,5.3,Structure Of Nitroreductase From E. Cloacae Complex With Inhibitor Acetateя
+2ISL F ,85,8.9,10e-4.9,2.7,8.2,Blub Bound To Reduced Flavin (Fmnh2) And Molecular Oxygen. (Clear Crystal Form)
+2BKJ B ,92,8.9,10e-4.6,2.4,8.7,Nadph:fmn Oxidoreductase From Vibrio Harveyi Complexed With Nad+
+1KQD C ,89,8.9,10e-4.4,2.4,5.6,Structure Of Nitroreductase From E. Cloacae Bound With 2e- Reduced Flavin Mononucleotide (Fmn)я
+1KQD A ,92,8.9,10e-4.3,2.8,5.4,Structure Of Nitroreductase From E. Cloacae Bound With 2e- Reduced Flavin Mononucleotide (Fmn)я
+2ISL C ,82,8.9,10e-4.9,2.1,8.5,Blub Bound To Reduced Flavin (Fmnh2) And Molecular Oxygen. (Clear Crystal Form)
+1OO5 B ,88,8.9,10e-4.4,2.4,4.5,Studies On The Nitroreductase Prodrug-Activating System. Crystal Structures Of The Enzyme Active Form And Complexes With The Inhibitor Dicoumarol And Dinitrobenzamide Prodrugs
+3HZN A ,107,8.9,10e-4.3,3.6,5.6,Structure Of The Salmonella Typhimurium Nfnb Dihydropteridine Reductaseÿ
+2IFA F ,93,8.9,10e-4.4,2.5,5.4,Crystal Structure Of The Putative Nitroreductase (Smu.260) In Complex With Fmn From Streptococcus Mutans, Northeast Structural Genomics Target Smr5
+2ISJ E ,90,8.8,10e-4.8,2.4,7.8,Blub Bound To Oxidized Fmn
+3GH8 A ,95,8.8,0.0002,2.7,12.6,Crystal Structure Of Mus Musculus Iodotyrosine Deiodinase (Iyd) Bound To Fmn And Di-Iodotyrosine (Dit)ÿ
+1YLU B ,104,8.8,10e-4.4,3.6,5.8,The Structure Of E. Coli Nitroreductase With Bound Acetate, Crystal Form 2
+1F5V A ,89,8.8,10e-4.5,2.6,9.0,Structure And Site-Directed Mutagenesis Of A Flavoprotein From Escherichia Coli That Reduces Nitrocompounds. Alteration Of Pyridine Nucleotide Binding By A Single Amino Acid Substitution
+1F5V A 1,90,8.8,10e-4.6,2.7,7.8,Structure And Site-Directed Mutagenesis Of A Flavoprotein From Escherichia Coli That Reduces Nitrocompounds. Alteration Of Pyridine Nucleotide Binding By A Single Amino Acid Substitution
+3GH8 G ,96,8.8,0.0002,2.8,10.4,Crystal Structure Of Mus Musculus Iodotyrosine Deiodinase (Iyd) Bound To Fmn And Di-Iodotyrosine (Dit)ÿ
+2WZW B ,83,8.8,10e-4.7,2.5,9.6,Crystal Structure Of The Fmn-Dependent Nitroreductase Nfnb From Mycobacterium Smegmatis In Complex With Nadphÿ
+3X22 A ,96,8.8,10e-4.3,2.9,4.2,Crystal Structure Of Escherichia Coli Nitroreductase Nfsb Mutant N71s/f123a/f124w
+4TTC A ,95,8.8,0.0002,2.7,10.5,Crystal Structure Of Homo Sapiens Iodotyrosine Deiodinase Bound To Fmn And Mono-iodotyrosine (mit)
+3GH8 E ,96,8.8,0.0002,2.8,10.4,Crystal Structure Of Mus Musculus Iodotyrosine Deiodinase (Iyd) Bound To Fmn And Di-Iodotyrosine (Dit)ÿ
+1ICR B ,100,8.8,10e-4.2,3.2,6.0,The Structure Of Escherichia Coli Nitroreductase Complexed With Nicotinic Acid
+1YLR B ,99,8.8,10e-4.3,3.0,5.1,The Structure Of E.Coli Nitroreductase With Bound Acetate, Crystal Form 1
+3GH8 B ,93,8.8,0.0002,2.6,11.8,Crystal Structure Of Mus Musculus Iodotyrosine Deiodinase (Iyd) Bound To Fmn And Di-Iodotyrosine (Dit)ÿ
+1V5Z B ,96,8.8,0.0001,3.0,5.2,Binding Of Coumarins To Nad(P)h:fmn Oxidoreductase
+1YLR A ,86,8.8,10e-4.3,2.3,4.7,The Structure Of E.Coli Nitroreductase With Bound Acetate, Crystal Form 1
+4TTC B ,85,8.8,0.0002,2.3,12.9,Crystal Structure Of Homo Sapiens Iodotyrosine Deiodinase Bound To Fmn And Mono-iodotyrosine (mit)
+3FZ2 B ,112,8.8,0.0002,2.9,13.4,Crystal Structure Of The Tail Terminator Protein From Phage Lambda (Gpu-D74a)ÿ
+3GFA B ,110,8.8,10e-4.8,3.3,4.5,Crystal Structure Of Putative Nitroreductase In Complex With Fmn (Yp_001089721.1) From Clostridium Difficile 630 At 1.35 A Resolutionÿ
+3HZN E ,92,8.8,10e-4.2,2.9,4.3,Structure Of The Salmonella Typhimurium Nfnb Dihydropteridine Reductaseÿ
+3X21 E ,94,8.8,10e-4.3,2.9,4.3,Crystal Structure Of Escherichia Coli Nitroreductase Nfsb Mutant T41l/n71s/f124w
+2ISJ G ,83,8.8,10e-4.7,2.7,8.4,Blub Bound To Oxidized Fmn
+1BKJ B ,94,8.8,10e-4.5,2.8,8.5,Nadph:fmn Oxidoreductase From Vibrio Harveyi
+2WZV B ,84,8.8,10e-4.6,2.5,9.5,Crystal Structure Of The Fmn-Dependent Nitroreductase Nfnb From Mycobacterium Smegmatisÿ
+3X21 A ,104,8.8,10e-4.3,3.3,5.8,Crystal Structure Of Escherichia Coli Nitroreductase Nfsb Mutant T41l/n71s/f124w
+1YKI B ,103,8.8,10e-4.3,3.6,5.8,The Structure Of E. Coli Nitroreductase Bound With The Antibiotic Nitrofurazone
+2BKJ A ,93,8.8,10e-4.4,2.4,8.6,Nadph:fmn Oxidoreductase From Vibrio Harveyi Complexed With Nad+
+1ICU C ,104,8.8,10e-4.2,3.3,5.8,The Structure Of Escherichia Coli Nitroreductase Complexed With Nicotinic Acid
+1ICV A ,91,8.8,10e-4.2,2.6,4.4,The Structure Of Escherichia Coli Nitroreductase Complexed With Nicotinic Acid
+1YKI C ,99,8.8,10e-4.3,3.0,5.1,The Structure Of E. Coli Nitroreductase Bound With The Antibiotic Nitrofurazone
+1V5Z A ,88,8.8,0.0002,2.6,5.7,Binding Of Coumarins To Nad(P)h:fmn Oxidoreductase
+2ISJ B ,80,8.8,10e-4.7,2.1,8.7,Blub Bound To Oxidized Fmn
+3GB5 A ,93,8.8,10e-4.9,2.6,12.9,Crystal Structure Of Mus Musculus Iodotyrosine Deiodinase (Iyd) Bound To Fmnÿ
+1IDT B ,99,8.8,10e-4.3,3.0,5.1,Structural Studies On A Prodrug-Activating System-Cb1954 And Fmn-Dependent Nitroreductase
+2ISK F ,82,8.8,10e-4.7,2.2,8.5,Blub Bound To Flavin Anion (Charge Transfer Complex)
+1BKJ A ,93,8.8,10e-4.4,2.4,8.6,Nadph:fmn Oxidoreductase From Vibrio Harveyi
+1ICR A ,103,8.8,10e-4.2,3.1,4.9,The Structure Of Escherichia Coli Nitroreductase Complexed With Nicotinic Acid
+2ISK A ,84,8.8,10e-4.7,2.4,8.3,Blub Bound To Flavin Anion (Charge Transfer Complex)
+1OON B ,103,8.8,10e-4.3,3.1,4.9,Nitroreductase From E-Coli In Complex With The Dinitrobenzamide Prodrug Sn27217
+3X21 G ,103,8.8,10e-4.1,3.2,4.9,Crystal Structure Of Escherichia Coli Nitroreductase Nfsb Mutant T41l/n71s/f124w
+3HZN C ,89,8.8,10e-4.1,2.5,4.5,Structure Of The Salmonella Typhimurium Nfnb Dihydropteridine Reductaseÿ
+1DS7 A ,94,8.8,10e-4.1,2.8,4.3,A Minor Fmn-Dependent Nitroreductase From Escherichia Coli B
+4TTC C ,97,8.8,0.0002,2.9,10.3,Crystal Structure Of Homo Sapiens Iodotyrosine Deiodinase Bound To Fmn And Mono-iodotyrosine (mit)
+2WZV A ,86,8.8,10e-4.6,2.4,9.3,Crystal Structure Of The Fmn-Dependent Nitroreductase Nfnb From Mycobacterium Smegmatisÿ
+1OO5 A ,93,8.8,10e-4.1,2.8,4.3,Studies On The Nitroreductase Prodrug-Activating System. Crystal Structures Of The Enzyme Active Form And Complexes With The Inhibitor Dicoumarol And Dinitrobenzamide Prodrugs
+4TTC E ,95,8.8,0.0002,2.8,10.5,Crystal Structure Of Homo Sapiens Iodotyrosine Deiodinase Bound To Fmn And Mono-iodotyrosine (mit)
+1OOQ A ,86,8.8,10e-4.2,2.3,3.5,Nitroreductase From E-Coli In Complex With The Inhibitor Dicoumarol
+3X21 J ,92,8.8,10e-4.1,2.9,4.3,Crystal Structure Of Escherichia Coli Nitroreductase Nfsb Mutant T41l/n71s/f124w
+3TO0 A ,96,8.8,10e-4.8,2.9,11.5,Crystal Structure Of Mus Musculus Iodotyrosine Deiodinase (Iyd) C217a, C239a Bound To Fmnÿ
+2ISK C ,92,8.8,10e-4.7,2.9,7.6,Blub Bound To Flavin Anion (Charge Transfer Complex)
+3QDL C ,84,8.8,10e-4.7,2.3,4.8,Crystal Structure Of Rdxa From Helicobacter Pyroliÿ
+3TO0 B ,93,8.8,10e-4.8,2.5,12.9,Crystal Structure Of Mus Musculus Iodotyrosine Deiodinase (Iyd) C217a, C239a Bound To Fmnÿ
+2ISK D ,82,8.8,10e-4.6,2.3,8.5,Blub Bound To Flavin Anion (Charge Transfer Complex)
+3X21 H ,104,8.8,10e-4.1,3.1,4.8,Crystal Structure Of Escherichia Coli Nitroreductase Nfsb Mutant T41l/n71s/f124w
+1ICV C ,89,8.8,10e-4.1,2.5,4.5,The Structure Of Escherichia Coli Nitroreductase Complexed With Nicotinic Acid
+4TTB A ,97,8.8,10e-4.8,3.3,14.4,Crystal Structure Of Homo Sapiens Iodotyrosine Deiodinase (iyd) Bound To Fmn
+1OO6 B ,101,8.8,10e-4.1,3.0,5.0,Nitroreductase From E-Coli In Complex With The Dinitrobenzamide Prodrug Sn23862
+2ISK B ,82,8.7,10e-4.6,2.1,8.5,Blub Bound To Flavin Anion (Charge Transfer Complex)
+3E39 B ,87,8.7,10e-4.6,2.2,9.2,Crystal Structure Of Putative Nitroreductase In Complex With Fmn (Yp_387283.1) From Desulfovibrio Desulfuricans G20 At 1.70 A Resolution

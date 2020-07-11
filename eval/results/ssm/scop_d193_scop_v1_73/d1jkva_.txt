@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;"> PDBe Fold v2.59. (src3) 14 Apr 2014 result file.
+
+                   RESULT SUMMARY
+
+   ##      Q-score      P-score     Z-score   RMSD    Nalgn Nsse Ngaps Seq-%     Nmd Nres-Q Nsse-Q Nres-T Nsse-T Query Target
+    1           1       54.11       22.12     0.000   266   13    0           1    0    266     13    266     13    SCOP d1jkva_  SCOP d1jkua_
+    2           1       54.11       22.12     0.000   266   13    0           1    0    266     13    266     13    SCOP d1jkva_  SCOP d1jkva_
+    3           1       54.11       22.12     0.000   266   13    0           1    0    266     13    266     13    SCOP d1jkva_  SCOP d1o9ia_
+    4      0.9992       45.08       20.16     0.085   266   13    0           1    0    266     13    266     13    SCOP d1jkva_  SCOP d1o9if_
+    5      0.9992       45.08       20.16     0.085   266   13    0           1    0    266     13    266     13    SCOP d1jkva_  SCOP d1jkvf_
+    6      0.9992       45.08       20.16     0.085   266   13    0           1    0    266     13    266     13    SCOP d1jkva_  SCOP d1jkuf_
+    7      0.9985       37.87       18.45     0.116   266   13    0           1    0    266     13    266     13    SCOP d1jkva_  SCOP d1jkue_
+    8      0.9985       37.05       18.24     0.116   266   13    0           1    0    266     13    266     13    SCOP d1jkva_  SCOP d1jkve_
+    9      0.9985       42.46       19.56     0.116   266   13    0           1    0    266     13    266     13    SCOP d1jkva_  SCOP d1o9ie_
+   10      0.9984       37.87       18.45     0.121   266   13    0           1    0    266     13    266     13    SCOP d1jkva_  SCOP d1jkvb_
+   11      0.9984       42.46       19.56     0.121   266   13    0           1    0    266     13    266     13    SCOP d1jkva_  SCOP d1o9ib_
+   12      0.9984       42.46       19.56     0.121   266   13    0           1    0    266     13    266     13    SCOP d1jkva_  SCOP d1jkub_
+   13      0.9983       42.46       19.56     0.124   266   13    0           1    0    266     13    266     13    SCOP d1jkva_  SCOP d1o9id_
+   14      0.9983       35.35       17.81     0.124   266   13    0           1    0    266     13    266     13    SCOP d1jkva_  SCOP d1jkvd_
+   15      0.9983       37.87       18.45     0.124   266   13    0           1    0    266     13    266     13    SCOP d1jkva_  SCOP d1jkud_
+   16      0.9971       40.79       19.16     0.161   266   13    0           1    0    266     13    266     13    SCOP d1jkva_  SCOP d1o9ic_
+   17      0.9971        37.3       18.31     0.161   266   13    0           1    0    266     13    266     13    SCOP d1jkva_  SCOP d1jkvc_
+   18      0.9971        37.3       18.31     0.161   266   13    0           1    0    266     13    266     13    SCOP d1jkva_  SCOP d1jkuc_
+</pre></body></html>

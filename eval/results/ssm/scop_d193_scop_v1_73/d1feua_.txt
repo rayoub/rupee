@@ -1,0 +1,23 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;"> PDBe Fold v2.59. (src3) 14 Apr 2014 result file.
+
+                   RESULT SUMMARY
+
+   ##      Q-score      P-score     Z-score   RMSD    Nalgn Nsse Ngaps Seq-%     Nmd Nres-Q Nsse-Q Nres-T Nsse-T Query Target
+    1           1       66.84       24.62     0.000   185   16    0           1    0    185     16    185     16    SCOP d1feua_  SCOP d1feua_
+    2      0.8303       29.81       16.33     0.966   179   16    0           1    0    185     16    189     17    SCOP d1feua_  SCOP d1feud_
+    3      0.1905          -0     0.09754     2.370   104    5    7      0.8846    0    185     16    189     14    SCOP d1feua_  SCOP d1o94d_
+    4      0.1905          -0     0.09754     2.370   104    5    7      0.8846    0    185     16    189     14    SCOP d1feua_  SCOP d1o97d1
+    5       0.024          -0      0.2271     5.102    43    5    6     0.02326    0    185     16    107     11    SCOP d1feua_  SCOP d1y0la1
+    6     0.01302          -0    0.001539     7.804    59    5   10      0.1186    0    185     16    186     14    SCOP d1feua_  SCOP d1k28d1
+    7    0.009802          -0   0.0005093     7.090    47    5    8     0.04255    0    185     16    185     16    SCOP d1feua_  SCOP d1u1oa_
+    8    0.009794          -0    0.009443     6.556    44    6   10     0.04545    0    185     16    185     18    SCOP d1feua_  SCOP d1fy2a_
+    9    0.007194          -0       1.283     3.684    22    5    2      0.1364    0    185     16    145     14    SCOP d1feua_  SCOP d2c89d1
+   10     0.00574          -0      0.2112     5.358    29    5    4      0.1034    0    185     16    189     14    SCOP d1feua_  SCOP d1mhw.2
+   11    0.005699          -0    0.001093     8.710    43    5    6     0.09302    0    185     16    186     13    SCOP d1feua_  SCOP d1wthd1
+   12    0.003258          -0   2.098e-05     8.480    32    5    4      0.0625    1    185     16    189     13    SCOP d1feua_  SCOP d1nb5.4
+   13    0.003228          -0      0.1317    10.454    38    5    5      0.1053    0    185     16    184     16    SCOP d1feua_  SCOP d1x0ra1
+   14    0.001977          -0   0.0005817    10.900    31    5    5     0.03226    0    185     16    185     11    SCOP d1feua_  SCOP d1w8ma_
+   15    0.001599          -0    0.009127     8.403    22    5    3      0.1818    0    185     16    185     14    SCOP d1feua_  SCOP d1mhw.1
+   16    0.001475          -0   5.531e-05    12.305    30    5    4     0.06667    0    185     16    185     12    SCOP d1feua_  SCOP d1d1ja_
+   17    0.000325          -0   1.907e-06    14.988    16    5    4      0.0625    0    185     16    164     11    SCOP d1feua_  SCOP d1ynda1
+</pre></body></html>

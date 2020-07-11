@@ -1,0 +1,149 @@
+4CEH B ,174,18.4,0.0135,2.2,14.4,Crystal Structure Of Addab With A Forked Dna Substrate
+4CEH B 7,176,18.4,10e-9.7,2.3,14.2,Crystal Structure Of Addab With A Forked Dna Substrate
+4CEJ B ,174,18.3,0.0171,2.2,14.4,Crystal Structure Of Addab-dna-adpnp Complex At 3 Angstrom Resolution
+4CEJ B 7,168,18.3,10e-8.4,2.3,17.3,Crystal Structure Of Addab-dna-adpnp Complex At 3 Angstrom Resolution
+4R5Q A ,138,18.3,10e-14.3,3.0,18.1,Crystal Structure And Nuclease Activity Of The Crispr-associated Cas4 Protein Pcal_0546 From Pyrobaculum Calidifontis Containing A [2fe-2s] Cluster
+4CEI B ,172,18.2,0.0218,2.0,16.3,Crystal Structure Of Adpnp-bound Addab With A Forked Dna Substrate
+4CEI B 7,174,18.2,10e-8.5,2.1,15.5,Crystal Structure Of Adpnp-bound Addab With A Forked Dna Substrate
+5EAX A ,142,17.8,0.0173,2.5,15.5,Crystal Structure Of Dna2 In Complex With An Ssdna
+5EAX B ,145,17.8,0.0245,2.6,15.2,Crystal Structure Of Dna2 In Complex With An Ssdna
+5EAN A ,143,17.5,0.0482,2.6,16.1,Crystal Structure Of Dna2 In Complex With A 5' Overhang Dna
+5EAN A 2,144,17.5,10e-9.8,2.6,16.0,Crystal Structure Of Dna2 In Complex With A 5' Overhang Dna
+3SM4 B ,150,17.0,10e-10.5,3.6,9.3,Crystal Structure Of The K131a Mutant Of Lambda Exonuclease In Complex With A 5'-Phosphorylated 14-Mer12-Mer Duplex And Magnesiumÿ
+3SM4 B 1,150,17.0,10e-10.8,3.6,10.7,Crystal Structure Of The K131a Mutant Of Lambda Exonuclease In Complex With A 5'-Phosphorylated 14-Mer12-Mer Duplex And Magnesiumÿ
+4WUZ C ,138,16.9,10e-10.8,3.4,11.6,Crystal Structure Of Lambda Exonuclease In Complex With Dna And Ca2+
+3SM4 A ,144,16.9,10e-10.7,3.7,10.4,Crystal Structure Of The K131a Mutant Of Lambda Exonuclease In Complex With A 5'-Phosphorylated 14-Mer12-Mer Duplex And Magnesiumÿ
+3SM4 A 1,150,16.9,10e-10.8,4.1,12.7,Crystal Structure Of The K131a Mutant Of Lambda Exonuclease In Complex With A 5'-Phosphorylated 14-Mer12-Mer Duplex And Magnesiumÿ
+3U4Q B ,160,16.9,0.0357,2.4,13.8,Structure Of Addab-Dna Complex At 2.8 Angstromsÿ
+3SZ4 A ,146,16.5,10e-10.9,3.4,11.6,Crystal Structure Of Lhk-Exo In Complex With Dampÿ
+3FHD A ,142,16.5,10e-5.7,3.3,9.2,Crystal Structure Of The Shutoff And Exonuclease Protein From Kaposis Sarcoma Associated Herpesvirusÿ
+3SZ5 A ,148,16.4,10e-10.7,3.5,11.5,Crystal Structure Of Lhk-Exo In Complex With 5-Phosphorylated Oligothymidine (Dt)4ÿ
+4WUZ A ,139,16.4,10e-10.7,3.6,9.4,Crystal Structure Of Lambda Exonuclease In Complex With Dna And Ca2+
+4WUZ A 1,149,16.4,10e-10.9,3.8,12.1,Crystal Structure Of Lambda Exonuclease In Complex With Dna And Ca2+
+3SLP C ,152,16.4,10e-10.8,3.9,12.5,Crystal Structure Of Lambda Exonuclease In Complex With A 12 Bp Symmetric Dna Duplexÿ
+3SM4 C ,141,16.4,10e-10.1,3.4,10.6,Crystal Structure Of The K131a Mutant Of Lambda Exonuclease In Complex With A 5'-Phosphorylated 14-Mer12-Mer Duplex And Magnesiumÿ
+3SM4 C 1,147,16.4,10e-10.6,3.7,12.2,Crystal Structure Of The K131a Mutant Of Lambda Exonuclease In Complex With A 5'-Phosphorylated 14-Mer12-Mer Duplex And Magnesiumÿ
+4WUZ B ,139,16.4,10e-10.5,3.3,9.4,Crystal Structure Of Lambda Exonuclease In Complex With Dna And Ca2+
+3SLP B ,149,16.4,10e-10.5,3.6,12.1,Crystal Structure Of Lambda Exonuclease In Complex With A 12 Bp Symmetric Dna Duplexÿ
+4IC1 A ,148,16.3,10e-12.8,2.4,19.6,Crystal Structure Of Sso0001
+4IC1 A 1,147,16.3,10e-13.0,2.2,19.7,Crystal Structure Of Sso0001
+3SYY A ,144,16.3,10e-10.5,3.2,11.8,Crystal Structure Of An Alkaline Exonuclease (Lhk-Exo) From Laribacter Hongkongensisÿ
+3SLP A ,149,16.3,10e-9.9,3.8,12.8,Crystal Structure Of Lambda Exonuclease In Complex With A 12 Bp Symmetric Dna Duplexÿ
+3SLP A 1,145,16.3,10e-10.4,3.7,11.7,Crystal Structure Of Lambda Exonuclease In Complex With A 12 Bp Symmetric Dna Duplexÿ
+4IC1 B ,147,16.2,10e-12.6,2.4,19.0,Crystal Structure Of Sso0001
+4IC1 B 1,147,16.2,10e-12.8,2.4,19.7,Crystal Structure Of Sso0001
+4IC1 C ,146,16.2,10e-12.5,2.3,19.2,Crystal Structure Of Sso0001
+4IC1 C 1,147,16.2,10e-12.8,2.3,19.0,Crystal Structure Of Sso0001
+4IC1 G ,148,16.2,10e-12.5,2.2,19.6,Crystal Structure Of Sso0001
+4IC1 G 1,147,16.2,10e-12.7,2.2,19.7,Crystal Structure Of Sso0001
+4IC1 F ,148,16.1,10e-12.3,2.4,18.9,Crystal Structure Of Sso0001
+4IC1 F 1,149,16.1,10e-12.5,2.4,18.8,Crystal Structure Of Sso0001
+4IC1 H ,147,16.1,10e-12.2,2.4,19.0,Crystal Structure Of Sso0001
+4IC1 H 1,147,16.1,10e-12.5,2.4,19.7,Crystal Structure Of Sso0001
+3FHD A 2,137,16.0,10e-6.5,3.2,9.5,Crystal Structure Of The Shutoff And Exonuclease Protein From Kaposis Sarcoma Associated Herpesvirusÿ
+4IC1 K ,149,15.8,10e-11.7,2.4,18.1,Crystal Structure Of Sso0001
+4IC1 K 1,147,15.8,10e-11.9,2.3,19.7,Crystal Structure Of Sso0001
+3K93 A ,144,15.6,10e-8.7,3.2,9.7,Crystal Structure Of Phage Related Exonuclease (Yp_719632.1) From Haemophilus Somnus 129pt At 2.15 A Resolutionÿ
+4IC1 I ,150,15.6,10e-11.3,2.4,18.7,Crystal Structure Of Sso0001
+4IC1 I 1,148,15.6,10e-11.5,2.2,18.9,Crystal Structure Of Sso0001
+3H4R A ,147,15.5,10e-9.5,3.1,13.6,Crystal Structure Of E. Coli Rece Exonucleaseÿ
+4IC1 D ,149,15.5,10e-11.2,2.4,20.1,Crystal Structure Of Sso0001
+3POV A ,134,15.4,10e-4.8,3.2,10.4,Crystal Structure Of A Sox-Dna Complexÿ
+3POV A 2,135,15.4,10e-7.8,3.4,8.9,Crystal Structure Of A Sox-Dna Complexÿ
+4IC1 J ,146,15.2,10e-10.6,2.2,19.2,Crystal Structure Of Sso0001
+4IC1 J 1,148,15.2,10e-10.8,2.2,19.6,Crystal Structure Of Sso0001
+2W45 A ,139,14.9,0.0002,3.4,12.9,Epstein-Barr Virus Alkaline Nucleaseÿ
+2W45 A 2,147,14.9,10e-4.9,3.9,11.6,Epstein-Barr Virus Alkaline Nucleaseÿ
+4CEH A 6,117,14.3,10e-8.6,2.2,18.8,Crystal Structure Of Addab With A Forked Dna Substrate
+2W4B A ,137,13.8,0.0033,3.4,11.7,Epstein-Barr Virus Alkaline Nuclease D203s Mutantÿ
+2W4B A 2,140,13.8,0.0002,3.6,12.1,Epstein-Barr Virus Alkaline Nuclease D203s Mutantÿ
+2W4B B ,147,13.8,0.0033,3.7,10.9,Epstein-Barr Virus Alkaline Nuclease D203s Mutantÿ
+2W4B B 2,136,13.8,0.0002,3.5,11.0,Epstein-Barr Virus Alkaline Nuclease D203s Mutantÿ
+2W45 B ,135,13.8,0.0019,3.3,13.3,Epstein-Barr Virus Alkaline Nucleaseÿ
+2W45 B 2,137,13.8,0.0002,3.4,10.9,Epstein-Barr Virus Alkaline Nucleaseÿ
+3U44 A 7,112,13.7,10e-7.0,2.3,19.6,Crystal Structure Of Addab-Dna Complexÿ
+3U4Q A 7,112,13.5,10e-6.6,2.3,19.6,Structure Of Addab-Dna Complex At 2.8 Angstromsÿ
+5EAX A 3,106,13.4,10e-5.3,2.3,17.0,Crystal Structure Of Dna2 In Complex With An Ssdna
+1W36 E 6,118,13.4,10e-4.9,2.5,14.4,Recbcd:dna Complex
+1W36 B 6,117,13.4,10e-5.9,2.5,14.5,Recbcd:dna Complex
+5EAX B 3,107,13.3,10e-5.2,2.3,16.8,Crystal Structure Of Dna2 In Complex With An Ssdna
+5EAW A 3,107,13.3,10e-5.1,2.4,17.8,Crystal Structure Of Dna2 Nuclease-helicase
+3K70 E 5,117,13.0,10e-4.8,2.4,12.8,Crystal Structure Of The Complete Initiation Complex Of Recbcdÿ
+3K70 B 5,118,13.0,10e-4.8,2.5,13.6,Crystal Structure Of The Complete Initiation Complex Of Recbcdÿ
+3L0A A ,158,12.9,0.0003,3.0,14.6,Crystal Structure Of Putative Exonuclease (Rer070207002219) From Eubacterium Rectale At 2.19 A Resolutionÿ
+3U4Q B 7,128,12.9,10e-6.6,2.1,13.3,Structure Of Addab-Dna Complex At 2.8 Angstromsÿ
+3U44 B 7,140,12.9,10e-6.9,2.2,13.6,Crystal Structure Of Addab-Dna Complexÿ
+5EAW B 3,105,12.6,10e-4.2,2.3,18.1,Crystal Structure Of Dna2 Nuclease-helicase
+4CEJ A 7,105,12.3,10e-6.2,2.2,20.0,Crystal Structure Of Addab-dna-adpnp Complex At 3 Angstrom Resolution
+4CEI A 6,95,12.3,10e-9.4,2.1,21.1,Crystal Structure Of Adpnp-bound Addab With A Forked Dna Substrate
+2VLD A ,63,11.7,0.0218,2.2,20.6,Crystal Structure Of A Repair Endonuclease From Pyrococcus Abyssiÿ
+2VLD A 2,64,11.7,10e-5.6,2.2,20.3,Crystal Structure Of A Repair Endonuclease From Pyrococcus Abyssiÿ
+2VLD B ,63,11.7,0.0218,2.2,20.6,Crystal Structure Of A Repair Endonuclease From Pyrococcus Abyssiÿ
+2VLD B 2,64,11.7,10e-5.6,2.1,18.8,Crystal Structure Of A Repair Endonuclease From Pyrococcus Abyssiÿ
+3K70 C 7,126,11.7,0.0001,3.8,7.1,Crystal Structure Of The Complete Initiation Complex Of Recbcdÿ
+3K70 F 7,127,11.6,0.0001,3.8,7.1,Crystal Structure Of The Complete Initiation Complex Of Recbcdÿ
+1W36 C 7,125,11.5,0.0006,3.6,8.0,Recbcd:dna Complex
+4R5Q A 2,93,11.5,10e-8.4,2.5,21.5,Crystal Structure And Nuclease Activity Of The Crispr-associated Cas4 Protein Pcal_0546 From Pyrobaculum Calidifontis Containing A [2fe-2s] Cluster
+1XMX A 2,80,11.3,0.0007,3.1,8.7,Crystal Structure Of Hypothetical Protein Vc1899, Mcsg Apc26666
+1W36 F 6,126,10.7,0.0123,3.7,7.1,Recbcd:dna Complex
+1Y88 A ,74,10.6,0.0014,2.3,12.2,Hypothetical Protein Af1548
+1Y88 A 1,75,10.6,0.0001,2.4,12.0,Hypothetical Protein Af1548
+3S1S A 2,81,10.6,10e-4.1,2.8,11.1,Characterization And Crystal Structure Of The Type Iig Restriction Endonuclease Bpusiÿ
+2FOK A 4,69,9.5,0.0099,2.6,7.2,Structure Of Restriction Endonuclease Foki
+3H1T A 1,69,9.4,0.0305,2.7,11.6,The Fragment Structure Of A Putative Hsdr Subunit Of A Type I Restriction Enzyme From Vibrio Vulnificus Yj016ÿ
+5D9A G 1,57,9.0,0.0352,2.6,5.3,Influenza C Virus Rna-dependent Rna Polymerase - Space Group P212121
+5D9A A 1,56,9.0,0.0354,2.3,5.4,Influenza C Virus Rna-dependent Rna Polymerase - Space Group P212121
+5D98 D 1,54,9.0,0.0357,2.2,5.6,Influenza C Virus Rna-dependent Rna Polymerase - Space Group P43212
+5D9A J 1,69,8.9,0.0363,3.4,4.3,Influenza C Virus Rna-dependent Rna Polymerase - Space Group P212121
+5D98 A 1,70,8.9,0.0401,2.8,10.0,Influenza C Virus Rna-dependent Rna Polymerase - Space Group P43212
+3DNX A ,43,8.9,0.0258,2.1,20.9,Spo1766 Protein Of Unknown Function From Silicibacter Pomeroyi
+4XJX B 1,69,8.9,0.0183,3.1,4.3,Structure Of Mutant (e165h) Of The Hsdr Subunit Of The Ecor124i Restriction Enzyme In Complex With Atp
+1WXX B 2,53,8.6,0.0156,2.8,3.8,Crystal Structure Of Tt1595, A Putative Sam-Dependent Methyltransferase From Thermus Thermophillus Hb8
+1WXX C 2,54,8.6,0.0196,2.6,3.7,Crystal Structure Of Tt1595, A Putative Sam-Dependent Methyltransferase From Thermus Thermophillus Hb8
+1WXX A 2,54,8.5,0.0231,2.6,7.4,Crystal Structure Of Tt1595, A Putative Sam-Dependent Methyltransferase From Thermus Thermophillus Hb8
+2DX1 A 3,38,8.5,0.0064,3.0,5.3,Crystal Structure Of Rhogef Protein Asef
+2PZ1 A 3,39,8.3,0.0404,3.0,5.1,Crystal Structure Of Auto-Inhibited Asef
+3FOV A ,58,8.0,0.0170,2.5,13.8,Crystal Structure Of Protein Rpa0323 Of Unknown Function From Rhodopseudomonas Palustrisÿ
+3HW6 B 2,46,7.9,0.0294,2.1,6.5,Crystal Structure Of Avian Influenza Virus Pa_n In Complex With Mnÿ
+3MOG A 3,45,7.7,0.0157,2.3,8.9,Crystal Structure Of 3-Hydroxybutyryl-Coa Dehydrogenase From Escherichia Coli K12 Substr. Mg1655ÿ
+3DNI A 2,59,7.7,0.0185,2.4,1.7,Crystallographic Refinement And Structure Of Dnase I At 2 Angstroms Resolution
+3LZC B 2,54,7.7,0.0307,2.6,3.7,Crystal Structure Of Dph2 From Pyrococcus Horikoshiiÿ
+3LZC A 2,49,7.7,0.0340,2.1,10.2,Crystal Structure Of Dph2 From Pyrococcus Horikoshiiÿ
+3LZD A 2,49,7.7,0.0346,2.1,10.2,Crystal Structure Of Dph2 From Pyrococcus Horikoshii With 4fe-4s Clusterÿ
+2DNJ A 2,59,7.7,0.0232,2.5,1.7,Dnase I-Induced Dna Conformation. 2 Angstroms Structure Of A Dnase I-Octamer Complexÿ
+3LZD B 2,52,7.6,0.0414,2.5,3.8,Crystal Structure Of Dph2 From Pyrococcus Horikoshii With 4fe-4s Clusterÿ
+3HW6 D 2,37,7.6,0.0132,1.6,13.5,Crystal Structure Of Avian Influenza Virus Pa_n In Complex With Mnÿ
+1WXW B 2,50,7.6,0.0103,2.3,4.0,Crystal Structure Of Tt1595, A Putative Sam-Dependent Methyltransferase From Thermus Thermophillus Hb8
+3MOG B 3,45,7.5,0.0337,2.3,8.9,Crystal Structure Of 3-Hydroxybutyryl-Coa Dehydrogenase From Escherichia Coli K12 Substr. Mg1655ÿ
+3HW6 A 2,42,7.5,0.0207,1.7,14.3,Crystal Structure Of Avian Influenza Virus Pa_n In Complex With Mnÿ
+3MOG C 3,45,7.4,0.0483,2.2,8.9,Crystal Structure Of 3-Hydroxybutyryl-Coa Dehydrogenase From Escherichia Coli K12 Substr. Mg1655ÿ
+3AJV B 2,65,7.3,0.0342,3.1,3.1,Splicing Endonuclease From Aeropyrum Pernixÿ
+3P1Z B 2,60,7.3,0.0363,2.8,3.3,Crystal Structure Of The Aperopyrum Pernix Rna Splicing Endonucleaseÿ
+3AJV A 2,56,7.3,0.0392,2.4,1.8,Splicing Endonuclease From Aeropyrum Pernixÿ
+3AJV D 2,62,7.3,0.0406,2.9,3.2,Splicing Endonuclease From Aeropyrum Pernixÿ
+2ZYZ B 2,48,7.2,0.0447,1.8,4.2,Pyrobaculum Aerophilum Splicing Endonucleaseÿ
+4IC1 D 1,128,7.2,0.0131,2.4,18.8,Crystal Structure Of Sso0001
+3AJV C 2,57,7.2,0.0486,2.4,3.5,Splicing Endonuclease From Aeropyrum Pernixÿ
+3WBF B 3,40,7.0,0.0219,1.7,5.0,Crystal Structure Of Meso-diaminopimelate Dehydrogenase From Symbiobacterium Thermophilum Co-crystallized With Nadp+ And Dap
+3WB9 A 3,39,7.0,0.0243,1.8,5.1,Crystal Structures Of Meso-diaminopimelate Dehydrogenase From Symbiobacterium Thermophilum
+3BIO A 3,39,7.0,0.0245,2.1,7.7,Crystal Structure Of Oxidoreductase (GfoIDHMOCA FAMILY Member) From Porphyromonas Gingivalis W83
+3WBF C 3,40,7.0,0.0254,1.8,5.0,Crystal Structure Of Meso-diaminopimelate Dehydrogenase From Symbiobacterium Thermophilum Co-crystallized With Nadp+ And Dap
+3BIO B 3,46,7.0,0.0260,2.2,4.3,Crystal Structure Of Oxidoreductase (GfoIDHMOCA FAMILY Member) From Porphyromonas Gingivalis W83
+3WB9 B 3,40,7.0,0.0267,1.8,5.0,Crystal Structures Of Meso-diaminopimelate Dehydrogenase From Symbiobacterium Thermophilum
+3WB9 C 3,39,7.0,0.0268,1.8,5.1,Crystal Structures Of Meso-diaminopimelate Dehydrogenase From Symbiobacterium Thermophilum
+5A11 A 3,30,6.9,0.0192,2.2,13.3,The Crystal Structure Of Ta-tfp, A Thiocyanate-forming Protein Involved In Glucosinolate Breakdown (space Group P21)
+2YX1 B 2,36,6.8,0.0008,1.6,8.3,Crystal Structure Of M.Jannaschii Trna M1g37 Methyltransferase
+2YX1 A 2,36,6.8,0.0008,1.3,8.3,Crystal Structure Of M.Jannaschii Trna M1g37 Methyltransferase
+1U5G A 1,33,6.7,0.0454,2.3,0.0,Crystal Structure Of The Ph Domain Of Skap-Hom
+3AY0 B 2,36,6.7,0.0013,1.4,8.3,Crystal Structure Of Methanocaldococcus Jannaschii Trm5 In Complex With Adenosineÿ
+4H8S D 2,37,6.6,0.0176,2.6,8.1,Crystal Structure Of Human Appl2barph Domain
+2IGT C 2,30,6.6,0.0201,2.1,6.7,Crystal Structure Of The Sam Dependent Methyltransferase From Agrobacterium Tumefaciens
+5C77 A 2,27,6.5,0.0044,2.8,7.4,A Novel Protein Arginine Methyltransferase
+4IC1 D 2,77,6.5,0.0049,1.9,16.9,Crystal Structure Of Sso0001
+6MHT A 2,20,6.4,0.0388,2.8,5.0,Ternary Structure Of Hhai Methyltransferase With Adohcy And Dna Containing 4'-Thio-2'deoxycytidine At The Target
+8MHT A 2,20,6.4,0.0392,2.8,5.0,Cytosine-Specific Methyltransferase HhaiDNA COMPLEX
+9MHT A 2,20,6.4,0.0422,2.8,5.0,Cytosine-specific Methyltransferase Hhai/dna Complex
+3MLQ G ,30,6.3,0.0081,2.2,6.7,Crystal Structure Of The Thermus Thermophilus Transcription-Repair Coupling Factor Rna Polymerase Interacting Domain With The Thermus Aquaticus Rna Polymerase Beta1 Domainÿ
+3MLQ E ,29,6.3,0.0108,2.1,6.9,Crystal Structure Of The Thermus Thermophilus Transcription-Repair Coupling Factor Rna Polymerase Interacting Domain With The Thermus Aquaticus Rna Polymerase Beta1 Domainÿ
+2I9K A 2,24,6.1,0.0212,2.8,20.8,Engineered Extrahelical Base Destabilization Enhances Sequence Discrimination Of Dna Methyltransferase M.Hhai
+5CJ5 A 3,16,5.2,0.0308,1.8,6.2,Structure Of Mycobacterium Thermoresistibile Glge Apo Form At 3.13a Resolution

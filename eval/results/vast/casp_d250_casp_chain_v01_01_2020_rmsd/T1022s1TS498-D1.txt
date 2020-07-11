@@ -1,0 +1,180 @@
+4F9B D 1,12,3.5,0.0159,0.7,0.0,Human Cdc7 Kinase In Complex With Dbf4 And Pha767491
+3J1B N 5,12,3.5,0.0318,0.8,8.3,Cryo-em Structure Of 8-fold Symmetric Ratcpn-alpha In Apo State
+2A1S D 2,30,5.1,0.0175,0.9,16.7,Crystal Structure Of Native Parn Nuclease Domain
+2A1S C 2,30,5.1,0.0172,0.9,16.7,Crystal Structure Of Native Parn Nuclease Domain
+3G2E A 1,13,3.5,0.0159,0.9,7.7,Structure Of Putative Oorc Subunit Of 2- Oxoglutarate:acceptor Oxidoreductase From Campylobacter Jejuniĸ
+3SQN A 1,22,5.2,0.0079,0.9,22.7,Putative Mga Family Transcriptional Regulator From Enterococcus Faecalisĸ
+3KZ4 C 1,14,3.5,0.0318,1.0,0.0,Crystal Structure Of The Rotavirus Double Layered Particleĸ
+4F5X C 1,14,3.5,0.0318,1.0,0.0,Location Of The Dsrna-Dependent Polymerase, Vp1, In Rotavirus Particles
+4F5X F 1,15,3.5,0.0318,1.1,0.0,Location Of The Dsrna-Dependent Polymerase, Vp1, In Rotavirus Particles
+3KZ4 F 1,15,3.5,0.0318,1.1,0.0,Crystal Structure Of The Rotavirus Double Layered Particleĸ
+4FQK D 2,12,3.5,0.0183,1.1,8.3,Influenza BBRISBANE602008 HEMAGGLUTININ FAB CR8059 COMPLEX
+1GXP F 2,13,3.5,0.0477,1.1,0.0,Phob Effector Domain In Complex With Pho Box Dnaĸ
+2LRR A ,29,5.0,0.0318,1.1,6.9,Solution Structure Of The R3h Domain From Human Smubp-2 In Complex With 2'-Deoxyguanosine-5'-Monophosphate
+3T5V E ,17,5.6,0.0226,1.1,5.9,Sac3:thp1:sem1 Complexĸ
+4BH1 B 2,13,3.5,0.0263,1.1,7.7,H5 (tyty) Influenza Virus Haemagglutinin In Complex With Avian Receptor Analogue 3'-sln
+4BH1 D 2,13,3.5,0.0258,1.1,7.7,H5 (tyty) Influenza Virus Haemagglutinin In Complex With Avian Receptor Analogue 3'-sln
+1GXP B 2,13,3.5,0.0499,1.1,0.0,Phob Effector Domain In Complex With Pho Box Dnaĸ
+4N5Y N 2,13,3.5,0.0477,1.1,7.7,Crystal Structure Of H5 Hemagglutinin Mutant (n158d, N224k And Q226l) From The Influenza Virus A/viet Nam/1203/2004 (h5n1)
+1W7I A 5,22,5.0,0.0394,1.1,4.5,Crystal Structure Of Myosin V Motor Without Nucleotide Soaked In 10 Mm Mgadp
+3GYH X 2,12,3.5,0.0159,1.1,16.7,Crystal Structure Analysis Of S. Pombe Atl In Complex With Damaged Dna Containing Pobĸ
+2EJT A 2,20,5.1,0.0109,1.1,10.0,Complex Structure Of Trm1 From Pyrococcus Horikoshii With S- Adenosyl-L-Methionine
+4BGZ D 2,14,3.5,0.0159,1.2,0.0,Crystal Structure Of H5 (tyty) Influenza Virus Haemagglutinin
+2RHS D 3,28,5.2,0.0104,1.2,3.6,Phers From Staphylococcus Haemolyticus- Rational Protein Engineering And Inhibitor Studies
+4S05 B 3,14,3.5,0.0477,1.2,21.4,Crystal Structure Of Klebsiella Pneumoniae Pmra In Complex With Pmra Box Dna
+4DJ6 D 2,16,3.5,0.0160,1.2,18.8,Structure Of The Hemagglutinin From A Highly Pathogenic H7n7 Influenza Virus
+1W7J A 5,22,5.0,0.0434,1.2,4.5,Crystal Structure Of Myosin V Motor With Essential Light Chain + Adp-Befx - Near Rigor
+1GXP A 2,13,3.5,0.0477,1.2,0.0,Phob Effector Domain In Complex With Pho Box Dnaĸ
+2EJU A 2,20,4.9,0.0400,1.2,10.0,Complex Structure Of Trm1 From Pyrococcus Horikoshii With S- Adenosyl-L-Homocystein
+4EDB D ,12,3.5,0.0477,1.2,16.7,Structures Of Monomeric Hemagglutinin And Its Complex With An Fab Fragment Of A Neutralizing Antibody That Binds To H1 Subtype Influenza Viruses: Molecular Basis Of Infectivity Of 2009 Pandemic H1n1 Influenza A Viruses
+4EDB D 1,12,3.5,0.0159,1.2,16.7,Structures Of Monomeric Hemagglutinin And Its Complex With An Fab Fragment Of A Neutralizing Antibody That Binds To H1 Subtype Influenza Viruses: Molecular Basis Of Infectivity Of 2009 Pandemic H1n1 Influenza A Viruses
+2DUL A 2,20,5.1,0.0170,1.2,10.0,Crystal Structure Of Trna G26 Methyltransferase Trm1 In Apo Form From Pyrococcus Horikoshii
+4TRQ B ,19,5.7,0.0122,1.2,10.5,Crystal Structure Of Sac3/thp1/sem1
+4TRQ B 3,19,5.0,0.0388,1.2,10.5,Crystal Structure Of Sac3/thp1/sem1
+3T5V B ,17,5.8,0.0104,1.2,5.9,Sac3:thp1:sem1 Complexĸ
+3T5V B 5,17,5.1,0.0264,1.2,5.9,Sac3:thp1:sem1 Complexĸ
+4BSI B 2,12,3.5,0.0159,1.2,8.3,H7n3 Avian Influenza Virus Haemagglutinin In Complex With Avian Receptor Analogue 3'-sln
+4XQU F 2,12,3.5,0.0229,1.2,8.3,Crystal Structure Of Hemagglutinin From Jiangxi-donghu (2013) H10n8 Influenza Virus In Complex With 3'-sln
+1W8J C 5,22,5.2,0.0083,1.2,4.5,Crystal Structure Of Myosin V Motor Domain - Nucleotide-Free
+4B8C D 2,18,5.2,0.0040,1.2,11.1,Nuclease Module Of The Yeast Ccr4-Not Complex
+2RHS B 3,30,5.1,0.0355,1.2,3.3,Phers From Staphylococcus Haemolyticus- Rational Protein Engineering And Inhibitor Studies
+2OS8 A 5,23,5.0,0.0499,1.2,8.7,Rigor-Like Structures Of Muscle Myosins Reveal Key Mechanical Elements In The Transduction Pathways Of This Allosteric Motor
+2YTZ A 2,20,5.0,0.0281,1.2,10.0,Complex Structure Of Trm1 From Pyrococcus Horikoshii With S- Adenosyl-L-Homocystein In The Orthorhombic Crystal-Lattice
+4K95 H 4,15,3.4,0.0337,1.2,6.7,Crystal Structure Of Parkin
+4DJ6 F 2,12,3.5,0.0159,1.2,8.3,Structure Of The Hemagglutinin From A Highly Pathogenic H7n7 Influenza Virus
+4NHJ A 2,17,3.5,0.0477,1.2,5.9,Crystal Structure Of Klebsiella Pneumoniae Rsta Dna-binding Domain In Complex With Rsta Box
+4N5Y B 2,13,3.5,0.0477,1.2,7.7,Crystal Structure Of H5 Hemagglutinin Mutant (n158d, N224k And Q226l) From The Influenza Virus A/viet Nam/1203/2004 (h5n1)
+3FKU H 2,14,3.5,0.0477,1.2,7.1,Crystal Structure Of Influenza Hemagglutinin (H5) In Complex With A Broadly Neutralizing Antibody F10ĸ
+2YTZ B 2,20,5.0,0.0317,1.2,10.0,Complex Structure Of Trm1 From Pyrococcus Horikoshii With S- Adenosyl-L-Homocystein In The Orthorhombic Crystal-Lattice
+4DJ8 B 2,12,3.5,0.0477,1.3,8.3,Structure Of The Hemagglutinin Complexed With 6sln From A Highly Pathogenic H7n7 Influenza Virus
+3N94 A 3,19,3.5,0.0159,1.3,0.0,Crystal Structure Of Human Pituitary Adenylate Cyclase 1 Receptor- Short N-Terminal Extracellular Domainĸ
+1ZBJ A ,17,5.0,0.0349,1.3,5.9,Inferential Structure Determination Of The Fyn Sh3 Domain Using Noesy Data From A 15n,H2 Enriched Protein
+4QY1 H 2,12,3.5,0.0477,1.3,8.3,Structure Of H10 From Human-infecting H10n8 In Complex With Avian Receptor
+4DJ8 D 2,12,3.5,0.0477,1.3,16.7,Structure Of The Hemagglutinin Complexed With 6sln From A Highly Pathogenic H7n7 Influenza Virus
+3GKU A 3,36,5.2,0.0044,1.3,8.3,Crystal Structure Of A Probable Rna-Binding Protein From Clostridium Symbiosum Atcc 14940ĸ
+1N3J A 2,19,5.0,0.0286,1.3,0.0,Structure And Substrate Of A Histone H3 Lysine Methyltransferase From Paramecium Bursaria Chlorella Virus 1
+1N3J B 2,19,5.0,0.0286,1.3,0.0,Structure And Substrate Of A Histone H3 Lysine Methyltransferase From Paramecium Bursaria Chlorella Virus 1
+4FQK B 2,16,3.5,0.0159,1.3,12.5,Influenza BBRISBANE602008 HEMAGGLUTININ FAB CR8059 COMPLEX
+4FQM J 2,16,3.5,0.0229,1.3,12.5,Structure Of BBRISBANE602008 INFLUENZA HEMAGGLUTININ
+2CW7 A 7,36,5.0,0.0202,1.3,16.7,Crystal Structure Of Intein Homing Endonuclease Ii
+4KNY B 3,23,5.2,0.0097,1.3,13.0,Crystal Structure Of The Response Regulator Kdpe Complexed To Dna In An Active-like Conformation
+4UER H 1,32,4.9,0.0392,1.3,3.1,40s-eif1-eif1a-eif3-eif3j Translation Initiation Complex From Lachancea Kluyveri
+4KZX W 1,33,4.9,0.0400,1.3,3.0,Rabbit 40s Ribosomal Subunit In Complex With Eif1
+4KZY W 1,33,4.9,0.0401,1.3,3.0,Rabbit 40s Ribosomal Subunit In Complex With Eif1 And Eif1a
+4KZZ W 1,33,4.9,0.0400,1.3,3.0,Rabbit 40s Ribosomal Subunit In Complex With Mrna, Initiator Trna And Eif1a
+1LNG A ,21,5.1,0.0158,1.3,9.5,Crystal Structure Of The Srp19-7s.S Srp Rna Complex Of M. Jannaschii
+4CR4 T ,16,5.5,0.0279,1.3,6.2,Deep Classification Of A Large Cryo-em Dataset Defines The Conformational Landscape Of The 26s Proteasome
+3BZC A 2,30,6.0,0.0020,1.3,10.0,Crystal Structure Of The Tex Protein From Pseudomonas Aeruginosa, Crystal Form I
+2GUK A ,33,4.9,0.0460,1.3,3.0,Crystal Structure Of The Conserved Hypothetical Protein From Porphyromonas Gingivalis
+3JAM W 1,30,5.2,0.0044,1.3,3.3,Cryoem Structure Of 40s-eif1a-eif1 Complex From Yeast
+4K51 A 2,18,5.0,0.0471,1.3,0.0,Crystal Structure Of The Pci Domain Of Eif3a
+2GUK B ,30,5.0,0.0306,1.3,0.0,Crystal Structure Of The Conserved Hypothetical Protein From Porphyromonas Gingivalis
+2GUK B 1,30,5.0,0.0259,1.3,0.0,Crystal Structure Of The Conserved Hypothetical Protein From Porphyromonas Gingivalis
+4B0Z A ,17,5.7,0.0110,1.3,0.0,Crystal Structure Of S. Pombe Rpn12
+4B0Z A 3,17,5.0,0.0347,1.3,0.0,Crystal Structure Of S. Pombe Rpn12
+4QD6 B 2,26,5.2,0.0040,1.4,7.7,Itk Kinase Domain In Complex With Inhibitor Compound
+2V3C B ,22,5.1,0.0185,1.4,9.1,Crystal Structure Of The Srp54-Srp19-7s.S Srp Rna Complex Of M. Jannaschii
+4CR3 T ,19,5.8,0.0075,1.4,5.3,Deep Classification Of A Large Cryo-em Dataset Defines The Conformational Landscape Of The 26s Proteasome
+4CR3 T 3,19,5.1,0.0242,1.4,5.3,Deep Classification Of A Large Cryo-em Dataset Defines The Conformational Landscape Of The 26s Proteasome
+5A5B T ,19,5.8,0.0075,1.4,5.3,Structure Of The 26s Proteasome-ubp6 Complex
+5A5B T 3,19,5.1,0.0242,1.4,5.3,Structure Of The 26s Proteasome-ubp6 Complex
+1L9A A ,21,5.1,0.0105,1.4,9.5,Crystal Structure Of Srp19 In Complex With The S Domain Of Signal Recognition Particle Rna
+3MM6 E 3,17,3.5,0.0318,1.4,11.8,Dissimilatory Sulfite Reductase Cyanide Complexя
+3NDB A ,21,5.1,0.0159,1.4,9.5,Crystal Structure Of A Signal Sequence Bound To The Signal Recognition Particleя
+2OSG B ,22,4.9,0.0324,1.4,9.1,Solution Structure And Binding Property Of The Domain- Swapped Dimer Of Zo2pdz2
+3BZK A 3,30,5.1,0.0111,1.4,10.0,Crystal Structure Of The Tex Protein From Pseudomonas Aeruginosa, Crystal Form 2
+2V3C A ,22,5.1,0.0140,1.4,9.1,Crystal Structure Of The Srp54-Srp19-7s.S Srp Rna Complex Of M. Jannaschii
+4KFC B 3,18,3.5,0.0477,1.4,5.6,Crystal Structure Of A Hyperactive Mutant Of Response Regulator Kdpe Complexed To Its Promoter Dna
+1L2O A 4,23,5.2,0.0103,1.4,8.7,Scallop Myosin S1-Adp-P-Pdm In The Actin-Detached Conformation
+5AFR A ,20,6.0,0.0173,1.4,5.0,N-terminal Fragment Of Dynein Heavy Chain
+2OSG A ,22,4.9,0.0345,1.4,9.1,Solution Structure And Binding Property Of The Domain- Swapped Dimer Of Zo2pdz2
+2Y9K A 2,28,4.9,0.0483,1.4,14.3,Three-Dimensional Model Of Salmonella's Needle Complex At Subnanometer Resolutionя
+2Y9K B 2,28,4.9,0.0484,1.4,14.3,Three-Dimensional Model Of Salmonella's Needle Complex At Subnanometer Resolutionя
+2Y9K C 2,28,4.9,0.0483,1.4,14.3,Three-Dimensional Model Of Salmonella's Needle Complex At Subnanometer Resolutionя
+2Y9K D 2,28,4.9,0.0484,1.4,14.3,Three-Dimensional Model Of Salmonella's Needle Complex At Subnanometer Resolutionя
+2Y9K E 2,28,4.9,0.0484,1.4,14.3,Three-Dimensional Model Of Salmonella's Needle Complex At Subnanometer Resolutionя
+2Y9K F 2,28,4.9,0.0484,1.4,14.3,Three-Dimensional Model Of Salmonella's Needle Complex At Subnanometer Resolutionя
+2Y9K G 2,28,4.9,0.0483,1.4,14.3,Three-Dimensional Model Of Salmonella's Needle Complex At Subnanometer Resolutionя
+2Y9K I 2,28,4.9,0.0484,1.4,14.3,Three-Dimensional Model Of Salmonella's Needle Complex At Subnanometer Resolutionя
+2Y9K J 2,28,4.9,0.0484,1.4,14.3,Three-Dimensional Model Of Salmonella's Needle Complex At Subnanometer Resolutionя
+2Y9K K 2,28,4.9,0.0483,1.4,14.3,Three-Dimensional Model Of Salmonella's Needle Complex At Subnanometer Resolutionя
+2Y9K L 2,28,4.9,0.0485,1.4,14.3,Three-Dimensional Model Of Salmonella's Needle Complex At Subnanometer Resolutionя
+2Y9K M 2,28,4.9,0.0484,1.4,14.3,Three-Dimensional Model Of Salmonella's Needle Complex At Subnanometer Resolutionя
+2Y9K N 2,28,4.9,0.0483,1.4,14.3,Three-Dimensional Model Of Salmonella's Needle Complex At Subnanometer Resolutionя
+2Y9K O 2,28,4.9,0.0484,1.4,14.3,Three-Dimensional Model Of Salmonella's Needle Complex At Subnanometer Resolutionя
+1OLZ A 5,12,3.5,0.0231,1.5,16.7,The Ligand-Binding Face Of The Semaphorins Revealed By The High Resolution Crystal Structure Of Sema4d
+4I0W A ,30,5.2,0.0489,1.5,10.0,Structure Of The Clostridium Perfringens Cspb Protease
+2DJW J ,32,5.2,0.0338,1.5,3.1,Crystal Structure Of Ttha0845 From Thermus Thermophilus Hb8
+3KTV B ,26,5.2,0.0044,1.5,11.5,Crystal Structure Of The Human Srp19S-Domain Srp Rna Complexя
+5GAR N 3,36,5.1,0.0172,1.5,11.1,Thermus Thermophilus V/a-atpase, Conformation 1
+2DJW B ,32,5.2,0.0324,1.5,3.1,Crystal Structure Of Ttha0845 From Thermus Thermophilus Hb8
+5AFU 1 ,21,6.0,0.0178,1.5,0.0,Cryo-em Structure Of Dynein Tail-dynactin-bicd2n Complex
+2DJW H ,32,5.2,0.0342,1.5,3.1,Crystal Structure Of Ttha0845 From Thermus Thermophilus Hb8
+2DJW E ,32,5.2,0.0368,1.5,3.1,Crystal Structure Of Ttha0845 From Thermus Thermophilus Hb8
+2DJW A ,32,5.2,0.0361,1.5,3.1,Crystal Structure Of Ttha0845 From Thermus Thermophilus Hb8
+2DJW F ,32,5.2,0.0341,1.5,3.1,Crystal Structure Of Ttha0845 From Thermus Thermophilus Hb8
+4PPC B 1,25,5.2,0.0055,1.5,8.0,Itk Kinase Domain With Compound 27 (n-{1-[(1r)-3-(dimethylamino)-1- Phenylpropyl]-1h-pyrazol-4-yl}-6-(1h-pyrazol-4-yl)-1h-indazole-3- Carboxamide)
+3DLU D ,23,4.9,0.0470,1.5,8.7,Structures Of Srp54 And Srp19, The Two Proteins Assembling The Ribonucleic Core Of The Signal Recognition Particle From The Archaeon Pyrococcus Furiosus
+2DJW I ,32,5.2,0.0375,1.5,3.1,Crystal Structure Of Ttha0845 From Thermus Thermophilus Hb8
+2DJW C ,32,5.2,0.0315,1.5,3.1,Crystal Structure Of Ttha0845 From Thermus Thermophilus Hb8
+1WHR A ,31,5.0,0.0281,1.5,16.1,Solution Structure Of The R3h Domain From Human Hypothetical Protein Baa76846
+2DJW G ,33,5.2,0.0363,1.5,3.0,Crystal Structure Of Ttha0845 From Thermus Thermophilus Hb8
+4CR3 S ,30,6.0,0.0043,1.5,10.0,Deep Classification Of A Large Cryo-em Dataset Defines The Conformational Landscape Of The 26s Proteasome
+3DRX A 3,35,5.2,0.0042,1.6,14.3,X-Ray Crystal Structure Of Human Kctd5 Protein Crystallized In High-Salt Bufferя
+5A5B S ,28,6.0,0.0043,1.6,10.7,Structure Of The 26s Proteasome-ubp6 Complex
+5A5B S 5,28,5.2,0.0091,1.6,10.7,Structure Of The 26s Proteasome-ubp6 Complex
+4UT0 F 2,34,4.9,0.0497,1.6,8.8,The Crystal Structure Of I-dmoi In Complex With Its Target Dna At 10 Days Incubation In 5mm Mn (state 7)
+2OCE A 2,30,6.0,0.0020,1.6,13.3,Crystal Structure Of Hypothetical Protein Pa5201 From Pseudomonas Aeruginosa
+3ZZP A ,36,5.1,0.0132,1.6,16.7,Circular Permutant Of Ribosomal Protein S6, Lacking Edge Strand Beta-2 Of Wild-Type S6я
+3GKU B 3,39,5.0,0.0253,1.6,10.3,Crystal Structure Of A Probable Rna-Binding Protein From Clostridium Symbiosum Atcc 14940я
+4PPC A 1,25,5.2,0.0040,1.6,8.0,Itk Kinase Domain With Compound 27 (n-{1-[(1r)-3-(dimethylamino)-1- Phenylpropyl]-1h-pyrazol-4-yl}-6-(1h-pyrazol-4-yl)-1h-indazole-3- Carboxamide)
+1Q8I A 2,23,5.0,0.0230,1.6,8.7,Crystal Structure Of Escherichia Coli Dna Polymerase Ii
+4CR4 S ,27,6.0,0.0048,1.6,11.1,Deep Classification Of A Large Cryo-em Dataset Defines The Conformational Landscape Of The 26s Proteasome
+4CR4 S 4,27,5.2,0.0119,1.6,11.1,Deep Classification Of A Large Cryo-em Dataset Defines The Conformational Landscape Of The 26s Proteasome
+5ADY 6 4,34,5.0,0.0250,1.6,11.8,Cryo-em Structures Of The 50s Ribosome Subunit Bound With Hflx
+5AKN A 2,34,4.9,0.0427,1.6,8.8,The Crystal Structure Of I-dmoi Q42ak120m In Complex With Its Target Dna Nicked In The Non-coding Strand B And In The Presence Of 2mm Mn
+3L4U A 1,12,3.4,0.0492,1.6,0.0,Crystal Complex Of N-Terminal Human Maltase-Glucoamylase With De-O-Sulfonated Kotalanolя
+3K5N A 2,23,4.9,0.0359,1.6,8.7,Crystal Structure Of E.Coli Pol Ii-Abasic Dna Binary Complexя
+3TJO A 1,34,6.8,0.0054,1.6,0.0,Htra1 Catalytic Domain, Mutationally Inactivated
+2VS8 F 2,35,5.0,0.0285,1.6,8.6,The Crystal Structure Of I-Dmoi In Complex With Dna And Mn
+4UN9 A 2,34,5.0,0.0288,1.6,8.8,The Crystal Structure Of I-dmoi In Complex With Its Target Dna At 8h Incubation In 5mm Mn (state 3)
+1FKA H 1,32,4.9,0.0378,1.6,3.1,Structure Of Functionally Activated Small Ribosomal Subunit At 3.3 A Resolution
+4CR3 O ,29,5.8,0.0095,1.6,3.4,Deep Classification Of A Large Cryo-em Dataset Defines The Conformational Landscape Of The 26s Proteasome
+4CR3 O 3,29,5.1,0.0272,1.6,3.4,Deep Classification Of A Large Cryo-em Dataset Defines The Conformational Landscape Of The 26s Proteasome
+5A5B O ,29,5.8,0.0095,1.6,3.4,Structure Of The 26s Proteasome-ubp6 Complex
+5A5B O 3,29,5.1,0.0271,1.6,3.4,Structure Of The 26s Proteasome-ubp6 Complex
+3DRX C 3,38,5.2,0.0042,1.6,13.2,X-Ray Crystal Structure Of Human Kctd5 Protein Crystallized In High-Salt Bufferя
+1OE9 A 3,34,5.0,0.0365,1.6,8.8,Crystal Structure Of Myosin V Motor With Essential Light Chain - Nucleotide-Free
+3MMC E 3,17,3.5,0.0318,1.6,11.8,Structure Of The Dissimilatory Sulfite Reductase From Archae Fulgidusя
+2WJV A 3,35,6.5,0.0340,1.7,5.7,Crystal Structure Of The Complex Between Human Nonsense Mediated Decay Factors Upf1 And Upf2я
+2RHQ B 3,30,5.0,0.0430,1.7,3.3,Phers From Staphylococcus Haemolyticus- Rational Protein Engineering And Inhibitor Studies
+4PPA A 1,29,5.0,0.0207,1.7,10.3,Itk Kinase Domain With Compound 11 (n-[1-(3-cyanobenzyl)-1h-pyrazol-4- Yl]-6-(1h-pyrazol-4-yl)-1h-indazole-3-carboxamide)
+4BH1 F 2,12,3.5,0.0262,1.7,16.7,H5 (tyty) Influenza Virus Haemagglutinin In Complex With Avian Receptor Analogue 3'-sln
+4PPB B 1,29,4.9,0.0382,1.7,6.9,Itk Kinase Domain With Compound 28 (n-{1-[(1s)-3-(dimethylamino)-1- Phenylpropyl]-1h-pyrazol-4-yl}-6-(1h-pyrazol-4-yl)-1h-indazole-3- Carboxamide)
+4K7D C 3,12,3.4,0.0292,1.7,8.3,Crystal Structure Of Parkin C-terminal Ring Domains
+4QD6 A 2,29,4.9,0.0316,1.7,6.9,Itk Kinase Domain In Complex With Inhibitor Compound
+3MM7 E 3,17,3.5,0.0318,1.7,11.8,Dissimilatory Sulfite Reductase Carbon Monoxide Complexя
+4B0Z B ,30,5.5,0.0262,1.7,0.0,Crystal Structure Of S. Pombe Rpn12
+3OKY B 4,16,3.5,0.0170,1.7,0.0,Plexin A2 In Complex With Semaphorin 6aя
+2RHS D 1,35,5.1,0.0152,1.7,2.9,Phers From Staphylococcus Haemolyticus- Rational Protein Engineering And Inhibitor Studies
+3TXM A ,29,5.5,0.0333,1.7,10.3,Crystal Structure Of Rpn6 From Drosophila Melanogaster, Gd(3+) Complexя
+4K3X D 2,15,3.5,0.0477,1.7,13.3,Crystal Structure Of A Subtype H18 Hemagglutinin Homologue From A/flat-faced Bat/peru/033/2010 (h18n11)
+1JID A ,30,5.1,0.0137,1.7,10.0,Human Srp19 In Complex With Helix 6 Of Human Srp Rna
+3PIF C 3,20,5.0,0.0416,1.7,5.0,Crystal Structure Of The 5'->3' Exoribonuclease Xrn1, E178q Mutant In Complex With Manganeseя
+4D10 K ,32,5.5,0.0373,1.7,15.6,Crystal Structure Of The Cop9 Signalosome
+4D18 C ,32,5.5,0.0392,1.7,15.6,Crystal Structure Of The Cop9 Signalosome
+4D18 K ,32,5.5,0.0359,1.7,15.6,Crystal Structure Of The Cop9 Signalosome
+4D10 C ,32,5.5,0.0389,1.7,15.6,Crystal Structure Of The Cop9 Signalosome
+3K5M A 2,29,5.0,0.0220,1.7,3.4,Crystal Structure Of E.Coli Pol Ii-Abasic Dna-Ddgtp Lt(-2, 2) Ternary Complexя
+1I6U A 1,34,5.2,0.0091,1.7,2.9,Rna-Protein Interactions: The Crystal Structure Of Ribosomal Protein S8RRNA COMPLEX FROM METHANOCOCCUS Jannaschiiя
+2VS7 D 2,29,5.2,0.0049,1.7,13.8,The Crystal Structure Of I-Dmoi In Complex With Dna And Ca
+3PFT B 1,61,9.2,0.0001,1.7,14.8,Crystal Structure Of Untagged C54a Mutant Flavin Reductase (Dszd) In Complex With Fmn From Mycobacterium Goodiiя
+4PPB A 2,21,5.1,0.0139,1.7,4.8,Itk Kinase Domain With Compound 28 (n-{1-[(1s)-3-(dimethylamino)-1- Phenylpropyl]-1h-pyrazol-4-yl}-6-(1h-pyrazol-4-yl)-1h-indazole-3- Carboxamide)
+3K5N B 2,29,5.1,0.0157,1.8,3.4,Crystal Structure Of E.Coli Pol Ii-Abasic Dna Binary Complexя
+3J81 W 1,30,5.2,0.0333,1.8,0.0,Cryoem Structure Of A Partial Yeast 48s Preinitiation Complex
+4TRQ A ,27,5.6,0.0159,1.8,7.4,Crystal Structure Of Sac3/thp1/sem1
+4TRQ A 2,27,5.0,0.0291,1.8,7.4,Crystal Structure Of Sac3/thp1/sem1
+4UE5 F ,28,5.2,0.0076,1.8,10.7,Structural Basis For Targeting And Elongation Arrest Of Bacillus Signal Recognition Particle
+1MFQ B ,28,5.2,0.0077,1.8,10.7,Crystal Structure Analysis Of A Ternary S-Domain Complex Of Human Signal Recognition Particle
+2GO5 B ,28,5.2,0.0076,1.8,10.7,Structure Of Signal Recognition Particle Receptor (Sr) In Complex With Signal Recognition Particle (Srp) And Ribosome Nascent Chain Complex
+2RHQ B 1,32,5.0,0.0260,1.8,0.0,Phers From Staphylococcus Haemolyticus- Rational Protein Engineering And Inhibitor Studies

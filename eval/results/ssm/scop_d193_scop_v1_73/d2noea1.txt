@@ -1,0 +1,43 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;"> PDBe Fold v2.59. (src3) 14 Apr 2014 result file.
+
+                   RESULT SUMMARY
+
+   ##      Q-score      P-score     Z-score   RMSD    Nalgn Nsse Ngaps Seq-%     Nmd Nres-Q Nsse-Q Nres-T Nsse-T Query Target
+    1           1       36.14       18.01     0.000   190   13    0           1    0    190     13    190     13    SCOP d2noea1  SCOP d1ebma1
+    2           1       36.35       18.07     0.000   190   13    0           1    0    190     13    190     13    SCOP d2noea1  SCOP d1m3ha1
+    3           1        40.1       18.99     0.000   190   13    0           1    0    190     13    190     13    SCOP d2noea1  SCOP d2noba1
+    4           1       36.14       18.01     0.000   190   13    0           1    0    190     13    190     13    SCOP d2noea1  SCOP d1lwwa1
+    5           1       38.19       18.53     0.000   190   13    0           1    0    190     13    190     13    SCOP d2noea1  SCOP d1lwya1
+    6           1       35.53       17.86     0.000   190   13    0           1    0    190     13    190     13    SCOP d2noea1  SCOP d2noha1
+    7           1        34.5       17.59     0.000   190   13    0           1    0    190     13    190     13    SCOP d2noea1  SCOP d1m3qa1
+    8           1       54.11       22.12     0.000   190   13    0           1    0    190     13    190     13    SCOP d2noea1  SCOP d2noea1
+    9           1       34.19       17.51     0.000   190   13    0           1    0    190     13    190     13    SCOP d2noea1  SCOP d1n39a1
+   10           1       34.19       17.51     0.000   190   13    0           1    0    190     13    190     13    SCOP d2noea1  SCOP d1hu0a1
+   11           1       35.53       17.86     0.000   190   13    0           1    0    190     13    190     13    SCOP d2noea1  SCOP d1n3aa1
+   12           1       34.19       17.51     0.000   190   13    0           1    0    190     13    190     13    SCOP d2noea1  SCOP d1lwva1
+   13           1       31.49       16.79     0.000   190   13    0           1    0    190     13    190     13    SCOP d2noea1  SCOP d1n3ca1
+   14           1       35.53       17.86     0.000   190   13    0           1    0    190     13    190     13    SCOP d2noea1  SCOP d1yqra1
+   15           1       36.81       18.18     0.000   190   13    0           1    0    190     13    190     13    SCOP d2noea1  SCOP d2nola1
+   16           1       35.93       17.96     0.000   190   13    0           1    0    190     13    190     13    SCOP d2noea1  SCOP d1yqma1
+   17           1       32.42       17.04     0.000   190   13    0           1    0    190     13    190     13    SCOP d2noea1  SCOP d1fn7a1
+   18           1       35.53       17.86     0.000   190   13    0           1    0    190     13    190     13    SCOP d2noea1  SCOP d1yqla1
+   19      0.9895       33.74        17.4     0.000   188   13    0           1    0    190     13    188     13    SCOP d2noea1  SCOP d1yqka1
+   20      0.9895       34.34       17.55     0.000   188   13    0           1    0    190     13    188     13    SCOP d2noea1  SCOP d2nofa1
+   21      0.9895       32.54       17.08     0.000   188   13    0           1    0    190     13    188     13    SCOP d2noea1  SCOP d2noza1
+   22      0.9895       30.74       16.59     0.000   188   13    0           1    0    190     13    188     13    SCOP d2noea1  SCOP d1ko9a1
+   23      0.9895       30.43        16.5     0.000   188   13    0           1    0    190     13    188     13    SCOP d2noea1  SCOP d2i5wa1
+   24     0.01748          -0   0.0001392     9.924    93   10    8     0.08602    0    190     13    218     14    SCOP d2noea1  SCOP d1rrqa1
+   25     0.01538          -0   8.965e-05     9.749    86   10    8     0.06977    0    190     13    219     14    SCOP d2noea1  SCOP d1rrsa1
+   26       0.015          -0   1.907e-06    12.112    95   10    9     0.07368    0    190     13    183     10    SCOP d2noea1  SCOP d1diza1
+   27     0.01454          -0   1.907e-06    12.999   100   10    9        0.07    0    190     13    183     10    SCOP d2noea1  SCOP d1mpga1
+   28     0.01454          -0   1.907e-06    12.999   100   10    9        0.07    0    190     13    183     10    SCOP d2noea1  SCOP d1pvsa1
+   29      0.0131          -0   1.717e-05     9.067    89   11   11     0.03371    0    190     13    314     13    SCOP d2noea1  SCOP d1pu6a_
+   30      0.0131          -0   1.717e-05     9.067    89   11   11     0.03371    0    190     13    314     13    SCOP d2noea1  SCOP d1pu7a_
+   31     0.01258          -0   1.335e-05     8.811    85   11   12     0.03529    0    190     13    314     13    SCOP d2noea1  SCOP d1pu8a_
+   32    0.008126          -0   1.907e-06    10.621    81   10    9     0.09877    1    190     13    314     13    SCOP d2noea1  SCOP d1orpa_
+   33    0.007788          -0   1.907e-06    10.143    76   10    9     0.05263    1    190     13    314     13    SCOP d2noea1  SCOP d1orna_
+   34    0.007467          -0   1.907e-06    10.526    77   10    9     0.09091    0    190     13    314     14    SCOP d2noea1  SCOP d1kg3a_
+   35    0.007221          -0   1.907e-06    10.267    74   10    9     0.06757    1    190     13    314     13    SCOP d2noea1  SCOP d1p59a_
+   36    0.006987          -0   1.907e-06    10.146    72   10    9     0.08333    0    190     13    314     14    SCOP d2noea1  SCOP d1weia_
+   37    0.005016          -0   1.907e-06    12.656    75   10   11     0.06667    1    190     13    314     14    SCOP d2noea1  SCOP d1keaa_
+</pre></body></html>

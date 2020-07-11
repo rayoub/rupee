@@ -1,0 +1,12 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;"> PDBe Fold v2.59. (src3) 14 Apr 2014 result file.
+
+                   RESULT SUMMARY
+
+   ##      Q-score      P-score     Z-score   RMSD    Nalgn Nsse Ngaps Seq-%     Nmd Nres-Q Nsse-Q Nres-T Nsse-T Query Target
+    1           1       12.06       10.25     0.000    52    5    0           1    0     52      5     52      5    SCOP d1tbqs2  SCOP d1tbrs2
+    2           1       20.36       13.43     0.000    52    5    0           1    0     52      5     52      5    SCOP d1tbqs2  SCOP d1tbqs2
+    3      0.9731       10.98       9.757     0.499    52    5    0           1    0     52      5     52      5    SCOP d1tbqs2  SCOP d1tbrr2
+    4      0.6229       7.138       7.791     2.020    49    4    1      0.3673    0     52      5     51      5    SCOP d1tbqs2  SCOP d1tbqs1
+    5      0.6168         6.6       7.478     1.918    48    5    2      0.3542    0     52      5     51      5    SCOP d1tbqs2  SCOP d1tbrs1
+    6      0.5933       4.887       6.502     2.044    48    4    2      0.3542    0     52      5     51      4    SCOP d1tbqs2  SCOP d1tbrr1
+</pre></body></html>

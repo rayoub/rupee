@@ -1,0 +1,18 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;"> PDBe Fold v2.59. (src3) 14 Apr 2014 result file.
+
+                   RESULT SUMMARY
+
+   ##      Q-score      P-score     Z-score   RMSD    Nalgn Nsse Ngaps Seq-%     Nmd Nres-Q Nsse-Q Nres-T Nsse-T Query Target
+    1           1       49.88       21.22     0.000   165   12    0           1    0    165     12    165     12    SCOP d1mwia_  SCOP d1muga_
+    2           1       49.88       21.22     0.000   165   12    0           1    0    165     12    165     12    SCOP d1mwia_  SCOP d1mwia_
+    3           1       24.43        14.8     0.000   165   10    0           1    0    165     12    165     10    SCOP d1mwia_  SCOP d1mtla_
+    4           1       35.61       17.88     0.000   165   12    0           1    0    165     12    165     12    SCOP d1mwia_  SCOP d1mwja_
+    5     0.08533          -0     0.09507     5.311    98    9   11      0.4184    0    165     12    165     12    SCOP d1mwia_  SCOP d1r2ka_
+    6      0.0809          -0       1.175     4.984    91    9    9      0.8132    0    165     12    165     12    SCOP d1mwia_  SCOP d1uuya_
+    7     0.07876          -0       1.107     5.075    91    9    9      0.8132    0    165     12    165     12    SCOP d1mwia_  SCOP d1o8qa_
+    8     0.07616          -0       1.073     5.038    89    9    9       0.809    0    165     12    165     12    SCOP d1mwia_  SCOP d1uuxa_
+    9     0.06693          -0     0.03442     6.121    97   10   11      0.3299    0    165     12    165     12    SCOP d1mwia_  SCOP d1eava_
+   10     0.06614          -0     0.01827     5.611    90    9   10      0.3556    0    165     12    165     12    SCOP d1mwia_  SCOP d1o8oa_
+   11     0.06268          -0     0.07412     5.889    91    9   10      0.2527    0    165     12    165     12    SCOP d1mwia_  SCOP d1mkza_
+   12     0.06183          -0      0.2365     5.443    85    9   10      0.6235    0    165     12    165     12    SCOP d1mwia_  SCOP d1o8na_
+</pre></body></html>

@@ -1,0 +1,180 @@
+2Y83 O 4,16,3.5,0.0318,0.9,6.2,Actin Filament Pointed Endÿ
+2Y83 P 4,16,3.5,0.0318,0.9,6.2,Actin Filament Pointed Endÿ
+3J8K J 3,15,3.5,0.0318,0.9,13.3,Tilted State Of Actin, T2
+5ADX B 4,15,3.5,0.0482,1.0,6.7,Cryoem Structure Of Dynactin Complex At 4.0 Angstrom Resolution
+3J8K C 3,15,3.5,0.0318,1.0,13.3,Tilted State Of Actin, T2
+3J8K A 3,14,3.5,0.0318,1.0,14.3,Tilted State Of Actin, T2
+3J8K H 3,13,3.5,0.0318,1.1,7.7,Tilted State Of Actin, T2
+4CJ7 A 4,15,3.5,0.0477,1.1,6.7,Structure Of Crenactin, An Archeal Actin-like Protein
+4XJX A 2,12,3.5,0.0477,1.1,0.0,Structure Of Mutant (e165h) Of The Hsdr Subunit Of The Ecor124i Restriction Enzyme In Complex With Atp
+4XJX B 2,12,3.5,0.0477,1.1,0.0,Structure Of Mutant (e165h) Of The Hsdr Subunit Of The Ecor124i Restriction Enzyme In Complex With Atp
+3KA5 A ,21,4.7,0.0119,1.1,14.3,Crystal Structure Of Ribosome-Associated Protein Y (Psrp-1) From Clostridium Acetobutylicum. Northeast Structural Genomics Consortium Target Id Car123aÿ
+3KA5 B ,21,4.6,0.0127,1.1,14.3,Crystal Structure Of Ribosome-Associated Protein Y (Psrp-1) From Clostridium Acetobutylicum. Northeast Structural Genomics Consortium Target Id Car123aÿ
+3K2T A ,21,4.7,0.0083,1.1,14.3,Crystal Structure Of Lmo2511 Protein From Listeria Monocytogenes, Northeast Structural Genomics Consortium Target Lkr84aÿ
+4CJ7 B 4,23,3.5,0.0477,1.2,8.7,Structure Of Crenactin, An Archeal Actin-like Protein
+4PJO M ,14,3.5,0.0318,1.2,0.0,Minimal U1 Snrnp
+3LYV F ,19,4.4,0.0283,1.2,15.8,Crystal Structure Of A Domain Of Ribosome-Associated Factor Streptococcus Pyogenes Serotype M6. Northeast Structural Ge Consortium Target Id Dr64aÿ
+4OVV B 1,18,4.2,0.0441,1.2,5.6,Crystal Structure Of Pi3k In Complex With Lipids
+1ZNF A ,14,3.5,0.0159,1.2,14.3,Three-Dimensional Solution Structure Of A Single Zinc Finger Dna-Binding Domain
+2EM6 A ,12,3.4,0.0421,1.2,8.3,Solution Structure Of The C2h2 Type Zinc Finger (Region 199- 231) Of Human Zinc Finger Protein 224
+4BQL A 3,23,3.5,0.0477,1.2,8.7,Crystal Structure Of Archaeal Actin
+4BQL B 4,23,3.5,0.0477,1.2,8.7,Crystal Structure Of Archaeal Actin
+3FMV G 2,14,3.5,0.0318,1.2,0.0,Crystal Structure Of The Serine Phosphatase Of Rna Polymerase Ii Ctd (Ssu72 Superfamily) From Drosophila Melanogaster. Monoclinic Crystal Form. Northeast Structural Genomics Consortium Target Fr253ÿ
+2EOZ A ,12,3.5,0.0159,1.3,8.3,Solution Structure Of The C2h2 Type Zinc Finger (Region 809- 841) Of Human Zinc Finger Protein 473
+2YTJ A ,13,3.5,0.0233,1.3,7.7,Solution Structure Of The C2h2 Type Zinc Finger (Region 771- 803) Of Human Zinc Finger Protein 484
+2L1O A ,16,3.5,0.0159,1.3,18.8,Zinc To Cadmium Replacement In The A. Thaliana Superman Cys2his2 Zinc Finger Induces Structural Rearrangements Of Typical Dna Base Determinant Positionsÿ
+4BQL C 3,23,3.5,0.0477,1.3,8.7,Crystal Structure Of Archaeal Actin
+4BMJ G 2,14,3.5,0.0161,1.3,0.0,Structure Of The Ubz1and2 Tandem Of The Ubiquitin-binding Adaptor Protein Tax1bp1
+2CTD A 2,15,3.5,0.0159,1.3,13.3,Solution Structure Of Two Zf-C2h2 Domains From Human Zinc Finger Protein 512ÿ
+2YTP A ,15,3.4,0.0495,1.3,6.7,Solution Structure Of The C2h2 Type Zinc Finger (Region 687- 719) Of Human Zinc Finger Protein 484
+2EPS A ,15,3.5,0.0159,1.3,13.3,Solution Structure Of The 4th Zinc Finger Domain Of Zinc Finger Protein 278
+4BQL D 4,23,3.5,0.0477,1.3,8.7,Crystal Structure Of Archaeal Actin
+2LO2 A ,15,3.5,0.0159,1.3,0.0,Solution Structure Of Sgf11(63-99) Zinc Finger Domainÿ
+2ELT A ,12,3.5,0.0159,1.3,0.0,Solution Structure Of The 3rd C2h2 Zinc Finger Of Human Zinc Finger Protein 406
+5EH2 F 4,12,3.5,0.0159,1.3,0.0,Human Prdm9 Allele-a Znf Domain With Associated Recombination Hotspot Dna Sequence Iii
+4BMJ C 1,13,3.5,0.0224,1.3,0.0,Structure Of The Ubz1and2 Tandem Of The Ubiquitin-binding Adaptor Protein Tax1bp1
+4F99 B 1,13,3.5,0.0159,1.3,7.7,Human Cdc7 Kinase In Complex With Dbf4 And Nucleotide
+2EPP A ,12,3.5,0.0159,1.3,8.3,Solution Structure Of The First C2h2 Type Zinc Finger Domain Of Zinc Finger Protein 278
+1X6E A 1,15,3.5,0.0159,1.3,6.7,Solution Structures Of The C2h2 Type Zinc Finger Domain Of Human Zinc Finger Protein 24ÿ
+4L7Z E 2,19,3.5,0.0477,1.3,0.0,Crystal Structure Of Chloroflexus Aurantiacus Malyl-coa Lyase
+2EOK A ,12,3.5,0.0252,1.3,8.3,Solution Structure Of The C2h2 Type Zinc Finger (Region 441- 469) Of Human Zinc Finger Protein 268
+5EH2 E 3,13,3.4,0.0322,1.3,7.7,Human Prdm9 Allele-a Znf Domain With Associated Recombination Hotspot Dna Sequence Iii
+3LYV A ,23,5.0,0.0030,1.3,13.0,Crystal Structure Of A Domain Of Ribosome-Associated Factor Streptococcus Pyogenes Serotype M6. Northeast Structural Ge Consortium Target Id Dr64aÿ
+2X5T A 1,21,4.4,0.0279,1.3,0.0,Crystal Structure Of Orf131 From Sulfolobus Islandicus Rudivirus 1ÿ
+3LYV B ,21,4.5,0.0179,1.3,14.3,Crystal Structure Of A Domain Of Ribosome-Associated Factor Streptococcus Pyogenes Serotype M6. Northeast Structural Ge Consortium Target Id Dr64aÿ
+2ELM A ,14,3.5,0.0159,1.3,0.0,Solution Structure Of The 10th C2h2 Zinc Finger Of Human Zinc Finger Protein 406
+1JK1 A 2,12,3.5,0.0159,1.3,0.0,Zif268 D20a Mutant Bound To Wt Dna Site
+1X6E A 2,12,3.4,0.0336,1.3,16.7,Solution Structures Of The C2h2 Type Zinc Finger Domain Of Human Zinc Finger Protein 24ÿ
+4L7Z C 2,18,3.5,0.0477,1.3,0.0,Crystal Structure Of Chloroflexus Aurantiacus Malyl-coa Lyase
+2ZWH A 4,25,3.5,0.0318,1.4,4.0,Model For The F-Actin Structureÿ
+1M36 A ,12,3.5,0.0159,1.4,8.3,Solution Structure Of A Cchc Zinc Finger From Moz
+2EON A ,15,3.4,0.0349,1.4,13.3,Solution Structure Of The C2h2 Type Zinc Finger (Region 397- 429) Of Human Zinc Finger Protein 95 Homolog
+4IDU D 1,21,3.5,0.0477,1.4,14.3,Crystal Structure Of Schmallenberg Virus Nucleoprotein
+4L7Z D 2,18,3.5,0.0477,1.4,0.0,Crystal Structure Of Chloroflexus Aurantiacus Malyl-coa Lyase
+1A1K A 3,12,3.4,0.0364,1.4,8.3,Radr (Zif268 Variant) Zinc Finger-Dna Complex (Gacc Site)ÿ
+1A1K A 2,12,3.5,0.0159,1.4,0.0,Radr (Zif268 Variant) Zinc Finger-Dna Complex (Gacc Site)ÿ
+2EMV A ,15,3.4,0.0366,1.4,13.3,Solution Structure Of The C2h2 Type Zinc Finger (Region 859- 889) Of Human Zinc Finger Protein 268
+4L7Z A 2,19,3.5,0.0477,1.4,0.0,Crystal Structure Of Chloroflexus Aurantiacus Malyl-coa Lyase
+2RV7 A 2,12,3.5,0.0184,1.4,0.0,Solution Structures Of The Dna-binding Domains (zf3-zf4-zf5) Of Immune-related Zinc-finger Protein Zfat
+2YTA A ,13,3.5,0.0210,1.4,15.4,Solution Structure Of C2h2 Type Zinc Finger Domain 3 In Zinc Finger Protein 32
+2EPV A ,15,3.5,0.0159,1.4,13.3,Solution Structure Of The 20th C2h2 Type Zinc Finger Domain Of Zinc Finger Protein 268
+2EOM A ,13,3.4,0.0363,1.4,15.4,Solution Structure Of The C2h2 Type Zinc Finger (Region 341- 373) Of Human Zinc Finger Protein 95 Homolog
+2EM9 A ,13,3.5,0.0159,1.4,7.7,Solution Structure Of The C2h2 Type Zinc Finger (Region 367- 399) Of Human Zinc Finger Protein 224
+2EOF A ,15,3.5,0.0159,1.4,13.3,Solution Structure Of The C2h2 Type Zinc Finger (Region 411- 441) Of Human Zinc Finger Protein 268
+4L7Z F 2,19,3.5,0.0477,1.4,0.0,Crystal Structure Of Chloroflexus Aurantiacus Malyl-coa Lyase
+2EN7 A ,12,3.4,0.0313,1.4,8.3,Solution Structure Of The C2h2 Type Zinc Finger (Region 495- 525) Of Human Zinc Finger Protein 268
+2X5G A 1,20,4.3,0.0350,1.4,0.0,Crystal Structure Of The Orf131l51m Mutant From Sulfolobus Islandicus Rudivirus 1ÿ
+4LZB D 1,25,3.5,0.0159,1.4,4.0,Uracil Binding Pocket In Vaccinia Virus Uracil Dna Glycosylase
+2EMZ A ,13,3.5,0.0159,1.4,7.7,Solution Structure Of The C2h2 Type Zinc Finger (Region 628- 660) Of Human Zinc Finger Protein 95 Homolog
+3LYV C ,24,4.9,0.0043,1.4,12.5,Crystal Structure Of A Domain Of Ribosome-Associated Factor Streptococcus Pyogenes Serotype M6. Northeast Structural Ge Consortium Target Id Dr64aÿ
+3DIE B ,23,3.5,0.0477,1.4,8.7,Domain Swapping Of Staphylococcus Aureus Thioredoxin W28a Mutantÿ
+5A2Q V 1,24,3.5,0.0159,1.4,4.2,Structure Of The Hcv Ires Bound To The Human Ribosome
+4QCA D 1,25,3.5,0.0159,1.4,4.0,Crystal Structure Of Vaccinia Virus Uracil-dna Glycosylase Mutant R167ad4
+4QCB A 1,24,3.5,0.0159,1.4,4.2,Protein-dna Complex Of Vaccinia Virus D4 With Double-stranded Non- Specific Dna
+4QCB B 1,24,3.5,0.0159,1.4,4.2,Protein-dna Complex Of Vaccinia Virus D4 With Double-stranded Non- Specific Dna
+2EMI A ,12,3.4,0.0480,1.4,8.3,Solution Structure Of The C2h2 Type Zinc Finger (Region 547- 579) Of Human Zinc Finger Protein 484
+3LYV D ,22,4.4,0.0275,1.4,13.6,Crystal Structure Of A Domain Of Ribosome-Associated Factor Streptococcus Pyogenes Serotype M6. Northeast Structural Ge Consortium Target Id Dr64aÿ
+4P1M A 1,27,3.5,0.0265,1.4,7.4,The Structure Of Escherichia Coli Zapa
+2DLQ A 4,13,3.5,0.0219,1.5,0.0,Solution Structure Of The Tandem Four Zf-C2h2 Domain Repeats Of Murine Gli-Kruppel Family Member Hkr3
+2ADR A 1,12,3.5,0.0159,1.5,0.0,Adr1 Dna-Binding Domain From Saccharomyces Cerevisiae, Nmr, 25 Structures
+4R2E A 2,12,3.4,0.0357,1.5,8.3,Wilms Tumor Protein (wt1) Zinc Fingers In Complex With Methylated Dna
+4R2R A 2,12,3.4,0.0428,1.5,8.3,Wilms Tumor Protein (wt1) Zinc Fingers In Complex With Carboxylated Dna
+2EMG A ,12,3.5,0.0159,1.5,8.3,Solution Structure Of The C2h2 Type Zinc Finger (Region 463- 495) Of Human Zinc Finger Protein 484
+2EOJ A ,13,3.4,0.0313,1.5,15.4,Solution Structure Of The C2h2 Type Zinc Finger (Region 355- 385) Of Human Zinc Finger Protein 268
+2EMY A ,15,3.4,0.0336,1.5,13.3,Solution Structure Of The C2h2 Type Zinc Finger (Region 551- 583) Of Human Zinc Finger Protein 268
+1JK2 A 2,12,3.5,0.0159,1.5,8.3,Zif268 D20a Mutant Bound To The Gct Dna Site
+4R2A A 2,12,3.5,0.0159,1.5,8.3,Egr1/zif268 Zinc Fingers In Complex With Methylated Dna
+2RSJ A 1,12,3.4,0.0301,1.5,16.7,Solution Structures Of The Dna-binding Domains Of Immune-related Zinc- Finger Protein Zfat
+4ODA A 1,23,3.5,0.0159,1.5,4.3,Crystal Structure Of The Vaccinia Virus Dna Polymerase Holoenzyme Subunit D4 In Complex With The A20 N-terminus
+2YTT A ,13,3.5,0.0210,1.5,7.7,Solution Structure Of The C2h2 Type Zinc Finger (Region 204- 236) Of Human Zinc Finger Protein 473
+2D9H A 1,13,3.5,0.0159,1.5,7.7,Solution Structure Of The Forth And Fifth Zf-C2h2 Domains Of Zinc Finger Protein 692
+1LLM D 1,12,3.5,0.0159,1.5,8.3,Crystal Structure Of A Zif23-Gcn4 Chimera Bound To Dna
+1UR6 B ,13,3.5,0.0159,1.5,0.0,Nmr Based Structural Model Of The Ubch5b-Cnot4 Complex
+1A1G A 2,12,3.5,0.0159,1.5,8.3,Dsnr (Zif268 Variant) Zinc Finger-Dna Complex (Gcgt Site)ÿ
+2EN4 A ,15,3.4,0.0353,1.5,13.3,Solution Structure Of The C2h2 Type Zinc Finger (Region 284- 316) Of Human Zinc Finger Protein 347
+2EMC A ,14,3.5,0.0159,1.5,14.3,Solution Structure Of The C2h2 Type Zinc Finger (Region 641- 673) Of Human Zinc Finger Protein 473
+4LZB A 1,22,3.5,0.0159,1.5,4.5,Uracil Binding Pocket In Vaccinia Virus Uracil Dna Glycosylase
+5AFU B 4,12,3.5,0.0482,1.5,0.0,Cryo-em Structure Of Dynein Tail-dynactin-bicd2n Complex
+4BMJ G 1,12,3.4,0.0303,1.5,0.0,Structure Of The Ubz1and2 Tandem Of The Ubiquitin-binding Adaptor Protein Tax1bp1
+4ZUX l ,13,3.5,0.0318,1.5,0.0,Saga Dub Module Ubp8/sgf11/sus1/sgf73 Bound To Ubiqitinated Nucleosome
+4ZUX l 1,13,3.5,0.0159,1.5,0.0,Saga Dub Module Ubp8/sgf11/sus1/sgf73 Bound To Ubiqitinated Nucleosome
+2EMJ A ,12,3.5,0.0159,1.5,8.3,Solution Structure Of The C2h2 Type Zinc Finger (Region 612- 644) Of Human Zinc Finger Protein 28 Homolog
+2EOG A ,13,3.4,0.0294,1.5,7.7,Solution Structure Of The C2h2 Type Zinc Finger (Region 693- 723) Of Human Zinc Finger Protein 268
+4WA6 G ,14,3.5,0.0318,1.5,0.0,Structure Of Yeast Saga Dubm With Sgf73 N59d Mutant At 2.36 Angstroms Resolution
+4WA6 G 1,14,3.5,0.0159,1.5,0.0,Structure Of Yeast Saga Dubm With Sgf73 N59d Mutant At 2.36 Angstroms Resolution
+1P47 A 2,12,3.5,0.0159,1.5,8.3,Crystal Structure Of Tandem Zif268 Molecules Complexed To Dna
+4P1M B 1,22,3.5,0.0159,1.5,4.5,The Structure Of Escherichia Coli Zapa
+4OD8 A 1,26,3.5,0.0270,1.5,3.8,Crystal Structure Of The Vaccinia Virus Dna Polymerase Holoenzyme Subunit D4 In Complex With The A20 N-terminus
+1A1J A 2,15,3.5,0.0159,1.5,6.7,Radr (Zif268 Variant) Zinc Finger-Dna Complex (Gcgt Site)ÿ
+5EH2 F 3,12,3.5,0.0241,1.5,0.0,Human Prdm9 Allele-a Znf Domain With Associated Recombination Hotspot Dna Sequence Iii
+5EGB A 3,12,3.4,0.0329,1.5,0.0,Human Prdm9 Allele-a Znf Domain With Associated Recombination Hotspot Dna Sequence Ii
+4BMJ I 1,14,3.5,0.0159,1.5,0.0,Structure Of The Ubz1and2 Tandem Of The Ubiquitin-binding Adaptor Protein Tax1bp1
+4R2D A 2,15,3.4,0.0484,1.5,6.7,Egr1/zif268 Zinc Fingers In Complex With Formylated Dna
+2EP3 A ,17,3.5,0.0266,1.5,11.8,Solution Structure Of The C2h2 Type Zinc Finger (Region 631- 663) Of Human Zinc Finger Protein 484
+2DLQ A 1,12,3.4,0.0364,1.5,16.7,Solution Structure Of The Tandem Four Zf-C2h2 Domain Repeats Of Murine Gli-Kruppel Family Member Hkr3
+2EOW A ,13,3.5,0.0227,1.5,15.4,Solution Structure Of The C2h2 Type Zinc Finger (Region 368- 400) Of Human Zinc Finger Protein 347
+2I13 B 5,13,3.4,0.0440,1.5,23.1,Aart, A Six Finger Zinc Finger Designed To Recognize Ann Triplets
+1F2I G 2,13,3.5,0.0166,1.5,7.7,Cocrystal Structure Of Selected Zinc Finger Dimer Bound To Dna
+4LZB B 1,24,3.4,0.0410,1.5,4.2,Uracil Binding Pocket In Vaccinia Virus Uracil Dna Glycosylase
+3NT7 A 1,26,3.5,0.0159,1.5,3.8,Crystal Structure Of Vaccinia Virus Uracil Dna Glycosylase R187v Mutantÿ
+2CT1 A 1,12,3.5,0.0159,1.6,0.0,Solution Structure Of The Zinc Finger Domain Of Transcriptional Repressor Ctcf Proteinÿ
+1ZAA C 2,15,3.4,0.0418,1.6,6.7,Zinc Finger-Dna Recognition: Crystal Structure Of A Zif268- Dna Complex At 2.1 Angstroms
+5EGB A 1,13,3.4,0.0372,1.6,0.0,Human Prdm9 Allele-a Znf Domain With Associated Recombination Hotspot Dna Sequence Ii
+2CSE W 3,13,3.5,0.0159,1.6,7.7,Features Of Reovirus Outer-Capsid Protein Mu1 Revealed By Electron And Image Reconstruction Of The Virion At 7.0-A Resolutionÿ
+1MEY C 2,18,3.4,0.0290,1.6,11.1,Crystal Structure Of A Designed Zinc Finger Protein Bound To Dna
+4NDG B 2,13,3.5,0.0159,1.6,7.7,Human Aprataxin (aptx) Bound To Rna-dna And Zn - Adenosine Vanadate Transition State Mimic Complex
+4YGM A 1,27,3.5,0.0169,1.6,3.7,Vaccinia Virus His-d4/a20(1-50) In Complex With Uracil
+1X6F A ,12,3.5,0.0159,1.6,0.0,Solution Structures Of The C2h2 Type Zinc Finger Domain Of Human Zinc Finger Protein 462ÿ
+4P1M B ,27,3.5,0.0318,1.6,7.4,The Structure Of Escherichia Coli Zapa
+1Y0J B ,13,3.5,0.0159,1.6,0.0,Zinc Fingers As Protein Recognition Motifs: Structural Basis For The Gata-1FRIEND OF GATA INTERACTION
+3FAQ A 2,13,3.5,0.0477,1.6,7.7,Crystal Struture Of Lactoperoxidase Complex With Cyanideÿ
+1EJ6 C 3,12,3.5,0.0159,1.6,0.0,Reovirus Core
+3I6N A 2,13,3.5,0.0477,1.6,7.7,Mode Of Binding Of The Tuberculosis Prodrug Isoniazid To Peroxidases: Crystal Structure Of Bovine Lactoperoxidase With Isoniazid At 2.7 Resolutionÿ
+4YIG A 1,27,3.5,0.0269,1.7,3.7,Vaccinia Virus D4/a20(1-50) In Complex With Dsdna Containing An Abasic Site And Free Uracyl
+4R2Q A 1,14,3.4,0.0324,1.7,7.1,Wilms Tumor Protein (wt1) Zinc Fingers In Complex With Formylated Dna
+2EJ4 A ,14,3.5,0.0318,1.7,0.0,Functional And Structural Basis Of Nuclear Localization Signal In Zic3 Zinc Finger Domain: A Role Of Conserved Tryptophan Residue In The Zinc Finger Domain
+4F9C B 1,13,3.5,0.0159,1.7,0.0,Human Cdc7 Kinase In Complex With Dbf4 And Xl413
+3NAK A 4,13,3.5,0.0239,1.7,7.7,Crystal Structure Of The Complex Of Goat Lactoperoxidase With Hypothiocyanite At 3.3 A Resolutionÿ
+2J6X C 2,12,3.4,0.0284,1.7,0.0,The Crystal Structure Of Lactate Oxidase
+2MUR A ,17,3.5,0.0159,1.7,0.0,Solution Structure Of The Human Faap20 Ubz-ubiquitin Complex
+1N7D A 6,17,5.0,0.0315,1.8,11.8,Extracellular Domain Of The Ldl Receptor
+4DOG A 1,26,3.5,0.0159,1.8,3.8,Structures Of Vaccinia Virus Uracil-dna Glycosylase In New Crystal Forms
+4C9Z A 1,13,3.4,0.0393,1.8,0.0,Crystal Structure Of Siah1 At 1.95 A Resolution
+3K1L B 5,12,3.5,0.0159,1.8,8.3,E3 Ligaseÿ
+1KLR A ,13,3.5,0.0245,1.8,7.7,Nmr Structure Of The Zfy-6t[y10f] Zinc Fingerÿ
+2F9W B 2,29,6.6,0.0493,1.8,3.4,Structure Of The Type Iii Coaa From Pseudomonas Aeruginosa
+4LZB F 1,25,3.5,0.0159,1.8,4.0,Uracil Binding Pocket In Vaccinia Virus Uracil Dna Glycosylase
+4DOF B 1,25,3.5,0.0159,1.8,4.0,Structures Of Vaccinia Virus Uracil-dna Glycosylase In New Crystal Forms
+4OU8 A 4,27,6.7,0.0232,1.9,14.8,Crystal Structure Of Apocarotenoid Oxygenase In The Presence Of C8e6
+4DOF D 1,24,3.5,0.0263,1.9,4.2,Structures Of Vaccinia Virus Uracil-dna Glycosylase In New Crystal Forms
+4DOF C 1,25,3.5,0.0159,1.9,4.0,Structures Of Vaccinia Virus Uracil-dna Glycosylase In New Crystal Forms
+1X3C A ,12,3.5,0.0160,1.9,16.7,Solution Structure Of The C2h2 Type Zinc-Binding Domain Of The Zinc Finger Protein 292ÿ
+4YIG I 1,24,3.5,0.0159,1.9,4.2,Vaccinia Virus D4/a20(1-50) In Complex With Dsdna Containing An Abasic Site And Free Uracyl
+4AV8 A 4,30,6.4,0.0368,1.9,3.3,Kluyveromyces Lactis Hsv2 Complete Loop 6cd
+2RUY A ,12,3.5,0.0159,1.9,0.0,Solution Structures Of The Dna-binding Domain (zf10) Of Immune-related Zinc-finger Protein Zfat
+4C9Z B 1,12,3.4,0.0378,1.9,0.0,Crystal Structure Of Siah1 At 1.95 A Resolution
+2R41 A ,32,6.0,0.0447,2.0,6.2,Crystal Structure Of The Protein Of Unknown Function From Enterococcus Faecalis
+3MHS C ,12,3.5,0.0318,2.0,0.0,Structure Of The Saga Ubp8SGF11SUS1SGF73 DUB MODULE BOUND To Ubiquitin Aldehydeÿ
+3MHS C 1,12,3.5,0.0159,2.0,0.0,Structure Of The Saga Ubp8SGF11SUS1SGF73 DUB MODULE BOUND To Ubiquitin Aldehydeÿ
+4ZUX b 1,12,3.4,0.0342,2.0,0.0,Saga Dub Module Ubp8/sgf11/sus1/sgf73 Bound To Ubiqitinated Nucleosome
+4FXE E ,37,5.3,0.0300,2.0,8.1,Crystal Structure Of The Intact E. Coli Relbe Toxin-Antitoxin Complex
+4XPM B ,37,6.8,0.0005,2.0,5.4,Crystal Structure Of Ego-tc
+3K5J A ,48,7.4,0.0033,2.1,12.5,Crystal Structure Of Putative Sufu (Suppressor Of Fused Protein) Homolog (Yp_208451.1) From Neisseria Gonorrhoeae Fa 1090 At 1.40 A Resolutionÿ
+2AN6 C 1,13,3.4,0.0498,2.1,0.0,Protein-Peptide Complex
+4FXE F ,37,5.3,0.0286,2.1,8.1,Crystal Structure Of The Intact E. Coli Relbe Toxin-Antitoxin Complex
+4FXE D ,28,5.4,0.0243,2.1,10.7,Crystal Structure Of The Intact E. Coli Relbe Toxin-Antitoxin Complex
+1SZV A ,37,5.9,0.0281,2.2,2.7,Structure Of The Adaptor Protein P14 Reveals A Profilin- Like Fold With Novel Function
+4EXV A 5,30,6.5,0.0355,2.2,6.7,Structure Of Kluyveromyces Lactis Hsv2p
+2R41 C ,37,6.1,0.0308,2.2,5.4,Crystal Structure Of The Protein Of Unknown Function From Enterococcus Faecalis
+4AV9 A 4,30,6.5,0.0310,2.2,6.7,Kluyveromyces Lactis Hsv2
+4WHM A 2,15,3.5,0.0164,2.2,0.0,Crystal Structure Of Udp-glucose: Anthocyanidin 3-o- Glucosyltransferase In Complex With Udp
+2KC8 A ,33,5.4,0.0232,2.2,9.1,Structure Of E. Coli Toxin Rele (R81aR83A) MUTANT IN Complex With Antitoxin Relbc (K47-L79) Peptideÿ
+4O8K A 2,43,7.3,0.0026,2.2,2.3,Crystal Structure Of Type Iii Pantothenate Kinase From Burkholderia Thailandensis, Apo Structure
+4KM9 A 1,42,6.7,0.0409,2.2,2.4,Crystal Structure Of Human Suppressor Of Fused
+4O5F A 2,43,7.0,0.0074,2.2,2.3,Crystal Structure Of Type Iii Pantothenate Kinase From Burkholderia Thailandensis In Complex With Pantothenate And Phosphate
+2MRK A 1,25,4.4,0.0299,2.2,4.0,Fyn Sh2 Domain In Complex With The Natural Inhibitory Phosphotyrosine Peptide
+1M1L B ,41,6.8,0.0298,2.2,2.4,Human Suppressor Of Fused (N-Terminal Domain)
+3N4G C 2,12,3.5,0.0318,2.2,0.0,Crystal Structure Of Native Cg10062ÿ
+2GRG A ,35,6.2,0.0097,2.3,8.6,Solution Structure Of Hypothetical Protein Yst6499 From Saccharomyces Cerevisiae NORTHEAST STRUCTURAL GENOMICS Consortium Target Yt727 ONTARIO CENTER FOR STRUCTURAL Proteomics Target Yst6499
+3J0F F 1,39,7.4,0.0154,2.3,5.1,Sindbis Virionÿ
+3J0F G 1,39,7.4,0.0154,2.3,5.1,Sindbis Virionÿ

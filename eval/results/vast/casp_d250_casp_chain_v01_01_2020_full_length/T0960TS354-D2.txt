@@ -1,0 +1,180 @@
+3I5N A ,25,6.9,0.0018,2.0,0.0,Crystal Structure Of C-Met With Triazolopyridazine Inhibitor 13˙
+3I5N A 1,25,6.9,0.0002,2.0,0.0,Crystal Structure Of C-Met With Triazolopyridazine Inhibitor 13˙
+2YMZ F ,28,6.8,0.0177,1.9,14.3,Crystal Structure Of Chicken Galectin 2
+1RW8 A ,30,6.8,0.0071,1.7,3.3,Crystal Structure Of Tgf-Beta Receptor I Kinase With Atp Site Inhibitor
+1RW8 A 1,29,6.8,10e-4.3,1.6,6.9,Crystal Structure Of Tgf-Beta Receptor I Kinase With Atp Site Inhibitor
+3R7O A 1,30,6.8,0.0010,2.4,6.7,Structure Of Dually Phosphorylated C-Met In Complex With Mk-2461˙
+3C1X A ,27,6.7,0.0047,1.7,3.7,Crystal Structure Of The Tyrosine Kinase Domain Of The Hepatocyte Growth Factor Receptor C-Met In Complex With A Pyrrolotriazine Based Inhibitor
+3C1X A 1,28,6.7,0.0004,1.9,7.1,Crystal Structure Of The Tyrosine Kinase Domain Of The Hepatocyte Growth Factor Receptor C-Met In Complex With A Pyrrolotriazine Based Inhibitor
+2KDY A 1,33,6.7,0.0089,2.3,0.0,Nmr Structure Of Lp2086-B01˙
+2C47 C ,24,6.7,0.0177,1.4,4.2,Structure Of Casein Kinase 1 Gamma 2˙
+2C47 C 1,23,6.7,0.0001,1.2,0.0,Structure Of Casein Kinase 1 Gamma 2˙
+4CI2 A 3,28,6.7,0.0001,1.5,3.6,Structure Of The Ddb1-crbn E3 Ubiquitin Ligase Bound To Lenalidomide
+3D9R C ,32,6.7,0.0217,1.6,12.5,Crystal Structure Of Ketosteroid Isomerase-Like Protein (Yp_049581.1) From Erwinia Carotovora Atroseptica Scri1043 At 2.40 A Resolution
+4RT1 A ,28,6.7,0.0035,1.2,3.6,Structure Of The Alg44 Pilz Domain (r95a Mutant) From Pseudomonas Aeruginosa Pao1 In Complex With C-di-gmp
+3EI1 A 2,29,6.7,0.0071,1.7,3.4,Structure Of Hsddb1-Drddb2 Bound To A 14 Bp 6-4 Photoproduct Containing Dna-Duplex˙
+2WD1 A ,30,6.7,0.0394,1.9,6.7,Human C-Met Kinase In Complex With Azaindole Inhibitor˙
+2WD1 A 1,30,6.7,0.0017,1.9,6.7,Human C-Met Kinase In Complex With Azaindole Inhibitor˙
+1JST C ,30,6.7,0.0145,1.4,10.0,Phosphorylated Cyclin-Dependent Kinase-2 Bound To Cyclin A
+1JST C 1,30,6.7,0.0002,1.4,10.0,Phosphorylated Cyclin-Dependent Kinase-2 Bound To Cyclin A
+4HXG C 5,32,6.7,10e-4.5,1.2,3.1,Pyrococcus Horikoshii Acylaminoacyl Peptidase (orthorhombic Crystal Form)
+4IHR A ,30,6.7,0.0080,1.0,0.0,Crystal Structure Of Recombinant Kirola (act D 11)
+3SOA A 1,29,6.6,0.0002,1.7,10.3,Full-Length Human Camkii˙
+4HXF B 5,32,6.6,10e-4.5,1.3,3.1,Acylaminoacyl Peptidase In Complex With Z-gly-gly-phe-chloromethyl Ketone
+2IA9 C ,27,6.6,0.0002,1.3,11.1,Structural Genomics, The Crystal Structure Of Spovg From Bacillus Subtilis Subsp. Subtilis Str. 168
+3TNW C ,30,6.6,0.0168,1.5,10.0,Structure Of Cdk2CYCLIN A IN COMPLEX WITH CAN508˙
+3TNW C 1,30,6.6,0.0002,1.5,10.0,Structure Of Cdk2CYCLIN A IN COMPLEX WITH CAN508˙
+1VJY A ,31,6.6,0.0311,1.8,3.2,Crystal Structure Of A Naphthyridine Inhibitor Of Human Tgf- Beta Type I Receptor
+1VJY A 1,31,6.6,0.0002,1.8,3.2,Crystal Structure Of A Naphthyridine Inhibitor Of Human Tgf- Beta Type I Receptor
+2W9P B ,29,6.6,0.0023,1.0,6.9,Crystal Structure Of Potato Multicystatin˙
+2HYE A 3,29,6.6,0.0003,1.6,3.4,Crystal Structure Of The Ddb1-Cul4a-Rbx1-Sv5v Complex
+4A0L A 3,29,6.6,0.0003,1.6,3.4,Structure Of Ddb1-Ddb2-Cul4b-Rbx1 Bound To A 12 Bp Abasic Site Containing Dna-Duplex˙
+4A0L C 3,29,6.6,0.0003,1.6,3.4,Structure Of Ddb1-Ddb2-Cul4b-Rbx1 Bound To A 12 Bp Abasic Site Containing Dna-Duplex˙
+3EI2 A 3,29,6.6,0.0003,1.6,3.4,Structure Of Hsddb1-Drddb2 Bound To A 16 Bp Abasic Site Containing Dna-Duplex˙
+4A0K C 3,29,6.6,0.0003,1.6,3.4,Structure Of Ddb1-Ddb2-Cul4a-Rbx1 Bound To A 12 Bp Abasic Site Containing Dna-Duplex˙
+3PLS A 1,28,6.5,0.0031,2.1,0.0,Ron In Complex With Ligand Amp-Pnp˙
+3WIG A ,27,6.5,0.0075,1.5,11.1,Human Mek1 Kinase In Complex With Ch5126766 And Mgamp-pnp
+4K2R A 4,30,6.5,0.0034,2.3,6.7,Structural Basis For Activation Of Zap-70 By Phosphorylation Of The Sh2-kinase Linker
+2JMB A ,33,6.5,0.0078,1.8,3.0,Solution Structure Of The Protein Atu4866 From Agrobacterium Tumefaciens
+3D9R A ,32,6.5,0.0494,1.6,12.5,Crystal Structure Of Ketosteroid Isomerase-Like Protein (Yp_049581.1) From Erwinia Carotovora Atroseptica Scri1043 At 2.40 A Resolution
+4G31 A ,27,6.5,0.0036,1.8,3.7,Crystal Structure Of Gsk6414 Bound To Perk (R587-R1092, Delete A660- T867) At 2.28 A Resolution
+4G31 A 1,27,6.5,0.0004,1.8,3.7,Crystal Structure Of Gsk6414 Bound To Perk (R587-R1092, Delete A660- T867) At 2.28 A Resolution
+4RT1 C ,31,6.5,0.0083,1.4,3.2,Structure Of The Alg44 Pilz Domain (r95a Mutant) From Pseudomonas Aeruginosa Pao1 In Complex With C-di-gmp
+4RT1 B ,30,6.5,0.0084,1.3,3.3,Structure Of The Alg44 Pilz Domain (r95a Mutant) From Pseudomonas Aeruginosa Pao1 In Complex With C-di-gmp
+4A94 C ,29,6.5,10e-4.2,1.9,13.8,Structure Of The Carboxypeptidase Inhibitor From Nerita Versicolor In Complex With Human Cpa4˙
+3Q6W A 1,30,6.5,0.0037,2.4,6.7,Structure Of Dually-Phosphorylated Met Receptor Kinase In Complex With An Mk-2461 Analog With Specificity For The Activated Receptor˙
+4IH2 A ,30,6.5,0.0091,1.1,0.0,Crystal Structure Of Kirola (act D 11) From Crystal Soaked With 2- Aminopurine
+4IGV A ,30,6.5,0.0092,1.1,0.0,Crystal Structure Of Kirola (act D 11)
+4HXG F 1,32,6.5,0.0356,1.2,3.1,Pyrococcus Horikoshii Acylaminoacyl Peptidase (orthorhombic Crystal Form)
+3EFJ B ,24,6.5,0.0356,1.8,8.3,Structure Of C-Met With Pyrimidone Inhibitor 7
+3EFJ B 1,24,6.5,0.0043,1.8,8.3,Structure Of C-Met With Pyrimidone Inhibitor 7
+4X7O A ,27,6.5,0.0046,1.8,3.7,Co-crystal Structure Of Perk Bound To 1-[5-(4-amino-2,7-dimethyl-7h- Pyrrolo[2,3-d]pyrimidin-5-yl)-2,3-dihydro-1h-indol-1-yl]-2-[3-fluoro- 5-(trifluoromethyl)phenyl]ethanone Inhibitor
+4X7O A 1,27,6.5,0.0005,1.8,3.7,Co-crystal Structure Of Perk Bound To 1-[5-(4-amino-2,7-dimethyl-7h- Pyrrolo[2,3-d]pyrimidin-5-yl)-2,3-dihydro-1h-indol-1-yl]-2-[3-fluoro- 5-(trifluoromethyl)phenyl]ethanone Inhibitor
+2Y4I C ,30,6.5,0.0105,1.3,10.0,Ksr2-Mek1 Heterodimer˙
+4U98 A 1,37,6.5,0.0005,2.1,0.0,Structure Of Mycobacterial Maltokinase, The Missing Link In The Essential Glge-pathway (appcp Complex)
+4X2G A 1,30,6.4,0.0018,1.6,3.3,Selection Of Fragments For Kinase Inhibitor Design: Decoration Is Key
+3TO3 B 1,33,6.4,0.0018,1.8,3.0,Crystal Structure Of Petrobactin Biosynthesis Protein Asbb From Bacillus Anthracis Str. Sterne˙
+4U94 A 1,39,6.4,0.0005,2.5,0.0,Structure Of Mycobacterial Maltokinase, The Missing Link In The Essential Glge-pathway
+4X2F A 1,30,6.4,0.0019,1.6,3.3,Selection Of Fragments For Kinase Inhibitor Design: Decoration Is Key
+3VKI D 2,25,6.4,0.0120,1.7,0.0,Monoclinic Crystal Structure Of Salmonella Flga In Closed Form
+4IGX A ,30,6.4,0.0122,1.1,0.0,Crystal Structure Of Kirola (act D 11) - Triclinic Form
+4GG7 A 1,30,6.4,0.0056,2.1,6.7,Crystal Structure Of Cmet In Complex With Novel Inhibitor
+4GH7 A ,32,6.4,0.0474,1.7,6.2,Crystal Structure Of Anticalin N7a In Complex With Oncofetal Fibronectin Fragment Fn7b8
+2LA7 A ,24,6.4,0.0495,1.4,8.3,Nmr Structure Of The Protein Yp_557733.1 From Burkholderia Xenovoransÿ
+4IWD A 1,30,6.4,0.0064,2.0,6.7,Structure Of Dually Phosphorylated C-met Receptor Kinase In Complex With An Mk-8033 Analog
+4IGX C ,30,6.4,0.0152,2.2,0.0,Crystal Structure Of Kirola (act D 11) - Triclinic Form
+3FZP A 1,34,6.4,0.0068,2.0,11.8,Crystal Structure Of Pyk2 Complexed With Atpgsÿ
+2RFN B ,31,6.4,0.0153,2.1,6.5,X-Ray Structure Of C-Met With Inhibitor
+2RFN B 1,31,6.4,0.0007,2.1,6.5,X-Ray Structure Of C-Met With Inhibitor
+4GG5 A 1,30,6.4,0.0069,2.2,6.7,Crystal Structure Of Cmet In Complex With Novel Inhibitor
+2ZW9 A 3,29,6.4,0.0001,1.7,0.0,Crystal Structure Of Trna Wybutosine Synthesizing Enzyme Tyw4ÿ
+3FVC A 1,21,6.4,0.0026,1.6,0.0,Crystal Structure Of A Trimeric Variant Of The Epstein-Barr Virus Glycoprotein Bÿ
+4ARV B ,35,6.4,0.0313,1.9,14.3,Yersinia Kristensenii Phytase Apo Form
+4ARV B 1,34,6.4,0.0069,1.9,14.7,Yersinia Kristensenii Phytase Apo Form
+3H3C A 1,34,6.4,0.0070,2.0,8.8,Crystal Structure Of Pyk2 In Complex With Sulfoximine- Substituted Trifluoromethylpyrimidine Analogÿ
+3GRD A ,41,6.4,0.0318,2.0,2.4,Crystal Structure Of Ntf2-Superfamily Protein With Unknown Function (Np_977240.1) From Bacillus Cereus Atcc 10987 At 1.25 A Resolutionÿ
+1Q90 C 1,32,6.4,0.0027,1.9,6.2,Structure Of The Cytochrome B6f (Plastohydroquinone : Plastocyanin Oxidoreductase) From Chlamydomonas Reinhardtii
+3VJP A 2,25,6.4,0.0162,1.9,0.0,Orthorhombic Crystal Structure Of Salmonella Flga In Closed Form
+4H1J A ,32,6.4,0.0327,1.7,12.5,Crystal Structure Of Pyk2 With The Pyrazole 13a
+4H1J A 1,31,6.4,0.0072,1.6,9.7,Crystal Structure Of Pyk2 With The Pyrazole 13a
+3J4Q D 1,31,6.3,0.0008,1.4,3.2,Pseudo-atomic Model Of The Akap18-pka Complex In A Bent Conformation Derived From Electron Microscopy
+3J4Q E 1,31,6.3,0.0008,1.4,3.2,Pseudo-atomic Model Of The Akap18-pka Complex In A Bent Conformation Derived From Electron Microscopy
+3J4R D 1,31,6.3,0.0008,1.4,3.2,Pseudo-atomic Model Of The Akap18-pka Complex In A Linear Conformation Derived From Electron Microscopy
+3J4R E 1,31,6.3,0.0008,1.4,3.2,Pseudo-atomic Model Of The Akap18-pka Complex In A Linear Conformation Derived From Electron Microscopy
+3BU5 A 1,33,6.3,0.0008,2.7,3.0,Crystal Structure Of The Insulin Receptor Kinase In Complex With Irs2 Krlb Peptide And Atp
+2QVS E 1,34,6.3,0.0008,1.7,2.9,Crystal Structure Of Type Iia Holoenzyme Of Camp-Dependent Protein Kinase
+2XKF A ,28,6.3,0.0182,1.7,3.6,Structure Of Nek2 Bound To Cct134934ÿ
+2XKF A 1,28,6.3,0.0009,1.7,3.6,Structure Of Nek2 Bound To Cct134934ÿ
+3FZT A ,32,6.3,0.0372,1.8,12.5,Crystal Structure Of Pyk2 Complexed With Pf-4618433ÿ
+3FZT A 1,32,6.3,0.0083,1.8,12.5,Crystal Structure Of Pyk2 Complexed With Pf-4618433ÿ
+4RT0 B ,28,6.3,0.0193,1.5,3.6,Structure Of The Alg44 Pilz Domain From Pseudomonas Aeruginosa Pao1 In Complex With C-di-gmp
+3WZU A 1,30,6.3,0.0086,1.3,3.3,The Structure Of Map2k7 In Complex With 5z-7-oxozeaenol
+3KXY B ,31,6.3,0.0034,1.6,3.2,Crystal Structure Of The Exsc-Exse Complexÿ
+4XRN A ,28,6.3,0.0208,1.3,3.6,Pilz Domain With C-di-gmp Of A Protein From Pseudomonas Aeruginosa
+4BCP C 1,30,6.3,0.0010,1.5,10.0,Structure Of Cdk2 In Complex With Cyclin A And A 2-amino-4- Heteroaryl-pyrimidine Inhibitor
+3RPJ B ,31,6.3,0.0096,2.8,9.7,Structure Of A Curlin Genes Transcriptional Regulator Protein From Proteus Mirabilis Hi4320ÿ
+3Q6U A 1,31,6.3,0.0097,1.9,6.5,Structure Of The Apo Met Receptor Kinase In The Dually-Phosphorylated, Activated Stateÿ
+2Z77 A ,39,6.3,0.0442,2.3,7.7,X-Ray Crystal Structure Of Rv0760c From Mycobacterium Tuberculosis In Complex With Estradiol-17beta-Hemisuccinate
+2ZZK A 4,34,6.3,0.0002,2.0,8.8,Crystal Structure Of Trna Wybutosine Synthesizing Enzyme Tyw4ÿ
+5AIF A ,38,6.3,0.0221,2.6,5.3,Discovery And Characterization Of Thermophilic Limonene-1,2-epoxide Hydrolases From Hot Spring Metagenomic Libraries. Tomsk-sample-native
+3LHN B ,36,6.3,0.0229,2.8,0.0,Crystal Structure Of Putative Lipoprotein (Np_718719.1) From Shewanella Oneidensis At 1.42 A Resolutionÿ
+3LHN A ,30,6.3,0.0229,2.1,0.0,Crystal Structure Of Putative Lipoprotein (Np_718719.1) From Shewanella Oneidensis At 1.42 A Resolutionÿ
+1SWG C ,32,6.3,0.0467,1.5,9.4,Circular Permuted Streptavidin E51A46 IN COMPLEX WITH Biotin
+3UID B ,33,6.3,0.0466,1.8,6.1,Crystal Structure Of Protein Ms6760 From Mycobacterium Smegmatisÿ
+3TCP B 1,33,6.3,0.0011,2.0,3.0,Crystal Structure Of The Catalytic Domain Of The Proto-Oncogene Tyrosine-Protein Kinase Mer In Complex With Inhibitor Unc569
+3MBL A 1,29,6.3,0.0108,1.8,17.2,Crystal Structure Of The Human Mitogen-Activated Protein Kinase Kinase 1 (Mek 1) In Complex With Ligand And Mgadpÿ
+3VJP B 2,25,6.3,0.0245,1.9,0.0,Orthorhombic Crystal Structure Of Salmonella Flga In Closed Form
+2ZZK A 3,30,6.3,0.0002,1.7,3.3,Crystal Structure Of Trna Wybutosine Synthesizing Enzyme Tyw4ÿ
+4NCT C 1,28,6.2,0.0255,1.3,10.7,Human Dyrk1a In Complex With Pkc412
+4KBC A 1,28,6.2,0.0044,2.1,7.1,Ck1d In Complex With {4-[3-(4-fluorophenyl)-1h-pyrazol-4-yl]pyridin-2- Yl}methanol Inhibitor
+2C5X C 1,30,6.2,0.0013,1.8,10.0,Differential Binding Of Inhibitors To Active And Inactive Cdk2 Provides Insights For Drug Design
+2ZW9 A 4,33,6.2,0.0002,2.0,9.1,Crystal Structure Of Trna Wybutosine Synthesizing Enzyme Tyw4ÿ
+5H8E A 1,30,6.2,0.0014,1.9,10.0,Crystal Structure Of Ck2 With Compound 7h
+4XRT A 2,32,6.2,0.0314,2.1,6.2,Crystal Structure Of The Di-domain Aro/cyc Stfq From The Steffimycin Biosynthetic Pathway
+2Z4I B 1,32,6.2,0.0142,1.7,6.2,Crystal Structure Of The Cpx Pathway Activator Nlpe From Escherichia Coli
+2WQB A 1,24,6.2,0.0015,1.3,8.3,Structure Of The Tie2 Kinase Domain In Complex With A Thiazolopyrimidine Inhibitorÿ
+5HX6 A ,27,6.2,0.0325,1.5,3.7,Crystal Structure Of Rip1 Kinase With A Benzo[b][1,4]oxazepin-4-one
+5HX6 A 1,30,6.2,0.0015,1.9,0.0,Crystal Structure Of Rip1 Kinase With A Benzo[b][1,4]oxazepin-4-one
+3KVW A 1,26,6.2,0.0333,1.6,7.7,Crystal Structure Of Dual-Specificity Tyrosine Phosphorylation Regulated Kinase 2 (Dyrk2) In Complex With An Indirubin Ligandÿ
+3EQB A ,29,6.2,0.0339,1.7,3.4,X-Ray Structure Of The Human Mitogen-Activated Protein Kinase Kinase 1 (Mek1) In A Complex With Ligand And Mgatp
+3EQB A 1,29,6.2,0.0016,1.7,3.4,X-Ray Structure Of The Human Mitogen-Activated Protein Kinase Kinase 1 (Mek1) In A Complex With Ligand And Mgatp
+4IH0 A ,30,6.2,0.0343,1.3,0.0,Crystal Structure Of Kirola (act D 11) From Crystal Soaked With Serotonin
+1XFS B ,31,6.2,0.0155,2.2,3.2,Crystal Structure Of The Hypothetical Protein From Nitrosomonas Europaea, Nesg Target Ner5
+3BHT C 1,30,6.2,0.0017,1.4,10.0,Structure Of Phosphorylated Thr160 Cdk2CYCLIN A IN COMPLEX With The Inhibitor Meriolin 3
+1ZTH C 1,30,6.2,0.0157,1.7,3.3,Crystal Structure Of A.Fulgidus Rio1 Serine Protein Kinase Bound To Adp And Manganese Ion
+3ER7 A ,30,6.2,0.0353,1.6,3.3,Crystal Structure Of Ntf2-Like Protein Of Unknown Function (Yp_001812677.1) From Exiguobacterium Sp. 255-15 At 1.50 A Resolution
+4IGX B ,30,6.2,0.0355,1.1,0.0,Crystal Structure Of Kirola (act D 11) - Triclinic Form
+4B6L A 1,29,6.2,0.0159,1.6,3.4,Discovery Of Oral Polo-like Kinase (plk) Inhibitors With Enhanced Selectivity Profile Using Residue Targeted Drug Design
+4REI A ,30,6.2,0.0159,2.0,3.3,Crystal Structure Of Ginseng Major Latex-like Protein 151 (glp) From Panax Ginseng. (crystal-2)
+4CFU A 1,30,6.2,0.0017,1.4,10.0,Structure-based Design Of C8-substituted O6- Cyclohexylmethoxyguanine Cdk1 And 2 Inhibitors
+3ER7 B ,32,6.2,0.0364,1.7,6.2,Crystal Structure Of Ntf2-Like Protein Of Unknown Function (Yp_001812677.1) From Exiguobacterium Sp. 255-15 At 1.50 A Resolution
+4JIN A 1,31,6.2,0.0161,2.2,6.5,X-ray Crystal Structure Of Archaeoglobus Fulgidus Rio1 Bound To (2e)- N-benzyl-2-cyano-3-(pyridine-4-yl)acrylamide (wp1086)
+3VKI C 2,25,6.2,0.0363,1.9,0.0,Monoclinic Crystal Structure Of Salmonella Flga In Closed Form
+1YM7 B 3,30,6.2,0.0368,1.8,10.0,G Protein-Coupled Receptor Kinase 2 (Grk2)
+3BHT A 1,31,6.1,0.0018,1.4,9.7,Structure Of Phosphorylated Thr160 Cdk2CYCLIN A IN COMPLEX With The Inhibitor Meriolin 3
+1U4D B 1,27,6.1,0.0375,1.6,0.0,Structure Of The Ack1 Kinase Domain Bound To Debromohymenialdisine
+2Z77 B ,39,6.1,0.0378,2.3,7.7,X-Ray Crystal Structure Of Rv0760c From Mycobacterium Tuberculosis In Complex With Estradiol-17beta-Hemisuccinate
+4XRW A 1,31,6.1,0.0382,1.6,0.0,Crystal Structure Of The Di-domain Aro/cyc Bexl From The Be-7585a Biosynthetic Pathway
+1YM7 D 4,29,6.1,0.0383,1.6,10.3,G Protein-Coupled Receptor Kinase 2 (Grk2)
+4MHA A ,32,6.1,0.0171,2.0,3.1,Crystal Structure Of The Catalytic Domain Of The Proto-oncogene Tyrosine-protein Kinase Mer In Complex With Inhibitor Unc1817
+4MHA A 1,32,6.1,0.0018,2.0,3.1,Crystal Structure Of The Catalytic Domain Of The Proto-oncogene Tyrosine-protein Kinase Mer In Complex With Inhibitor Unc1817
+4KBK C 1,30,6.1,0.0019,1.9,6.7,Ck1d In Complex With (3s)-3-{4-[3-(4-fluorophenyl)-1-methyl-1h- Pyrazol-4-yl]pyridin-2-yl}morpholine Inhibitor
+1ZP9 C 1,30,6.1,0.0174,1.7,3.3,Crystal Structure Of Full-Legnth A.Fulgidus Rio1 Serine Kinase Bound To Atp And Mn2+ Ions
+3RE4 A 1,30,6.1,0.0178,1.7,3.3,Crystal Structure Of Archaeoglobus Fulgidus Rio1 Kinase Bound To Toyocamycin
+3RE4 B 1,27,6.1,0.0183,1.9,3.7,Crystal Structure Of Archaeoglobus Fulgidus Rio1 Kinase Bound To Toyocamycin
+4AZF A 1,30,6.1,0.0411,1.8,6.7,Human Dyrk2 In Complex With Leucettine L41
+2B53 A 1,24,6.1,0.0185,1.3,8.3,Human Cyclin Dependent Kinase 2 (Cdk2) Complexed With Din- 234325ÿ
+4BCQ A 1,30,6.1,0.0020,1.3,10.0,Structure Of Cdk2 In Complex With Cyclin A And A 2-Amino-4- Heteroaryl-Pyrimidine Inhibitor
+3TCP A ,30,6.1,0.0187,1.7,3.3,Crystal Structure Of The Catalytic Domain Of The Proto-Oncogene Tyrosine-Protein Kinase Mer In Complex With Inhibitor Unc569
+3TCP A 1,30,6.1,0.0020,1.7,3.3,Crystal Structure Of The Catalytic Domain Of The Proto-Oncogene Tyrosine-Protein Kinase Mer In Complex With Inhibitor Unc569
+2JGS D ,32,6.1,0.0425,2.2,6.2,Circular Permutant Of Avidin
+3BHU A 1,30,6.1,0.0020,1.4,10.0,Structure Of Phosphorylated Thr160 Cdk2CYCLIN A IN COMPLEX With The Inhibitor Meriolin 5
+2XNP A ,29,6.1,0.0427,1.6,3.4,Structure Of Nek2 Bound To Cct244858ÿ
+2XNP A 1,29,6.1,0.0020,1.6,3.4,Structure Of Nek2 Bound To Cct244858ÿ
+4USE A ,35,6.1,0.0430,1.9,8.6,Human Stk10 (lok) With Sb-633825
+4USE A 1,35,6.1,0.0020,1.9,8.6,Human Stk10 (lok) With Sb-633825
+3U6H A ,30,6.1,0.0433,1.9,3.3,Crystal Structure Of C-Met In Complex With Pyrazolone Inhibitor 26ÿ
+3U6H A 1,30,6.1,0.0021,1.9,3.3,Crystal Structure Of C-Met In Complex With Pyrazolone Inhibitor 26ÿ
+2G15 A ,31,6.1,0.0437,1.9,6.5,Structural Characterization Of Autoinhibited C-Met Kinase
+2G15 A 1,31,6.1,0.0021,1.9,6.5,Structural Characterization Of Autoinhibited C-Met Kinase
+3UYT D 1,24,6.1,0.0195,1.3,4.2,Crystal Structure Of Ck1d With Pf670462 From P1 Crystal Formÿ
+1ZTF A 1,28,6.1,0.0197,2.0,3.6,Crystal Structure Of A.Fulgidus Rio1 Serine Protein Kinase
+3FZR A 1,30,6.1,0.0198,1.6,10.0,Crystal Structure Of Pyk2 Complexed With Pf-431396ÿ
+3CKW A ,31,6.1,0.0448,1.9,6.5,Crystal Structure Of Sterile 20-Like Kinase 3 (Mst3, Stk24)
+3CKW A 1,31,6.1,0.0021,1.9,6.5,Crystal Structure Of Sterile 20-Like Kinase 3 (Mst3, Stk24)
+4IBM B 1,29,6.1,0.0201,1.8,6.9,Crystal Structure Of Insulin Receptor Kinase Domain In Complex With An Inhibitor Irfin-1
+4HGT B 1,27,6.1,0.0077,1.7,3.7,Crystal Structure Of Ck1d With Compound 13
+3U6I A ,31,6.1,0.0462,2.0,3.2,Crystal Structure Of C-Met In Complex With Pyrazolone Inhibitor 58aÿ
+3U6I A 1,29,6.1,0.0022,1.4,6.9,Crystal Structure Of C-Met In Complex With Pyrazolone Inhibitor 58aÿ
+3UZP B 1,31,6.1,0.0077,1.8,9.7,Crystal Structure Of Ck1d With Pf670462 From P21 Crystal Formÿ
+1ZP9 D 1,30,6.1,0.0207,1.8,3.3,Crystal Structure Of Full-Legnth A.Fulgidus Rio1 Serine Kinase Bound To Atp And Mn2+ Ions
+4CYJ A 1,30,6.1,0.0467,1.8,6.7,Chaetomium Thermophilum Pan2:pan3 Complex
+3V5W A 4,30,6.1,0.0468,1.6,10.0,Human G Protein-Coupled Receptor Kinase 2 In Complex With Soluble Gbetagamma Subunits And Paroxetine
+4D28 A ,31,6.1,0.0476,2.0,6.5,Crystal Structure Of The Kinase Domain Of Snrk3.11 At5g35410
+4D28 A 1,31,6.1,0.0023,2.0,6.5,Crystal Structure Of The Kinase Domain Of Snrk3.11 At5g35410
+2YIW A 1,30,6.1,0.0023,1.9,0.0,Triazolopyridine Inhibitors Of P38 Kinaseÿ
+4IGW B ,30,6.1,0.0481,1.1,0.0,Crystal Structure Of Kirola (act D 11) In P6122 Space Group
+4IGY A ,31,6.1,0.0481,1.5,0.0,Crystal Structure Of Kirola (act D 11) - Triclinic Form
+3KRW A 4,30,6.1,0.0491,1.6,10.0,Human Grk2 In Complex With Gbetgamma Subunits And Balanol (Soak)ÿ
+4LMN A 1,28,6.1,0.0082,1.7,3.6,Crystal Structure Of Mek1 Kinase Bound To Gdc0973
+3TCP B ,33,6.1,0.0220,2.0,3.0,Crystal Structure Of The Catalytic Domain Of The Proto-Oncogene Tyrosine-Protein Kinase Mer In Complex With Inhibitor Unc569

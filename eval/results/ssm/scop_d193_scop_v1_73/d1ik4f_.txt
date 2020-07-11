@@ -1,0 +1,37 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;"> PDBe Fold v2.59. (src3) 14 Apr 2014 result file.
+
+                   RESULT SUMMARY
+
+   ##      Q-score      P-score     Z-score   RMSD    Nalgn Nsse Ngaps Seq-%     Nmd Nres-Q Nsse-Q Nres-T Nsse-T Query Target
+    1           1       58.35       22.98     0.000   151   14    0           1    0    151     14    151     14    SCOP d1ik4f_  SCOP d1eghf_
+    2           1       58.35       22.98     0.000   151   14    0           1    0    151     14    151     14    SCOP d1ik4f_  SCOP d1ik4f_
+    3           1       54.11       22.12     0.000   151   13    0           1    0    151     14    151     13    SCOP d1ik4f_  SCOP d1s8af_
+    4      0.9949       38.88        18.7     0.215   151   14    0           1    0    151     14    151     14    SCOP d1ik4f_  SCOP d1ik4b_
+    5      0.9949        43.2       19.73     0.215   151   14    0           1    0    151     14    151     14    SCOP d1ik4f_  SCOP d1s89b_
+    6      0.9949        43.2       19.73     0.215   151   14    0           1    0    151     14    151     14    SCOP d1ik4f_  SCOP d1s8ab_
+    7      0.9949        43.2       19.73     0.215   151   14    0           1    0    151     14    151     14    SCOP d1ik4f_  SCOP d1eghb_
+    8      0.9923       41.95       19.44     0.101   151   14    0           1    0    151     14    152     14    SCOP d1ik4f_  SCOP d1ik4d_
+    9      0.9923       39.35       18.81     0.101   151   14    0           1    0    151     14    152     14    SCOP d1ik4f_  SCOP d1s89d_
+   10      0.9923       46.82       20.55     0.101   151   14    0           1    0    151     14    152     14    SCOP d1ik4f_  SCOP d1s8ad_
+   11      0.9914       34.99       17.72     0.137   151   13    0           1    0    151     14    152     13    SCOP d1ik4f_  SCOP d1s89a_
+   12      0.9914       46.82       20.55     0.137   151   14    0           1    0    151     14    152     14    SCOP d1ik4f_  SCOP d1egha_
+   13      0.9914       46.82       20.55     0.137   151   14    0           1    0    151     14    152     14    SCOP d1ik4f_  SCOP d1ik4a_
+   14      0.9914       39.85       18.93     0.137   151   14    0           1    0    151     14    152     14    SCOP d1ik4f_  SCOP d1s8aa_
+   15      0.9908       44.73       20.08     0.153   151   14    0           1    0    151     14    152     14    SCOP d1ik4f_  SCOP d1ik4c_
+   16      0.9908       44.73       20.08     0.153   151   14    0           1    0    151     14    152     14    SCOP d1ik4f_  SCOP d1eghc_
+   17      0.9908       38.03       18.49     0.153   151   14    0           1    0    151     14    152     14    SCOP d1ik4f_  SCOP d1s8ac_
+   18      0.9908       35.73       17.91     0.153   151   13    0           1    0    151     14    152     13    SCOP d1ik4f_  SCOP d1s89c_
+   19       0.988       32.79       17.14     0.221   151   13    0           1    0    151     14    152     13    SCOP d1ik4f_  SCOP d1s89e_
+   20       0.988       38.45       18.59     0.221   151   14    0           1    0    151     14    152     14    SCOP d1ik4f_  SCOP d1eghe_
+   21       0.988       38.19       18.53     0.221   151   13    0           1    0    151     14    152     13    SCOP d1ik4f_  SCOP d1ik4e_
+   22       0.988       38.45       18.59     0.221   151   14    0           1    0    151     14    152     14    SCOP d1ik4f_  SCOP d1s8ae_
+   23      0.9868       35.17       17.77     0.000   150   13    1           1    0    151     14    151     13    SCOP d1ik4f_  SCOP d1s89f_
+   24      0.9818       31.31       16.74     0.215   150   12    1           1    0    151     14    151     12    SCOP d1ik4f_  SCOP d1b93b_
+   25      0.9792       34.99       17.72     0.101   150   13    1           1    0    151     14    152     13    SCOP d1ik4f_  SCOP d1eghd_
+   26      0.9647       31.49       16.79     0.154   149   13    1           1    0    151     14    152     13    SCOP d1ik4f_  SCOP d1b93c_
+   27      0.9487       29.48       16.24     0.547   150   14    1        0.98    0    151     14    152     14    SCOP d1ik4f_  SCOP d1b93a_
+   28      0.5348          -0       1.913     2.110   135   12    8      0.8593    0    151     14    151     13    SCOP d1ik4f_  SCOP d1vmdb_
+   29      0.4855          -0       1.566     2.156   130   12    8      0.8538    0    151     14    152     13    SCOP d1ik4f_  SCOP d1vmda_
+   30     0.02008          -0   3.242e-05     9.642    65   10    9     0.03077    0    151     14    123     10    SCOP d1ik4f_  SCOP d1wo8b1
+   31     0.01923          -0   1.907e-06    11.028    72   10    9     0.04167    0    151     14    123     10    SCOP d1ik4f_  SCOP d1wo8f1
+</pre></body></html>

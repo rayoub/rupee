@@ -1,0 +1,39 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;"> PDBe Fold v2.59. (src3) 14 Apr 2014 result file.
+
+                   RESULT SUMMARY
+
+   ##      Q-score      P-score     Z-score   RMSD    Nalgn Nsse Ngaps Seq-%     Nmd Nres-Q Nsse-Q Nres-T Nsse-T Query Target
+    1           1       45.64       20.29     0.000   186   11    0           1    0    186     11    186     11    SCOP d1h2ir_  SCOP d1h2ir_
+    2      0.9954       32.11       16.96     0.204   186   11    0           1    0    186     11    186     11    SCOP d1h2ir_  SCOP d1h2ii_
+    3      0.9939       29.68       16.29     0.234   186   11    0           1    0    186     11    186     11    SCOP d1h2ir_  SCOP d1h2iv_
+    4      0.9919       32.11       16.96     0.272   186   11    0           1    0    186     11    186     11    SCOP d1h2ir_  SCOP d1h2iu_
+    5      0.9916       27.41       15.64     0.277   186   11    0           1    0    186     11    186     11    SCOP d1h2ir_  SCOP d1kn0a_
+    6      0.9762       30.64       16.56     0.468   186   11    0           1    0    186     11    186     11    SCOP d1h2ir_  SCOP d1h2in_
+    7      0.9746       22.15       15.41     0.193   184   10    1           1    0    186     11    186     11    SCOP d1h2ir_  SCOP d1h2is_
+    8      0.9727        22.6       15.73     0.234   184   10    1           1    0    186     11    186     11    SCOP d1h2ir_  SCOP d1h2ib_
+    9      0.9708       23.47       16.75     0.270   184   10    1           1    0    186     11    186     11    SCOP d1h2ir_  SCOP d1h2im_
+   10      0.8921       34.89       17.74     0.180   176   10    1           1    0    186     11    186     11    SCOP d1h2ir_  SCOP d1h2ie_
+   11      0.8905       34.89       17.74     0.222   176   10    1           1    0    186     11    186     11    SCOP d1h2ir_  SCOP d1h2iq_
+   12      0.8898       34.89       17.74     0.237   176   10    1           1    0    186     11    186     11    SCOP d1h2ir_  SCOP d1h2if_
+   13      0.8828       34.89       17.74     0.158   175   10    2           1    0    186     11    186     11    SCOP d1h2ir_  SCOP d1h2id_
+   14      0.8812       28.04       15.88     0.202   175   10    2           1    0    186     11    186     11    SCOP d1h2ir_  SCOP d1h2ij_
+   15      0.8799       28.04       15.88     0.234   175   10    2           1    0    186     11    186     11    SCOP d1h2ir_  SCOP d1h2ik_
+   16      0.8734       28.04       15.88     0.135   174   10    2           1    0    186     11    186     11    SCOP d1h2ir_  SCOP d1h2ip_
+   17      0.8728       22.06       14.05     0.154   174    9    2           1    0    186     11    186     11    SCOP d1h2ir_  SCOP d1kn0d_
+   18      0.8723       21.46       13.85     0.171   174    8    2           1    0    186     11    186     11    SCOP d1h2ir_  SCOP d1kn0g_
+   19      0.8721       34.89       17.74     0.368   175   10    2           1    0    186     11    186     11    SCOP d1h2ir_  SCOP d1h2il_
+   20       0.872        19.8       14.96     0.178   174    9    2           1    0    186     11    186     11    SCOP d1h2ir_  SCOP d1h2io_
+   21       0.872       23.67       14.57     0.179   174   10    2           1    0    186     11    186     11    SCOP d1h2ir_  SCOP d1kn0e_
+   22      0.8713       23.59       14.54     0.198   174   10    2           1    0    186     11    186     11    SCOP d1h2ir_  SCOP d1kn0i_
+   23      0.8712       26.84       15.53     0.202   174   10    2           1    0    186     11    186     11    SCOP d1h2ir_  SCOP d1kn0b_
+   24      0.8707       28.04       15.88     0.215   174   10    2           1    0    186     11    186     11    SCOP d1h2ir_  SCOP d1h2it_
+   25      0.8705       26.84       15.53     0.218   174   10    2           1    0    186     11    186     11    SCOP d1h2ir_  SCOP d1kn0c_
+   26      0.8697       23.13       14.39     0.237   174   10    2           1    0    186     11    186     11    SCOP d1h2ir_  SCOP d1kn0f_
+   27      0.8697       23.05       14.37     0.238   174   10    2           1    0    186     11    186     11    SCOP d1h2ir_  SCOP d1kn0h_
+   28      0.8679       28.04       15.88     0.274   174   10    2           1    0    186     11    186     11    SCOP d1h2ir_  SCOP d1h2ia_
+   29      0.8524       34.89       17.74     0.170   172   10    1           1    0    186     11    186     11    SCOP d1h2ir_  SCOP d1h2ig_
+   30      0.8513       18.64       14.17     0.202   172    9    3           1    0    186     11    186     11    SCOP d1h2ir_  SCOP d1kn0j_
+   31      0.8506       20.75       16.85     0.219   172    9    3           1    0    186     11    186     11    SCOP d1h2ir_  SCOP d1h2ic_
+   32        0.85       34.89       17.74     0.233   172   10    1           1    0    186     11    186     11    SCOP d1h2ir_  SCOP d1h2ih_
+   33      0.8496       12.36       12.32     0.243   172    8    3           1    0    186     11    186     11    SCOP d1h2ir_  SCOP d1kn0k_
+</pre></body></html>

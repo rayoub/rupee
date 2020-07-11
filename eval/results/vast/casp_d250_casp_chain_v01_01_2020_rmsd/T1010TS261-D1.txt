@@ -1,0 +1,56 @@
+4PSO G 1,39,7.9,0.0118,2.1,5.1,Crystal Structure Of Apethermo-dbp-rp2 Bound To Ssdna Dt10
+4PSO A 1,40,7.9,0.0170,2.2,5.0,Crystal Structure Of Apethermo-dbp-rp2 Bound To Ssdna Dt10
+4PSN A 1,40,7.7,0.0287,2.2,5.0,Crystal Structure Of Apethermo-dbp-rp2
+1JMZ A 3,84,11.8,0.0006,2.2,3.6,Crystal Structure Of A Quinohemoprotein Amine Dehydrogenase From Pseudomonas Putida With Inhibitor
+3NB3 C ,97,12.7,0.0079,2.5,7.2,The Host Outer Membrane Proteins Ompa And Ompc Are Packed At Specific Sites In The Shigella Phage Sf6 Virion As Structural Componentsÿ
+3G7G H ,91,11.6,0.0153,2.5,8.8,Crystal Structure Of The Protein With Unknown Function From Clostridium Acetobutylicum Atcc 824ÿ
+3NB3 B ,99,12.9,0.0037,2.6,7.1,The Host Outer Membrane Proteins Ompa And Ompc Are Packed At Specific Sites In The Shigella Phage Sf6 Virion As Structural Componentsÿ
+1JMX A 3,77,12.3,0.0001,2.6,6.5,Crystal Structure Of A Quinohemoprotein Amine Dehydrogenase From Pseudomonas Putida
+3G7G A ,87,12.0,0.0045,2.6,8.0,Crystal Structure Of The Protein With Unknown Function From Clostridium Acetobutylicum Atcc 824ÿ
+2XMN A 2,57,9.7,0.0094,2.6,3.5,High Resolution Snapshots Of Defined Tolc Open States Present An Iris-Like Movement Of Periplasmic Entrance Helicesÿ
+1TQQ B 2,60,9.8,0.0088,2.6,8.3,Structure Of Tolc In Complex With Hexamminecobalt
+3NB3 A ,100,12.7,0.0079,2.6,7.0,The Host Outer Membrane Proteins Ompa And Ompc Are Packed At Specific Sites In The Shigella Phage Sf6 Virion As Structural Componentsÿ
+1QJP A ,100,12.1,0.0235,2.6,7.0,High Resolution Structure Of The Outer Membrane Protein A (Ompa) Transmembrane Domain
+2GE4 A ,90,10.1,0.0482,2.6,8.9,High-Resolution Solution Structure Of Outer Membrane Protein A Transmembrane Domain
+2F1V D ,92,14.1,0.0050,2.6,7.6,Outer Membrane Protein Ompw
+4RLC A ,95,12.7,0.0035,2.6,1.1,Crystal Structure Of The N-terminal Beta-barrel Domain Of Pseudomonas Aeruginosa Oprf
+2F1V A ,93,14.1,0.0055,2.7,7.5,Outer Membrane Protein Ompw
+2WMZ C 2,58,9.9,0.0058,2.7,1.7,Structure Of A Mutated Tolcÿ
+2F1V F ,94,14.1,0.0047,2.7,6.4,Outer Membrane Protein Ompw
+2F1V C ,94,14.1,0.0049,2.7,8.5,Outer Membrane Protein Ompw
+2F1V B ,92,14.1,0.0049,2.7,7.6,Outer Membrane Protein Ompw
+3G7G G ,91,12.3,0.0018,2.7,7.7,Crystal Structure Of The Protein With Unknown Function From Clostridium Acetobutylicum Atcc 824ÿ
+3G7G C ,93,12.3,0.0016,2.7,9.7,Crystal Structure Of The Protein With Unknown Function From Clostridium Acetobutylicum Atcc 824ÿ
+4H6A D ,88,12.4,0.0030,2.7,4.5,Crystal Structure Of The Allene Oxide Cyclase 2 From Physcomitrella Patens
+3DZM C ,93,13.2,0.0206,2.7,5.4,Crystal Structure Of A Major Outer Membrane Protein From Thermus Thermophilus Hb27ÿ
+3G7G B ,91,11.9,0.0052,2.8,7.7,Crystal Structure Of The Protein With Unknown Function From Clostridium Acetobutylicum Atcc 824ÿ
+4H6A B ,87,11.6,0.0429,2.8,4.6,Crystal Structure Of The Allene Oxide Cyclase 2 From Physcomitrella Patens
+3G7G F ,92,12.0,0.0042,2.8,7.6,Crystal Structure Of The Protein With Unknown Function From Clostridium Acetobutylicum Atcc 824ÿ
+3C5O A ,91,11.2,0.0492,2.8,8.8,Crystal Structure Of The Conserved Protein Of Unknown Function Rpa1785 From Rhodopseudomonas Palustris
+2Q03 A ,91,12.2,0.0144,2.8,8.8,Crystal Structure Of Uncharacterized Protein (Yp_563039.1) From Shewanella Denitrificans Os217 At 1.80 A Resolution
+1ORM A ,76,9.7,0.0014,2.8,2.6,Nmr Fold Of The Outer Membrane Protein Ompx In Dhpc Micelles
+4H69 D ,95,12.0,0.0272,2.8,5.3,Crystal Structure Of The Allene Oxide Cyclase 2 From Physcomitrella Patens Complexed With Substrate Analog
+4H69 C ,88,12.1,0.0178,2.8,4.5,Crystal Structure Of The Allene Oxide Cyclase 2 From Physcomitrella Patens Complexed With Substrate Analog
+4H6A C ,88,12.2,0.0056,2.9,5.7,Crystal Structure Of The Allene Oxide Cyclase 2 From Physcomitrella Patens
+4AYE C 2,97,10.0,0.0162,2.9,3.1,Structure Of A Complex Between Ccps 6 And 7 Of Human Complement Factor H And Neisseria Meningitidis Fhbp Variant 1 E283ae304a Mutant
+2F1V E ,102,13.9,0.0086,2.9,2.9,Outer Membrane Protein Ompw
+4H6A F ,95,12.0,0.0104,2.9,5.3,Crystal Structure Of The Allene Oxide Cyclase 2 From Physcomitrella Patens
+5EE2 A ,102,10.8,0.0208,2.9,4.9,The Crystal Structure Of The C-terminal Beta-barrel Of Hpua From Neisseria Gonorrhoeae
+4H69 B ,92,12.2,0.0161,2.9,5.4,Crystal Structure Of The Allene Oxide Cyclase 2 From Physcomitrella Patens Complexed With Substrate Analog
+4H69 E ,95,11.7,0.0242,2.9,5.3,Crystal Structure Of The Allene Oxide Cyclase 2 From Physcomitrella Patens Complexed With Substrate Analog
+1BXW A ,111,12.2,0.0065,2.9,4.5,Outer Membrane Protein A (Ompa) Transmembrane Domain
+3KVD D 2,100,9.8,0.0321,3.0,3.0,Crystal Structure Of The Neisseria Meningitidis Factor H Binding Protein, Fhbp (Gna1870) At 2.0 A Resolutionÿ
+2GIN F ,96,12.6,0.0006,3.0,10.4,X-Ray Structure Of The Wt Allene Oxide Cyclase 2 From Arabidopsis Thaliana
+4AYE D 2,99,10.2,0.0101,3.0,3.0,Structure Of A Complex Between Ccps 6 And 7 Of Human Complement Factor H And Neisseria Meningitidis Fhbp Variant 1 E283ae304a Mutant
+2GIN B ,96,13.3,10e-4.3,3.0,7.3,X-Ray Structure Of The Wt Allene Oxide Cyclase 2 From Arabidopsis Thaliana
+2Q4I C ,96,11.7,0.0267,3.1,9.4,Ensemble Refinement Of The Protein Crystal Structure Of Allene Oxide Cyclase From Arabidopsis Thaliana At3g25770
+2WYO C 2,38,8.7,0.0053,3.1,2.6,Trypanosoma Brucei Glutathione Synthetaseÿ
+2F1T C ,127,13.5,0.0262,3.1,7.1,Outer Membrane Protein Ompw
+2GIN E ,99,12.4,0.0010,3.1,10.1,X-Ray Structure Of The Wt Allene Oxide Cyclase 2 From Arabidopsis Thaliana
+4H6A E ,99,11.7,0.0237,3.1,5.1,Crystal Structure Of The Allene Oxide Cyclase 2 From Physcomitrella Patens
+4CQ7 B ,99,12.3,0.0017,3.1,10.1,The Crystal Structure Of The Allene Oxide Cyclase 2 From Arabidopsis Thaliana With Bound Product - Opda
+2KC0 A 2,95,9.3,0.0484,3.2,2.1,Solution Structure Of The Factor H Binding Proteinÿ
+1S5L o ,102,11.6,0.0336,3.2,7.8,Architecture Of The Photosynthetic Oxygen Evolving Center
+1YS5 A ,92,9.9,0.0255,3.2,6.5,Solution Structure Of The Antigenic Domain Of Gna1870 Of Neisseria Meningitidis
+2LFU A 1,88,10.4,0.0043,3.4,3.4,The Structure Of A N. Meningitides Protein Targeted For Vaccine Developmentÿ
+4AYD D 2,106,10.1,0.0437,3.5,2.8,Structure Of A Complex Between Ccps 6 And 7 Of Human Complement Factor H And Neisseria Meningitidis Fhbp Variant 1 R106a Mutant

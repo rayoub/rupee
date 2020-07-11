@@ -1,0 +1,36 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;"> PDBe Fold v2.59. (src3) 14 Apr 2014 result file.
+
+                   RESULT SUMMARY
+
+   ##      Q-score      P-score     Z-score   RMSD    Nalgn Nsse Ngaps Seq-%     Nmd Nres-Q Nsse-Q Nres-T Nsse-T Query Target
+    1           1       66.84       24.62     0.000   261   16    0           1    0    261     16    261     16    SCOP d1mokc1  SCOP d1mokc1
+    2      0.9985       44.61       20.05     0.116   261   16    0           1    0    261     16    261     16    SCOP d1mokc1  SCOP d1mokd1
+    3      0.9982       42.93       19.78     0.129   261   16    0           1    0    261     16    261     17    SCOP d1mokc1  SCOP d1moka1
+    4      0.9981       41.76       19.39     0.131   261   16    0           1    0    261     16    261     16    SCOP d1mokc1  SCOP d1mokb1
+    5      0.9829       42.71       19.72     0.129   259   16    1           1    0    261     16    261     17    SCOP d1mokc1  SCOP d2c3ca1
+    6      0.9829       42.71       19.72     0.129   259   16    1           1    0    261     16    261     17    SCOP d1mokc1  SCOP d2c3da1
+    7      0.9829       42.71       19.72     0.129   259   16    1           1    0    261     16    261     17    SCOP d1mokc1  SCOP d1mo9a1
+    8      0.9828       27.86        16.9     0.131   259   14    1           1    0    261     16    261     16    SCOP d1mokc1  SCOP d1mo9b1
+    9      0.9828       42.71       19.72     0.131   259   16    1           1    0    261     16    261     17    SCOP d1mokc1  SCOP d2c3db1
+   10      0.9828       41.85       19.52     0.131   259   16    1           1    0    261     16    261     17    SCOP d1mokc1  SCOP d2c3cb1
+   11    0.009739          -0      0.2443     6.044    30   12    4           0    0    261     16     70     14    SCOP d1mokc1  SCOP d1lvla1
+   12    0.004527          -0   1.907e-06    12.645    70   12   11      0.1429    0    261     16    221     13    SCOP d1mokc1  SCOP d1grea1
+   13    0.004527          -0   1.907e-06    12.645    70   12   11      0.1429    0    261     16    221     13    SCOP d1mokc1  SCOP d1graa1
+   14    0.004507          -0   1.907e-06    12.645    70   12   11      0.1429    0    261     16    222     13    SCOP d1mokc1  SCOP d1grta1
+   15    0.004272          -0   1.907e-06    12.841    69   12   12      0.1014    0    261     16    221     13    SCOP d1mokc1  SCOP d1k4qa1
+   16    0.004272          -0   1.907e-06    12.841    69   12   12      0.1014    0    261     16    221     13    SCOP d1mokc1  SCOP d1xana1
+   17    0.004272          -0   1.907e-06    12.841    69   12   12      0.1014    0    261     16    221     14    SCOP d1mokc1  SCOP d1gsna1
+   18    0.004213          -0   1.907e-06    12.936    69   12   12      0.1014    0    261     16    221     13    SCOP d1mokc1  SCOP d1dnca1
+   19    0.004141          -0   1.907e-06    12.455    66   12   13     0.09091    0    261     16    221     13    SCOP d1mokc1  SCOP d1bwca1
+   20    0.003826          -0   1.907e-06    14.040    73   12   12      0.0411    0    261     16    233     17    SCOP d1mokc1  SCOP d1xdib1
+   21    0.003527          -0   1.907e-06    12.691    62   12   12     0.09677    0    261     16    221     13    SCOP d1mokc1  SCOP d2grta1
+   22    0.003445          -0   1.907e-06    14.407    71   12   13      0.1127    0    261     16    233     15    SCOP d1mokc1  SCOP d1xdia1
+   23    0.003261          -0   1.907e-06    12.778    60   12   13         0.1    0    261     16    221     13    SCOP d1mokc1  SCOP d5grta1
+   24    0.003261          -0   1.907e-06    12.778    60   12   13         0.1    0    261     16    221     13    SCOP d1mokc1  SCOP d1grfa1
+   25    0.003261          -0   1.907e-06    12.778    60   12   13         0.1    0    261     16    221     13    SCOP d1mokc1  SCOP d1grba1
+   26    0.003261          -0   1.907e-06    12.778    60   12   13         0.1    0    261     16    221     13    SCOP d1mokc1  SCOP d3grta1
+   27    0.003261          -0   1.907e-06    12.778    60   12   13         0.1    0    261     16    221     13    SCOP d1mokc1  SCOP d1grga1
+   28    0.003261          -0   1.907e-06    12.778    60   12   13         0.1    0    261     16    221     13    SCOP d1mokc1  SCOP d3grsa1
+   29    0.003261          -0   1.907e-06    12.778    60   12   13         0.1    0    261     16    221     13    SCOP d1mokc1  SCOP d4gr1a1
+   30   0.0009946          -0   1.907e-06    15.885    41   12   11     0.04878    0    261     16    223     15    SCOP d1mokc1  SCOP d1ebdb1
+</pre></body></html>

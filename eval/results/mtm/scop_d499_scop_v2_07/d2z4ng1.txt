@@ -1,0 +1,1957 @@
+No., subject, TM-score, RMSD, Sequence Identity, Subject length, Aligned length, Description
+1, d2z4nG1, 1.0000, 0.00, 1.000, 81, 81,  
+2, d2z4lG1, 0.9999, 0.02, 1.000, 81, 81,  
+3, d2qaoG1, 0.9966, 0.19, 1.000, 81, 81,  
+4, d2qamG1, 0.9965, 0.19, 1.000, 81, 81,  
+5, p4v5yWC1, 0.9876, 0.00, 1.000, 80, 80, 
+6, p4v52VC1, 0.9845, 0.18, 1.000, 80, 80, 
+7, d2qbiG1, 0.9760, 0.51, 1.000, 81, 81,  
+8, d2qbkG1, 0.9759, 0.51, 1.000, 81, 81,  
+9, p4v5yVA1, 0.9752, 0.02, 1.000, 79, 79, 
+10, d2qbcG1, 0.9730, 0.55, 1.000, 81, 81,  
+11, d2qbaG1, 0.9729, 0.55, 1.000, 81, 81,  
+12, p4v52VA1, 0.9722, 0.18, 1.000, 79, 79, 
+13, d2qoxG1, 0.9683, 0.59, 1.000, 81, 81,  
+14, d2qovG1, 0.9681, 0.59, 1.000, 81, 81,  
+15, p4v55WC1, 0.9637, 0.52, 1.000, 80, 80, 
+16, p4v53VC1, 0.9607, 0.55, 1.000, 80, 80, 
+17, d3df4G1, 0.9607, 0.66, 1.000, 81, 81,  
+18, d3df2G1, 0.9607, 0.66, 1.000, 81, 81,  
+19, p4v56VC1, 0.9568, 0.59, 1.000, 80, 80, 
+20, d2qbeG1, 0.9542, 0.73, 1.000, 81, 81,  
+21, d2qbgG1, 0.9541, 0.73, 1.000, 81, 81,  
+22, p4v55VA1, 0.9517, 0.51, 1.000, 79, 79, 
+23, p4v64CC1, 0.9485, 0.67, 1.000, 80, 80, 
+24, p4v53VA1, 0.9484, 0.55, 1.000, 79, 79, 
+25, d2qp1G1, 0.9464, 0.79, 1.000, 81, 81,  
+26, d2qozG1, 0.9464, 0.79, 1.000, 81, 81,  
+27, p4v56VA1, 0.9446, 0.59, 1.000, 79, 79, 
+28, p4v54WC1, 0.9421, 0.73, 1.000, 80, 80, 
+29, d2i2vG1, 0.9396, 0.89, 1.000, 81, 81,  
+30, d2i2tG1, 0.9395, 0.89, 1.000, 81, 81,  
+31, p4v64CA1, 0.9362, 0.67, 1.000, 79, 79, 
+32, p4v57VC1, 0.9344, 0.79, 1.000, 80, 80, 
+33, p4v54VA1, 0.9307, 0.73, 1.000, 79, 79, 
+34, p4wf1CC1, 0.9302, 0.82, 0.900, 81, 80, 
+35, p5j91KB1, 0.9284, 0.84, 0.900, 81, 80, 
+36, p5j5bKB1, 0.9284, 0.84, 0.900, 81, 80, 
+37, p5jc9KB1, 0.9279, 0.84, 0.900, 81, 80, 
+38, p5j8aKB1, 0.9279, 0.84, 0.900, 81, 80, 
+39, p4v50FC1, 0.9276, 0.90, 1.000, 80, 80, 
+40, p5j88KB1, 0.9275, 0.85, 0.900, 81, 80, 
+41, p4v50DA1, 0.9275, 0.90, 1.000, 80, 80, 
+42, p4u1uDC1, 0.9275, 0.85, 0.900, 81, 80, 
+43, p5j7lKB1, 0.9272, 0.85, 0.900, 81, 80, 
+44, p5it8MB1, 0.9271, 0.85, 0.900, 81, 80, 
+45, p4u1vDC1, 0.9250, 0.87, 0.900, 81, 80, 
+46, p4u20CC1, 0.9248, 0.87, 0.900, 81, 80, 
+47, p4v57VA1, 0.9228, 0.79, 1.000, 79, 79, 
+48, p4u25CC1, 0.9217, 0.90, 0.900, 81, 80, 
+49, p4u27DC1, 0.9215, 0.90, 0.900, 81, 80, 
+50, p5nwyH1, 0.9183, 0.84, 0.899, 80, 79, 
+51, p4v6tEA1, 0.9183, 0.92, 0.912, 81, 80, 
+52, p5mdvL1, 0.9167, 0.84, 0.899, 80, 79, 
+53, p5j91FC1, 0.9166, 0.84, 0.899, 80, 79, 
+54, p5j5bFC1, 0.9166, 0.84, 0.899, 80, 79, 
+55, p6c4iG1, 0.9165, 0.84, 0.899, 80, 79, Conformation of methylated GGQ in the peptidyl transferase center during translation termination  
+56, p5mdzJ1, 0.9162, 0.84, 0.899, 80, 79, 
+57, p4v7sBA1, 0.9160, 0.94, 1.000, 80, 80, 
+58, p4ybbWA1, 0.9157, 0.94, 0.900, 81, 80, 
+59, p5j8aFC1, 0.9155, 0.85, 0.899, 80, 79, 
+60, p5it8HC1, 0.9155, 0.85, 0.899, 80, 79, 
+61, p5mdwL1, 0.9154, 0.85, 0.899, 80, 79, 
+62, p5jc9FC1, 0.9154, 0.85, 0.899, 80, 79, 
+63, p5j7lFC1, 0.9152, 0.85, 0.899, 80, 79, 
+64, p4ybbBC1, 0.9150, 0.86, 0.899, 80, 79, 
+65, p4v7vBA1, 0.9150, 0.95, 1.000, 80, 80, 
+66, p5j88FC1, 0.9147, 0.86, 0.899, 80, 79, 
+67, p5kcrG1, 0.9145, 0.86, 0.899, 80, 79, 
+68, p5gagG1, 0.9145, 0.86, 0.899, 80, 79, RNC IN COMPLEX WITH SRP-SR IN THE CLOSED STATE
+69, p5mdyL1, 0.9144, 0.86, 0.899, 80, 79, 
+70, p4v6dDA1, 0.9144, 0.96, 1.000, 80, 80, 
+71, p4wwwG1, 0.9142, 0.95, 1.000, 80, 80, 
+72, p4v9oG1, 0.9140, 0.97, 1.000, 80, 80, 
+73, p4v7bFA1, 0.9140, 0.97, 1.000, 80, 80, 
+74, p4uy8G1, 0.9140, 0.97, 1.000, 80, 80, MOLECULAR BASIS FOR THE RIBOSOME FUNCTIONING AS A L-TRYPTOPHAN SENSOR - CRYO-EM STRUCTURE OF A TNAC STALLED E.COLI RIBOSOME
+75, p3j7zG1, 0.9140, 0.97, 1.000, 80, 80, STRUCTURE OF THE E. COLI 50S SUBUNIT WITH ERMCL NASCENT CHAIN
+76, p4v6cBA1, 0.9139, 0.97, 1.000, 80, 80, 
+77, p4v89MA1, 0.9138, 0.97, 1.000, 80, 80, 
+78, p4v7tBA1, 0.9137, 0.96, 1.000, 80, 80, 
+79, p4wf1BA1, 0.9132, 0.87, 0.899, 80, 79, 
+80, p4v6eEA1, 0.9132, 0.97, 1.000, 80, 80, 
+81, p5ncoI1, 0.9129, 0.88, 0.899, 80, 79, 
+82, p5gahG1, 0.9129, 0.88, 0.899, 80, 79, RNC IN COMPLEX WITH SRP WITH DETACHED NG DOMAIN
+83, p5gafG1, 0.9129, 0.88, 0.899, 80, 79, RNC IN COMPLEX WITH SRP
+84, p5gadG1, 0.9129, 0.88, 0.899, 80, 79, RNC-SRP-SR COMPLEX EARLY STATE
+85, p4v9oKB1, 0.9128, 0.97, 1.000, 80, 80, 
+86, p4u27BA1, 0.9128, 0.88, 0.899, 80, 79, 
+87, p4v9oND1, 0.9125, 0.96, 1.000, 80, 80, 
+88, p4u25BA1, 0.9123, 0.89, 0.899, 80, 79, 
+89, p4u20BA1, 0.9122, 0.89, 0.899, 80, 79, 
+90, p4u26DC1, 0.9121, 0.96, 0.900, 81, 80, 
+91, p4v85NA1, 0.9120, 0.99, 1.000, 80, 80, 
+92, p4u24CC1, 0.9117, 0.96, 0.900, 81, 80, 
+93, p4v9dGC1, 0.9107, 0.89, 0.899, 80, 79, 
+94, p5iqrE1, 0.9106, 0.89, 0.899, 80, 79, 
+95, p5gaeG1, 0.9106, 0.90, 0.899, 80, 79, RNC IN COMPLEX WITH A TRANSLOCATING SECYEG
+96, p4u1uBA1, 0.9105, 0.89, 0.899, 80, 79, 
+97, p5h5uM1, 0.9102, 0.89, 0.899, 80, 79, 
+98, p4u26BA1, 0.9096, 0.90, 0.899, 80, 79, 
+99, p4v9oQF1, 0.9095, 0.98, 1.000, 80, 80, 
+100, p4u24BA1, 0.9094, 0.90, 0.899, 80, 79, 
+101, p4v9pLD1, 0.9085, 0.98, 1.000, 80, 80, 
+102, p5uymE1, 0.9082, 0.91, 0.899, 80, 79, 
+103, p4u1vBA1, 0.9082, 0.92, 0.899, 80, 79, 
+104, p4woiEA1, 0.9081, 0.92, 0.899, 80, 79, 
+105, p4v9cGC1, 0.9072, 0.93, 0.911, 80, 79, 
+106, p4v9dBB1, 0.9071, 0.92, 0.911, 80, 79, 
+107, p3jbuGA1, 0.9065, 0.92, 0.899, 80, 79, 
+108, p4v9pOF1, 0.9062, 1.00, 1.000, 80, 80, 
+109, p3jbvNA1, 0.9059, 0.93, 0.899, 80, 79, 
+110, p5kpwE1, 0.9035, 0.96, 0.899, 80, 79, 
+111, p3jceHA1, 0.9035, 1.04, 1.000, 80, 80, 
+112, p5we4G1, 0.9031, 0.94, 0.899, 80, 79, struct.pdbx_descriptor              ribosome 
+113, p5afiGA1, 0.9025, 0.94, 0.899, 80, 79, 
+114, p3j9yEA1, 0.9025, 0.94, 0.899, 80, 79, 
+115, p5kpsF1, 0.9024, 0.95, 0.899, 80, 79, 
+116, p4v7dH1, 0.9024, 0.96, 0.899, 80, 79, 
+117, p4v7cGA1, 0.9021, 0.96, 0.899, 80, 79, 
+118, p5wdtG1, 0.9015, 0.95, 0.899, 80, 79, struct.pdbx_descriptor              Ribosome 
+119, p4v7uBA1, 0.9013, 0.98, 1.000, 79, 79, 
+120, p3j5lG1, 0.9013, 0.98, 1.000, 79, 79, STRUCTURE OF THE E. COLI 50S SUBUNIT WITH ERMBL NASCENT CHAIN
+121, p5wfkG1, 0.9011, 0.95, 0.899, 80, 79, struct.pdbx_descriptor              
+122, p5mgpG1, 0.9007, 0.97, 0.899, 80, 79, 
+123, p5kpxE1, 0.8996, 0.97, 0.911, 80, 79, 
+124, p5wf0G1, 0.8985, 0.97, 0.899, 80, 79, struct.pdbx_descriptor              
+125, p4v9pJB1, 0.8983, 1.10, 1.000, 80, 80, 
+126, p5uylE1, 0.8966, 0.98, 0.899, 80, 79, 
+127, p5wfsG1, 0.8962, 0.98, 0.899, 80, 79, struct.pdbx_descriptor              
+128, p5kpvE1, 0.8961, 0.99, 0.899, 80, 79, 
+129, p6bu8E1, 0.8948, 0.99, 0.899, 80, 79, struct.pdbx_descriptor              
+130, p5uyqE1, 0.8936, 1.00, 0.899, 80, 79, 
+131, p6dncJ1, 0.8935, 1.00, 0.899, 80, 79, struct.pdbx_descriptor              ribosome 
+132, p5we6G1, 0.8930, 1.01, 0.899, 80, 79, struct.pdbx_descriptor              Ribosome 
+133, p3jcnL1, 0.8925, 1.03, 0.899, 80, 79, 
+134, p4v9pG1, 0.8917, 1.11, 1.000, 80, 80, 
+135, p5ju8EA1, 0.8913, 1.02, 0.899, 80, 79, 
+136, p5jteFA1, 0.8897, 1.03, 0.899, 80, 79, 
+137, p4v7uBC1, 0.8890, 1.19, 1.000, 81, 81, 
+138, p4v7vBC1, 0.8882, 1.20, 1.000, 81, 81, 
+139, p4v6dDC1, 0.8882, 1.21, 1.000, 81, 81, 
+140, p4wwwBC1, 0.8871, 1.20, 1.000, 81, 81, 
+141, p4v7tBC1, 0.8870, 1.21, 1.000, 81, 81, 
+142, p4woiKB1, 0.8868, 0.98, 0.897, 79, 78, 
+143, p4v7sBC1, 0.8868, 1.21, 1.000, 81, 81, 
+144, p4v6cBC1, 0.8857, 1.22, 1.000, 81, 81, 
+145, p5lzeEA1, 0.8853, 1.07, 0.899, 80, 79, 
+146, p6gc8G1, 0.8830, 1.08, 0.911, 80, 79, 50S RIBOSOMAL SUBUNIT ASSEMBLY INTERMEDIATE - 50S REC* 
+147, p5np6EA1, 0.8819, 1.11, 0.899, 80, 79, 
+148, p5kcsG1, 0.8816, 1.08, 0.899, 80, 79, 
+149, p5l3pG1, 0.8808, 1.08, 0.899, 80, 79, 
+150, p5lzaDA1, 0.8782, 1.13, 0.899, 80, 79, 
+151, p4v9cDA1, 0.8777, 1.12, 0.899, 80, 79, 
+152, p5uypE1, 0.8776, 1.13, 0.899, 80, 79, 
+153, p5u9gK1, 0.8762, 1.14, 0.899, 80, 79, 
+154, p6enuCA1, 0.8756, 1.22, 0.899, 80, 79, struct.pdbx_descriptor              
+155, p5u9fK1, 0.8748, 1.13, 0.899, 80, 79, 
+156, p4v6eHC1, 0.8742, 1.22, 1.000, 80, 80, 
+157, p5o2rG1, 0.8736, 1.14, 0.899, 80, 79, Cryo-EM structure of the proline-rich antimicrobial peptide Api137 bound to the terminating ribosome  
+158, p5uynE1, 0.8713, 1.09, 0.885, 79, 78, 
+159, p6enfCA1, 0.8707, 1.25, 0.899, 80, 79, struct.pdbx_descriptor              
+160, p5uykE1, 0.8704, 1.17, 0.899, 80, 79, 
+161, p6gbzG1, 0.8687, 1.18, 0.911, 80, 79, 50S RIBOSOMAL SUBUNIT ASSEMBLY INTERMEDIATE STATE 5 
+162, p3j9zXA1, 0.8684, 1.31, 1.000, 80, 80, 
+163, p5u4iG1, 0.8665, 1.19, 0.899, 80, 79, 
+164, p5lzfEA1, 0.8659, 1.22, 0.899, 80, 79, 
+165, p6enjG1, 0.8656, 1.24, 0.899, 80, 79, struct.pdbx_descriptor              
+166, p6gc0G1, 0.8632, 1.20, 0.911, 80, 79, 50S RIBOSOMAL SUBUNIT ASSEMBLY INTERMEDIATE STATE 4 
+167, p5lzdFA1, 0.8597, 1.18, 0.897, 79, 78, 
+168, p5mmiG1, 0.8527, 1.27, 0.282, 83, 78, STRUCTURE OF THE LARGE SUBUNIT OF THE CHLOROPLAST RIBOSOME
+169, p5lzcFA1, 0.8525, 1.27, 0.282, 83, 78, 
+170, p5mmmO1, 0.8510, 1.28, 0.911, 80, 79, 
+171, p3jcdEA1, 0.8502, 1.28, 0.282, 83, 78, 
+172, p3jcjK1, 0.8447, 1.34, 1.000, 79, 79, 
+173, p5lzbFA1, 0.8444, 1.38, 1.000, 79, 79, 
+174, p5o60G1, 0.8386, 1.28, 0.910, 79, 78, STRUCTURE OF THE 50S LARGE RIBOSOMAL SUBUNIT FROM MYCOBACTERIUM SMEGMATIS
+175, p5o61H1, 0.8372, 1.61, 0.346, 81, 78, 
+176, p4v78CA1, 0.8360, 1.61, 0.346, 81, 78, 
+177, p4v76CA1, 0.8359, 1.60, 0.346, 81, 78, 
+178, p6gsjFA1, 0.8357, 1.58, 1.000, 81, 81, Structure of T. thermophilus 70S ribosome complex with mRNA; tRNAfMet and cognate tRNAThr in the A-site  
+179, p6gskFA1, 0.8316, 1.53, 1.000, 80, 80, Structure of T. thermophilus 70S ribosome complex with mRNA; tRNAfMet and near-cognate tRNAThr in the A-site  
+180, p5h1sI1, 0.8311, 1.61, 0.231, 80, 78, STRUCTURE OF THE LARGE SUBUNIT OF THE CHLORO-RIBOSOME
+181, p4zerG1, 0.8309, 1.59, 0.231, 80, 78, 
+182, p5czpBC1, 0.8295, 1.33, 0.273, 80, 77, 
+183, p4y4oG1, 0.8295, 1.70, 0.231, 80, 78, 
+184, p5fdvG1, 0.8290, 1.69, 0.231, 80, 78, 
+185, p5j30G1, 0.8288, 1.69, 0.231, 80, 78, 
+186, p5f8kG1, 0.8285, 1.70, 0.231, 80, 78, 
+187, p5j4dI1, 0.8284, 1.68, 0.231, 80, 78, 
+188, d2vhnG1, 0.8283, 1.69, 0.231, 80, 78,  
+189, p5witG1, 0.8280, 1.71, 0.231, 80, 78, Crystal structure of the Thermus thermophilus 70S ribosome in complex with pikromycin and bound to mRNA and A-; P- and E-site tRNAs at 2.6A resolution
+190, p5fduG1, 0.8274, 1.53, 0.808, 81, 78, 
+191, p4wpoH1, 0.8274, 1.72, 0.231, 80, 78, 
+192, p4v8iCA1, 0.8273, 1.71, 0.231, 80, 78, 
+193, p4v90PA1, 0.8272, 1.70, 0.231, 80, 78, 
+194, p5w4kG1, 0.8271, 1.73, 0.231, 80, 78, Crystal structure of the Thermus thermophilus 70S ribosome in complex with Klebsazolicin and bound to mRNA and A-; P- and E-site tRNAs at 2.7A resolution
+195, p4wquH1, 0.8271, 1.64, 0.231, 81, 78, 
+196, p5dfeHC1, 0.8270, 1.71, 0.231, 80, 78, 
+197, p4z3sG1, 0.8270, 1.68, 0.231, 80, 78, 
+198, d1vs8G1, 0.8269, 1.69, 0.231, 80, 78,  
+199, p5j4cG1, 0.8268, 1.71, 0.231, 80, 78, 
+200, p4w2fFA1, 0.8268, 1.75, 0.873, 81, 79, 
+201, p4v8iDC1, 0.8268, 1.71, 0.231, 80, 78, 
+202, p4v95EA1, 0.8266, 1.69, 0.231, 80, 78, 
+203, p1vy4FA1, 0.8265, 1.73, 0.231, 80, 78, 
+204, p5j3cG1, 0.8263, 1.67, 0.231, 80, 78, 
+205, p4v9rEA1, 0.8263, 1.71, 0.231, 80, 78, 
+206, p1vy7FA1, 0.8262, 1.70, 0.231, 80, 78, 
+207, p1vy6EA1, 0.8262, 1.69, 0.231, 80, 78, 
+208, p5hauH1, 0.8259, 1.87, 0.228, 80, 79, 
+209, p5j4bG1, 0.8256, 1.86, 0.228, 80, 79, 
+210, p5hcqG1, 0.8254, 1.69, 0.231, 80, 78, 
+211, p4v9sEA1, 0.8253, 1.73, 0.231, 80, 78, 
+212, p6cflG1, 0.8252, 1.72, 0.231, 80, 78, Crystal structure of the Thermus thermophilus 70S ribosome in complex with lysyl-CAM and bound to protein Y (YfiA) at 2.6A resolution
+213, p5wisG1, 0.8250, 1.70, 0.231, 80, 78, Crystal structure of the Thermus thermophilus 70S ribosome in complex with methymycin and bound to mRNA and A-; P- and E-site tRNAs at 2.7A resolution
+214, p4w2iFA1, 0.8250, 1.73, 0.231, 80, 78, 
+215, p4w2gFA1, 0.8250, 1.71, 0.231, 80, 78, 
+216, p4v9bEA1, 0.8249, 1.70, 0.231, 80, 78, 
+217, p5hcpG1, 0.8248, 1.71, 0.231, 80, 78, 
+218, p5w4kKB1, 0.8247, 1.65, 0.169, 80, 77, Crystal structure of the Thermus thermophilus 70S ribosome in complex with Klebsazolicin and bound to mRNA and A-; P- and E-site tRNAs at 2.7A resolution
+219, p6fkrG1, 0.8246, 1.71, 0.231, 80, 78, Crystal structure of the dolphin proline-rich antimicrobial peptide Tur1A bound to the Thermus thermophilus 70S ribosome  
+220, p6gc4G1, 0.8245, 1.76, 0.231, 80, 78, 50S RIBOSOMAL SUBUNIT ASSEMBLY INTERMEDIATE STATE 3 
+221, p5v8iG1, 0.8244, 1.74, 0.231, 80, 78, struct.pdbx_descriptor               70S Ribosome  
+222, d2j28G1, 0.8244, 1.49, 0.911, 80, 79, MODEL OF E. COLI SRP BOUND TO 70S RNCS
+223, d2awbG1, 0.8244, 1.70, 0.231, 80, 78,  
+224, p1vy5FA1, 0.8244, 1.80, 0.861, 81, 79, 
+225, p4z8cG1, 0.8243, 1.80, 0.861, 81, 79, 
+226, p4v8hCA1, 0.8243, 1.70, 0.231, 80, 78, 
+227, p6caeG1, 0.8242, 1.71, 0.231, 80, 78, Crystal structure of the Thermus thermophilus 70S ribosome in complex with NOSO-95179 antibiotic and bound to mRNA and A-; P- and E-site tRNAs at 2.6A resolution
+228, p4v8hDC1, 0.8242, 1.73, 0.231, 80, 78, 
+229, p5adyG1, 0.8241, 1.74, 0.231, 80, 78, CRYO-EM STRUCTURES OF THE 50S RIBOSOME SUBUNIT BOUND WITH HFLX
+230, p6cfkG1, 0.8237, 1.73, 0.231, 80, 78, Crystal structure of the Thermus thermophilus 70S ribosome in complex with D-histidyl-CAM and bound to protein Y (YfiA) at 2.7A resolution
+231, p6cfjG1, 0.8232, 1.46, 0.949, 80, 79, Crystal structure of the Thermus thermophilus 70S ribosome in complex with histidyl-CAM and bound to mRNA and A-; P-; and E-site tRNAs at 2.8A resolution
+232, p5witKB1, 0.8232, 1.73, 0.231, 80, 78, Crystal structure of the Thermus thermophilus 70S ribosome in complex with pikromycin and bound to mRNA and A-; P- and E-site tRNAs at 2.6A resolution
+233, p5njtAA1, 0.8232, 1.73, 0.231, 80, 78, 
+234, p5wisKB1, 0.8230, 1.77, 0.231, 80, 78, Crystal structure of the Thermus thermophilus 70S ribosome in complex with methymycin and bound to mRNA and A-; P- and E-site tRNAs at 2.7A resolution
+235, p4wqfH1, 0.8230, 1.69, 0.321, 81, 78, 
+236, p5doxG1, 0.8229, 1.74, 0.231, 80, 78, 
+237, p4y4pG1, 0.8229, 1.74, 0.231, 80, 78, 
+238, p6b4vI1, 0.8225, 1.73, 0.231, 80, 78, struct.pdbx_descriptor              
+239, p4wqyH1, 0.8225, 1.74, 0.231, 80, 78, 
+240, p6b4vMB1, 0.8223, 1.67, 0.231, 80, 78, struct.pdbx_descriptor              
+241, p5hd1G1, 0.8223, 1.73, 0.231, 80, 78, 
+242, p4w2eG1, 0.8223, 1.67, 0.231, 80, 78, 
+243, p4v8gCA1, 0.8223, 1.73, 0.231, 80, 78, 
+244, p5hcrG1, 0.8222, 1.80, 0.231, 80, 78, 
+245, p4w2hEA1, 0.8222, 1.77, 0.231, 80, 78, 
+246, p5doyG1, 0.8220, 1.73, 0.231, 80, 78, 
+247, p4v8aKA1, 0.8220, 1.73, 0.231, 80, 78, 
+248, p6caeKB1, 0.8212, 1.72, 0.231, 80, 78, Crystal structure of the Thermus thermophilus 70S ribosome in complex with NOSO-95179 antibiotic and bound to mRNA and A-; P- and E-site tRNAs at 2.6A resolution
+249, p4v8gDC1, 0.8212, 1.73, 0.231, 80, 78, 
+250, p6cflHB1, 0.8210, 1.79, 0.231, 80, 78, Crystal structure of the Thermus thermophilus 70S ribosome in complex with lysyl-CAM and bound to protein Y (YfiA) at 2.6A resolution
+251, p5vp2KB1, 0.8204, 1.77, 0.231, 80, 78, 
+252, p6bokI1, 0.8203, 1.67, 0.221, 79, 77, struct.pdbx_descriptor               Ribosome; Peptide chain release factor 1  
+253, d1vw4F_, 0.8201, 1.78, 0.231, 80, 78,  
+254, p6bokLB1, 0.8197, 1.74, 0.231, 80, 78, struct.pdbx_descriptor               Ribosome; Peptide chain release factor 1  
+255, p5vp2G1, 0.8196, 1.73, 0.295, 185, 78, 
+256, p6bohI1, 0.8177, 1.73, 0.295, 185, 78, Antibiotic blasticidin S and E. coli release factor 1 (containing deletion 302-304) bound to the 70S ribosome  
+257, p4v8aG1, 0.8173, 1.74, 0.231, 80, 78, 
+258, p5d8bAB1, 0.8171, 1.74, 0.231, 80, 78, 
+259, p5d8bE1, 0.8170, 1.82, 0.231, 80, 78, 
+260, p5j3cJB1, 0.8167, 1.79, 0.231, 80, 78, 
+261, p4wquOB1, 0.8167, 1.93, 0.228, 80, 79, 
+262, p4v5bMB1, 0.8166, 1.93, 0.228, 80, 79, 
+263, p4v4hCC1, 0.8161, 1.68, 0.221, 79, 77, 
+264, p4v73CA1, 0.8160, 1.79, 0.231, 80, 78, 
+265, p4w2gJC1, 0.8159, 1.54, 0.818, 80, 77, 
+266, p5x8tG1, 0.8157, 1.76, 0.872, 80, 78, STRUCTURE OF THE 50S LARGE SUBUNIT OF CHLOROPLAST RIBOSOME FROM SPINACH
+267, p5x8pM1, 0.8157, 1.75, 1.000, 81, 81, 
+268, p5j30JB1, 0.8156, 1.80, 0.231, 80, 78, 
+269, p4wzdFA1, 0.8154, 1.42, 0.273, 80, 77, 
+270, p5ndjHC1, 0.8151, 1.42, 0.273, 80, 77, Crystal structure of aminoglycoside TC007 in complex with 70S ribosome from Thermus thermophilus; three tRNAs and mRNA (soaking)  
+271, p4v8fG1, 0.8151, 1.69, 0.221, 79, 77, 
+272, p4p6fKC1, 0.8149, 1.74, 0.169, 80, 77, 
+273, p5hauNB1, 0.8147, 1.68, 0.169, 80, 77, 
+274, p4v8eG1, 0.8147, 1.63, 0.169, 80, 77, 
+275, p5j8bH1, 0.8145, 1.67, 0.169, 80, 77, 
+276, p4v87G1, 0.8144, 1.79, 0.231, 80, 78, 
+277, p4lntHC1, 0.8142, 1.65, 0.169, 80, 77, 
+278, p4p70BC1, 0.8141, 1.81, 0.231, 80, 78, 
+279, p4wroLA1, 0.8139, 1.66, 0.169, 80, 77, 
+280, p4v4qCC1, 0.8139, 1.67, 0.169, 80, 77, 
+281, p5dfeM1, 0.8137, 1.67, 0.169, 80, 77, 
+282, p5czpG1, 0.8137, 1.68, 0.169, 80, 77, 
+283, p4y4oHB1, 0.8137, 1.81, 0.859, 80, 78, 
+284, p4wpoOB1, 0.8137, 1.90, 0.218, 79, 78, 
+285, p4wqfNB1, 0.8134, 1.71, 0.221, 79, 77, 
+286, p5ndkHC1, 0.8133, 1.71, 0.221, 79, 77, Crystal structure of aminoglycoside TC007 co-crystallized with 70S ribosome from Thermus thermophilus; three tRNAs and mRNA  
+287, p5v8iGB1, 0.8131, 1.84, 0.231, 80, 78, struct.pdbx_descriptor               70S Ribosome  
+288, p4wsmFA1, 0.8131, 1.83, 0.231, 80, 78, 
+289, p1vy6HC1, 0.8129, 1.69, 0.195, 80, 77, 
+290, p4wu1FA1, 0.8128, 1.70, 0.221, 79, 77, 
+291, p4wqyMB1, 0.8126, 1.69, 0.195, 80, 77, 
+292, p4v8bFA1, 0.8126, 1.83, 0.231, 80, 78, 
+293, p4wqrFA1, 0.8125, 1.73, 0.169, 80, 77, 
+294, p4z3sKB1, 0.8118, 1.82, 0.231, 80, 78, 
+295, p4z8cJB1, 0.8115, 1.68, 0.169, 80, 77, 
+296, p4wzoGA1, 0.8115, 1.73, 0.195, 80, 77, 
+297, p5fdvJB1, 0.8112, 1.89, 0.231, 80, 78, 
+298, p5mrfF1, 0.8109, 1.88, 0.231, 80, 78, 
+299, p5mrcF1, 0.8109, 1.73, 0.195, 80, 77, 
+300, p4zerIB1, 0.8109, 1.74, 0.221, 79, 77, 
+301, p5mreF1, 0.8108, 1.91, 0.278, 100, 79, 
+302, p5fduIB1, 0.8108, 1.91, 0.278, 100, 79, 
+303, p4v8dFA1, 0.8108, 1.72, 0.221, 79, 77, 
+304, p4wq1FA1, 0.8107, 1.91, 0.278, 100, 79, 
+305, p4wsdFA1, 0.8105, 1.77, 0.221, 79, 77, 
+306, p4v9aDA1, 0.8104, 1.66, 0.169, 80, 77, 
+307, p5f8kJB1, 0.8103, 1.71, 0.195, 80, 77, 
+308, p6cfkHB1, 0.8102, 1.73, 0.195, 80, 77, Crystal structure of the Thermus thermophilus 70S ribosome in complex with D-histidyl-CAM and bound to protein Y (YfiA) at 2.7A resolution
+309, p5doxGB1, 0.8101, 1.69, 0.169, 80, 77, 
+310, p6fkrIB1, 0.8099, 1.73, 0.221, 79, 77, Crystal structure of the dolphin proline-rich antimicrobial peptide Tur1A bound to the Thermus thermophilus 70S ribosome  
+311, p1vy5JC1, 0.8095, 1.72, 0.221, 79, 77, 
+312, p4wt1FA1, 0.8093, 1.89, 0.218, 79, 78, 
+313, p4v6nH1, 0.8093, 1.86, 0.231, 80, 78, 
+314, p3j9wMA1, 0.8091, 1.83, 0.231, 80, 78, 
+315, p4v8cG1, 0.8090, 1.72, 0.169, 80, 77, 
+316, p4wr6FA1, 0.8084, 1.88, 1.000, 81, 81, 
+317, p4v6fIC1, 0.8084, 1.83, 0.333, 81, 78, 
+318, p3j6bF1, 0.8081, 1.69, 0.169, 80, 77, 
+319, p4v95GC1, 0.8080, 1.72, 0.169, 80, 77, 
+320, p4w2hHC1, 0.8079, 1.70, 0.169, 80, 77, 
+321, p4v6vCB1, 0.8071, 1.74, 0.286, 92, 77, 
+322, p4p70BA1, 0.8070, 1.85, 0.231, 80, 78, 
+323, p4lntEA1, 0.8070, 1.84, 0.231, 80, 78, 
+324, p4p6fFA1, 0.8069, 1.72, 0.937, 80, 79, 
+325, p4v9sHC1, 0.8068, 1.74, 0.169, 80, 77, 
+326, p4w2iJC1, 0.8063, 1.74, 0.169, 80, 77, 
+327, p5el6GA1, 0.8061, 1.74, 0.169, 80, 77, 
+328, p4v9rHC1, 0.8061, 1.84, 0.231, 80, 78, 
+329, p5e81GA1, 0.8060, 2.01, 0.228, 80, 79, 
+330, p4v97LC1, 0.8060, 1.75, 0.182, 80, 77, 
+331, p5ib7GA1, 0.8059, 1.84, 0.231, 80, 78, 
+332, p5hcpJB1, 0.8057, 1.74, 0.195, 80, 77, 
+333, p6gslGA1, 0.8053, 1.57, 0.171, 78, 76, Structure of T. thermophilus 70S ribosome complex with mRNA; tRNAfMet and cognate tRNAArg in the A-site  
+334, p5el5GA1, 0.8053, 1.75, 0.195, 80, 77, 
+335, p5j4bKB1, 0.8050, 1.87, 0.231, 80, 78, 
+336, p5ibbGA1, 0.8049, 1.76, 0.195, 80, 77, 
+337, p5hcqJB1, 0.8046, 1.72, 0.169, 80, 77, 
+338, p5el4GA1, 0.8045, 1.88, 0.231, 80, 78, 
+339, d2vhmG1, 0.8042, 1.74, 0.169, 80, 77,  
+340, p5ib8GA1, 0.8041, 1.91, 0.231, 80, 78, 
+341, p5j4cKB1, 0.8038, 1.74, 0.195, 80, 77, 
+342, p4tubIC1, 0.8038, 1.78, 0.821, 81, 78, 
+343, p4tueEA1, 0.8037, 1.77, 0.195, 80, 77, 
+344, p4lskIC1, 0.8037, 1.88, 0.231, 80, 78, 
+345, p1vvjEA1, 0.8037, 1.72, 0.169, 80, 77, 
+346, p4v6gGC1, 0.8036, 1.72, 0.169, 80, 77, 
+347, p4tueIC1, 0.8036, 1.72, 0.169, 80, 77, 
+348, p4tudIC1, 0.8036, 1.72, 0.169, 80, 77, 
+349, p4tudEA1, 0.8036, 1.72, 0.169, 80, 77, 
+350, p4tucEA1, 0.8036, 1.72, 0.169, 80, 77, 
+351, p4tubEA1, 0.8036, 1.72, 0.169, 80, 77, 
+352, p4tuaIC1, 0.8036, 1.72, 0.169, 80, 77, 
+353, p4tuaEA1, 0.8036, 1.72, 0.169, 80, 77, 
+354, p4lt8EA1, 0.8036, 1.72, 0.169, 80, 77, 
+355, p4lskEA1, 0.8036, 1.72, 0.169, 80, 77, 
+356, p4lfzHC1, 0.8036, 1.72, 0.169, 80, 77, 
+357, p4lfzEA1, 0.8036, 1.72, 0.169, 80, 77, 
+358, p4lelHC1, 0.8036, 1.72, 0.169, 80, 77, 
+359, p4lelEA1, 0.8036, 1.72, 0.169, 80, 77, 
+360, p4l71BC1, 0.8036, 1.72, 0.169, 80, 77, 
+361, p4l71BA1, 0.8036, 1.72, 0.169, 80, 77, 
+362, p4l47HC1, 0.8036, 1.72, 0.169, 80, 77, 
+363, p4l47EA1, 0.8036, 1.72, 0.169, 80, 77, 
+364, p1vvjGC1, 0.8036, 1.72, 0.169, 80, 77, 
+365, p4w2fJC1, 0.8031, 1.72, 0.169, 80, 77, 
+366, p1vy4JC1, 0.8031, 1.72, 0.169, 80, 77, 
+367, p4tucIC1, 0.8029, 1.72, 0.169, 80, 77, 
+368, p1vy7JC1, 0.8026, 1.90, 0.231, 80, 78, 
+369, d3bbxG1, 0.8024, 1.89, 0.231, 80, 78, THE HSP15 PROTEIN FITTED INTO THE LOW RESOLUTION CRYO-EM MAP OF THE 50S.NC-TRNA.HSP15 COMPLEX
+370, d2rdoG1, 0.8024, 1.73, 0.169, 80, 77, 50S SUBUNIT WITH EF-G(GDPNP) AND RRF BOUND
+371, d2aw4G1, 0.8024, 1.85, 0.231, 80, 78,  
+372, p6fxcCC1, 0.8019, 1.85, 0.782, 81, 78, The cryo-EM structure of hibernating 100S ribosome dimer from pathogenic Staphylococcus aureus  
+373, p6fxcCA1, 0.8019, 1.85, 0.782, 81, 78, The cryo-EM structure of hibernating 100S ribosome dimer from pathogenic Staphylococcus aureus  
+374, p5ngmCA1, 0.8019, 1.85, 0.782, 81, 78, struct.pdbx_descriptor              
+375, p4v74CA1, 0.8019, 1.59, 0.316, 79, 76, 
+376, p5uq8G1, 0.8015, 1.59, 0.316, 79, 76, 70S ribosome complex with dnaX mRNA stem-loop and E-site tRNA ( out  conformation)
+377, p5e7kGA1, 0.8014, 1.59, 0.316, 79, 76, 
+378, p5v7qG1, 0.8002, 1.85, 1.000, 81, 81, CRYO-EM STRUCTURE OF THE LARGE RIBOSOMAL SUBUNIT FROM MYCOBACTERIUM TUBERCULOSIS BOUND WITH A POTENT LINEZOLID ANALOG
+379, p4wraFA1, 0.7998, 1.69, 0.221, 79, 77, 
+380, p5hcrJB1, 0.7995, 2.01, 0.192, 80, 78, 
+381, p6cfjKB1, 0.7994, 1.73, 0.325, 80, 77, Crystal structure of the Thermus thermophilus 70S ribosome in complex with histidyl-CAM and bound to mRNA and A-; P-; and E-site tRNAs at 2.8A resolution
+382, p5uq7G1, 0.7988, 1.76, 0.156, 80, 77, 70S ribosome complex with dnaX mRNA stemloop and E-site tRNA ( in  conformation)
+383, p5el7GA1, 0.7986, 1.96, 0.231, 80, 78, 
+384, p4y4pKB1, 0.7979, 1.92, 0.231, 80, 78, 
+385, p4v9hCB1, 0.7978, 1.71, 0.221, 79, 77, 
+386, p5doyKB1, 0.7973, 1.74, 0.169, 80, 77, 
+387, d1vs6G1, 0.7970, 1.91, 0.231, 80, 78,  
+388, d2zjrE2, 0.7967, 1.76, 0.211, 78, 76, REFINED NATIVE STRUCTURE OF THE LARGE RIBOSOMAL SUBUNIT (50S) FROM DEINOCOCCUS RADIODURANS
+389, p4v79CA1, 0.7941, 1.92, 0.231, 80, 78, 
+390, d3cf5E2, 0.7935, 1.68, 0.792, 81, 77, THIOPEPTIDE ANTIBIOTIC THIOSTREPTON BOUND TO THE LARGE RIBOSOMAL SUBUNIT OF DEINOCOCCUS RADIODURANS
+391, d2zjpE2, 0.7934, 1.73, 0.250, 78, 76, THIOPEPTIDE ANTIBIOTIC NOSIHEPTIDE BOUND TO THE LARGE RIBOSOMAL SUBUNIT OF DEINOCOCCUS RADIODURANS
+392, p5t7vIA1, 0.7930, 1.80, 1.000, 80, 80, 
+393, p5hd1JB1, 0.7923, 1.72, 0.250, 78, 76, 
+394, p5akaG1, 0.7917, 1.73, 0.250, 78, 76, EM STRUCTURE OF RIBOSOME-SRP-FTSY COMPLEX IN CLOSED STATE
+395, p4v6sH1, 0.7907, 1.92, 0.405, 80, 79, 
+396, d2zjqE2, 0.7899, 1.95, 0.231, 80, 78, INTERACTION OF L7 WITH L11 INDUCED BY MICROCCOCIN BINDING TO THE DEINOCOCCUS RADIODURANS 50S SUBUNIT
+397, p5v93M1, 0.7887, 1.86, 0.779, 80, 77, struct.pdbx_descriptor              Ribosome 
+398, p4u67E1, 0.7858, 1.85, 1.000, 80, 80, CRYSTAL STRUCTURE OF THE LARGE RIBOSOMAL SUBUNIT (50S) OF DEINOCOCCUS RADIODURANS CONTAINING A THREE RESIDUE INSERTION IN L22
+399, p5jvgE1, 0.7843, 1.74, 0.250, 78, 76, THE LARGE RIBOSOMAL SUBUNIT FROM DEINOCOCCUS RADIODURANS IN COMPLEX WITH AVILAMYCIN
+400, p4v6rFA1, 0.7843, 2.00, 0.325, 80, 77, 
+401, p4v6qFA1, 0.7835, 1.73, 0.253, 77, 75, 
+402, d3dllE2, 0.7833, 1.86, 0.237, 77, 76, THE OXAZOLIDINONE ANTIBIOTICS PERTURB THE RIBOSOMAL PEPTIDYL- TRANSFERASE CENTER AND EFFECT TRNA POSITIONING
+403, p3pioE1, 0.7831, 1.95, 1.000, 81, 81, CRYSTAL STRUCTURE OF THE SYNERGISTIC ANTIBIOTIC PAIR LANKAMYCIN AND LANKACIDIN IN COMPLEX WITH THE LARGE RIBOSOMAL SUBUNIT
+404, p4v6kH1, 0.7830, 2.01, 1.000, 81, 81, 
+405, p5dm6E1, 0.7827, 1.84, 0.250, 78, 76, CRYSTAL STRUCTURE OF THE 50S RIBOSOMAL SUBUNIT FROM DEINOCOCCUS RADIODURANS
+406, p4v4qCA1, 0.7826, 1.99, 0.237, 77, 76, 
+407, p3pipE1, 0.7820, 2.17, 1.000, 81, 81, CRYSTAL STRUCTURE OF THE SYNERGISTIC ANTIBIOTIC PAIR LANKAMYCIN AND LANKACIDIN IN COMPLEX WITH THE LARGE RIBOSOMAL SUBUNIT
+408, p6eriG1, 0.7817, 1.69, 0.253, 77, 75, struct.pdbx_descriptor              
+409, p4v5bM1, 0.7815, 1.68, 0.787, 79, 75, 
+410, p5tcuCA1, 0.7811, 1.77, 0.253, 77, 75, 
+411, p4v7iK1, 0.7795, 1.55, 0.253, 78, 75, 
+412, p4v75CA1, 0.7795, 1.80, 0.816, 79, 76, 
+413, d1rl6A1, 0.7794, 2.03, 0.405, 80, 79, RIBOSOMAL PROTEIN L6
+414, p5ot7RA1, 0.7791, 1.86, 0.987, 80, 80, struct.pdbx_descriptor              
+415, p4wfnE1, 0.7789, 2.00, 1.000, 80, 80, CRYSTAL STRUCTURE OF THE LARGE RIBOSOMAL SUBUNIT (50S) OF DEINOCOCCUS RADIODURANS CONTAINING A THREE RESIDUE INSERTION IN L22 IN COMPLEX WITH ERYTHROMYCIN
+416, p4v6aFA1, 0.7787, 1.67, 0.329, 75, 73, 
+417, d1giyH_, 0.7780, 1.98, 0.241, 82, 79,  
+418, p3j8gG1, 0.7772, 1.67, 0.253, 77, 75, ELECTRON CRYO-MICROSCOPY STRUCTURE OF ENGA BOUND WITH THE 50S RIBOSOMAL SUBUNIT
+419, p4v9aEC1, 0.7769, 1.64, 0.162, 76, 74, 
+420, p4v72CA1, 0.7760, 1.67, 0.329, 164, 73, 
+421, p4wq1IC1, 0.7758, 1.69, 0.846, 79, 78, 
+422, d487dJ_, 0.7758, 1.92, 0.156, 80, 77, SEVEN RIBOSOMAL PROTEINS FITTED TO A CRYO-ELECTRON MICROSCOPIC MAP OF THE LARGE 50S SUBUNIT AT 7.5 ANGSTROMS RESOLUTION
+423, d3u5eH_, 0.7758, 1.88, 0.987, 80, 79,  
+424, d1eg0J_, 0.7758, 1.99, 0.156, 80, 77, FITTING OF COMPONENTS WITH KNOWN STRUCTURE INTO AN 11.5 A CRYO-EM MAP OF THE E.COLI 70S RIBOSOME
+425, d1c04B_, 0.7758, 1.68, 0.329, 164, 73, IDENTIFICATION OF KNOWN PROTEIN AND RNA STRUCTURES IN A 5 A MAP OF THE LARGE RIBOSOMAL SUBUNIT FROM HALOARCULA MARISMORTUI
+426, p4v69CB1, 0.7744, 1.89, 0.211, 191, 76, 
+427, p4v4hCA1, 0.7732, 1.89, 0.211, 191, 76, 
+428, p4wr6HC1, 0.7726, 1.68, 0.329, 164, 73, 
+429, p4v71CA1, 0.7715, 1.68, 0.329, 164, 73, 
+430, p4ioaE1, 0.7710, 1.85, 0.975, 81, 80, CRYSTAL STRUCTURE OF COMPOUND 4E BOUND TO LARGE RIBOSOMAL SUBUNIT (50S) FROM DEINOCOCCUS RADIODURANS
+431, p4v87IC1, 0.7708, 1.69, 0.787, 79, 75, 
+432, p4v6fG1, 0.7701, 1.97, 0.156, 80, 77, 
+433, p4v8bIC1, 0.7693, 1.88, 0.975, 80, 79, 
+434, d3j39H_, 0.7693, 1.76, 0.253, 77, 75,  
+435, p6gslOC1, 0.7690, 1.95, 0.158, 79, 76, Structure of T. thermophilus 70S ribosome complex with mRNA; tRNAfMet and cognate tRNAArg in the A-site  
+436, p4v8cKA1, 0.7690, 1.95, 0.169, 80, 77, 
+437, p4v42GA1, 0.7688, 1.97, 0.158, 79, 76, 
+438, p1ml5h1, 0.7688, 1.90, 0.211, 190, 76, STRUCTURE OF THE E. COLI RIBOSOMAL TERMINATION COMPLEX WITH RELEASE FACTOR 2
+439, p5ib7JC1, 0.7671, 1.90, 0.211, 190, 76, 
+440, d4a17E_, 0.7659, 1.98, 0.169, 80, 77,  
+441, p4io9E1, 0.7656, 1.97, 0.158, 79, 76, CRYSTAL STRUCTURE OF COMPOUND 4D BOUND TO LARGE RIBOSOMAL SUBUNIT (50S) FROM DEINOCOCCUS RADIODURANS
+442, p4wraHC1, 0.7651, 1.67, 0.319, 74, 72, 
+443, p4v7kKC1, 0.7649, 1.67, 0.319, 74, 72, 
+444, p4v7kEA1, 0.7649, 1.92, 0.158, 78, 76, 
+445, p4v9bGC1, 0.7646, 2.04, 0.184, 186, 76, 
+446, p4v8dIC1, 0.7645, 2.04, 0.184, 186, 76, 
+447, p6c5lXC1, 0.7624, 1.78, 0.253, 77, 75, Conformation of methylated GGQ in the Peptidyl Transferase Center during translation termination (T. thermophilus)  
+448, p4v8nQA1, 0.7613, 1.99, 0.145, 79, 76, 
+449, p4v8nWC1, 0.7611, 1.73, 0.205, 75, 73, 
+450, p4iocE1, 0.7605, 1.73, 0.205, 75, 73, CRYSTAL STRUCTURE OF COMPOUND 4F BOUND TO LARGE RIBOSOMAL SUBUNIT (50S) FROM DEINOCOCCUS RADIODURANS
+451, p4csuG1, 0.7598, 2.04, 0.158, 79, 76, CRYO-EM STRUCTURES OF THE 50S RIBOSOME SUBUNIT BOUND WITH OBGE
+452, p4v77CA1, 0.7596, 2.10, 0.169, 80, 77, 
+453, p4v8eJB1, 0.7594, 1.76, 0.178, 75, 73, 
+454, p5nd8CA1, 0.7591, 1.75, 0.205, 75, 73, 
+455, p4v5kWC1, 0.7585, 1.76, 0.205, 75, 73, 
+456, p4v5kQA1, 0.7585, 1.81, 0.253, 77, 75, 
+457, p5li0AA1, 0.7584, 1.85, 0.987, 78, 78, 
+458, p4wu1HC1, 0.7583, 2.03, 1.000, 80, 80, 
+459, p4v8fIC1, 0.7582, 2.10, 0.156, 80, 77, 
+460, p4v8xRA1, 0.7579, 1.67, 0.292, 74, 72, 
+461, p4v7jKC1, 0.7578, 1.75, 0.178, 75, 73, 
+462, p4v7jEA1, 0.7578, 1.75, 0.178, 75, 73, 
+463, p4v6yCA1, 0.7576, 1.68, 0.292, 74, 72, 
+464, p4v8xYC1, 0.7574, 1.95, 0.160, 79, 75, 
+465, p4wzdIC1, 0.7570, 2.10, 0.156, 80, 77, 
+466, p4wt1IC1, 0.7568, 1.78, 0.205, 75, 73, 
+467, p5ib8IC1, 0.7563, 1.80, 0.205, 75, 73, 
+468, p5nd9CA1, 0.7555, 1.80, 0.205, 75, 73, 
+469, p4u4uTA1, 0.7551, 2.08, 1.000, 80, 80, 
+470, p5ndvKC1, 0.7549, 1.78, 0.219, 75, 73, struct.pdbx_descriptor              
+471, p5ndgTA1, 0.7549, 1.96, 0.160, 79, 75, struct.pdbx_descriptor              
+472, p6elzDA1, 0.7546, 2.02, 0.145, 80, 76, State E (TAP-Flag-Ytm1 E80A) - Visualizing the assembly pathway of nucleolar pre-60S ribosmes  
+473, p5jvhE1, 0.7545, 2.01, 0.158, 78, 76, THE CRYSTAL STRUCTURE LARGE RIBOSOMAL SUBUNIT (50S) OF DEINOCOCCUS RADIODURANS IN COMPLEX WITH EVERNIMICIN
+474, p5dgeTA1, 0.7545, 1.85, 0.288, 74, 73, 
+475, p6gc6G1, 0.7544, 1.90, 0.203, 83, 74, 50S RIBOSOMAL SUBUNIT ASSEMBLY INTERMEDIATE STATE 2 
+476, p4u4rUD1, 0.7544, 1.92, 0.203, 83, 74, 
+477, p5tbwDB1, 0.7543, 1.94, 0.203, 83, 74, struct.pdbx_descriptor              ? 
+478, p4v6zCA1, 0.7543, 1.88, 0.203, 83, 74, 
+479, p5dgfTA1, 0.7541, 1.94, 0.240, 77, 75, 
+480, p4u52TA1, 0.7539, 1.89, 0.203, 83, 74, 
+481, p4u4zTA1, 0.7538, 2.04, 0.899, 80, 79, 
+482, p5ndwPB1, 0.7536, 1.92, 0.203, 83, 74, struct.pdbx_descriptor              
+483, p4u3mUD1, 0.7536, 1.91, 0.203, 83, 74, 
+484, p4u4qUD1, 0.7534, 2.00, 1.000, 80, 80, 
+485, p4u4nUD1, 0.7534, 1.89, 0.216, 83, 74, 
+486, p5fcjTA1, 0.7533, 1.90, 0.203, 83, 74, 
+487, p4u3uTA1, 0.7533, 1.90, 0.203, 83, 74, 
+488, p5obmK1, 0.7532, 1.91, 0.203, 83, 74, struct.pdbx_descriptor              
+489, p5datTA1, 0.7531, 1.93, 0.203, 83, 74, 
+490, p5tgaTA1, 0.7530, 1.93, 0.203, 83, 74, 
+491, p4v88TA1, 0.7530, 1.93, 0.203, 83, 74, 
+492, p4v7fI1, 0.7530, 1.90, 0.203, 83, 74, 
+493, p3j16F1, 0.7530, 1.91, 0.203, 83, 74, MODELS OF RIBOSOME-BOUND DOM34P AND RLI1P AND THEIR RIBOSOMAL BINDING PARTNERS
+494, p5ndvK1, 0.7528, 1.92, 0.203, 83, 74, struct.pdbx_descriptor              
+495, p4u4qTA1, 0.7528, 1.91, 0.203, 83, 74, 
+496, p5lybTA1, 0.7527, 1.91, 0.203, 83, 74, 
+497, p5on6K1, 0.7526, 1.91, 0.203, 83, 74, struct.pdbx_descriptor              
+498, p4u52UD1, 0.7525, 1.91, 0.203, 83, 74, 
+499, p4u4rTA1, 0.7524, 1.91, 0.203, 83, 74, 
+500, p5ndwOB1, 0.7523, 1.91, 0.203, 83, 74, struct.pdbx_descriptor              
+501, p4u56UD1, 0.7523, 1.92, 0.203, 83, 74, 
+502, p4u50TA1, 0.7522, 1.91, 0.203, 83, 74, 
+503, p4u55TA1, 0.7519, 1.91, 0.203, 83, 74, 
+504, p4u3uUD1, 0.7519, 1.93, 0.203, 83, 74, 
+505, p4u3mTA1, 0.7519, 1.90, 0.203, 83, 74, 
+506, p4v8zPA1, 0.7518, 1.92, 0.203, 83, 74, 
+507, p4v8yPA1, 0.7518, 1.94, 0.203, 83, 74, 
+508, p4v8tH1, 0.7518, 1.93, 0.203, 83, 74, 
+509, p4v88UD1, 0.7518, 1.92, 0.203, 83, 74, 
+510, p6em1W1, 0.7517, 1.93, 0.203, 83, 74, State C (Nsa1-TAP Flag-Ytm1) - Visualizing the assembly pathway of nucleolar pre-60S ribosomes  
+511, p5i4lTA1, 0.7517, 1.91, 0.203, 83, 74, 
+512, p5dgeUD1, 0.7517, 1.94, 0.203, 83, 74, 
+513, p5obmLC1, 0.7516, 1.94, 0.203, 83, 74, struct.pdbx_descriptor              
+514, p5ndgUD1, 0.7514, 1.94, 0.203, 83, 74, struct.pdbx_descriptor              
+515, p5datUD1, 0.7514, 1.94, 0.203, 83, 74, 
+516, p4u4uUD1, 0.7514, 1.95, 0.203, 83, 74, 
+517, p4wqrIC1, 0.7512, 1.92, 0.203, 83, 74, 
+518, p5mlcH1, 0.7511, 1.93, 0.203, 83, 74, CRYO-EM STRUCTURE OF THE SPINACH CHLOROPLAST RIBOSOME REVEALS THE LOCATION OF PLASTID-SPECIFIC RIBOSOMAL PROTEINS AND EXTENSIONS
+519, p4v6wBC1, 0.7510, 1.95, 0.203, 83, 74, 
+520, p5tbwK1, 0.7508, 1.93, 0.216, 83, 74, struct.pdbx_descriptor              ? 
+521, p4u3nUD1, 0.7508, 1.95, 0.203, 83, 74, 
+522, p5fcjUD1, 0.7507, 1.94, 0.203, 83, 74, 
+523, p4u53TA1, 0.7507, 2.02, 0.160, 79, 75, 
+524, p4u50UD1, 0.7507, 1.86, 0.286, 81, 77, 
+525, p5lybUD1, 0.7506, 1.90, 0.203, 83, 74, 
+526, p5jupM1, 0.7506, 1.92, 0.203, 83, 74, 
+527, p5dc3TA1, 0.7506, 1.95, 0.203, 83, 74, 
+528, p5dgvTA1, 0.7505, 1.93, 0.203, 83, 74, 
+529, p4u4yUD1, 0.7505, 1.93, 0.203, 83, 74, 
+530, p4u3nTA1, 0.7505, 1.94, 0.203, 83, 74, 
+531, p5meiK1, 0.7504, 1.95, 0.203, 83, 74, 
+532, p4u53UD1, 0.7504, 1.87, 0.203, 83, 74, 
+533, p5i4lUD1, 0.7503, 1.92, 0.216, 83, 74, 
+534, p4u6fTA1, 0.7503, 1.94, 0.203, 83, 74, 
+535, p5tgaUD1, 0.7501, 1.95, 0.203, 83, 74, 
+536, p4u4zUD1, 0.7501, 1.91, 0.203, 83, 74, 
+537, p5on6EB1, 0.7500, 1.91, 0.216, 83, 74, struct.pdbx_descriptor              
+538, p4v7aBA1, 0.7500, 1.97, 0.203, 83, 74, 
+539, p4u51TA1, 0.7500, 1.96, 0.203, 83, 74, 
+540, p5meiEB1, 0.7498, 1.92, 0.203, 83, 74, 
+541, p5dgvUD1, 0.7496, 1.95, 0.203, 83, 74, 
+542, p4u51UD1, 0.7496, 1.95, 0.203, 83, 74, 
+543, p5an9B1, 0.7495, 1.93, 0.203, 83, 74, MECHANISM OF EIF6 RELEASE FROM THE NASCENT 60S RIBOSOMAL SUBUNIT
+544, p4u4nTA1, 0.7494, 1.96, 0.949, 80, 79, 
+545, p4u55UD1, 0.7493, 1.93, 0.203, 83, 74, 
+546, p5anbB1, 0.7491, 1.93, 0.203, 83, 74, MECHANISM OF EIF6 RELEASE FROM THE NASCENT 60S RIBOSOMAL SUBUNIT
+547, p4u56TA1, 0.7490, 1.96, 0.203, 83, 74, 
+548, p3jctH1, 0.7485, 1.95, 0.203, 83, 74, 
+549, p4u6fUD1, 0.7482, 1.99, 0.216, 83, 74, 
+550, p4v6xBC1, 0.7480, 1.99, 0.216, 83, 74, 
+551, p5h4pK1, 0.7479, 1.94, 0.203, 83, 74, 
+552, p5fciUD1, 0.7479, 1.95, 0.203, 83, 74, 
+553, p5gakCA1, 0.7477, 2.16, 0.227, 83, 75, 
+554, p4u4yTA1, 0.7475, 1.94, 0.216, 83, 74, 
+555, p5it7K1, 0.7474, 1.97, 0.216, 83, 74, 
+556, p5dc3UD1, 0.7473, 1.97, 0.203, 83, 74, 
+557, p5fciTA1, 0.7471, 1.93, 0.230, 85, 74, 
+558, p4v7mHA1, 0.7470, 1.95, 0.203, 83, 74, 
+559, d2b9pH1, 0.7468, 1.96, 0.203, 83, 74,  
+560, p5dgfUD1, 0.7467, 1.91, 0.216, 83, 74, 
+561, p5t2aWA1, 0.7464, 1.94, 0.203, 83, 74, 
+562, d2b9nH1, 0.7464, 1.91, 0.203, 83, 74,  
+563, d2b66H1, 0.7464, 1.96, 0.216, 83, 74,  
+564, d1yl3H1, 0.7462, 1.93, 0.203, 83, 74,  
+565, p5tgmUD1, 0.7460, 1.73, 0.181, 74, 72, 
+566, p5mc6SA1, 0.7459, 2.14, 0.387, 75, 75, 
+567, p4u4oUD1, 0.7459, 1.96, 0.203, 83, 74, 
+568, p5z3gL1, 0.7455, 1.98, 0.230, 83, 74, CRYO-EM STRUCTURE OF A NUCLEOLAR PRE-60S RIBOSOME (RPF1-TAP) 
+569, p3jagH1, 0.7451, 2.14, 0.387, 75, 75, 
+570, p5tgmTA1, 0.7449, 2.14, 0.387, 75, 75, 
+571, p4u4oTA1, 0.7445, 2.16, 0.387, 75, 75, 
+572, p5ancB1, 0.7444, 1.98, 0.203, 83, 74, MECHANISM OF EIF6 RELEASE FROM THE NASCENT 60S RIBOSOMAL SUBUNIT
+573, p4v61DA1, 0.7444, 2.21, 0.213, 83, 75, 
+574, p5imqHA1, 0.7442, 1.99, 0.203, 83, 74, 
+575, p4v8pUC1, 0.7441, 1.81, 0.205, 83, 73, 
+576, p4v8pAB1, 0.7439, 1.99, 0.230, 85, 74, 
+577, p3j7rK1, 0.7439, 1.94, 0.203, 83, 74, 
+578, p3j7qK1, 0.7439, 1.97, 0.203, 83, 74, 
+579, p3j7pK1, 0.7439, 2.27, 0.213, 83, 75, 
+580, p3j7oK1, 0.7439, 2.20, 0.247, 83, 77, 
+581, p4v8pOE1, 0.7438, 2.01, 0.197, 78, 76, 
+582, p5dm7E1, 0.7437, 2.06, 0.162, 83, 74, CRYSTAL STRUCTURE OF THE 50S RIBOSOMAL SUBUNIT FROM DEINOCOCCUS RADIODURANS IN COMPLEX WITH HYGROMYCIN A
+583, p4v8pZ1, 0.7437, 2.06, 0.162, 83, 74, 
+584, p5aj0J1, 0.7434, 1.95, 0.230, 85, 74, 
+585, p3janD1, 0.7425, 1.95, 0.230, 85, 74, 
+586, p3jajD1, 0.7425, 1.95, 0.230, 85, 74, 
+587, p5myjKA1, 0.7424, 1.95, 0.230, 85, 74, struct.pdbx_descriptor              
+588, p5apnK1, 0.7421, 2.06, 0.162, 83, 74, 
+589, p6az3E1, 0.7419, 1.90, 0.316, 77, 76, struct.pdbx_descriptor              
+590, p4v91K1, 0.7418, 2.06, 0.162, 83, 74, 
+591, d1yijE1, 0.7416, 1.70, 0.233, 85, 73, CRYSTAL STRUCTURE OF TELITHROMYCIN BOUND TO THE G2099A MUTANT 50S RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+592, d1q81G1, 0.7416, 1.96, 0.230, 85, 74, CRYSTAL STRUCTURE OF MINIHELIX WITH 3  PUROMYCIN BOUND TO A- SITE OF THE 50S RIBOSOMAL SUBUNIT.
+593, p6ft6I1, 0.7415, 1.96, 0.230, 85, 74, struct.pdbx_descriptor              
+594, d2zkre1, 0.7415, 2.32, 0.385, 80, 78,  
+595, p5lzwH1, 0.7414, 1.97, 0.203, 83, 74, 
+596, d1m90G1, 0.7414, 1.78, 0.233, 83, 73, CO-CRYSTAL STRUCTURE OF CCA-PHE-CAPROIC ACID-BIOTIN AND SPARSOMYCIN BOUND TO THE 50S RIBOSOMAL SUBUNIT
+597, p5ibbJC1, 0.7413, 1.91, 0.216, 83, 74, 
+598, p6ftjH1, 0.7409, 2.30, 0.237, 79, 76, Cryo-EM Structure of the Mammalian Oligosaccharyltransferase Bound to Sec61 and the Non-programmed 80S Ribosome  
+599, p6ftiH1, 0.7409, 2.32, 0.237, 79, 76, Cryo-EM Structure of the Mammalian Oligosaccharyltransferase Bound to Sec61 and the Programmed 80S Ribosome  
+600, p6ftgH1, 0.7409, 1.97, 0.216, 83, 74, Subtomogram average of OST-containing ribosome-translocon complexes from canine rough microsomal membranes  
+601, p3jahH1, 0.7409, 1.77, 0.250, 175, 72, 
+602, d1q86G1, 0.7409, 1.99, 0.230, 85, 74, CRYSTAL STRUCTURE OF CCA-PHE-CAP-BIOTIN BOUND SIMULTANEOUSLY AT HALF OCCUPANCY TO BOTH THE A-SITE AND P-SITE OF THE THE 50S RIBOSOMAL SUBUNIT.
+603, d1kc8G1, 0.7409, 2.32, 0.237, 79, 76, CO-CRYSTAL STRUCTURE OF BLASTICIDIN S BOUND TO THE 50S RIBOSOMAL SUBUNIT
+604, p6frkP1, 0.7408, 1.89, 0.164, 75, 73, struct.pdbx_descriptor              
+605, p5lzzH1, 0.7408, 2.03, 0.230, 85, 74, 
+606, p5apoK1, 0.7408, 2.03, 0.230, 85, 74, 
+607, d1njiG1, 0.7408, 2.03, 0.230, 85, 74, STRUCTURE OF CHLORAMPHENICOL BOUND TO THE 50S RIBOSOMAL SUBUNIT
+608, d1kd1G1, 0.7408, 2.03, 0.230, 85, 74, CO-CRYSTAL STRUCTURE OF SPIRAMYCIN BOUND TO THE 50S RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+609, d1k9mG1, 0.7408, 2.32, 0.237, 79, 76, CO-CRYSTAL STRUCTURE OF TYLOSIN BOUND TO THE 50S RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+610, d1qvfE1, 0.7407, 2.33, 0.237, 79, 76, STRUCTURE OF A DEACYLATED TRNA MINIHELIX BOUND TO THE E SITE OF THE LARGE RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+611, d1k8aG1, 0.7407, 1.97, 0.230, 85, 74, CO-CRYSTAL STRUCTURE OF CARBOMYCIN A BOUND TO THE 50S RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+612, d1jj2E1, 0.7407, 2.01, 0.230, 85, 74, FULLY REFINED CRYSTAL STRUCTURE OF THE HALOARCULA MARISMORTUI LARGE RIBOSOMAL SUBUNIT AT 2.4 ANGSTROM RESOLUTION
+613, d1m1kG1, 0.7406, 2.01, 0.203, 83, 74, CO-CRYSTAL STRUCTURE OF AZITHROMYCIN BOUND TO THE 50S RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+614, d1q82G1, 0.7405, 2.32, 0.237, 79, 76, CRYSTAL STRUCTURE OF CC-PUROMYCIN BOUND TO THE A-SITE OF THE 50S RIBOSOMAL SUBUNIT
+615, d1k73G1, 0.7404, 2.32, 0.237, 79, 76, CO-CRYSTAL STRUCTURE OF ANISOMYCIN BOUND TO THE 50S RIBOSOMAL SUBUNIT
+616, p5t62L1, 0.7403, 2.32, 0.237, 79, 76, 
+617, d2otjE1, 0.7403, 2.32, 0.237, 79, 76, 13-DEOXYTEDANOLIDE BOUND TO THE LARGE SUBUNIT OF HALOARCULA MARISMORTUI
+618, d1kqsE1, 0.7403, 2.33, 0.237, 79, 76, THE HALOARCULA MARISMORTUI 50S COMPLEXED WITH A PRETRANSLOCATIONAL INTERMEDIATE IN PROTEIN SYNTHESIS
+619, p3j79H1, 0.7402, 2.33, 0.237, 79, 76, 
+620, p6c5lQA1, 0.7401, 2.33, 0.237, 79, 76, Conformation of methylated GGQ in the Peptidyl Transferase Center during translation termination (T. thermophilus)  
+621, p5lzxH1, 0.7401, 2.33, 0.237, 79, 76, 
+622, d1n8rG1, 0.7401, 2.33, 0.237, 79, 76, STRUCTURE OF LARGE RIBOSOMAL SUBUNIT IN COMPLEX WITH VIRGINIAMYCIN M
+623, d1s72E1, 0.7399, 2.00, 0.216, 83, 74, REFINED CRYSTAL STRUCTURE OF THE HALOARCULA MARISMORTUI LARGE RIBOSOMAL SUBUNIT AT 2.4 ANGSTROM RESOLUTION
+624, d1yi2E1, 0.7397, 2.32, 0.237, 79, 76, CRYSTAL STRUCTURE OF ERYTHROMYCIN BOUND TO THE G2099A MUTANT 50S RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+625, d1ffk11, 0.7396, 2.33, 0.237, 79, 76, CRYSTAL STRUCTURE OF THE LARGE RIBOSOMAL SUBUNIT FROM HALOARCULA MARISMORTUI AT 2.4 ANGSTROM RESOLUTION
+626, d1yj9E1, 0.7395, 1.80, 0.260, 83, 73, CRYSTAL STRUCTURE OF THE MUTANT 50S RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI CONTAINING A THREE RESIDUE DELETION IN L22
+627, d1q7yG1, 0.7395, 1.87, 0.178, 75, 73, CRYSTAL STRUCTURE OF CCDAP-PUROMYCIN BOUND AT THE PEPTIDYL TRANSFERASE CENTER OF THE 50S RIBOSOMAL SUBUNIT
+628, d1vq8E1, 0.7394, 2.01, 0.230, 85, 74, THE STRUCTURE OF CCDA-PHE-CAP-BIO AND THE ANTIBIOTIC SPARSOMYCIN BOUND TO THE LARGE RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+629, d1vqlE1, 0.7393, 2.33, 0.237, 79, 76, THE STRUCTURE OF THE TRANSITION STATE ANALOGUE DCSN BOUND TO THE LARGE RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+630, d1vq4E1, 0.7390, 2.32, 0.237, 79, 76, THE STRUCTURE OF THE TRANSITION STATE ANALOGUE DAA BOUND TO THE LARGE RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+631, p3jboVB1, 0.7389, 2.32, 0.237, 79, 76, 
+632, p5lztH1, 0.7388, 2.31, 0.237, 79, 76, 
+633, p5lzyH1, 0.7386, 2.32, 0.237, 79, 76, 
+634, p6ek0K1, 0.7385, 2.33, 0.237, 79, 76, struct.pdbx_descriptor              
+635, d1qvgE1, 0.7383, 2.31, 0.237, 79, 76, STRUCTURE OF CCA OLIGONUCLEOTIDE BOUND TO THE TRNA BINDING SITES OF THE LARGE RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+636, d1yjnE1, 0.7382, 2.31, 0.237, 79, 76, CRYSTAL STRUCTURE OF CLINDAMYCIN BOUND TO THE G2099A MUTANT 50S RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+637, d1w2bE_, 0.7382, 2.32, 0.237, 79, 76, TRIGGER FACTOR RIBOSOME BINDING DOMAIN IN COMPLEX WITH 50S
+638, p5lzsH1, 0.7380, 1.83, 0.219, 83, 73, 
+639, d1vqkE1, 0.7379, 1.99, 0.230, 85, 74, THE STRUCTURE OF CCDA-PHE-CAP-BIO BOUND TO THE A SITE OF THE RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+640, d1nkwE_, 0.7379, 1.82, 0.233, 85, 73, CRYSTAL STRUCTURE OF THE LARGE RIBOSOMAL SUBUNIT FROM DEINOCOCCUS RADIODURANS
+641, p3jaiH1, 0.7378, 1.98, 0.230, 85, 74, 
+642, d1vqoE1, 0.7377, 2.33, 0.237, 79, 76, THE STRUCTURE OF CCPMN BOUND TO THE LARGE RIBOSOMAL SUBUNIT HALOARCULA MARISMORTUI
+643, d1vq9E1, 0.7377, 2.34, 0.237, 79, 76, THE STRUCTURE OF CCA-PHE-CAP-BIO AND THE ANTIBIOTIC SPARSOMYCIN BOUND TO THE LARGE RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+644, d1yjwE1, 0.7376, 2.32, 0.237, 172, 76, CRYSTAL STRUCTURE OF QUINUPRISTIN BOUND TO THE G2099A MUTANT 50S RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+645, d1vqmE1, 0.7374, 2.32, 0.237, 172, 76, THE STRUCTURE OF THE TRANSITION STATE ANALOGUE DAN BOUND TO THE LARGE RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+646, d1sm1E_, 0.7374, 2.02, 0.230, 85, 74, COMPLEX OF THE LARGE RIBOSOMAL SUBUNIT FROM DEINOCOCCUS RADIODURANS WITH QUINUPRISTIN AND DALFOPRISTIN
+647, p5lzuH1, 0.7373, 2.31, 0.237, 79, 76, 
+648, d1vqnE1, 0.7373, 2.04, 0.263, 177, 76, THE STRUCTURE OF CC-HPMN AND CCA-PHE-CAP-BIO BOUND TO THE LARGE RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+649, d1vqpE1, 0.7372, 2.04, 0.263, 177, 76, THE STRUCTURE OF THE TRANSITION STATE ANALOGUE RAP BOUND TO THE LARGE RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+650, d1vq5E1, 0.7369, 2.03, 0.230, 85, 74, THE STRUCTURE OF THE TRANSITION STATE ANALOGUE RAA BOUND TO THE LARGE RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+651, d1yhqE1, 0.7367, 2.31, 0.237, 79, 76, CRYSTAL STRUCTURE OF AZITHROMYCIN BOUND TO THE G2099A MUTANT 50S RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+652, d2otlE1, 0.7366, 2.32, 0.237, 79, 76, GIRODAZOLE BOUND TO THE LARGE SUBUNIT OF HALOARCULA MARISMORTUI
+653, p3j92H1, 0.7365, 2.34, 0.237, 79, 76, 
+654, d1vq6E1, 0.7364, 2.31, 0.237, 79, 76, THE STRUCTURE OF C-HPMN AND CCA-PHE-CAP-BIO BOUND TO THE LARGE RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+655, d1yitE1, 0.7363, 2.08, 0.263, 177, 76, CRYSTAL STRUCTURE OF VIRGINIAMYCIN M AND S BOUND TO THE 50S RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+656, d1pnyE_, 0.7362, 2.03, 0.230, 85, 74,  
+657, d1pnuE_, 0.7362, 2.32, 0.237, 79, 76,  
+658, p4v4wGA1, 0.7359, 2.32, 0.237, 79, 76, 
+659, p5m1jAB1, 0.7358, 2.33, 0.237, 79, 76, 
+660, p4v9fG1, 0.7358, 2.33, 0.237, 79, 76, 
+661, d1vq7E1, 0.7358, 2.33, 0.237, 79, 76, THE STRUCTURE OF THE TRANSITION STATE ANALOGUE DCA BOUND TO THE LARGE RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+662, p4v4tEA1, 0.7357, 2.03, 0.230, 85, 74, 
+663, p4v4sFA1, 0.7357, 2.33, 0.237, 79, 76, 
+664, p4v4rFA1, 0.7357, 2.32, 0.237, 79, 76, 
+665, p4v7rNA1, 0.7352, 2.08, 0.250, 177, 76, 
+666, p4v4vGA1, 0.7351, 2.08, 0.250, 177, 76, 
+667, p5umdH1, 0.7350, 2.18, 0.800, 77, 75, 
+668, p5j4dMB1, 0.7349, 1.91, 0.203, 83, 74, 
+669, p4v4pH1, 0.7349, 2.29, 0.227, 78, 75, 
+670, p5jusM1, 0.7340, 2.34, 0.237, 79, 76, 
+671, p4v47G1, 0.7339, 2.15, 0.378, 74, 74, 
+672, d1p85E_, 0.7339, 2.15, 0.378, 74, 74,  
+673, p4v7rGD1, 0.7338, 2.15, 0.378, 74, 74, 
+674, p5t6rK1, 0.7336, 2.25, 0.213, 83, 75, 
+675, p4v48H1, 0.7336, 2.19, 0.800, 77, 75, 
+676, d1p86E_, 0.7336, 2.05, 0.257, 83, 74,  
+677, p4v65BB1, 0.7330, 1.78, 0.200, 72, 70, 
+678, p5lzvH1, 0.7328, 2.17, 0.378, 74, 74, 
+679, p3ccqE1, 0.7326, 1.94, 0.203, 83, 74, STRUCTURE OF ANISOMYCIN RESISTANT 50S RIBOSOMAL SUBUNIT: 23S RRNA MUTATION A2488U
+680, p3cxcE1, 0.7323, 2.21, 0.800, 77, 75, THE STRUCTURE OF AN ENHANCED OXAZOLIDINONE INHIBITOR BOUND TO THE 50S RIBOSOMAL SUBUNIT OF H. MARISMORTUI
+681, p3cd6E1, 0.7321, 2.21, 0.800, 167, 75, CO-CYSTAL OF LARGE RIBOSOMAL SUBUNIT MUTANT G2616A WITH CC-PUROMYCIN
+682, p3ccsE1, 0.7320, 2.21, 0.800, 167, 75, STRUCTURE OF ANISOMYCIN RESISTANT 50S RIBOSOMAL SUBUNIT: 23S RRNA MUTATION G2482A
+683, p4v7lHA1, 0.7319, 2.26, 0.213, 83, 75, 
+684, p3i56E1, 0.7319, 2.01, 0.216, 83, 74, CO-CRYSTAL STRUCTURE OF TRIACETYLOLEANDOMCYIN BOUND TO THE LARGE RIBOSOMAL SUBUNIT
+685, p5jutM1, 0.7317, 2.21, 0.800, 78, 75, 
+686, d1xbpE2, 0.7317, 2.21, 0.800, 167, 75, INHIBITION OF PEPTIDE BOND FORMATION BY PLEUROMUTILINS: THE STRUCTURE OF THE 50S RIBOSOMAL SUBUNIT FROM DEINOCOCCUS RADIODURANS IN COMPLEX WITH TIAMULIN
+687, p3jbpVB1, 0.7316, 2.20, 0.859, 80, 78, 
+688, p5t2cFA1, 0.7315, 2.02, 0.230, 85, 74, 
+689, p4v4zFA1, 0.7313, 2.30, 0.227, 78, 75, 
+690, p3ow2E1, 0.7312, 2.31, 0.227, 78, 75, CRYSTAL STRUCTURE OF ENHANCED MACROLIDE BOUND TO 50S RIBOSOMAL SUBUNIT
+691, p4v5zEB1, 0.7309, 2.32, 0.227, 78, 75, 
+692, p3ccrE1, 0.7307, 2.31, 0.227, 78, 75, STRUCTURE OF ANISOMYCIN RESISTANT 50S RIBOSOMAL SUBUNIT: 23S RRNA MUTATION A2488C. DENSITY FOR ANISOMYCIN IS VISIBLE BUT NOT INCLUDED IN THE MODEL.
+693, p3j3wG1, 0.7302, 1.73, 0.169, 73, 71, ATOMIC MODEL OF THE IMMATURE 50S SUBUNIT FROM BACILLUS SUBTILIS (STATE II-A)
+694, p3cclE1, 0.7300, 2.32, 0.227, 78, 75, STRUCTURE OF ANISOMYCIN RESISTANT 50S RIBOSOMAL SUBUNIT: 23S RRNA MUTATION U2535C. DENSITY FOR ANISOMYCIN IS VISIBLE BUT NOT INCLUDED IN MODEL.
+695, p2qa4E1, 0.7300, 1.94, 0.216, 83, 74, A MORE COMPLETE STRUCTURE OF THE THE L7/L12 STALK OF THE HALOARCULA MARISMORTUI 50S LARGE RIBOSOMAL SUBUNIT
+696, p5ndjRC1, 0.7299, 2.09, 0.263, 78, 76, Crystal structure of aminoglycoside TC007 in complex with 70S ribosome from Thermus thermophilus; three tRNAs and mRNA (soaking)  
+697, p3cpwE1, 0.7298, 1.88, 0.260, 83, 73, THE STRUCTURE OF THE ANTIBIOTIC LINEZOLID BOUND TO THE LARGE RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+698, p3ccuE1, 0.7298, 2.02, 0.230, 85, 74, STRUCTURE OF ANISOMYCIN RESISTANT 50S RIBOSOMAL SUBUNIT: 23S RRNA MUTATION G2482C
+699, p3cc4E1, 0.7298, 2.17, 0.197, 78, 76, CO-CRYSTAL STRUCTURE OF ANISOMYCIN BOUND TO THE 50S RIBOSOMAL SUBUNIT
+700, p3i55E1, 0.7296, 2.29, 0.227, 78, 75, CO-CRYSTAL STRUCTURE OF MYCALAMIDE A BOUND TO THE LARGE RIBOSOMAL SUBUNIT
+701, p3ja1TA1, 0.7291, 1.78, 0.239, 77, 71, 
+702, p2qexE1, 0.7291, 2.33, 0.227, 78, 75, NEGAMYCIN BINDS TO THE WALL OF THE NASCENT CHAIN EXIT TUNNEL OF THE 50S RIBOSOMAL SUBUNIT
+703, p3j3vG1, 0.7290, 1.97, 0.310, 74, 71, ATOMIC MODEL OF THE IMMATURE 50S SUBUNIT FROM BACILLUS SUBTILIS (STATE I-A)
+704, p3ccjE1, 0.7290, 2.33, 0.227, 78, 75, STRUCTURE OF ANISOMYCIN RESISTANT 50S RIBOSOMAL SUBUNIT: 23S RRNA MUTATION C2534U
+705, p3ccmE1, 0.7289, 2.32, 0.227, 78, 75, STRUCTURE OF ANISOMYCIN RESISTANT 50S RIBOSOMAL SUBUNIT: 23S RRNA MUTATION G2611U
+706, p3cc7E1, 0.7287, 2.15, 0.158, 79, 76, STRUCTURE OF ANISOMYCIN RESISTANT 50S RIBOSOMAL SUBUNIT: 23S RRNA MUTATION C2487U
+707, d1nwyE_, 0.7286, 2.33, 0.227, 78, 75, COMPLEX OF THE LARGE RIBOSOMAL SUBUNIT FROM DEINOCOCCUS RADIODURANS WITH AZITHROMYCIN
+708, d1nwxE_, 0.7286, 2.33, 0.227, 78, 75, COMPLEX OF THE LARGE RIBOSOMAL SUBUNIT FROM DEINOCOCCUS RADIODURANS WITH ABT-773
+709, p3cceE1, 0.7285, 2.33, 0.227, 78, 75, STRUCTURE OF ANISOMYCIN RESISTANT 50S RIBOSOMAL SUBUNIT: 23S RRNA MUTATION U2535A
+710, p3g71E1, 0.7280, 2.33, 0.227, 78, 75, CO-CRYSTAL STRUCTURE OF BRUCEANTIN BOUND TO THE LARGE RIBOSOMAL SUBUNIT
+711, p3g6eE1, 0.7279, 1.99, 0.712, 80, 73, CO-CRYSTAL STRUCTURE OF HOMOHARRINGTONINE BOUND TO THE LARGE RIBOSOMAL SUBUNIT
+712, p4v66BB1, 0.7277, 2.34, 0.227, 78, 75, 
+713, p4adxE1, 0.7277, 1.83, 0.296, 74, 71, THE CRYO-EM STRUCTURE OF THE ARCHAEAL 50S RIBOSOMAL SUBUNIT IN COMPLEX WITH INITIATION FACTOR 6
+714, p3cc2E1, 0.7277, 2.32, 0.227, 78, 75, THE REFINED CRYSTAL STRUCTURE OF THE HALOARCULA MARISMORTUI LARGE RIBOSOMAL SUBUNIT AT 2.4 ANGSTROM RESOLUTION WITH RRNA SEQUENCE FOR THE 23S RRNA AND GENOME-DERIVED SEQUENCES FOR R-PROTEINS
+715, p4v4aAA1, 0.7272, 2.32, 0.227, 78, 75, 
+716, p4v49DA1, 0.7272, 2.33, 0.227, 78, 75, 
+717, p3cmeE1, 0.7270, 2.06, 0.263, 177, 76, THE STRUCTURE OF CA AND CCA-PHE-CAP-BIO BOUND TO THE LARGE RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+718, p3ccvE1, 0.7269, 2.06, 0.263, 177, 76, STRUCTURE OF ANISOMYCIN RESISTANT 50S RIBOSOMAL SUBUNIT: 23S RRNA MUTATION G2616A
+719, p4wzoHC1, 0.7266, 2.37, 0.227, 78, 75, 
+720, p3g4sE1, 0.7266, 2.33, 0.227, 78, 75, CO-CRYSTAL STRUCTURE OF TIAMULIN BOUND TO THE LARGE RIBOSOMAL SUBUNIT
+721, p5lksK1, 0.7265, 2.34, 0.227, 78, 75, 
+722, p3j77I1, 0.7257, 2.22, 0.859, 80, 78, 
+723, p3j6xL1, 0.7251, 2.33, 0.227, 78, 75, 
+724, d3d5dH1, 0.7250, 2.33, 0.227, 78, 75,  
+725, d3d5bH1, 0.7250, 2.07, 0.253, 77, 75,  
+726, p3cmaE1, 0.7248, 2.07, 0.253, 77, 75, THE STRUCTURE OF CCA AND CCA-PHE-CAP-BIO BOUND TO THE LARGE RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+727, p4wsdIC1, 0.7245, 2.33, 0.227, 78, 75, 
+728, p5juuM1, 0.7237, 2.36, 0.227, 78, 75, 
+729, p5xxbK1, 0.7235, 2.17, 0.158, 79, 76, struct.pdbx_descriptor              
+730, p4zsnHC1, 0.7218, 2.36, 0.227, 78, 75, 
+731, p4yzvHC1, 0.7218, 2.05, 0.230, 85, 74, 
+732, p6gqvM1, 0.7210, 2.01, 0.216, 83, 74, struct.pdbx_descriptor              
+733, p4ujeSA1, 0.7204, 1.83, 0.205, 83, 73, 
+734, p4ujdK1, 0.7204, 1.67, 0.188, 71, 69, 
+735, p4ujcN1, 0.7204, 1.67, 0.188, 71, 69, 
+736, p4d67H1, 0.7204, 2.34, 0.227, 78, 75, 
+737, p4d5yH1, 0.7204, 2.16, 0.160, 79, 75, 
+738, d2j03H1, 0.7204, 2.02, 0.203, 83, 74,  
+739, d2j01H1, 0.7204, 1.91, 0.233, 83, 73,  
+740, p5aa0H1, 0.7200, 2.34, 0.143, 79, 77, 
+741, p5a9zH1, 0.7200, 2.34, 0.143, 79, 77, 
+742, p4v4yGA1, 0.7200, 2.07, 0.203, 83, 74, 
+743, p3jbnVB1, 0.7200, 1.81, 0.233, 85, 73, 
+744, p6d90H1, 0.7198, 1.81, 0.233, 85, 73, struct.pdbx_descriptor              Ribosome 
+745, p5ndkRC1, 0.7196, 1.81, 0.233, 85, 73, Crystal structure of aminoglycoside TC007 co-crystallized with 70S ribosome from Thermus thermophilus; three tRNAs and mRNA  
+746, p4ypbJC1, 0.7196, 1.81, 0.233, 85, 73, 
+747, p4w4gJC1, 0.7196, 1.81, 0.233, 85, 73, 
+748, p4v84CA1, 0.7194, 1.83, 0.217, 71, 69, 
+749, p4v84DC1, 0.7193, 1.83, 0.217, 71, 69, 
+750, p4zsnEA1, 0.7185, 2.25, 0.197, 78, 76, 
+751, p4yzvEA1, 0.7185, 2.25, 0.197, 78, 76, 
+752, p4ypbFA1, 0.7185, 2.25, 0.197, 78, 76, 
+753, p4v4bAA1, 0.7181, 1.93, 0.219, 83, 73, 
+754, d1s1iH_, 0.7181, 1.94, 0.233, 85, 73,  
+755, p6gskHC1, 0.7170, 2.20, 0.158, 79, 76, Structure of T. thermophilus 70S ribosome complex with mRNA; tRNAfMet and near-cognate tRNAThr in the A-site  
+756, p4v5aTC1, 0.7163, 2.35, 0.143, 79, 77, 
+757, d2v49H1, 0.7163, 2.35, 0.143, 79, 77,  
+758, p4v5aPA1, 0.7162, 1.63, 0.176, 70, 68, 
+759, d2v47H1, 0.7162, 1.62, 0.176, 70, 68,  
+760, p4w4gFA1, 0.7160, 2.12, 0.147, 79, 75, 
+761, p4ug0K1, 0.7159, 2.12, 0.147, 79, 75, 
+762, p5zluDA1, 0.7149, 2.12, 0.147, 79, 75, struct.pdbx_descriptor              
+763, p4v83DC1, 0.7145, 2.18, 0.227, 79, 75, 
+764, p4v83CA1, 0.7144, 2.18, 0.227, 178, 75, 
+765, p4v4nXA1, 0.7141, 2.19, 0.158, 78, 76, 
+766, p4v6uDB1, 0.7136, 1.81, 0.217, 71, 69, 
+767, p4v63FA1, 0.7131, 1.81, 0.217, 71, 69, 
+768, p4v63HC1, 0.7130, 1.81, 0.217, 71, 69, 
+769, p4v9qIB1, 0.7129, 1.81, 0.217, 71, 69, 
+770, p4v9qG1, 0.7128, 2.13, 0.147, 79, 75, 
+771, p4v7pJB1, 0.7128, 2.00, 0.233, 85, 73, 
+772, p4v7pEA1, 0.7128, 2.44, 0.184, 79, 76, 
+773, p4v6lGA1, 0.7127, 1.67, 0.176, 70, 68, 
+774, p4v6iJA1, 0.7127, 1.67, 0.176, 70, 68, 
+775, p3j6yL1, 0.7124, 2.47, 0.237, 84, 76, 
+776, p6gsjHC1, 0.7121, 2.34, 0.240, 84, 75, Structure of T. thermophilus 70S ribosome complex with mRNA; tRNAfMet and cognate tRNAThr in the A-site  
+777, p4v4xEA1, 0.7120, 1.68, 0.176, 70, 68, 
+778, p4xejAB1, 0.7118, 1.68, 0.176, 70, 68, 
+779, p4v6mJA1, 0.7118, 1.71, 0.176, 70, 68, 
+780, p6gq1M1, 0.7117, 1.71, 0.176, 70, 68, Cryo-EM reconstruction of yeast 80S ribosome in complex with mRNA; tRNA and eEF2 (GMPPCP/sordarin)  
+781, p4v7wKA1, 0.7109, 1.67, 0.176, 70, 68, 
+782, p4v7wJC1, 0.7104, 1.67, 0.176, 70, 68, 
+783, p4v68SA1, 0.7101, 2.56, 0.975, 80, 79, 
+784, p4v51TC1, 0.7101, 2.31, 0.203, 83, 74, 
+785, p4v51PA1, 0.7101, 2.10, 0.216, 83, 74, 
+786, p4v7hFA1, 0.7100, 2.09, 0.173, 77, 75, 
+787, p4v7yKA1, 0.7094, 2.25, 0.197, 78, 76, 
+788, p4v9nHC1, 0.7093, 1.66, 0.176, 70, 68, 
+789, p4v9lMC1, 0.7092, 1.86, 1.000, 75, 75, 
+790, p4wsmHC1, 0.7091, 1.89, 0.205, 83, 73, 
+791, p4v7yJC1, 0.7091, 1.76, 0.206, 70, 68, 
+792, p4v9lDA1, 0.7088, 1.77, 0.206, 70, 68, 
+793, p4v9mKC1, 0.7074, 1.83, 0.206, 70, 68, 
+794, p4v5mPA1, 0.7070, 1.83, 0.206, 70, 68, 
+795, p4v67JC1, 0.7069, 1.83, 0.206, 70, 68, 
+796, p4v67FA1, 0.7067, 2.31, 0.213, 79, 75, 
+797, p4v7xKA1, 0.7062, 1.74, 0.206, 70, 68, 
+798, p4v6pFA1, 0.7062, 1.71, 0.176, 70, 68, 
+799, p6gqbM1, 0.7060, 1.77, 0.176, 70, 68, Cryo-EM reconstruction of yeast 80S ribosome in complex with mRNA; tRNA and eEF2 (GDP+AlF4/sordarin)  
+800, p4v7xJC1, 0.7057, 2.25, 0.158, 79, 76, 
+801, p4v5hNA1, 0.7057, 1.74, 0.206, 70, 68, 
+802, p4v9mCA1, 0.7045, 1.78, 0.162, 70, 68, 
+803, p4v5fQA1, 0.7045, 1.77, 0.176, 70, 68, 
+804, p4v5fAD1, 0.7045, 1.71, 0.206, 70, 68, 
+805, p4v70CA1, 0.7043, 1.73, 0.176, 70, 68, 
+806, p4xejE1, 0.7042, 1.73, 0.176, 70, 68, 
+807, p4wt8KC1, 0.7036, 1.80, 0.206, 70, 68, 
+808, p4v5nPA1, 0.7032, 2.44, 0.974, 79, 78, 
+809, p4v8uQA1, 0.7024, 2.00, 0.270, 83, 74, 
+810, p4v8uVC1, 0.7023, 1.81, 0.206, 70, 68, 
+811, p4v5jQA1, 0.7019, 1.86, 0.959, 74, 74, 
+812, p4v5jXC1, 0.7015, 1.78, 0.162, 70, 68, 
+813, p3j78I1, 0.7012, 1.80, 0.191, 70, 68, 
+814, p4v9iGA1, 0.7001, 1.80, 0.191, 70, 68, 
+815, p4v7eQA1, 0.6997, 2.24, 0.873, 80, 79, 
+816, p4v6oFA1, 0.6985, 1.74, 0.176, 70, 68, 
+817, p4v9nEA1, 0.6982, 1.82, 0.176, 70, 68, 
+818, p3jcsM1, 0.6976, 1.77, 0.191, 70, 68, 
+819, p4v6gEA1, 0.6966, 1.82, 0.191, 70, 68, 
+820, p4v7zKA1, 0.6958, 1.81, 0.206, 70, 68, 
+821, p4v7zJC1, 0.6955, 1.87, 0.162, 70, 68, 
+822, p4v5eQA1, 0.6950, 1.88, 0.162, 70, 68, 
+823, p4v5eXC1, 0.6949, 2.14, 0.203, 83, 74, 
+824, p4v3pMA1, 0.6946, 1.81, 0.206, 70, 68, 
+825, p4v7lNC1, 0.6937, 2.19, 0.192, 84, 73, 
+826, p4v5dVC1, 0.6925, 2.09, 0.973, 75, 74, 
+827, p4v5dQA1, 0.6921, 1.71, 0.164, 69, 67, 
+828, p5imrDA1, 0.6918, 2.67, 0.224, 84, 76, 
+829, p4v6aJC1, 0.6910, 2.44, 0.143, 79, 77, 
+830, p4v9kMC1, 0.6904, 1.90, 0.206, 70, 68, 
+831, p4v8jLC1, 0.6892, 1.91, 0.206, 70, 68, 
+832, p4v8jGA1, 0.6885, 1.97, 0.176, 70, 68, 
+833, p4v5cQA1, 0.6885, 1.97, 0.176, 70, 68, 
+834, p4v5cVC1, 0.6884, 2.45, 0.203, 84, 74, 
+835, p6d9jH1, 0.6879, 1.88, 0.162, 70, 68, struct.pdbx_descriptor              Ribosome 
+836, p5xy3K1, 0.6872, 1.98, 0.162, 70, 68, struct.pdbx_descriptor              
+837, p4v9jMC1, 0.6871, 1.97, 0.176, 70, 68, 
+838, p4v9kDA1, 0.6868, 2.29, 0.187, 77, 75, 
+839, p5juoM1, 0.6851, 1.83, 0.176, 70, 68, 
+840, p4v97GA1, 0.6848, 1.96, 0.159, 70, 69, 
+841, p4wt8AB1, 0.6847, 1.85, 0.176, 70, 68, 
+842, p4v9iMC1, 0.6845, 1.92, 0.162, 70, 68, 
+843, d2cqlA1, 0.6835, 1.92, 0.162, 70, 68, SOLUTION STRUCTURE OF THE N-TERMINAL DOMAIN OF HUMAN RIBOSOMAL PROTEIN L9
+844, p4v7mNC1, 0.6796, 1.92, 0.162, 70, 68, 
+845, p4v9jDA1, 0.6728, 2.26, 0.230, 85, 74, 
+846, d2hguH1, 0.6683, 2.40, 0.149, 88, 74,  
+847, p6az3E2, 0.6631, 1.82, 0.176, 70, 68, struct.pdbx_descriptor              
+848, p5t2aWA2, 0.6616, 1.82, 0.206, 70, 68, 
+849, p4v5pYC1, 0.6611, 2.23, 0.203, 83, 74, 
+850, p4v5pRA1, 0.6611, 1.87, 0.176, 70, 68, 
+851, p2qa4E2, 0.6607, 2.06, 0.176, 70, 68, A MORE COMPLETE STRUCTURE OF THE THE L7/L12 STALK OF THE HALOARCULA MARISMORTUI 50S LARGE RIBOSOMAL SUBUNIT
+852, d2hgqH1, 0.6606, 2.02, 0.206, 70, 68,  
+853, d1q81G2, 0.6599, 2.63, 0.227, 87, 75, CRYSTAL STRUCTURE OF MINIHELIX WITH 3  PUROMYCIN BOUND TO A- SITE OF THE 50S RIBOSOMAL SUBUNIT.
+854, p3ccjE2, 0.6589, 1.92, 0.179, 69, 67, STRUCTURE OF ANISOMYCIN RESISTANT 50S RIBOSOMAL SUBUNIT: 23S RRNA MUTATION C2534U
+855, d1vqlE2, 0.6587, 1.91, 0.164, 69, 67, THE STRUCTURE OF THE TRANSITION STATE ANALOGUE DCSN BOUND TO THE LARGE RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+856, p3cmeE2, 0.6585, 2.11, 0.217, 71, 69, THE STRUCTURE OF CA AND CCA-PHE-CAP-BIO BOUND TO THE LARGE RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+857, d1vqmE2, 0.6585, 2.15, 0.203, 103, 69, THE STRUCTURE OF THE TRANSITION STATE ANALOGUE DAN BOUND TO THE LARGE RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+858, d2otjE2, 0.6584, 2.26, 0.200, 104, 70, 13-DEOXYTEDANOLIDE BOUND TO THE LARGE SUBUNIT OF HALOARCULA MARISMORTUI
+859, d1yjwE2, 0.6584, 2.28, 0.159, 70, 69, CRYSTAL STRUCTURE OF QUINUPRISTIN BOUND TO THE G2099A MUTANT 50S RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+860, d1vq9E2, 0.6584, 2.28, 0.159, 70, 69, THE STRUCTURE OF CCA-PHE-CAP-BIO AND THE ANTIBIOTIC SPARSOMYCIN BOUND TO THE LARGE RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+861, p3ccmE2, 0.6582, 2.78, 0.151, 94, 73, STRUCTURE OF ANISOMYCIN RESISTANT 50S RIBOSOMAL SUBUNIT: 23S RRNA MUTATION G2611U
+862, d1vqpE2, 0.6580, 2.15, 0.217, 71, 69, THE STRUCTURE OF THE TRANSITION STATE ANALOGUE RAP BOUND TO THE LARGE RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+863, d1vq6E2, 0.6577, 2.62, 0.153, 93, 72, THE STRUCTURE OF C-HPMN AND CCA-PHE-CAP-BIO BOUND TO THE LARGE RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+864, d1q7yG2, 0.6577, 2.77, 0.151, 94, 73, CRYSTAL STRUCTURE OF CCDAP-PUROMYCIN BOUND AT THE PEPTIDYL TRANSFERASE CENTER OF THE 50S RIBOSOMAL SUBUNIT
+865, p3cmaE2, 0.6576, 2.61, 0.153, 93, 72, THE STRUCTURE OF CCA AND CCA-PHE-CAP-BIO BOUND TO THE LARGE RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+866, d1yhqE2, 0.6576, 2.78, 0.151, 94, 73, CRYSTAL STRUCTURE OF AZITHROMYCIN BOUND TO THE G2099A MUTANT 50S RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+867, d1vqnE2, 0.6573, 2.64, 0.153, 93, 72, THE STRUCTURE OF CC-HPMN AND CCA-PHE-CAP-BIO BOUND TO THE LARGE RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+868, p3jaiH2, 0.6572, 2.59, 0.153, 93, 72, 
+869, d1m90G2, 0.6572, 2.61, 0.153, 93, 72, CO-CRYSTAL STRUCTURE OF CCA-PHE-CAPROIC ACID-BIOTIN AND SPARSOMYCIN BOUND TO THE 50S RIBOSOMAL SUBUNIT
+870, p4v5zEB2, 0.6571, 2.63, 0.153, 93, 72, 
+871, d1s72E2, 0.6571, 2.79, 0.151, 94, 73, REFINED CRYSTAL STRUCTURE OF THE HALOARCULA MARISMORTUI LARGE RIBOSOMAL SUBUNIT AT 2.4 ANGSTROM RESOLUTION
+872, p3ccsE2, 0.6569, 2.62, 0.153, 93, 72, STRUCTURE OF ANISOMYCIN RESISTANT 50S RIBOSOMAL SUBUNIT: 23S RRNA MUTATION G2482A
+873, d1k9mG2, 0.6568, 2.60, 0.153, 93, 72, CO-CRYSTAL STRUCTURE OF TYLOSIN BOUND TO THE 50S RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+874, d1vqoE2, 0.6567, 2.63, 0.153, 93, 72, THE STRUCTURE OF CCPMN BOUND TO THE LARGE RIBOSOMAL SUBUNIT HALOARCULA MARISMORTUI
+875, p3cpwE2, 0.6566, 2.77, 0.151, 94, 73, THE STRUCTURE OF THE ANTIBIOTIC LINEZOLID BOUND TO THE LARGE RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+876, d1vqkE2, 0.6565, 2.62, 0.153, 93, 72, THE STRUCTURE OF CCDA-PHE-CAP-BIO BOUND TO THE A SITE OF THE RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+877, p3ccvE2, 0.6564, 2.61, 0.153, 93, 72, STRUCTURE OF ANISOMYCIN RESISTANT 50S RIBOSOMAL SUBUNIT: 23S RRNA MUTATION G2616A
+878, d1vq8E2, 0.6564, 2.64, 0.111, 105, 72, THE STRUCTURE OF CCDA-PHE-CAP-BIO AND THE ANTIBIOTIC SPARSOMYCIN BOUND TO THE LARGE RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+879, d1njiG2, 0.6564, 2.62, 0.153, 93, 72, STRUCTURE OF CHLORAMPHENICOL BOUND TO THE 50S RIBOSOMAL SUBUNIT
+880, d1kd1G2, 0.6564, 2.79, 0.123, 98, 73, CO-CRYSTAL STRUCTURE OF SPIRAMYCIN BOUND TO THE 50S RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+881, d1jj2E2, 0.6563, 2.62, 0.153, 93, 72, FULLY REFINED CRYSTAL STRUCTURE OF THE HALOARCULA MARISMORTUI LARGE RIBOSOMAL SUBUNIT AT 2.4 ANGSTROM RESOLUTION
+882, p3ccuE2, 0.6562, 2.79, 0.151, 94, 73, STRUCTURE OF ANISOMYCIN RESISTANT 50S RIBOSOMAL SUBUNIT: 23S RRNA MUTATION G2482C
+883, d1q82G2, 0.6562, 2.62, 0.153, 93, 72, CRYSTAL STRUCTURE OF CC-PUROMYCIN BOUND TO THE A-SITE OF THE 50S RIBOSOMAL SUBUNIT
+884, d1kc8G2, 0.6562, 2.63, 0.153, 93, 72, CO-CRYSTAL STRUCTURE OF BLASTICIDIN S BOUND TO THE 50S RIBOSOMAL SUBUNIT
+885, d1vq7E2, 0.6561, 2.81, 0.151, 94, 73, THE STRUCTURE OF THE TRANSITION STATE ANALOGUE DCA BOUND TO THE LARGE RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+886, d1yijE2, 0.6560, 2.63, 0.153, 93, 72, CRYSTAL STRUCTURE OF TELITHROMYCIN BOUND TO THE G2099A MUTANT 50S RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+887, d1m1kG2, 0.6560, 2.78, 0.151, 94, 73, CO-CRYSTAL STRUCTURE OF AZITHROMYCIN BOUND TO THE 50S RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+888, d1k8aG2, 0.6560, 2.64, 0.153, 93, 72, CO-CRYSTAL STRUCTURE OF CARBOMYCIN A BOUND TO THE 50S RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+889, p3ccrE2, 0.6559, 2.62, 0.153, 93, 72, STRUCTURE OF ANISOMYCIN RESISTANT 50S RIBOSOMAL SUBUNIT: 23S RRNA MUTATION A2488C. DENSITY FOR ANISOMYCIN IS VISIBLE BUT NOT INCLUDED IN THE MODEL.
+890, p3jagH2, 0.6557, 2.62, 0.153, 93, 72, 
+891, d1qvfE2, 0.6556, 2.62, 0.153, 93, 72, STRUCTURE OF A DEACYLATED TRNA MINIHELIX BOUND TO THE E SITE OF THE LARGE RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+892, p3i55E2, 0.6555, 2.80, 0.151, 94, 73, CO-CRYSTAL STRUCTURE OF MYCALAMIDE A BOUND TO THE LARGE RIBOSOMAL SUBUNIT
+893, d1qvgE2, 0.6555, 2.63, 0.153, 93, 72, STRUCTURE OF CCA OLIGONUCLEOTIDE BOUND TO THE TRNA BINDING SITES OF THE LARGE RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+894, d1q86G2, 0.6555, 2.61, 0.153, 93, 72, CRYSTAL STRUCTURE OF CCA-PHE-CAP-BIOTIN BOUND SIMULTANEOUSLY AT HALF OCCUPANCY TO BOTH THE A-SITE AND P-SITE OF THE THE 50S RIBOSOMAL SUBUNIT.
+895, p3ow2E2, 0.6554, 2.61, 0.153, 93, 72, CRYSTAL STRUCTURE OF ENHANCED MACROLIDE BOUND TO 50S RIBOSOMAL SUBUNIT
+896, d1k73G2, 0.6554, 2.61, 0.153, 93, 72, CO-CRYSTAL STRUCTURE OF ANISOMYCIN BOUND TO THE 50S RIBOSOMAL SUBUNIT
+897, p4w29MC1, 0.6553, 2.61, 0.153, 93, 72, 
+898, p4adxE2, 0.6553, 2.63, 0.153, 93, 72, THE CRYO-EM STRUCTURE OF THE ARCHAEAL 50S RIBOSOMAL SUBUNIT IN COMPLEX WITH INITIATION FACTOR 6
+899, p3cc2E2, 0.6553, 2.83, 0.151, 94, 73, THE REFINED CRYSTAL STRUCTURE OF THE HALOARCULA MARISMORTUI LARGE RIBOSOMAL SUBUNIT AT 2.4 ANGSTROM RESOLUTION WITH RRNA SEQUENCE FOR THE 23S RRNA AND GENOME-DERIVED SEQUENCES FOR R-PROTEINS
+900, d1yi2E2, 0.6553, 2.30, 0.114, 105, 70, CRYSTAL STRUCTURE OF ERYTHROMYCIN BOUND TO THE G2099A MUTANT 50S RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+901, p3g71E2, 0.6550, 2.63, 0.153, 93, 72, CO-CRYSTAL STRUCTURE OF BRUCEANTIN BOUND TO THE LARGE RIBOSOMAL SUBUNIT
+902, d1yjnE2, 0.6548, 2.80, 0.151, 94, 73, CRYSTAL STRUCTURE OF CLINDAMYCIN BOUND TO THE G2099A MUTANT 50S RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+903, d1n8rG2, 0.6548, 2.63, 0.153, 93, 72, STRUCTURE OF LARGE RIBOSOMAL SUBUNIT IN COMPLEX WITH VIRGINIAMYCIN M
+904, d1kqsE2, 0.6548, 2.63, 0.153, 93, 72, THE HALOARCULA MARISMORTUI 50S COMPLEXED WITH A PRETRANSLOCATIONAL INTERMEDIATE IN PROTEIN SYNTHESIS
+905, d1vq5E2, 0.6547, 2.79, 0.151, 94, 73, THE STRUCTURE OF THE TRANSITION STATE ANALOGUE RAA BOUND TO THE LARGE RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+906, p5lzxH2, 0.6546, 2.61, 0.153, 93, 72, 
+907, p3ccqE2, 0.6546, 2.02, 0.176, 70, 68, STRUCTURE OF ANISOMYCIN RESISTANT 50S RIBOSOMAL SUBUNIT: 23S RRNA MUTATION A2488U
+908, p3cxcE2, 0.6545, 2.79, 0.151, 94, 73, THE STRUCTURE OF AN ENHANCED OXAZOLIDINONE INHIBITOR BOUND TO THE 50S RIBOSOMAL SUBUNIT OF H. MARISMORTUI
+909, p2qexE2, 0.6545, 2.79, 0.151, 94, 73, NEGAMYCIN BINDS TO THE WALL OF THE NASCENT CHAIN EXIT TUNNEL OF THE 50S RIBOSOMAL SUBUNIT
+910, d1ffk12, 0.6543, 2.61, 0.153, 93, 72, CRYSTAL STRUCTURE OF THE LARGE RIBOSOMAL SUBUNIT FROM HALOARCULA MARISMORTUI AT 2.4 ANGSTROM RESOLUTION
+911, p3j79H2, 0.6541, 2.81, 0.151, 94, 73, 
+912, p3cclE2, 0.6541, 2.62, 0.153, 93, 72, STRUCTURE OF ANISOMYCIN RESISTANT 50S RIBOSOMAL SUBUNIT: 23S RRNA MUTATION U2535C. DENSITY FOR ANISOMYCIN IS VISIBLE BUT NOT INCLUDED IN MODEL.
+913, d1yitE2, 0.6540, 2.64, 0.153, 93, 72, CRYSTAL STRUCTURE OF VIRGINIAMYCIN M AND S BOUND TO THE 50S RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+914, d2hgjH1, 0.6539, 2.62, 0.153, 93, 72,  
+915, p3cceE2, 0.6537, 2.64, 0.153, 93, 72, STRUCTURE OF ANISOMYCIN RESISTANT 50S RIBOSOMAL SUBUNIT: 23S RRNA MUTATION U2535A
+916, p5lzsH2, 0.6536, 2.21, 0.116, 105, 69, 
+917, p4v9fG2, 0.6535, 2.82, 0.151, 94, 73, 
+918, p3g6eE2, 0.6531, 2.80, 0.151, 94, 73, CO-CRYSTAL STRUCTURE OF HOMOHARRINGTONINE BOUND TO THE LARGE RIBOSOMAL SUBUNIT
+919, d2otlE2, 0.6531, 2.84, 0.151, 94, 73, GIRODAZOLE BOUND TO THE LARGE SUBUNIT OF HALOARCULA MARISMORTUI
+920, d1yj9E2, 0.6529, 2.62, 0.153, 93, 72, CRYSTAL STRUCTURE OF THE MUTANT 50S RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI CONTAINING A THREE RESIDUE DELETION IN L22
+921, p5umdH2, 0.6528, 2.63, 0.097, 102, 72, 
+922, p5lzzH2, 0.6527, 2.81, 0.151, 94, 73, 
+923, d1vq4E2, 0.6527, 2.60, 0.153, 93, 72, THE STRUCTURE OF THE TRANSITION STATE ANALOGUE DAA BOUND TO THE LARGE RIBOSOMAL SUBUNIT OF HALOARCULA MARISMORTUI
+924, p5it7K2, 0.6526, 2.14, 0.217, 71, 69, 
+925, p3cc7E2, 0.6525, 2.82, 0.151, 94, 73, STRUCTURE OF ANISOMYCIN RESISTANT 50S RIBOSOMAL SUBUNIT: 23S RRNA MUTATION C2487U
+926, p3cc4E2, 0.6523, 2.31, 0.114, 105, 70, CO-CRYSTAL STRUCTURE OF ANISOMYCIN BOUND TO THE 50S RIBOSOMAL SUBUNIT
+927, p4v3pMA2, 0.6521, 2.81, 0.151, 96, 73, 
+928, p6ftjH2, 0.6516, 2.80, 0.151, 94, 73, Cryo-EM Structure of the Mammalian Oligosaccharyltransferase Bound to Sec61 and the Non-programmed 80S Ribosome  
+929, p6ftiH2, 0.6516, 2.62, 0.153, 93, 72, Cryo-EM Structure of the Mammalian Oligosaccharyltransferase Bound to Sec61 and the Programmed 80S Ribosome  
+930, p6ftgH2, 0.6516, 2.61, 0.153, 93, 72, Subtomogram average of OST-containing ribosome-translocon complexes from canine rough microsomal membranes  
+931, p3jahH2, 0.6516, 2.64, 0.097, 102, 72, 
+932, p3cd6E2, 0.6514, 2.73, 0.111, 105, 72, CO-CYSTAL OF LARGE RIBOSOMAL SUBUNIT MUTANT G2616A WITH CC-PUROMYCIN
+933, p3i56E2, 0.6509, 2.64, 0.153, 93, 72, CO-CRYSTAL STRUCTURE OF TRIACETYLOLEANDOMCYIN BOUND TO THE LARGE RIBOSOMAL SUBUNIT
+934, p5lztH2, 0.6508, 2.60, 0.097, 108, 72, 
+935, p4u3nUD2, 0.6507, 2.82, 0.151, 94, 73, 
+936, p5lzyH2, 0.6506, 2.81, 0.151, 94, 73, 
+937, p5lzwH2, 0.6501, 2.63, 0.111, 106, 72, 
+938, p4u53UD2, 0.6501, 2.75, 0.111, 105, 72, 
+939, p4u4yUD2, 0.6501, 2.75, 0.111, 105, 72, 
+940, p4v6xBC2, 0.6500, 2.75, 0.111, 105, 72, 
+941, p3g4sE2, 0.6500, 2.75, 0.111, 105, 72, CO-CRYSTAL STRUCTURE OF TIAMULIN BOUND TO THE LARGE RIBOSOMAL SUBUNIT
+942, p5ancB2, 0.6492, 2.83, 0.151, 94, 73, MECHANISM OF EIF6 RELEASE FROM THE NASCENT 60S RIBOSOMAL SUBUNIT
+943, p5lzuH2, 0.6486, 2.81, 0.151, 94, 73, 
+944, p5fciTA2, 0.6486, 2.33, 0.114, 105, 70, 
+945, p4u51UD2, 0.6486, 2.40, 0.114, 108, 70, 
+946, p3jbpVB2, 0.6486, 2.66, 0.111, 105, 72, 
+947, p5ndgUD2, 0.6485, 2.68, 0.111, 105, 72, struct.pdbx_descriptor              
+948, p4w29DA1, 0.6484, 2.40, 0.114, 108, 70, 
+949, p5lybUD2, 0.6482, 2.40, 0.114, 108, 70, 
+950, p4v8qR1, 0.6482, 2.73, 0.111, 106, 72, 
+951, p4u4zUD2, 0.6482, 2.81, 0.151, 94, 73, 
+952, p3j92H2, 0.6482, 2.67, 0.097, 105, 72, 
+953, p4v5qRA1, 0.6481, 2.68, 0.111, 105, 72, 
+954, p6gqbM2, 0.6479, 2.70, 0.097, 108, 72, Cryo-EM reconstruction of yeast 80S ribosome in complex with mRNA; tRNA and eEF2 (GDP+AlF4/sordarin)  
+955, p5obmLC2, 0.6476, 2.37, 0.100, 108, 70, struct.pdbx_descriptor              
+956, p4v91K2, 0.6476, 2.67, 0.097, 102, 72, 
+957, p4u55UD2, 0.6473, 2.43, 0.114, 107, 70, 
+958, p4u52TA2, 0.6473, 2.08, 0.206, 70, 68, 
+959, p5tgmUD2, 0.6472, 2.41, 0.114, 108, 70, 
+960, p4v8pOE2, 0.6472, 2.26, 0.162, 70, 68, 
+961, p4v8pAB2, 0.6472, 2.41, 0.114, 108, 70, 
+962, p4u56TA2, 0.6470, 2.54, 0.113, 105, 71, 
+963, p4v8pZ2, 0.6469, 2.37, 0.188, 70, 69, 
+964, p4v8pUC2, 0.6469, 2.84, 0.096, 108, 73, 
+965, p4u3mUD2, 0.6469, 2.43, 0.114, 108, 70, 
+966, p3jboVB2, 0.6469, 2.33, 0.100, 108, 70, 
+967, p4v5qYC1, 0.6468, 2.37, 0.100, 108, 70, 
+968, p5i4lUD2, 0.6466, 2.65, 0.085, 108, 71, 
+969, p4v5lRA1, 0.6465, 2.41, 0.114, 108, 70, 
+970, p4v5sYC1, 0.6464, 2.72, 0.167, 103, 72, 
+971, p4u4oUD2, 0.6463, 2.72, 0.167, 103, 72, 
+972, p5datUD2, 0.6461, 2.72, 0.097, 108, 72, 
+973, p5fciUD2, 0.6459, 2.72, 0.167, 103, 72, 
+974, p4v5sRA1, 0.6459, 2.72, 0.167, 103, 72, 
+975, p5lzvH2, 0.6458, 2.42, 0.114, 108, 70, 
+976, p5jusM2, 0.6457, 2.52, 0.113, 102, 71, 
+977, p4u4qUD2, 0.6457, 2.39, 0.159, 70, 69, 
+978, p5tgaUD2, 0.6456, 2.42, 0.114, 108, 70, 
+979, p4v6iJA2, 0.6456, 2.20, 0.179, 70, 67, 
+980, p4v7rNA2, 0.6455, 2.46, 0.188, 70, 69, 
+981, p5meiEB2, 0.6454, 2.75, 0.097, 108, 72, 
+982, p4u55TA2, 0.6453, 2.43, 0.114, 108, 70, 
+983, p4u3uUD2, 0.6453, 2.74, 0.097, 108, 72, 
+984, p4v7rGD2, 0.6452, 2.45, 0.159, 70, 69, 
+985, p4u4uUD2, 0.6452, 2.68, 0.111, 105, 72, 
+986, p4v8zPA2, 0.6451, 2.70, 0.097, 108, 72, 
+987, p4v8yPA2, 0.6451, 2.44, 0.114, 108, 70, 
+988, p4v8tH2, 0.6451, 2.42, 0.114, 108, 70, 
+989, p4v88UD2, 0.6451, 2.65, 0.097, 108, 72, 
+990, p4u51TA2, 0.6449, 2.39, 0.100, 108, 70, 
+991, p4u4rTA2, 0.6449, 2.70, 0.097, 108, 72, 
+992, p4u4nUD2, 0.6449, 2.73, 0.097, 108, 72, 
+993, p4u3nTA2, 0.6449, 2.43, 0.114, 108, 70, 
+994, p5meiK2, 0.6447, 2.40, 0.114, 108, 70, 
+995, p4u4nTA2, 0.6447, 2.43, 0.114, 108, 70, 
+996, p5jupM2, 0.6446, 2.44, 0.114, 108, 70, 
+997, p5datTA2, 0.6446, 2.44, 0.114, 108, 70, 
+998, p4u4uTA2, 0.6444, 2.44, 0.114, 108, 70, 
+999, p5on6K2, 0.6443, 2.44, 0.114, 108, 70, struct.pdbx_descriptor              
+1000, p4u6fUD2, 0.6442, 2.73, 0.097, 108, 72, 
+1001, p4u50TA2, 0.6442, 2.72, 0.097, 108, 72, 
+1002, p4v8oPA1, 0.6441, 2.72, 0.097, 108, 72, 
+1003, p4u52UD2, 0.6441, 2.71, 0.097, 108, 72, 
+1004, p4v4bAA2, 0.6440, 2.71, 0.097, 108, 72, 
+1005, p5ndwPB2, 0.6438, 2.74, 0.097, 108, 72, struct.pdbx_descriptor              
+1006, p4v5rYC1, 0.6438, 2.69, 0.097, 108, 72, 
+1007, p4v5rRA1, 0.6438, 2.80, 0.097, 108, 72, 
+1008, p5dgeUD2, 0.6437, 2.73, 0.097, 108, 72, 
+1009, p4u4oTA2, 0.6436, 2.73, 0.097, 108, 72, 
+1010, p4u56UD2, 0.6434, 2.73, 0.097, 108, 72, 
+1011, p4u4rUD2, 0.6434, 2.73, 0.097, 108, 72, 
+1012, p5ndvKC2, 0.6433, 2.27, 0.191, 70, 68, struct.pdbx_descriptor              
+1013, p4u50UD2, 0.6433, 2.73, 0.097, 108, 72, 
+1014, p3jctH2, 0.6433, 2.70, 0.097, 99, 72, 
+1015, p5i4lTA2, 0.6432, 2.71, 0.097, 108, 72, 
+1016, p3j16F2, 0.6431, 2.40, 0.159, 70, 69, MODELS OF RIBOSOME-BOUND DOM34P AND RLI1P AND THEIR RIBOSOMAL BINDING PARTNERS
+1017, p6ek0K2, 0.6430, 2.40, 0.159, 70, 69, struct.pdbx_descriptor              
+1018, p5fcjUD2, 0.6430, 2.44, 0.114, 108, 70, 
+1019, p6d90H2, 0.6428, 2.74, 0.097, 108, 72, struct.pdbx_descriptor              Ribosome 
+1020, p4u53TA2, 0.6428, 2.76, 0.097, 108, 72, 
+1021, p5on6EB2, 0.6427, 2.72, 0.097, 108, 72, struct.pdbx_descriptor              
+1022, p5lybTA2, 0.6427, 2.44, 0.114, 108, 70, 
+1023, p4u4yTA2, 0.6427, 2.73, 0.097, 108, 72, 
+1024, p5fcjTA2, 0.6426, 2.70, 0.097, 108, 72, 
+1025, p5tbwK2, 0.6425, 2.73, 0.097, 108, 72, struct.pdbx_descriptor              ? 
+1026, p5ndwOB2, 0.6425, 2.72, 0.097, 108, 72, struct.pdbx_descriptor              
+1027, p5tgaTA2, 0.6424, 2.34, 0.129, 105, 70, 
+1028, p4v88TA2, 0.6424, 2.72, 0.097, 108, 72, 
+1029, p4v7fI2, 0.6424, 2.27, 0.116, 105, 69, 
+1030, p4u4zTA2, 0.6422, 2.71, 0.097, 108, 72, 
+1031, p5dc3TA2, 0.6421, 2.73, 0.097, 108, 72, 
+1032, p5obmK2, 0.6419, 2.80, 0.097, 108, 72, struct.pdbx_descriptor              
+1033, p5tbwDB2, 0.6418, 2.74, 0.097, 108, 72, struct.pdbx_descriptor              ? 
+1034, p4u3uTA2, 0.6418, 2.73, 0.097, 108, 72, 
+1035, p5mc6SA2, 0.6416, 2.74, 0.097, 108, 72, 
+1036, p5t62L2, 0.6413, 2.43, 0.114, 108, 70, 
+1037, p5apnK2, 0.6412, 2.72, 0.097, 108, 72, 
+1038, p5dgfUD2, 0.6411, 2.73, 0.097, 108, 72, 
+1039, p5dc3UD2, 0.6411, 2.73, 0.097, 108, 72, 
+1040, p4v6wBC2, 0.6411, 2.75, 0.097, 108, 72, 
+1041, p3janD2, 0.6411, 2.74, 0.097, 108, 72, 
+1042, p3jajD2, 0.6411, 2.74, 0.097, 108, 72, 
+1043, p3j7rK2, 0.6411, 2.74, 0.097, 108, 72, 
+1044, p3j7qK2, 0.6411, 2.74, 0.097, 108, 72, 
+1045, p3j7pK2, 0.6411, 2.75, 0.097, 108, 72, 
+1046, p3j7oK2, 0.6411, 2.69, 0.085, 108, 71, 
+1047, p4ujeSA2, 0.6410, 2.40, 0.100, 108, 70, 
+1048, p4ujdK2, 0.6410, 2.44, 0.114, 108, 70, 
+1049, p4ujcN2, 0.6410, 2.45, 0.114, 108, 70, 
+1050, p4u4qTA2, 0.6410, 2.38, 0.114, 107, 70, 
+1051, p4d67H2, 0.6410, 2.71, 0.111, 105, 72, 
+1052, p4d5yH2, 0.6410, 2.71, 0.111, 105, 72, 
+1053, p6em5H2, 0.6409, 2.91, 0.110, 105, 73, STATE D ARCHITECTURAL MODEL (NSA1-TAP FLAG-YTM1) - VISUALIZING THE ASSEMBLY PATHWAY OF NUCLEOLAR PRE-60S RIBOSOMES
+1054, p4u6fTA2, 0.6407, 2.91, 0.110, 105, 73, 
+1055, p5dgvUD2, 0.6406, 2.91, 0.110, 105, 73, 
+1056, p4u3mTA2, 0.6406, 2.91, 0.110, 105, 73, 
+1057, p6frkP2, 0.6405, 2.45, 0.114, 107, 70, struct.pdbx_descriptor              
+1058, p5xxbK2, 0.6404, 2.45, 0.114, 107, 70, struct.pdbx_descriptor              
+1059, p5ndvK2, 0.6404, 2.45, 0.114, 107, 70, struct.pdbx_descriptor              
+1060, p5dgvTA2, 0.6403, 2.74, 0.097, 108, 72, 
+1061, p5apoK2, 0.6399, 2.45, 0.114, 107, 70, 
+1062, p6ft6I2, 0.6397, 2.45, 0.114, 107, 70, struct.pdbx_descriptor              
+1063, p5h1sI2, 0.6396, 2.50, 0.099, 122, 71, STRUCTURE OF THE LARGE SUBUNIT OF THE CHLORO-RIBOSOME
+1064, p6elzDA2, 0.6391, 2.73, 0.097, 108, 72, State E (TAP-Flag-Ytm1 E80A) - Visualizing the assembly pathway of nucleolar pre-60S ribosmes  
+1065, p5tgmTA2, 0.6391, 2.74, 0.097, 108, 72, 
+1066, p4v5gYC1, 0.6389, 2.74, 0.097, 108, 72, 
+1067, p5ndgTA2, 0.6386, 2.72, 0.111, 105, 72, struct.pdbx_descriptor              
+1068, p6em1W2, 0.6385, 2.55, 0.113, 104, 71, State C (Nsa1-TAP Flag-Ytm1) - Visualizing the assembly pathway of nucleolar pre-60S ribosomes  
+1069, p4v7hFA2, 0.6384, 2.76, 0.097, 106, 72, 
+1070, p4v5gRA1, 0.6383, 2.75, 0.097, 108, 72, 
+1071, p5t2cFA2, 0.6381, 2.77, 0.097, 108, 72, 
+1072, p5dgeTA2, 0.6381, 2.33, 0.100, 108, 70, 
+1073, p5an9B2, 0.6376, 2.70, 0.157, 93, 70, MECHANISM OF EIF6 RELEASE FROM THE NASCENT 60S RIBOSOMAL SUBUNIT
+1074, p5z3gL2, 0.6375, 2.34, 0.100, 107, 70, CRYO-EM STRUCTURE OF A NUCLEOLAR PRE-60S RIBOSOME (RPF1-TAP) 
+1075, p5dgfTA2, 0.6371, 2.74, 0.097, 108, 72, 
+1076, p4v4gEG1, 0.6368, 2.35, 0.162, 70, 68, 
+1077, p4v4gDE1, 0.6368, 2.74, 0.097, 108, 72, 
+1078, p4v4gFI1, 0.6367, 2.34, 0.100, 107, 70, 
+1079, p4v4gCC1, 0.6367, 3.01, 0.095, 100, 74, 
+1080, p4v4gBA1, 0.6367, 2.27, 0.176, 70, 68, 
+1081, p5h4pK2, 0.6351, 2.37, 0.114, 105, 70, 
+1082, p4ug0K2, 0.6345, 2.73, 0.097, 108, 72, 
+1083, p5aj0J2, 0.6343, 2.75, 0.083, 105, 72, 
+1084, d1voyH_, 0.6342, 2.36, 0.100, 108, 70,  
+1085, d1vowH_, 0.6342, 2.74, 0.097, 108, 72,  
+1086, d1vp0H_, 0.6341, 2.49, 0.227, 78, 75,  
+1087, d1vouH_, 0.6341, 2.49, 0.227, 78, 75,  
+1088, d1vorH_, 0.6341, 2.49, 0.227, 78, 75,  
+1089, p5gakCA2, 0.6332, 2.49, 0.227, 78, 75, 
+1090, p5juuM2, 0.6331, 2.49, 0.227, 78, 75, 
+1091, p5t6rK2, 0.6327, 2.40, 0.114, 108, 70, 
+1092, p5m1jAB2, 0.6315, 2.74, 0.125, 105, 72, 
+1093, p5jutM2, 0.6315, 2.27, 0.116, 106, 69, 
+1094, p5iqrE2, 0.6304, 2.53, 0.250, 177, 76, 
+1095, p5o2rG2, 0.6302, 2.53, 0.250, 177, 76, Cryo-EM structure of the proline-rich antimicrobial peptide Api137 bound to the terminating ribosome  
+1096, p3jbnVB2, 0.6302, 2.53, 0.250, 177, 76, 
+1097, p5kpxE2, 0.6292, 2.53, 0.250, 177, 76, 
+1098, p4v8mFC2, 0.6283, 2.53, 0.250, 177, 76, 
+1099, p4v8mFC1, 0.6279, 2.73, 0.097, 108, 72, 
+1100, p5x8tG2, 0.6277, 3.16, 0.081, 108, 74, STRUCTURE OF THE 50S LARGE SUBUNIT OF CHLOROPLAST RIBOSOME FROM SPINACH
+1101, p5x8pM2, 0.6277, 2.50, 0.100, 108, 70, 
+1102, p5juoM2, 0.6273, 2.38, 0.100, 108, 70, 
+1103, p4v79CA2, 0.6272, 2.99, 0.082, 108, 73, 
+1104, p6gqvM2, 0.6260, 2.72, 0.099, 96, 71, struct.pdbx_descriptor              
+1105, p5mdwL2, 0.6256, 2.87, 0.097, 96, 72, 
+1106, p5mdzJ2, 0.6255, 2.63, 0.113, 102, 71, 
+1107, p4wf1BA2, 0.6254, 2.59, 0.100, 96, 70, 
+1108, p5mdvL2, 0.6253, 2.55, 0.141, 106, 71, 
+1109, p5mdyL2, 0.6252, 2.43, 0.257, 83, 70, 
+1110, p5tcuCA2, 0.6247, 2.75, 0.141, 93, 71, 
+1111, p5mmmO2, 0.6247, 2.75, 0.141, 93, 71, 
+1112, p4v6uDB2, 0.6246, 3.00, 0.096, 108, 73, 
+1113, p5mmiG2, 0.6245, 2.72, 0.127, 84, 71, STRUCTURE OF THE LARGE SUBUNIT OF THE CHLOROPLAST RIBOSOME
+1114, p5kpwE2, 0.6244, 3.02, 0.110, 108, 73, 
+1115, p4v4nXA2, 0.6242, 2.87, 0.097, 95, 72, 
+1116, p3j6yL2, 0.6242, 2.87, 0.097, 95, 72, 
+1117, p4v85NA2, 0.6240, 2.65, 0.100, 96, 70, 
+1118, p6c4iG2, 0.6238, 2.88, 0.097, 95, 72, Conformation of methylated GGQ in the peptidyl transferase center during translation termination  
+1119, p5gagG2, 0.6237, 2.87, 0.097, 95, 72, RNC IN COMPLEX WITH SRP-SR IN THE CLOSED STATE
+1120, p5uymE2, 0.6233, 2.90, 0.069, 94, 72, 
+1121, p4v9oQF2, 0.6233, 2.66, 0.129, 95, 70, 
+1122, p4u25BA2, 0.6233, 3.02, 0.137, 100, 73, 
+1123, p4u27BA2, 0.6232, 2.65, 0.129, 95, 70, 
+1124, p5nwyH2, 0.6231, 2.74, 0.099, 96, 71, 
+1125, p5h5uM2, 0.6231, 2.92, 0.137, 100, 73, 
+1126, p5u9fK2, 0.6230, 2.66, 0.113, 108, 71, 
+1127, p4v52VC2, 0.6230, 2.79, 0.099, 96, 71, 
+1128, p5jvhE2, 0.6229, 2.74, 0.099, 95, 71, THE CRYSTAL STRUCTURE LARGE RIBOSOMAL SUBUNIT (50S) OF DEINOCOCCUS RADIODURANS IN COMPLEX WITH EVERNIMICIN
+1129, p6enjG2, 0.6227, 2.89, 0.113, 96, 71, struct.pdbx_descriptor              
+1130, p5uylE2, 0.6227, 2.72, 0.099, 96, 71, 
+1131, p4woiKB2, 0.6226, 2.82, 0.099, 96, 71, 
+1132, p4v75CA2, 0.6224, 2.78, 0.114, 96, 70, 
+1133, d2qamG2, 0.6224, 2.69, 0.100, 96, 70,  
+1134, p5kpsF2, 0.6223, 2.75, 0.099, 96, 71, 
+1135, p5gaeG2, 0.6222, 2.77, 0.099, 96, 71, RNC IN COMPLEX WITH A TRANSLOCATING SECYEG
+1136, d2qaoG2, 0.6222, 2.84, 0.113, 96, 71,  
+1137, p5ncoI2, 0.6221, 2.83, 0.099, 96, 71, 
+1138, p5gahG2, 0.6221, 2.74, 0.099, 94, 71, RNC IN COMPLEX WITH SRP WITH DETACHED NG DOMAIN
+1139, p5gafG2, 0.6221, 2.72, 0.099, 96, 71, RNC IN COMPLEX WITH SRP
+1140, p5gadG2, 0.6221, 2.77, 0.099, 96, 71, RNC-SRP-SR COMPLEX EARLY STATE
+1141, p5anbB2, 0.6221, 2.75, 0.113, 97, 71, MECHANISM OF EIF6 RELEASE FROM THE NASCENT 60S RIBOSOMAL SUBUNIT
+1142, p6eriG2, 0.6220, 2.89, 0.125, 84, 72, struct.pdbx_descriptor              
+1143, p4u1vBA2, 0.6220, 2.63, 0.100, 95, 70, 
+1144, p5mgpG2, 0.6219, 2.88, 0.097, 96, 72, 
+1145, p4v7dH2, 0.6219, 2.88, 0.113, 96, 71, 
+1146, p4ybbBC2, 0.6218, 2.63, 0.100, 95, 70, 
+1147, p4u20BA2, 0.6215, 2.80, 0.099, 96, 71, 
+1148, p6enfCA2, 0.6212, 2.80, 0.099, 96, 71, struct.pdbx_descriptor              
+1149, p4v9pLD2, 0.6212, 2.80, 0.099, 96, 71, 
+1150, p4v52VA2, 0.6208, 2.80, 0.099, 96, 71, 
+1151, p5kcrG2, 0.6207, 2.98, 0.096, 105, 73, 
+1152, p5wdtG2, 0.6206, 2.90, 0.141, 94, 71, struct.pdbx_descriptor              Ribosome 
+1153, p5u9gK2, 0.6206, 2.68, 0.100, 96, 70, 
+1154, p4v7eQA2, 0.6206, 2.86, 0.097, 96, 72, 
+1155, p5lzdFA2, 0.6205, 2.66, 0.100, 96, 70, 
+1156, d3bbxG2, 0.6205, 2.67, 0.100, 96, 70, THE HSP15 PROTEIN FITTED INTO THE LOW RESOLUTION CRYO-EM MAP OF THE 50S.NC-TRNA.HSP15 COMPLEX
+1157, d2rdoG2, 0.6205, 2.80, 0.099, 96, 71, 50S SUBUNIT WITH EF-G(GDPNP) AND RRF BOUND
+1158, d2aw4G2, 0.6205, 2.82, 0.113, 96, 71,  
+1159, p5we4G2, 0.6204, 2.76, 0.099, 96, 71, struct.pdbx_descriptor              ribosome 
+1160, p4v9cGC2, 0.6204, 2.45, 0.101, 97, 69, 
+1161, p3j3wG2, 0.6202, 2.68, 0.100, 96, 70, ATOMIC MODEL OF THE IMMATURE 50S SUBUNIT FROM BACILLUS SUBTILIS (STATE II-A)
+1162, p6gq1M2, 0.6201, 2.80, 0.099, 94, 71, Cryo-EM reconstruction of yeast 80S ribosome in complex with mRNA; tRNA and eEF2 (GMPPCP/sordarin)  
+1163, p5kpvE2, 0.6200, 2.78, 0.099, 96, 71, 
+1164, p4wfaE2, 0.6200, 2.80, 0.139, 106, 72, THE CRYSTAL STRUCTURE OF THE LARGE RIBOSOMAL SUBUNIT OF STAPHYLOCOCCUS AUREUS IN COMPLEX WITH LINEZOLID
+1165, p4u1uBA2, 0.6199, 2.45, 0.101, 97, 69, 
+1166, p5afiGA2, 0.6198, 2.66, 0.114, 95, 70, 
+1167, p3j9yEA2, 0.6198, 2.66, 0.114, 95, 70, 
+1168, p5j7lFC2, 0.6195, 2.66, 0.114, 95, 70, 
+1169, p4v4qCA2, 0.6194, 2.81, 0.099, 94, 71, 
+1170, p5wf0G2, 0.6192, 2.67, 0.100, 96, 70, struct.pdbx_descriptor              
+1171, p5jc9FC2, 0.6192, 2.99, 0.069, 89, 72, 
+1172, p4v7cGA2, 0.6192, 2.84, 0.097, 108, 72, 
+1173, p4v6tEA2, 0.6192, 2.73, 0.099, 96, 71, 
+1174, p5uykE2, 0.6189, 2.84, 0.056, 92, 71, 
+1175, p4woiEA2, 0.6189, 2.68, 0.100, 96, 70, 
+1176, p5j91FC2, 0.6188, 2.79, 0.099, 96, 71, 
+1177, p5j5bFC2, 0.6188, 2.79, 0.099, 96, 71, 
+1178, p4u24BA2, 0.6188, 2.82, 0.099, 96, 71, 
+1179, p5wfkG2, 0.6187, 2.65, 0.100, 97, 70, struct.pdbx_descriptor              
+1180, p5lzeEA2, 0.6186, 2.81, 0.099, 94, 71, 
+1181, p4v9dBB2, 0.6186, 2.82, 0.099, 96, 71, 
+1182, p4v5yWC2, 0.6185, 2.79, 0.099, 96, 71, 
+1183, p5j7lKB2, 0.6184, 2.62, 0.114, 95, 70, 
+1184, p5j91KB2, 0.6183, 2.81, 0.099, 96, 71, 
+1185, p5j5bKB2, 0.6183, 2.77, 0.099, 96, 71, 
+1186, p5mrfF2, 0.6182, 2.81, 0.099, 96, 71, 
+1187, p5mreF2, 0.6182, 2.81, 0.099, 96, 71, 
+1188, p5mrcF2, 0.6182, 2.71, 0.100, 96, 70, 
+1189, p5j8aFC2, 0.6180, 2.82, 0.099, 94, 71, 
+1190, p5jc9KB2, 0.6179, 2.79, 0.099, 96, 71, 
+1191, p6bu8E2, 0.6176, 2.80, 0.099, 96, 71, struct.pdbx_descriptor              
+1192, p6gc8G2, 0.6174, 2.68, 0.100, 96, 70, 50S RIBOSOMAL SUBUNIT ASSEMBLY INTERMEDIATE - 50S REC* 
+1193, p5j8aKB2, 0.6174, 2.64, 0.114, 95, 70, 
+1194, p4u26BA2, 0.6174, 2.64, 0.114, 95, 70, 
+1195, p6enuCA2, 0.6172, 2.64, 0.114, 95, 70, struct.pdbx_descriptor              
+1196, p5wfsG2, 0.6172, 2.95, 0.153, 96, 72, struct.pdbx_descriptor              
+1197, p3ja1TA2, 0.6170, 2.95, 0.153, 96, 72, 
+1198, p5akaG2, 0.6169, 2.95, 0.153, 96, 72, EM STRUCTURE OF RIBOSOME-SRP-FTSY COMPLEX IN CLOSED STATE
+1199, p3j78I2, 0.6168, 2.83, 0.099, 96, 71, 
+1200, p5xy3K2, 0.6166, 2.65, 0.114, 95, 70, struct.pdbx_descriptor              
+1201, p5lzbFA2, 0.6166, 2.73, 0.099, 96, 71, 
+1202, p3j6bF2, 0.6166, 2.78, 0.099, 96, 71, 
+1203, d2z4lG2, 0.6165, 2.65, 0.114, 95, 70,  
+1204, d2z4nG2, 0.6164, 2.71, 0.100, 96, 70,  
+1205, p4v9oKB2, 0.6161, 2.77, 0.113, 96, 71, 
+1206, p4v7uBA2, 0.6159, 2.83, 0.099, 94, 71, 
+1207, p3j5lG2, 0.6159, 2.72, 0.100, 96, 70, STRUCTURE OF THE E. COLI 50S SUBUNIT WITH ERMBL NASCENT CHAIN
+1208, p5lzcFA2, 0.6156, 2.79, 0.099, 96, 71, 
+1209, p5it8HC2, 0.6155, 2.75, 0.085, 108, 71, 
+1210, p5jvgE2, 0.6154, 2.94, 0.069, 104, 72, THE LARGE RIBOSOMAL SUBUNIT FROM DEINOCOCCUS RADIODURANS IN COMPLEX WITH AVILAMYCIN
+1211, p4v6aJC2, 0.6152, 2.65, 0.100, 97, 70, 
+1212, p5lksK2, 0.6151, 2.78, 0.141, 93, 71, 
+1213, p4v5dVC2, 0.6150, 2.66, 0.100, 95, 70, 
+1214, p5it8MB2, 0.6148, 2.66, 0.100, 95, 70, 
+1215, p4v5yVA2, 0.6148, 2.82, 0.099, 96, 71, 
+1216, d1vs6G2, 0.6146, 2.65, 0.100, 97, 70,  
+1217, p4v9oND2, 0.6145, 2.65, 0.100, 97, 70, 
+1218, p3jcdEA2, 0.6143, 2.69, 0.100, 96, 70, 
+1219, p5mlcH2, 0.6142, 2.83, 0.099, 96, 71, CRYO-EM STRUCTURE OF THE SPINACH CHLOROPLAST RIBOSOME REVEALS THE LOCATION OF PLASTID-SPECIFIC RIBOSOMAL PROTEINS AND EXTENSIONS
+1220, p4v9oG2, 0.6142, 2.75, 0.099, 94, 71, 
+1221, p4v7bFA2, 0.6142, 2.69, 0.056, 89, 71, 
+1222, p4uy8G2, 0.6142, 2.46, 0.114, 105, 70, MOLECULAR BASIS FOR THE RIBOSOME FUNCTIONING AS A L-TRYPTOPHAN SENSOR - CRYO-EM STRUCTURE OF A TNAC STALLED E.COLI RIBOSOME
+1223, p3j7zG2, 0.6142, 2.66, 0.056, 89, 71, STRUCTURE OF THE E. COLI 50S SUBUNIT WITH ERMCL NASCENT CHAIN
+1224, p6fxcCC2, 0.6141, 2.66, 0.114, 95, 70, The cryo-EM structure of hibernating 100S ribosome dimer from pathogenic Staphylococcus aureus  
+1225, p6fxcCA2, 0.6141, 2.49, 0.101, 97, 69, The cryo-EM structure of hibernating 100S ribosome dimer from pathogenic Staphylococcus aureus  
+1226, p5ngmCA2, 0.6141, 2.68, 0.114, 95, 70, struct.pdbx_descriptor              
+1227, p3j77I2, 0.6140, 2.81, 0.099, 96, 71, 
+1228, p4v6dDC2, 0.6139, 2.51, 0.101, 97, 69, 
+1229, p4v7zKA2, 0.6135, 2.42, 0.147, 97, 68, 
+1230, p4v5dQA2, 0.6135, 2.84, 0.099, 96, 71, 
+1231, p4v4iH1, 0.6135, 2.84, 0.099, 96, 71, 
+1232, p3jbuGA2, 0.6133, 2.84, 0.099, 96, 71, 
+1233, p4v5bM2, 0.6132, 2.84, 0.099, 96, 71, 
+1234, d2vhmG2, 0.6132, 2.76, 0.070, 96, 71,  
+1235, p4v7zJC2, 0.6130, 2.76, 0.070, 96, 71, 
+1236, p4v6eHC2, 0.6130, 2.76, 0.070, 96, 71, 
+1237, p5lzaDA2, 0.6128, 2.54, 0.086, 108, 70, 
+1238, p4u1uDC2, 0.6128, 2.60, 0.100, 95, 70, 
+1239, p4v7uBC2, 0.6127, 2.77, 0.056, 89, 71, 
+1240, p4v53VC2, 0.6127, 2.79, 0.056, 89, 72, 
+1241, p5j88FC2, 0.6126, 2.66, 0.176, 77, 74, 
+1242, p4v4hCA2, 0.6124, 2.91, 0.113, 96, 71, 
+1243, p3pioE2, 0.6124, 2.57, 0.101, 97, 69, CRYSTAL STRUCTURE OF THE SYNERGISTIC ANTIBIOTIC PAIR LANKAMYCIN AND LANKACIDIN IN COMPLEX WITH THE LARGE RIBOSOMAL SUBUNIT
+1244, p4v89MA2, 0.6122, 2.57, 0.101, 95, 69, 
+1245, p4v7vBA2, 0.6121, 2.78, 0.056, 89, 71, 
+1246, p6d9jH2, 0.6120, 2.80, 0.099, 96, 71, struct.pdbx_descriptor              Ribosome 
+1247, d2qozG2, 0.6120, 2.81, 0.099, 96, 71,  
+1248, p5we6G2, 0.6119, 2.62, 0.114, 95, 70, struct.pdbx_descriptor              Ribosome 
+1249, p4v8qR2, 0.6119, 2.61, 0.100, 95, 70, 
+1250, p4v7vBC2, 0.6119, 2.81, 0.099, 96, 71, 
+1251, p3jbvNA2, 0.6119, 2.87, 0.113, 96, 71, 
+1252, p5u4iG2, 0.6118, 2.68, 0.100, 97, 70, 
+1253, p4v6cBC2, 0.6118, 2.63, 0.086, 94, 70, 
+1254, d2qp1G2, 0.6118, 2.95, 0.097, 96, 72,  
+1255, d2qbcG2, 0.6118, 2.69, 0.100, 96, 70,  
+1256, p5j8bH2, 0.6117, 2.88, 0.110, 105, 73, 
+1257, p5j88KB2, 0.6116, 2.49, 0.116, 95, 69, 
+1258, p4v9dGC2, 0.6116, 2.86, 0.099, 94, 71, 
+1259, p4v9pG2, 0.6115, 2.62, 0.056, 89, 71, 
+1260, d2qbaG2, 0.6115, 2.60, 0.100, 95, 70,  
+1261, p4v57VA2, 0.6114, 2.66, 0.114, 96, 70, 
+1262, p4v5pYC2, 0.6113, 2.57, 0.101, 96, 69, 
+1263, p4v5pRA2, 0.6113, 2.61, 0.100, 95, 70, 
+1264, p4v7tBC2, 0.6112, 2.49, 0.116, 95, 69, 
+1265, p4v5sYC2, 0.6112, 2.61, 0.100, 95, 70, 
+1266, p4v53VA2, 0.6111, 2.93, 0.056, 94, 72, 
+1267, p4v7sBC2, 0.6110, 2.70, 0.114, 95, 70, 
+1268, p4v7mHA2, 0.6110, 2.81, 0.099, 96, 71, 
+1269, d3cf5E1, 0.6110, 2.95, 0.097, 96, 72, THIOPEPTIDE ANTIBIOTIC THIOSTREPTON BOUND TO THE LARGE RIBOSOMAL SUBUNIT OF DEINOCOCCUS RADIODURANS
+1270, p4v5sRA2, 0.6108, 2.61, 0.100, 95, 70, 
+1271, d2j28G2, 0.6107, 2.53, 0.116, 97, 69, MODEL OF E. COLI SRP BOUND TO 70S RNCS
+1272, d2awbG2, 0.6107, 2.71, 0.056, 89, 71,  
+1273, p4u1vDC2, 0.6105, 2.71, 0.056, 89, 71, 
+1274, d1vs8G2, 0.6104, 2.62, 0.100, 95, 70,  
+1275, p4v57VC2, 0.6103, 2.71, 0.056, 89, 71, 
+1276, p5uyqE2, 0.6102, 2.64, 0.100, 97, 70, 
+1277, p4v64CC2, 0.6102, 2.61, 0.100, 95, 70, 
+1278, p4v67FA2, 0.6101, 2.78, 0.056, 87, 71, 
+1279, p4u20CC2, 0.6101, 2.76, 0.085, 90, 71, 
+1280, p5kcsG2, 0.6100, 2.71, 0.056, 89, 71, 
+1281, p4v7xKA2, 0.6099, 2.82, 0.113, 95, 71, 
+1282, p6gsjFA2, 0.6098, 2.82, 0.113, 95, 71, Structure of T. thermophilus 70S ribosome complex with mRNA; tRNAfMet and cognate tRNAThr in the A-site  
+1283, p4v7xJC2, 0.6098, 2.64, 0.114, 95, 70, 
+1284, p4v4qCC2, 0.6098, 2.86, 0.113, 95, 71, 
+1285, p4v6aFA2, 0.6096, 2.83, 0.099, 96, 71, 
+1286, p6gbzG2, 0.6095, 2.95, 0.113, 96, 71, 50S RIBOSOMAL SUBUNIT ASSEMBLY INTERMEDIATE STATE 5 
+1287, p6b4vI2, 0.6095, 2.80, 0.114, 96, 70, struct.pdbx_descriptor              
+1288, p3j3vG2, 0.6094, 2.81, 0.056, 89, 71, ATOMIC MODEL OF THE IMMATURE 50S SUBUNIT FROM BACILLUS SUBTILIS (STATE I-A)
+1289, p6b4vMB2, 0.6092, 2.78, 0.113, 95, 71, struct.pdbx_descriptor              
+1290, p4wwwBC2, 0.6092, 2.65, 0.100, 96, 70, 
+1291, p4wfnE2, 0.6092, 2.81, 0.056, 89, 71, CRYSTAL STRUCTURE OF THE LARGE RIBOSOMAL SUBUNIT (50S) OF DEINOCOCCUS RADIODURANS CONTAINING A THREE RESIDUE INSERTION IN L22 IN COMPLEX WITH ERYTHROMYCIN
+1292, p3jcnL2, 0.6091, 2.83, 0.056, 94, 72, 
+1293, p6gslGA2, 0.6090, 2.81, 0.056, 89, 71, Structure of T. thermophilus 70S ribosome complex with mRNA; tRNAfMet and cognate tRNAArg in the A-site  
+1294, p4v7sBA2, 0.6090, 2.58, 0.116, 96, 69, 
+1295, p4u67E2, 0.6090, 2.65, 0.057, 91, 70, CRYSTAL STRUCTURE OF THE LARGE RIBOSOMAL SUBUNIT (50S) OF DEINOCOCCUS RADIODURANS CONTAINING A THREE RESIDUE INSERTION IN L22
+1296, p4v95EA2, 0.6089, 2.88, 0.099, 96, 71, 
+1297, p4v7wKA2, 0.6088, 2.91, 0.056, 94, 72, 
+1298, p4v55WC2, 0.6086, 2.82, 0.070, 89, 71, 
+1299, p5adyG2, 0.6085, 2.91, 0.056, 94, 72, CRYO-EM STRUCTURES OF THE 50S RIBOSOME SUBUNIT BOUND WITH HFLX
+1300, p4v67JC2, 0.6084, 2.63, 0.100, 95, 70, 
+1301, d2zjpE1, 0.6084, 2.85, 0.099, 94, 71, THIOPEPTIDE ANTIBIOTIC NOSIHEPTIDE BOUND TO THE LARGE RIBOSOMAL SUBUNIT OF DEINOCOCCUS RADIODURANS
+1302, p4wwwG2, 0.6083, 2.84, 0.099, 96, 71, 
+1303, p3j6xL2, 0.6083, 2.79, 0.056, 91, 72, 
+1304, d2i2vG2, 0.6083, 2.70, 0.100, 96, 70,  
+1305, p6gskFA2, 0.6082, 2.80, 0.099, 94, 71, Structure of T. thermophilus 70S ribosome complex with mRNA; tRNAfMet and near-cognate tRNAThr in the A-site  
+1306, p5uypE2, 0.6082, 2.84, 0.070, 94, 71, 
+1307, p5el4GA2, 0.6082, 2.94, 0.056, 89, 72, 
+1308, p4v7wJC2, 0.6082, 2.83, 0.099, 96, 71, 
+1309, p4v64CA2, 0.6082, 2.85, 0.111, 96, 72, 
+1310, p4v4hCC2, 0.6082, 2.98, 0.056, 89, 72, 
+1311, p4v97GA2, 0.6081, 2.75, 0.085, 90, 71, 
+1312, p4v7tBA2, 0.6081, 2.70, 0.100, 96, 70, 
+1313, p4v6dDA2, 0.6081, 2.68, 0.114, 108, 70, 
+1314, d2i2tG2, 0.6080, 2.55, 0.116, 95, 69,  
+1315, d2qbiG2, 0.6079, 2.80, 0.056, 94, 72,  
+1316, p4v56VC2, 0.6078, 2.89, 0.099, 96, 71, 
+1317, d2zjrE1, 0.6077, 2.61, 0.056, 93, 71, REFINED NATIVE STRUCTURE OF THE LARGE RIBOSOMAL SUBUNIT (50S) FROM DEINOCOCCUS RADIODURANS
+1318, p4v7lHA2, 0.6076, 2.94, 0.056, 89, 72, 
+1319, p4io9E2, 0.6076, 2.70, 0.100, 97, 70, CRYSTAL STRUCTURE OF COMPOUND 4D BOUND TO LARGE RIBOSOMAL SUBUNIT (50S) FROM DEINOCOCCUS RADIODURANS
+1320, p3jceHA2, 0.6076, 2.78, 0.114, 96, 70, 
+1321, d2qbkG2, 0.6076, 2.76, 0.056, 89, 71,  
+1322, p5np6EA2, 0.6075, 2.71, 0.100, 96, 70, 
+1323, p4v9hCB2, 0.6075, 2.74, 0.100, 96, 70, 
+1324, p4v5lRA2, 0.6075, 2.55, 0.116, 95, 69, 
+1325, p4v55VA2, 0.6075, 2.64, 0.100, 95, 70, 
+1326, p3pipE2, 0.6074, 2.57, 0.116, 96, 69, CRYSTAL STRUCTURE OF THE SYNERGISTIC ANTIBIOTIC PAIR LANKAMYCIN AND LANKACIDIN IN COMPLEX WITH THE LARGE RIBOSOMAL SUBUNIT
+1327, p3jcsM2, 0.6073, 2.77, 0.085, 90, 71, 
+1328, p4wu1FA2, 0.6072, 2.66, 0.057, 90, 70, 
+1329, p4v6cBA2, 0.6072, 2.79, 0.085, 94, 71, 
+1330, d2qovG2, 0.6071, 2.82, 0.099, 96, 71,  
+1331, p5fduG2, 0.6070, 2.64, 0.100, 95, 70, 
+1332, p4v9pJB2, 0.6070, 2.90, 0.127, 96, 71, 
+1333, p4ioaE2, 0.6070, 2.62, 0.071, 95, 70, CRYSTAL STRUCTURE OF COMPOUND 4E BOUND TO LARGE RIBOSOMAL SUBUNIT (50S) FROM DEINOCOCCUS RADIODURANS
+1334, d2qoxG2, 0.6070, 2.68, 0.056, 89, 71,  
+1335, p4v9nHC2, 0.6069, 2.66, 0.100, 97, 70, 
+1336, p4v5rYC2, 0.6069, 2.67, 0.086, 94, 70, 
+1337, p5l3pG2, 0.6068, 2.76, 0.197, 106, 71, 
+1338, p4wqyMB2, 0.6068, 2.69, 0.056, 94, 71, 
+1339, p4wpoOB2, 0.6068, 2.70, 0.100, 96, 70, 
+1340, p4v5qYC2, 0.6068, 2.69, 0.129, 95, 70, 
+1341, p4v5jXC2, 0.6068, 2.96, 0.056, 94, 72, 
+1342, p4v8gCA2, 0.6067, 2.85, 0.099, 96, 71, 
+1343, p4v5rRA2, 0.6067, 2.79, 0.085, 94, 71, 
+1344, p4v5jQA2, 0.6066, 2.69, 0.129, 95, 70, 
+1345, p4v50FC2, 0.6066, 2.77, 0.056, 89, 71, 
+1346, d2zjqE1, 0.6065, 2.75, 0.056, 89, 71, INTERACTION OF L7 WITH L11 INDUCED BY MICROCCOCIN BINDING TO THE DEINOCOCCUS RADIODURANS 50S SUBUNIT
+1347, p4wf1CC2, 0.6063, 2.67, 0.100, 96, 70, 
+1348, p4v50DA2, 0.6063, 2.80, 0.056, 94, 71, 
+1349, d3dllE1, 0.6063, 2.79, 0.056, 94, 71, THE OXAZOLIDINONE ANTIBIOTICS PERTURB THE RIBOSOMAL PEPTIDYL- TRANSFERASE CENTER AND EFFECT TRNA POSITIONING
+1350, p4v56VA2, 0.6062, 2.72, 0.056, 89, 71, 
+1351, p4v9pOF2, 0.6061, 2.78, 0.070, 89, 71, 
+1352, p4v8nQA2, 0.6061, 2.96, 0.056, 94, 72, 
+1353, p4v6eEA2, 0.6061, 2.75, 0.056, 89, 71, 
+1354, p4v5qRA2, 0.6061, 2.78, 0.070, 89, 71, 
+1355, p5dm6E2, 0.6060, 2.88, 0.099, 96, 71, CRYSTAL STRUCTURE OF THE 50S RIBOSOMAL SUBUNIT FROM DEINOCOCCUS RADIODURANS
+1356, p4ybbWA2, 0.6060, 2.79, 0.085, 90, 71, 
+1357, p4wqfNB2, 0.6060, 2.79, 0.113, 95, 71, 
+1358, p4v8nWC2, 0.6060, 2.89, 0.099, 96, 71, 
+1359, p4v8gDC2, 0.6060, 2.63, 0.086, 90, 70, 
+1360, p6bokI2, 0.6059, 2.70, 0.114, 97, 70, struct.pdbx_descriptor               Ribosome; Peptide chain release factor 1  
+1361, p4zsnHC2, 0.6059, 2.86, 0.099, 96, 71, 
+1362, p4yzvHC2, 0.6059, 2.83, 0.056, 89, 72, 
+1363, p4ypbJC2, 0.6059, 2.69, 0.100, 96, 70, 
+1364, p4w4gJC2, 0.6059, 2.70, 0.056, 89, 71, 
+1365, p4v84DC2, 0.6059, 2.80, 0.085, 94, 71, 
+1366, p6bokLB2, 0.6058, 2.82, 0.113, 95, 71, struct.pdbx_descriptor               Ribosome; Peptide chain release factor 1  
+1367, p4v84CA2, 0.6058, 2.80, 0.056, 94, 71, 
+1368, p4zsnEA2, 0.6057, 2.83, 0.056, 89, 72, 
+1369, p4yzvEA2, 0.6057, 2.97, 0.056, 94, 72, 
+1370, p4ypbFA2, 0.6057, 2.94, 0.069, 94, 72, 
+1371, p4w4gFA2, 0.6057, 2.64, 0.057, 91, 70, 
+1372, p4v6kH2, 0.6056, 2.64, 0.057, 91, 70, 
+1373, p6dncJ2, 0.6055, 2.64, 0.057, 91, 70, struct.pdbx_descriptor              ribosome 
+1374, p5o61H2, 0.6054, 2.64, 0.057, 91, 70, 
+1375, p4v9nEA2, 0.6054, 2.90, 0.070, 89, 71, 
+1376, p4u27DC2, 0.6053, 2.94, 0.069, 94, 72, 
+1377, p5e81GA2, 0.6052, 2.90, 0.070, 89, 71, 
+1378, p4wzdFA2, 0.6052, 2.81, 0.056, 91, 71, 
+1379, p5el6GA2, 0.6051, 2.81, 0.056, 91, 71, 
+1380, p4v5cVC2, 0.6051, 2.81, 0.056, 91, 71, 
+1381, p4v5cQA2, 0.6051, 2.81, 0.056, 91, 71, 
+1382, p5j4dMB2, 0.6050, 2.88, 0.125, 95, 72, 
+1383, p4v8jLC2, 0.6050, 2.83, 0.099, 96, 71, 
+1384, p4v8jGA2, 0.6050, 2.65, 0.086, 95, 70, 
+1385, p5j4dI2, 0.6049, 2.63, 0.057, 90, 70, 
+1386, p4wqfH2, 0.6049, 2.79, 0.113, 95, 71, 
+1387, p4v7jKC2, 0.6049, 2.67, 0.056, 94, 71, 
+1388, p3j9zXA2, 0.6049, 2.70, 0.056, 94, 71, 
+1389, p3j8gG2, 0.6049, 2.66, 0.056, 91, 71, ELECTRON CRYO-MICROSCOPY STRUCTURE OF ENGA BOUND WITH THE 50S RIBOSOMAL SUBUNIT
+1390, d2vhnG2, 0.6049, 2.90, 0.056, 89, 72,  
+1391, p5t7vIA2, 0.6048, 2.90, 0.056, 89, 72, 
+1392, p5el5GA2, 0.6048, 2.82, 0.056, 102, 71, 
+1393, p5j3cG2, 0.6047, 2.90, 0.056, 89, 72, 
+1394, p4u25CC2, 0.6047, 2.90, 0.056, 89, 72, 
+1395, p5j3cJB2, 0.6046, 2.85, 0.056, 94, 71, 
+1396, p5j30JB2, 0.6046, 2.98, 0.056, 94, 72, 
+1397, p5el7GA2, 0.6046, 2.85, 0.056, 89, 72, 
+1398, p4wfbE2, 0.6046, 2.66, 0.100, 96, 70, THE CRYSTAL STRUCTURE OF THE LARGE RIBOSOMAL SUBUNIT OF STAPHYLOCOCCUS AUREUS IN COMPLEX WITH BC-3205
+1399, p4v7jEA2, 0.6046, 2.99, 0.097, 96, 72, 
+1400, p4wzoGA2, 0.6045, 2.70, 0.114, 95, 70, 
+1401, p4v5bMB2, 0.6045, 2.98, 0.069, 94, 72, 
+1402, p4z8cJB2, 0.6044, 2.65, 0.056, 91, 71, 
+1403, p5ot7RA2, 0.6043, 2.79, 0.056, 94, 71, struct.pdbx_descriptor              
+1404, p4xejE2, 0.6043, 2.80, 0.113, 95, 71, 
+1405, p4v90PA2, 0.6043, 2.95, 0.056, 94, 72, 
+1406, p5dm7E2, 0.6042, 3.00, 0.069, 94, 72, CRYSTAL STRUCTURE OF THE 50S RIBOSOMAL SUBUNIT FROM DEINOCOCCUS RADIODURANS IN COMPLEX WITH HYGROMYCIN A
+1407, p4wroLA2, 0.6042, 2.70, 0.056, 91, 71, 
+1408, p4v8fG2, 0.6041, 2.98, 0.056, 92, 72, 
+1409, p4v7yKA2, 0.6041, 2.85, 0.056, 89, 72, 
+1410, p5j30G2, 0.6040, 2.83, 0.056, 94, 72, 
+1411, p5dfeM2, 0.6040, 2.87, 0.099, 96, 71, 
+1412, p4wt8AB2, 0.6038, 3.00, 0.069, 94, 72, 
+1413, p4v4vGA2, 0.6038, 2.74, 0.071, 93, 70, 
+1414, p5uynE2, 0.6037, 2.83, 0.056, 89, 71, 
+1415, p4v8hCA2, 0.6037, 2.70, 0.056, 84, 71, 
+1416, p5o60G2, 0.6036, 2.91, 0.083, 94, 72, STRUCTURE OF THE 50S LARGE RIBOSOMAL SUBUNIT FROM MYCOBACTERIUM SMEGMATIS
+1417, p5ib7GA2, 0.6036, 2.71, 0.056, 94, 71, 
+1418, p4v7yJC2, 0.6036, 2.97, 0.056, 90, 72, 
+1419, p6cflG2, 0.6035, 2.69, 0.057, 89, 70, Crystal structure of the Thermus thermophilus 70S ribosome in complex with lysyl-CAM and bound to protein Y (YfiA) at 2.6A resolution
+1420, p5hcrG2, 0.6034, 2.79, 0.056, 94, 71, 
+1421, p5hd1G2, 0.6032, 2.91, 0.056, 94, 72, 
+1422, p5fdvG2, 0.6032, 2.86, 0.056, 89, 72, 
+1423, p5dfeHC2, 0.6032, 2.90, 0.101, 90, 69, 
+1424, p4v8hDC2, 0.6032, 2.82, 0.099, 97, 71, 
+1425, p4v8aKA2, 0.6032, 2.92, 0.056, 94, 72, 
+1426, p5ib8GA2, 0.6031, 2.66, 0.086, 95, 70, 
+1427, p5czpBC2, 0.6030, 2.81, 0.056, 94, 72, 
+1428, p4y4oG2, 0.6030, 2.69, 0.057, 89, 70, 
+1429, p4wsmFA2, 0.6030, 2.94, 0.056, 94, 72, 
+1430, p4wq1FA2, 0.6030, 2.98, 0.056, 94, 72, 
+1431, p4v7kKC2, 0.6030, 2.98, 0.056, 94, 72, 
+1432, p5czpG2, 0.6029, 2.98, 0.056, 94, 72, 
+1433, p4y4oHB2, 0.6029, 2.79, 0.056, 94, 71, 
+1434, p4wr6FA2, 0.6029, 2.92, 0.056, 94, 72, 
+1435, p4v7kEA2, 0.6029, 2.92, 0.056, 94, 72, 
+1436, p5njtAA2, 0.6028, 2.81, 0.056, 94, 72, 
+1437, p4wquOB2, 0.6027, 2.97, 0.056, 94, 72, 
+1438, p4v8uQA2, 0.6027, 2.97, 0.056, 94, 72, 
+1439, p4wt1FA2, 0.6026, 2.72, 0.056, 94, 71, 
+1440, p4v9iGA2, 0.6026, 2.84, 0.056, 94, 72, 
+1441, p4v8uVC2, 0.6025, 2.84, 0.056, 89, 72, 
+1442, p6cfkG2, 0.6024, 3.05, 0.069, 94, 72, Crystal structure of the Thermus thermophilus 70S ribosome in complex with D-histidyl-CAM and bound to protein Y (YfiA) at 2.7A resolution
+1443, p5fduIB2, 0.6024, 3.05, 0.069, 94, 72, 
+1444, p4w2iJC2, 0.6024, 2.69, 0.056, 94, 71, 
+1445, p4w2hEA2, 0.6024, 2.84, 0.056, 89, 72, 
+1446, p4iocE2, 0.6024, 2.85, 0.070, 94, 71, CRYSTAL STRUCTURE OF COMPOUND 4F BOUND TO LARGE RIBOSOMAL SUBUNIT (50S) FROM DEINOCOCCUS RADIODURANS
+1447, p5hcqG2, 0.6023, 3.00, 0.069, 94, 72, 
+1448, p6caeKB2, 0.6022, 2.67, 0.071, 96, 70, Crystal structure of the Thermus thermophilus 70S ribosome in complex with NOSO-95179 antibiotic and bound to mRNA and A-; P- and E-site tRNAs at 2.6A resolution
+1449, p4v54VA2, 0.6022, 2.82, 0.056, 94, 72, 
+1450, p4v4wGA2, 0.6021, 2.90, 0.056, 89, 72, 
+1451, p4wpoH2, 0.6020, 2.67, 0.071, 96, 70, 
+1452, p4v7lNC2, 0.6020, 2.94, 0.056, 94, 72, 
+1453, p4v8iCA2, 0.6019, 2.83, 0.056, 94, 71, 
+1454, d3df4G2, 0.6017, 3.02, 0.069, 94, 72,  
+1455, d3df2G2, 0.6017, 2.93, 0.056, 94, 72,  
+1456, p1vy7FA2, 0.6017, 2.79, 0.085, 94, 71, 
+1457, p5e7kGA2, 0.6016, 2.97, 0.056, 94, 72, 
+1458, p5d8bAB2, 0.6016, 2.94, 0.056, 94, 72, 
+1459, p4v54WC2, 0.6016, 2.57, 0.101, 97, 69, 
+1460, p5d8bE2, 0.6015, 2.91, 0.101, 90, 69, 
+1461, p4v8aG2, 0.6015, 2.82, 0.056, 94, 71, 
+1462, p5hcpG2, 0.6014, 2.94, 0.056, 89, 72, 
+1463, p4w2iFA2, 0.6014, 2.93, 0.056, 94, 72, 
+1464, p4v97LC2, 0.6014, 2.78, 0.127, 95, 71, 
+1465, p6bohNB1, 0.6013, 2.79, 0.127, 95, 71, Antibiotic blasticidin S and E. coli release factor 1 (containing deletion 302-304) bound to the 70S ribosome  
+1466, p5doyKB2, 0.6013, 2.92, 0.056, 94, 72, 
+1467, p4v6fIC2, 0.6013, 2.83, 0.056, 91, 72, 
+1468, p5witG2, 0.6012, 2.87, 0.070, 94, 71, Crystal structure of the Thermus thermophilus 70S ribosome in complex with pikromycin and bound to mRNA and A-; P- and E-site tRNAs at 2.6A resolution
+1469, p4z8cG2, 0.6012, 2.87, 0.099, 96, 71, 
+1470, p4wqrFA2, 0.6012, 2.87, 0.070, 94, 71, 
+1471, p4v47G2, 0.6012, 2.81, 0.056, 94, 71, 
+1472, d1rl6A2, 0.6012, 2.99, 0.056, 94, 72, RIBOSOMAL PROTEIN L6
+1473, p5hd1JB2, 0.6011, 2.95, 0.056, 94, 72, 
+1474, p5hcqJB2, 0.6011, 2.91, 0.056, 90, 72, 
+1475, p5v8iGB2, 0.6010, 2.78, 0.056, 102, 71, struct.pdbx_descriptor               70S Ribosome  
+1476, p4v6gEA2, 0.6010, 2.82, 0.056, 94, 71, 
+1477, p6fkrIB2, 0.6008, 2.97, 0.056, 90, 72, Crystal structure of the dolphin proline-rich antimicrobial peptide Tur1A bound to the Thermus thermophilus 70S ribosome  
+1478, p4z3sG2, 0.6008, 3.02, 0.069, 94, 72, 
+1479, p5ndkHC2, 0.6007, 2.98, 0.056, 94, 72, Crystal structure of aminoglycoside TC007 co-crystallized with 70S ribosome from Thermus thermophilus; three tRNAs and mRNA  
+1480, p4v8iDC2, 0.6007, 2.82, 0.056, 94, 72, 
+1481, p1vy6EA2, 0.6007, 2.93, 0.101, 90, 69, 
+1482, p1ml5h2, 0.6007, 2.82, 0.085, 89, 71, STRUCTURE OF THE E. COLI RIBOSOMAL TERMINATION COMPLEX WITH RELEASE FACTOR 2
+1483, p5hauH2, 0.6006, 2.94, 0.056, 94, 72, 
+1484, p4v42GA2, 0.6006, 3.00, 0.056, 94, 72, 
+1485, p5lzfEA2, 0.6005, 3.06, 0.069, 94, 72, 
+1486, p5fdvJB2, 0.6005, 2.86, 0.056, 91, 71, 
+1487, p5hcpJB2, 0.6004, 2.88, 0.056, 94, 71, 
+1488, p6bohI2, 0.6002, 3.00, 0.069, 94, 72, Antibiotic blasticidin S and E. coli release factor 1 (containing deletion 302-304) bound to the 70S ribosome  
+1489, p4zerG2, 0.6002, 2.86, 0.056, 94, 72, 
+1490, p4wquH2, 0.6002, 2.94, 0.056, 94, 72, 
+1491, p4w2gFA2, 0.6002, 2.88, 0.070, 94, 71, 
+1492, p4w2eG2, 0.6001, 3.01, 0.069, 90, 72, 
+1493, p4v9sHC2, 0.6001, 2.94, 0.056, 94, 72, 
+1494, p5ibbGA2, 0.6000, 3.01, 0.069, 90, 72, 
+1495, p4v78CA2, 0.6000, 2.88, 0.099, 96, 71, 
+1496, p6caeG2, 0.5999, 2.97, 0.056, 94, 72, Crystal structure of the Thermus thermophilus 70S ribosome in complex with NOSO-95179 antibiotic and bound to mRNA and A-; P- and E-site tRNAs at 2.6A resolution
+1497, p4v9sEA2, 0.5999, 2.93, 0.056, 94, 72, 
+1498, p4v9cDA2, 0.5999, 2.76, 0.070, 94, 71, 
+1499, p5v8iG2, 0.5998, 2.98, 0.056, 94, 72, struct.pdbx_descriptor               70S Ribosome  
+1500, p4v83DC2, 0.5998, 2.99, 0.056, 94, 72, 
+1501, p4v83CA2, 0.5997, 2.97, 0.056, 94, 72, 
+1502, p4v6zCA2, 0.5996, 2.94, 0.070, 94, 71, 
+1503, p6c5lXC2, 0.5995, 2.96, 0.056, 94, 72, Conformation of methylated GGQ in the Peptidyl Transferase Center during translation termination (T. thermophilus)  
+1504, p5j4cG2, 0.5995, 2.70, 0.056, 94, 71, 
+1505, p4v95GC2, 0.5995, 2.78, 0.100, 84, 70, 
+1506, p4v8xYC2, 0.5994, 2.95, 0.056, 94, 72, 
+1507, p1vy7JC2, 0.5994, 2.94, 0.056, 94, 72, 
+1508, p5j4bKB2, 0.5993, 2.65, 0.130, 96, 69, 
+1509, p6fkrG2, 0.5992, 2.81, 0.056, 94, 71, Crystal structure of the dolphin proline-rich antimicrobial peptide Tur1A bound to the Thermus thermophilus 70S ribosome  
+1510, p4v8xRA2, 0.5992, 2.85, 0.056, 89, 71, 
+1511, p6cfkHB2, 0.5991, 2.85, 0.056, 89, 71, Crystal structure of the Thermus thermophilus 70S ribosome in complex with D-histidyl-CAM and bound to protein Y (YfiA) at 2.7A resolution
+1512, p5witKB2, 0.5991, 3.10, 0.097, 96, 72, Crystal structure of the Thermus thermophilus 70S ribosome in complex with pikromycin and bound to mRNA and A-; P- and E-site tRNAs at 2.6A resolution
+1513, p4v5fQA2, 0.5991, 2.75, 0.056, 89, 71, 
+1514, p5ndjHC2, 0.5990, 3.00, 0.056, 93, 72, Crystal structure of aminoglycoside TC007 in complex with 70S ribosome from Thermus thermophilus; three tRNAs and mRNA (soaking)  
+1515, p4v9rHC2, 0.5988, 2.99, 0.056, 94, 72, 
+1516, p4v5fAD2, 0.5988, 2.83, 0.056, 89, 72, 
+1517, p4u26DC2, 0.5986, 2.94, 0.056, 94, 72, 
+1518, p4v8dFA2, 0.5984, 2.97, 0.056, 93, 72, 
+1519, p4v48H2, 0.5984, 3.00, 0.056, 94, 72, 
+1520, p4u24CC2, 0.5984, 2.83, 0.056, 89, 72, 
+1521, p5doxG2, 0.5981, 3.03, 0.069, 94, 72, 
+1522, p4w2hHC2, 0.5981, 2.97, 0.056, 94, 72, 
+1523, p4v8eG2, 0.5979, 2.68, 0.071, 96, 70, 
+1524, p1vy4FA2, 0.5979, 2.89, 0.056, 94, 72, 
+1525, p5hcrJB2, 0.5978, 2.95, 0.056, 94, 72, 
+1526, p4wqyH2, 0.5978, 2.68, 0.071, 96, 70, 
+1527, p4wfaE1, 0.5978, 2.68, 0.114, 95, 70, THE CRYSTAL STRUCTURE OF THE LARGE RIBOSOMAL SUBUNIT OF STAPHYLOCOCCUS AUREUS IN COMPLEX WITH LINEZOLID
+1528, p4v87G2, 0.5978, 2.96, 0.056, 90, 72, 
+1529, p4wraFA2, 0.5977, 2.88, 0.103, 89, 68, 
+1530, p4v63HC2, 0.5976, 2.68, 0.114, 95, 70, 
+1531, p5j4bG2, 0.5975, 3.01, 0.056, 94, 72, 
+1532, p4v63FA2, 0.5975, 2.95, 0.056, 94, 72, 
+1533, p3j9wMA2, 0.5975, 2.94, 0.056, 90, 72, 
+1534, p6cfjG2, 0.5974, 2.96, 0.056, 94, 72, Crystal structure of the Thermus thermophilus 70S ribosome in complex with histidyl-CAM and bound to mRNA and A-; P-; and E-site tRNAs at 2.8A resolution
+1535, p5wisG2, 0.5974, 2.95, 0.056, 94, 72, Crystal structure of the Thermus thermophilus 70S ribosome in complex with methymycin and bound to mRNA and A-; P- and E-site tRNAs at 2.7A resolution
+1536, p5uq7G2, 0.5974, 3.04, 0.069, 94, 72, 70S ribosome complex with dnaX mRNA stemloop and E-site tRNA ( in  conformation)
+1537, p4wsdFA2, 0.5974, 2.11, 0.246, 65, 61, 
+1538, p5uq8G2, 0.5973, 2.96, 0.056, 90, 72, 70S ribosome complex with dnaX mRNA stem-loop and E-site tRNA ( out  conformation)
+1539, p4v9rEA2, 0.5973, 2.91, 0.056, 93, 72, 
+1540, p4p70BC2, 0.5973, 3.09, 0.069, 89, 72, 
+1541, p4p6fKC2, 0.5973, 3.00, 0.056, 93, 72, 
+1542, p4lntHC2, 0.5973, 3.09, 0.069, 89, 72, 
+1543, p4v9aDA2, 0.5972, 2.73, 0.071, 94, 70, 
+1544, p4v8cG2, 0.5972, 2.95, 0.056, 94, 72, 
+1545, p4v68SA2, 0.5970, 2.95, 0.056, 94, 72, 
+1546, p4v51PA2, 0.5970, 2.96, 0.056, 94, 72, 
+1547, p4w2fJC2, 0.5968, 2.88, 0.056, 94, 72, 
+1548, p6cflHB2, 0.5967, 2.96, 0.056, 94, 72, Crystal structure of the Thermus thermophilus 70S ribosome in complex with lysyl-CAM and bound to protein Y (YfiA) at 2.6A resolution
+1549, d3d5dH2, 0.5967, 2.96, 0.056, 94, 72,  
+1550, d3d5bH2, 0.5966, 2.96, 0.056, 90, 72,  
+1551, p4v8bFA2, 0.5963, 2.96, 0.056, 90, 72, 
+1552, p4wt8KC2, 0.5961, 2.96, 0.056, 90, 72, 
+1553, p5hauNB2, 0.5960, 2.95, 0.056, 90, 72, 
+1554, p4zerIB2, 0.5960, 2.94, 0.056, 90, 72, 
+1555, p4v5hNA2, 0.5960, 2.84, 0.056, 89, 71, 
+1556, p4p70BA2, 0.5960, 2.84, 0.056, 89, 71, 
+1557, p4lntEA2, 0.5960, 2.96, 0.056, 94, 72, 
+1558, p4w2fFA2, 0.5958, 3.02, 0.056, 94, 72, 
+1559, p4v51TC2, 0.5957, 2.68, 0.071, 88, 70, 
+1560, p4v5mPA2, 0.5955, 2.68, 0.071, 88, 70, 
+1561, d2j01H2, 0.5955, 2.94, 0.056, 90, 72,  
+1562, p5w4kG2, 0.5954, 2.77, 0.056, 89, 71, Crystal structure of the Thermus thermophilus 70S ribosome in complex with Klebsazolicin and bound to mRNA and A-; P- and E-site tRNAs at 2.7A resolution
+1563, p5j4cKB2, 0.5953, 2.85, 0.056, 94, 71, 
+1564, p4v7pJB2, 0.5953, 3.06, 0.069, 94, 72, 
+1565, p4v7pEA2, 0.5953, 2.89, 0.141, 101, 71, 
+1566, p4v6fG2, 0.5952, 2.89, 0.056, 90, 71, 
+1567, p4w2gJC2, 0.5951, 2.89, 0.056, 90, 71, 
+1568, p4v76CA2, 0.5951, 2.97, 0.056, 94, 72, 
+1569, p4y4pG2, 0.5948, 2.70, 0.057, 89, 70, 
+1570, p5ju8EA2, 0.5945, 2.70, 0.071, 84, 70, 
+1571, p1vy5FA2, 0.5945, 2.71, 0.057, 88, 70, 
+1572, p5w4kKB2, 0.5943, 2.97, 0.056, 94, 72, Crystal structure of the Thermus thermophilus 70S ribosome in complex with Klebsazolicin and bound to mRNA and A-; P- and E-site tRNAs at 2.7A resolution
+1573, p5doyG2, 0.5943, 2.98, 0.056, 93, 72, 
+1574, p5li0AA2, 0.5942, 2.87, 0.056, 89, 71, 
+1575, p5jteFA2, 0.5942, 2.87, 0.056, 89, 71, 
+1576, d2j03H2, 0.5941, 3.06, 0.056, 90, 72,  
+1577, p4v5gRA2, 0.5940, 2.98, 0.056, 94, 72, 
+1578, p5f8kG2, 0.5939, 2.91, 0.114, 96, 70, 
+1579, p4v9iMC2, 0.5939, 3.02, 0.056, 94, 72, 
+1580, p4v5gYC2, 0.5939, 2.98, 0.113, 96, 71, 
+1581, p4p6fFA2, 0.5939, 2.97, 0.056, 94, 72, 
+1582, p6cfjKB2, 0.5938, 2.98, 0.056, 94, 72, Crystal structure of the Thermus thermophilus 70S ribosome in complex with histidyl-CAM and bound to mRNA and A-; P-; and E-site tRNAs at 2.8A resolution
+1583, p5vp2G2, 0.5938, 2.96, 0.056, 94, 72, 
+1584, p5wisKB2, 0.5936, 2.91, 0.070, 90, 71, Crystal structure of the Thermus thermophilus 70S ribosome in complex with methymycin and bound to mRNA and A-; P- and E-site tRNAs at 2.7A resolution
+1585, p6gslOC2, 0.5934, 2.89, 0.114, 96, 70, Structure of T. thermophilus 70S ribosome complex with mRNA; tRNAfMet and cognate tRNAArg in the A-site  
+1586, p1vy4JC2, 0.5934, 2.57, 0.058, 88, 69, 
+1587, p4y4pKB2, 0.5931, 2.72, 0.056, 89, 71, 
+1588, p1vy6HC2, 0.5930, 3.04, 0.056, 94, 72, 
+1589, d2qbeG2, 0.5927, 2.78, 0.056, 89, 71,  
+1590, d2qbgG2, 0.5926, 2.72, 0.056, 89, 71,  
+1591, p6c5lQA2, 0.5918, 2.91, 0.056, 90, 71, Conformation of methylated GGQ in the Peptidyl Transferase Center during translation termination (T. thermophilus)  
+1592, p5xymG2, 0.5914, 2.87, 0.056, 94, 71, LARGE SUBUNIT OF MYCOBACTERIUM SMEGMATIS
+1593, p4z3sKB2, 0.5913, 3.04, 0.069, 94, 72, 
+1594, p4v6gGC2, 0.5909, 2.97, 0.056, 94, 72, 
+1595, p4lskIC2, 0.5909, 2.73, 0.058, 91, 69, 
+1596, p4lfzHC2, 0.5909, 2.85, 0.056, 94, 71, 
+1597, p4lfzEA2, 0.5909, 2.98, 0.056, 94, 72, 
+1598, p4lelHC2, 0.5909, 2.84, 0.056, 94, 71, 
+1599, p4l71BC2, 0.5909, 2.80, 0.127, 95, 71, 
+1600, p4l71BA2, 0.5909, 2.80, 0.127, 95, 71, 
+1601, p4l47HC2, 0.5909, 2.85, 0.056, 89, 71, 
+1602, p1vvjGC2, 0.5909, 3.11, 0.083, 94, 72, 
+1603, p1vvjEA2, 0.5909, 3.00, 0.056, 94, 72, 
+1604, p4tueIC2, 0.5908, 2.99, 0.056, 90, 72, 
+1605, p4tueEA2, 0.5908, 2.99, 0.056, 90, 72, 
+1606, p4tudIC2, 0.5908, 2.99, 0.056, 90, 72, 
+1607, p4tudEA2, 0.5908, 3.00, 0.056, 90, 72, 
+1608, p4tucIC2, 0.5908, 2.99, 0.056, 90, 72, 
+1609, p4tucEA2, 0.5908, 2.99, 0.056, 90, 72, 
+1610, p4tubIC2, 0.5908, 3.00, 0.056, 90, 72, 
+1611, p4tubEA2, 0.5908, 2.99, 0.056, 90, 72, 
+1612, p4tuaIC2, 0.5908, 2.99, 0.056, 90, 72, 
+1613, p4tuaEA2, 0.5908, 3.00, 0.056, 90, 72, 
+1614, p4lt8EA2, 0.5908, 3.00, 0.056, 90, 72, 
+1615, p4lskEA2, 0.5908, 3.00, 0.056, 90, 72, 
+1616, p4lelEA2, 0.5908, 3.00, 0.056, 90, 72, 
+1617, p4l47EA2, 0.5908, 3.00, 0.056, 90, 72, 
+1618, p4v9qIB2, 0.5906, 3.00, 0.056, 90, 72, 
+1619, p4v9qG2, 0.5905, 3.00, 0.056, 90, 72, 
+1620, p6gc0G2, 0.5900, 3.00, 0.056, 90, 72, 50S RIBOSOMAL SUBUNIT ASSEMBLY INTERMEDIATE STATE 4 
+1621, p1vy5JC2, 0.5899, 3.00, 0.056, 90, 72, 
+1622, p4wceE2, 0.5895, 3.00, 0.056, 90, 72, THE CRYSTAL STRUCTURE OF THE LARGE RIBOSOMAL SUBUNIT OF STAPHYLOCOCCUS AUREUS
+1623, p4v6yCA2, 0.5892, 3.00, 0.056, 90, 72, 
+1624, p5doxGB2, 0.5891, 3.00, 0.056, 90, 72, 
+1625, p3jcjK2, 0.5888, 3.00, 0.056, 90, 72, 
+1626, p5f8kJB2, 0.5887, 3.00, 0.056, 90, 72, 
+1627, p4v5eQA2, 0.5887, 3.00, 0.056, 90, 72, 
+1628, p4v5aPA2, 0.5887, 3.03, 0.056, 89, 72, 
+1629, d2v47H2, 0.5887, 3.03, 0.056, 89, 72,  
+1630, p5imqHA2, 0.5886, 2.81, 0.100, 96, 70, 
+1631, p4v9bEA2, 0.5886, 2.98, 0.056, 94, 72, 
+1632, p4v5aTC2, 0.5886, 2.80, 0.057, 92, 70, 
+1633, d2v49H2, 0.5886, 2.98, 0.139, 96, 72,  
+1634, p4xejAB2, 0.5885, 3.08, 0.069, 94, 72, 
+1635, p4v5eXC2, 0.5885, 2.94, 0.099, 97, 71, 
+1636, p4v5nPA2, 0.5879, 3.07, 0.056, 94, 72, 
+1637, p5vp2KB2, 0.5876, 2.98, 0.056, 89, 72, 
+1638, p5imrDA2, 0.5874, 2.87, 0.056, 88, 71, 
+1639, p4v5kWC2, 0.5872, 2.87, 0.056, 88, 71, 
+1640, p4v5kQA2, 0.5872, 2.57, 0.088, 96, 68, 
+1641, d2hgjH2, 0.5869, 2.75, 0.056, 90, 71,  
+1642, p4v7mNC2, 0.5864, 2.87, 0.056, 88, 71, 
+1643, p4v6lGA2, 0.5854, 2.87, 0.056, 88, 71, 
+1644, p4v70CA2, 0.5852, 3.01, 0.056, 89, 72, 
+1645, p4v4xEA2, 0.5850, 2.98, 0.056, 89, 72, 
+1646, p5nrgE1, 0.5847, 2.72, 0.071, 84, 70, THE CRYSTAL STRUCTURE OF THE LARGE RIBOSOMAL SUBUNIT OF STAPHYLOCOCCUS AUREUS IN COMPLEX WITH RB02
+1647, p4wf9E2, 0.5845, 3.09, 0.069, 94, 72, THE CRYSTAL STRUCTURE OF THE LARGE RIBOSOMAL SUBUNIT OF STAPHYLOCOCCUS AUREUS IN COMPLEX WITH TELITHROMYCIN
+1648, p4v61DA2, 0.5842, 2.73, 0.087, 97, 69, 
+1649, p4v4jH1, 0.5836, 2.90, 0.056, 89, 72, 
+1650, p5nd9CA2, 0.5833, 2.90, 0.056, 89, 72, 
+1651, d2hgqH2, 0.5824, 2.83, 0.070, 89, 71,  
+1652, d2hguH2, 0.5815, 2.81, 0.056, 90, 71,  
+1653, p5hkvE2, 0.5806, 3.13, 0.123, 96, 73, THE CRYSTAL STRUCTURE OF THE LARGE RIBOSOMAL SUBUNIT OF STAPHYLOCOCCUS AUREUS IN COMPLEX WITH LINCOMYCIN
+1654, p5v93M2, 0.5804, 2.91, 0.116, 84, 69, struct.pdbx_descriptor              Ribosome 
+1655, p5aa0H2, 0.5802, 2.73, 0.071, 96, 70, 
+1656, p5a9zH2, 0.5802, 2.04, 0.082, 62, 61, 
+1657, p4v4yGA2, 0.5802, 2.96, 0.070, 92, 71, 
+1658, p5nd8CA2, 0.5799, 2.98, 0.099, 88, 71, 
+1659, p5hl7E2, 0.5797, 2.81, 0.178, 75, 73, THE CRYSTAL STRUCTURE OF THE LARGE RIBOSOMAL SUBUNIT OF STAPHYLOCOCCUS AUREUS IN COMPLEX WITH LEFAMULIN
+1660, p4v4zFA2, 0.5794, 3.17, 0.083, 90, 72, 
+1661, p4v4pH2, 0.5794, 2.85, 0.070, 89, 71, 
+1662, d2b9pH2, 0.5783, 2.86, 0.070, 89, 71,  
+1663, d2b9nH2, 0.5783, 2.97, 0.056, 94, 71,  
+1664, d2b66H2, 0.5783, 3.17, 0.085, 94, 71,  
+1665, d1yl3H2, 0.5779, 2.76, 0.071, 96, 70,  
+1666, d1xbpE1, 0.5775, 2.76, 0.071, 96, 70, INHIBITION OF PEPTIDE BOND FORMATION BY PLEUROMUTILINS: THE STRUCTURE OF THE 50S RIBOSOMAL SUBUNIT FROM DEINOCOCCUS RADIODURANS IN COMPLEX WITH TIAMULIN
+1667, p6em5H1, 0.5772, 2.76, 0.071, 96, 70, STATE D ARCHITECTURAL MODEL (NSA1-TAP FLAG-YTM1) - VISUALIZING THE ASSEMBLY PATHWAY OF NUCLEOLAR PRE-60S RIBOSOMES
+1668, d1vsaF1, 0.5770, 2.88, 0.057, 90, 70,  
+1669, p4v4tEA2, 0.5768, 2.84, 0.057, 93, 70, 
+1670, p4v4sFA2, 0.5768, 2.77, 0.071, 96, 70, 
+1671, p4v4rFA2, 0.5768, 3.14, 0.056, 90, 72, 
+1672, p4v9kMC2, 0.5762, 2.83, 0.086, 89, 70, 
+1673, p4wceE1, 0.5756, 2.83, 0.086, 89, 70, THE CRYSTAL STRUCTURE OF THE LARGE RIBOSOMAL SUBUNIT OF STAPHYLOCOCCUS AUREUS
+1674, p5hkvE1, 0.5727, 2.83, 0.086, 89, 70, THE CRYSTAL STRUCTURE OF THE LARGE RIBOSOMAL SUBUNIT OF STAPHYLOCOCCUS AUREUS IN COMPLEX WITH LINCOMYCIN
+1675, p6gc4G2, 0.5720, 2.81, 0.071, 89, 70, 50S RIBOSOMAL SUBUNIT ASSEMBLY INTERMEDIATE STATE 3 
+1676, p4v9kDA2, 0.5715, 2.69, 0.101, 90, 69, 
+1677, p4v69CB2, 0.5710, 2.06, 0.153, 68, 59, 
+1678, p4wq1IC2, 0.5709, 2.67, 0.200, 71, 70, 
+1679, p4wfbE1, 0.5709, 3.20, 0.056, 90, 72, THE CRYSTAL STRUCTURE OF THE LARGE RIBOSOMAL SUBUNIT OF STAPHYLOCOCCUS AUREUS IN COMPLEX WITH BC-3205
+1680, p5zluDA2, 0.5708, 3.20, 0.056, 90, 72, struct.pdbx_descriptor              
+1681, p4v72CA2, 0.5697, 3.20, 0.056, 90, 72, 
+1682, p4v66BB2, 0.5692, 2.98, 0.042, 97, 71, 
+1683, p4v6mJA2, 0.5663, 2.16, 0.230, 64, 61, 
+1684, p4v9jMC2, 0.5659, 2.11, 0.246, 64, 61, 
+1685, p4v65BB2, 0.5651, 3.09, 0.127, 96, 71, 
+1686, p4v9mCA2, 0.5645, 3.05, 0.042, 97, 71, 
+1687, p3ostA_, 0.5641, 3.14, 0.125, 95, 72, STRUCTURE OF THE KINASE ASSOCIATED-1 (KA1) FROM KCC4P
+1688, p4v8dIC2, 0.5639, 3.12, 0.042, 91, 71, 
+1689, p4v8cKA2, 0.5630, 2.13, 0.217, 64, 60, 
+1690, p4v8oPA2, 0.5627, 3.09, 0.070, 97, 71, 
+1691, p5v7qG2, 0.5622, 2.91, 0.100, 83, 70, CRYO-EM STRUCTURE OF THE LARGE RIBOSOMAL SUBUNIT FROM MYCOBACTERIUM TUBERCULOSIS BOUND WITH A POTENT LINEZOLID ANALOG
+1692, p4v4aAA2, 0.5619, 2.79, 0.116, 96, 69, 
+1693, p4v49DA2, 0.5619, 2.86, 0.100, 101, 70, 
+1694, p4v7aBA2, 0.5617, 2.94, 0.056, 87, 72, 
+1695, p3osmA_, 0.5612, 2.82, 0.116, 96, 69, STRUCTURE OF THE KINASE ASSOCIATED DOMAIN-1 (KA1) FROM KCC4P
+1696, p4v9lMC2, 0.5596, 2.83, 0.056, 97, 71, 
+1697, p4v9lDA2, 0.5595, 2.70, 0.032, 119, 62, 
+1698, p4v8bIC2, 0.5590, 3.15, 0.042, 90, 71, 
+1699, p4v87IC2, 0.5583, 3.13, 0.043, 91, 70, 
+1700, p6faih1, 0.5570, 2.96, 0.056, 85, 72, STRUCTURE OF A EUKARYOTIC CYTOPLASMIC PRE-40S RIBOSOMAL SUBUNIT
+1701, p4v77CA2, 0.5568, 3.19, 0.085, 94, 71, 
+1702, p4v9mKC2, 0.5564, 3.20, 0.083, 90, 72, 
+1703, p4v6pFA2, 0.5560, 3.20, 0.083, 90, 72, 
+1704, p4v74CA2, 0.5559, 3.01, 0.113, 96, 71, 
+1705, p4v9jDA2, 0.5558, 2.68, 0.032, 119, 62, 
+1706, p4v8eJB2, 0.5558, 2.68, 0.032, 119, 62, 
+1707, p4v6oFA2, 0.5558, 2.98, 0.070, 87, 71, 
+1708, p4csuG2, 0.5558, 2.87, 0.056, 87, 71, CRYO-EM STRUCTURES OF THE 50S RIBOSOME SUBUNIT BOUND WITH OBGE
+1709, d4eywA1, 0.5556, 3.20, 0.043, 91, 70, CRYSTAL STRUCTURE OF RAT CARNITINE PALMITOYLTRANSFERASE 2 IN COMPLEX WITH 1-[(R)-2-(34-DIHYDRO-1H-ISOQUINOLINE-2-CARBONYL)-PIPERIDIN-1- YL]-2-PHENOXY-ETHANONE
+1710, p5wlcSA1, 0.5553, 3.20, 0.043, 91, 70, struct.pdbx_descriptor              
+1711, p6g18x1, 0.5549, 2.77, 0.079, 84, 63, CRYO-EM STRUCTURE OF A LATE HUMAN PRE-40S RIBOSOMAL SUBUNIT - STATE C 
+1712, d1vspF1, 0.5540, 2.89, 0.100, 96, 70,  
+1713, d2h4tA1, 0.5534, 2.97, 0.070, 87, 71, CRYSTAL STRUCTURE OF RAT CARNITINE PALMITOYLTRANSFERASE II
+1714, p5o9xA2, 0.5531, 3.23, 0.127, 97, 71, CRYSTAL STRUCTURE OF ASPERGILLUS FUMIGATUS N-ACETYLPHOSPHOGLUCOSAMINE MUTATE S69A IN COMPLEX WITH GLUCOSE1;6BISPHOSPHATE 
+1715, d1tuaA1, 0.5529, 3.33, 0.137, 95, 73, 1.5 A CRYSTAL STRUCTURE OF A PROTEIN OF UNKNOWN FUNCTION APE0754 FROM AEROPYRUM PERNIX
+1716, p4qmfD1, 0.5524, 2.92, 0.056, 88, 71, STRUCTURE OF THE KRR1 AND FAF1 COMPLEX FROM SACCHAROMYCES CEREVISIAE
+1717, d2h4tB1, 0.5524, 3.22, 0.042, 90, 71, CRYSTAL STRUCTURE OF RAT CARNITINE PALMITOYLTRANSFERASE II
+1718, p6g4sx1, 0.5522, 3.00, 0.100, 101, 70, CRYO-EM STRUCTURE OF A LATE HUMAN PRE-40S RIBOSOMAL SUBUNIT - STATE B 
+1719, p6g4wx1, 0.5521, 3.03, 0.141, 97, 71, CRYO-EM STRUCTURE OF A LATE HUMAN PRE-40S RIBOSOMAL SUBUNIT - STATE A 
+1720, p4qmfB1, 0.5521, 3.41, 0.041, 218, 73, STRUCTURE OF THE KRR1 AND FAF1 COMPLEX FROM SACCHAROMYCES CEREVISIAE
+1721, p6g53x1, 0.5518, 2.68, 0.145, 81, 62, CRYO-EM STRUCTURE OF A LATE HUMAN PRE-40S RIBOSOMAL SUBUNIT - STATE E 
+1722, p6g51x1, 0.5517, 2.83, 0.143, 82, 63, CRYO-EM STRUCTURE OF A LATE HUMAN PRE-40S RIBOSOMAL SUBUNIT - STATE D 
+1723, p5wykBA1, 0.5517, 2.85, 0.214, 71, 70, 
+1724, p5jpqh1, 0.5512, 3.45, 0.041, 215, 73, CRYO-EM STRUCTURE OF THE 90S PRE-RIBOSOME
+1725, p5jpqg1, 0.5512, 2.55, 0.078, 87, 64, CRYO-EM STRUCTURE OF THE 90S PRE-RIBOSOME
+1726, d2eknB_, 0.5509, 2.85, 0.111, 84, 63, STRUCTURE OF PH1811 PROTEIN FROM PYROCOCCUS HORIKOSHII
+1727, p4v9bGC2, 0.5507, 2.85, 0.111, 84, 63, 
+1728, p4v8fIC2, 0.5505, 2.60, 0.145, 82, 62, 
+1729, p5myjKA2, 0.5504, 2.60, 0.145, 82, 62, struct.pdbx_descriptor              
+1730, d4ephA1, 0.5503, 3.43, 0.041, 216, 73, CRYSTAL STRUCTURE OF RAT CARNITINE PALMITOYLTRANSFERASE 2 IN COMPLEX WITH COA-SITE INHIBITOR
+1731, p6emlp1, 0.5501, 2.88, 0.127, 82, 63, CRYO-EM STRUCTURE OF A LATE PRE-40S RIBOSOMAL SUBUNIT FROM SACCHAROMYCES CEREVISIAE
+1732, d2rcuA1, 0.5501, 2.88, 0.127, 82, 63, CRYSTAL STRUCTURE OF RAT CARNITINE PALMITOYLTRANSFERASE 2 IN COMPLEX WITH R-3-(HEXADECANOYLAMINO)-4- (TRIMETHYLAZANIUMYL)BUTANOATE
+1733, d4ep9A1, 0.5500, 2.59, 0.145, 81, 62, CRYSTAL STRUCTURE OF RAT CARNITINE PALMITOYLTRANSFERASE 2 IN COMPLEX WITH COA-SITE INHIBITOR
+1734, d2eknC_, 0.5499, 2.88, 0.127, 82, 63, STRUCTURE OF PH1811 PROTEIN FROM PYROCOCCUS HORIKOSHII
+1735, d2ohdF_, 0.5495, 2.88, 0.127, 82, 63, CRYSTAL STRUCTURE OF HYPOTHETICAL MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN C FROM SULFOLOBUS TOKODAII
+1736, d2debA1, 0.5494, 2.60, 0.161, 82, 62, CRYSTAL STRUCTURE OF RAT CARNITINE PALMITOYLTRANSFERASE 2 IN SPACE GROUP C2221
+1737, p6g5ix1, 0.5491, 2.61, 0.129, 82, 62, CRYO-EM STRUCTURE OF A LATE HUMAN PRE-40S RIBOSOMAL SUBUNIT - STATE R 
+1738, p4wqrIC2, 0.5490, 2.61, 0.129, 82, 62, 
+1739, p4wraHC2, 0.5488, 2.79, 0.106, 145, 66, 
+1740, d2ohdD_, 0.5488, 3.09, 0.043, 91, 69, CRYSTAL STRUCTURE OF HYPOTHETICAL MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN C FROM SULFOLOBUS TOKODAII
+1741, p4eywB2, 0.5485, 3.22, 0.042, 90, 71, CRYSTAL STRUCTURE OF RAT CARNITINE PALMITOYLTRANSFERASE 2 IN COMPLEX WITH 1-[(R)-2-(34-DIHYDRO-1H-ISOQUINOLINE-2-CARBONYL)-PIPERIDIN-1- YL]-2-PHENOXY-ETHANONE
+1742, d2ohdE_, 0.5482, 3.19, 0.113, 94, 71, CRYSTAL STRUCTURE OF HYPOTHETICAL MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN C FROM SULFOLOBUS TOKODAII
+1743, d2rcuB1, 0.5481, 3.43, 0.041, 216, 73, CRYSTAL STRUCTURE OF RAT CARNITINE PALMITOYLTRANSFERASE 2 IN COMPLEX WITH R-3-(HEXADECANOYLAMINO)-4- (TRIMETHYLAZANIUMYL)BUTANOATE
+1744, d2fyoA1, 0.5480, 2.87, 0.081, 88, 62, CRYSTAL STRUCTURE OF RAT CARNITINE PALMITOYLTRANSFERASE 2 IN SPACE GROUP P43212
+1745, p4w29MC2, 0.5474, 2.87, 0.081, 88, 62, 
+1746, d2ohdC_, 0.5474, 3.46, 0.041, 218, 73, CRYSTAL STRUCTURE OF HYPOTHETICAL MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN C FROM SULFOLOBUS TOKODAII
+1747, d2ohdB_, 0.5471, 3.43, 0.041, 216, 73, CRYSTAL STRUCTURE OF HYPOTHETICAL MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN C FROM SULFOLOBUS TOKODAII
+1748, p5ib7JC2, 0.5469, 2.80, 0.106, 145, 66, 
+1749, d4fdfA_, 0.5461, 2.76, 0.138, 144, 65, STRUCTURAL INSIGHTS INTO PUTATIVE MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN C (MOAC2) FROM MYCOBACTERIUM TUBERCULOSIS H37RV
+1750, d2fw3A1, 0.5458, 3.52, 0.041, 213, 73, CRYSTAL STRUCTURE OF RAT CARNITINE PALMITOYLTRANSFERASE 2 IN COMPLEX WITH ANTIDIABETIC DRUG ST1326
+1751, d2eknA_, 0.5456, 2.93, 0.127, 82, 63, STRUCTURE OF PH1811 PROTEIN FROM PYROCOCCUS HORIKOSHII
+1752, p4wu1HC2, 0.5455, 3.13, 0.043, 91, 70, 
+1753, d2ohdA_, 0.5451, 3.39, 0.042, 91, 71, CRYSTAL STRUCTURE OF HYPOTHETICAL MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN C FROM SULFOLOBUS TOKODAII
+1754, d2iihA_, 0.5451, 2.77, 0.138, 140, 65, CRYSTAL STRUCTURE OF THE MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN C (TTHA1789) FROM THERMUS THEROMOPHILUS HB8 (H32 FORM)
+1755, d2debB1, 0.5437, 3.35, 0.042, 303, 72, CRYSTAL STRUCTURE OF RAT CARNITINE PALMITOYLTRANSFERASE 2 IN SPACE GROUP C2221
+1756, d4pydC_, 0.5435, 3.35, 0.042, 303, 72, MOAC IN COMPLEX WITH CPMP CRYSTALLIZED IN SPACE GROUP P212121
+1757, d4pydA_, 0.5435, 2.76, 0.138, 140, 65, MOAC IN COMPLEX WITH CPMP CRYSTALLIZED IN SPACE GROUP P212121
+1758, d4fdfB_, 0.5435, 3.50, 0.041, 217, 73, STRUCTURAL INSIGHTS INTO PUTATIVE MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN C (MOAC2) FROM MYCOBACTERIUM TUBERCULOSIS H37RV
+1759, p4v9aEC2, 0.5429, 3.52, 0.041, 211, 73, 
+1760, d4pydD_, 0.5429, 3.01, 0.057, 97, 70, MOAC IN COMPLEX WITH CPMP CRYSTALLIZED IN SPACE GROUP P212121
+1761, p4wt1IC2, 0.5426, 2.76, 0.138, 141, 65, 
+1762, d3jqjF_, 0.5420, 2.78, 0.138, 139, 65, CRYSTAL STRUCTURE OF THE MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN C (TTHA1789) FROM THERMUS THEROMOPHILUS HB8
+1763, d3jqjC_, 0.5415, 3.28, 0.042, 91, 71, CRYSTAL STRUCTURE OF THE MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN C (TTHA1789) FROM THERMUS THEROMOPHILUS HB8
+1764, d2ideK_, 0.5414, 2.98, 0.090, 134, 67, CRYSTAL STRUCTURE OF THE MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN C (TTHA1789) FROM THERMUS THEROMOPHILUS HB8
+1765, d2ideC_, 0.5413, 3.23, 0.042, 214, 71, CRYSTAL STRUCTURE OF THE MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN C (TTHA1789) FROM THERMUS THEROMOPHILUS HB8
+1766, p4wf9E1, 0.5411, 2.91, 0.104, 145, 67, THE CRYSTAL STRUCTURE OF THE LARGE RIBOSOMAL SUBUNIT OF STAPHYLOCOCCUS AUREUS IN COMPLEX WITH TELITHROMYCIN
+1767, d2ideF_, 0.5410, 2.91, 0.104, 145, 67, CRYSTAL STRUCTURE OF THE MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN C (TTHA1789) FROM THERMUS THEROMOPHILUS HB8
+1768, d1ekrA_, 0.5410, 2.93, 0.045, 92, 67, MOAC PROTEIN FROM E. COLI
+1769, p5ib8IC2, 0.5407, 2.87, 0.149, 142, 67, 
+1770, p4w29DA2, 0.5400, 2.78, 0.077, 146, 65, 
+1771, p5wyjCA1, 0.5398, 3.41, 0.042, 212, 72, 
+1772, d3jqmA_, 0.5395, 2.93, 0.091, 154, 66, BINDING OF 5 -GTP TO MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN MOAC FROM THERMUS THEROMOPHILUS HB8
+1773, p5wykFA1, 0.5393, 2.80, 0.108, 142, 65, 
+1774, d3jqmB_, 0.5393, 3.04, 0.104, 139, 67, BINDING OF 5 -GTP TO MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN MOAC FROM THERMUS THEROMOPHILUS HB8
+1775, d3jqjD_, 0.5393, 3.04, 0.104, 139, 67, CRYSTAL STRUCTURE OF THE MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN C (TTHA1789) FROM THERMUS THEROMOPHILUS HB8
+1776, d2ideD_, 0.5391, 3.33, 0.042, 90, 71, CRYSTAL STRUCTURE OF THE MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN C (TTHA1789) FROM THERMUS THEROMOPHILUS HB8
+1777, d2ideA_, 0.5391, 2.80, 0.123, 150, 65, CRYSTAL STRUCTURE OF THE MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN C (TTHA1789) FROM THERMUS THEROMOPHILUS HB8
+1778, p4v6sH2, 0.5390, 3.25, 0.042, 89, 71, 
+1779, d3jqmG_, 0.5390, 2.87, 0.077, 147, 65, BINDING OF 5 -GTP TO MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN MOAC FROM THERMUS THEROMOPHILUS HB8
+1780, d3jqjJ_, 0.5388, 2.82, 0.077, 147, 65, CRYSTAL STRUCTURE OF THE MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN C (TTHA1789) FROM THERMUS THEROMOPHILUS HB8
+1781, d3jqjG_, 0.5388, 2.84, 0.077, 148, 65, CRYSTAL STRUCTURE OF THE MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN C (TTHA1789) FROM THERMUS THEROMOPHILUS HB8
+1782, d3jqjL_, 0.5386, 2.84, 0.077, 147, 65, CRYSTAL STRUCTURE OF THE MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN C (TTHA1789) FROM THERMUS THEROMOPHILUS HB8
+1783, d2ideL_, 0.5386, 2.46, 0.242, 64, 62, CRYSTAL STRUCTURE OF THE MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN C (TTHA1789) FROM THERMUS THEROMOPHILUS HB8
+1784, d2ideG_, 0.5386, 2.87, 0.077, 146, 65, CRYSTAL STRUCTURE OF THE MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN C (TTHA1789) FROM THERMUS THEROMOPHILUS HB8
+1785, d2cteA1, 0.5386, 2.80, 0.108, 143, 65, SOLUTION STRUCTURE OF THE 1ST KH TYPE I DOMAIN FROM HUMAN VIGILIN
+1786, d2ideJ_, 0.5385, 3.33, 0.042, 91, 71, CRYSTAL STRUCTURE OF THE MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN C (TTHA1789) FROM THERMUS THEROMOPHILUS HB8
+1787, p4v73CA2, 0.5384, 2.95, 0.059, 97, 68, 
+1788, d3jqjE_, 0.5384, 2.85, 0.159, 84, 63, CRYSTAL STRUCTURE OF THE MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN C (TTHA1789) FROM THERMUS THEROMOPHILUS HB8
+1789, d3jqjI_, 0.5383, 2.85, 0.077, 147, 65, CRYSTAL STRUCTURE OF THE MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN C (TTHA1789) FROM THERMUS THEROMOPHILUS HB8
+1790, d3jqjH_, 0.5382, 3.02, 0.062, 85, 64, CRYSTAL STRUCTURE OF THE MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN C (TTHA1789) FROM THERMUS THEROMOPHILUS HB8
+1791, d2ideE_, 0.5382, 2.88, 0.077, 146, 65, CRYSTAL STRUCTURE OF THE MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN C (TTHA1789) FROM THERMUS THEROMOPHILUS HB8
+1792, d3jqmD_, 0.5381, 2.69, 0.094, 147, 64, BINDING OF 5 -GTP TO MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN MOAC FROM THERMUS THEROMOPHILUS HB8
+1793, d2ideH_, 0.5381, 2.70, 0.094, 147, 64, CRYSTAL STRUCTURE OF THE MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN C (TTHA1789) FROM THERMUS THEROMOPHILUS HB8
+1794, d2ideB_, 0.5381, 2.71, 0.094, 148, 64, CRYSTAL STRUCTURE OF THE MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN C (TTHA1789) FROM THERMUS THEROMOPHILUS HB8
+1795, d3jqjK_, 0.5380, 3.04, 0.145, 96, 69, CRYSTAL STRUCTURE OF THE MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN C (TTHA1789) FROM THERMUS THEROMOPHILUS HB8
+1796, d3jqjB_, 0.5379, 2.75, 0.109, 146, 64, CRYSTAL STRUCTURE OF THE MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN C (TTHA1789) FROM THERMUS THEROMOPHILUS HB8
+1797, d3jqjA_, 0.5379, 2.74, 0.109, 147, 64, CRYSTAL STRUCTURE OF THE MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN C (TTHA1789) FROM THERMUS THEROMOPHILUS HB8
+1798, d3jqmC_, 0.5365, 2.70, 0.094, 147, 64, BINDING OF 5 -GTP TO MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN MOAC FROM THERMUS THEROMOPHILUS HB8
+1799, d2ideI_, 0.5354, 2.69, 0.094, 147, 64, CRYSTAL STRUCTURE OF THE MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN C (TTHA1789) FROM THERMUS THEROMOPHILUS HB8
+1800, p4wzoHC2, 0.5350, 2.70, 0.094, 148, 64, 
+1801, p5ndjRC2, 0.5337, 2.70, 0.094, 147, 64, Crystal structure of aminoglycoside TC007 in complex with 70S ribosome from Thermus thermophilus; three tRNAs and mRNA (soaking)  
+1802, d3jqmI_, 0.5337, 2.90, 0.115, 81, 61, BINDING OF 5 -GTP TO MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN MOAC FROM THERMUS THEROMOPHILUS HB8
+1803, d3jqmF_, 0.5330, 2.90, 0.115, 81, 61, BINDING OF 5 -GTP TO MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN MOAC FROM THERMUS THEROMOPHILUS HB8
+1804, d3jqmH_, 0.5329, 2.70, 0.094, 148, 64, BINDING OF 5 -GTP TO MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN MOAC FROM THERMUS THEROMOPHILUS HB8
+1805, p5wlcHB1, 0.5321, 2.93, 0.155, 95, 71, struct.pdbx_descriptor              
+1806, p4pydF_, 0.5320, 2.71, 0.094, 148, 64, MOAC IN COMPLEX WITH CPMP CRYSTALLIZED IN SPACE GROUP P212121
+1807, p5hl7E1, 0.5311, 2.70, 0.094, 147, 64, THE CRYSTAL STRUCTURE OF THE LARGE RIBOSOMAL SUBUNIT OF STAPHYLOCOCCUS AUREUS IN COMPLEX WITH LEFAMULIN
+1808, p4v71CA2, 0.5308, 2.71, 0.094, 148, 64, 
+1809, p4wzdIC2, 0.5294, 2.71, 0.094, 147, 64, 
+1810, d2eeyA_, 0.5294, 2.70, 0.094, 147, 64, STRUCTURE OF GK0241 PROTEIN FROM GEOBACILLUS KAUSTOPHILUS
+1811, p5ndkRC2, 0.5286, 2.71, 0.094, 148, 64, Crystal structure of aminoglycoside TC007 co-crystallized with 70S ribosome from Thermus thermophilus; three tRNAs and mRNA  
+1812, p5jb392, 0.5282, 2.70, 0.094, 148, 64, CRYO-EM STRUCTURE OF A FULL ARCHAEAL RIBOSOMAL TRANSLATION INITIATION COMPLEX IN THE P-REMOTE CONFORMATION
+1813, p4pyaA_, 0.5282, 2.70, 0.094, 147, 64, MOAC K51A IN COMPLEX WITH 3 8-CH2GTP
+1814, p5elrD_, 0.5279, 2.70, 0.094, 149, 64, STRUCTURE OF THE KH-QUA2 DOMAIN OF T-STAR IN COMPLEX WITH AAUAAU RNA
+1815, d3cw2D3, 0.5279, 2.70, 0.094, 147, 64, CRYSTAL STRUCTURE OF THE INTACT ARCHAEAL TRANSLATION INITIATION FACTOR 2 FROM SULFOLOBUS SOLFATARICUS .
+1816, d3cw2C3, 0.5271, 2.71, 0.094, 147, 64, CRYSTAL STRUCTURE OF THE INTACT ARCHAEAL TRANSLATION INITIATION FACTOR 2 FROM SULFOLOBUS SOLFATARICUS .
+1817, p5jcsO1, 0.5268, 2.75, 0.109, 147, 64, 
+1818, p5fl8H1, 0.5268, 3.41, 0.042, 91, 72, 
+1819, p5oqlGA1, 0.5264, 3.46, 0.043, 91, 70, struct.pdbx_descriptor              ? 
+1820, d1eksA_, 0.5256, 2.71, 0.094, 148, 64, ASP128ALA VARIANT OF MOAC PROTEIN FROM E. COLI
+1821, d2ctlA1, 0.5252, 2.77, 0.109, 146, 64, SOLUTION STRUCTURE OF THE 13TH KH TYPE I DOMAIN FROM HUMAN VIGILIN
+1822, d2qn6B_, 0.5248, 2.76, 0.109, 146, 64, STRUCTURE OF AN ARCHAEAL HETEROTRIMERIC INITIATION FACTOR 2 REVEALS A NUCLEOTIDE STATE BETWEEN THE GTP AND THE GDP STATES
+1823, p5ibbJC2, 0.5244, 2.71, 0.081, 82, 62, 
+1824, p5emoA_, 0.5244, 2.81, 0.125, 122, 64, STRUCTURE OF THE STAR DOMAIN OF T-STAR IN COMPLEX WITH AUUAAA RNA
+1825, d4pydB_, 0.5237, 2.48, 0.230, 64, 61, MOAC IN COMPLEX WITH CPMP CRYSTALLIZED IN SPACE GROUP P212121
+1826, d3cw2G3, 0.5234, 3.36, 0.114, 96, 70, CRYSTAL STRUCTURE OF THE INTACT ARCHAEAL TRANSLATION INITIATION FACTOR 2 FROM SULFOLOBUS SOLFATARICUS .
+1827, d2ahoB3, 0.5230, 3.15, 0.058, 92, 69, STRUCTURE OF THE ARCHAEAL INITIATION FACTOR EIF2 ALPHA- GAMMA HETERODIMER FROM SULFOLOBUS SOLFATARICUS COMPLEXED WITH GDPNP
+1828, p5nrgE2, 0.5223, 3.26, 0.092, 160, 65, THE CRYSTAL STRUCTURE OF THE LARGE RIBOSOMAL SUBUNIT OF STAPHYLOCOCCUS AUREUS IN COMPLEX WITH RB02
+1829, p5oawA2, 0.5217, 3.26, 0.092, 160, 65, CRYSTAL STRUCTURE OF ASPERGILLUS FUMIGATUS N-ACETYLPHOSPHOGLUCOSAMINE MUTASE IN COMPLEX WITH GLCNAC-6P AND MAGNESIUM 
+1830, p4wsmHC2, 0.5209, 3.68, 0.042, 91, 72, 
+1831, p4v6qFA2, 0.5207, 2.93, 0.063, 90, 63, 
+1832, d1wveA1, 0.5204, 3.05, 0.154, 124, 65, P-CRESOL METHYLHYDROXYLASE: ALTERATION OF THE STRUCTURE OF THE FLAVOPROTEIN SUBUNIT UPON ITS BINDING TO THE CYTOCHROME SUBUNIT
+1833, p3pdkB3, 0.5193, 2.89, 0.079, 114, 63, CRYSTAL STRUCTURE OF PHOSPHOGLUCOSAMINE MUTASE FROM B. ANTHRACIS
+1834, p4v6vCB2, 0.5192, 2.96, 0.063, 91, 63, 
+1835, p5jbh92, 0.5191, 2.75, 0.063, 91, 63, CRYO-EM STRUCTURE OF A FULL ARCHAEAL RIBOSOMAL TRANSLATION INITIATION COMPLEX IN THE P-IN CONFORMATION
+1836, p3v11B2, 0.5191, 2.75, 0.063, 91, 63, STRUCTURE OF THE TERNARY INITIATION COMPLEX AIF2:GDPNP:METHIONYLATED INITIATOR TRNA
+1837, d3jqkA_, 0.5191, 2.71, 0.219, 73, 64, CRYSTAL STRUCTURE OF THE MOLYBDENUM COFACTOR BIOSYNTHESIS PROTEIN C (TTHA1789) FROM THERMUS THEROMOPHILUS HB8 (H32 FORM)
+1838, d1wveB1, 0.5189, 2.71, 0.219, 73, 64, P-CRESOL METHYLHYDROXYLASE: ALTERATION OF THE STRUCTURE OF THE FLAVOPROTEIN SUBUNIT UPON ITS BINDING TO THE CYTOCHROME SUBUNIT
+1839, p5oqlHA1, 0.5188, 2.87, 0.161, 80, 62, struct.pdbx_descriptor              ? 
+1840, p4ctaA2, 0.5185, 3.06, 0.154, 140, 65, COMPETENCE OR DAMAGE-INDUCIBLE PROTEIN CINA FROM THERMUS THERMOPHILUS
+1841, p3pdkA3, 0.5184, 3.03, 0.164, 84, 61, CRYSTAL STRUCTURE OF PHOSPHOGLUCOSAMINE MUTASE FROM B. ANTHRACIS
+1842, d3cw2H3, 0.5183, 3.03, 0.164, 84, 61, CRYSTAL STRUCTURE OF THE INTACT ARCHAEAL TRANSLATION INITIATION FACTOR 2 FROM SULFOLOBUS SOLFATARICUS .
+1843, d1diqB1, 0.5182, 2.83, 0.063, 90, 63, CRYSTAL STRUCTURE OF P-CRESOL METHYLHYDROXYLASE WITH SUBSTRATE BOUND
+1844, p4v6rFA2, 0.5180, 3.50, 0.056, 92, 72, 
+1845, d1vspF2, 0.5180, 2.90, 0.078, 116, 64,  
+1846, d1diqA1, 0.5178, 2.90, 0.078, 116, 64, CRYSTAL STRUCTURE OF P-CRESOL METHYLHYDROXYLASE WITH SUBSTRATE BOUND
+1847, p4wsdIC2, 0.5175, 2.85, 0.156, 140, 64, 
+1848, p4v6nH2, 0.5174, 2.79, 0.063, 91, 63, 
+1849, p5eltA_, 0.5173, 2.95, 0.063, 89, 63, STRUCTURE OF THE QUA1-KH DOMAIN OF T-STAR IN COMPLEX WITH UAAU RNA
+1850, p4v4jH2, 0.5165, 3.05, 0.091, 85, 66, 
+1851, p4v4gEG2, 0.5163, 3.01, 0.030, 86, 67, 
+1852, p4v4gCC2, 0.5163, 3.50, 0.043, 91, 70, 
+1853, p4v4gFI2, 0.5162, 3.10, 0.145, 95, 69, 
+1854, p4v4gDE2, 0.5162, 3.42, 0.031, 279, 64, 
+1855, p4v4gBA2, 0.5162, 2.63, 0.034, 77, 59, 
+1856, d1xmdB1, 0.5159, 3.17, 0.141, 96, 71, M335V MUTANT STRUCTURE OF MOUSE CARNITINE OCTANOYLTRANSFERASE
+1857, p6gc6G2, 0.5158, 2.87, 0.063, 90, 63, 50S RIBOSOMAL SUBUNIT ASSEMBLY INTERMEDIATE STATE 2 
+1858, p4wr6HC2, 0.5158, 2.87, 0.063, 90, 63, 
+1859, p4v7iK2, 0.5158, 3.58, 0.121, 143, 66, 
+1860, d1wvfA1, 0.5157, 3.26, 0.032, 279, 63, P-CRESOL METHYLHYDROXYLASE: ALTERATION OF THE STRUCTURE OF THE FLAVOPROTEIN SUBUNIT UPON ITS BINDING TO THE CYTOCHROME SUBUNIT
+1861, d5fxeA2, 0.5153, 2.82, 0.100, 78, 60, CRYSTAL STRUCTURE OF EUGENOL OXIDASE IN COMPLEX WITH CONIFERYL ALCOHOL
+1862, d2qmuB1, 0.5151, 2.81, 0.086, 74, 58, STRUCTURE OF AN ARCHAEAL HETEROTRIMERIC INITIATION FACTOR 2 REVEALS A NUCLEOTIDE STATE BETWEEN THE GTP AND THE GDP STATES
+1863, d5fxfA2, 0.5147, 2.69, 0.034, 77, 59, CRYSTAL STRUCTURE OF EUGENOL OXIDASE IN COMPLEX WITH BENZOATE
+1864, p3jc8TC4, 0.5140, 2.69, 0.034, 77, 59, 
+1865, p3jc9DB4, 0.5139, 2.80, 0.065, 91, 62, 
+1866, d5fxdA2, 0.5136, 3.44, 0.031, 279, 64, CRYSTAL STRUCTURE OF EUGENOL OXIDASE IN COMPLEX WITH ISOEUGENOL
+1867, p5elrC_, 0.5136, 3.26, 0.130, 95, 69, STRUCTURE OF THE KH-QUA2 DOMAIN OF T-STAR IN COMPLEX WITH AAUAAU RNA
+1868, p3jc9ZA4, 0.5131, 3.25, 0.057, 89, 70, 
+1869, p3jc9XA4, 0.5131, 3.44, 0.031, 279, 64, 
+1870, p3jc9HB4, 0.5131, 3.51, 0.042, 91, 72, 
+1871, p3jc9BB4, 0.5131, 3.25, 0.130, 95, 69, 
+1872, p3jc8RC4, 0.5131, 2.83, 0.081, 113, 62, 
+1873, p3jc8JC4, 0.5131, 3.13, 0.058, 98, 69, 
+1874, p3jc9VA4, 0.5130, 3.31, 0.100, 89, 70, 
+1875, p3jc9TA4, 0.5130, 3.31, 0.100, 89, 70, 
+1876, p3jc9RA4, 0.5130, 3.31, 0.100, 89, 70, 
+1877, p3jc9NB4, 0.5130, 3.31, 0.100, 89, 70, 
+1878, p3jc9LB4, 0.5130, 3.31, 0.100, 89, 70, 
+1879, p3jc9JB4, 0.5130, 3.56, 0.030, 382, 66, 
+1880, p3jc9FB4, 0.5130, 2.38, 0.119, 64, 59, 
+1881, p3jc8XC4, 0.5130, 3.36, 0.042, 91, 71, 
+1882, p3jc8VC4, 0.5130, 3.66, 0.149, 96, 74, 
+1883, p3jc8PC4, 0.5130, 3.26, 0.032, 279, 63, 
+1884, p3jc8NC4, 0.5130, 3.25, 0.079, 288, 63, 
+1885, p3jc8LC4, 0.5130, 2.85, 0.063, 90, 63, 
+1886, p3jc8HC4, 0.5130, 3.26, 0.079, 288, 63, 
+1887, p3jc8FC4, 0.5130, 2.93, 0.119, 66, 59, 
+1888, p3jc8DC4, 0.5130, 2.93, 0.119, 66, 59, 
+1889, p3jc8BC4, 0.5130, 3.26, 0.079, 288, 63, 
+1890, d5fxpB2, 0.5129, 3.26, 0.079, 288, 63, CRYSTAL STRUCTURE OF EUGENOL OXIDASE IN COMPLEX WITH VANILLIN
+1891, d5fxpA2, 0.5129, 2.93, 0.081, 111, 62, CRYSTAL STRUCTURE OF EUGENOL OXIDASE IN COMPLEX WITH VANILLIN
+1892, d5fxfB2, 0.5128, 2.71, 0.121, 65, 58, CRYSTAL STRUCTURE OF EUGENOL OXIDASE IN COMPLEX WITH BENZOATE
+1893, p4uocA2, 0.5127, 2.71, 0.121, 65, 58, COMPETENCE OR DAMAGE-INDUCIBLE PROTEIN CINA FROM THERMUS THERMOPHILUS
+1894, d5fxdB2, 0.5126, 2.71, 0.121, 65, 58, CRYSTAL STRUCTURE OF EUGENOL OXIDASE IN COMPLEX WITH ISOEUGENOL
+1895, p2vsqA3, 0.5126, 2.71, 0.121, 65, 58, STRUCTURE OF SURFACTIN A SYNTHETASE C (SRFA-C) A NONRIBOSOMAL PEPTIDE SYNTHETASE TERMINATION MODULE
+1896, p4uuxA2, 0.5121, 2.71, 0.121, 65, 58, COMPETENCE OR DAMAGE-INDUCIBLE PROTEIN CINA FROM THERMUS THERMOPHILUS
+1897, p4ctaB2, 0.5120, 2.71, 0.121, 65, 58, COMPETENCE OR DAMAGE-INDUCIBLE PROTEIN CINA FROM THERMUS THERMOPHILUS
+1898, p4uuxB2, 0.5118, 2.71, 0.121, 65, 58, COMPETENCE OR DAMAGE-INDUCIBLE PROTEIN CINA FROM THERMUS THERMOPHILUS
+1899, p4uuwA2, 0.5117, 2.71, 0.121, 65, 58, COMPETENCE OR DAMAGE-INDUCIBLE PROTEIN CINA FROM THERMUS THERMOPHILUS
+1900, d5fxeB2, 0.5116, 2.71, 0.121, 65, 58, CRYSTAL STRUCTURE OF EUGENOL OXIDASE IN COMPLEX WITH CONIFERYL ALCOHOL
+1901, d1diiB1, 0.5113, 2.71, 0.121, 65, 58, CRYSTAL STRUCTURE OF P-CRESOL METHYLHYDROXYLASE AT 2.5 A RESOLUTION
+1902, d1diiA1, 0.5111, 2.71, 0.121, 65, 58, CRYSTAL STRUCTURE OF P-CRESOL METHYLHYDROXYLASE AT 2.5 A RESOLUTION
+1903, p4ct9A2, 0.5109, 2.71, 0.121, 65, 58, COMPETENCE OR DAMAGE-INDUCIBLE PROTEIN CINA FROM THERMUS THERMOPHILUS
+1904, p4uuwB2, 0.5108, 2.71, 0.121, 65, 58, COMPETENCE OR DAMAGE-INDUCIBLE PROTEIN CINA FROM THERMUS THERMOPHILUS
+1905, p1yz6A2, 0.5104, 2.71, 0.121, 65, 58, CRYSTAL STRUCTURE OF INTACT ALPHA SUBUNIT OF AIF2 FROM PYROCOCCUS ABYSSI
+1906, p5wwxA_, 0.5094, 2.71, 0.121, 65, 58, CRYSTAL STRUCTURE OF THE KH2 DOMAIN OF HUMAN RNA-BINDING E3 UBIQUITIN- PROTEIN LIGASE MEX-3C COMPLEX WITH RNA
+1907, p4ct8A2, 0.5093, 2.71, 0.121, 65, 58, COMPETENCE OR DAMAGE-INDUCIBLE PROTEIN CINA FROM THERMUS THERMOPHILUS
+1908, p4av2L3, 0.5091, 2.71, 0.121, 65, 58, SINGLE PARTICLE ELECTRON MICROSCOPY OF PILQ DODECAMERIC COMPLEXES FROM NEISSERIA MENINGITIDIS.
+1909, p4av2K3, 0.5091, 2.71, 0.121, 65, 58, SINGLE PARTICLE ELECTRON MICROSCOPY OF PILQ DODECAMERIC COMPLEXES FROM NEISSERIA MENINGITIDIS.
+1910, p4av2J3, 0.5091, 2.71, 0.121, 65, 58, SINGLE PARTICLE ELECTRON MICROSCOPY OF PILQ DODECAMERIC COMPLEXES FROM NEISSERIA MENINGITIDIS.
+1911, p4av2I3, 0.5091, 2.71, 0.121, 65, 58, SINGLE PARTICLE ELECTRON MICROSCOPY OF PILQ DODECAMERIC COMPLEXES FROM NEISSERIA MENINGITIDIS.
+1912, p4av2H3, 0.5091, 2.71, 0.121, 65, 58, SINGLE PARTICLE ELECTRON MICROSCOPY OF PILQ DODECAMERIC COMPLEXES FROM NEISSERIA MENINGITIDIS.
+1913, p4av2G3, 0.5091, 2.71, 0.121, 65, 58, SINGLE PARTICLE ELECTRON MICROSCOPY OF PILQ DODECAMERIC COMPLEXES FROM NEISSERIA MENINGITIDIS.
+1914, p4av2F3, 0.5091, 3.44, 0.078, 288, 64, SINGLE PARTICLE ELECTRON MICROSCOPY OF PILQ DODECAMERIC COMPLEXES FROM NEISSERIA MENINGITIDIS.
+1915, p4av2E3, 0.5091, 3.27, 0.079, 288, 63, SINGLE PARTICLE ELECTRON MICROSCOPY OF PILQ DODECAMERIC COMPLEXES FROM NEISSERIA MENINGITIDIS.
+1916, p4av2D3, 0.5091, 3.26, 0.079, 288, 63, SINGLE PARTICLE ELECTRON MICROSCOPY OF PILQ DODECAMERIC COMPLEXES FROM NEISSERIA MENINGITIDIS.
+1917, p4av2C3, 0.5091, 2.83, 0.103, 75, 58, SINGLE PARTICLE ELECTRON MICROSCOPY OF PILQ DODECAMERIC COMPLEXES FROM NEISSERIA MENINGITIDIS.
+1918, p4av2B3, 0.5091, 3.26, 0.079, 288, 63, SINGLE PARTICLE ELECTRON MICROSCOPY OF PILQ DODECAMERIC COMPLEXES FROM NEISSERIA MENINGITIDIS.
+1919, p4av2A3, 0.5091, 3.12, 0.062, 263, 65, SINGLE PARTICLE ELECTRON MICROSCOPY OF PILQ DODECAMERIC COMPLEXES FROM NEISSERIA MENINGITIDIS.
+1920, p3krmA2, 0.5086, 3.12, 0.062, 263, 65, IMP1 KH34
+1921, p1yz7A2, 0.5076, 2.65, 0.105, 74, 57, CRYSTAL STRUCTURE OF A C-TERMINAL SEGMENT OF THE ALPHA SUBUNIT OF AIF2 FROM PYROCOCCUS ABYSSI
+1922, p3krmC2, 0.5072, 2.60, 0.105, 74, 57, IMP1 KH34
+1923, d4pydE_, 0.5071, 2.58, 0.105, 74, 57, MOAC IN COMPLEX WITH CPMP CRYSTALLIZED IN SPACE GROUP P212121
+1924, p5emoB2, 0.5069, 2.85, 0.103, 74, 58, STRUCTURE OF THE STAR DOMAIN OF T-STAR IN COMPLEX WITH AUUAAA RNA
+1925, p4bjuA2, 0.5061, 3.27, 0.079, 288, 63, GENETIC AND STRUCTURAL VALIDATION OF ASPERGILLUS FUMIGATUS N-ACETYLPHOSPHOGLUCOSAMINE  MUTASE AS AN ANTIFUNGAL TARGET
+1926, p5elsE_, 0.5056, 3.13, 0.048, 279, 63, STRUCTURE OF THE KH DOMAIN OF T-STAR IN COMPLEX WITH AAAUAA RNA
+1927, p5elsA_, 0.5056, 3.13, 0.048, 279, 63, STRUCTURE OF THE KH DOMAIN OF T-STAR IN COMPLEX WITH AAAUAA RNA
+1928, p6fecS2, 0.5052, 3.13, 0.048, 279, 63, struct.pdbx_descriptor              
+1929, p5elsC_, 0.5050, 2.85, 0.103, 74, 58, STRUCTURE OF THE KH DOMAIN OF T-STAR IN COMPLEX WITH AAAUAA RNA
+1930, p2n8lA1, 0.5043, 2.60, 0.105, 74, 57, ZIPCODE-BINDING-PROTEIN-1 KH3KH4(DD) DOMAINS IN COMPLEX WITH THE KH3 RNA TARGET
+1931, p3krmB2, 0.5041, 2.94, 0.048, 91, 63, IMP1 KH34
+1932, p5ngiA2, 0.5039, 2.87, 0.100, 72, 60, STRUCTURE OF XCPQN012
+1933, p5elsF_, 0.5039, 2.85, 0.103, 75, 58, STRUCTURE OF THE KH DOMAIN OF T-STAR IN COMPLEX WITH AAAUAA RNA
+1934, p3q64A_, 0.5035, 2.85, 0.103, 75, 58, X-RAY CRYSTAL STRUCTURE OF PROTEIN MLL3774 FROM MESORHIZOBIUM LOTI NORTHEAST STRUCTURAL GENOMICS CONSORTIUM TARGET MLR405.
+1935, p2n8mA1, 0.5035, 2.89, 0.136, 76, 59, ZIPCODE-BINDING-PROTEIN-1 KH3(DD)KH4 DOMAINS IN COMPLEX WITH THE KH4 RNA TARGET
+1936, p4bjuB2, 0.5034, 2.89, 0.136, 76, 59, GENETIC AND STRUCTURAL VALIDATION OF ASPERGILLUS FUMIGATUS N-ACETYLPHOSPHOGLUCOSAMINE  MUTASE AS AN ANTIFUNGAL TARGET
+1937, d2annA2, 0.5017, 2.89, 0.136, 76, 59, CRYSTAL STRUCTURE (I) OF NOVA-1 KH1/KH2 DOMAIN TANDEM WITH 25 NT RNA HAIRPIN
+1938, p5elsD_, 0.5012, 2.89, 0.136, 76, 59, STRUCTURE OF THE KH DOMAIN OF T-STAR IN COMPLEX WITH AAAUAA RNA
+1939, p3j1vO2, 0.5009, 2.89, 0.136, 76, 59, A REFINED MODEL OF THE PROTOTYPICAL SALMONELLA TYPHIMURIUM T3SS BASAL BODY REVEALS THE MOLECULAR BASIS FOR ITS ASSEMBLY
+1940, p3j1vN2, 0.5009, 2.89, 0.136, 76, 59, A REFINED MODEL OF THE PROTOTYPICAL SALMONELLA TYPHIMURIUM T3SS BASAL BODY REVEALS THE MOLECULAR BASIS FOR ITS ASSEMBLY
+1941, p3j1vM2, 0.5009, 2.89, 0.136, 76, 59, A REFINED MODEL OF THE PROTOTYPICAL SALMONELLA TYPHIMURIUM T3SS BASAL BODY REVEALS THE MOLECULAR BASIS FOR ITS ASSEMBLY
+1942, p3j1vL2, 0.5009, 2.89, 0.136, 76, 59, A REFINED MODEL OF THE PROTOTYPICAL SALMONELLA TYPHIMURIUM T3SS BASAL BODY REVEALS THE MOLECULAR BASIS FOR ITS ASSEMBLY
+1943, p3j1vK2, 0.5009, 2.89, 0.136, 76, 59, A REFINED MODEL OF THE PROTOTYPICAL SALMONELLA TYPHIMURIUM T3SS BASAL BODY REVEALS THE MOLECULAR BASIS FOR ITS ASSEMBLY
+1944, p3j1vJ2, 0.5009, 2.89, 0.136, 76, 59, A REFINED MODEL OF THE PROTOTYPICAL SALMONELLA TYPHIMURIUM T3SS BASAL BODY REVEALS THE MOLECULAR BASIS FOR ITS ASSEMBLY
+1945, p3j1vI2, 0.5009, 2.89, 0.136, 76, 59, A REFINED MODEL OF THE PROTOTYPICAL SALMONELLA TYPHIMURIUM T3SS BASAL BODY REVEALS THE MOLECULAR BASIS FOR ITS ASSEMBLY
+1946, p3j1vH2, 0.5009, 2.89, 0.136, 76, 59, A REFINED MODEL OF THE PROTOTYPICAL SALMONELLA TYPHIMURIUM T3SS BASAL BODY REVEALS THE MOLECULAR BASIS FOR ITS ASSEMBLY
+1947, p3j1vG2, 0.5009, 2.89, 0.136, 76, 59, A REFINED MODEL OF THE PROTOTYPICAL SALMONELLA TYPHIMURIUM T3SS BASAL BODY REVEALS THE MOLECULAR BASIS FOR ITS ASSEMBLY
+1948, p3j1vF2, 0.5009, 3.11, 0.115, 76, 61, A REFINED MODEL OF THE PROTOTYPICAL SALMONELLA TYPHIMURIUM T3SS BASAL BODY REVEALS THE MOLECULAR BASIS FOR ITS ASSEMBLY
+1949, p3j1vE2, 0.5009, 3.11, 0.115, 76, 61, A REFINED MODEL OF THE PROTOTYPICAL SALMONELLA TYPHIMURIUM T3SS BASAL BODY REVEALS THE MOLECULAR BASIS FOR ITS ASSEMBLY
+1950, p3j1vD2, 0.5009, 3.06, 0.032, 93, 63, A REFINED MODEL OF THE PROTOTYPICAL SALMONELLA TYPHIMURIUM T3SS BASAL BODY REVEALS THE MOLECULAR BASIS FOR ITS ASSEMBLY
+1951, p3j1vC2, 0.5009, 3.06, 0.032, 93, 63, A REFINED MODEL OF THE PROTOTYPICAL SALMONELLA TYPHIMURIUM T3SS BASAL BODY REVEALS THE MOLECULAR BASIS FOR ITS ASSEMBLY
+1952, p3j1vB2, 0.5009, 3.23, 0.129, 76, 62, A REFINED MODEL OF THE PROTOTYPICAL SALMONELLA TYPHIMURIUM T3SS BASAL BODY REVEALS THE MOLECULAR BASIS FOR ITS ASSEMBLY
+1953, p3j1vA2, 0.5009, 2.98, 0.161, 133, 62, A REFINED MODEL OF THE PROTOTYPICAL SALMONELLA TYPHIMURIUM T3SS BASAL BODY REVEALS THE MOLECULAR BASIS FOR ITS ASSEMBLY
+1954, p5elsB_, 0.5008, 2.84, 0.082, 112, 61, STRUCTURE OF THE KH DOMAIN OF T-STAR IN COMPLEX WITH AAAUAA RNA
+1955, p3ezjA3, 0.5008, 3.55, 0.060, 92, 67, CRYSTAL STRUCTURE OF THE N-TERMINAL DOMAIN OF THE SECRETIN GSPD FROM ETEC DETERMINED WITH THE ASSISTANCE OF A NANOBODY
+1956, p5el3C_, 0.5007, 3.55, 0.060, 92, 67, STRUCTURE OF THE KH DOMAIN OF T-STAR

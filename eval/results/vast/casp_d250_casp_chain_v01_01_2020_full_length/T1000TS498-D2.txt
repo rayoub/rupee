@@ -1,0 +1,180 @@
+1I24 A ,110,15.0,0.0037,3.0,12.7,High Resolution Crystal Structure Of The Wild-Type Protein Sqd1, With Nad And Udp-Glucose
+1I2C A ,115,15.0,0.0040,3.1,10.4,Crystal Structure Of Mutant T145a Sqd1 Protein Complex With Nad And Udp-Glucose
+1I2B A ,112,15.0,0.0040,3.1,11.6,Crystal Structure Of Mutant T145a Sqd1 Protein Complex With Nad And Udp-SulfoquinovoseUDP-Glucose
+1QRR A ,115,14.9,0.0042,3.2,13.0,Crystal Structure Of Sqd1 Protein Complex With Nad And Udp- Glucose
+1HDC B ,127,14.9,10e-6.6,3.2,14.2,Mechanism Of Inhibition Of 3alpha,20beta-Hydroxysteroid Dehydrogenase By A Licorice-Derived Steroidal Inhibitor
+2Q45 A ,118,14.9,10e-5.3,3.3,9.3,Ensemble Refinement Of The Protein Crystal Structure Of Putative Tropinone Reductase From Arabidopsis Thaliana Gene At1g07440
+2Q45 A 1,124,14.9,10e-6.5,3.4,8.9,Ensemble Refinement Of The Protein Crystal Structure Of Putative Tropinone Reductase From Arabidopsis Thaliana Gene At1g07440
+3GRK D ,124,14.8,10e-5.5,3.1,14.5,Crystal Structure Of Short Chain Dehydrogenase Reductase Sdr Glucose-Ribitol Dehydrogenase From Brucella Melitensisÿ
+3GRK H ,127,14.8,10e-5.5,3.2,13.4,Crystal Structure Of Short Chain Dehydrogenase Reductase Sdr Glucose-Ribitol Dehydrogenase From Brucella Melitensisÿ
+3GRK A ,125,14.8,10e-5.4,3.1,14.4,Crystal Structure Of Short Chain Dehydrogenase Reductase Sdr Glucose-Ribitol Dehydrogenase From Brucella Melitensisÿ
+3PK0 C ,134,14.7,10e-5.8,3.6,17.2,Crystal Structure Of Short-Chain DehydrogenaseREDUCTASE SDR FROM Mycobacterium Smegmatisÿ
+4EIT C ,127,14.7,10e-5.4,3.2,13.4,Crystal Structure Of An Enoyl-(Acyl Carrier Protein) Reductase From Bartonella Henselaeÿ
+3GRK F ,129,14.7,10e-5.3,3.3,13.2,Crystal Structure Of Short Chain Dehydrogenase Reductase Sdr Glucose-Ribitol Dehydrogenase From Brucella Melitensisÿ
+3PK0 D ,128,14.7,10e-5.8,3.4,14.8,Crystal Structure Of Short-Chain DehydrogenaseREDUCTASE SDR FROM Mycobacterium Smegmatisÿ
+4EIT A ,124,14.7,10e-5.3,3.0,13.7,Crystal Structure Of An Enoyl-(Acyl Carrier Protein) Reductase From Bartonella Henselaeÿ
+4BMS K ,125,14.7,10e-5.8,3.2,12.8,Short Chain Alcohol Dehydrogenase From Ralstonia Sp. Dsm 6428 In Complex With Nadph
+4BMS F ,130,14.7,10e-5.7,3.4,13.1,Short Chain Alcohol Dehydrogenase From Ralstonia Sp. Dsm 6428 In Complex With Nadph
+4BMS C ,123,14.7,10e-5.7,3.1,13.0,Short Chain Alcohol Dehydrogenase From Ralstonia Sp. Dsm 6428 In Complex With Nadph
+4BMS A ,122,14.7,10e-5.7,3.2,12.3,Short Chain Alcohol Dehydrogenase From Ralstonia Sp. Dsm 6428 In Complex With Nadph
+4BMS B ,121,14.7,10e-5.7,3.0,12.4,Short Chain Alcohol Dehydrogenase From Ralstonia Sp. Dsm 6428 In Complex With Nadph
+4BMS E ,129,14.7,10e-5.7,3.3,13.2,Short Chain Alcohol Dehydrogenase From Ralstonia Sp. Dsm 6428 In Complex With Nadph
+3PK0 A ,128,14.7,10e-5.7,3.2,18.0,Crystal Structure Of Short-Chain DehydrogenaseREDUCTASE SDR FROM Mycobacterium Smegmatisÿ
+4EIT F ,124,14.7,10e-5.3,3.1,13.7,Crystal Structure Of An Enoyl-(Acyl Carrier Protein) Reductase From Bartonella Henselaeÿ
+3PK0 B ,126,14.6,10e-5.7,3.3,15.1,Crystal Structure Of Short-Chain DehydrogenaseREDUCTASE SDR FROM Mycobacterium Smegmatisÿ
+4I5G A ,128,14.6,10e-6.1,3.4,12.5,Crystal Structure Of Ralstonia Sp. Alcohol Dehydrogenase Mutant N15g, G37d, R38v, R39s, A86n, S88a
+3GNT A ,128,14.6,10e-5.6,3.3,14.1,Crystal Structure Of The Staphylococcus Aureus Enoyl-Acyl Carrier Protein Reductase (Fabi) In Apo Form (Two Molecules In Au)ÿ
+2IED D ,126,14.6,10e-5.1,3.4,7.1,Crystal Structure Of Isoniazid-Resistant S94a Enoyl- Acp(Coa) Reductase Mutant Enzyme From Mycobacterium Tuberculosis Uncomplexed
+1ZID A ,126,14.5,10e-4.7,3.5,7.9,Long Fatty Acid Chain Enoyl-Acp Reductase (Inha) In Complex With An Isonicotinic-Acyl-Nadh Inhibitor
+2WYW A ,133,14.5,10e-5.0,3.5,15.0,High Resolution Structure Of Thermus Thermophilus Enoyl- Acyl Carrier Protein Reductase Nad And Triclosan-Formÿ
+3IMF B ,111,14.5,10e-5.5,2.9,14.4,1.99 Angstrom Resolution Crystal Structure Of A Short Chain Dehydrogenase From Bacillus Anthracis Str. 'ames Ancestor'ÿ
+2B37 D ,113,14.5,10e-4.1,3.3,8.0,Crystal Structure Of Mycobacterium Tuberculosis Enoyl Reductase (Inha) Inhibited By 5-Octyl-2-Phenoxyphenol
+2WYV A ,116,14.5,10e-5.0,3.1,17.2,High Resolution Structure Of Thermus Thermophilus Enoyl- Acyl Carrier Protein Reductase Nad-Formÿ
+2YW9 F ,125,14.5,10e-5.0,3.2,16.0,Crystal Structure Of Tt0143 From Thermus Thermophilus Hb8
+1ULU D ,119,14.5,10e-5.0,3.3,16.8,Crystal Structure Of Tt0143 From Thermus Thermophilus Hb8
+1ULU B ,116,14.5,10e-5.0,3.2,17.2,Crystal Structure Of Tt0143 From Thermus Thermophilus Hb8
+3RWB D ,132,14.5,10e-4.7,3.5,18.2,Crystal Structure Of Complex Of 4pal (4-Pyridoxolactone) And Pldh (Tetrameric Pyridoxal 4-Dehydrogenase) From Mesorhizobium Loti
+5COQ C ,120,14.5,10e-5.0,3.3,8.3,The Effect Of Valine To Alanine Mutation On Inha Enzyme Crystallization Pattern And Substrate Binding Loop Conformation And Flexibility
+1ULU A ,118,14.5,10e-5.0,3.2,16.9,Crystal Structure Of Tt0143 From Thermus Thermophilus Hb8
+2WYU C ,115,14.5,10e-5.0,3.1,17.4,High Resolution Structure Of Thermus Thermophilus Enoyl- Acyl Carrier Protein Reductase Apo-Formÿ
+2WYU A ,119,14.5,10e-5.0,3.3,16.8,High Resolution Structure Of Thermus Thermophilus Enoyl- Acyl Carrier Protein Reductase Apo-Formÿ
+2WYV B ,117,14.4,10e-5.0,3.1,17.1,High Resolution Structure Of Thermus Thermophilus Enoyl- Acyl Carrier Protein Reductase Nad-Formÿ
+3IMF C ,102,14.4,10e-5.9,2.6,14.7,1.99 Angstrom Resolution Crystal Structure Of A Short Chain Dehydrogenase From Bacillus Anthracis Str. 'ames Ancestor'ÿ
+3IMF D ,115,14.4,10e-5.9,3.1,13.9,1.99 Angstrom Resolution Crystal Structure Of A Short Chain Dehydrogenase From Bacillus Anthracis Str. 'ames Ancestor'ÿ
+4LVU B ,130,14.4,10e-4.9,3.3,12.3,Crystal Structure Of A Putative Short Chain Dehydrogenase From Burkholderia Thailandensis
+2WYU B ,120,14.4,10e-4.9,3.4,16.7,High Resolution Structure Of Thermus Thermophilus Enoyl- Acyl Carrier Protein Reductase Apo-Formÿ
+3IMF A ,102,14.4,10e-5.8,2.6,14.7,1.99 Angstrom Resolution Crystal Structure Of A Short Chain Dehydrogenase From Bacillus Anthracis Str. 'ames Ancestor'ÿ
+1HDC C ,129,14.4,10e-4.6,3.4,14.7,Mechanism Of Inhibition Of 3alpha,20beta-Hydroxysteroid Dehydrogenase By A Licorice-Derived Steroidal Inhibitor
+4LVU A ,131,14.4,10e-4.9,3.4,12.2,Crystal Structure Of A Putative Short Chain Dehydrogenase From Burkholderia Thailandensis
+2J5T D 1,121,14.4,0.0003,3.6,5.8,Glutamate 5-Kinase From Escherichia Coli Complexed With Glutamateÿ
+4RF3 B ,131,14.4,10e-5.7,3.2,14.5,Crystal Structure Of Ketoreductase From Lactobacillus Kefir, Mutant A94f
+1ZEM C ,129,14.4,10e-4.9,3.5,10.1,Crystal Structure Of Nad+-Bound Xylitol Dehydrogenase
+2WYU D ,117,14.4,10e-4.8,3.2,17.1,High Resolution Structure Of Thermus Thermophilus Enoyl- Acyl Carrier Protein Reductase Apo-Formÿ
+4RF2 A ,132,14.4,10e-5.7,3.2,14.4,Crystal Structure Of Nadp+ Bound Ketoreductase From Lactobacillus Kefir
+2BGM A ,133,14.3,10e-5.0,3.2,11.3,X-Ray Structure Of Ternary-Secoisolariciresinol Dehydrogenase
+2BGM A 1,135,14.3,10e-5.3,3.3,11.1,X-Ray Structure Of Ternary-Secoisolariciresinol Dehydrogenase
+3O38 C ,131,14.3,10e-5.7,3.4,13.0,Crystal Structure Of A Short Chain Dehydrogenase From Mycobacterium Smegmatisÿ
+1Y5R A 1,121,14.3,10e-5.3,3.1,10.7,The Crystal Structure Of Murine 11b-Hydroxysteroid Dehydrogenase Complexed With Corticosterone
+1Y5R A ,124,14.3,10e-5.0,3.0,10.5,The Crystal Structure Of Murine 11b-Hydroxysteroid Dehydrogenase Complexed With Corticosterone
+3EY4 B ,122,14.3,10e-4.6,3.2,10.7,Further Studies With The 2-Amino-1,3-Thiazol-4(5h)-One Class Of 11-Hydroxysteroid Dehydrogenase Type 1 (11-Hsd1) Inhibitors: Reducing Pregnane X Receptor (Pxr) Activity And Exploring Activity In A Monkey Pharmacodynamic Model
+3EY4 B 1,124,14.3,10e-4.8,3.2,10.5,Further Studies With The 2-Amino-1,3-Thiazol-4(5h)-One Class Of 11-Hydroxysteroid Dehydrogenase Type 1 (11-Hsd1) Inhibitors: Reducing Pregnane X Receptor (Pxr) Activity And Exploring Activity In A Monkey Pharmacodynamic Model
+1WVG A ,124,14.3,0.0017,3.0,10.5,Structure Of Cdp-D-Glucose 4,6-Dehydratase From Salmonella Typhi
+4JRO A ,132,14.3,10e-5.2,3.4,14.4,Crystal Structure Of 3-oxoacyl-[acyl-carrier Protein]reductase (fabg) From Listeria Monocytogenes In Complex With Nadp+
+1ZEM G ,132,14.3,10e-4.9,3.5,9.8,Crystal Structure Of Nad+-Bound Xylitol Dehydrogenase
+2W21 A ,123,14.3,0.0001,3.6,6.5,Crystal Structure Of The Aminoacid Kinase Domain Of The Glutamate 5 Kinase Of Escherichia Coliÿ
+3AUS B ,120,14.3,10e-5.2,3.1,14.2,Crystal Structure Of Bacillus Megaterium Glucose Dehydrogenase 4 In Ligand-Free Formÿ
+4BO0 C ,126,14.3,10e-4.5,3.3,11.9,Crystal Structure Of 3-oxoacyl-(acyl-carrier-protein) Reductase (fabg) From Pseudomonas Aeruginosa In Complex With 1-(4-methoxy-1-methylindazol-3-yl)-3-(2-methoxyphenyl) Urea At 2.4a Resolution
+3HFG A 1,124,14.3,10e-4.5,3.2,10.5,Crystal Structure Of Human 11-Beta-Hydroxysteroid- Dehydrogenase Bound To An Sulfonyl-Piperazine Inhibitorÿ
+3HFG A ,123,14.3,10e-4.3,3.1,10.6,Crystal Structure Of Human 11-Beta-Hydroxysteroid- Dehydrogenase Bound To An Sulfonyl-Piperazine Inhibitorÿ
+3O38 B ,117,14.3,10e-5.6,3.0,12.8,Crystal Structure Of A Short Chain Dehydrogenase From Mycobacterium Smegmatisÿ
+4RF2 B ,133,14.3,10e-5.6,3.4,14.3,Crystal Structure Of Nadp+ Bound Ketoreductase From Lactobacillus Kefir
+3EY4 C ,124,14.3,10e-4.3,3.2,10.5,Further Studies With The 2-Amino-1,3-Thiazol-4(5h)-One Class Of 11-Hydroxysteroid Dehydrogenase Type 1 (11-Hsd1) Inhibitors: Reducing Pregnane X Receptor (Pxr) Activity And Exploring Activity In A Monkey Pharmacodynamic Model
+3EY4 C 1,125,14.3,10e-4.5,3.2,10.4,Further Studies With The 2-Amino-1,3-Thiazol-4(5h)-One Class Of 11-Hydroxysteroid Dehydrogenase Type 1 (11-Hsd1) Inhibitors: Reducing Pregnane X Receptor (Pxr) Activity And Exploring Activity In A Monkey Pharmacodynamic Model
+5CPB F ,117,14.3,0.0002,3.6,9.4,The Effect Of Isoleucine To Alanine Mutation On Inha Enzyme Crystallization Pattern And Inhibition By Ligand Pt70 (tcu)
+3ZV6 A ,132,14.3,10e-4.5,3.4,12.1,Crystal Structure Of Cis-Biphenyl-2,3-Dihydrodiol-2,3- Dehydrogenase (Bphb) From Pandoraea Pnomenusa Strain B- 356 Complex With Co-Enzyme Nad And Product Analog 4,4'- Dihydroxybiphenylÿ
+4I5F G ,125,14.3,10e-5.6,3.1,13.6,Crystal Structure Of Ralstonia Sp. Alcohol Dehydrogenase Mutant N15g, G37d, R38v, R39s
+4IS2 A ,126,14.3,10e-5.6,3.2,15.1,Crystal Structure Of The Apo Form Of A 3alpha-hydroxysteroid Dehydrogenase (baia2) Associated With Secondary Bile Acid Synthesis From Clostridium Scindens Vpi12708 At 1.90 A Resolution
+1YXM B 1,119,14.3,10e-5.6,3.3,14.3,Crystal Structure Of Peroxisomal Trans 2-Enoyl Coa Reductase
+1YXM B ,108,14.3,10e-5.3,2.9,13.9,Crystal Structure Of Peroxisomal Trans 2-Enoyl Coa Reductase
+4BNJ H ,135,14.3,10e-4.7,3.4,13.3,Crystal Structure Of S. Aureus Fabi In Complex With Nadp And 5-methyl-2-phenoxyphenol
+1ZEM F ,131,14.3,10e-4.8,3.4,8.4,Crystal Structure Of Nad+-Bound Xylitol Dehydrogenase
+1ZEM B ,132,14.3,10e-4.8,3.5,9.8,Crystal Structure Of Nad+-Bound Xylitol Dehydrogenase
+1P44 B ,127,14.3,10e-4.7,3.6,7.9,Targeting Tuberculosis And Malaria Through Inhibition Of Enoyl Reductase: Compound Activity And Structural Data
+3OIF B ,128,14.2,10e-4.7,3.4,15.6,Crystal Structure Of Enoyl-Acp Reductases I (Fabi) From B. Subtilis (Complex With Nad And Tcl)ÿ
+4BNY C ,137,14.2,0.0001,3.7,13.1,Crystal Structure Of 3-oxoacyl-(acyl-carrier-protein) Reductase (fabg) From Pseudomonas Aeruginosa In Complex With 4-(2-phenylthieno(3,2-d)pyrimidin-4-yl)morpholine At 1.8a Resolution
+3AY7 B ,111,14.2,10e-4.7,2.8,13.5,Crystal Structure Of Bacillus Megaterium Glucose Dehydrogenase 4 G259a Mutant
+3AUT B ,112,14.2,10e-4.7,2.8,13.4,Crystal Structure Of Bacillus Megaterium Glucose Dehydrogenase 4 In Complex With Nadhÿ
+3BYZ D 1,123,14.2,10e-5.1,3.0,10.6,2-Amino-1,3-Thiazol-4(5h)-Ones As Potent And Selective 11- Hydroxysteroid Dehydrogenase Type 1 Inhibitors
+3BYZ D ,122,14.2,10e-4.9,3.2,13.1,2-Amino-1,3-Thiazol-4(5h)-Ones As Potent And Selective 11- Hydroxysteroid Dehydrogenase Type 1 Inhibitors
+4RF5 B ,130,14.2,10e-5.1,3.2,14.6,Crystal Structure Of Ketoreductase From Lactobacillus Kefir, E145s Mutant
+3ZV3 A ,122,14.2,10e-4.7,3.4,12.3,Crystal Structure Of Cis-Biphenyl-2,3-Dihydrodiol-2,3- Dehydrogenase (Bphb)from Pandoraea Pnomenusa Strain B- 356 In Intermediate State Of Substrate Binding Loopÿ
+4BNZ C ,130,14.2,0.0001,3.6,13.8,Crystal Structure Of 3-oxoacyl-(acyl-carrier-protein) Reductase (fabg) From Pseudomonas Aeruginosa In Complex With 1-methyl-n-phenylindole-3-carboxamide At 2.5a Resolution
+4DRY C ,126,14.2,10e-4.4,3.2,12.7,The Crystal Structure Of 3-Oxoacyl-[acyl-Carrier-Protein] Reductase From Rhizobium Melilotiÿ
+3IJR C ,117,14.2,10e-4.7,3.2,12.8,2.05 Angstrom Resolution Crystal Structure Of A Short Chain Dehydrogenase From Bacillus Anthracis Str. 'ames Ancestor' In Complex With Nad+ÿ
+4RF3 A ,130,14.2,10e-5.1,3.2,14.6,Crystal Structure Of Ketoreductase From Lactobacillus Kefir, Mutant A94f
+4BB6 B ,123,14.2,10e-4.6,3.2,10.6,Free-Wilson And Structural Approaches To Co-Optimising Human And Rodent Isoform Potency For 11b-Hydroxysteroid Dehydrogenase Type 1 11b-Hsd1 Inhibitors
+4BB6 B 1,125,14.2,10e-4.8,3.2,10.4,Free-Wilson And Structural Approaches To Co-Optimising Human And Rodent Isoform Potency For 11b-Hydroxysteroid Dehydrogenase Type 1 11b-Hsd1 Inhibitors
+2AE1 A ,120,14.2,10e-4.7,3.3,10.0,Tropinone Reductase-Ii
+1IY8 D ,127,14.2,10e-4.7,3.3,16.5,Crystal Structure Of Levodione Reductase
+4FS3 A ,131,14.2,10e-4.6,3.1,13.7,Crystal Structure Of Staphylococcus Aureus Enoyl-Acp Reductase In Complex With Nadp And Afn-1252
+3IJR A ,121,14.2,10e-4.6,3.3,10.7,2.05 Angstrom Resolution Crystal Structure Of A Short Chain Dehydrogenase From Bacillus Anthracis Str. 'ames Ancestor' In Complex With Nad+ÿ
+3OIF C ,131,14.2,10e-5.0,3.4,15.3,Crystal Structure Of Enoyl-Acp Reductases I (Fabi) From B. Subtilis (Complex With Nad And Tcl)ÿ
+2Z1N B ,131,14.2,10e-4.0,3.4,13.7,Crystal Structure Of Ape0912 From Aeropyrum Pernix K1
+1IY8 F ,127,14.2,10e-4.7,3.4,15.7,Crystal Structure Of Levodione Reductase
+4QXM A ,123,14.2,0.0006,3.8,8.1,Crystal Structure Of The Inha:gsk_sb713 Complex
+2NTV B ,116,14.2,10e-4.3,3.6,7.8,Mycobacterium Leprae Inha Bound With Pth-Nad Adduct
+3F1L A ,124,14.2,10e-5.1,3.4,12.1,The 0.95 A Structure Of An Oxidoreductase, Ycik From E.Coli
+3AY7 A ,121,14.2,10e-4.6,3.2,14.9,Crystal Structure Of Bacillus Megaterium Glucose Dehydrogenase 4 G259a Mutant
+1ZEM A ,131,14.2,10e-4.7,3.5,9.2,Crystal Structure Of Nad+-Bound Xylitol Dehydrogenase
+4FGS A ,120,14.2,10e-5.1,3.1,13.3,Crystal Structure Of A Probable Dehydrogenase Protein
+1RKX B ,116,14.2,10e-4.4,2.9,11.2,Crystal Structure At 1.8 Angstrom Of Cdp-D-Glucose 4,6- Dehydratase From Yersinia Pseudotuberculosis
+3GR6 G ,131,14.2,10e-4.6,3.2,13.7,Crystal Structure Of The Staphylococcus Aureus Enoyl-Acyl Carrier Protein Reductase (Fabi) In Complex With Nadp And Triclosanÿ
+3I3O C ,121,14.2,10e-4.6,3.5,11.6,2.06 Angstrom Resolution Crystal Structure Of A Short Chain Dehydrogenase From Bacillus Anthracis Str. 'ames Ancestor' In Complex With Nad-Acetoneÿ
+1IY8 E ,130,14.2,10e-4.7,3.4,14.6,Crystal Structure Of Levodione Reductase
+3I3O H ,109,14.2,10e-5.0,2.9,11.9,2.06 Angstrom Resolution Crystal Structure Of A Short Chain Dehydrogenase From Bacillus Anthracis Str. 'ames Ancestor' In Complex With Nad-Acetoneÿ
+3I3O B ,118,14.2,10e-4.6,3.4,12.7,2.06 Angstrom Resolution Crystal Structure Of A Short Chain Dehydrogenase From Bacillus Anthracis Str. 'ames Ancestor' In Complex With Nad-Acetoneÿ
+1VL8 A ,127,14.2,10e-5.1,3.4,10.2,Crystal Structure Of Gluconate 5-Dehydrogenase (Tm0441) From Thermotoga Maritima At 2.07 A Resolution
+4CV1 D ,135,14.2,10e-4.6,3.4,13.3,Crystal Structure Of S. Aureus Fabi In Complex With Nadph And Cg400549
+4DQX B ,124,14.2,10e-4.7,3.3,16.1,Crystal Structure Of A Short Chain Dehydrogenase From Rhizobium Etli Cfn 42ÿ
+1IY8 C ,127,14.2,10e-4.7,3.3,15.7,Crystal Structure Of Levodione Reductase
+1IY8 A ,128,14.2,10e-4.7,3.3,15.6,Crystal Structure Of Levodione Reductase
+3I3O A ,116,14.2,10e-4.6,3.1,12.1,2.06 Angstrom Resolution Crystal Structure Of A Short Chain Dehydrogenase From Bacillus Anthracis Str. 'ames Ancestor' In Complex With Nad-Acetoneÿ
+3IJR G ,108,14.2,10e-4.6,2.9,12.0,2.05 Angstrom Resolution Crystal Structure Of A Short Chain Dehydrogenase From Bacillus Anthracis Str. 'ames Ancestor' In Complex With Nad+ÿ
+1VL8 B ,132,14.2,10e-5.1,3.5,12.1,Crystal Structure Of Gluconate 5-Dehydrogenase (Tm0441) From Thermotoga Maritima At 2.07 A Resolution
+4CV1 H ,133,14.2,10e-4.6,3.3,13.5,Crystal Structure Of S. Aureus Fabi In Complex With Nadph And Cg400549
+1G0N B ,129,14.2,10e-4.6,3.3,8.5,Structure Of Trihydroxynaphthalene Reductase In Complex With Nadph And 4,5,6,7-Tetrachloro-Phthalide
+3I3O E ,109,14.2,10e-5.1,3.0,12.8,2.06 Angstrom Resolution Crystal Structure Of A Short Chain Dehydrogenase From Bacillus Anthracis Str. 'ames Ancestor' In Complex With Nad-Acetoneÿ
+1Y5R B ,111,14.2,0.0002,3.1,11.7,The Crystal Structure Of Murine 11b-Hydroxysteroid Dehydrogenase Complexed With Corticosterone
+1Y5R B 1,114,14.2,0.0001,3.1,11.4,The Crystal Structure Of Murine 11b-Hydroxysteroid Dehydrogenase Complexed With Corticosterone
+1RKX A ,119,14.2,0.0006,2.8,11.8,Crystal Structure At 1.8 Angstrom Of Cdp-D-Glucose 4,6- Dehydratase From Yersinia Pseudotuberculosis
+1Y5M B ,115,14.2,10e-4.8,3.1,11.3,The Crystal Structure Of Murine 11b-Hydroxysteroid Dehydrogenase: An Important Therapeutic Target For Diabetes
+1Y5M B 1,113,14.2,10e-5.1,3.1,11.5,The Crystal Structure Of Murine 11b-Hydroxysteroid Dehydrogenase: An Important Therapeutic Target For Diabetes
+1ZK4 A ,131,14.2,10e-5.0,3.3,11.5,Structure Of R-Specific Alcohol Dehydrogenase (Wildtype) From Lactobacillus Brevis In Complex With Acetophenone And Nadp
+3AY6 B ,109,14.2,10e-4.6,2.8,15.6,Crystal Structure Of Bacillus Megaterium Glucose Dehydrogenase 4 A258f Mutant In Complex With Nadh And D-Glucose
+3EY4 D 1,124,14.2,10e-4.6,3.1,10.5,Further Studies With The 2-Amino-1,3-Thiazol-4(5h)-One Class Of 11-Hydroxysteroid Dehydrogenase Type 1 (11-Hsd1) Inhibitors: Reducing Pregnane X Receptor (Pxr) Activity And Exploring Activity In A Monkey Pharmacodynamic Model
+3EY4 D ,120,14.2,10e-4.4,3.0,10.8,Further Studies With The 2-Amino-1,3-Thiazol-4(5h)-One Class Of 11-Hydroxysteroid Dehydrogenase Type 1 (11-Hsd1) Inhibitors: Reducing Pregnane X Receptor (Pxr) Activity And Exploring Activity In A Monkey Pharmacodynamic Model
+2J5T A 1,132,14.2,0.0002,4.0,6.8,Glutamate 5-Kinase From Escherichia Coli Complexed With Glutamateÿ
+2IRW H 1,113,14.2,10e-4.4,3.2,11.5,Human 11-Beta-Hydroxysteroid Dehydrogenase (Hsd1) With Nadp And Adamantane Ether Inhibitor
+2IRW H ,110,14.2,10e-4.1,3.1,11.8,Human 11-Beta-Hydroxysteroid Dehydrogenase (Hsd1) With Nadp And Adamantane Ether Inhibitor
+2ZAT D ,121,14.2,10e-5.0,3.3,14.0,Crystal Structure Of A Mammalian Reductase
+4DRY A ,123,14.2,10e-4.3,3.2,12.2,The Crystal Structure Of 3-Oxoacyl-[acyl-Carrier-Protein] Reductase From Rhizobium Melilotiÿ
+1RKX C ,121,14.2,0.0006,2.9,12.4,Crystal Structure At 1.8 Angstrom Of Cdp-D-Glucose 4,6- Dehydratase From Yersinia Pseudotuberculosis
+1IY8 G ,127,14.2,10e-4.7,3.2,15.7,Crystal Structure Of Levodione Reductase
+3AUT A ,114,14.2,10e-4.6,3.1,15.8,Crystal Structure Of Bacillus Megaterium Glucose Dehydrogenase 4 In Complex With Nadhÿ
+3IJR E ,114,14.2,10e-5.0,3.2,12.3,2.05 Angstrom Resolution Crystal Structure Of A Short Chain Dehydrogenase From Bacillus Anthracis Str. 'ames Ancestor' In Complex With Nad+ÿ
+4I5G G ,125,14.2,10e-5.5,3.2,12.8,Crystal Structure Of Ralstonia Sp. Alcohol Dehydrogenase Mutant N15g, G37d, R38v, R39s, A86n, S88a
+3F1K A ,123,14.2,10e-5.0,3.4,10.6,Crystal Structure Of Ycik From E. Coli, An Oxidoreductase, Complexed With Nadp+ At 2.6a Resolution
+2QQ5 A ,122,14.2,10e-4.7,3.4,10.7,Crystal Structure Of Human Sdr Family Member 1
+4DRY D ,125,14.2,10e-4.3,3.2,12.8,The Crystal Structure Of 3-Oxoacyl-[acyl-Carrier-Protein] Reductase From Rhizobium Melilotiÿ
+1RKX D ,116,14.2,0.0035,2.9,11.2,Crystal Structure At 1.8 Angstrom Of Cdp-D-Glucose 4,6- Dehydratase From Yersinia Pseudotuberculosis
+4CUZ E ,131,14.2,10e-4.6,3.1,13.7,Crystal Structure Of S. Aureus Fabi In Complex With Nadph And Pt173
+1IPF A ,122,14.2,10e-4.3,3.4,10.7,Tropinone Reductase-Ii Complexed With Nadph And Tropinone
+2PFF G 2,119,14.2,0.0005,3.3,10.9,Structural Insights Of Yeast Fatty Acid Synthase
+2PFF D 2,123,14.2,0.0005,3.4,10.6,Structural Insights Of Yeast Fatty Acid Synthase
+4ALL C ,136,14.2,0.0001,3.7,13.2,Crystal Structure Of S. Aureus Fabi In Complex With Nadp And Triclosan (P212121)
+2PFF A 2,131,14.2,0.0005,3.5,9.9,Structural Insights Of Yeast Fatty Acid Synthase
+3OTH A ,115,14.2,0.0384,3.0,13.9,Crystal Structure Of Calg1, Calicheamicin Glycostyltransferase, Tdp And Calicheamicin Alpha3i Bound Formÿ
+3EY4 A 1,110,14.2,10e-4.3,3.1,13.6,Further Studies With The 2-Amino-1,3-Thiazol-4(5h)-One Class Of 11-Hydroxysteroid Dehydrogenase Type 1 (11-Hsd1) Inhibitors: Reducing Pregnane X Receptor (Pxr) Activity And Exploring Activity In A Monkey Pharmacodynamic Model
+3EY4 A ,116,14.2,10e-4.1,3.3,11.2,Further Studies With The 2-Amino-1,3-Thiazol-4(5h)-One Class Of 11-Hydroxysteroid Dehydrogenase Type 1 (11-Hsd1) Inhibitors: Reducing Pregnane X Receptor (Pxr) Activity And Exploring Activity In A Monkey Pharmacodynamic Model
+4CUZ A ,130,14.2,10e-4.6,3.1,13.8,Crystal Structure Of S. Aureus Fabi In Complex With Nadph And Pt173
+3IJR F ,103,14.2,10e-4.6,2.8,12.6,2.05 Angstrom Resolution Crystal Structure Of A Short Chain Dehydrogenase From Bacillus Anthracis Str. 'ames Ancestor' In Complex With Nad+ÿ
+4CUZ H ,132,14.2,10e-4.6,3.4,13.6,Crystal Structure Of S. Aureus Fabi In Complex With Nadph And Pt173
+4PVD C ,122,14.2,0.0100,3.2,10.7,Crystal Structure Of Yeast Methylglyoxal/isovaleraldehyde Reductase Gre2 Complexed With Nadph
+3OJF A ,131,14.2,10e-4.6,3.3,15.3,Crystal Structure Of The Bacillus Cereus Enoyl-Acyl Carrier Protein Reductase With Nadp+ And Indole Naphthyridinone (Complex Form)ÿ
+4DQX C ,125,14.2,10e-4.7,3.3,16.8,Crystal Structure Of A Short Chain Dehydrogenase From Rhizobium Etli Cfn 42ÿ
+3GMD G ,114,14.2,10e-4.3,3.0,11.4,Structure-Based Design Of 7-Azaindole-Pyrrolidines As Inhibitors Of 11beta-Hydroxysteroid-Dehydrogenase Type Iÿ
+3GMD G 1,116,14.2,10e-4.6,3.1,11.2,Structure-Based Design Of 7-Azaindole-Pyrrolidines As Inhibitors Of 11beta-Hydroxysteroid-Dehydrogenase Type Iÿ
+4CUZ G ,132,14.2,10e-4.6,3.2,13.6,Crystal Structure Of S. Aureus Fabi In Complex With Nadph And Pt173
+3O03 A ,132,14.2,10e-5.0,3.5,13.6,Quaternary Complex Structure Of Gluconate 5-Dehydrogenase From Streptococcus Suis Type 2ÿ
+3I3O G ,107,14.2,10e-5.0,2.8,12.1,2.06 Angstrom Resolution Crystal Structure Of A Short Chain Dehydrogenase From Bacillus Anthracis Str. 'ames Ancestor' In Complex With Nad-Acetoneÿ
+1IY8 H ,124,14.2,10e-4.7,3.2,16.1,Crystal Structure Of Levodione Reductase
+4CUZ D ,137,14.2,10e-4.6,3.5,13.1,Crystal Structure Of S. Aureus Fabi In Complex With Nadph And Pt173
+3I3O F ,119,14.2,10e-4.6,3.2,11.8,2.06 Angstrom Resolution Crystal Structure Of A Short Chain Dehydrogenase From Bacillus Anthracis Str. 'ames Ancestor' In Complex With Nad-Acetoneÿ
+3IJR D ,121,14.2,10e-4.6,3.3,9.1,2.05 Angstrom Resolution Crystal Structure Of A Short Chain Dehydrogenase From Bacillus Anthracis Str. 'ames Ancestor' In Complex With Nad+ÿ
+2J5V B 1,120,14.2,10e-5.0,3.5,6.7,Glutamate 5-Kinase From Escherichia Coli Complexed With Glutamyl-5-Phosphate And Pyroglutamic Acid
+4CUZ F ,134,14.2,10e-4.6,3.2,13.4,Crystal Structure Of S. Aureus Fabi In Complex With Nadph And Pt173
+4CUZ B ,133,14.2,10e-4.6,3.2,13.5,Crystal Structure Of S. Aureus Fabi In Complex With Nadph And Pt173
+4CUZ C ,133,14.2,10e-4.6,3.2,13.5,Crystal Structure Of S. Aureus Fabi In Complex With Nadph And Pt173
+4CV1 F ,131,14.2,10e-4.6,3.2,13.7,Crystal Structure Of S. Aureus Fabi In Complex With Nadph And Cg400549
+4DQX D ,127,14.2,10e-4.7,3.4,15.7,Crystal Structure Of A Short Chain Dehydrogenase From Rhizobium Etli Cfn 42ÿ
+2AE2 B ,121,14.2,10e-4.2,3.4,11.6,Tropinone Reductase-Ii Complexed With Nadp+ And Pseudotropine
