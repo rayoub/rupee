@@ -2,6 +2,8 @@ package edu.umkc.rupee.search.lib;
 
 public class Constants {
 
+    public final static String APP_NAME = "RUPEE";
+
     public final static String DB_NAME = "rupee";
    
     public final static String DB_USER = "ayoub";
