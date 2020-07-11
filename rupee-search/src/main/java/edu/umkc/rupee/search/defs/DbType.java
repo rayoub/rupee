@@ -9,7 +9,8 @@ public enum DbType {
     SCOP(1, "SCOPe", "scop", Constants.SCOP_PATH),
     CATH(2, "CATH", "cath", Constants.CATH_PATH),
     ECOD(3, "ECOD", "ecod", Constants.ECOD_PATH),
-    CHAIN(4, "PDB Chains", "chain", Constants.CHAIN_PATH);
+    CHAIN(4, "PDB Chains", "chain", Constants.CHAIN_PATH),
+    UPLOAD(10, "Upload", "upload", Constants.UPLOAD_PATH);
 
     private int id;
     private String name;
@@ -54,6 +55,9 @@ public enum DbType {
         }
         else if (id == CHAIN.getId()) {
             return CHAIN;
+        }
+        else if (id == UPLOAD.getId()) {
+            return UPLOAD;
         }
         else {
             return INVALID;

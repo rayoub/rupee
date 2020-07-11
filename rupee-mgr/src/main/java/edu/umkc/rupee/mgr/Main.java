@@ -54,7 +54,6 @@ import edu.umkc.rupee.search.ecod.EcodImport;
 import edu.umkc.rupee.search.ecod.EcodSearch;
 import edu.umkc.rupee.search.ecod.EcodSearchCriteria;
 import edu.umkc.rupee.search.ecod.EcodSearchRecord;
-import edu.umkc.rupee.search.lib.TmAligning;
 import edu.umkc.rupee.search.lib.Db;
 import edu.umkc.rupee.search.lib.DbId;
 import edu.umkc.rupee.search.lib.Grams;
@@ -67,8 +66,6 @@ import edu.umkc.rupee.search.scop.ScopImport;
 import edu.umkc.rupee.search.scop.ScopSearch;
 import edu.umkc.rupee.search.scop.ScopSearchCriteria;
 import edu.umkc.rupee.search.scop.ScopSearchRecord;
-import edu.umkc.rupee.tm.TmMode;
-import edu.umkc.rupee.tm.TmResults;
 
 public class Main {
 
@@ -91,25 +88,19 @@ public class Main {
         group.addOption(Option.builder("a")
                 .longOpt("align")
                 .numberOfArgs(3)
-                .argName("DB_ID_1>,<DB_ID_2>,<ALIGN_TYPE")
-                .valueSeparator(',')
-                .build());
-        group.addOption(Option.builder("t")
-                .longOpt("tm-align")
-                .numberOfArgs(2)
-                .argName("DB_ID_1>,<DB_ID_2")
+                .argName("ALIGN_TYPE>,<DB_ID_1>,<DB_ID_2")
                 .valueSeparator(',')
                 .build());
         group.addOption(Option.builder("f")
                 .longOpt("lcs-fulllength")
-                .numberOfArgs(2)
-                .argName("DB_ID_1>,<DB_ID_2")
+                .numberOfArgs(3)
+                .argName("DB_TYPE>,<DB_ID_1>,<DB_ID_2")
                 .valueSeparator(',')
                 .build());
         group.addOption(Option.builder("c")
                 .longOpt("lcs-containment")
-                .numberOfArgs(2)
-                .argName("DB_ID_1>,<DB_ID_2")
+                .numberOfArgs(3)
+                .argName("DB_TYPE>,<DB_ID_1>,<DB_ID_2")
                 .valueSeparator(',')
                 .build());
         group.addOption(Option.builder("s")
@@ -155,8 +146,6 @@ public class Main {
                 option_h(line);
             } else if (line.hasOption("a")) {
                 option_a(line);
-            } else if (line.hasOption("t")) {
-                option_t(line);
             } else if (line.hasOption("f")) {
                 option_f(line);
             } else if (line.hasOption("c")) {
@@ -261,16 +250,16 @@ public class Main {
         Set<String> alignNames = new HashSet<>(Arrays.stream(AlignmentType.values()).map(v -> v.name()).collect(Collectors.toList()));
         
         String[] args = line.getOptionValues("a");
-        
-        String dbId1 = args[0];
-        String dbId2 = args[1];
 
-        if (!alignNames.contains(args[2])) {
+        if (!alignNames.contains(args[0])) {
             System.err.println("The <ALIGN> argument must be one of " + alignNames.toString());
             return;
         }
-
-        AlignmentType align = AlignmentType.valueOf(args[2]);
+        
+        AlignmentType align = AlignmentType.valueOf(args[0]);
+        
+        String dbId1 = args[1];
+        String dbId2 = args[2];
 
         AlignRecord record = Aligning.align(dbId1, dbId2, align);
 
@@ -285,24 +274,22 @@ public class Main {
             System.out.println(record.afps.toFatcat(record.atoms1, record.atoms2));
         }
     }
-    
-    private static void option_t(CommandLine line) throws Exception {
-            
-        String[] args = line.getOptionValues("t");
-        
-        String dbId1 = args[0];
-        String dbId2 = args[1];
-
-        TmResults results = TmAligning.tmAlign(dbId1, dbId2, TmMode.ALIGN_TEXT);
-        System.out.print(results.getOutput());
-    }
 
     private static void option_f(CommandLine line) throws SQLException {
         
+        Set<String> dbTypeNames = new HashSet<>(Arrays.stream(DbType.values()).map(v -> v.name()).collect(Collectors.toList()));
+
         String[] args = line.getOptionValues("f");
+       
+        if (!dbTypeNames.contains(args[0])) {
+            System.err.println("The <DB_TYPE> argument must be one of " + dbTypeNames.toString());
+            return;
+        }
+       
+        DbType dbType = DbType.valueOf(args[0]);
         
-        String dbId1 = args[0];
-        String dbId2 = args[1];
+        String dbId1 = args[1];
+        String dbId2 = args[2];
 
         int uploadId1 = tryParseInt(dbId1);
 
@@ -315,14 +302,12 @@ public class Main {
         }
         else {
 
-            DbType dbType1 = DbId.getIdDbType(dbId1);
-            hashes1 = Db.getHashes(dbId1, dbType1);
-            grams1 = Db.getGrams(dbId1, dbType1, true);
+            hashes1 = Db.getHashes(dbId1, dbType);
+            grams1 = Db.getGrams(dbId1, dbType, true);
         }
         
-        DbType dbType2 = DbId.getIdDbType(dbId2);
-        Hashes hashes2 = Db.getHashes(dbId2, dbType2);
-        Grams grams2 = Db.getGrams(dbId2, dbType2, true);
+        Hashes hashes2 = Db.getHashes(dbId2, dbType);
+        Grams grams2 = Db.getGrams(dbId2, dbType, true);
 
         if (hashes1 != null && hashes2 != null) {
 
@@ -368,10 +353,19 @@ public class Main {
     
     private static void option_c(CommandLine line) throws SQLException {
         
-        String[] args = line.getOptionValues("c");
+        Set<String> dbTypeNames = new HashSet<>(Arrays.stream(DbType.values()).map(v -> v.name()).collect(Collectors.toList()));
         
-        String dbId1 = args[0];
-        String dbId2 = args[1];
+        String[] args = line.getOptionValues("c");
+       
+        if (!dbTypeNames.contains(args[0])) {
+            System.err.println("The <DB_TYPE> argument must be one of " + dbTypeNames.toString());
+            return;
+        }
+       
+        DbType dbType = DbType.valueOf(args[0]);
+        
+        String dbId1 = args[1];
+        String dbId2 = args[2];
 
         int uploadId1 = tryParseInt(dbId1);
 
@@ -384,14 +378,12 @@ public class Main {
         }
         else {
 
-            DbType dbType1 = DbId.getIdDbType(dbId1);
-            hashes1 = Db.getHashes(dbId1, dbType1);
-            grams1 = Db.getGrams(dbId1, dbType1, true);
+            hashes1 = Db.getHashes(dbId1, dbType);
+            grams1 = Db.getGrams(dbId1, dbType, true);
         }
         
-        DbType dbType2 = DbId.getIdDbType(dbId2);
-        Hashes hashes2 = Db.getHashes(dbId2, dbType2);
-        Grams grams2 = Db.getGrams(dbId2, dbType2, true);
+        Hashes hashes2 = Db.getHashes(dbId2, dbType);
+        Grams grams2 = Db.getGrams(dbId2, dbType, true);
 
         if (hashes1 != null && hashes2 != null) {
 
