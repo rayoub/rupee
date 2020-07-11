@@ -30,23 +30,23 @@ data/ecod/domains.txt
 data/ecod/segments.txt
 
 # temp directories
-results/mtm/temp/
-results/ssm/temp/
-results/cathedral/temp/
+eval/results/mtm/temp/
+eval/results/ssm/temp/
+eval/results/cathedral/temp/
 
 # result import files
-results/cathedral/cathedral_results.txt
-results/mtm/mtm_results.txt
-results/ssm/ssm_results_q_score.txt
-results/ssm/ssm_results_rmsd.txt
-results/vast/vast_results_fl.txt
-results/vast/vast_results_rmsd.txt
+eval/results/cathedral/cathedral_results.txt
+eval/results/mtm/mtm_results.txt
+eval/results/ssm/ssm_results_q_score.txt
+eval/results/ssm/ssm_results_rmsd.txt
+eval/results/vast/vast_results_fl.txt
+eval/results/vast/vast_results_rmsd.txt
 
 # build ignores
-rupee-mgr/target/
 rupee-core/target/
 rupee-tm/target/
 rupee-search/target/
+eval/rupee-mgr/target/
 
 # file types
 **/*.swp
@@ -63,10 +63,6 @@ rupee-search/target/
 
 # eclim
 **/workbench.xmi
-rupee-mgr/.settings/
-rupee-mgr/.classpath
-rupee-mgr/.project
-rupee-mgr/.gitignore
 rupee-core/.settings/
 rupee-core/.classpath
 rupee-core/.project
@@ -79,7 +75,11 @@ rupee-search/.settings/
 rupee-search/.classpath
 rupee-search/.project
 rupee-search/.gitignore
+eval/rupee-mgr/.settings/
+eval/rupee-mgr/.classpath
+eval/rupee-mgr/.project
+eval/rupee-mgr/.gitignore
 
 # ssap
-results/ssap/cath-ssap
+eval/results/ssap/cath-ssap
 
