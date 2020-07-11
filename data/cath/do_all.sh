@@ -29,10 +29,10 @@ psql -d rupee <<EOF
 EOF
 
 ## move to app directory
-cd ../rupee-mgr/target
+cd ../rupee-search/target
 
 ## import and hash
-java -jar rupee-mgr-0.0.1-SNAPSHOT-jar-with-dependencies.jar -i CATH
-java -jar rupee-mgr-0.0.1-SNAPSHOT-jar-with-dependencies.jar -h CATH
+java -jar rupee-search-0.0.1-SNAPSHOT-jar-with-dependencies.jar -i CATH
+java -jar rupee-search-0.0.1-SNAPSHOT-jar-with-dependencies.jar -h CATH
 
 
