@@ -46,6 +46,7 @@ results/vast/vast_results_rmsd.txt
 rupee-mgr/target/
 rupee-core/target/
 rupee-tm/target/
+rupee-search/target/
 
 # file types
 **/*.swp
@@ -74,6 +75,10 @@ rupee-tm/.settings/
 rupee-tm/.classpath
 rupee-tm/.project
 rupee-tm/.gitignore
+rupee-search/.settings/
+rupee-search/.classpath
+rupee-search/.project
+rupee-search/.gitignore
 
 # ssap
 results/ssap/cath-ssap

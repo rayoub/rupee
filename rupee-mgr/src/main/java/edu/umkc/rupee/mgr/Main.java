@@ -22,49 +22,51 @@ import org.apache.commons.cli.OptionGroup;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 
-import edu.umkc.rupee.base.SearchRecord;
-import edu.umkc.rupee.base.SearchResults;
-import edu.umkc.rupee.cath.CathHash;
-import edu.umkc.rupee.cath.CathImport;
-import edu.umkc.rupee.cath.CathSearch;
-import edu.umkc.rupee.cath.CathSearchCriteria;
-import edu.umkc.rupee.cath.CathSearchRecord;
-import edu.umkc.rupee.chain.ChainHash;
-import edu.umkc.rupee.chain.ChainImport;
-import edu.umkc.rupee.chain.ChainSearch;
-import edu.umkc.rupee.chain.ChainSearchCriteria;
-import edu.umkc.rupee.chain.ChainSearchRecord;
-import edu.umkc.rupee.defs.AlignmentType;
-import edu.umkc.rupee.defs.DbType;
-import edu.umkc.rupee.defs.SearchBy;
-import edu.umkc.rupee.defs.SearchMode;
-import edu.umkc.rupee.defs.SearchType;
-import edu.umkc.rupee.defs.SortBy;
-import edu.umkc.rupee.dir.DirHash;
-import edu.umkc.rupee.dir.DirImport;
-import edu.umkc.rupee.dir.DirSearch;
-import edu.umkc.rupee.dir.DirSearchCriteria;
-import edu.umkc.rupee.dir.DirSearchRecord;
-import edu.umkc.rupee.ecod.EcodHash;
-import edu.umkc.rupee.ecod.EcodImport;
-import edu.umkc.rupee.ecod.EcodSearch;
-import edu.umkc.rupee.ecod.EcodSearchCriteria;
-import edu.umkc.rupee.ecod.EcodSearchRecord;
-import edu.umkc.rupee.lib.AlignRecord;
-import edu.umkc.rupee.lib.Aligning;
-import edu.umkc.rupee.lib.Constants;
-import edu.umkc.rupee.lib.Db;
-import edu.umkc.rupee.lib.DbId;
-import edu.umkc.rupee.lib.Grams;
-import edu.umkc.rupee.lib.Hashes;
-import edu.umkc.rupee.lib.LCS;
-import edu.umkc.rupee.lib.Similarity;
-import edu.umkc.rupee.lib.Uploading;
-import edu.umkc.rupee.scop.ScopHash;
-import edu.umkc.rupee.scop.ScopImport;
-import edu.umkc.rupee.scop.ScopSearch;
-import edu.umkc.rupee.scop.ScopSearchCriteria;
-import edu.umkc.rupee.scop.ScopSearchRecord;
+import edu.umkc.rupee.mgr.defs.AlignmentType;
+import edu.umkc.rupee.mgr.lib.AlignRecord;
+import edu.umkc.rupee.mgr.lib.Aligning;
+import edu.umkc.rupee.mgr.lib.Constants;
+import edu.umkc.rupee.search.base.SearchRecord;
+import edu.umkc.rupee.search.base.SearchResults;
+import edu.umkc.rupee.search.cath.CathHash;
+import edu.umkc.rupee.search.cath.CathImport;
+import edu.umkc.rupee.search.cath.CathSearch;
+import edu.umkc.rupee.search.cath.CathSearchCriteria;
+import edu.umkc.rupee.search.cath.CathSearchRecord;
+import edu.umkc.rupee.search.chain.ChainHash;
+import edu.umkc.rupee.search.chain.ChainImport;
+import edu.umkc.rupee.search.chain.ChainSearch;
+import edu.umkc.rupee.search.chain.ChainSearchCriteria;
+import edu.umkc.rupee.search.chain.ChainSearchRecord;
+import edu.umkc.rupee.search.defs.DbType;
+import edu.umkc.rupee.search.defs.SearchBy;
+import edu.umkc.rupee.search.defs.SearchMode;
+import edu.umkc.rupee.search.defs.SearchType;
+import edu.umkc.rupee.search.defs.SortBy;
+import edu.umkc.rupee.search.dir.DirHash;
+import edu.umkc.rupee.search.dir.DirImport;
+import edu.umkc.rupee.search.dir.DirInit;
+import edu.umkc.rupee.search.dir.DirSearch;
+import edu.umkc.rupee.search.dir.DirSearchCriteria;
+import edu.umkc.rupee.search.dir.DirSearchRecord;
+import edu.umkc.rupee.search.ecod.EcodHash;
+import edu.umkc.rupee.search.ecod.EcodImport;
+import edu.umkc.rupee.search.ecod.EcodSearch;
+import edu.umkc.rupee.search.ecod.EcodSearchCriteria;
+import edu.umkc.rupee.search.ecod.EcodSearchRecord;
+import edu.umkc.rupee.search.lib.TmAligning;
+import edu.umkc.rupee.search.lib.Db;
+import edu.umkc.rupee.search.lib.DbId;
+import edu.umkc.rupee.search.lib.Grams;
+import edu.umkc.rupee.search.lib.Hashes;
+import edu.umkc.rupee.search.lib.LCS;
+import edu.umkc.rupee.search.lib.Similarity;
+import edu.umkc.rupee.search.lib.Uploading;
+import edu.umkc.rupee.search.scop.ScopHash;
+import edu.umkc.rupee.search.scop.ScopImport;
+import edu.umkc.rupee.search.scop.ScopSearch;
+import edu.umkc.rupee.search.scop.ScopSearchCriteria;
+import edu.umkc.rupee.search.scop.ScopSearchRecord;
 import edu.umkc.rupee.tm.TmMode;
 import edu.umkc.rupee.tm.TmResults;
 
@@ -206,7 +208,7 @@ public class Main {
         else { // DIR
 
             // first initialize dir tables
-            Db.initDir(); 
+            DirInit.init();
 
             DirImport dirImport = new DirImport();
             dirImport.importGrams();
@@ -291,7 +293,7 @@ public class Main {
         String dbId1 = args[0];
         String dbId2 = args[1];
 
-        TmResults results = Aligning.tmAlign(dbId1, dbId2, TmMode.ALIGN_TEXT);
+        TmResults results = TmAligning.tmAlign(dbId1, dbId2, TmMode.ALIGN_TEXT);
         System.out.print(results.getOutput());
     }
 

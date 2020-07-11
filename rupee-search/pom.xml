@@ -3,9 +3,9 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>edu.umkc</groupId>
-	<artifactId>rupee-mgr</artifactId>
+	<artifactId>rupee-search</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>rupee-mgr</name>
+	<name>rupee-search</name>
 
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -16,12 +16,12 @@
     <dependencies>
         <dependency>
             <groupId>edu.umkc</groupId>
-            <artifactId>rupee-tm</artifactId>
+            <artifactId>rupee-core</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>   
         <dependency>
             <groupId>edu.umkc</groupId>
-            <artifactId>rupee-search</artifactId>
+            <artifactId>rupee-tm</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>   
         <dependency>
@@ -39,26 +39,6 @@
             <artifactId>biojava-structure</artifactId>
             <version>5.1.0</version>
         </dependency>
-  	    <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-api</artifactId>
-            <version>3.13.0</version>
-        </dependency>  
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-remote-driver</artifactId>
-            <version>3.13.0</version>
-        </dependency>  
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-chrome-driver</artifactId>
-            <version>3.13.0</version>
-        </dependency>  
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-support</artifactId>
-            <version>3.13.0</version>
-        </dependency>  
         <dependency>
             <groupId>org.javatuples</groupId>
             <artifactId>javatuples</artifactId>
@@ -75,11 +55,6 @@
 					<descriptorRefs>
 						<descriptorRef>jar-with-dependencies</descriptorRef>
 					</descriptorRefs>
-					<archive>
-						<manifest>
-							<mainClass>edu.umkc.rupee.mgr.Main</mainClass>
-						</manifest>
-					</archive>
 				</configuration>
 				<executions>
 					<execution>
