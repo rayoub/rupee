@@ -59,12 +59,7 @@
             <artifactId>selenium-support</artifactId>
             <version>3.13.0</version>
         </dependency>  
-        <dependency>
-            <groupId>org.javatuples</groupId>
-            <artifactId>javatuples</artifactId>
-            <version>1.2</version>
-        </dependency>
-    </dependencies>
+   </dependencies>
 
 	<build>
 		<plugins>
