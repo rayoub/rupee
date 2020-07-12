@@ -1,4 +1,6 @@
 
+### MAJOR PUSH 7/12 - I will update the readme by tomorrow. It will be simplified for a typical use case of a single directory of pdb files. 
+
 ### Introduction
 
 This project contains code and data to accompany the PLoS ONE paper: <br/>[RUPEE: A fast and accurate purely geometric protein structure search](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0213712). 
