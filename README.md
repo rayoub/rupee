@@ -1,13 +1,13 @@
 
-### MAJOR PUSH 7/12 - I will update the readme by tomorrow. It will be simplified for a typical use case of a single directory of pdb files. 
-
 ### Introduction
 
 This project contains code and data to accompany the PLoS ONE paper: <br/>[RUPEE: A fast and accurate purely geometric protein structure search](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0213712). 
 
 RUPEE itself is available for use at <https://ayoubresearch.com>.
 
-Below, I describe how to find your way around the RUPEE repo, directory by directory, in the order required for setting up RUPEE in your own environment. 
+Below, I describe how to find your way around the RUPEE repo from a user perspective. 
+If you're interested in reproducing the results contained in the paper, you should first read everything below and then contact me for further details. 
+To avoid confusion for the average user, I have hid everything particular to the evaluation of RUPEE in the eval/ directory.  
 It is assumed that you are familiar with RUPEE and have read the paper. 
 
 With respect to software dependencies, Java 8 and an installation of postgreSQL 9.4 or above are required.
@@ -17,86 +17,135 @@ However, Windows 10 does contain a bash shell if you follow some steps to enable
 
 If you need additional info or have questions not addressed below, contact me at ronaldayoub@mail.umkc.edu.
 
-### ./
+### Database Installation
 
-Some files, especially data files, are too numerous or too large to include in the github repo. 
-The .gitignore file list the files and directories that have been explicitly excluded from the repo. 
+For Ubuntu, to install postgres it is sufficient to execute the following command:
 
-### db/
+```
+> sudo apt-get install postgresql
+```
+If you are not using Ubuntu, I'm sure there is some other equally simple command to execute. 
 
-This directory contains SQL definitions files. 
-All files except files prefixed with x\_, y\_, or z\_ contain SQL definitions. 
+### Database Creation
 
-x\_ files are used for populating tables and should only be run when parsed data files are present.
-The x\_ files contain hard-coded references to file locations that should be changed to match your Linux home directory.
-Unfortunately, the postgres COPY command does not accept relative directories. 
+To manage postgres, you don't need the 'postgres' user password. 
+It is preferable to set up your own user using ```sudo su``` to become the 'postgres' user, assuming you have root permissions. 
+For everything below, it is assumed the database name will be 'rupee', the username 'ayoub', and the password 'ayoub'. 
+If you wish to change this you have to edit the [Constants.java](rupee-search/src/main/java/edu/umkc/rupee/search/lib/Constants.java) file in the rupee-search project before building. 
 
-Once you have created a database with the case-sensitive name 'rupee', run the y_create_all.sql script,
-This script will only create SQL objects. 
-It will not populate any tables.
-Within the __psql__ command line tool provided by postgres, this can be done with the following command:
+First, create the user with the following commands:
+
+```
+> sudo su postgres
+> createuser -s -P ayoub
+
+```
+Next, create the database:
+```
+> sudo su postgres
+> createdb -O ayoub rupee
+
+```
+Now, locate the ```pg_hba.conf``` file. 
+Its location will vary. 
+You should add the uncommented line below.
+The comments are there to provide context. 
+They were already part of the ```pg_hba.conf``` file when I found it. 
+This is a necessary step in order to access the database from the Java app using password authentication. 
+
+```
+# TYPE  DATABASE        USER            ADDRESS                 METHOD
+
+# password and auth for personal databases
+local   rupee       ayoub                   md5
+```
+Reboot your computer to start the postgres service with the new configuration or do it some other way that doesn't require a reboot. 
+At this point, you should now get familiar with the postgreq __psql__ command line utility, which is the easiest way to manage a postgres database. 
+
+Finally, navigate to the db/ directory and execute the following command within __psql__:
 
 ```
 \i y_create_all.sql
 ```
 
-The z\_ files can be safely ignored. 
-These typically contain queries I have found useful during development. 
+### Maven Build
 
-### rupee-mgr/
+The simplest scenario is when you have a single directory of pdb files containing single chains. 
+First, in the [Constants.java](rupee-search/src/main/java/edu/umkc/rupee/search/lib/Constants.java) file, edit the ```DIR_PATH``` constant to point to the local directory  containing the pdb files and edit the ```UPLOAD_PATH``` constant to point to the local directory in which to store uploaded pdb files.
+Then, build the 3 Java projects in this order:
 
-This directory contains the Java project for administering RUPEE. 
-The project also serves as a library used by the RUPEE web site. 
-The root directory contains a Maven pom file used for building the project into the rupee-mgr/target/ directory. 
-Before building, you should update the hard-coded values in the Constants.java file in the lib namespace. 
+1. rupee-tm
+2. rupee-core
+3. rupee-search
 
-Once successfully built, running the jar with the command line parameter ```-?```, gives the following output: 
+To build, from each project's root directory execute the following command:
 
 ```
-~/git/rupee/rupee-mgr/target$ java -jar rupee-mgr-0.0.1-SNAPSHOT-jar-with-dependencies.jar -?
+> mvn clean package install
+
+```
+
+### rupee-search Application
+
+Once built, navigate to the rupee-search target directory and issue the following command:
+```
+> java -jar rupee-search-0.0.1-SNAPSHOT-jar-with-dependencies.jar -?
 Usage: RUPEE
      -i,--import <DB_TYPE>
      -h,--hash <DB_TYPE>
-     -a,--align <DB_ID_1>,<DB_ID_2>,<ALIGN>
-     -t,--tm align <DB_ID_1>,<DB_ID_2>
-     -f,--lcs-fulllength <DB_ID_1>,<DB_ID_2>
-     -c,--lcs-containment <DB_ID_1>,<DB_ID_2>
-     -s,--search <SEARCH_BY><DB_TYPE>,<DB_ID>,<LIMIT>,<REP1>,<REP2>,<REP3>,<DIFF1>,<DIFF2><DIFF3><SEARCH_MODE>,<SEARCH_TYPE>
-     -u,--upload <FILE_PATH>
-     -d,--debug
+     -s,--search-dbid <DB_TYPE>,<DB_ID>,<REP1>,<REP2>,<REP3>,<DIFF1>,<DIFF2>,<DIFF3>,<SEARCH_MODE>,<SEARCH_TYPE>
+     -u,--search-upload <DB_TYPE>,<FILE_PATH>,<REP1>,<REP2>,<REP3>,<DIFF1>,<DIFF2>,<DIFF3>,<SEARCH_MODE>,<SEARCH_TYPE>
      -?,--help
 ```
-
 Where 
 
 ```
-<SEARCH_BY> = DB_ID | UPLOAD_ID
-<DB_TYPE>       = SCOP | CATH | ECOD | CHAIN
-<ALIGN>         = CE | CECP | FATCAT_RIGID | FATCAT_FLEXIBLE
+<DB_TYPE>       = DIR | SCOP | CATH | ECOD | CHAIN
 <SEARCH_MODE>   = FAST | TOP_ALIGNED | ALL_ALIGNED
 <SEARCH_TYPE>   = FULL_LENGTH | CONTAINED_IN | CONTAINS | RMSD | Q_SCORE | SSAP_SCORE 
 <REP#>          = TRUE | FALSE
 <DIFF#>         = TRUE | FALSE
 ```
-
 The following table briefly describes each command line option.
 
 Option | Description
 ------ | -----------
 -i  | parse pdb files in the data directories and populate \*\_grams tables
 -h  | min-hash grams in the \*\_grams tables and populate the \*\_hashes tables
--a  | align structures using a specific alignment algorithm
--t  | use Java rewrite of TM-align to align structures 
--f  | align structures using the LCS algorithm for a full-length search
--c  | align structures using the LCS algorithm for a containment search
--s  | search for similar structures 
--u  | upload a pdb file and obtain an internal identifier
--d  | random code for miscellaneous task
+-s  | search for similar structures with a db id
+-u  | search for similar structures using a file path
 -?  | prints the available options
 
-In the case of searching for structures similar to an uploaded structure, the ```-s``` option expects an internal upload id for the DB_ID parameter.
+To process the pdb files at ```DIR_PATH```, execute the following commands:
+```
+> java -jar rupee-search-0.0.1-SNAPSHOT-jar-with-dependencies.jar -i DIR
+> java -jar rupee-search-0.0.1-SNAPSHOT-jar-with-dependencies.jar -h DIR
+```
+Ignore the warnings, or alternatively, suppress the warnings using the java option ```-Dlog4j.configurationFile=log4j2.xml```. 
+The log4j2.xml file should be in the root of the target directory. 
 
-At this stage, you only need to build the rupee-mgr project to proceed. 
+Once the data is done processing, you can now search. The following command shows an example search:
+```
+java -jar -Dlog4j.configurationFile=log4j2.xml rupee-search-0.0.1-SNAPSHOT-jar-with-dependencies.jar -s DIR,d9rubb2,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TOP_ALIGNED,FULL_LENGTH
+
+```
+
+### Importing SCOP, CATH, ECOD and CHAIN databases
+
+If you're only interested in importing DIR data from the ```DIR_PATH```, you can safely ignore the following. 
+However, if you are interested in duplicating the functionality at <https://ayoubresearch.com> or you're interested in duplicating the results in the PLoS ONE paper, you should read on. 
+
+Some files, especially data files, are too numerous or too large to include in the GitHub repo. 
+The .gitignore file list the files and directories that have been explicitly excluded from the repo. 
+
+### db/
+
+This directory contains SQL definitions files. 
+All files except files prefixed with x\_ contain SQL definitions. 
+
+x\_ files are used for populating tables and should only be run when parsed data files are present.
+The x\_ files contain hard-coded references to file locations that should be changed to match your Linux home directory.
+Unfortunately, the postgres COPY command does not accept relative directories. 
 
 ### data/
 
@@ -142,9 +191,9 @@ Look at the do_all.sh bash scripts for exact details.
 Sometimes a modified script is checked in with some lines commented out. 
 Before an initial run make sure all lines are uncommented. 
 
-The do_all.sh bash script will also execute the above rupee-mgr application in order to import and hash structures once parsing is complete. 
+The do_all.sh bash script will also execute the above rupee-search application in order to import and hash structures once parsing is complete. 
 
 To execute the do_all.sh script, check the parameters required for each script by examining the code and pass in the parameters based on the structure definitions files you want to process. In the .gitignore file you will find references to these files downloaded from the source sites, i.e. SCOP, CATH, and ECOD.  
 
-As long as you have successfully parsed and processed one of these directories, you can now execute searches with the rupee-mgr application.  
+As long as you have successfully parsed and processed one of these directories, you can now execute searches with the rupee-search application.  
 

@@ -8,11 +8,9 @@ public class Constants {
    
     public final static String DB_USER = "ayoub";
     public final static String DB_PASSWORD = "ayoub";
-
-    //public final static String DB_USER = "ec2-user";
-    //public final static String DB_PASSWORD = "ec2-user";
     
     public final static String DIR_PATH = "/home/ayoub/testdir/";
+
     public final static String SCOP_PATH = "/home/ayoub/git/rupee/data/scop/pdb/";
     public final static String CATH_PATH = "/home/ayoub/git/rupee/data/cath/pdb/";
     public final static String ECOD_PATH = "/home/ayoub/git/rupee/data/ecod/pdb/";
