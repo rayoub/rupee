@@ -7,7 +7,7 @@ RUPEE itself is available for use at <https://ayoubresearch.com>.
 
 Below, I describe how to find your way around the RUPEE repo from a user perspective. 
 If you're interested in reproducing the results contained in the paper, you should first read everything below and then contact me for further details. 
-To avoid confusion for the average user, I have hid everything particular to the evaluation of RUPEE in the eval/ directory.  
+To avoid confusion for the average user, I have hid everything particular to the evaluation of RUPEE in the eval/ directory.
 It is assumed that you are familiar with RUPEE and have read the paper. 
 
 With respect to software dependencies, Java 8 and an installation of postgreSQL 9.4 or above are required.
@@ -60,13 +60,13 @@ This is a necessary step in order to access the database from the Java app using
 local   rupee       ayoub                   md5
 ```
 Reboot your computer to start the postgres service with the new configuration or do it some other way that doesn't require a reboot. 
-At this point, you should now get familiar with the postgreq __psql__ command line utility, which is the easiest way to manage a postgres database. 
+At this point, you should now get familiar with the postgres __psql__ command line utility, which is the easiest way to manage a postgres database. 
 
 Navigate to the db/ directory and login to the rupee database by executing the following command:
 ```
 psql rupee
 ```
-Finally, within __psql__, execute the following command:
+Finally, within the __psql__ prompt, execute the following command:
 ```
 \i y_create_all.sql
 ```
@@ -74,7 +74,8 @@ Finally, within __psql__, execute the following command:
 ### Maven Build
 
 The simplest scenario is when you have a single directory of pdb files containing single chains. 
-First, in the [Constants.java](rupee-search/src/main/java/edu/umkc/rupee/search/lib/Constants.java) file, edit the ```DIR_PATH``` constant to point to the local directory  containing the pdb files and edit the ```UPLOAD_PATH``` constant to point to the local directory in which to store uploaded pdb files.
+First, in the [Constants.java](rupee-search/src/main/java/edu/umkc/rupee/search/lib/Constants.java) file, edit the ```DIR_PATH``` constant to point to the local directory  containing the pdb files and edit the ```UPLOAD_PATH``` constant to point to the local directory in which to store uploaded pdb files. 
+If you wish to work with the other databases found at <https://ayoubresearch.com>, such as SCOP, CATH, ECOD, and CHAIN, you have to edit the corresponding ```*_PATH``` variables in addition to the ```UPLOAD_PATH``` variable.
 Then, build the 3 Java projects in this order:
 
 1. rupee-tm
@@ -124,7 +125,7 @@ To process the pdb files at ```DIR_PATH```, execute the following commands:
 > java -jar rupee-search-0.0.1-SNAPSHOT-jar-with-dependencies.jar -i DIR
 > java -jar rupee-search-0.0.1-SNAPSHOT-jar-with-dependencies.jar -h DIR
 ```
-Ignore the warnings, or alternatively, suppress the warnings using the java option ```-Dlog4j.configurationFile=log4j2.xml```. 
+Ignore the warnings, or alternatively, suppress the warnings using the java option <nobr>```-Dlog4j.configurationFile=log4j2.xml```</nobr>. 
 The log4j2.xml file should be in the root of the target directory. 
 
 Once the data is done processing, you can now search. The following command shows an example search:
@@ -196,7 +197,7 @@ Before an initial run make sure all lines are uncommented.
 
 The do_all.sh bash script will also execute the above rupee-search application in order to import and hash structures once parsing is complete. 
 
-To execute the do_all.sh script, check the parameters required for each script by examining the code and pass in the parameters based on the structure definitions files you want to process. In the .gitignore file you will find references to these files downloaded from the source sites, i.e. SCOP, CATH, and ECOD.  
+To execute the do_all.sh script, check the parameters required for each script by examining the code and pass in the parameters based on the structure definition files you want to process. In the .gitignore file you will find references to these files downloaded from the source sites, i.e. SCOP, CATH, and ECOD.  
 
 As long as you have successfully parsed and processed one of these directories, you can now execute searches with the rupee-search application.  
 
