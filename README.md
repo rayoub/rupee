@@ -62,8 +62,11 @@ local   rupee       ayoub                   md5
 Reboot your computer to start the postgres service with the new configuration or do it some other way that doesn't require a reboot. 
 At this point, you should now get familiar with the postgreq __psql__ command line utility, which is the easiest way to manage a postgres database. 
 
-Finally, navigate to the db/ directory and execute the following command within __psql__:
-
+Navigate to the db/ directory and login to the rupee database by executing the following command:
+```
+psql rupee
+```
+Finally, within __psql__, execute the following command:
 ```
 \i y_create_all.sql
 ```
