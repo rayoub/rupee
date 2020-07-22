@@ -159,6 +159,11 @@ public class Descriptor {
         return descr;
     }
 
+    public static boolean isHelix(String descr) {
+
+        return isHelix(Parse.tryParseInt(descr)); 
+    }
+
     public static boolean isHelix(int descr) {
 
         if (descr >= 0 && descr <= 3) {
@@ -167,6 +172,11 @@ public class Descriptor {
         else {
             return false;
         }
+    }
+
+    public static boolean isStrand(String descr) {
+
+        return isStrand(Parse.tryParseInt(descr)); 
     }
 
     public static boolean isStrand(int descr) {
@@ -179,6 +189,11 @@ public class Descriptor {
         }
     }
 
+    public static boolean isLoop(String descr) {
+
+        return isLoop(Parse.tryParseInt(descr)); 
+    }
+
     public static boolean isLoop(int descr) {
 
         if (descr >= 7 && descr <= 9) {
@@ -187,6 +202,11 @@ public class Descriptor {
         else {
             return false;
         }
+    }
+
+    public static String toSs3(String descr) {
+        
+        return toSs3(Parse.tryParseInt(descr));
     }
 
     public static String toSs3(int descr) {
