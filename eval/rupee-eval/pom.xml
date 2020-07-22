@@ -16,6 +16,11 @@
     <dependencies>
         <dependency>
             <groupId>edu.umkc</groupId>
+            <artifactId>rupee-core</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>   
+        <dependency>
+            <groupId>edu.umkc</groupId>
             <artifactId>rupee-tm</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>   
