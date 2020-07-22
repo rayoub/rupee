@@ -22,6 +22,7 @@ import org.apache.commons.cli.OptionGroup;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 
+import edu.umkc.rupee.core.Parse;
 import edu.umkc.rupee.eval.defs.AlignmentType;
 import edu.umkc.rupee.eval.lib.AlignRecord;
 import edu.umkc.rupee.eval.lib.Aligning;
@@ -291,8 +292,7 @@ public class Main {
         String dbId1 = args[1];
         String dbId2 = args[2];
 
-        int uploadId1 = tryParseInt(dbId1);
-
+        int uploadId1 = Parse.tryParseInt(dbId1); 
         Hashes hashes1;
         Grams grams1;
         if (uploadId1 != -1) {
@@ -367,7 +367,7 @@ public class Main {
         String dbId1 = args[1];
         String dbId2 = args[2];
 
-        int uploadId1 = tryParseInt(dbId1);
+        int uploadId1 = Parse.tryParseInt(dbId1);
 
         Hashes hashes1;
         Grams grams1;
@@ -835,15 +835,5 @@ public class Main {
         formatter.setWidth(140);
         formatter.setLeftPadding(5);
         return formatter;
-    }
-
-    private static int tryParseInt(String value) {
-
-        try {
-            int val = Integer.parseInt(value);
-            return val;
-        } catch (NumberFormatException e) {
-            return -1;
-        }
     }
 }
