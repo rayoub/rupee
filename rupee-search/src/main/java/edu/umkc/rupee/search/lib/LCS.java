@@ -300,7 +300,7 @@ public class LCS {
         }
 */
 
-        // pack coords
+        // pack coords using inverse map
         double xa[][] = new double[alignLen][3];
         double ya[][] = new double[alignLen][3];
         int k = 0;
