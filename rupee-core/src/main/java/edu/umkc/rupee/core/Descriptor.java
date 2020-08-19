@@ -217,8 +217,11 @@ public class Descriptor {
         else if (isStrand(descr)) {
             return "S";
         }
-        else  {
+        else if (isLoop(descr)) {
             return "C";
+        }
+        else {
+            return "";
         }
     }
 }
