@@ -11,9 +11,9 @@ import org.biojava.nbio.structure.Group;
 import org.biojava.nbio.structure.Structure;
 import org.biojava.nbio.structure.StructureException;
 import org.biojava.nbio.structure.secstruc.SecStrucCalc;
-import org.biojava.nbio.structure.secstruc.SecStrucInfo;
 
 import edu.umkc.rupee.core.Descriptor;
+import edu.umkc.rupee.core.SecStruct;
 
 public class Importing {
 
@@ -51,36 +51,13 @@ public class Importing {
                 }
                 
                 // get secondary structure assignment
-                String ss8 = "C";
-                Object obj = g2.getProperty(Group.SEC_STRUC);
-                if (obj instanceof SecStrucInfo) {
-                   SecStrucInfo info = (SecStrucInfo)obj;
-                   ss8 = String.valueOf(info.getType().type).trim();
-                   if (ss8.isEmpty()) {
-                       ss8 = "C";
-                    }
+                String ss8 = SecStruct.toSs8(g2); 
+                if (ss8.isEmpty()) {
+                    ss8 = "C";
                 }
 
-                // map to extension coding
-                String ss3;
-                switch(ss8) {
-                    case "G":
-                    case "H":
-                    case "I":
-                    case "T":
-                        ss3 = "H";
-                        break;
-                    case "E":
-                    case "B":
-                        ss3 = "S";
-                        break;
-                    case "S":
-                    case "C":
-                        ss3 = "C";
-                        break;
-                    default:
-                        ss3 = "C";
-                }
+                // map to 3-state 
+                String ss3 = SecStruct.toSs3LessCoil(ss8);
 
                 // get coordinates
                 Atom ca = g2.getAtom("CA");
@@ -136,12 +113,12 @@ public class Importing {
             // *** run position encoding by region
 
             List<Residue> run = new ArrayList<>();
-            int lastRegion = Integer.MIN_VALUE; 
+            int lastDescr = Integer.MIN_VALUE; 
 
             for (Residue residue : residues) {
 
                 // run end
-                if (residue.getDescriptor() != lastRegion && lastRegion != Integer.MIN_VALUE) {
+                if (residue.getDescriptor() != lastDescr && lastDescr != Integer.MIN_VALUE) {
                     
                     setRunFactors(run);
                     run.clear();
@@ -150,7 +127,7 @@ public class Importing {
 
                 // accumulate run grams
                 run.add(residue);
-                lastRegion = residue.getDescriptor();
+                lastDescr = residue.getDescriptor();
             }
 
             // process last run

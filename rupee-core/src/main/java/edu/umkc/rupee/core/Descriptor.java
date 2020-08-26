@@ -6,26 +6,38 @@ public class Descriptor {
 
     public static int toDescriptor(double phi, double psi, String ss3) {
 
-        if (phi == NULL_ANGLE || psi == NULL_ANGLE) 
-            return toDefaultDescriptor(ss3);
+        int descr = -1;
+
+        // default descriptor
+        if (phi == NULL_ANGLE || psi == NULL_ANGLE) {
+            descr = toDefaultDescriptor(ss3);
+            return descr;
+        }
 
         // helix 0, 1, 2, 3
         if (ss3.equals("H")) {
-            return toHelixDescriptor(phi, psi);
+            descr = toHelixDescriptor(phi, psi);
         }
 
         // strand 4, 5, 6
         else if (ss3.equals("S")) {
-            return toStrandDescriptor(phi, psi);
+            descr = toStrandDescriptor(phi, psi);
         }
      
         // loop 7, 8, 9
         else {
-            return toLoopDescriptor(phi, psi);
+            descr = toLoopDescriptor(phi, psi);
         }
+
+        // default descriptor
+        if (descr == -1) {
+            descr = toDefaultDescriptor(ss3);
+        }
+
+        return descr;
     }
 
-    public static int toDefaultDescriptor(String ss3) {
+    private static int toDefaultDescriptor(String ss3) {
         
         // helix 0, 1, 2, 3
         if (ss3.equals("H")) {
@@ -43,7 +55,7 @@ public class Descriptor {
         }
     }
 
-    public static int toHelixDescriptor(double phi, double psi) {
+    private static int toHelixDescriptor(double phi, double psi) {
 
         int descr = -1;
 
@@ -83,7 +95,7 @@ public class Descriptor {
         return descr;
     }
 
-    public static int toStrandDescriptor(double phi, double psi) {
+    private static int toStrandDescriptor(double phi, double psi) {
 
         int descr = -1;
 
@@ -121,7 +133,7 @@ public class Descriptor {
         return descr;
     }
     
-    public static int toLoopDescriptor(double phi, double psi) {
+    private static int toLoopDescriptor(double phi, double psi) {
 
         int descr = -1;
 
