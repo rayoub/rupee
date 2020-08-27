@@ -4,7 +4,9 @@ public enum SearchMode {
 
     FAST(1, "Fast"),
     TOP_ALIGNED(2, "Top-Aligned"),
-    ALL_ALIGNED(3, "All-Aligned");
+    ALL_ALIGNED(3, "All-Aligned"),
+    
+    OPTIMIZED(0, "Optimized");
 
     private int id;
     private String name;
@@ -29,8 +31,11 @@ public enum SearchMode {
         else if (id == TOP_ALIGNED.getId()) {
             return TOP_ALIGNED;
         }
-        else {
+        else if (id == ALL_ALIGNED.getId()) {
             return ALL_ALIGNED;
+        }
+        else {
+            return OPTIMIZED;
         }
     }
 }

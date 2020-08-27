@@ -80,6 +80,8 @@ public abstract class Search {
         if (criteria.searchMode == SearchMode.FAST) {
             criteria.sortBy = SortBy.SIMILARITY;
         } 
+
+        // the rest are compatible with all search modes
         else if (criteria.searchType == SearchType.RMSD) {
             criteria.sortBy = SortBy.RMSD;
         }
@@ -151,13 +153,11 @@ public abstract class Search {
                 inputStream.close();
             }
 
-            if (criteria.searchMode != SearchMode.ALL_ALIGNED) {
-
-                // TOP_ALIGNED and FAST
+            if (criteria.searchMode == SearchMode.FAST || criteria.searchMode == SearchMode.TOP_ALIGNED) {
 
                 // parallel band match searches to gather lsh candidates
                 records = IntStream.range(0, Constants.BAND_HASH_COUNT).boxed().parallel()
-                    .flatMap(bandIndex -> searchBand(bandIndex, criteria, hashes1).stream())
+                    .flatMap(bandIndex -> splitBands(bandIndex, criteria, hashes1).stream())
                     .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
                     .limit(INITIAL_FILTER) 
                     .collect(Collectors.toList());
@@ -207,15 +207,24 @@ public abstract class Search {
                     .limit(FINAL_FILTER) 
                     .collect(Collectors.toList());
             } 
-            else {
-
-                // ALL_ALIGNED
+            else if (criteria.searchMode == SearchMode.ALL_ALIGNED) {
 
                 // initial filtering based on simple LCS plus tm-align on aligned descriptors
                 records = IntStream.range(0, Constants.SEARCH_SPLIT_COUNT).boxed().parallel()
-                    .flatMap(splitIndex -> gramsSplit(splitIndex, criteria, grams1).stream())
+                    .flatMap(splitIndex -> splitAllAligned(splitIndex, criteria, grams1).stream())
                     .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
                     .limit(FINAL_FILTER) 
+                    .collect(Collectors.toList());
+            }
+            else { // SearchMode.OPTIMIZED
+                
+                Structure queryStructure = structure;
+
+                // initial filtering in this case is a fully exhaustive search to get optimal results
+                records = IntStream.range(0, Constants.SEARCH_SPLIT_COUNT).boxed().parallel()
+                    .flatMap(splitIndex -> splitOptimized(splitIndex, criteria, queryStructure).stream())
+                    .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
+                    .limit(criteria.limit) 
                     .collect(Collectors.toList());
             }
 
@@ -442,18 +451,18 @@ public abstract class Search {
             }
         }
         catch (IOException e) {
-           
-            record.setRmsd(Double.MAX_VALUE);
+          
+            record.setRmsd(9999);
             record.setTmScore(-1);
         }
         catch (RuntimeException e) {
             
-            record.setRmsd(Double.MAX_VALUE);
+            record.setRmsd(9999);
             record.setTmScore(-1);
         }
     }
 
-    private List<SearchRecord> gramsSplit(int splitIndex, SearchCriteria criteria, Grams grams1) {
+    private List<SearchRecord> splitAllAligned(int splitIndex, SearchCriteria criteria, Grams grams1) {
 
         List<SearchRecord> records = new ArrayList<>();
 
@@ -475,28 +484,8 @@ public abstract class Search {
                 String sortKey = rs.getString("sort_key");
 
                 Grams grams2 = Grams.fromResultSet(rs, true);                
-
-                double similarity = Integer.MIN_VALUE;
-                if (criteria.searchType == SearchType.FULL_LENGTH) {
-                    if ((grams1.getLength() < Math.floorDiv(grams2.getLength(), 3)) || (grams2.getLength() < Math.floorDiv(grams1.getLength(), 3))) {
-                        continue;
-                    }
-                    similarity = LCS.getLCSPlusScore(grams1, grams2, criteria.searchType);
-                }            
-                else if (criteria.searchType == SearchType.CONTAINED_IN) {
-                    similarity = LCS.getLCSPlusScore(grams1, grams2, criteria.searchType);
-                }
-                else if (criteria.searchType == SearchType.CONTAINS) { 
-                    if (grams2.getLength() < Math.floorDiv(grams1.getLength(), 3)) {
-                        continue;
-                    }
-                    similarity = LCS.getLCSPlusScore(grams1, grams2, criteria.searchType);
-                }
-                else {
-
-                    // no filtering for RMSD, Q-Score, and SSAP-Score
-                    similarity = LCS.getLCSPlusScore(grams1, grams2, criteria.searchType);
-                }
+                
+                double similarity = LCS.getLCSPlusScore(grams1, grams2, criteria.searchType);
 
                 SearchRecord record = getSearchRecord();
                 record.setDbId(dbId);
@@ -504,6 +493,8 @@ public abstract class Search {
                 record.setSortKey(sortKey);
                 record.setSimilarity(similarity);
                 records.add(record);
+                
+                // TODO: after the first 1000, sort and filter based on the worst score
             }
 
             rs.close();
@@ -517,7 +508,52 @@ public abstract class Search {
         return records;
     }
 
-    private List<SearchRecord> searchBand(int bandIndex, SearchCriteria criteria, Hashes hashes1) {
+    private List<SearchRecord> splitOptimized(int splitIndex, SearchCriteria criteria, Structure queryStructure) {
+
+        List<SearchRecord> records = new ArrayList<>();
+
+        try {
+   
+            PGSimpleDataSource ds = Db.getDataSource();
+
+            Connection conn = ds.getConnection();
+            conn.setAutoCommit(false);
+
+            PreparedStatement stmt = getSplitSearchStatement(criteria, splitIndex, conn);
+            stmt.setFetchSize(200);
+            
+            ResultSet rs = stmt.executeQuery();
+            while(rs.next()) {
+
+                String dbId = rs.getString("db_id");
+                String pdbId = rs.getString("pdb_id");
+                String sortKey = rs.getString("sort_key");
+
+                SearchRecord record = getSearchRecord();
+                record.setDbId(dbId);
+                record.setPdbId(pdbId);
+                record.setSortKey(sortKey);
+
+                // this will set all the relevant scores
+                align(criteria, record, queryStructure, TmMode.REGULAR);            
+
+                records.add(record);
+            
+                // TODO: after the first 1000, sort and filter based on the worst score
+            }
+
+            rs.close();
+            stmt.close();
+            conn.close();
+
+        } catch (SQLException e) {
+            Logger.getLogger(Search.class.getName()).log(Level.SEVERE, null, e);
+        } 
+
+        return records;
+    }
+
+    private List<SearchRecord> splitBands(int bandIndex, SearchCriteria criteria, Hashes hashes1) {
 
         List<SearchRecord> records = new ArrayList<>();
 

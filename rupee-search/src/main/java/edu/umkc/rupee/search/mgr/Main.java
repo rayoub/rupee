@@ -313,6 +313,8 @@ public class Main {
         if (searchMode == SearchMode.FAST) {
             sortBy = SortBy.SIMILARITY;
         } 
+        
+        // the rest are compatible with all search modes
         else if (searchType == SearchType.RMSD) {
             sortBy = SortBy.RMSD;
         }

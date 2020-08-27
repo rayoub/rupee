@@ -6,23 +6,23 @@ public class Constants {
 
     public final static String DB_NAME = "rupee";
     
-    //public final static String DB_USER = "ayoub";
-    //public final static String DB_PASSWORD = "ayoub";
+    public final static String DB_USER = "ayoub";
+    public final static String DB_PASSWORD = "ayoub";
 
-    //public final static String SCOP_PATH = "/home/ayoub/git/rupee/data/scop/pdb/";
-    //public final static String CATH_PATH = "/home/ayoub/git/rupee/data/cath/pdb/";
-    //public final static String ECOD_PATH = "/home/ayoub/git/rupee/data/ecod/pdb/";
-    //public final static String CHAIN_PATH = "/home/ayoub/git/rupee/data/chain/pdb/";
-    //public final static String UPLOAD_PATH = "/home/ayoub/git/rupee/data/upload/";
+    public final static String SCOP_PATH = "/home/ayoub/git/rupee/data/scop/pdb/";
+    public final static String CATH_PATH = "/home/ayoub/git/rupee/data/cath/pdb/";
+    public final static String ECOD_PATH = "/home/ayoub/git/rupee/data/ecod/pdb/";
+    public final static String CHAIN_PATH = "/home/ayoub/git/rupee/data/chain/pdb/";
+    public final static String UPLOAD_PATH = "/home/ayoub/git/rupee/data/upload/";
     
-    public final static String DB_USER = "ec2-user";
-    public final static String DB_PASSWORD = "ec2-user";
+    //public final static String DB_USER = "ec2-user";
+    //public final static String DB_PASSWORD = "ec2-user";
 
-    public final static String SCOP_PATH = "/home/ec2-user/data/scop/pdb/";
-    public final static String CATH_PATH = "/home/ec2-user/data/cath/pdb/";
-    public final static String ECOD_PATH = "/home/ec2-user/data/ecod/pdb/";
-    public final static String CHAIN_PATH = "/home/ec2-user/data/chain/pdb/";
-    public final static String UPLOAD_PATH = "/home/ec2-user/data/upload/";
+    //public final static String SCOP_PATH = "/home/ec2-user/data/scop/pdb/";
+    //public final static String CATH_PATH = "/home/ec2-user/data/cath/pdb/";
+    //public final static String ECOD_PATH = "/home/ec2-user/data/ecod/pdb/";
+    //public final static String CHAIN_PATH = "/home/ec2-user/data/chain/pdb/";
+    //public final static String UPLOAD_PATH = "/home/ec2-user/data/upload/";
     
     public final static String DIR_PATH = "/home/ayoub/testdir/";
     
