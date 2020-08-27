@@ -216,13 +216,13 @@ public abstract class Search {
                     .limit(FINAL_FILTER) 
                     .collect(Collectors.toList());
             }
-            else { // SearchMode.OPTIMIZED
+            else { // SearchMode.OPTIMAL
                 
                 Structure queryStructure = structure;
 
                 // initial filtering in this case is a fully exhaustive search to get optimal results
                 records = IntStream.range(0, Constants.SEARCH_SPLIT_COUNT).boxed().parallel()
-                    .flatMap(splitIndex -> splitOptimized(splitIndex, criteria, queryStructure).stream())
+                    .flatMap(splitIndex -> splitOptimal(splitIndex, criteria, queryStructure).stream())
                     .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
                     .limit(criteria.limit) 
                     .collect(Collectors.toList());
@@ -508,7 +508,7 @@ public abstract class Search {
         return records;
     }
 
-    private List<SearchRecord> splitOptimized(int splitIndex, SearchCriteria criteria, Structure queryStructure) {
+    private List<SearchRecord> splitOptimal(int splitIndex, SearchCriteria criteria, Structure queryStructure) {
 
         List<SearchRecord> records = new ArrayList<>();
 

@@ -6,7 +6,7 @@ public enum SearchMode {
     TOP_ALIGNED(2, "Top-Aligned"),
     ALL_ALIGNED(3, "All-Aligned"),
     
-    OPTIMIZED(0, "Optimized");
+    OPTIMAL(0, "Optimal");
 
     private int id;
     private String name;
@@ -35,7 +35,7 @@ public enum SearchMode {
             return ALL_ALIGNED;
         }
         else {
-            return OPTIMIZED;
+            return OPTIMAL;
         }
     }
 }
