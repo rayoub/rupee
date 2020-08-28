@@ -153,6 +153,9 @@ public abstract class Search {
                 inputStream.close();
             }
 
+            // build comparator for final sorts
+            Comparator<SearchRecord> comparator = getComparator(criteria);
+
             if (criteria.searchMode == SearchMode.FAST || criteria.searchMode == SearchMode.TOP_ALIGNED) {
 
                 // parallel band match searches to gather lsh candidates
@@ -223,13 +226,10 @@ public abstract class Search {
                 // initial filtering in this case is a fully exhaustive search to get optimal results
                 records = IntStream.range(0, Constants.SEARCH_SPLIT_COUNT).boxed().parallel()
                     .flatMap(splitIndex -> splitOptimal(splitIndex, criteria, queryStructure).stream())
-                    .sorted(Comparator.comparingDouble(SearchRecord::getSimilarity).reversed().thenComparing(SearchRecord::getSortKey))
+                    .sorted(comparator)
                     .limit(criteria.limit) 
                     .collect(Collectors.toList());
             }
-
-            // build comparator for final sorts
-            Comparator<SearchRecord> comparator = getComparator(criteria);
 
             // alignments
             if (criteria.searchMode == SearchMode.ALL_ALIGNED || criteria.searchMode == SearchMode.TOP_ALIGNED) {
