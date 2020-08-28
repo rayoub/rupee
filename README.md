@@ -5,12 +5,12 @@ This project contains code and data to accompany the PLoS ONE paper: <br/>[RUPEE
 
 RUPEE itself is available for use at <https://ayoubresearch.com>.
 
-Below, I describe how to find your way around the RUPEE repo from a user perspective. 
+Below, I describe how to find your way around the RUPEE repo.
 If you're interested in reproducing the results contained in the paper, you should first read everything below and then contact me for further details. 
 To avoid confusion for the average user, I have hid everything particular to the evaluation of RUPEE in the eval/ directory.
 It is assumed that you are familiar with RUPEE and have read the paper. 
 
-With respect to software dependencies, Java 8 and an installation of postgreSQL 9.4 or above are required.
+As for software dependencies, Java 8 and an installation of postgreSQL 9.4 or above are required.
 The instructions below assume you are operating within a bash shell. 
 Typically, this will be under Linux. 
 However, Windows 10 does contain a bash shell if you follow some steps to enable it or else you can install Cygwin on earlier versions of Windows. 
