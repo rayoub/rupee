@@ -155,7 +155,8 @@ Unfortunately, the postgres COPY command does not accept relative directories.
 
 This directory contains all data files and scripts used in parsing the files. 
 
-The following directories, along with brief descriptions, are excluded from the repo. 
+The following directories, along with brief descriptions, are excluded from the repo so you must create them. 
+Create them now or create them as you go. 
 
 Excluded Directory | Description
 ------------------ | -----------
@@ -167,23 +168,24 @@ data/cath/pdb/     | parsed pdb files based on cath definitions
 data/ecod/pdb/     | parsed pdb files based on ecod definitions
 data/upload/       | directory used for temporary storage of uploaded pdb files
 
-First, the data/pdb/ directory has to be populated with files downloaded from the wwpdb FTP site. 
-If using FileZilla, you should set the connection timeout to at least 1000 seconds in the File-Edit-Settings dialog. 
-Click the local data/pdb/ directory to select the destination for the files. 
-Click the remote /pub/pdb/data/structures/all/pdb/ directory containing the files you want to download. 
+First, the data/pdb/ local directory has to be populated with files downloaded from the wwpdb FTP site. 
+If using FileZilla, you should set the connection timeout to at least 1000 seconds in the Edit-Settings dialog. 
+Click the data/pdb/ local directory to select the destination for the files. 
+Click the /pub/pdb/data/structures/all/pdb/ remote directory containing the files you want to download. 
 It will take a few minutes to obtain the directory listing. 
-Then right-click the remote pdb/ directory and select download. 
-This will also create the local pdb/ directory under the data/pdb/ directory. 
+Then right-click the pdb/ remote directory and select download. 
+This will also create the pdb/ local directory under the data/pdb/ directory if it hasn't already been created. 
 
-To populate the data/pdb/obsolete/ directory, the actions are different from above because the remote files are organized into subdirectories. 
-If using FileZilla, go to the Server-Search Remote Files dialog. 
+If the data/pdb/obsolete/ local directory is not already created, then create it now. 
+To populate the data/pdb/obsolete/ local directory, the actions are different from above because the remote files are organized into subdirectories. 
+First, if using FileZilla, select the data/pdb/obsolete/ local directory and select the /pub/pdb/data/structures/obsolete/pdb remote directory.
+Then, go to the Server-Search Remote Files dialog. 
 For search conditions, add a filename ends with 'ent.gz' rule and click search and wait a few minutes for the search to complete. 
-If the local data/pdb/obsolete/ directory is not already created, then create it now. 
 In the Search dialog, select all files to be downloaded using Ctrl-A. 
 Right-click and choose download. 
 Choose to flatten remote paths and click OK.
 
-__NOTE: DO NOT UNZIP DOWNLOADED FILES__
+__NOTE: THERE IS NO NEED TO UNZIP DOWNLOADED FILES__
 
 Once downloaded, the files can be parsed based on structure definitions to populate the data/chain/, data/scop/, data/cath/ and data/ecod/ directories. 
 The data/chain/ directory must be processed first.
