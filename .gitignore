@@ -1,6 +1,7 @@
 
 # data directories
 data/pdb/bundles/
+data/pdb/chopped/
 data/pdb/pdb/
 data/pdb/obsolete/
 data/scop/pdb/

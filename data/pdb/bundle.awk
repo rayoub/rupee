@@ -8,13 +8,12 @@ BEGIN {
 $0 ~ /^[0-9]/ {
    
     # rule for key column 
-    key = $0
-   
+    key = substr($1, 1, length($1)-1)
 }
 
 $0 !~ /^[0-9]/ {
    
     # rule for entry columns
-    print key, $0 
+    print key, $1, $2
 }
 
