@@ -169,6 +169,8 @@ data/cath/pdb/     | parsed pdb files based on cath definitions
 data/ecod/pdb/     | parsed pdb files based on ecod definitions
 data/upload/       | directory used for temporary storage of uploaded pdb files
 
+__NOTE: DO NOT EXTRACT THE DOWNLOADED ARCHIVE FILES UNLESS EXPLICITY STATED__
+
 First, the data/pdb/ local directory has to be populated with files downloaded from the wwpdb FTP site. 
 If using FileZilla, you should set the connection timeout to at least 1000 seconds in the Edit-Settings dialog. 
 Click the data/pdb/ local directory to select the destination for the files. 
@@ -186,8 +188,6 @@ It should take about 10 minutes for the search to complete.
 Once the search is complete, in the Search dialog, select all files to be downloaded using Ctrl-A. 
 Right-click and choose download. 
 Choose to flatten remote paths and click OK.
-
-__NOTE: THERE IS NO NEED TO EXTRACT THE DOWNLOADED ARCHIVE FILES UP TO THIS POINT__
 
 If the data/pdb/bundles/ local directory is not already created, then create it now. 
 Like the obsolete files, the remote files are organized into subdirectories. 
@@ -209,9 +209,6 @@ I also think the following command will work:
 ```
 > tar xvfz *.gz
 ```
-
-
-
 
 Once downloaded, the files can be parsed based on structure definitions to populate the data/chain/, data/scop/, data/cath/ and data/ecod/ directories. 
 The data/chain/ directory must be processed first.
