@@ -162,6 +162,7 @@ Excluded Directory | Description
 ------------------ | -----------
 data/pdb/pdb/      | From /pub/pdb/data/structures/all/pdb at ftp.wwpdb.org
 data/pdb/obsolete/ | From /pub/pdb/data/structures/obsolete/pdb at ftp.wwpdb.org
+data/pdb/bundles/  | From /pub/pdb/compatible/pdb_bundle at ftp.wwpdb.org
 data/chain/pdb/    | parsed pdb files containing whole chains
 data/scop/pdb/     | parsed pdb files based on scop definitions
 data/cath/pdb/     | parsed pdb files based on cath definitions
@@ -186,7 +187,31 @@ Once the search is complete, in the Search dialog, select all files to be downlo
 Right-click and choose download. 
 Choose to flatten remote paths and click OK.
 
-__NOTE: THERE IS NO NEED TO UNZIP DOWNLOADED FILES__
+__NOTE: THERE IS NO NEED TO EXTRACT THE DOWNLOADED ARCHIVE FILES UP TO THIS POINT__
+
+If the data/pdb/bundles/ local directory is not already created, then create it now. 
+Like the obsolete files, the remote files are organized into subdirectories. 
+First, if using FileZilla, select the data/pdb/bundles/ local directory and select the /pub/pdb/compatible/pdb_bundle/ remote directory.
+Then, go to the Server-Search Remote Files dialog. 
+Remove all search conditions that may already be present and click search. 
+It should take about 10 minutes for the search to complete. 
+Once the search is complete, in the Search dialog, select all files to be downloaded using Ctrl-A. 
+Right-click and choose download. 
+Choose to flatten remote paths and click OK.
+
+The archive files in the /data/pdb/bundles/ local directory do have to be extracted.
+To extract, while in the /data/pdb/bundles/ directory, execute the following commands:
+```
+> gunzip *.gz
+> find . -name "*.tar" -exec tar xvf {} \;
+```
+I also think the following command will work:
+```
+> tar xvfz *.gz
+```
+
+
+
 
 Once downloaded, the files can be parsed based on structure definitions to populate the data/chain/, data/scop/, data/cath/ and data/ecod/ directories. 
 The data/chain/ directory must be processed first.
