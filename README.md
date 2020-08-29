@@ -172,16 +172,17 @@ First, the data/pdb/ local directory has to be populated with files downloaded f
 If using FileZilla, you should set the connection timeout to at least 1000 seconds in the Edit-Settings dialog. 
 Click the data/pdb/ local directory to select the destination for the files. 
 Click the /pub/pdb/data/structures/all/pdb/ remote directory containing the files you want to download. 
-It will take a few minutes to obtain the directory listing. 
-Then right-click the pdb/ remote directory and select download. 
+It will take a few minutes to obtain the directory listing and may even appear non-responsive. 
+Once you have obtained the directory listing, right-click the pdb/ remote directory and select download. 
 This will also create the pdb/ local directory under the data/pdb/ directory if it hasn't already been created. 
 
 If the data/pdb/obsolete/ local directory is not already created, then create it now. 
 To populate the data/pdb/obsolete/ local directory, the actions are different from above because the remote files are organized into subdirectories. 
 First, if using FileZilla, select the data/pdb/obsolete/ local directory and select the /pub/pdb/data/structures/obsolete/pdb remote directory.
 Then, go to the Server-Search Remote Files dialog. 
-For search conditions, add a filename ends with 'ent.gz' rule and click search and wait a few minutes for the search to complete. 
-In the Search dialog, select all files to be downloaded using Ctrl-A. 
+For search conditions, add a filename ends with 'ent.gz' rule and click search.
+It should take about 10 minutes for the search to complete. 
+Once the search is complete, in the Search dialog, select all files to be downloaded using Ctrl-A. 
 Right-click and choose download. 
 Choose to flatten remote paths and click OK.
 
