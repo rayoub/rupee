@@ -91,7 +91,7 @@ To build, from each project's root directory execute the following command:
 
 ### rupee-search Application
 
-Once built, navigate to the rupee-search target directory and issue the following command:
+Once built, navigate to the rupee-search/target/ directory and issue the following command:
 ```
 > java -jar rupee-search-0.0.1-SNAPSHOT-jar-with-dependencies.jar -?
 Usage: RUPEE
@@ -110,7 +110,7 @@ Where
 <REP#>          = TRUE | FALSE
 <DIFF#>         = TRUE | FALSE
 ```
-The following table briefly describes each command line option.
+The following table briefly describes each command line options.
 
 Option | Description
 ------ | -----------
@@ -178,7 +178,7 @@ This will also create the pdb/ local directory under the data/pdb/ directory if 
 
 If the data/pdb/obsolete/ local directory is not already created, then create it now. 
 To populate the data/pdb/obsolete/ local directory, the actions are different from above because the remote files are organized into subdirectories. 
-First, if using FileZilla, select the data/pdb/obsolete/ local directory and select the /pub/pdb/data/structures/obsolete/pdb remote directory.
+First, if using FileZilla, select the data/pdb/obsolete/ local directory and select the /pub/pdb/data/structures/obsolete/pdb/ remote directory.
 Then, go to the Server-Search Remote Files dialog. 
 For search conditions, add a filename ends with 'ent.gz' rule and click search.
 It should take about 10 minutes for the search to complete. 
