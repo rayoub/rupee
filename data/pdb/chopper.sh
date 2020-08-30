@@ -1,6 +1,6 @@
 #! /bin/bash
 
-# run like this 'xargs -a -P bundle.txt -L1 ./chopper.sh'
+# run like this 'xargs -a bundle.txt -P8 -L1 ./chopper.sh'
 
 # chops bundled chain and copies it to the chopped directory 
 
@@ -24,8 +24,6 @@ cat "./bundles/$file" | sed -rn -e '/^(ATOM|HETATM)/p' -e '/^ENDMDL/q' |
 
 # get records corresponding to the chain
 awk -v chain=${chain1} -f chopper.awk | 
-
-# somehow have to swap out the chain id
 
 # remove trailing HETATM records and save
 tac | awk -f trailing.awk | tac > ./chopped/${pdb}${chain2}.pdb
