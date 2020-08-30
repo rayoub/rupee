@@ -8,9 +8,6 @@ public class Constants {
    
     public final static String DB_USER = "ayoub";
     public final static String DB_PASSWORD = "ayoub";
-
-    public final static String PDB_PATH = "/home/ayoub/git/rupee/data/pdb/pdb/";
-    public final static String OBSOLETE_PATH = "/home/ayoub/git/rupee/data/pdb/obsolete/";
     
     public final static String DOWNLOAD_PATH = "/home/ayoub/Downloads/";
     public final static String SSM_PATH = "/home/ayoub/git/rupee/results/ssm/temp/";

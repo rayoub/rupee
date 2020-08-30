@@ -799,11 +799,6 @@ public class Main {
     }
 
     private static void option_d(CommandLine line) throws Exception {
-      
-        /*
-        ChainDefs.printChains("/home/ayoub/git/rupee/data/pdb/pdb");
-        ChainDefs.printChains("/home/ayoub/git/rupee/data/pdb/obsolete");
-        */
 
         /*
         // web site automation
