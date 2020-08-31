@@ -10,7 +10,7 @@
 mkdir ./chopped
 
 # message
-echo "This is going to take about 45 minutes"
+echo "To the chopper! This is going to take about 45 minutes"
 
 # run the chopper
 xargs -a bundle.txt -P8 -L1 ./chopper.sh
@@ -19,9 +19,11 @@ xargs -a bundle.txt -P8 -L1 ./chopper.sh
 find ./chopped -size 0 -delete
 
 # message
-echo "This is going to take about 15 minutes"
+echo "Zipping the chopped files: This is going to take about 15 minutes"
 
 # gzip the chopped files 
 find ./chopped -name "*.ent" -exec gzip {} \;
 
+# done
+echo "Done"
 

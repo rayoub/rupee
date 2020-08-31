@@ -1,3 +1,4 @@
+#! /bin/bash
 
 # delete output directories if it already exist
 [ -d ./pdb ] && rm -r pdb

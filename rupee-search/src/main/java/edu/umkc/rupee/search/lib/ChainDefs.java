@@ -82,22 +82,25 @@ public class ChainDefs {
 
     public static void writePdbChains(String version) throws IOException {
 
-        writeChains(Constants.PDB_PDB_PATH, false, ChainDefType.PDB, version);
-        writeChains(Constants.PDB_BUNDLE_PATH, true, ChainDefType.PDB, version);
+        String outFile = Constants.CHAIN_PATH + ChainDefType.PDB.getName() + "_" + version + ".txt";
+        
+        Files.deleteIfExists(Paths.get(outFile));
+
+        //writeChains(Constants.PDB_PDB_PATH, false, version, outFile);
+        writeChains(Constants.PDB_BUNDLE_PATH, true, version, outFile);
     }
     
     public static void writeObsoleteChains(String version) throws IOException {
 
-        writeChains(Constants.PDB_OBSOLETE_PATH, false, ChainDefType.OBSOLETE, version);
+        String outFile = Constants.CHAIN_PATH + ChainDefType.OBSOLETE.getName() + "_" + version + ".txt";
+
+        Files.deleteIfExists(Paths.get(outFile));
+
+        writeChains(Constants.PDB_OBSOLETE_PATH, false, version, outFile);
     }
 
-    private static void writeChains(String path, boolean fileNameChain, ChainDefType type, String version) throws IOException {
+    private static void writeChains(String path, boolean fileNameChain, String version, String outFile) throws IOException {
       
-        String writeToFile = Constants.CHAIN_PATH + type.getName() + "_" + version + ".txt";
-
-        // delete if it already exist
-        Files.deleteIfExists(Paths.get(writeToFile));
-
         Files.newDirectoryStream(Paths.get(path), "*.ent.gz")
             .forEach(pathName -> {
  
@@ -115,18 +118,20 @@ public class ChainDefs {
                     Structure structure = reader.getStructure(queryFileGz);
                     structure.setPDBCode(pdbId);
 
-                    // *** write file
+                    // *** write out file
 
                     List<String> lines = getChains(structure, fileName, fileNameChain);
-                    StringJoiner joiner = new StringJoiner(System.lineSeparator());
-                    for (String line : lines) {
-                        joiner.add(line);
-                    }
+                    if (lines.size() > 0) {
 
-                    System.out.println("Writing to " + writeToFile);
-                    FileWriter writer = new FileWriter(writeToFile, true);
-                    writer.write(joiner.toString() + System.lineSeparator());
-                    writer.close();
+                        StringJoiner joiner = new StringJoiner(System.lineSeparator());
+                        for (String line : lines) {
+                            joiner.add(line);
+                        }
+
+                        FileWriter writer = new FileWriter(outFile, true);
+                        writer.write(joiner.toString() + System.lineSeparator());
+                        writer.close();
+                    }
                 
                 } catch (Exception e) {
                     Logger.getLogger(ChainDefs.class.getName()).log(Level.INFO, null, e);
@@ -154,6 +159,7 @@ public class ChainDefs {
                     structure.getPDBCode() + " " + chainName + " " + 
                     chainDef.getResidueCount()
                 )
+                .map(line -> line.trim())
                 .collect(Collectors.toList());
         }
         else {
@@ -168,6 +174,7 @@ public class ChainDefs {
                     structure.getPDBCode() + " " + chainDef.getChainName() + " " + 
                     chainDef.getResidueCount()
                 )
+                .map(line -> line.trim())
                 .collect(Collectors.toList());
         }
 

@@ -39,7 +39,7 @@ public class Constants {
     public final static String PDB_PATH = DATA_PATH + "pdb/";
     public final static String PDB_PDB_PATH = PDB_PATH + "pdb/";
     public final static String PDB_OBSOLETE_PATH = PDB_PATH + "obsolete/";
-    public final static String PDB_BUNDLE_PATH = PDB_PATH + "bundles/"; 
+    public final static String PDB_BUNDLE_PATH = PDB_PATH + "chopped/"; 
     
     public final static int MIN_GRAM_COUNT = 10;
     public final static int MIN_HASH_COUNT = 99;
