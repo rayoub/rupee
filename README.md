@@ -74,8 +74,8 @@ Finally, within the __psql__ prompt, execute the following command:
 ### Maven Build
 
 The simplest scenario is when you have a single directory of pdb files containing single chains. 
-First, in the [Constants.java](rupee-search/src/main/java/edu/umkc/rupee/search/lib/Constants.java) file, edit the ```DIR_PATH``` constant to point to the local directory  containing the pdb files and edit the ```UPLOAD_PATH``` constant to point to the local directory in which to store uploaded pdb files. 
-If you wish to work with the other databases found at <https://ayoubresearch.com>, such as SCOP, CATH, ECOD, and CHAIN, you have to edit the corresponding ```*_PATH``` variables in addition to the ```UPLOAD_PATH``` variable.
+First, in the [Constants.java](rupee-search/src/main/java/edu/umkc/rupee/search/lib/Constants.java) file, edit the ```DIR_PATH``` constant to point to the local directory containing the pdb files you wish to search. 
+In the same [Constants.java](rupee-search/src/main/java/edu/umkc/rupee/search/lib/Constants.java) file, edit the ```DATA_PATH``` constant to point to a local directory containing an upload/ subdirectory.
 Then, build the 3 Java projects in this order:
 
 1. rupee-tm
@@ -110,7 +110,7 @@ Where
 <REP#>          = TRUE | FALSE
 <DIFF#>         = TRUE | FALSE
 ```
-The following table briefly describes each command line options.
+The following table briefly describes each command line option.
 
 Option | Description
 ------ | -----------
@@ -145,10 +145,10 @@ The .gitignore file list the files and directories that have been explicitly exc
 ### db/
 
 This directory contains SQL definitions files. 
-All files except files prefixed with x\_ contain SQL definitions. 
+All files except files prefixed with x\_ or y\_ contain SQL definitions. 
 
 x\_ files are used for populating tables and should only be run when parsed data files are present.
-The x\_ files contain hard-coded references to file locations that should be changed to match your Linux home directory.
+Please note, the x\_ files contain __hard-coded references__ to file locations that should be changed to match your Linux home directory.
 Unfortunately, the postgres COPY command does not accept relative directories. 
 
 ### data/
@@ -209,10 +209,31 @@ I also think the following command will work:
 ```
 > tar xvfz *.gz
 ```
-
-Once downloaded, the files can be parsed based on structure definitions to populate the data/chain/, data/scop/, data/cath/ and data/ecod/ directories. 
-The data/chain/ directory must be processed first.
+Once downloaded, the files can be processed to populate the remaining data/pdb/ directory in addition to the data/chain/, data/scop/, data/cath/ and data/ecod/ directories. 
+The data/pdb/ directory must be processed first followed by the data/chain/ directory.
 Then the remaining directories can be parsed and processed independently. 
+The following is what to do in each directory with it set as your working directory.
+
+### data/pdb/
+
+If you downloaded the pdb data on the date of MM/DD/YYYY, then your version is "vMM_DD_YYYY" and needs to be passed as the argument to the do_all.sh bash script.
+Below is an example:
+
+```
+> ./do_all.sh v08_28_2020
+```
+This script chops bundle files and puts them in the data/pdb/chopped/ directory. 
+Next, files are created in the data/pdb/chain/ directory that define the chains present in the pdb files, including bundle files and obsolete files.  
+The passed in version is used to name these definition files. 
+
+### data/chain/
+
+### data/scop/
+
+### data/cath/
+
+### data/ecod/
+
 
 Each of the directories, data/chain/, data/scop/, data/cath/ and data/ecod/ follow a similar pattern with some redundant code to keep things simple. 
 The do_all.sh bash scripts can be used to parse structure definitions and subsequently parse pdb files based on the structure definitions.
