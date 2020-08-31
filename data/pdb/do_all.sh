@@ -9,11 +9,17 @@
 # create output directory
 mkdir ./chopped
 
+# message
+echo "This is going to take about 45 minutes"
+
 # run the chopper
 xargs -a bundle.txt -P8 -L1 ./chopper.sh
 
 # delete empty chopped files
 find ./chopped -size 0 -delete
+
+# message
+echo "This is going to take about 15 minutes"
 
 # gzip the chopped files 
 find ./chopped -name "*.ent" -exec gzip {} \;
