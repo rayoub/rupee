@@ -12,7 +12,10 @@ mkdir ./chopped
 # run the chopper
 xargs -a bundle.txt -P8 -L1 ./chopper.sh
 
+# delete empty chopped files
+find ./chopped -size 0 -delete
+
 # gzip the chopped files 
-find ./chopped -name "*.pdb" -exec gzip {} \;
+find ./chopped -name "*.ent" -exec gzip {} \;
 
 
