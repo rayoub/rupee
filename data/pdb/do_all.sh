@@ -21,7 +21,7 @@ xargs -a bundle.txt -P8 -L1 ./chopper.sh
 find ./chopped -size 0 -delete
 
 # message
-echo "Zipping the chopped files: This is going to take about 15 minutes"
+echo "Zipping the chopped files: This is going to take about 30 minutes"
 
 # gzip the chopped files 
 find ./chopped -name "*.ent" -exec gzip {} \;
@@ -29,8 +29,11 @@ find ./chopped -name "*.ent" -exec gzip {} \;
 # move to app directory
 cd ../../rupee-search/target
 
-# chop the bundle files
-java -jar rupee-search-0.0.1-SNAPSHOT-jar-with-dependencies.jar -b $ver 
+# message
+echo "Writing chain definitions: This is going to take about 2 hours"
+
+# write chain definitions
+java -jar rupee-search-0.0.1-SNAPSHOT-jar-with-dependencies.jar -c $ver 
 
 # done
 echo "Done"
