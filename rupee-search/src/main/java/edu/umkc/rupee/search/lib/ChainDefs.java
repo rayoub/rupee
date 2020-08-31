@@ -86,7 +86,7 @@ public class ChainDefs {
         
         Files.deleteIfExists(Paths.get(outFile));
 
-        //writeChains(Constants.PDB_PDB_PATH, false, version, outFile);
+        writeChains(Constants.PDB_PDB_PATH, false, version, outFile);
         writeChains(Constants.PDB_BUNDLE_PATH, true, version, outFile);
     }
     

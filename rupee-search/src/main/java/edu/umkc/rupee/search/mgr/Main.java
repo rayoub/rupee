@@ -88,6 +88,11 @@ public class Main {
                 .argName("DB_TYPE>,<FILE_PATH>,<REP1>,<REP2>,<REP3>,<DIFF1>,<DIFF2>,<DIFF3>,<SEARCH_MODE>,<SEARCH_TYPE")
                 .valueSeparator(',')
                 .build());
+        group.addOption(Option.builder("c")
+                .longOpt("chain-defs")
+                .numberOfArgs(1)
+                .argName("VERSION")
+                .build());
         group.addOption(Option.builder("d")
                 .longOpt("debug")
                 .build());
@@ -121,6 +126,8 @@ public class Main {
                 option_s(line);
             } else if (line.hasOption("u")) {
                 option_u(line);
+            } else if (line.hasOption("c")) {
+                option_c(line);
             } else if (line.hasOption("d")) {
                 option_d(line);
             } else if (line.hasOption("?")) {
@@ -594,10 +601,20 @@ public class Main {
             }
         }
     }
+    
+    private static void option_c(CommandLine line) throws Exception {
+
+        String[] args = line.getOptionValues("c");
+        
+        String version = args[0];
+        
+        ChainDefs.writePdbChains(version);
+        ChainDefs.writeObsoleteChains(version);
+    }
 
     private static void option_d(CommandLine line) throws Exception {
 
-        ChainDefs.writeObsoleteChains("v08_28_2020");
+        System.out.println("Done Debugging");
     }
 
     private static void option_help(Options options) {
