@@ -1,5 +1,7 @@
 #! /bin/bash
 
+ver=$1
+
 # delete output directories if it already exist
 [ -d ./pdb ] && rm -r pdb
 [ -d ./obsolete ] && rm -r obsolete
@@ -9,8 +11,8 @@ mkdir ./pdb
 mkdir ./obsolete
 
 # parse pdb files
-xargs -a pdb_v06_19_2020.txt -L1 -P8 ./chopper.sh pdb
-xargs -a obsolete_v06_19_2020.txt -L1 -P8 ./chopper.sh obsolete
+xargs -a pdb_${ver}.txt -L1 -P8 ./chopper.sh pdb
+xargs -a obsolete_${ver}.txt -L1 -P8 ./chopper.sh obsolete
 
 # move to db directory
 cd ../../db

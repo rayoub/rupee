@@ -1,5 +1,7 @@
 #! /bin/bash
 
+ver=$1
+
 # bundle definitions
 ./bundle.sh > bundle.txt
 
@@ -23,6 +25,12 @@ echo "Zipping the chopped files: This is going to take about 15 minutes"
 
 # gzip the chopped files 
 find ./chopped -name "*.ent" -exec gzip {} \;
+
+# move to app directory
+cd ../../rupee-search/target
+
+# chop the bundle files
+java -jar rupee-search-0.0.1-SNAPSHOT-jar-with-dependencies.jar -b $ver 
 
 # done
 echo "Done"
