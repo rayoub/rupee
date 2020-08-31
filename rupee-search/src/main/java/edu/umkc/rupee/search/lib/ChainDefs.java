@@ -5,7 +5,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.StringJoiner;
@@ -61,64 +60,78 @@ public class ChainDefs {
         }
     }
 
+    public enum ChainDefType {
+
+        PDB("pdb"),
+        OBSOLETE("obsolete");
+
+        private String name;
+
+        ChainDefType(String name) {
+            this.name = name;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+    }
+
     public static void writePdbChains(String version) throws IOException {
 
-        List<String> pdbLines = new ArrayList<>();
-        //pdbLines.addAll(getChains(Constants.PDB_PDB_PATH, false));
-        pdbLines.addAll(getChains(Constants.PDB_BUNDLE_PATH, true));
-        StringJoiner pdbJoiner = new StringJoiner(System.lineSeparator());
-        for (String line : pdbLines) {
-
-            pdbJoiner.add(line);
-        }
-        FileWriter pdbWriter = new FileWriter(Constants.CHAIN_PATH + "pdb_" + version + ".txt");
-        pdbWriter.write(pdbJoiner.toString());
-        pdbWriter.close();
+        writeChains(Constants.PDB_PDB_PATH, false, ChainDefType.PDB, version);
+        writeChains(Constants.PDB_BUNDLE_PATH, true, ChainDefType.PDB, version);
     }
     
     public static void writeObsoleteChains(String version) throws IOException {
 
-        List<String> obsoleteLines = new ArrayList<>();
-        obsoleteLines.addAll(getChains(Constants.PDB_OBSOLETE_PATH, false));
-        StringJoiner obsoleteJoiner = new StringJoiner(System.lineSeparator());
-        for (String line : obsoleteLines) {
-
-            obsoleteJoiner.add(line);
-        }
-        FileWriter obsoleteWriter = new FileWriter(Constants.CHAIN_PATH + "obsolete_" + version + ".txt");
-        obsoleteWriter.write(obsoleteJoiner.toString());
-        obsoleteWriter.close();
+        writeChains(Constants.PDB_OBSOLETE_PATH, false, ChainDefType.OBSOLETE, version);
     }
 
-    private static List<String> getChains(String path, boolean fileNameChain) throws IOException {
+    private static void writeChains(String path, boolean fileNameChain, ChainDefType type, String version) throws IOException {
       
-        List<String> lines = new ArrayList<>();
+        String writeToFile = Constants.CHAIN_PATH + type.getName() + "_" + version + ".txt";
+
+        // delete if it already exist
+        Files.deleteIfExists(Paths.get(writeToFile));
 
         Files.newDirectoryStream(Paths.get(path), "*.ent.gz")
             .forEach(pathName -> {
  
                 PDBFileReader reader = new PDBFileReader();
                 reader.setFetchBehavior(FetchBehavior.LOCAL_ONLY);
-               
-                String fileName = pathName.getFileName().toString().split("\\.")[0];
+
+                String fileName = pathName.getFileName().toString();
                 String pdbId = fileName.substring(3,7).toLowerCase();
     
                 try {
                     
-                    FileInputStream queryFile = new FileInputStream(fileName.toString());
+                    FileInputStream queryFile = new FileInputStream(pathName.toString());
                     GZIPInputStream queryFileGz = new GZIPInputStream(queryFile);
 
                     Structure structure = reader.getStructure(queryFileGz);
                     structure.setPDBCode(pdbId);
 
-                    lines.addAll(getChains(structure, fileName, fileNameChain));
+                    // *** write file
+
+                    List<String> lines = getChains(structure, fileName, fileNameChain);
+                    StringJoiner joiner = new StringJoiner(System.lineSeparator());
+                    for (String line : lines) {
+                        joiner.add(line);
+                    }
+
+                    System.out.println("Writing to " + writeToFile);
+                    FileWriter writer = new FileWriter(writeToFile, true);
+                    writer.write(joiner.toString() + System.lineSeparator());
+                    writer.close();
                 
                 } catch (Exception e) {
                     Logger.getLogger(ChainDefs.class.getName()).log(Level.INFO, null, e);
                 }
         });
-
-        return lines;
     }
 
     private static List<String> getChains(Structure structure, String fileName, boolean fileNameChain) {
@@ -128,11 +141,11 @@ public class ChainDefs {
 
         List<String> lines = null; 
         if (fileNameChain) {
-
-            String chainName = fileName.substring(7);
+            
+            String chainName = fileName.split("\\.")[0].substring(7);
 
             // get a line of data for each chain
-            lines = chains.parallelStream()
+            lines = chains.stream()
                 .map(ChainDef::new)
                 .filter(chainDef -> !chainName.isEmpty() && chainDef.getResidueCount() >= 1)
                 .distinct()
@@ -146,7 +159,7 @@ public class ChainDefs {
         else {
 
             // get a line of data for each chain
-            lines = chains.parallelStream()
+            lines = chains.stream()
                 .map(ChainDef::new)
                 .filter(chainDef -> !chainDef.getChainName().isEmpty() && chainDef.getResidueCount() >= 1)
                 .distinct()

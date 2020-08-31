@@ -48,6 +48,7 @@ import edu.umkc.rupee.search.ecod.EcodImport;
 import edu.umkc.rupee.search.ecod.EcodSearch;
 import edu.umkc.rupee.search.ecod.EcodSearchCriteria;
 import edu.umkc.rupee.search.ecod.EcodSearchRecord;
+import edu.umkc.rupee.search.lib.ChainDefs;
 import edu.umkc.rupee.search.lib.Constants;
 import edu.umkc.rupee.search.lib.DbId;
 import edu.umkc.rupee.search.lib.Uploading;
@@ -87,6 +88,9 @@ public class Main {
                 .argName("DB_TYPE>,<FILE_PATH>,<REP1>,<REP2>,<REP3>,<DIFF1>,<DIFF2>,<DIFF3>,<SEARCH_MODE>,<SEARCH_TYPE")
                 .valueSeparator(',')
                 .build());
+        group.addOption(Option.builder("d")
+                .longOpt("debug")
+                .build());
         group.addOption(Option.builder("?")
                 .longOpt("help")
                 .build());
@@ -117,6 +121,8 @@ public class Main {
                 option_s(line);
             } else if (line.hasOption("u")) {
                 option_u(line);
+            } else if (line.hasOption("d")) {
+                option_d(line);
             } else if (line.hasOption("?")) {
                 option_help(options);
             }
@@ -587,6 +593,11 @@ public class Main {
                 );
             }
         }
+    }
+
+    private static void option_d(CommandLine line) throws Exception {
+
+        ChainDefs.writeObsoleteChains("v08_28_2020");
     }
 
     private static void option_help(Options options) {
