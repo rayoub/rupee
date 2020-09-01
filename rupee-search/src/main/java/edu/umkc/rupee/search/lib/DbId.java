@@ -17,27 +17,27 @@ public class DbId {
     private static Pattern SCOP_PATTERN = Pattern.compile("d[1-9][a-z0-9]{3}[_a-z0-9\\.][_a-z1-9]", Pattern.CASE_INSENSITIVE);      // maxlen = 7
     private static Pattern CATH_PATTERN = Pattern.compile("[1-9][a-z0-9]{3}[a-z1-9][0-9]{2}", Pattern.CASE_INSENSITIVE);            // maxlen = 7
     private static Pattern ECOD_PATTERN = Pattern.compile("e[1-9][a-z0-9]{3}[a-z1-9\\.]+[0-9]+", Pattern.CASE_INSENSITIVE);         // maxlen = 12 (fudge)
-    private static Pattern CHAIN_PATTERN = Pattern.compile("[1-9][a-z0-9]{3}[a-z1-9]", Pattern.CASE_INSENSITIVE);                   // maxlen = 5
+    private static Pattern CHAIN_PATTERN = Pattern.compile("[1-9][a-z0-9]{3}[a-z0-9]+", Pattern.CASE_INSENSITIVE);                  // maxlen = 12 (fudge)
    
-    public static boolean isScopId(String id) {
+    private static boolean isScopId(String id) {
 
         Matcher m = SCOP_PATTERN.matcher(id);
         return m.matches();
     }
 
-    public static boolean isCathId(String id) {
+    private static boolean isCathId(String id) {
 
         Matcher m = CATH_PATTERN.matcher(id);
         return m.matches();
     } 
     
-    public static boolean isEcodId(String id) {
+    private static boolean isEcodId(String id) {
 
         Matcher m = ECOD_PATTERN.matcher(id);
         return m.matches();
     } 
 
-    public static boolean isChainId(String id) {
+    private static boolean isChainId(String id) {
 
         Matcher m = CHAIN_PATTERN.matcher(id);
         return m.matches();
@@ -49,6 +49,7 @@ public class DbId {
             return DbType.SCOP;
         }
         else if (isCathId(id)) {
+            // CATH takes precedence over CHAIN
             return DbType.CATH;
         }
         else if (isEcodId(id)) {
@@ -64,62 +65,73 @@ public class DbId {
     
     public static String getNormalizedId(String id) {
 
-        if (isScopId(id)) {
-            return id.toLowerCase();
+        String normalizedId = id;
+        DbType dbType = getIdDbType(id);
+    
+        switch (dbType) {
+
+            case SCOP:
+                normalizedId = id.toLowerCase();
+                break;
+            case CATH:
+                normalizedId = id.substring(0,4).toLowerCase() + id.substring(4,id.length());
+                break;
+            case ECOD:
+                normalizedId = id.substring(0,5).toLowerCase() + id.substring(5,id.length());
+                break;
+            case CHAIN:
+                normalizedId = id.substring(0,4).toLowerCase() + id.substring(4,id.length());
+                break;
+            default:
+                normalizedId = id;
         }
-        else if (isCathId(id)) {
-            return id.substring(0,4).toLowerCase() + id.substring(4,id.length());
-        }
-        else if (isEcodId(id)) {
-            return id.substring(0,5).toLowerCase() + id.substring(5,id.length());
-        }
-        else if (isChainId(id)) {
-            return id.substring(0,4).toLowerCase() + id.substring(4,id.length());
-        }
-        else {
-            return id;
-        }
+
+        return normalizedId;
     }
     
     public static String getAlternateId(String id) {
+        
+        String alternateId = id;
+        DbType dbType = getIdDbType(id);
+        String suffix = "";
+    
+        switch (dbType) {
 
-        String alt = "";
-
-        if (isCathId(id)) {
-            String suffix = id.substring(4, id.length());
-            if (isStringLowerCase(suffix)) {
-                suffix = suffix.toUpperCase();
-            }
-            else {
-                suffix = suffix.toLowerCase();
-            }
-            alt = id.substring(0,4).toLowerCase() + suffix; 
-        }
-        else if (isEcodId(id)) {
-            String suffix = id.substring(5, id.length());
-            if (isStringLowerCase(suffix)) {
-                suffix = suffix.toUpperCase();
-            }
-            else {
-                suffix = suffix.toLowerCase();
-            }
-            alt = id.substring(0,5).toLowerCase() + suffix;
-        }
-        else if (isChainId(id)) {
-            String suffix = id.substring(4, id.length());
-            if (isStringLowerCase(suffix)) {
-                suffix = suffix.toUpperCase();
-            }
-            else {
-                suffix = suffix.toLowerCase();
-            }
-            alt = id.substring(0,4).toLowerCase() + suffix;
-        }
-        else {
-            alt = id;
+            case CATH:
+                suffix = id.substring(4, id.length());
+                if (isStringLowerCase(suffix)) {
+                    suffix = suffix.toUpperCase();
+                }
+                else {
+                    suffix = suffix.toLowerCase();
+                }
+                alternateId = id.substring(0,4).toLowerCase() + suffix; 
+                break;
+            case ECOD:
+                suffix = id.substring(5, id.length());
+                if (isStringLowerCase(suffix)) {
+                    suffix = suffix.toUpperCase();
+                }
+                else {
+                    suffix = suffix.toLowerCase();
+                }
+                alternateId = id.substring(0,5).toLowerCase() + suffix;
+                break;
+            case CHAIN:
+                suffix = id.substring(4, id.length());
+                if (isStringLowerCase(suffix)) {
+                    suffix = suffix.toUpperCase();
+                }
+                else {
+                    suffix = suffix.toLowerCase();
+                }
+                alternateId = id.substring(0,4).toLowerCase() + suffix;
+                break;
+            default:
+                alternateId = id;
         }
 
-        return alt;
+        return alternateId;
     }
 
     private static boolean isStringLowerCase(String str){
