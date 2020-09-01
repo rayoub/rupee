@@ -33,7 +33,7 @@ cd ../../rupee-search/target
 echo "Writing chain definitions: takes about 4 hours"
 
 # write chain definitions
-#java -jar rupee-search-0.0.1-SNAPSHOT-jar-with-dependencies.jar -c $ver 
+java -jar rupee-search-0.0.1-SNAPSHOT-jar-with-dependencies.jar -c $ver 
 
 # done
 echo "Done"
