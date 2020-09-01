@@ -53,7 +53,7 @@ public abstract class Hash {
             
             DbType dbType = getDbType();
 
-            System.out.println("Split: " + splitIndex + ", Getting " + dbType.getName() + " Ids to Import.");
+            System.out.println("Split: " + splitIndex + ", Getting " + dbType.getName() + " Ids to Hash.");
                 
             PreparedStatement stmt = conn.prepareCall("SELECT * FROM get_" + dbType.getTableName() + "_grams_split(?,?);");
             stmt.setInt(1, splitIndex);
