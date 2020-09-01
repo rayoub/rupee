@@ -24,7 +24,7 @@ find ./chopped -size 0 -delete
 echo "Zipping the chopped files: takes about 30 minutes"
 
 # gzip the chopped files 
-find ./chopped -name "*.ent" -exec gzip {} \;
+find ./chopped -name "*.pdb" -exec gzip {} \;
 
 # move to app directory
 cd ../../rupee-search/target
@@ -33,7 +33,7 @@ cd ../../rupee-search/target
 echo "Writing chain definitions: takes about 4 hours"
 
 # write chain definitions
-java -jar rupee-search-0.0.1-SNAPSHOT-jar-with-dependencies.jar -c $ver 
+#java -jar rupee-search-0.0.1-SNAPSHOT-jar-with-dependencies.jar -c $ver 
 
 # done
 echo "Done"

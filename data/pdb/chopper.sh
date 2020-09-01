@@ -26,6 +26,6 @@ cat "./bundles/$file" | sed -rn -e '/^(ATOM|HETATM)/p' -e '/^ENDMDL/q' |
 awk -v chain=${chain1} -f chopper.awk | 
 
 # remove trailing HETATM records and save
-tac | awk -f trailing.awk | tac > ./chopped/pdb${pdb}${chain2}.ent
+tac | awk -f trailing.awk | tac > ./chopped/${pdb}${chain2}.pdb
 
 
