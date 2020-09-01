@@ -30,7 +30,7 @@ find ./chopped -name "*.ent" -exec gzip {} \;
 cd ../../rupee-search/target
 
 # message
-echo "Writing chain definitions: This is going to take about 2 hours"
+echo "Writing chain definitions: This is going to take about 4 hours"
 
 # write chain definitions
 java -jar rupee-search-0.0.1-SNAPSHOT-jar-with-dependencies.jar -c $ver 
