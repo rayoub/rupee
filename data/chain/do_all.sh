@@ -15,7 +15,7 @@ xargs -a pdb_${ver}.txt -L1 -P8 ./chopper.sh pdb
 xargs -a obsolete_${ver}.txt -L1 -P8 ./chopper.sh obsolete
 
 # copy already chopped files
-cp ../pdb/chopped/*.gz ./pdb
+find ../pdb/chopped -type f -name "*.gz" -exec cp {} ./pdb \;
 
 # move to db directory
 cd ../../db
