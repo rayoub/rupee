@@ -10,12 +10,17 @@ ver=$1
 mkdir ./pdb
 mkdir ./obsolete
 
+# message
+echo "To the chopper!"
+
 # parse pdb files
 xargs -a pdb_${ver}.txt -L1 -P8 ./chopper.sh pdb
 xargs -a obsolete_${ver}.txt -L1 -P8 ./chopper.sh obsolete
 
+echo "Copying files: takes about 10 minutes"
+
 # copy already chopped files
-find ../pdb/chopped -type f -name "*.gz" -exec cp {} ./pdb \;
+find ../pdb/chopped -type f -name "*.ent.gz" -exec cp {} ./pdb \;
 
 # move to db directory
 cd ../../db
