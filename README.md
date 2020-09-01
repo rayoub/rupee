@@ -211,7 +211,7 @@ I also think the following command will work:
 ```
 Once downloaded, the files can be processed to populate the remaining data/pdb/ directory in addition to the data/chain/, data/scop/, data/cath/ and data/ecod/ directories. 
 The data/pdb/ directory must be processed first followed by the data/chain/ directory.
-Then the remaining directories can be parsed and processed independently. 
+Then the remaining directories can be processed independently. 
 The following is what to do in each directory with it set as your working directory.
 
 ### data/pdb/
@@ -228,22 +228,29 @@ The passed in version is used to name these definition files.
 
 ### data/chain/
 
-### data/scop/
+Using the same version as above, type the following command:
 
-### data/cath/
+```
+> ./do_all.sh v08_28_2020
+```
 
-### data/ecod/
+### data/scop/, data/cath/, and data/ecod/
 
+Simply type in the following command in each directory in any order:
 
-Each of the directories, data/chain/, data/scop/, data/cath/ and data/ecod/ follow a similar pattern with some redundant code to keep things simple. 
-The do_all.sh bash scripts can be used to parse structure definitions and subsequently parse pdb files based on the structure definitions.
-Look at the do_all.sh bash scripts for exact details. 
-Sometimes a modified script is checked in with some lines commented out. 
+```
+> ./do_all.sh v08_28_2020
+```
+
+### Some tips
+
+You may need to get more familiar with the do_all.sh scripts.
+When a script errors out midway through, carefully comment out the completed lines, address the issue, and run again. 
+Sometimes a modified do_all.sh script is checked in with some lines commented out. 
 Before an initial run make sure all lines are uncommented. 
+In some cases, the do_all.sh bash script will execute the above rupee-search application for importing and hashing structures. 
 
-The do_all.sh bash script will also execute the above rupee-search application in order to import and hash structures once parsing is complete. 
+### Conclusion
 
-To execute the do_all.sh script, check the parameters required for each script by examining the code and pass in the parameters based on the structure definition files you want to process. In the .gitignore file you will find references to these files downloaded from the source sites, i.e. SCOP, CATH, and ECOD.  
-
-As long as you have successfully parsed and processed one of these directories, you can now execute searches with the rupee-search application.  
+If you have successfully processed one of the data directories, you can now execute searches with the rupee-search application.  
 

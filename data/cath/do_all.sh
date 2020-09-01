@@ -1,16 +1,16 @@
 
-ver=$1
-
-# parse definition files
-awk -f domains.awk cath-domain-list-${ver}.txt > domains.txt
-awk -f segments.awk cath-domain-boundaries-${ver}.txt > segments.txt
-awk -f names.awk cath-names-${ver}.txt > names.txt
+ver=v4_2_0
 
 # delete output directory if it already exist
 [ -d ./pdb ] && rm -r pdb
 
 # create output directory
 mkdir ./pdb
+
+# parse definition files
+awk -f domains.awk cath-domain-list-${ver}.txt > domains.txt
+awk -f segments.awk cath-domain-boundaries-${ver}.txt > segments.txt
+awk -f names.awk cath-names-${ver}.txt > names.txt
 
 # parse pdb files (takes forever, I've been storing the zips)
 xargs -a segments.txt -L1 ./chopper.sh
