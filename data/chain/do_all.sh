@@ -14,6 +14,9 @@ mkdir ./obsolete
 xargs -a pdb_${ver}.txt -L1 -P8 ./chopper.sh pdb
 xargs -a obsolete_${ver}.txt -L1 -P8 ./chopper.sh obsolete
 
+# copy already chopped files
+cp ../pdb/chopped/*.gz ./pdb
+
 # move to db directory
 cd ../../db
 
