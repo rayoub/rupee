@@ -20,7 +20,7 @@ xargs -a obsolete_${ver}.txt -L1 -P8 ./chopper.sh obsolete
 echo "Copying files: takes about 10 minutes"
 
 # copy already chopped files
-find ../pdb/chopped -type f -name "*.ent.gz" -exec cp {} ./pdb \;
+find ../pdb/chopped -type f -name "*.pdb.gz" -exec cp {} ./pdb \;
 
 # move to db directory
 cd ../../db
