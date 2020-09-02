@@ -239,7 +239,7 @@ Using the same version as above, type the following command:
 Simply type in the following command in each directory in any order:
 
 ```
-> ./do_all.sh v08_28_2020
+> ./do_all.sh
 ```
 
 ### Some tips
