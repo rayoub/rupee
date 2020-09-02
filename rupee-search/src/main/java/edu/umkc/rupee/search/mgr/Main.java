@@ -320,15 +320,10 @@ public class Main {
         }
 
         SearchType searchType = SearchType.valueOf(args[9]);
-
-        // enforce assumptions
-        SortBy sortBy;
-        if (searchMode == SearchMode.FAST) {
-            sortBy = SortBy.SIMILARITY;
-        } 
         
-        // the rest are compatible with all search modes
-        else if (searchType == SearchType.RMSD) {
+        // enforce some sorts based on search type 
+        SortBy sortBy;
+        if (searchType == SearchType.RMSD) {
             sortBy = SortBy.RMSD;
         }
         else if (searchType == SearchType.Q_SCORE) {

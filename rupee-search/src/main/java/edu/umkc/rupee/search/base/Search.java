@@ -50,6 +50,7 @@ public abstract class Search {
 
     private static int INITIAL_FILTER = 40000;
     private static int FINAL_FILTER = 8000;
+    private static int MAX_LIMIT = 1000;
     private static int LCS_ALTERNATES = 10;
 
     // *********************************************************************
@@ -76,13 +77,8 @@ public abstract class Search {
         List<SearchRecord> alternates = new ArrayList<>();
         boolean suggestAlternate = false;
 
-        // enforce assumptions
-        if (criteria.searchMode == SearchMode.FAST) {
-            criteria.sortBy = SortBy.SIMILARITY;
-        } 
-
-        // the rest are compatible with all search modes
-        else if (criteria.searchType == SearchType.RMSD) {
+        // enforce some sorts based on search type 
+        if (criteria.searchType == SearchType.RMSD) {
             criteria.sortBy = SortBy.RMSD;
         }
         else if (criteria.searchType == SearchType.Q_SCORE) {
@@ -96,7 +92,7 @@ public abstract class Search {
         }
        
         // limit
-        criteria.limit = Math.min(criteria.limit, 1000); 
+        criteria.limit = Math.min(criteria.limit, MAX_LIMIT); 
 
         Grams grams = null;
         Hashes hashes = null;
@@ -231,6 +227,8 @@ public abstract class Search {
                     .collect(Collectors.toList());
             }
 
+            // NOTE: for all search modes except optimal, we now have 8,000 sorted candidates
+
             // alignments
             if (criteria.searchMode == SearchMode.ALL_ALIGNED || criteria.searchMode == SearchMode.TOP_ALIGNED) {
 
@@ -240,7 +238,7 @@ public abstract class Search {
                 
                 // filter for fast alignments 
                 records = records.stream()
-                    .limit(alignmentFilter(TmMode.FAST, grams1.getLength()))
+                    .limit(fastAlignmentFilter(grams1.getLength()))
                     .collect(Collectors.toList());
                
                 // perform fast alignments
@@ -255,7 +253,7 @@ public abstract class Search {
 
                 if (criteria.searchType == SearchType.FULL_LENGTH) {
                     
-                    // fast alternate search type record
+                    // alternate search type record from TmMode fast
                     SearchRecord top = records.get(0);
                     SearchRecord fastAlternate = records.stream()
                         .filter(r -> !r.getDbId().equals(top.getDbId()))
@@ -284,7 +282,7 @@ public abstract class Search {
 
                 if (criteria.searchType == SearchType.FULL_LENGTH) {
 
-                    // regular alternate search type record
+                    // alternate search type record from TmMode regular
                     SearchRecord top = records.get(0);
                     SearchRecord regularAlternate = records.stream()
                         .filter(r -> !r.getDbId().equals(top.getDbId()))
@@ -294,6 +292,39 @@ public abstract class Search {
                     alternates.add(regularAlternate);
                 }
             } 
+            else if (criteria.searchMode == SearchMode.FAST) {
+
+                Structure queryStructure = structure;
+                
+                // *** filter, align, sort
+
+                // filter for regular alignments
+                records = records.stream()
+                    .limit(criteria.limit)
+                    .collect(Collectors.toList());
+
+                // perform regular alignments
+                records.stream().parallel().forEach(record -> align(criteria, record, queryStructure, TmMode.REGULAR));
+
+                // sort by regular alignments
+                records = records.stream()
+                    .sorted(comparator)
+                    .collect(Collectors.toList());
+                
+                // *** 
+
+                if (criteria.searchType == SearchType.FULL_LENGTH) {
+                    
+                    // alternate search type record
+                    SearchRecord top = records.get(0);
+                    SearchRecord fastAlternate = records.stream()
+                        .filter(r -> !r.getDbId().equals(top.getDbId()))
+                        .collect(
+                            Collectors.minBy(Comparator.comparingDouble(SearchRecord::getTmScoreQ).reversed().thenComparing(SearchRecord::getSortKey))
+                        ).get();
+                    alternates.add(fastAlternate);
+                }
+            }
             else { 
 
                 // final sort using comparator
@@ -328,7 +359,7 @@ public abstract class Search {
             // suggest alternate or not
             if (alternates.size() > 0) {
 
-                double CROSSOVER = 0.05;
+                double CROSSOVER = 0.04;
                 SearchRecord top = records.get(0);
                 for (SearchRecord alternate : alternates) {
 
@@ -353,7 +384,7 @@ public abstract class Search {
         return results;
     }
 
-    private int alignmentFilter(TmMode mode, int gramCount) {
+    private int fastAlignmentFilter(int gramCount) {
 
         if (gramCount <= 200) {
             return 8000; 
@@ -364,11 +395,11 @@ public abstract class Search {
         else if (gramCount <= 400) {
             return 4000;
         }
-        else if (gramCount <= 500) {
+        else if (gramCount <= 600) {
             return 2000;
         }
         else {
-            return 1000;
+            return MAX_LIMIT;
         }
     }
 
