@@ -127,17 +127,17 @@ public class OptionFunctions {
         System.out.println("Done hashing!");
     }
     
-    public static void option_s(CommandLine line, boolean printColumns) throws Exception {
+    public static void option_s(CommandLine line, boolean printHeader) throws Exception {
 
-        OptionFunctions.option_s_and_u("s", SearchBy.DB_ID, 400, line, printColumns); 
+        OptionFunctions.option_s_and_u("s", SearchBy.DB_ID, 400, line, printHeader); 
     }
     
-    public static void option_u(CommandLine line, boolean printColumns) throws Exception {
+    public static void option_u(CommandLine line, boolean printHeader) throws Exception {
        
-        OptionFunctions.option_s_and_u("u", SearchBy.UPLOAD, 400, line, printColumns); 
+        OptionFunctions.option_s_and_u("u", SearchBy.UPLOAD, 400, line, printHeader); 
     }
     
-    private static void option_s_and_u(String option, SearchBy searchBy, int limit, CommandLine line, boolean printColumns) throws Exception {
+    private static void option_s_and_u(String option, SearchBy searchBy, int limit, CommandLine line, boolean printHeader) throws Exception {
 
         Set<String> dbTypeNames = new HashSet<>(Arrays.stream(DbType.values()).map(v -> v.name()).collect(Collectors.toList()));
         Set<String> searchModeNames = new HashSet<>(Arrays.stream(SearchMode.values()).map(v -> v.name()).collect(Collectors.toList()));
@@ -275,13 +275,13 @@ public class OptionFunctions {
             SearchResults results = scopSearch.search(criteria);
             List<SearchRecord> records = results.getRecords();
       
-            // column headers 
-            if (printColumns) {
-                String columns = "n,db_id_1,db_id_2,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
+            // print header
+            if (printHeader) {
+                String header = "n,db_id_1,db_id_2,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
                 if (searchBy == SearchBy.UPLOAD) {
-                    columns = "n,file_name,db_id,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
+                    header = "n,file_name,db_id,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
                 }
-                System.out.println(columns);
+                System.out.println(header);
             }   
 
             for (SearchRecord baseRecord : records) {
@@ -330,13 +330,13 @@ public class OptionFunctions {
             SearchResults results = cathSearch.search(criteria);
             List<SearchRecord> records = results.getRecords();
 
-            // column headers 
-            if (printColumns) {
-                String columns = "n,db_id_1,db_id_2,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
+            // print headers 
+            if (printHeader) {
+                String header = "n,db_id_1,db_id_2,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
                 if (searchBy == SearchBy.UPLOAD) {
-                    columns = "n,file_name,db_id,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
+                    header = "n,file_name,db_id,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
                 }
-                System.out.println(columns);
+                System.out.println(header);
             }   
 
             for (SearchRecord baseRecord : records) {
@@ -381,13 +381,13 @@ public class OptionFunctions {
             SearchResults results = ecodSearch.search(criteria);
             List<SearchRecord> records = results.getRecords();
 
-            // column headers 
-            if (printColumns) {
-                String columns = "n,db_id_1,db_id_2,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
+            // print headers 
+            if (printHeader) {
+                String header = "n,db_id_1,db_id_2,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
                 if (searchBy == SearchBy.UPLOAD) {
-                    columns = "n,file_name,db_id,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
+                    header = "n,file_name,db_id,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
                 }
-                System.out.println(columns);
+                System.out.println(header);
             }   
         
             for (SearchRecord baseRecord : records) {
@@ -429,13 +429,13 @@ public class OptionFunctions {
             SearchResults results = chainSearch.search(criteria);
             List<SearchRecord> records = results.getRecords();
 
-            // column headers 
-            if (printColumns) {
-                String columns = "n,db_id_1,db_id_2,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
+            // print headers 
+            if (printHeader) {
+                String header = "n,db_id_1,db_id_2,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
                 if (searchBy == SearchBy.UPLOAD) {
-                    columns = "n,file_name,db_id,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
+                    header = "n,file_name,db_id,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
                 }
-                System.out.println(columns);
+                System.out.println(header);
             }   
         
             for (SearchRecord baseRecord : records) {
@@ -477,13 +477,13 @@ public class OptionFunctions {
             SearchResults results = dirSearch.search(criteria);
             List<SearchRecord> records = results.getRecords();
 
-            // column headers 
-            if (printColumns) {
-                String columns = "n,db_id_1,db_id_2,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
+            // print headers 
+            if (printHeader) {
+                String header = "n,db_id_1,db_id_2,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
                 if (searchBy == SearchBy.UPLOAD) {
-                    columns = "n,file_name,db_id,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
+                    header = "n,file_name,db_id,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
                 }
-                System.out.println(columns);
+                System.out.println(header);
             }   
         
             for (SearchRecord baseRecord : records) {

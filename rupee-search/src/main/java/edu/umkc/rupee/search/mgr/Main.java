@@ -74,8 +74,8 @@ public class Main {
         // allow for debug 
         // System.console().readLine("Press Enter Before Continuing> ");
         
-        // columns or not
-        boolean printColumns = true; 
+        // header or not
+        boolean printHeader = true; 
         
         try {
             if (line.hasOption("i")) {
@@ -83,9 +83,9 @@ public class Main {
             } else if (line.hasOption("h")) {
                 OptionFunctions.option_h(line);
             } else if (line.hasOption("s")) {
-                OptionFunctions.option_s(line, printColumns);
+                OptionFunctions.option_s(line, printHeader);
             } else if (line.hasOption("u")) {
-                OptionFunctions.option_u(line, printColumns);
+                OptionFunctions.option_u(line, printHeader);
             } else if (line.hasOption("c")) {
                 option_c(line);
             } else if (line.hasOption("d")) {
