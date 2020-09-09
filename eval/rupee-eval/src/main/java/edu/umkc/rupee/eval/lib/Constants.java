@@ -10,7 +10,7 @@ public class Constants {
     public final static String DB_PASSWORD = "ayoub";
    
     public final static String HOME_DIR = "/home/ayoub/";
-    public final static String RESULTS_DIR = HOME_DIR + "git/rupee/results/";
+    public final static String RESULTS_DIR = HOME_DIR + "git/rupee/eval/results/";
     public final static String DATA_DIR = HOME_DIR + "git/rupee/data/";
 
     public final static String DOWNLOAD_PATH = HOME_DIR + "Downloads/";
