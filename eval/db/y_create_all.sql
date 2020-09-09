@@ -1,24 +1,24 @@
 
 -- tables
-alignment_scores.sql
-benchmark.sql
-cathedral_result.sql
-mtm_result.sql
-response_time.sql
-rupee_result.sql
-ssap_result.sql
-ssm_result.sql
-ssm_result_staged.sql
-vast_request.sql
-vast_result.sql
-vast_result_staged.sql
+\i alignment_scores.sql
+\i benchmark.sql
+\i cathedral_result.sql
+\i mtm_result.sql
+\i response_time.sql
+\i rupee_result.sql
+\i ssap_result.sql
+\i ssm_result.sql
+\i ssm_result_staged.sql
+\i vast_request.sql
+\i vast_result.sql
+\i vast_result_staged.sql
 
 -- functions
-get_alignment_scores.sql
-get_benchmark_split.sql
-get_cathedral_results.sql
-get_mtm_results.sql
-get_rupee_results.sql
-get_ssm_results.sql
-get_vast_results.sql
-insert_alignment_scores.sql
+\i get_alignment_scores.sql
+\i get_benchmark_split.sql
+\i get_cathedral_results.sql
+\i get_mtm_results.sql
+\i get_rupee_results.sql
+\i get_ssm_results.sql
+\i get_vast_results.sql
+\i insert_alignment_scores.sql
