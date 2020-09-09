@@ -20,7 +20,7 @@ public class SSMUploadDriver extends DriverBase {
 
     private final int SUBMIT_TIMEOUT = 60;
 
-    public String doSearch(String dbId) throws Exception {
+    private String doSearch(String dbId) throws Exception {
         
         driver.get("http://www.ebi.ac.uk/msd-srv/ssm/");
 
@@ -48,6 +48,9 @@ public class SSMUploadDriver extends DriverBase {
 
         // click submit
         driver.findElement(By.name("btn_submit_query")).click();
+
+        long start = 0, stop = 0;
+        start = System.currentTimeMillis();
         
         // wait for submit response
         for (int second = 0;; second++) {
@@ -66,18 +69,24 @@ public class SSMUploadDriver extends DriverBase {
             Thread.sleep(5000);
         }
 
+        stop = System.currentTimeMillis();
+        System.out.println(dbId + "," + (stop - start));
+
         // download the data
         driver.findElement(By.name("download_rlist")).click();
 
         // give it some time to load
         Thread.sleep(30000);
-  
-        return driver.getPageSource(); 
+ 
+        String source = driver.getPageSource();
+        source = "Time = " + (stop - start) + "\n" + source;
+
+        return source;
     }
 
-    public void doSearchBatch() {
+    public void doSearchBatch(String benchmark) {
 
-        List<String> dbIds = Benchmarks.get("casp_d250");
+        List<String> dbIds = Benchmarks.get(benchmark);
 
         for (int i = 0; i < dbIds.size(); i++) {
             

@@ -22,7 +22,7 @@ public class CathedralDriver extends DriverBase {
     private final String SCAN_XPATH = "//*[@id=\"content\"]/div[1]/div/div/table/tbody/tr/td[5]/div/a[contains(text(),'Submit Structure')]";
     //private final String VIEW_XPATH = "//*[@id=\"content\"]/div[1]/div/table/tbody/tr[last()]/td[5]/a[text()='View']";
 
-    public String doSearch(String dbId) throws Exception {
+    private String doSearch(String dbId) throws Exception {
 
         driver.manage().deleteAllCookies();
        
@@ -82,9 +82,9 @@ public class CathedralDriver extends DriverBase {
         return source;
     }
 
-    public void doSearchBatch() {
+    public void doSearchBatch(String benchmark) {
 
-        List<String> dbIds = Benchmarks.get("casp_d250");
+        List<String> dbIds = Benchmarks.get(benchmark);
 
         for (int i = 0; i < dbIds.size(); i++) {
             
