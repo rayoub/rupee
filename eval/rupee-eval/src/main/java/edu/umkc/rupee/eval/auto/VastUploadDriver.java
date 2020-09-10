@@ -11,34 +11,26 @@ import edu.umkc.rupee.eval.lib.Constants;
 
 public class VastUploadDriver extends VastDriver {
 
-    public void doSearchBatch() {
+    public void doSearchBatch(String benchmark) {
 
-        int EARLY_EXIT = 5;
+        List<String> dbIds = Benchmarks.get(benchmark);
 
-        List<String> dbIds = Benchmarks.get("casp_d250");
-
-        int count = 0;
         for (int i = 0; i < dbIds.size(); i++) {
             
             String dbId = dbIds.get(i);
-            String fileName = Constants.VAST_PATH_RMSD + dbId + ".txt";
+            String fileName = Constants.VAST_PATH_VAST_SCORE + dbId + ".txt";
 
             try {
-
+                
+                // just check one file
                 if (Files.notExists(Paths.get(fileName))) {
                     
-                    count++;
                     doSearchUpload(dbId);
                 }
             } 
             catch (Exception e) { 
 
                 Logger.getLogger(VastUploadDriver.class.getName()).log(Level.SEVERE, dbId, e);
-            }
-            
-            // early exit
-            if (count >= EARLY_EXIT) {
-                break;
             }
         }
     }
