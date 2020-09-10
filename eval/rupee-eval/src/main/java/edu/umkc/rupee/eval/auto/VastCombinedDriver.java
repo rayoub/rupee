@@ -14,16 +14,10 @@ import edu.umkc.rupee.eval.lib.Constants;
 
 public class VastCombinedDriver extends VastDriver {
 
-    private int splitCount;
-    private int splitIndex;
-
-    public VastCombinedDriver(int splitCount, int splitIndex) {
-        
-        this.splitCount = splitCount;
-        this.splitIndex = splitIndex;
-    }
-
     public VastResults doSearch(String dbId) {
+
+        long start = 0, stop = 0;
+        start = System.currentTimeMillis();
 
         String link = "";
         VastResults results = new VastResults();
@@ -41,7 +35,7 @@ public class VastCombinedDriver extends VastDriver {
             System.out.println("... got the results link");
 
             // write the request to a file in case we need to retry
-            appendRequest(dbId, link); 
+            //appendRequest(dbId, link); 
 
             // wait 1 hour
             for (int i = 0; i < 12; i++) {
@@ -55,8 +49,12 @@ public class VastCombinedDriver extends VastDriver {
                     break;
                 }
 
-                if (!results.ResultsRmsd.isEmpty()) {
+                if (!results.isEmpty()) {
 
+                    stop = System.currentTimeMillis();
+                    results.ResultsVastScore = "Time = " + (stop - start) + "\n" + results.ResultsVastScore;
+                    results.ResultsVastScore = "Time = " + (stop - start) + "\n" + results.ResultsVastScore;
+                    
                     // jump to return results
                     break;
                 }
@@ -73,7 +71,7 @@ public class VastCombinedDriver extends VastDriver {
                 }
             }
 
-            if (results.ResultsRmsd.isEmpty()) {
+            if (results.isEmpty()) {
                 System.out.println("no results for db_id: " + dbId);
             }
         }
@@ -84,30 +82,29 @@ public class VastCombinedDriver extends VastDriver {
         return results;
     }
 
-    public void doSearchBatch() {
+    public void doSearchBatch(String benchmark) {
 
-        int EARLY_EXIT = 100;
-
-        List<String> dbIds = Benchmarks.getSplit("casp_d250", this.splitCount, this.splitIndex);
+        List<String> dbIds = Benchmarks.get(benchmark);
 
         int count = 0;
         for (int i = 0; i < dbIds.size(); i++) {
-            
+
+            System.out.println("Processing " + dbIds.get(0));
+
             String dbId = dbIds.get(i);
             String fileNameRmsd = Constants.VAST_PATH_RMSD + dbId + ".txt";
             String fileNameVastScore = Constants.VAST_PATH_VAST_SCORE + dbId + ".txt";
 
             try {
 
-                // for now lets not redo the rmsd work again
+                // just check if one of the files is missing
                 if (Files.notExists(Paths.get(fileNameVastScore))) {
             
                     count++;
-                    System.out.println(count + ":Processing request for " + dbId);
 
                     VastResults results = doSearch(dbId);
 
-                    if (!results.ResultsRmsd.isEmpty()) {
+                    if (!results.isEmpty()) {
                         
                         FileOutputStream outputStream = new FileOutputStream(fileNameRmsd);
                         OutputStreamWriter outputWriter = new OutputStreamWriter(outputStream);
@@ -115,12 +112,9 @@ public class VastCombinedDriver extends VastDriver {
                         try (BufferedWriter bufferedWriter = new BufferedWriter(outputWriter);) {
                                bufferedWriter.write(results.ResultsRmsd);
                         }
-                    }
-
-                    if (!results.ResultsVastScore.isEmpty()) {
                         
-                        FileOutputStream outputStream = new FileOutputStream(fileNameVastScore);
-                        OutputStreamWriter outputWriter = new OutputStreamWriter(outputStream);
+                        outputStream = new FileOutputStream(fileNameVastScore);
+                        outputWriter = new OutputStreamWriter(outputStream);
 
                         try (BufferedWriter bufferedWriter = new BufferedWriter(outputWriter);) {
                                bufferedWriter.write(results.ResultsVastScore);
@@ -133,11 +127,6 @@ public class VastCombinedDriver extends VastDriver {
             catch (Exception e) { 
 
                 Logger.getLogger(VastCombinedDriver.class.getName()).log(Level.SEVERE, dbId, e);
-            }
-
-            // early exit
-            if (count >= EARLY_EXIT) {
-                break;
             }
         }
     }

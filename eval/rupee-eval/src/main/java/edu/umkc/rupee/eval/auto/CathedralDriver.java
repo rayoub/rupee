@@ -24,6 +24,8 @@ public class CathedralDriver extends DriverBase {
 
     private String doSearch(String dbId) throws Exception {
 
+        System.out.println("Processing " + dbId);
+
         driver.manage().deleteAllCookies();
        
         driver.get("http://cathdb.info/search/by_structure");

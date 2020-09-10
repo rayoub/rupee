@@ -1,5 +1,8 @@
 package edu.umkc.rupee.eval.auto;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.Writer;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -20,6 +23,8 @@ public class mTMUploadDriver extends DriverBase {
     private final int SEARCH_TIMEOUT = 840;
 
     public void doSearch(String dbId) throws Exception {
+
+        System.out.println("Processing " + dbId);
         
         driver.get("http://yanglab.nankai.edu.cn/mTM-align/");
 
@@ -33,6 +38,9 @@ public class mTMUploadDriver extends DriverBase {
         
         driver.findElement(By.id("submit")).click();
 
+        long start = 0, stop = 0;
+        start = System.currentTimeMillis();
+
         // wait for submit response
         for (int second = 0;; second++) {
             
@@ -43,9 +51,10 @@ public class mTMUploadDriver extends DriverBase {
             try {
                 if (isElementPresent(By.cssSelector("a[href*='output']"))) break;
             } catch (Exception e) { }
+
             Thread.sleep(1000);
         }
-       
+
         // get the job id
         WebElement element = driver.findElement(By.cssSelector("a[href*='output']"));
         String[] parts = element.getAttribute("href").split("/");
@@ -60,18 +69,21 @@ public class mTMUploadDriver extends DriverBase {
         // now wait for the search results 
         for (int second = 0;; second++) {
             
-            if (second >= SEARCH_TIMEOUT) fail("search timed out for " + dbId);
-
-                try {
-                    if (isElementPresent(By.cssSelector("a[href='query.csv']")))
-                        break;
-                } catch (Exception e) {
+            if (second >= SEARCH_TIMEOUT) {
+                fail("search timed out for " + dbId);
             }
+
+            try {
+                if (isElementPresent(By.cssSelector("a[href='query.csv']"))) break;
+            } catch (Exception e) { }
+            
             Thread.sleep(1000);
         }
 
+        stop = System.currentTimeMillis();
+
         // give it sometime to download
-        Thread.sleep(5000);
+        Thread.sleep(10000);
 
         // delete if already present
         Path from = Paths.get(Constants.DOWNLOAD_PATH + "query.csv");
@@ -86,6 +98,11 @@ public class mTMUploadDriver extends DriverBase {
         // give it a good name
         Path to = Paths.get(Constants.MTM_PATH + dbId + ".txt");
         Files.move(from, to, StandardCopyOption.REPLACE_EXISTING);
+
+        // appending timing
+        Writer output = new BufferedWriter(new FileWriter(to.toString(), true));
+        output.append("\nTime = " + (stop - start));
+        output.close();
     }
     
     public void doSearchBatch(String benchmark) {

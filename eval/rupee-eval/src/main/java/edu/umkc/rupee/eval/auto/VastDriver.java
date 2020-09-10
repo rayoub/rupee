@@ -75,7 +75,7 @@ public class VastDriver extends DriverBase {
                     driver.findElement(By.linkText("entire chain")).click();
                 }
                 catch (Exception e) {
-                    System.out.println("REMOVE FROM vast_request TABLE: " + dbId);
+                    //System.out.println("REMOVE FROM vast_request TABLE: " + dbId);
                     throw new InterruptedException();
                 }
 

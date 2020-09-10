@@ -22,6 +22,8 @@ public class SSMUploadDriver extends DriverBase {
 
     private String doSearch(String dbId) throws Exception {
         
+        System.out.println("Processing " + dbId);
+
         driver.get("http://www.ebi.ac.uk/msd-srv/ssm/");
 
         // initial form fill
