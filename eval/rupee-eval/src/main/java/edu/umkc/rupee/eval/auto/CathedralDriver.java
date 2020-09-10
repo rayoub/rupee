@@ -11,6 +11,7 @@ import java.util.logging.Logger;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
 
 import edu.umkc.rupee.eval.lib.Benchmarks;
 import edu.umkc.rupee.eval.lib.Constants;
@@ -37,10 +38,6 @@ public class CathedralDriver extends DriverBase {
         driver.findElement(By.xpath(SUBMIT_XPATH)).click();
         
         Thread.sleep(5000);
-       
-        // scroll down 
-        //Actions actions = new Actions(driver);
-        //actions.moveToElement(driver.findElement(By.xpath(SCAN_XPATH))).perform();
 
         // click submit structure for scan
         driver.findElement(By.xpath(SCAN_XPATH)).sendKeys(Keys.RETURN);
@@ -77,7 +74,12 @@ public class CathedralDriver extends DriverBase {
         driver.findElement(By.linkText("View")).click();
 
         Thread.sleep(20000);
+       
+        // scroll down to results
+        Actions actions = new Actions(driver);
+        actions.moveToElement(driver.findElement(By.id("results-table"))).perform();
 
+        // get results and prepend timing
         String source = driver.findElement(By.id("results-table")).getText();
         source = "Time = " + (stop - start) + "\n" + source;
 
