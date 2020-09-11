@@ -1,0 +1,11 @@
+No., subject, TM-score, RMSD, Sequence Identity, Subject length, Aligned length, Description
+1, 6j0nZ, 0.5804, 3.49, 0.598, 223, 117, Cryo-EM Structure of an Extracellular Contractile Injection System; baseplate in extended state; refined in C6 symmetry  
+2, 6j0nY, 0.5804, 3.49, 0.598, 223, 117, Cryo-EM Structure of an Extracellular Contractile Injection System; baseplate in extended state; refined in C6 symmetry  
+3, 6j0nDA, 0.5804, 3.49, 0.598, 223, 117, Cryo-EM Structure of an Extracellular Contractile Injection System; baseplate in extended state; refined in C6 symmetry  
+4, 6j0nCA, 0.5804, 3.49, 0.598, 223, 117, Cryo-EM Structure of an Extracellular Contractile Injection System; baseplate in extended state; refined in C6 symmetry  
+5, 6j0nBA, 0.5804, 3.49, 0.598, 223, 117, Cryo-EM Structure of an Extracellular Contractile Injection System; baseplate in extended state; refined in C6 symmetry  
+6, 6j0nAA, 0.5804, 3.49, 0.598, 223, 117, Cryo-EM Structure of an Extracellular Contractile Injection System; baseplate in extended state; refined in C6 symmetry  
+7, 6rbkA, 0.5774, 3.42, 0.863, 223, 117, CRYO-EM STRUCTURE OF THE ANTI-FEEDING PROPHAGE (AFP) BASEPLATE IN EXTENDED STATE; 3-FOLD SYMMETRISED 
+8, 6rbkB, 0.5700, 3.53, 0.923, 224, 117, CRYO-EM STRUCTURE OF THE ANTI-FEEDING PROPHAGE (AFP) BASEPLATE IN EXTENDED STATE; 3-FOLD SYMMETRISED 
+9, 6raoG, 0.5699, 3.53, 0.932, 224, 117, CRYO-EM STRUCTURE OF THE ANTI-FEEDING PROPHAGE (AFP) BASEPLATE; 6-FOLD SYMMETRISED 
+10, 5iv5R, 0.4735, 4.09, 0.093, 162, 108, 
