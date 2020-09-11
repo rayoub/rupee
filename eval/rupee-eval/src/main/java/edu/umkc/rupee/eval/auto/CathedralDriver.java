@@ -11,7 +11,6 @@ import java.util.logging.Logger;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.interactions.Actions;
 
 import edu.umkc.rupee.eval.lib.Benchmarks;
 import edu.umkc.rupee.eval.lib.Constants;
@@ -73,11 +72,7 @@ public class CathedralDriver extends DriverBase {
         // click
         driver.findElement(By.linkText("View")).click();
 
-        Thread.sleep(20000);
-       
-        // scroll down to results
-        Actions actions = new Actions(driver);
-        actions.moveToElement(driver.findElement(By.id("results-table"))).perform();
+        Thread.sleep(60000);
 
         // get results and prepend timing
         String source = driver.findElement(By.id("results-table")).getText();
