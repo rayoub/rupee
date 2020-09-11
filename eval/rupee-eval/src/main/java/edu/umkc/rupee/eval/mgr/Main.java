@@ -119,9 +119,21 @@ public class Main {
             } else if (line.hasOption("c")) {
                 option_c(line);
             } else if (line.hasOption("s")) {
+                
+                long start = 0, stop = 0;
+                start = System.currentTimeMillis();
                 OptionFunctions.option_s(line, printHeader);
+                stop = System.currentTimeMillis();
+                System.out.println("Time = " + (stop -start));
+
             } else if (line.hasOption("u")) {
+
+                long start = 0, stop = 0;
+                start = System.currentTimeMillis();
                 OptionFunctions.option_u(line, printHeader);
+                stop = System.currentTimeMillis();
+                System.out.println("Time = " + (stop -start));
+
             } else if (line.hasOption("d")) {
                 option_d(line);
             } else if (line.hasOption("?")) {
@@ -308,10 +320,10 @@ public class Main {
 
         /*
         // web site automation
-        CathedralDriver driver = new CathedralDriver();
+        mTMUploadDriver driver = new mTMUploadDriver();
 
         driver.setUp();
-        driver.doSearchBatch();
+        driver.doSearchBatch("casp_d250");
         driver.tearDown();
         */
 
