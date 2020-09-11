@@ -1,0 +1,15 @@
+<html><head></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;"> PDBe Fold v2.59. (src3) 14 Apr 2014 result file.
+
+                   RESULT SUMMARY
+
+   ##      Q-score      P-score     Z-score   RMSD    Nalgn Nsse Ngaps Seq-%     Nmd Nres-Q Nsse-Q Nres-T Nsse-T Query Target
+    1     0.01088          -0    0.003458     6.585    56    5    8     0.03571    0    293     12    169     12    T0975TS224-D1.pdb:A  SCOP d2h0ga1
+    2     0.01061          -0    0.006891     7.400    61    5    7     0.04918    0    293     12    169     12    T0975TS224-D1.pdb:A  SCOP d2h0ha1
+    3    0.009703          -0    0.004148     6.904    55    5    7     0.03636    0    293     12    169     12    T0975TS224-D1.pdb:A  SCOP d1v57a1
+    4    0.009703          -0    0.004148     6.904    55    5    7     0.03636    0    293     12    169     12    T0975TS224-D1.pdb:A  SCOP d1v58a1
+    5    0.006691          -0    0.004946     7.320    48    5    7      0.0625    0    293     12    169     12    T0975TS224-D1.pdb:A  SCOP d2h0ha1
+    6    0.006691          -0    0.004946     7.320    48    5    7      0.0625    0    293     12    169     12    T0975TS224-D1.pdb:A  SCOP d1v58a1
+    7    0.006691          -0    0.004946     7.320    48    5    7      0.0625    0    293     12    169     12    T0975TS224-D1.pdb:A  SCOP d1v57a1
+    8    0.006162          -0    0.006357     6.748    43    5    7     0.06977    0    293     12    169     12    T0975TS224-D1.pdb:A  SCOP d2h0ga1
+    9     0.00144          -0     0.00411     9.755    25    5    3           0    0    293     12    128     10    T0975TS224-D1.pdb:A  SCOP d1zuoa1
+</pre></body></html>

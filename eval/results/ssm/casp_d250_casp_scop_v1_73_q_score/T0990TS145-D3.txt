@@ -1,0 +1,24 @@
+<html><head></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;"> PDBe Fold v2.59. (src3) 14 Apr 2014 result file.
+
+                   RESULT SUMMARY
+
+   ##      Q-score      P-score     Z-score   RMSD    Nalgn Nsse Ngaps Seq-%     Nmd Nres-Q Nsse-Q Nres-T Nsse-T Query Target
+    1     0.03424          -0      0.6866     3.897    56    4    8        0.25    0    213     13    160     13    T0990TS145-D3.pdb:A  SCOP d2fzca2
+    2     0.02952          -0      0.2618     4.400    57    4   10     0.01754    0    213     13    164     13    T0990TS145-D3.pdb:A  SCOP d1yeya1
+    3     0.01279          -0       1.383     4.820    40    4    4           0    0    213     13    164     13    T0990TS145-D3.pdb:A  SCOP d1yeya1
+    4      0.0108          -0    0.001589     8.398    50    4    6        0.02    0    213     13    123      7    T0990TS145-D3.pdb:A  SCOP d1kyqa2
+    5    0.009107          -0      0.3081     4.738    38    4    7     0.02632    0    213     13    213     12    T0990TS145-D3.pdb:A  SCOP d1eb6a_
+    6    0.008066          -0      0.1761     6.028    30    4    4     0.03333    0    213     13    104     11    T0990TS145-D3.pdb:A  SCOP d1dl5a2
+    7     0.00775          -0       1.065     3.903    27    4    7     0.07407    0    213     13    164     13    T0990TS145-D3.pdb:A  SCOP d1yeya1
+    8    0.007663          -0     0.01988     7.920    40    4    4       0.075    0    213     13    123      7    T0990TS145-D3.pdb:A  SCOP d1kyqa2
+    9    0.007104          -0      0.7235     5.406    37    4    5     0.02703    0    213     13    213     13    T0990TS145-D3.pdb:A  SCOP d1dxwa_
+   10    0.006765          -0     0.07955     5.898    27    4    4     0.03704    0    213     13    104     11    T0990TS145-D3.pdb:A  SCOP d1dl5a2
+   11    0.004018          -0      0.8759     3.278    20    5    2        0.05    0    213     13    213     15    T0990TS145-D3.pdb:A  SCOP d1r53a_
+   12    0.003228          -0     0.02667     7.583    25    4    4        0.08    0    213     13    123      7    T0990TS145-D3.pdb:A  SCOP d1kyqa2
+   13    0.002815          -0     0.03847     3.719    18    5    2     0.05556    0    213     13    213     15    T0990TS145-D3.pdb:A  SCOP d1ezma_
+   14     0.00253          -0      0.4243     2.523    14    4    3      0.2143    0    213     13    213     12    T0990TS145-D3.pdb:A  SCOP d1eb6a_
+   15    0.002207          -0      0.1455     2.936    14    4    3           0    0    213     13    213     12    T0990TS145-D3.pdb:A  SCOP d1eb6a_
+   16    0.001785          -0     0.01869     7.057    23    4    5           0    0    213     13    213     13    T0990TS145-D3.pdb:A  SCOP d1ue0a_
+   17     0.00111          -0       1.948     2.340     9    4    1           0    0    213     13    213      9    T0990TS145-D3.pdb:A  SCOP d1olqa_
+   18   0.0003316          -0       1.687     0.756     4    4    1           0    0    213     13    213     11    T0990TS145-D3.pdb:A  SCOP d1bt7a_
+</pre></body></html>

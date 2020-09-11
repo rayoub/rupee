@@ -1,0 +1,21 @@
+<html><head></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;"> PDBe Fold v2.59. (src3) 14 Apr 2014 result file.
+
+                   RESULT SUMMARY
+
+   ##      Q-score      P-score     Z-score   RMSD    Nalgn Nsse Ngaps Seq-%     Nmd Nres-Q Nsse-Q Nres-T Nsse-T Query Target
+    1     0.01606          -0      0.3652     5.579    57    4    8      0.1404    0    213     13    213     13    T0990TS043-D3.pdb:A  SCOP d1ue0a_
+    2     0.01412          -0     0.00749     6.874    58    4   10     0.01724    0    213     13    179     13    T0990TS043-D3.pdb:A  SCOP d2hs4a3
+    3      0.0136          -0    0.006369     7.170    59    4    9     0.01695    0    213     13    179     13    T0990TS043-D3.pdb:A  SCOP d2hs3a3
+    4    0.005911          -0    0.002512     8.509    44    4    6     0.09091    0    213     13    170     13    T0990TS043-D3.pdb:A  SCOP d1e3ja2
+    5    0.005609          -0     0.02115     4.327    28    4    4     0.07143    0    213     13    213      8    T0990TS043-D3.pdb:A  SCOP d1m4ra_
+    6    0.005534          -0     0.01988     3.661    25    4    4           0    0    213     13    213      8    T0990TS043-D3.pdb:A  SCOP d1m4ra_
+    7    0.005389          -0      0.3024     5.576    33    4    3           0    0    213     13    213     10    T0990TS043-D3.pdb:A  SCOP d1u11a_
+    8    0.005389          -0      0.3024     5.576    33    4    3           0    0    213     13    213     10    T0990TS043-D3.pdb:A  SCOP d1u11a_
+    9    0.003395          -0      0.0282     7.604    31    4    5     0.09677    0    213     13    179     13    T0990TS043-D3.pdb:A  SCOP d2hs3a3
+   10     0.00285          -0    0.004927     7.788    29    4    4     0.03448    0    213     13    179     13    T0990TS043-D3.pdb:A  SCOP d2hs4a3
+   11    0.002632          -0      0.3467     3.927    18    4    4           0    0    213     13    213     13    T0990TS043-D3.pdb:A  SCOP d1dxwa_
+   12    0.002293          -0      0.2968     4.001    17    4    2      0.1176    0    213     13    213     13    T0990TS043-D3.pdb:A  SCOP d1keza_
+   13   0.0004854          -0      0.2811     3.320     7    4    1      0.1429    0    213     13    213     10    T0990TS043-D3.pdb:A  SCOP d1g12a_
+   14   0.0004854          -0      0.2811     3.320     7    5    1      0.1429    0    213     13    213     10    T0990TS043-D3.pdb:A  SCOP d1ge7a_
+   15   0.0002433          -0      0.5475     2.011     4    4    0           0    0    213     13    213     10    T0990TS043-D3.pdb:A  SCOP d1g12a_
+</pre></body></html>

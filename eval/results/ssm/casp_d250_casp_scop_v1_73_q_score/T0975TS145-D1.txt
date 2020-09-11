@@ -1,0 +1,8 @@
+<html><head></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;"> PDBe Fold v2.59. (src3) 14 Apr 2014 result file.
+
+                   RESULT SUMMARY
+
+   ##      Q-score      P-score     Z-score   RMSD    Nalgn Nsse Ngaps Seq-%     Nmd Nres-Q Nsse-Q Nres-T Nsse-T Query Target
+    1     0.01157          -0   3.624e-05     8.126    91    8   11      0.0989    0    293     18    293     15    T0975TS145-D1.pdb:A  SCOP d1avqa_
+    2     0.01155          -0    2.48e-05     7.420    84    8   14      0.1429    0    293     18    293     15    T0975TS145-D1.pdb:A  SCOP d1avqa_
+</pre></body></html>
