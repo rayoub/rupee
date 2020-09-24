@@ -97,7 +97,6 @@ public class AlignResults
         alignCathedralResults(benchmark, version, dbType, maxN); 
     }
    
-    /* 
     public static void alignRupeeVsSsm() {
         
         System.out.println("Align Rupee vs. SSM");
@@ -115,9 +114,8 @@ public class AlignResults
         alignRupeeResults(benchmark, version, dbType, maxN, "top_aligned", "full_length");
         alignRupeeResults(benchmark, version, dbType, maxN, "all_aligned", "full_length");
         
-        //alignSsmResults(benchmark, version, dbType, maxN, "q_score"); 
+        alignSsmResults(benchmark, version, dbType, maxN, "q_score"); 
     }
-    */
    
     public static void alignRupeeVsVast() {
 
