@@ -3,7 +3,6 @@ TRUNCATE TABLE vast_result_staged;
 TRUNCATE TABLE vast_result;
 
 COPY vast_result_staged (version, n, db_id_1, db_id_2, vast_score, vast_rmsd, search_type) FROM '/home/ayoub/git/rupee/eval/results/vast/vast_results_fl.txt' WITH (DELIMITER ',');
-COPY vast_result_staged (version, n, db_id_1, db_id_2, vast_score, vast_rmsd, search_type) FROM '/home/ayoub/git/rupee/eval/results/vast/vast_results_rmsd.txt' WITH (DELIMITER ',');
 
 INSERT INTO vast_result (version, n, db_id_1, db_id_2, vast_score, vast_rmsd, search_type)
 WITH results AS
