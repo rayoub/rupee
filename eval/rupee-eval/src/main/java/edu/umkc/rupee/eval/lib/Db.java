@@ -108,9 +108,10 @@ public class Db {
 
             updt.execute();
             updt.close();
+            conn.close();
         
         } catch (SQLException e) {
-            Logger.getLogger(Db.class.getName()).log(Level.WARNING, null, e);
+            Logger.getLogger(Db.class.getName()).log(Level.SEVERE, null, e);
         }
     }
 }

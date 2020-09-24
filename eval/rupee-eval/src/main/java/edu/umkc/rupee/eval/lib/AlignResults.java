@@ -21,7 +21,6 @@ import org.biojava.nbio.structure.io.LocalPDBDirectory.FetchBehavior;
 import org.biojava.nbio.structure.io.PDBFileReader;
 import org.postgresql.ds.PGSimpleDataSource;
 
-import edu.umkc.rupee.eval.defs.AlignmentType;
 import edu.umkc.rupee.search.defs.DbType;
 import edu.umkc.rupee.tm.Kabsch;
 import edu.umkc.rupee.tm.TmAlign;
@@ -35,70 +34,104 @@ public class AlignResults
     static {
         counter = new AtomicInteger();
     }
-   
-    public static void alignRupeeVsMtmResults() {
+
+    public static void alignRupeeVsRupee() {
+
+        System.out.println("Align Rupee vs. Rupee");
 
         String benchmark = "casp_d250";
-        String version = "casp_chain_v01_01_2020";
+        String version = "casp_scop_v2_07";
+        DbType dbType = DbType.SCOP;
+        int maxN = 100;
+
+        alignRupeeResults(benchmark, version, dbType, maxN, "fast", "full_length");
+        alignRupeeResults(benchmark, version, dbType, maxN, "top_aligned", "full_length");
+        alignRupeeResults(benchmark, version, dbType, maxN, "all_aligned", "full_length");
+        alignRupeeResults(benchmark, version, dbType, maxN, "optimal", "full_length");
+        
+        benchmark = "scop_d360";
+        version = "scop_v2_07";
+
+        alignRupeeResults(benchmark, version, dbType, maxN, "fast", "full_length");
+        alignRupeeResults(benchmark, version, dbType, maxN, "top_aligned", "full_length");
+        alignRupeeResults(benchmark, version, dbType, maxN, "all_aligned", "full_length");
+    }
+   
+    public static void alignRupeeVsMtm() {
+        
+        System.out.println("Align Rupee vs. mTM");
+
+        String benchmark = "casp_d250";
+        String version = "casp_chain_v08_28_2020";
         DbType dbType = DbType.CHAIN;
         int maxN = 100;
 
-        alignRupeeResults(benchmark, version, dbType, maxN, "all_aligned", "rmsd");
-        alignRupeeResults(benchmark, version, dbType, maxN, "top_aligned", "rmsd");
-        alignRupeeResults(benchmark, version, dbType, maxN, "all_aligned", "contained_in");
+        alignRupeeResults(benchmark, version, dbType, maxN, "fast", "contained_in");
         alignRupeeResults(benchmark, version, dbType, maxN, "top_aligned", "contained_in");
+        alignRupeeResults(benchmark, version, dbType, maxN, "all_aligned", "contained_in");
         
+        System.out.println("for mTM");
+
         alignMtmResults(benchmark, version, dbType, maxN); 
     }
 
-    public static void alignRupeeVsCathedralResults() {
+    public static void alignRupeeVsCathedral() {
+        
+        System.out.println("Align Rupee vs. CATHEDRAL");
 
         String benchmark = "casp_d250";
         String version = "casp_cath_v4_2_0";
         DbType dbType = DbType.CATH;
         int maxN = 100;
 
-        alignRupeeResults(benchmark, version, dbType, maxN, "all_aligned", "rmsd");
-        alignRupeeResults(benchmark, version, dbType, maxN, "top_aligned", "rmsd");
-        alignRupeeResults(benchmark, version, dbType, maxN, "all_aligned", "ssap_score");
+        alignRupeeResults(benchmark, version, dbType, maxN, "fast", "ssap_score");
         alignRupeeResults(benchmark, version, dbType, maxN, "top_aligned", "ssap_score");
-        alignRupeeResults(benchmark, version, dbType, maxN, "all_aligned", "full_length");
+        alignRupeeResults(benchmark, version, dbType, maxN, "all_aligned", "ssap_score");
+
+        alignRupeeResults(benchmark, version, dbType, maxN, "fast", "full_length");
         alignRupeeResults(benchmark, version, dbType, maxN, "top_aligned", "full_length");
+        alignRupeeResults(benchmark, version, dbType, maxN, "all_aligned", "full_length");
         
+        System.out.println("for CATHEDRAL");
+
         alignCathedralResults(benchmark, version, dbType, maxN); 
     }
-    
-    public static void alignRupeeVsSsmResults() {
+   
+    /* 
+    public static void alignRupeeVsSsm() {
+        
+        System.out.println("Align Rupee vs. SSM");
 
         String benchmark = "casp_d250";
         String version = "casp_scop_v1_73";
         DbType dbType = DbType.SCOP;
         int maxN = 100;
 
-        alignRupeeResults(benchmark, version, dbType, maxN, "all_aligned", "rmsd");
-        alignRupeeResults(benchmark, version, dbType, maxN, "top_aligned", "rmsd");
-        alignRupeeResults(benchmark, version, dbType, maxN, "all_aligned", "q_score");
+        alignRupeeResults(benchmark, version, dbType, maxN, "fast", "q_score");
         alignRupeeResults(benchmark, version, dbType, maxN, "top_aligned", "q_score");
-        alignRupeeResults(benchmark, version, dbType, maxN, "all_aligned", "full_length");
+        alignRupeeResults(benchmark, version, dbType, maxN, "all_aligned", "q_score");
+
+        alignRupeeResults(benchmark, version, dbType, maxN, "fast", "full_length");
         alignRupeeResults(benchmark, version, dbType, maxN, "top_aligned", "full_length");
+        alignRupeeResults(benchmark, version, dbType, maxN, "all_aligned", "full_length");
         
-        alignSsmResults(benchmark, version, dbType, maxN, "rmsd"); 
-        alignSsmResults(benchmark, version, dbType, maxN, "q_score"); 
+        //alignSsmResults(benchmark, version, dbType, maxN, "q_score"); 
     }
+    */
    
-    public static void alignRupeeVsVastResults() {
+    public static void alignRupeeVsVast() {
+
+        System.out.println("Align Rupee vs. VAST");
 
         String benchmark = "casp_d250";
-        String version = "casp_chain_v01_01_2020";
+        String version = "casp_chain_v08_28_2020";
         DbType dbType = DbType.CHAIN;
         int maxN = 100;
 
-        // RMSD alignments have already been done against mTM whole chains
-
-        alignRupeeResults(benchmark, version, dbType, maxN, "all_aligned", "full_length");
+        alignRupeeResults(benchmark, version, dbType, maxN, "fast", "full_length");
         alignRupeeResults(benchmark, version, dbType, maxN, "top_aligned", "full_length");
+        alignRupeeResults(benchmark, version, dbType, maxN, "all_aligned", "full_length");
 
-        alignVastResults(benchmark, version, dbType, maxN, "rmsd");
         alignVastResults(benchmark, version, dbType, maxN, "full_length");
     }
 
@@ -231,6 +264,7 @@ public class AlignResults
                         System.out.println(e.getMessage());
                     }
 
+                    /*
                     // perform CE alignments
                     try {
 
@@ -252,6 +286,7 @@ public class AlignResults
                         System.out.println("FATCAT RIGID error comparing: " + dbId + ", " + dbId2);
                         System.out.println(e.getMessage());
                     }
+                    */
 
                     scores.add(score);
                 }
