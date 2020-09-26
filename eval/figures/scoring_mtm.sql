@@ -20,7 +20,7 @@ BEGIN
         (
             SELECT * FROM get_rupee_results(p_benchmark, p_version, 'top_aligned', p_search_type, p_sort_by, p_limit)
         ),
-        rupee_fast_aligned AS
+        rupee_fast AS
         (
             SELECT * FROM get_rupee_results(p_benchmark, p_version, 'fast', p_search_type, p_sort_by, p_limit)
         ),
@@ -52,7 +52,7 @@ BEGIN
                 db_id_1,
                 tm_q_tm_score AS score
             FROM
-                rupee_fast_aligned
+                rupee_fast
             UNION ALL
             SELECT 
                 n,
