@@ -1,10 +1,10 @@
 
 DO $$
 
-    DECLARE p_benchmark VARCHAR := 'casp_mtm_d246'; 
-    DECLARE p_version VARCHAR := 'casp_chain_v01_01_2020'; 
-    DECLARE p_search_type VARCHAR := 'rmsd'; -- contained_in, rmsd 
-    DECLARE p_sort_by INTEGER := 5; -- 3 (tm_q_tm_score), 5 (tm_rmsd)
+    DECLARE p_benchmark VARCHAR := 'casp_d250'; 
+    DECLARE p_version VARCHAR := 'casp_chain_v08_28_2020'; 
+    DECLARE p_search_type VARCHAR := 'contained_in';
+    DECLARE p_sort_by INTEGER := 1; -- tm_q_tm_score 
     DECLARE p_limit INTEGER := 100; 
 
 BEGIN
@@ -20,9 +20,13 @@ BEGIN
         (
             SELECT * FROM get_rupee_results(p_benchmark, p_version, 'top_aligned', p_search_type, p_sort_by, p_limit)
         ),
+        rupee_fast_aligned AS
+        (
+            SELECT * FROM get_rupee_results(p_benchmark, p_version, 'fast', p_search_type, p_sort_by, p_limit)
+        ),
         mtm AS
         (   
-            SELECT * FROM get_mtm_results(p_benchmark, p_version, p_sort_by, p_limit) 
+            SELECT * FROM get_mtm_results(p_benchmark, p_version, p_limit) 
         ),
         ranked AS
         (
@@ -30,10 +34,7 @@ BEGIN
                 n,
                 'RUPEE All-Aligned' AS app,
                 db_id_1,
-                CASE 
-                    WHEN p_sort_by = 3 THEN tm_q_tm_score 
-                    WHEN p_sort_by = 5 THEN tm_rmsd
-                END AS score
+                tm_q_tm_score AS score
             FROM
                 rupee_all_aligned
             UNION ALL
@@ -41,21 +42,23 @@ BEGIN
                 n,
                 'RUPEE Top-Aligned' AS app,
                 db_id_1,
-                CASE 
-                    WHEN p_sort_by = 3 THEN tm_q_tm_score 
-                    WHEN p_sort_by = 5 THEN tm_rmsd
-                END AS score
+                tm_q_tm_score AS score
             FROM
                 rupee_top_aligned
             UNION ALL
             SELECT 
                 n,
+                'RUPEE Fast' AS app,
+                db_id_1,
+                tm_q_tm_score AS score
+            FROM
+                rupee_fast_aligned
+            UNION ALL
+            SELECT 
+                n,
                 'mTM' AS app,
                 db_id_1,
-                CASE 
-                    WHEN p_sort_by = 3 THEN tm_q_tm_score 
-                    WHEN p_sort_by = 5 THEN tm_rmsd
-                END AS score
+                tm_q_tm_score AS score
             FROM
                 mtm
         ),
