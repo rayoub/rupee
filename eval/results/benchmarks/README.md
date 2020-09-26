@@ -50,7 +50,7 @@ Subset of cath_d100 that includes all domains for which CATHEDRAL returns a resp
 Consist of all model 1 predictions submitted by 10 selected groups for all 25 single-range evaluation units for CASP13 free-modeling (FM) target domains.
 The selected groups consist of the top 10 groups ranked by the Assessors' formula (GDT TS + QCS) applied to free-modeling targets.  
 
-#### casp_ssm_d240
+#### casp_ssm_d217
 
 Subset of casp_d250 that includes all domains for which SSM, based on Q-score, returned 100 or more results.
 
