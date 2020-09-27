@@ -3,6 +3,8 @@ DO $$
 
     DECLARE p_benchmark VARCHAR := 'casp_d250'; -- scop_d360, casp_d250
     DECLARE p_version VARCHAR := 'casp_scop_v2_07'; -- scop_v2_07, casp_scop_v2_07
+    DECLARE p_search_type VARCHAR := 'full_length';
+    DECLARE p_sort_by INTEGER := 2; -- tm_avg_tm_score
     DECLARE p_limit INTEGER := 100; 
 
 BEGIN
@@ -10,13 +12,21 @@ BEGIN
     DROP TABLE IF EXISTS figure_table;
    
     CREATE TABLE figure_table AS 
-        WITH rupee_1 AS
+        WITH rupee_all_aligned AS
         (
-            SELECT * FROM get_rupee_results(p_benchmark, p_version, 'all_aligned', p_limit)
+            SELECT * FROM get_rupee_results(p_benchmark, p_version, 'all_aligned', p_search_type, p_sort_by, p_limit)
         ),
-        rupee_2 AS
+        rupee_top_aligned AS
         (
-            SELECT * FROM get_rupee_results(p_benchmark, p_version, 'top_aligned', p_limit)
+            SELECT * FROM get_rupee_results(p_benchmark, p_version, 'top_aligned', p_search_type, p_sort_by, p_limit)
+        ),
+        rupee_fast AS
+        (
+            SELECT * FROM get_rupee_results(p_benchmark, p_version, 'fast', p_search_type, p_sort_by, p_limit)
+        ),
+        rupee_optimal AS
+        (
+            SELECT * FROM get_rupee_results(p_benchmark, p_version, 'optimal', p_search_type, p_sort_by, p_limit)
         ),
         ranked AS
         (
@@ -26,7 +36,7 @@ BEGIN
                 db_id_1,
                 tm_avg_tm_score AS score
             FROM
-                rupee_1
+                rupee_all_aligned
             UNION ALL
             SELECT 
                 n,
@@ -34,7 +44,23 @@ BEGIN
                 db_id_1,
                 tm_avg_tm_score AS score
             FROM
-                rupee_2
+                rupee_top_aligned
+            UNION ALL
+            SELECT 
+                n,
+                'RUPEE Fast' AS app,
+                db_id_1,
+                tm_avg_tm_score AS score
+            FROM
+                rupee_fast
+            UNION ALL
+            SELECT 
+                n,
+                'Optimal' AS app,
+                db_id_1,
+                tm_avg_tm_score AS score
+            FROM
+                rupee_optimal
         ),
         accumulated AS
         (
