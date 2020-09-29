@@ -16,7 +16,7 @@ ORDER BY
 */
 
 SELECT
-    'casp_ssm_d217,' || r.db_id_1
+    'casp_ssm_d248,' || r.db_id_1
 FROM
     ssm_result r
 GROUP BY

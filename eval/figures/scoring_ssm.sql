@@ -1,11 +1,10 @@
 
 DO $$
 
-    -- TODO: recollect the data for ssm to get 20% low similarity and update this benchmark
-    DECLARE p_benchmark VARCHAR := 'casp_ssm_d217'; 
+    DECLARE p_benchmark VARCHAR := 'casp_ssm_d248'; 
     DECLARE p_version VARCHAR := 'casp_scop_v1_73'; 
-    DECLARE p_search_type VARCHAR := 'full_length'; -- full_length (with 2), q_score (with 3)
-    DECLARE p_sort_by INTEGER := 2; -- 2 (tm_avg_tm_score), 3 (tm_q_score)
+    DECLARE p_search_type VARCHAR := 'q_score'; -- full_length (with 2), q_score (with 3)
+    DECLARE p_sort_by INTEGER := 3; -- 2 (tm_avg_tm_score), 3 (tm_q_score)
     DECLARE p_limit INTEGER := 100; 
 
 BEGIN
