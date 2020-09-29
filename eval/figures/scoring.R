@@ -26,12 +26,12 @@ get_scoring_plot <- function(p_comp_to, p_title, p_ylab, p_file, p_levels, p_xli
 
         # scales        
         scale_color_manual(
-            values = c("#e41a1c","#377eb8","#4daf4a"),
-            labels = c("RUPEE All-Aligned","RUPEE Top-Aligned", p_comp_to)
+            values = c("#e41a1c","#377eb8","#984ea3","#4daf4a"),
+            labels = c("RUPEE All-Aligned","RUPEE Top-Aligned", "RUPEE Fast", p_comp_to)
         ) + 
         scale_linetype_manual(
-            values = c("solid","dashed","dotted"),
-            labels = c("RUPEE All-Aligned","RUPEE Top-Aligned", p_comp_to)
+            values = c("solid","dashed","dotdash","dotted"),
+            labels = c("RUPEE All-Aligned","RUPEE Top-Aligned", "RUPEE Fast", p_comp_to)
         ) + 
         scale_x_continuous(
             limits = p_xlimits,

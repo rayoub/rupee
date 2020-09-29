@@ -38,23 +38,23 @@ grid_arrange_shared_legend <-
 
 plot1 <- get_scoring_plot(
         'mTM-align',
-        'vs: mTM-align\nbenchmark: casp_mtm_d246\nRUPEE search type: Contained-In',
+        'vs: mTM-align\nbenchmark: casp_d250\nRUPEE search type: Contained-In',
         'TM-score (q)',
-        'scoring_mtm_ci.txt', # _rmsd, _ci
-        c('RUPEE All-Aligned','RUPEE Top-Aligned','mTM'), 
+        'scoring_mtm_ci.txt',
+        c('RUPEE All-Aligned','RUPEE Top-Aligned', 'RUPEE Fast','mTM'), 
         c(1, 100),
         c(1,10,20,30,40,50,60,70,80,90,100),
         c(0.10, 0.65)
 )
 plot2 <- get_scoring_plot(
         'mTM-align',
-        'vs: mTM-align\nbenchmark: casp_mtm_d246\nRUPEE search type: RMSD',
-        'RMSD',
-        'scoring_mtm_rmsd.txt', # _rmsd, _ci
-        c('RUPEE All-Aligned','RUPEE Top-Aligned','mTM'), 
-        c(1, 10),
-        c(2,4,6,8,10),
-        c(0, 5)
+        'vs: mTM-align\nbenchmark: casp_d250\nRUPEE search type: Contained-In',
+        'TM-score (q)',
+        'scoring_mtm_ci.txt',
+        c('RUPEE All-Aligned','RUPEE Top-Aligned', 'RUPEE Fast', 'mTM'), 
+        c(1, 100),
+        c(1,10,20,30,40,50,60,70,80,90,100),
+        c(0.10, 0.65)
 )
 
 combined <- grid_arrange_shared_legend(plot1, plot2)

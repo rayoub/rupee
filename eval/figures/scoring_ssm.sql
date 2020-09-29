@@ -1,10 +1,11 @@
 
 DO $$
 
-    DECLARE p_benchmark VARCHAR := 'casp_ssm_q_d240'; -- casp_ssm_rmsd_d233 (for search_type = rmsd), casp_ssm_q_d240 (for search_type = q_score and full_length)
+    -- TODO: recollect the data for ssm to get 20% low similarity and update this benchmark
+    DECLARE p_benchmark VARCHAR := 'casp_ssm_d217'; 
     DECLARE p_version VARCHAR := 'casp_scop_v1_73'; 
-    DECLARE p_search_type VARCHAR := 'full_length'; -- rmsd, full_length, q_score
-    DECLARE p_sort_by INTEGER := 4; -- 1 (ce_rmsd), 2 (fatcat_rigid_rmsd), 4 (tm_avg_tm_score), 6 (tm_q_score)
+    DECLARE p_search_type VARCHAR := 'full_length'; -- full_length (with 2), q_score (with 3)
+    DECLARE p_sort_by INTEGER := 2; -- 2 (tm_avg_tm_score), 3 (tm_q_score)
     DECLARE p_limit INTEGER := 100; 
 
 BEGIN
@@ -20,10 +21,12 @@ BEGIN
         (
             SELECT * FROM get_rupee_results(p_benchmark, p_version, 'top_aligned', p_search_type, p_sort_by, p_limit)
         ),
+        rupee_fast AS
+        (
+            SELECT * FROM get_rupee_results(p_benchmark, p_version, 'fast', p_search_type, p_sort_by, p_limit)
+        ),
         ssm AS
         (   
-            -- p_search_type = 'q_score' when doing full_length for rupee
-            -- note: I did not map q_score search to full_length search similar to VAST because RUPEE has a q_score search
             SELECT * FROM get_ssm_results(p_benchmark, p_version, 'q_score', p_sort_by, p_limit) 
         ),
         ranked AS
@@ -33,10 +36,8 @@ BEGIN
                 'RUPEE All-Aligned' AS app,
                 db_id_1,
                 CASE 
-                    WHEN p_sort_by = 1 THEN ce_rmsd 
-                    WHEN p_sort_by = 2 THEN fatcat_rigid_rmsd
-                    WHEN p_sort_by = 4 THEN tm_avg_tm_score
-                    WHEN p_sort_by = 6 THEN tm_q_score
+                    WHEN p_sort_by = 2 THEN tm_avg_tm_score
+                    WHEN p_sort_by = 3 THEN tm_q_score
                 END AS score
             FROM
                 rupee_all_aligned
@@ -46,23 +47,30 @@ BEGIN
                 'RUPEE Top-Aligned' AS app,
                 db_id_1,
                 CASE 
-                    WHEN p_sort_by = 1 THEN ce_rmsd 
-                    WHEN p_sort_by = 2 THEN fatcat_rigid_rmsd
-                    WHEN p_sort_by = 4 THEN tm_avg_tm_score
-                    WHEN p_sort_by = 6 THEN tm_q_score
+                    WHEN p_sort_by = 2 THEN tm_avg_tm_score
+                    WHEN p_sort_by = 3 THEN tm_q_score
                 END AS score
             FROM
                 rupee_top_aligned
             UNION ALL
             SELECT 
                 n,
+                'RUPEE Fast' AS app,
+                db_id_1,
+                CASE 
+                    WHEN p_sort_by = 2 THEN tm_avg_tm_score
+                    WHEN p_sort_by = 3 THEN tm_q_score
+                END AS score
+            FROM
+                rupee_fast
+            UNION ALL
+            SELECT 
+                n,
                 'SSM' AS app,
                 db_id_1,
                 CASE 
-                    WHEN p_sort_by = 1 THEN ce_rmsd 
-                    WHEN p_sort_by = 2 THEN fatcat_rigid_rmsd
-                    WHEN p_sort_by = 4 THEN tm_avg_tm_score
-                    WHEN p_sort_by = 6 THEN tm_q_score
+                    WHEN p_sort_by = 2 THEN tm_avg_tm_score
+                    WHEN p_sort_by = 3 THEN tm_q_score
                 END AS score
             FROM
                 ssm

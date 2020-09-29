@@ -1,26 +1,9 @@
 
--- sort by parameter
--- THRID PARTY
--- 1. ce_rmsd
--- 2. fatcat_rigid_rmsd
--- RUPEE
--- 3. tm_q_tm_score
--- 4. tm_avg_tm_score
--- 5. tm_rmsd
--- 6. tm_q_score (vs. SSM only)
--- OTHER
--- 7. ssap_score (vs. CATHEDRAL only)
-
--- valid sort by parameters
--- 1, 2, 4
-
-CREATE OR REPLACE FUNCTION get_vast_results (p_benchmark VARCHAR, p_version VARCHAR, p_search_type VARCHAR, p_sort_by INTEGER, p_limit INTEGER)
+CREATE OR REPLACE FUNCTION get_vast_results (p_benchmark VARCHAR, p_version VARCHAR, p_search_type VARCHAR, p_limit INTEGER)
 RETURNS TABLE (
     n INTEGER, 
     db_id_1 VARCHAR,
     db_id_2 VARCHAR,
-    ce_rmsd NUMERIC,
-    fatcat_rigid_rmsd NUMERIC,
     tm_avg_tm_score NUMERIC
 )
 AS $$
@@ -31,18 +14,9 @@ BEGIN
     (
         SELECT
             COUNT(*) OVER (PARTITION BY r.db_id_1) AS tot,
-            CASE 
-                WHEN p_sort_by = 1 THEN
-                    RANK(*) OVER (PARTITION BY r.db_id_1 ORDER BY s.ce_rmsd, r.db_id_2) 
-                WHEN p_sort_by = 2 THEN
-                    RANK(*) OVER (PARTITION BY r.db_id_1 ORDER BY s.fatcat_rigid_rmsd, r.db_id_2) 
-                WHEN p_sort_by = 4 THEN
-                    RANK(*) OVER (PARTITION BY r.db_id_1 ORDER BY s.tm_avg_tm_score DESC, r.db_id_2) 
-            END AS n,
+            RANK(*) OVER (PARTITION BY r.db_id_1 ORDER BY s.tm_avg_tm_score DESC, r.db_id_2) AS n,
             r.db_id_1,
             r.db_id_2,
-            s.ce_rmsd,
-            s.fatcat_rigid_rmsd,
             s.tm_avg_tm_score
         FROM
             vast_result r
@@ -73,8 +47,6 @@ BEGIN
             r.n,
             r.db_id_1,
             r.db_id_2,
-            r.ce_rmsd,
-            r.fatcat_rigid_rmsd,
             r.tm_avg_tm_score
         FROM
             results r
@@ -87,8 +59,6 @@ BEGIN
         r.n::INTEGER AS n,
         r.db_id_1,
         r.db_id_2,
-        r.ce_rmsd,
-        r.fatcat_rigid_rmsd,
         r.tm_avg_tm_score
     FROM 
         filtered_results r

@@ -37,20 +37,20 @@ grid_arrange_shared_legend <-
   }
 
 plot1 <- get_scoring_plot(
-        'All vs. Top\nbenchmark: scop_d360',
-        'scoring_rupee_scop_d360.txt',
-        c('RUPEE All-Aligned','RUPEE Top-Aligned'),
+        'All vs. Top\nbenchmark: casp_d250',
+        'scoring_rupee_casp_d250.txt', 
+        c('RUPEE All-Aligned','RUPEE Top-Aligned','RUPEE Fast','Optimal'),
         c(1, 100),
         c(1,10,20,30,40,50,60,70,80,90,100),
-        c(0.85, 1.0)
+        c(0.35, 0.55)
 )
 plot2 <- get_scoring_plot(
         'All vs. Top\nbenchmark: casp_d250',
         'scoring_rupee_casp_d250.txt', 
-        c('RUPEE All-Aligned','RUPEE Top-Aligned'),
+        c('RUPEE All-Aligned','RUPEE Top-Aligned', 'RUPEE Fast','Optimal'),
         c(1, 100),
         c(1,10,20,30,40,50,60,70,80,90,100),
-        c(0.4, 0.55)
+        c(0.35, 0.55)
 )
 
 combined <- grid_arrange_shared_legend(plot1, plot2)
