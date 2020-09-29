@@ -1,9 +1,9 @@
 
 CREATE TABLE rupee_time
 (
-    version VARCHAR NULL,
-    search_mode VARCHAR NULL,
-    search_type VARCHAR NULL,
+    version VARCHAR NOT NULL,
+    search_mode VARCHAR NOT NULL,
+    search_type VARCHAR NOT NULL,
     db_id VARCHAR NOT NULL,
     time NUMERIC NOT NULL
 );
