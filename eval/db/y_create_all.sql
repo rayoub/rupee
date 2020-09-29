@@ -4,10 +4,12 @@
 \i benchmark.sql
 \i cathedral_result.sql
 \i mtm_result.sql
-\i response_time.sql
+\i mtm_time.sql
 \i rupee_result.sql
+\i rupee_time.sql
 \i ssap_result.sql
 \i ssm_result.sql
+\i ssm_time.sql
 \i ssm_result_staged.sql
 \i vast_request.sql
 \i vast_result.sql
