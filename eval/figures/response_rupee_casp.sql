@@ -19,10 +19,15 @@ WITH rupee_response AS
         AND rt.search_type = 'full_length'
 )
 SELECT 
-    app,
+    CASE 
+        WHEN app = 'all_aligned' THEN 'All'
+        WHEN app = 'top_aligned' THEN 'Top'
+        WHEN app = 'fast' THEN 'Fast'
+        WHEN app = 'optimal' THEN 'Optimal'
+    END AS app,
     n,
     db_id,
-    time,
+    (time / 1000)::INTEGER AS time,
     residue_count
 FROM 
     rupee_response

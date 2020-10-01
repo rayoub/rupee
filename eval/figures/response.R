@@ -18,10 +18,10 @@ get_timing_plot <- function(p_title, p_file, p_levels) {
             
         # geoms
         geom_point(
-            size = rel(0.5)
+            size = rel(0.30)
         ) + 
         geom_smooth(     
-            size = rel(0.5),
+            size = rel(0.30),
             show.legend = FALSE
         ) + 
 
