@@ -40,7 +40,7 @@ grid_arrange_shared_legend <-
 
 plot1 <- get_scoring_plot(
         'RUPEE vs: RUPEE\nbenchmark: casp_d250\nstructure database: SCOP v2.07\nRUPEE search type: Full-Length',
-        'scoring_rupee_casp_d250.txt', 
+        'scoring_rupee_casp.txt', 
         c('All','Top','Fast','Optimal'),
         c(1, 100),
         c(1,10,20,30,40,50,60,70,80,90,100),
@@ -48,7 +48,7 @@ plot1 <- get_scoring_plot(
 )
 plot2 <- get_scoring_plot(
         'RUPEE vs: RUPEE\nbenchmark: scop_d360\nstructure database: SCOP v2.07\nRUPEE search type: Full-Length',
-        'scoring_rupee_scop_d360.txt', 
+        'scoring_rupee_scop.txt', 
         c('All','Top','Fast','Optimal'),
         c(1, 100),
         c(1,10,20,30,40,50,60,70,80,90,100),
