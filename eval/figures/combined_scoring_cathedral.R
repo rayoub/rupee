@@ -43,7 +43,7 @@ plot1 <- get_scoring_plot(
         'vs: CATHEDRAL\nbenchmark: casp_cathedral_d247\nstructure database: CATH v4.2\nRUPEE search type: SSAP-score',
         'SSAP-score',
         'scoring_cathedral_ssap.txt',
-        c('All','Top', 'Fast','CATHEDRAL'), 
+        c('All','Top','Fast','CATHEDRAL'), 
         c(1, 100),
         c(1,10,20,30,40,50,60,70,80,90,100),
         c(60, 75) 
@@ -53,7 +53,7 @@ plot2 <- get_scoring_plot(
         'vs: CATHEDRAL\nbenchmark: casp_cathedral_d247\nstructure database: CATH v4.2\nRUPEE search type: Full-Length',
         'TM-score (avg)',
         'scoring_cathedral_fl.txt', 
-        c('All','Top', 'Fast','CATHEDRAL'), 
+        c('All','Top','Fast','CATHEDRAL'), 
         c(1, 100),
         c(1,10,20,30,40,50,60,70,80,90,100),
         c(0.30, 0.55) 

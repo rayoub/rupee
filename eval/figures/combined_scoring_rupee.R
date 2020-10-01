@@ -2,6 +2,8 @@
 library(grid)
 library(gridExtra)
 
+rm(list = ls())
+
 source('scoring_rupee.R')
 
 grid_arrange_shared_legend <-
