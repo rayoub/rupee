@@ -32,7 +32,7 @@ BEGIN
         (
             SELECT 
                 n,
-                'RUPEE All-Aligned' AS app,
+                'All' AS app,
                 db_id_1,
                 tm_q_tm_score AS score
             FROM
@@ -40,7 +40,7 @@ BEGIN
             UNION ALL
             SELECT 
                 n,
-                'RUPEE Top-Aligned' AS app,
+                'Top' AS app,
                 db_id_1,
                 tm_q_tm_score AS score
             FROM
@@ -48,7 +48,7 @@ BEGIN
             UNION ALL
             SELECT 
                 n,
-                'RUPEE Fast' AS app,
+                'Fast' AS app,
                 db_id_1,
                 tm_q_tm_score AS score
             FROM

@@ -32,7 +32,7 @@ BEGIN
         (
             SELECT 
                 n,
-                'RUPEE All-Aligned' AS app,
+                'All' AS app,
                 db_id_1,
                 CASE 
                     WHEN p_sort_by = 2 THEN tm_avg_tm_score
@@ -43,7 +43,7 @@ BEGIN
             UNION ALL
             SELECT 
                 n,
-                'RUPEE Top-Aligned' AS app,
+                'Top' AS app,
                 db_id_1,
                 CASE 
                     WHEN p_sort_by = 2 THEN tm_avg_tm_score
@@ -54,7 +54,7 @@ BEGIN
             UNION ALL
             SELECT 
                 n,
-                'RUPEE Fast' AS app,
+                'Fast' AS app,
                 db_id_1,
                 CASE 
                     WHEN p_sort_by = 2 THEN tm_avg_tm_score
