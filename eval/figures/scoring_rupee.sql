@@ -1,8 +1,8 @@
 
 DO $$
 
-    DECLARE p_benchmark VARCHAR := 'casp_d250'; -- scop_d360, casp_d250
-    DECLARE p_version VARCHAR := 'casp_scop_v2_07'; -- scop_v2_07, casp_scop_v2_07
+    DECLARE p_benchmark VARCHAR := 'scop_d235'; -- scop_d360, casp_d250
+    DECLARE p_version VARCHAR := 'scop_v2_07'; -- scop_v2_07, casp_scop_v2_07
     DECLARE p_search_type VARCHAR := 'full_length';
     DECLARE p_sort_by INTEGER := 2; -- tm_avg_tm_score
     DECLARE p_limit INTEGER := 100; 
@@ -32,7 +32,7 @@ BEGIN
         (
             SELECT 
                 n,
-                'RUPEE All-Aligned' AS app,
+                'All' AS app,
                 db_id_1,
                 tm_avg_tm_score AS score
             FROM
@@ -40,7 +40,7 @@ BEGIN
             UNION ALL
             SELECT 
                 n,
-                'RUPEE Top-Aligned' AS app,
+                'Top' AS app,
                 db_id_1,
                 tm_avg_tm_score AS score
             FROM
@@ -48,7 +48,7 @@ BEGIN
             UNION ALL
             SELECT 
                 n,
-                'RUPEE Fast' AS app,
+                'Fast' AS app,
                 db_id_1,
                 tm_avg_tm_score AS score
             FROM

@@ -12,6 +12,7 @@ COPY benchmark (name, db_id) FROM '/home/ayoub/git/rupee/eval/results/benchmarks
 COPY benchmark (name, db_id) FROM '/home/ayoub/git/rupee/eval/results/benchmarks/scop_d360.txt' WITH (DELIMITER ',');
 
 -- ssm specific
+COPY benchmark (name, db_id) FROM '/home/ayoub/git/rupee/eval/results/benchmarks/scop_d235.txt' WITH (DELIMITER ',');
 COPY benchmark (name, db_id) FROM '/home/ayoub/git/rupee/eval/results/benchmarks/scop_d204.txt' WITH (DELIMITER ',');
 COPY benchmark (name, db_id) FROM '/home/ayoub/git/rupee/eval/results/benchmarks/scop_d193.txt' WITH (DELIMITER ',');
 COPY benchmark (name, db_id) FROM '/home/ayoub/git/rupee/eval/results/benchmarks/scop_d62.txt' WITH (DELIMITER ',');
@@ -19,7 +20,6 @@ COPY benchmark (name, db_id) FROM '/home/ayoub/git/rupee/eval/results/benchmarks
 -- cathedral specific
 COPY benchmark (name, db_id) FROM '/home/ayoub/git/rupee/eval/results/benchmarks/cath_d100.txt' WITH (DELIMITER ',');
 COPY benchmark (name, db_id) FROM '/home/ayoub/git/rupee/eval/results/benchmarks/cath_d99.txt' WITH (DELIMITER ',');
-
 
 -- ****************************************************************
 -- benchmarks for future paper
@@ -35,7 +35,5 @@ COPY benchmark (name, db_id) FROM '/home/ayoub/git/rupee/eval/results/benchmarks
 
 -- vast specific
 COPY benchmark (name, db_id) FROM '/home/ayoub/git/rupee/eval/results/benchmarks/casp_vast_d199.txt' WITH (DELIMITER ',');
-
-
 
 

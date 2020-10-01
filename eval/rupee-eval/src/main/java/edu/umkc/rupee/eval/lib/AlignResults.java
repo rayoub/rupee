@@ -49,12 +49,13 @@ public class AlignResults
         alignRupeeResults(benchmark, version, dbType, maxN, "all_aligned", "full_length");
         alignRupeeResults(benchmark, version, dbType, maxN, "optimal", "full_length");
         
-        benchmark = "scop_d360";
+        benchmark = "scop_d235";
         version = "scop_v2_07";
 
         alignRupeeResults(benchmark, version, dbType, maxN, "fast", "full_length");
         alignRupeeResults(benchmark, version, dbType, maxN, "top_aligned", "full_length");
         alignRupeeResults(benchmark, version, dbType, maxN, "all_aligned", "full_length");
+        alignRupeeResults(benchmark, version, dbType, maxN, "optimal", "full_length");
     }
    
     public static void alignRupeeVsMtm() {

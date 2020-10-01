@@ -24,6 +24,7 @@ COPY rupee_time (version, search_mode, search_type, db_id, time) FROM '/home/ayo
 
 COPY rupee_time (version, search_mode, search_type, db_id, time) FROM '/home/ayoub/git/rupee/eval/results/rupee/scop_d360_scop_v2_07_all_fl_timing.txt' WITH (DELIMITER ',');
 COPY rupee_time (version, search_mode, search_type, db_id, time) FROM '/home/ayoub/git/rupee/eval/results/rupee/scop_d360_scop_v2_07_top_fl_timing.txt' WITH (DELIMITER ',');
+COPY rupee_time (version, search_mode, search_type, db_id, time) FROM '/home/ayoub/git/rupee/eval/results/rupee/scop_d360_scop_v2_07_opt_fl_timing.txt' WITH (DELIMITER ',');
 COPY rupee_time (version, search_mode, search_type, db_id, time) FROM '/home/ayoub/git/rupee/eval/results/rupee/scop_d360_scop_v2_07_fast_fl_timing.txt' WITH (DELIMITER ',');
 
 
