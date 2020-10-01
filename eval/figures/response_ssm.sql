@@ -5,7 +5,7 @@ WITH rupee_response AS
         rt.search_mode AS app,
         ROW_NUMBER() OVER (PARTITION BY rt.search_mode ORDER BY ct.residue_count, rt.db_id) AS n,
         rt.db_id,
-        rt.time,
+        rt.time, 
         ct.residue_count
     FROM
         rupee_time rt
@@ -21,7 +21,7 @@ WITH rupee_response AS
 ssm_response AS
 (
     SELECT
-        'ssm' AS app,
+        'SSM' AS app,
         ROW_NUMBER() OVER (ORDER BY ct.residue_count, st.db_id) AS n,
         st.db_id,
         st.time,
@@ -36,10 +36,14 @@ ssm_response AS
         b.name = 'casp_ssm_d248'
 )
 SELECT 
-    app,
+    CASE 
+        WHEN app = 'all_aligned' THEN 'All'
+        WHEN app = 'top_aligned' THEN 'Top'
+        WHEN app = 'fast' THEN 'Fast'
+    END AS app,
     n,
     db_id,
-    time,
+    time / 1000.0 AS time,
     residue_count
 FROM 
     rupee_response
@@ -48,7 +52,7 @@ SELECT
     app,
     n,
     db_id,
-    time,
+    (time / 1000)::INTEGER AS time,
     residue_count
 FROM 
     ssm_response;

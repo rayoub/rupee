@@ -5,7 +5,7 @@ source('scoring.R')
 
 plot <- get_scoring_plot(
         'SSM',
-        'vs: SSM\nbenchmark: casp_ssm_d248\nstructure database: SCOP v1.73\nRUPEE search type: Q-score',
+        'RUPEE vs: SSM\nbenchmark: casp_ssm_d248\nstructure database: SCOP v1.73\nRUPEE search type: Q-score',
         'Q-score',
         'scoring_ssm_q.txt', 
         c('All','Top','Fast','SSM'), 

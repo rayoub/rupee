@@ -5,7 +5,7 @@ source('scoring.R')
 
 plot <- get_scoring_plot(
         'mTM',
-        'vs: mTM-align\nbenchmark: casp_d250\nstructure database: PDB chains\nRUPEE search type: Contained-In',
+        'RUPEE vs: mTM-align\nbenchmark: casp_d250\nstructure database: PDB chains\nRUPEE search type: Contained-In',
         'TM-score (q)',
         'scoring_mtm_ci.txt',
         c('All','Top','Fast','mTM'), 

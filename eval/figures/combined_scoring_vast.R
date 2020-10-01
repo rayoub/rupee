@@ -5,7 +5,7 @@ source('scoring.R')
 
 plot <- get_scoring_plot(
         'VAST',
-        'vs: VAST\nbenchmark: casp_vast_d199\nstructure database: PDB chains\nRUPEE search type: Full-Length', 
+        'RUPEE vs: VAST\nbenchmark: casp_vast_d199\nstructure database: PDB chains\nRUPEE search type: Full-Length', 
         'TM-score (avg)',
         'scoring_vast_fl.txt', 
         c('All','Top','Fast','VAST'), 

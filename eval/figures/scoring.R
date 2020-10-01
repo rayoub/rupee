@@ -42,6 +42,7 @@ get_scoring_plot <- function(p_comp_to, p_title, p_ylab, p_file, p_levels, p_xli
         guides(linetype = guide_legend(override.aes = list(size = rel(0.5)))) + 
 
         # axis label
+        xlab("results rank") + 
         ylab(p_ylab) + 
 
         # title
@@ -57,14 +58,12 @@ get_scoring_plot <- function(p_comp_to, p_title, p_ylab, p_file, p_levels, p_xli
         # default override
         theme(
             plot.title = element_text(size = 7),
-            plot.margin = margin(5,15,0,0), 
+            plot.margin = margin(5,15,0,5), 
 
             panel.grid = element_blank(),
-            panel.spacing = unit(4,'mm'),
             
             axis.text = element_text(size = 7), 
-            axis.title.x = element_blank(), 
-            axis.title.y = element_text(size = 7),
+            axis.title = element_text(size = 7), 
             
             legend.text = element_text(size = 7, margin = margin(0,10,0,0)),
             legend.title = element_blank(), 

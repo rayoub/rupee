@@ -4,7 +4,7 @@ library(gridExtra)
 
 rm(list = ls())
 
-source('scoring.R')
+source('response.R')
 
 grid_arrange_shared_legend <-
   function(...,
@@ -38,28 +38,18 @@ grid_arrange_shared_legend <-
     )
   }
 
-plot1 <- get_scoring_plot(
-        'CATHEDRAL',
-        'RUPEE vs: CATHEDRAL\nbenchmark: casp_cathedral_d247\nstructure database: CATH v4.2\nRUPEE search type: SSAP-score',
-        'SSAP-score',
-        'scoring_cathedral_ssap.txt',
-        c('All','Top','Fast','CATHEDRAL'), 
-        c(1, 100),
-        c(1,10,20,30,40,50,60,70,80,90,100),
-        c(60, 75) 
+mtm_plot <- get_timing_plot(
+        'RUPEE vs: mTM-align\nbenchmark: casp_d250\nstructure database: PDB chains\nRUPEE search type: Full-Length',
+        'response_mtm.txt',
+        c('All','Top','Fast', 'mTM')
 )
-plot2 <- get_scoring_plot(
-        'CATHEDRAL',
-        'RUPEE vs: CATHEDRAL\nbenchmark: casp_cathedral_d247\nstructure database: CATH v4.2\nRUPEE search type: Full-Length',
-        'TM-score (avg)',
-        'scoring_cathedral_fl.txt', 
-        c('All','Top','Fast','CATHEDRAL'), 
-        c(1, 100),
-        c(1,10,20,30,40,50,60,70,80,90,100),
-        c(0.30, 0.55) 
+ssm_plot <- get_timing_plot(
+        'RUPEE vs: SSM\nbenchmark: casp_ssm_d248\nstructure database: SCOP v1.73\nRUPEE search type: Full-Length',
+        'response_ssm.txt',
+        c('All','Top','Fast', 'SSM')
 )
 
-combined <- grid_arrange_shared_legend(plot1, plot2)
+combined <- grid_arrange_shared_legend(mtm_plot, ssm_plot)
 
-ggsave('combined_scoring_cathedral.eps', plot = combined, width = 7.5, height = 2.75, dpi = 300)
+ggsave('combined_response.eps', plot = combined, width = 7, height = 2.5)
 
