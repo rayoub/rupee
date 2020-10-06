@@ -41,7 +41,7 @@ grid_arrange_shared_legend <-
 mtm_plot <- get_timing_plot(
         'RUPEE vs: mTM-align\nbenchmark: casp_d250\nstructure database: PDB chains\nRUPEE search type: Full-Length',
         'response_mtm.txt',
-        c('All','Top','Fast', 'mTM')
+        c('All','Top','Fast', 'mTM-align')
 )
 ssm_plot <- get_timing_plot(
         'RUPEE vs: SSM\nbenchmark: casp_ssm_d248\nstructure database: SCOP v1.73\nRUPEE search type: Full-Length',

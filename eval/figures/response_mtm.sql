@@ -21,7 +21,7 @@ WITH rupee_response AS
 mtm_response AS
 (
     SELECT
-        'mTM' AS app,
+        'mTM-align' AS app,
         ROW_NUMBER() OVER (ORDER BY ct.residue_count, mt.db_id) AS n,
         mt.db_id,
         mt.time,

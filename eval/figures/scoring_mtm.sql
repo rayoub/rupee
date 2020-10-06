@@ -56,7 +56,7 @@ BEGIN
             UNION ALL
             SELECT 
                 n,
-                'mTM' AS app,
+                'mTM-align' AS app,
                 db_id_1,
                 tm_q_tm_score AS score
             FROM
