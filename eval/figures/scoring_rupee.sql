@@ -1,7 +1,7 @@
 
 DO $$
 
-    DECLARE p_benchmark VARCHAR := 'scop_d235'; -- scop_d360, casp_d250
+    DECLARE p_benchmark VARCHAR := 'scop_d360'; -- scop_d360, casp_d250
     DECLARE p_version VARCHAR := 'scop_v2_07'; -- scop_v2_07, casp_scop_v2_07
     DECLARE p_search_type VARCHAR := 'full_length';
     DECLARE p_sort_by INTEGER := 2; -- tm_avg_tm_score

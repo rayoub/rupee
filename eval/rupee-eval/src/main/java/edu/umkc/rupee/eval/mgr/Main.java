@@ -124,7 +124,7 @@ public class Main {
                 start = System.currentTimeMillis();
                 OptionFunctions.option_s(line, printHeader);
                 stop = System.currentTimeMillis();
-                System.out.println("Time = " + (stop -start));
+                System.out.println("Time = " + (stop - start));
 
             } else if (line.hasOption("u")) {
 
@@ -132,7 +132,7 @@ public class Main {
                 start = System.currentTimeMillis();
                 OptionFunctions.option_u(line, printHeader);
                 stop = System.currentTimeMillis();
-                System.out.println("Time = " + (stop -start));
+                System.out.println("Time = " + (stop - start));
 
             } else if (line.hasOption("d")) {
                 option_d(line);
@@ -329,8 +329,7 @@ public class Main {
 
         /*
         // gather alignment scores for running results
-        AlignResults.alignRupeeResults("casp_d250", "casp_scop_v2_07", DbType.SCOP, 100);
-        AlignResults.alignRupeeResults("scop_d360", "scop_v2_07", DbType.SCOP, 100);
+        AlignResults.alignRupeeVsRupee();
         */
     }
 

@@ -38,7 +38,6 @@ public class AlignResults
     public static void alignRupeeVsRupee() {
 
         System.out.println("Align Rupee vs. Rupee");
-
         String benchmark = "casp_d250";
         String version = "casp_scop_v2_07";
         DbType dbType = DbType.SCOP;
@@ -49,7 +48,7 @@ public class AlignResults
         alignRupeeResults(benchmark, version, dbType, maxN, "all_aligned", "full_length");
         alignRupeeResults(benchmark, version, dbType, maxN, "optimal", "full_length");
         
-        benchmark = "scop_d235";
+        benchmark = "scop_d360";
         version = "scop_v2_07";
 
         alignRupeeResults(benchmark, version, dbType, maxN, "fast", "full_length");
