@@ -42,7 +42,7 @@ get_scoring_plot <- function(p_comp_to, p_title, p_ylab, p_file, p_levels, p_xli
         guides(linetype = guide_legend(override.aes = list(size = rel(0.5)))) + 
 
         # axis label
-        xlab("results rank") + 
+        xlab("result ranks") + 
         ylab(p_ylab) + 
 
         # title

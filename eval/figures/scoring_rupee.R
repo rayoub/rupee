@@ -42,7 +42,7 @@ get_scoring_plot <- function(p_title, p_file, p_levels, p_xlimits, p_xbreaks, p_
         guides(linetype = guide_legend(override.aes = list(size = rel(0.5)))) + 
 
         # axis label
-        xlab("results rank") + 
+        xlab("result ranks") + 
         ylab('TM-score (avg)') + 
 
         # title
