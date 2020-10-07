@@ -24,11 +24,11 @@ get_scoring_plot <- function(p_title, p_file, p_levels, p_xlimits, p_xbreaks, p_
         # scales        
         scale_color_manual(
             values = c("#e41a1c","#377eb8","#984ea3","#4daf4a"),
-            labels = c("All","Top","Fast","Optimal")
+            labels = c("All","Top","Fast","Exhaustive")
         ) + 
         scale_linetype_manual(
             values = c("solid","dashed","dotdash","dotted"),
-            labels = c("All","Top","Fast","Optimal")
+            labels = c("All","Top","Fast","Exhaustive")
         ) + 
         scale_x_continuous(
             limits = p_xlimits,

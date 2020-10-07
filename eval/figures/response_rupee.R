@@ -28,7 +28,7 @@ get_timing_plot <- function(p_title, p_file, p_levels) {
         # scales
         scale_color_manual(
             values = c("#e41a1c","#377eb8","#984ea3","#4daf4a"),
-            labels = c("All","Top","Fast","Optimal")
+            labels = c("All","Top","Fast","Exhaustive")
         ) + 
         scale_y_continuous(
             trans = "log10",

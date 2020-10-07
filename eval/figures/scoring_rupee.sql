@@ -56,7 +56,7 @@ BEGIN
             UNION ALL
             SELECT 
                 n,
-                'Optimal' AS app,
+                'Exhaustive' AS app,
                 db_id_1,
                 tm_avg_tm_score AS score
             FROM

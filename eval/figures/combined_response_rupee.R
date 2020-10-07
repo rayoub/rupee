@@ -38,18 +38,18 @@ grid_arrange_shared_legend <-
     )
   }
 
-mtm_plot <- get_timing_plot(
-        'RUPEE vs: RUPEE\nbenchmark: casp_d250\nstructure database: SCOP v2.07\nRUPEE search type: Full-Length',
-        'response_rupee_casp.txt',
-        c('All','Top','Fast','Optimal')
-)
-ssm_plot <- get_timing_plot(
-        'RUPEE vs: RUPEE\nbenchmark: scop_d360\nstructure database: SCOP v2.07\nRUPEE search type: Full-Length',
+plot1 <- get_timing_plot(
+        'RUPEE vs: Exhaustive\nbenchmark: scop_d360\nstructure database: SCOP v2.07\nRUPEE search type: Full-Length',
         'response_rupee_scop.txt',
-        c('All','Top','Fast','Optimal')
+        c('All','Top','Fast','Exhaustive')
+)
+plot2 <- get_timing_plot(
+        'RUPEE vs: Exhaustive\nbenchmark: casp_d250\nstructure database: SCOP v2.07\nRUPEE search type: Full-Length',
+        'response_rupee_casp.txt',
+        c('All','Top','Fast','Exhaustive')
 )
 
-combined <- grid_arrange_shared_legend(mtm_plot, ssm_plot)
+combined <- grid_arrange_shared_legend(plot1, plot2)
 
 ggsave('combined_response_rupee.eps', plot = combined, width = 7, height = 2.5)
 

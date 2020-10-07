@@ -23,7 +23,7 @@ SELECT
         WHEN app = 'all_aligned' THEN 'All'
         WHEN app = 'top_aligned' THEN 'Top'
         WHEN app = 'fast' THEN 'Fast'
-        WHEN app = 'optimal' THEN 'Optimal'
+        WHEN app = 'optimal' THEN 'Exhaustive'
     END AS app,
     n,
     db_id,

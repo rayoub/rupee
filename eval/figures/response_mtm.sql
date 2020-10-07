@@ -34,26 +34,30 @@ mtm_response AS
             ON mt.db_id = ct.db_id
     WHERE
         b.name = 'casp_d250'
+),
+everything AS
+(
+    SELECT 
+        CASE 
+            WHEN app = 'all_aligned' THEN 'All'
+            WHEN app = 'top_aligned' THEN 'Top'
+            WHEN app = 'fast' THEN 'Fast'
+        END AS app,
+        n,
+        db_id,
+        (time / 1000)::INTEGER AS time,
+        residue_count
+    FROM 
+        rupee_response
+    UNION ALL
+    SELECT 
+        app,
+        n,
+        db_id,
+        (time / 1000)::INTEGER AS time,
+        residue_count
+    FROM 
+        mtm_response
 )
-SELECT 
-    CASE 
-        WHEN app = 'all_aligned' THEN 'All'
-        WHEN app = 'top_aligned' THEN 'Top'
-        WHEN app = 'fast' THEN 'Fast'
-    END AS app,
-    n,
-    db_id,
-    (time / 1000)::INTEGER AS time,
-    residue_count
-FROM 
-    rupee_response
-UNION ALL
-SELECT 
-    app,
-    n,
-    db_id,
-    (time / 1000)::INTEGER AS time,
-    residue_count
-FROM 
-    mtm_response;
+SELECT * FROM everything WHERE residue_count < 400 order by time desc;
 
