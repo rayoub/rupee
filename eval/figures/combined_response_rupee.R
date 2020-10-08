@@ -51,5 +51,5 @@ plot2 <- get_timing_plot(
 
 combined <- grid_arrange_shared_legend(plot1, plot2)
 
-ggsave('combined_response_rupee.eps', plot = combined, width = 7, height = 2.5)
+ggsave('combined_response_rupee.eps', plot = combined, width = 5.2, height = 2.5)
 

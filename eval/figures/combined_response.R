@@ -51,5 +51,5 @@ ssm_plot <- get_timing_plot(
 
 combined <- grid_arrange_shared_legend(mtm_plot, ssm_plot)
 
-ggsave('combined_response.eps', plot = combined, width = 7, height = 2.5)
+ggsave('combined_response.eps', plot = combined, width = 5.2, height = 2.5)
 

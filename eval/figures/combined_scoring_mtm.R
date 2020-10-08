@@ -14,5 +14,5 @@ plot <- get_scoring_plot(
         c(0.10, 0.65)
 )
 
-ggsave('combined_scoring_mtm.eps', plot = plot, width = 3, height = 2.75, dpi = 300)
+ggsave('combined_scoring_mtm.eps', plot = plot, width = 2.3, height = 2.5, dpi = 300)
 
