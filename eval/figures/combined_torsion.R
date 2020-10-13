@@ -42,5 +42,5 @@ torsion_plot <- get_torsion_plot()
 
 combined <- grid_arrange_shared_legend(ramachandran_plot, torsion_plot)
 
-ggsave('combined_torsion.eps', plot = combined, width = 7, height = 3)
+ggsave('combined_torsion.eps', plot = combined, width = 7, height = 3, dpi = 600)
 

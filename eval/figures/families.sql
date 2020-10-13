@@ -6,12 +6,10 @@
 
 
 -- RUPEE counts across top 1 results
-WITH top_results AS
+WITH target_superfamilies AS
 (
     SELECT
-        SUBSTRING(r.db_id_1 FROM 1 FOR 7) AS prefix,
-        SUBSTRING(r.db_id_1 FROM CHAR_LENGTH(r.db_id_1) - 1 FOR 2) AS suffix,
-        r.db_id_1 AS db_id,
+        SUBSTRING(r.db_id_1 FROM 1 FOR 7) || SUBSTRING(r.db_id_1 FROM CHAR_LENGTH(r.db_id_1) - 1 FOR 2) AS target,
         r.db_id_2 AS neighbor,
         d.cl_cf_sf
     FROM
@@ -23,26 +21,23 @@ WITH top_results AS
         AND r.search_mode = 'all_aligned'
         AND r.n = 1
 ),
-keyed_counts AS 
+superfamily_counts AS 
 (
     SELECT
-        t.prefix || t.suffix AS key,
-        COUNT(DISTINCT t.cl_cf_sf) AS superfamily_count
-    FROM
-        top_results t
+        target,
+        COUNT(DISTINCT cl_cf_sf) AS superfamily_count
+    FROM 
+        target_superfamilies
     GROUP BY
-        t.prefix,
-        t.suffix
-    ORDER BY
-        COUNT(DISTINCT t.cl_cf_sf)
+        target
 )
-SELECT
+SELECT 
     superfamily_count,
     COUNT(*) AS target_count
-FROM
-    keyed_counts
+FROM 
+    superfamily_counts
 GROUP BY
     superfamily_count
 ORDER BY
-    superfamily_count
-;
+    superfamily_count;
+    

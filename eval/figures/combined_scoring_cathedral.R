@@ -61,5 +61,5 @@ plot2 <- get_scoring_plot(
 
 combined <- grid_arrange_shared_legend(plot1, plot2)
 
-ggsave('combined_scoring_cathedral.eps', plot = combined, width = 5.2, height = 2.5, dpi = 300)
+ggsave('combined_scoring_cathedral.eps', plot = combined, width = 5.2, height = 2.5, dpi = 600)
 

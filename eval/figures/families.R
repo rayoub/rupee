@@ -17,16 +17,16 @@ plot <-
 
     # scales
     scale_x_continuous(
-        limits = c(1,10),
+        limits = c(0,11),
         breaks = c(1,2,3,4,5,6,7,8,9,10)
     ) + 
     
     # labels
-    xlab('target count') + 
-    ylab('superfamily count') +
+    xlab('distinct superfamily count') +
+    ylab('target count') + 
         
     # title
-    ggtitle('Superfamily counts per target')
+    ggtitle('Targets per distinct superfamily count')
 
 # *** theme
 theme <-  
