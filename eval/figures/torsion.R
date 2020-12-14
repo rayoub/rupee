@@ -16,12 +16,12 @@ df$sse <- mapvalues(df$sse, from = c('Turn', 'Bridge', 'Bend', 'Coil'), to = c('
 # reorder factor levels
 df$sse <- factor(df$sse, levels = c('Helix', 'Strand', 'Bend/Coil'))
 
-# color scale
-color_scale <- c('Helix' = 'red', 'Strand' = 'green', 'Bend/Coil' = 'black')
-
 # wrap and translate torsion angles
 df$phi <- ifelse(df$phi < 0, df$phi + 360, df$phi)
 df$phi <- df$phi + 200
+
+# color scale
+color_scale <- c('Helix' = 'red', 'Strand' = 'green', 'Bend/Coil' = 'black')
 
 torsion_plot <- ggplot(df, aes(phi, psi, color = sse)) +
     

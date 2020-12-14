@@ -80,6 +80,12 @@ ggplot(df, aes(phi, psi, color = sse)) +
        direction = -1
     ) +
 
+    # axis labels
+    labs(
+         x = expression(phi), 
+         y = expression(psi)
+    ) + 
+
     # faceting
     facet_wrap(~sse, nrow = 1, scales = 'fixed') + 
 
@@ -95,11 +101,8 @@ ggplot(df, aes(phi, psi, color = sse)) +
         panel.grid = element_blank(),
         panel.spacing.x = unit(0,'pt'),
         
-        axis.text = element_blank(), 
-        axis.text.y = element_blank(),
-        axis.ticks = element_blank(),
-        axis.title = element_blank(),
-        axis.line = element_blank(),
+        axis.text = element_text(size = 5), 
+        axis.title = element_text(size = 8), 
 
         strip.background = element_blank(),
         strip.text = element_blank(),
@@ -111,5 +114,5 @@ ggplot(df, aes(phi, psi, color = sse)) +
         legend.direction = 'horizontal'
     )
 
-ggsave('regions.eps', width = 7, height = 2.5)
+ggsave('regions.eps', width = 7, height = 2.5, dpi=600)
 
