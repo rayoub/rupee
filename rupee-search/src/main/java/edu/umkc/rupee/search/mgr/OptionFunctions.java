@@ -127,17 +127,17 @@ public class OptionFunctions {
         System.out.println("Done hashing!");
     }
     
-    public static void option_s(CommandLine line, boolean printHeader) throws Exception {
+    public static void option_s(CommandLine line, boolean printHeader, boolean printMetaDataColumns) throws Exception {
 
-        OptionFunctions.option_s_and_u("s", SearchBy.DB_ID, 400, line, printHeader); 
+        OptionFunctions.option_s_and_u("s", SearchBy.DB_ID, 400, line, printHeader, printMetaDataColumns); 
     }
     
-    public static void option_u(CommandLine line, boolean printHeader) throws Exception {
+    public static void option_u(CommandLine line, boolean printHeader, boolean printMetaDataColumns) throws Exception {
        
-        OptionFunctions.option_s_and_u("u", SearchBy.UPLOAD, 400, line, printHeader); 
+        OptionFunctions.option_s_and_u("u", SearchBy.UPLOAD, 400, line, printHeader, printMetaDataColumns); 
     }
     
-    private static void option_s_and_u(String option, SearchBy searchBy, int limit, CommandLine line, boolean printHeader) throws Exception {
+    private static void option_s_and_u(String option, SearchBy searchBy, int limit, CommandLine line, boolean printHeader, boolean printMetaDataColumns) throws Exception {
 
         Set<String> dbTypeNames = new HashSet<>(Arrays.stream(DbType.values()).map(v -> v.name()).collect(Collectors.toList()));
         Set<String> searchModeNames = new HashSet<>(Arrays.stream(SearchMode.values()).map(v -> v.name()).collect(Collectors.toList()));
@@ -281,6 +281,9 @@ public class OptionFunctions {
                 if (searchBy == SearchBy.UPLOAD) {
                     header = "n,file_name,db_id,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
                 }
+                if (printMetaDataColumns) {
+                    header += ",cl,cf,sf,fa,fold,superfamily";
+                }
                 System.out.println(header);
             }   
 
@@ -288,8 +291,7 @@ public class OptionFunctions {
            
                 ScopSearchRecord record = (ScopSearchRecord) baseRecord;
 
-                // gathering results
-                System.out.printf("%d,%s,%s,%.4f,%.4f,%.4f,%.4f,%s,%s\n",
+                String data = String.format("%d,%s,%s,%.4f,%.4f,%.4f,%.4f,%s,%s",
                     record.getN(),
                     criteria.dbId,
                     record.getDbId(),
@@ -300,6 +302,19 @@ public class OptionFunctions {
                     criteria.searchMode.name().toLowerCase(),
                     criteria.searchType.name().toLowerCase()
                 );
+
+                if (printMetaDataColumns) {
+                    data += String.format(",%s,%s,%s,%s,%s,%s",
+                        record.getCl(), 
+                        record.getCf(),
+                        record.getSf(),
+                        record.getFa(),
+                        record.getCfDescription(),
+                        record.getSfDescription()
+                    );
+                }
+
+                System.out.println(data);
             }
         }
         else if (dbType == DbType.CATH) {
@@ -336,6 +351,9 @@ public class OptionFunctions {
                 if (searchBy == SearchBy.UPLOAD) {
                     header = "n,file_name,db_id,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
                 }
+                if (printMetaDataColumns) {
+                    header += ",c,a,t,h,s35,topology,superfamily";
+                }
                 System.out.println(header);
             }   
 
@@ -343,8 +361,7 @@ public class OptionFunctions {
              
                 CathSearchRecord record = (CathSearchRecord) baseRecord; 
 
-                // gathering results
-                System.out.printf("%d,%s,%s,%.4f,%.4f,%.4f,%.4f,%s,%s\n",
+                String data = String.format("%d,%s,%s,%.4f,%.4f,%.4f,%.4f,%s,%s",
                     record.getN(),
                     criteria.dbId,
                     record.getDbId(),
@@ -355,6 +372,20 @@ public class OptionFunctions {
                     criteria.searchMode.name().toLowerCase(),
                     criteria.searchType.name().toLowerCase()
                 );
+
+                if (printMetaDataColumns) {
+                    data += String.format(",%s,%s,%s,%s,%s,%s,%s",
+                        record.getC(),
+                        record.getA(),
+                        record.getT(),
+                        record.getH(),
+                        record.getS(),
+                        record.getTDescription(),
+                        record.getHDescription()
+                    );
+                }
+
+                System.out.println(data);
             }
         }
         else if (dbType == DbType.ECOD) {

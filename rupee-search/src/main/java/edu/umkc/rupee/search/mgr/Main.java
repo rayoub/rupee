@@ -76,6 +76,7 @@ public class Main {
         
         // header or not
         boolean printHeader = true; 
+        boolean printMetaDataColumns = true;
         
         try {
             if (line.hasOption("i")) {
@@ -83,9 +84,9 @@ public class Main {
             } else if (line.hasOption("h")) {
                 OptionFunctions.option_h(line);
             } else if (line.hasOption("s")) {
-                OptionFunctions.option_s(line, printHeader);
+                OptionFunctions.option_s(line, printHeader, printMetaDataColumns);
             } else if (line.hasOption("u")) {
-                OptionFunctions.option_u(line, printHeader);
+                OptionFunctions.option_u(line, printHeader, printMetaDataColumns);
             } else if (line.hasOption("c")) {
                 option_c(line);
             } else if (line.hasOption("d")) {
