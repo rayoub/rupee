@@ -101,7 +101,7 @@ ggplot(df, aes(phi, psi, color = sse)) +
         panel.grid = element_blank(),
         panel.spacing.x = unit(0,'pt'),
         
-        axis.text = element_text(size = 5), 
+        axis.text = element_text(size = 6), 
         axis.title = element_text(size = 8), 
 
         strip.background = element_blank(),
