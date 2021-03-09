@@ -173,7 +173,7 @@ public class Importing {
     public static void setRunFactors(List<Residue> residues) {
 
         // only runs of regular secondary structures receive run factors
-        if (residues.get(0).isHelix() || residues.get(0).isStrand() || residues.get(0).isTurn()) {
+        if (residues.get(0).isHelix() || residues.get(0).isStrand()) {
             int test = Math.floorDiv(residues.size(), 2);
             for (int i = 0; i < residues.size(); i++) {
                 if (i >= test) {

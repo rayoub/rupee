@@ -200,13 +200,5 @@ public class Residue {
     public boolean isStrand() {
         return ss3.equals("Strand");
     }
-    
-    public boolean isTurn() {
-        return ss3.equals("Turn");
-    }
-   
-    public boolean isBridge() {
-        return ss3.equals("Bridge");
-    }
 }
 
