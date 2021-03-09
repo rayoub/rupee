@@ -45,6 +45,12 @@ public class Main {
                 .argName("DB_TYPE>,<FILE_PATH>,<REP1>,<REP2>,<REP3>,<DIFF1>,<DIFF2>,<DIFF3>,<SEARCH_MODE>,<SEARCH_TYPE")
                 .valueSeparator(',')
                 .build());
+        group.addOption(Option.builder("t")
+                .longOpt("tm-align")
+                .numberOfArgs(2)
+                .argName("DB_ID_OR_PATH>,<DB_ID")
+                .valueSeparator(',')
+                .build());
         group.addOption(Option.builder("c")
                 .longOpt("chain-defs")
                 .numberOfArgs(1)
@@ -87,6 +93,8 @@ public class Main {
                 OptionFunctions.option_s(line, printHeader, printMetaDataColumns);
             } else if (line.hasOption("u")) {
                 OptionFunctions.option_u(line, printHeader, printMetaDataColumns);
+            } else if (line.hasOption("t")) {
+                OptionFunctions.option_t(line);
             } else if (line.hasOption("c")) {
                 option_c(line);
             } else if (line.hasOption("d")) {

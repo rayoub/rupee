@@ -1,5 +1,6 @@
 package edu.umkc.rupee.search.mgr;
 
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -39,6 +40,7 @@ import edu.umkc.rupee.search.ecod.EcodImport;
 import edu.umkc.rupee.search.ecod.EcodSearch;
 import edu.umkc.rupee.search.ecod.EcodSearchCriteria;
 import edu.umkc.rupee.search.ecod.EcodSearchRecord;
+import edu.umkc.rupee.search.lib.Aligning;
 import edu.umkc.rupee.search.lib.DbId;
 import edu.umkc.rupee.search.lib.Uploading;
 import edu.umkc.rupee.search.scop.ScopHash;
@@ -46,6 +48,8 @@ import edu.umkc.rupee.search.scop.ScopImport;
 import edu.umkc.rupee.search.scop.ScopSearch;
 import edu.umkc.rupee.search.scop.ScopSearchCriteria;
 import edu.umkc.rupee.search.scop.ScopSearchRecord;
+import edu.umkc.rupee.tm.TmMode;
+import edu.umkc.rupee.tm.TmResults;
 
 public class OptionFunctions {
 
@@ -535,6 +539,68 @@ public class OptionFunctions {
                 );
             }
         }
+    }
+    
+    public static void option_t(CommandLine line) throws IOException {
+
+        String[] args = line.getOptionValues("t");
+      
+        String idOrPath = args[0];
+        String dbId = args[1];
+
+        int uploadId = -1;
+       
+        // *** db id or path
+        
+        DbType idDbType1 = DbId.getIdDbType(idOrPath);
+        if (idDbType1 != DbType.INVALID) {
+
+            // we got a db id
+            idOrPath = DbId.getNormalizedId(idOrPath);
+        }
+        else if (Files.exists(Paths.get(idOrPath))) {
+
+            // we got a file
+            idDbType1 = DbType.INVALID;
+            
+            Path path = Paths.get(idOrPath);
+            byte[] bytes = Files.readAllBytes(path);
+            String content = new String(bytes);
+            uploadId = Uploading.upload(content);
+        } 
+        else {
+
+            System.out.println("Either 'File Not Found' or\n'Bad DB_ID' or\n'DB_TYPE DIR is not supported' for first parameter.");
+            return;
+        }
+       
+        // *** db id
+        
+        DbType idDbType2 = DbId.getIdDbType(dbId);
+        if (idDbType2 != DbType.INVALID) {
+
+            // we got a db id
+            dbId = DbId.getNormalizedId(dbId);
+        }
+        else {
+
+            // assume DIR type
+            System.out.println("Either 'Bad DB_ID' or\n'DB_TYPE DIR is not supported' for second parameter.");
+            return;
+        }
+
+        // perform alignment
+        TmResults results = null;
+        if (uploadId != -1) {
+
+            results = Aligning.tmAlign(uploadId, dbId, TmMode.ALIGN_TEXT);
+        }
+        else {
+
+            results = Aligning.tmAlign(idOrPath, dbId, TmMode.ALIGN_TEXT);
+        }
+
+        System.out.println(results.getOutput());
     }
 }
 
