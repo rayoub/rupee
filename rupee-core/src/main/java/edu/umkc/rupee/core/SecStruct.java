@@ -1,16 +1,6 @@
 package edu.umkc.rupee.core;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.biojava.nbio.structure.AminoAcid;
-import org.biojava.nbio.structure.Atom;
-import org.biojava.nbio.structure.Calc;
-import org.biojava.nbio.structure.Chain;
 import org.biojava.nbio.structure.Group;
-import org.biojava.nbio.structure.Structure;
-import org.biojava.nbio.structure.StructureException;
-import org.biojava.nbio.structure.secstruc.SecStrucCalc;
 import org.biojava.nbio.structure.secstruc.SecStrucInfo;
 
 public class SecStruct {
