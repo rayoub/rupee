@@ -115,7 +115,7 @@ public class Main {
         String version = args[0];
         
         ChainDefs.writePdbChains(version);
-        ChainDefs.writeObsoleteChains(version);
+        //ChainDefs.writeObsoleteChains(version);
     }
 
     private static void option_d(CommandLine line) throws Exception {

@@ -99,9 +99,9 @@ public class ChainDefs {
         writeChains(Constants.PDB_OBSOLETE_PATH, false, version, outFile);
     }
 
-    private static void writeChains(String path, boolean fileNameChain, String version, String outFile) throws IOException {
+    private static void writeChains(String path, boolean isBundle, String version, String outFile) throws IOException {
       
-        Files.newDirectoryStream(Paths.get(path), "*.ent.gz")
+        Files.newDirectoryStream(Paths.get(path), "*.gz")
             .forEach(pathName -> {
  
                 PDBFileReader reader = new PDBFileReader();
@@ -109,6 +109,9 @@ public class ChainDefs {
 
                 String fileName = pathName.getFileName().toString();
                 String pdbId = fileName.substring(3,7).toLowerCase();
+                if (isBundle) {
+                    pdbId = fileName.substring(0,4).toLowerCase(); 
+                }
     
                 try {
                     
@@ -120,7 +123,7 @@ public class ChainDefs {
 
                     // *** write out file
 
-                    List<String> lines = getChains(structure, fileName, fileNameChain);
+                    List<String> lines = getChains(structure, fileName, isBundle);
                     if (lines.size() > 0) {
 
                         StringJoiner joiner = new StringJoiner(System.lineSeparator());
@@ -139,15 +142,15 @@ public class ChainDefs {
         });
     }
 
-    private static List<String> getChains(Structure structure, String fileName, boolean fileNameChain) {
+    private static List<String> getChains(Structure structure, String fileName, boolean isBundle) {
 
         // get chains for first model
         List<Chain> chains = structure.getModel(0);
 
         List<String> lines = null; 
-        if (fileNameChain) {
+        if (isBundle) {
             
-            String chainName = fileName.split("\\.")[0].substring(7);
+            String chainName = fileName.split("\\.")[0].substring(4);
 
             // get a line of data for each chain
             lines = chains.stream()
