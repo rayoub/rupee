@@ -4,18 +4,18 @@ ver=$1
 
 # delete output directories if it already exist
 [ -d ./pdb ] && rm -r pdb
-#[ -d ./obsolete ] && rm -r obsolete
+[ -d ./obsolete ] && rm -r obsolete
 
 # create output directory
 mkdir ./pdb
-#mkdir ./obsolete
+mkdir ./obsolete
 
 # message
 echo "To the chopper!"
 
 # parse pdb files
 xargs -a pdb_${ver}.txt -L1 -P8 ./chopper.sh pdb
-#xargs -a obsolete_${ver}.txt -L1 -P8 ./chopper.sh obsolete
+xargs -a obsolete_${ver}.txt -L1 -P8 ./chopper.sh obsolete
 
 echo "Copying files: takes about 10 minutes"
 
