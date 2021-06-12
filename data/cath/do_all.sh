@@ -1,5 +1,5 @@
 
-ver=v4_2_0
+ver=v4_3_0
 
 # delete output directory if it already exist
 [ -d ./pdb ] && rm -r pdb
