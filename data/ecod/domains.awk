@@ -28,10 +28,10 @@ $0 !~ /^#/ {
         t_name = $(11 + diff)
         f_name = $(12 + diff)
 
-        gsub(/[\"]/,"",x_name)
-        gsub(/[\"]/,"",h_name)
-        gsub(/[\"]/,"",t_name)
-        gsub(/[\"]/,"",f_name)
+        gsub(/["]/,"",x_name)
+        gsub(/["]/,"",h_name)
+        gsub(/["]/,"",t_name)
+        gsub(/["]/,"",f_name)
 
         print ecod_id, pdb_id, x, h, t, f, arch_name, x_name, h_name, t_name, f_name
     }
