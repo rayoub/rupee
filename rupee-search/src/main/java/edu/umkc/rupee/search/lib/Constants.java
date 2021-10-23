@@ -8,19 +8,10 @@ public class Constants {
    
     // *** LOCAL ONLY CONSTANTS  
     
-    public final static String DB_USER = "ayoub";
-    public final static String DB_PASSWORD = "ayoub";
+    public final static String DB_USER = "postgres";
+    public final static String DB_PASSWORD = "postgres";
 
-    public final static String DATA_PATH = "/home/ayoub/git/rupee/data/";
-    
-    // *** SERVER ONLY CONSTANTS  
-    
-    //public final static String DB_USER = "ec2-user";
-    //public final static String DB_PASSWORD = "ec2-user";
-    //
-    //public final static String DATA_PATH = "/home/ec2-user/data/";
-  
-    // *** END 
+    public final static String DATA_PATH = "C:/git/rupee/data/";
 
     public final static String CHAIN_PATH = DATA_PATH + "chain/";
     public final static String SCOP_PATH = DATA_PATH + "scop/";

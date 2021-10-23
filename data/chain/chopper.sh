@@ -12,9 +12,7 @@ residue_count=$5
 
 # exit if file doesn't exist
 if [ ! -e "../pdb/${dir}/pdb${pdb_id}.ent.gz" ]; then
-    if [ ! -e "../pdb/chopped/pdb${pdb_id}.ent.gz" ]; then
-        echo "Pdb file for ${chain_id} doesn't exist."
-    fi
+    echo "Pdb file for ${chain_id} doesn't exist."
     exit 1
 fi
 
