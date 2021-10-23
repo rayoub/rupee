@@ -11,7 +11,6 @@ import org.biojava.nbio.structure.io.LocalPDBDirectory.FetchBehavior;
 import org.biojava.nbio.structure.io.PDBFileReader;
 
 import edu.umkc.rupee.search.defs.DbType;
-import edu.umkc.rupee.search.lib.DbId;
 import edu.umkc.rupee.tm.Kabsch;
 import edu.umkc.rupee.tm.TmAlign;
 import edu.umkc.rupee.tm.TmMode;
