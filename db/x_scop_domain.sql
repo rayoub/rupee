@@ -1,7 +1,7 @@
 
 TRUNCATE scop_domain;
 
-COPY scop_domain (scop_id, pdb_id, sunid, cl, cf, sf, fa) FROM '/home/ayoub/git/rupee/data/scop/domains.txt' WITH (DELIMITER ' ');
+COPY scop_domain (scop_id, pdb_id, sunid, cl, cf, sf, fa) FROM 'C:\git\rupee\data\scop\domains.txt' WITH (DELIMITER ' ');
 
 -- aggregate some values for convenience
 UPDATE scop_domain

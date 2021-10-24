@@ -1,7 +1,7 @@
 
 TRUNCATE cath_domain;
 
-COPY cath_domain(cath_id, c, a, t, h, s, o, l, i, d, residue_count, resolution) FROM '/home/ayoub/git/rupee/data/cath/domains.txt' WITH (DELIMITER ' ');
+COPY cath_domain(cath_id, c, a, t, h, s, o, l, i, d, residue_count, resolution) FROM 'C:\git\rupee\data\cath\domains.txt' WITH (DELIMITER ' ');
 
 -- aggregate some values for convenience
 UPDATE cath_domain
