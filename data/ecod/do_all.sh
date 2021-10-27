@@ -1,6 +1,6 @@
 #! /bin/bash
 
-ver=develop280
+ver=develop282
 
 # delete output directory if it already exist
 [ -d ./pdb ] && rm -r pdb

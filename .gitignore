@@ -13,10 +13,6 @@ data/chain/obsolete/
 data/upload/
 
 # big data files
-data/scop/dir.cla.scop.1.73.txt
-data/scop/dir.des.scop.1.73.txt
-data/scop/dir.cla.scope.2.07-stable.txt
-data/scop/dir.des.scope.2.07-stable.txt
 data/scop/dir.cla.scope.2.08-stable.txt
 data/scop/dir.des.scope.2.08-stable.txt
 data/scop/domains.txt
@@ -28,7 +24,7 @@ data/cath/cath-names-v4_3_0.txt
 data/cath/domains.txt
 data/cath/names.txt
 data/cath/segments.txt
-data/ecod/ecod.develop280.domains.txt
+data/ecod/ecod.develop282.domains.txt
 data/ecod/domains.txt
 data/ecod/segments.txt
 
