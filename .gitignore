@@ -10,6 +10,7 @@ data/cath/pdb_diverse/
 data/ecod/pdb/
 data/chain/pdb/
 data/chain/obsolete/
+data/afdb/pdb/
 data/upload/
 
 # big data files

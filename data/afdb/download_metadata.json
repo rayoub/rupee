@@ -1,0 +1,191 @@
+[
+    {
+        "archive_name": "UP000006548_3702_ARATH.tar",
+        "species": "Arabidopsis thaliana",
+        "common_name": "Arabidopsis",
+        "latin_common_name": true,
+        "reference_proteome": "UP000006548",
+        "num_predicted_structures": 27434,
+        "size_bytes": 3818536960
+    },
+    {
+        "archive_name": "UP000001940_6239_CAEEL.tar",
+        "species": "Caenorhabditis elegans",
+        "common_name": "Nematode worm",
+        "latin_common_name": false,
+        "reference_proteome": "UP000001940",
+        "num_predicted_structures": 19694,
+        "size_bytes": 2726656000
+    },
+    {
+        "archive_name": "UP000000559_237561_CANAL.tar",
+        "species": "Candida albicans",
+        "common_name": "C. albicans",
+        "latin_common_name": true,
+        "reference_proteome": "UP000000559",
+        "num_predicted_structures": 5974,
+        "size_bytes": 1011507200
+    },
+    {
+        "archive_name": "UP000000437_7955_DANRE.tar",
+        "species": "Danio rerio",
+        "common_name": "Zebrafish",
+        "latin_common_name": false,
+        "reference_proteome": "UP000000437",
+        "num_predicted_structures": 24664,
+        "size_bytes": 4341145600
+    },
+    {
+        "archive_name": "UP000002195_44689_DICDI.tar",
+        "species": "Dictyostelium discoideum",
+        "common_name": "Dictyostelium",
+        "latin_common_name": true,
+        "reference_proteome": "UP000002195",
+        "num_predicted_structures": 12622,
+        "size_bytes": 2254080000
+    },
+    {
+        "archive_name": "UP000000803_7227_DROME.tar",
+        "species": "Drosophila melanogaster",
+        "common_name": "Fruit fly",
+        "latin_common_name": false,
+        "reference_proteome": "UP000000803",
+        "num_predicted_structures": 13458,
+        "size_bytes": 2279106560
+    },
+    {
+        "archive_name": "UP000000625_83333_ECOLI.tar",
+        "species": "Escherichia coli",
+        "common_name": "E. coli",
+        "latin_common_name": true,
+        "reference_proteome": "UP000000625",
+        "num_predicted_structures": 4363,
+        "size_bytes": 469309440
+    },
+    {
+        "archive_name": "UP000008827_3847_SOYBN.tar",
+        "species": "Glycine max",
+        "common_name": "Soybean",
+        "latin_common_name": false,
+        "reference_proteome": "UP000008827",
+        "num_predicted_structures": 55799,
+        "size_bytes": 7488266240
+    },
+    {
+        "archive_name": "UP000005640_9606_HUMAN.tar",
+        "species": "Homo sapiens",
+        "common_name": "Human",
+        "latin_common_name": false,
+        "reference_proteome": "UP000005640",
+        "num_predicted_structures": 23391,
+        "size_bytes": 5015930880
+    },
+    {
+        "archive_name": "UP000008153_5671_LEIIN.tar",
+        "species": "Leishmania infantum",
+        "common_name": "L. infantum",
+        "latin_common_name": true,
+        "reference_proteome": "UP000008153",
+        "num_predicted_structures": 7924,
+        "size_bytes": 1552752640
+    },
+    {
+        "archive_name": "UP000000805_243232_METJA.tar",
+        "species": "Methanocaldococcus jannaschii",
+        "common_name": "M. jannaschii",
+        "latin_common_name": true,
+        "reference_proteome": "UP000000805",
+        "num_predicted_structures": 1773,
+        "size_bytes": 178278400
+    },
+    {
+        "archive_name": "UP000000589_10090_MOUSE.tar",
+        "species": "Mus musculus",
+        "common_name": "Mouse",
+        "latin_common_name": false,
+        "reference_proteome": "UP000000589",
+        "num_predicted_structures": 21615,
+        "size_bytes": 3718932480
+    },
+    {
+        "archive_name": "UP000001584_83332_MYCTU.tar",
+        "species": "Mycobacterium tuberculosis",
+        "common_name": "M. tuberculosis",
+        "latin_common_name": true,
+        "reference_proteome": "UP000001584",
+        "num_predicted_structures": 3988,
+        "size_bytes": 440709120
+    },
+    {
+        "archive_name": "UP000059680_39947_ORYSJ.tar",
+        "species": "Oryza sativa",
+        "common_name": "Asian rice",
+        "latin_common_name": false,
+        "reference_proteome": "UP000059680",
+        "num_predicted_structures": 43649,
+        "size_bytes": 4630118400
+    },
+    {
+        "archive_name": "UP000001450_36329_PLAF7.tar",
+        "species": "Plasmodium falciparum",
+        "common_name": "P. falciparum",
+        "latin_common_name": true,
+        "reference_proteome": "UP000001450",
+        "num_predicted_structures": 5187,
+        "size_bytes": 1186273280
+    },
+    {
+        "archive_name": "UP000002494_10116_RAT.tar",
+        "species": "Rattus norvegicus",
+        "common_name": "Rat",
+        "latin_common_name": false,
+        "reference_proteome": "UP000002494",
+        "num_predicted_structures": 21272,
+        "size_bytes": 3568947200
+    },
+    {
+        "archive_name": "UP000002311_559292_YEAST.tar",
+        "species": "Saccharomyces cerevisiae",
+        "common_name": "Budding yeast",
+        "latin_common_name": false,
+        "reference_proteome": "UP000002311",
+        "num_predicted_structures": 6040,
+        "size_bytes": 1005987840
+    },
+    {
+        "archive_name": "UP000002485_284812_SCHPO.tar",
+        "species": "Schizosaccharomyces pombe",
+        "common_name": "Fission yeast",
+        "latin_common_name": false,
+        "reference_proteome": "UP000002485",
+        "num_predicted_structures": 5128,
+        "size_bytes": 813045760
+    },
+    {
+        "archive_name": "UP000008816_93061_STAA8.tar",
+        "species": "Staphylococcus aureus",
+        "common_name": "S. aureus",
+        "latin_common_name": true,
+        "reference_proteome": "UP000008816",
+        "num_predicted_structures": 2888,
+        "size_bytes": 281016320
+    },
+    {
+        "archive_name": "UP000002296_353153_TRYCC.tar",
+        "species": "Trypanosoma cruzi",
+        "common_name": "T. cruzi",
+        "latin_common_name": true,
+        "reference_proteome": "UP000002296",
+        "num_predicted_structures": 19036,
+        "size_bytes": 3045939200
+    },
+    {
+        "archive_name": "UP000007305_4577_MAIZE.tar",
+        "species": "Zea mays",
+        "common_name": "Maize",
+        "latin_common_name": false,
+        "reference_proteome": "UP000007305",
+        "num_predicted_structures": 39299,
+        "size_bytes": 5257492480
+    }
+]
