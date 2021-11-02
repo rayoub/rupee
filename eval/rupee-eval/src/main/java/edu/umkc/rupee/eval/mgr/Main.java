@@ -122,7 +122,7 @@ public class Main {
                 
                 long start = 0, stop = 0;
                 start = System.currentTimeMillis();
-                OptionFunctions.option_s(line, printHeader);
+                OptionFunctions.option_s(line, printHeader, printHeader);
                 stop = System.currentTimeMillis();
                 System.out.println("Time = " + (stop - start));
 
@@ -130,7 +130,7 @@ public class Main {
 
                 long start = 0, stop = 0;
                 start = System.currentTimeMillis();
-                OptionFunctions.option_u(line, printHeader);
+                OptionFunctions.option_u(line, printHeader, printHeader);
                 stop = System.currentTimeMillis();
                 System.out.println("Time = " + (stop - start));
 
