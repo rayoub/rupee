@@ -70,6 +70,16 @@ BEGIN
             WHERE
                 h.db_id = p_db_id;
 
+        ELSIF p_search_type = 5 THEN
+
+            SELECT
+                h.band_hashes[p_band_index]
+            INTO
+                band_value
+            FROM
+                afdb_hashes h
+            WHERE
+                h.db_id = p_db_id;
         END IF;
 
     ELSE -- UPLOAD
