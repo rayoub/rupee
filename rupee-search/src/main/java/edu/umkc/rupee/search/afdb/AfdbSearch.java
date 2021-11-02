@@ -68,10 +68,20 @@ public class AfdbSearch extends Search {
         afdbRecord.setProteomeId(rs.getString("proteome_id"));
         afdbRecord.setSpecies(rs.getString("species"));
         afdbRecord.setCommonName(rs.getString("common_name"));
+
+        afdbRecord.setUniprotId(getUniprotId(afdbRecord.getDbId()));
     }
 
     public SearchRecord getSearchRecord() {
 
         return new AfdbSearchRecord();
+    }
+
+    private String getUniprotId(String afdbId) {
+
+        String suf = afdbId.substring(3);
+        String sub = suf.substring(0, suf.indexOf("-"));
+
+        return sub;
     }
 }

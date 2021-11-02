@@ -5,6 +5,7 @@ import edu.umkc.rupee.search.base.SearchRecord;
 public class AfdbSearchRecord extends SearchRecord {
 
     private String proteomeId;
+    private String uniprotId;
     private String species;
     private String commonName;
 
@@ -14,6 +15,14 @@ public class AfdbSearchRecord extends SearchRecord {
 
     public void setProteomeId(String proteomeId) {
         this.proteomeId = proteomeId;
+    }
+    
+    public String getUniprotId() {
+        return uniprotId;
+    }
+
+    public void setUniprotId(String uniprotId) {
+        this.uniprotId = uniprotId;
     }
 
     public String getSpecies() {
