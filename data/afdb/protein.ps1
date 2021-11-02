@@ -9,8 +9,8 @@ foreach ($jar in $jars) {
 
         # output a line
         $line = @(
-            $jar.reference_proteome,
-            $protein
+            $protein,
+            $jar.reference_proteome
         ) -join ','
         $line | Out-File -Append .\protein.txt
     }

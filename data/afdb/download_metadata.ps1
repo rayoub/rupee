@@ -7,7 +7,7 @@ foreach ($jar in $jars) {
     # make directory based on reference_proteome
     mkdir -p $dir
 
-    # copy tar files to directory
+    # move tar files to directory
     Move-Item -Path $jar.archive_name -Destination $dir
 
     # move to directory

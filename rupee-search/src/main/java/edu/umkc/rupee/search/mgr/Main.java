@@ -76,9 +76,6 @@ public class Main {
             option_help(options);
             return;
         }
-
-        // allow for debug 
-        // System.console().readLine("Press Enter Before Continuing> ");
         
         // header or not
         boolean printHeader = true; 

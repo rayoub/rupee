@@ -12,6 +12,11 @@ import java.util.stream.Collectors;
 
 import org.apache.commons.cli.CommandLine;
 
+import edu.umkc.rupee.search.afdb.AfdbHash;
+import edu.umkc.rupee.search.afdb.AfdbImport;
+import edu.umkc.rupee.search.afdb.AfdbSearch;
+import edu.umkc.rupee.search.afdb.AfdbSearchCriteria;
+import edu.umkc.rupee.search.afdb.AfdbSearchRecord;
 import edu.umkc.rupee.search.base.SearchRecord;
 import edu.umkc.rupee.search.base.SearchResults;
 import edu.umkc.rupee.search.cath.CathHash;
@@ -82,6 +87,10 @@ public class OptionFunctions {
             ChainImport chainImport = new ChainImport();
             chainImport.importGrams();
         }
+        else if (dbType == DbType.AFDB) {
+            AfdbImport afdbImport = new AfdbImport();
+            afdbImport.importGrams();;
+        }
         else { // DIR
 
             // first initialize dir tables
@@ -122,6 +131,10 @@ public class OptionFunctions {
         else if (dbType == DbType.CHAIN) { 
             ChainHash chainHash = new ChainHash();
             chainHash.hash(); 
+        }
+        else if (dbType == DbType.AFDB) {
+            AfdbHash afdbHash = new AfdbHash();
+            afdbHash.hash();
         }
         else { // DIR
             DirHash dirHash = new DirHash();
@@ -476,6 +489,54 @@ public class OptionFunctions {
             for (SearchRecord baseRecord : records) {
            
                 ChainSearchRecord record = (ChainSearchRecord) baseRecord;
+
+                // gathering results
+                System.out.printf("%d,%s,%s,%.4f,%.4f,%.4f,%.4f,%s,%s\n",
+                    record.getN(),
+                    criteria.dbId,
+                    record.getDbId(),
+                    record.getRmsd(),
+                    record.getTmScore(),
+                    record.getQScore(),
+                    record.getSsapScore(),
+                    criteria.searchMode.name().toLowerCase(),
+                    criteria.searchType.name().toLowerCase()
+                );
+            }
+        }
+        else if (dbType == DbType.AFDB) { // AFDB
+        
+            AfdbSearchCriteria criteria = new AfdbSearchCriteria();
+            
+            criteria.searchBy = searchBy;
+            criteria.idDbType = idDbType;
+            criteria.searchDbType = dbType;
+            criteria.dbId = idOrPath;
+            if (criteria.searchBy == SearchBy.UPLOAD) {
+                criteria.uploadId = uploadId;
+            }
+
+            criteria.limit = limit;
+            criteria.searchType = searchType;
+            criteria.searchMode = searchMode;
+            criteria.sortBy = sortBy;
+
+            AfdbSearch afdbSearch = new AfdbSearch();
+            SearchResults results = afdbSearch.search(criteria);
+            List<SearchRecord> records = results.getRecords();
+
+            // print headers 
+            if (printHeader) {
+                String header = "n,db_id_1,db_id_2,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
+                if (searchBy == SearchBy.UPLOAD) {
+                    header = "n,file_name,db_id,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
+                }
+                System.out.println(header);
+            }   
+        
+            for (SearchRecord baseRecord : records) {
+           
+                AfdbSearchRecord record = (AfdbSearchRecord) baseRecord;
 
                 // gathering results
                 System.out.printf("%d,%s,%s,%.4f,%.4f,%.4f,%.4f,%s,%s\n",

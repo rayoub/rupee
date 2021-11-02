@@ -62,24 +62,20 @@ eval/rupee-eval/target/
 **/*.factorypath
 **/nohup.out
 
-# eclim
-**/workbench.xmi
+# project related
+.vscode/
 rupee-core/.settings/
 rupee-core/.classpath
 rupee-core/.project
-rupee-core/.gitignore
 rupee-tm/.settings/
 rupee-tm/.classpath
 rupee-tm/.project
-rupee-tm/.gitignore
 rupee-search/.settings/
 rupee-search/.classpath
 rupee-search/.project
-rupee-search/.gitignore
 eval/rupee-eval/.settings/
 eval/rupee-eval/.classpath
 eval/rupee-eval/.project
-eval/rupee-eval/.gitignore
 
 # ssap
 eval/results/ssap/cath-ssap

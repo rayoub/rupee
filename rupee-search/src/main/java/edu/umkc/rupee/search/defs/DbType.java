@@ -10,6 +10,7 @@ public enum DbType {
     CATH(2, "CATH", "cath", Constants.CATH_PDB_PATH),
     ECOD(3, "ECOD", "ecod", Constants.ECOD_PDB_PATH),
     CHAIN(4, "PDB Chains", "chain", Constants.CHAIN_PDB_PATH),
+    AFDB(5, "AlphaFold DB", "afdb", Constants.AFDB_PDB_PATH),
     UPLOAD(10, "Upload", "upload", Constants.UPLOAD_PATH);
 
     private int id;
@@ -55,6 +56,9 @@ public enum DbType {
         }
         else if (id == CHAIN.getId()) {
             return CHAIN;
+        }
+        else if (id == AFDB.getId()) {
+            return AFDB;
         }
         else if (id == UPLOAD.getId()) {
             return UPLOAD;

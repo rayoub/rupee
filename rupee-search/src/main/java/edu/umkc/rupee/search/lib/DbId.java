@@ -18,6 +18,7 @@ public class DbId {
     private static Pattern CATH_PATTERN = Pattern.compile("[1-9][a-z0-9]{3}[a-z1-9][0-9]{2}", Pattern.CASE_INSENSITIVE);            // maxlen = 7
     private static Pattern ECOD_PATTERN = Pattern.compile("e[1-9][a-z0-9]{3}[a-z1-9\\.]+[0-9]+", Pattern.CASE_INSENSITIVE);         // maxlen = 12 (fudge)
     private static Pattern CHAIN_PATTERN = Pattern.compile("[1-9][a-z0-9]{3}[a-z0-9]+", Pattern.CASE_INSENSITIVE);                  // maxlen = 12 (fudge)
+    private static Pattern AFDB_PATTERN = Pattern.compile("AF\\-[a-z0-9\\-]+\\-model_v1", Pattern.CASE_INSENSITIVE);                // maxlen = 26
    
     private static boolean isScopId(String id) {
 
@@ -43,6 +44,12 @@ public class DbId {
         return m.matches();
     }
 
+    private static boolean isAfdbId(String id) {
+
+        Matcher m = AFDB_PATTERN.matcher(id);
+        return m.matches();
+    }
+
     public static DbType getIdDbType(String id) {
 
         if (isScopId(id)) {
@@ -57,6 +64,9 @@ public class DbId {
         }
         else if (isChainId(id)) {
             return DbType.CHAIN;
+        }
+        else if (isAfdbId(id)) {
+            return DbType.AFDB;
         }
         else {
             return DbType.INVALID;
@@ -81,6 +91,9 @@ public class DbId {
                 break;
             case CHAIN:
                 normalizedId = id.substring(0,4).toLowerCase() + id.substring(4,id.length());
+                break;
+            case AFDB:
+                normalizedId = id.substring(0,id.length() - "-model_v1".length()).toUpperCase() + "-model_v1";
                 break;
             default:
                 normalizedId = id;

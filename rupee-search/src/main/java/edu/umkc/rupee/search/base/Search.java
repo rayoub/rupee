@@ -250,7 +250,6 @@ public abstract class Search {
                     .collect(Collectors.toList());
                 
                 // *** 
-
                 if (criteria.searchType == SearchType.FULL_LENGTH) {
                     
                     // alternate search type record from TmMode fast
