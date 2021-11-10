@@ -29,7 +29,8 @@ BEGIN
         INNER JOIN afdb_grams g
             ON g.afdb_id = p.afdb_id
     WHERE  
-        p.afdb_sid % p_split_count = p_split_index;
+        p.afdb_sid % p_split_count = p_split_index
+        AND p.proteome_id = COALESCE(p_proteome_id, p.proteome_id);
 
 END;
 $$LANGUAGE plpgsql;
