@@ -11,8 +11,6 @@ public class SearchRecord {
     private double tmScore;
     private double tmScoreQ;
     private double rmsd;
-    private double qScore;
-    private double ssapScore;
 
     public int getN() {
         return n;
@@ -84,21 +82,5 @@ public class SearchRecord {
 
     public void setRmsd(double rmsd) {
         this.rmsd = rmsd;
-    }
-
-    public double getQScore() {
-        return qScore;
-    }
-
-    public void setQScore(double qScore) {
-        this.qScore = qScore;
-    }
-
-    public double getSsapScore() {
-        return ssapScore;
-    }
-
-    public void setSsapScore(double ssapScore) {
-        this.ssapScore = ssapScore;
     }
 }

@@ -230,10 +230,7 @@ public class LCS {
         int i = maxI;
         int j = maxJ;
         while (
-                ((searchType == SearchType.FULL_LENGTH 
-                  || searchType == SearchType.RMSD
-                  || searchType == SearchType.Q_SCORE
-                  || searchType == SearchType.SSAP_SCORE) && i != 0 && j != 0)
+                ((searchType == SearchType.FULL_LENGTH || searchType == SearchType.RMSD) && i != 0 && j != 0)
                 ||
                 (searchType == SearchType.CONTAINED_IN && i != 0)
                 ||
@@ -327,10 +324,7 @@ public class LCS {
         }
 
         double normalizeBy = 0;
-        if (searchType == SearchType.FULL_LENGTH 
-                || searchType == SearchType.RMSD
-                || searchType == SearchType.Q_SCORE
-                || searchType == SearchType.SSAP_SCORE) {
+        if (searchType == SearchType.FULL_LENGTH || searchType == SearchType.RMSD) {
             normalizeBy = (xlen + ylen) * 0.5;
         }
         else if (searchType == SearchType.CONTAINED_IN) {

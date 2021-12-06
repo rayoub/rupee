@@ -48,8 +48,7 @@ public class Kabsch {
     private int a_failed = 0, b_failed = 0;
     private double epsilon = 0.00000001;
 
-    public double execute(double x[][], double y[][], int n, int mode, double t[], double u[][]) {
-
+    public double execute(double x[][], double y[][], int n, KabschMode mode, double t[], double u[][]) {
 
         // initializtation
         rmsd = 0;
@@ -102,7 +101,7 @@ public class Kabsch {
             xc[i] = s1[i] / n;
             yc[i] = s2[i] / n;
         }
-        if (mode == 2 || mode == 0) {
+        if (mode == KabschMode.CALC_RMSD_ONLY || mode == KabschMode.CALC_BOTH) {
             for (mm = 0; mm < n; mm++) {
                 for (nn = 0; nn < 3; nn++) {
                     e0 += (x[mm][nn] - xc[nn]) * (x[mm][nn] - xc[nn]) + (y[mm][nn] - yc[nn]) * (y[mm][nn] - yc[nn]);
@@ -158,7 +157,7 @@ public class Kabsch {
                 e[1] = (spur - cth) + sth;
                 e[2] = (spur - cth) - sth;
 
-                if (mode != 0) {// compute a
+                if (mode == KabschMode.CALC_MATRIX_ONLY || mode == KabschMode.CALC_BOTH) {
                     for (l = 0; l < 3; l = l + 2) {
                         d = e[l];
                         ss[0] = (d - rr[2]) * (d - rr[5]) - rr[4] * rr[4];
@@ -254,11 +253,11 @@ public class Kabsch {
                         a[1][1] = a[2][2] * a[0][0] - a[2][0] * a[0][2];
                         a[2][1] = a[0][2] * a[1][0] - a[0][0] * a[1][2];
                     }
-                } // if(mode!=0)
+                } 
             } // h>0
 
             // compute b anyway
-            if (mode != 0 && a_failed != 1)// a is computed correctly
+            if ((mode == KabschMode.CALC_MATRIX_ONLY || mode == KabschMode.CALC_BOTH) && a_failed != 1)
             {
                 // compute b
                 for (l = 0; l < 2; l++) {
@@ -327,7 +326,7 @@ public class Kabsch {
                 for (i = 0; i < 3; i++) {
                     t[i] = ((yc[i] - u[i][0] * xc[0]) - u[i][1] * xc[1]) - u[i][2] * xc[2];
                 }
-            } // if(mode!=0 && a_failed!=1)
+            } // 
         } // spur>0
         else // just compute t and errors
         {
@@ -349,7 +348,7 @@ public class Kabsch {
         }
         d = (d + e[1]) + e[0];
 
-        if (mode == 2 || mode == 0) {
+        if (mode == KabschMode.CALC_RMSD_ONLY || mode == KabschMode.CALC_BOTH) {
             rmsd = (e0 - d) - d;
             if (rmsd < 0.0)
                 rmsd = 0.0;

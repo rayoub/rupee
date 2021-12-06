@@ -81,12 +81,6 @@ public abstract class Search {
         if (criteria.searchType == SearchType.RMSD) {
             criteria.sortBy = SortBy.RMSD;
         }
-        else if (criteria.searchType == SearchType.Q_SCORE) {
-            criteria.sortBy = SortBy.Q_SCORE;
-        }
-        else if (criteria.searchType == SearchType.SSAP_SCORE) {
-            criteria.sortBy = SortBy.SSAP_SCORE;
-        }
         else { 
             criteria.sortBy = SortBy.TM_SCORE;
         }
@@ -412,12 +406,6 @@ public abstract class Search {
         else if (criteria.sortBy == SortBy.RMSD) {
             comparator = Comparator.comparingDouble(SearchRecord::getRmsd);
         }
-        else if (criteria.sortBy == SortBy.Q_SCORE) {
-            comparator = Comparator.comparingDouble(SearchRecord::getQScore);
-        }
-        else if (criteria.sortBy == SortBy.SSAP_SCORE) {
-            comparator = Comparator.comparingDouble(SearchRecord::getSsapScore);
-        }
         else {
             comparator = Comparator.comparingDouble(SearchRecord::getTmScore);
         }
@@ -459,10 +447,8 @@ public abstract class Search {
             TmAlign tm = new TmAlign(queryStructure, targetStructure, mode, kabsch);
             TmResults results = tm.align();
 
-            // always get these because they're there
+            // always get it because it's there
             record.setRmsd(results.getRmsd());
-            record.setQScore(results.getQScore());
-            record.setSsapScore(results.getSsapScore());
 
             if (criteria.searchType == SearchType.FULL_LENGTH) {
                 record.setTmScore(results.getTmScoreAvg());    

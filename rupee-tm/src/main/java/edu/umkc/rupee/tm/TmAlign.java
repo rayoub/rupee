@@ -381,7 +381,7 @@ public class TmAlign {
         align_len = k;
 
         // minimize rmsd for the best rotation and translation matrices t and u
-        double rmsd = _kabsch.execute(_r1, _r2, align_len, 0, _t, _u); 
+        double rmsd = _kabsch.execute(_r1, _r2, align_len, KabschMode.CALC_RMSD_ONLY, _t, _u); 
         rmsd = Math.sqrt(rmsd / (double) align_len);
 
         // Q-score compatible with SSM
@@ -422,9 +422,6 @@ public class TmAlign {
         results.setTmScoreAvg(tmAvg);
         results.setRmsd(rmsd);
         results.setQScore(qScore);
-
-        // TODO: remove this at some point - total waste 
-        results.setSsapScore(calculateSsap(align_len, m1, m2));
 
         if (this._mode == TmMode.ALIGN_TEXT) {
 
@@ -524,7 +521,7 @@ public class TmAlign {
         align_len = k;
 
         // minimize rmsd for the best rotation and translation matrices t and u
-        double rmsd = _kabsch.execute(_r1, _r2, align_len, 0, _t, _u); 
+        double rmsd = _kabsch.execute(_r1, _r2, align_len, KabschMode.CALC_RMSD_ONLY, _t, _u); 
         rmsd = Math.sqrt(rmsd / (double) align_len);
 
         // ********************************************************************************* //
@@ -718,7 +715,7 @@ public class TmAlign {
                 k++;
             }
         }
-        _kabsch.execute(_r1, _r2, k, 1, t, u);
+        _kabsch.execute(_r1, _r2, k, KabschMode.CALC_MATRIX_ONLY, t, u);
 
         for (int ii = 0; ii < xlen; ii++) {
             Functions.transform(t, u, xa[ii], xx);
@@ -806,7 +803,7 @@ public class TmAlign {
                     }
 
                     // superpose the two structures and rotate it
-                    _kabsch.execute(_r1, _r2, n_frag[i_frag], 1, t, u);
+                    _kabsch.execute(_r1, _r2, n_frag[i_frag], KabschMode.CALC_MATRIX_ONLY, t, u);
 
                     double gap_open = 0.0;
                     NW.dp_dist(_path, _val, xa, ya, xlen, ylen, t, u, d02, gap_open, invmap_local);
@@ -1136,7 +1133,7 @@ public class TmAlign {
                 throw new RuntimeException("Wrong map!");
             }
         }
-        _kabsch.execute(_r1, _r2, k, 1, _t, _u);
+        _kabsch.execute(_r1, _r2, k, KabschMode.CALC_MATRIX_ONLY, _t, _u);
 
         // evaluate score
         double di;
@@ -1182,7 +1179,7 @@ public class TmAlign {
         }
 
         if (n_ali != j) {
-            _kabsch.execute(_r1, _r2, j, 1, _t, _u);
+            _kabsch.execute(_r1, _r2, j, KabschMode.CALC_MATRIX_ONLY, _t, _u);
             tmscore1 = 0;
             for (k = 0; k < n_ali; k++) {
                 Functions.transform(_t, _u, _xtm[k], xrot);
@@ -1218,7 +1215,7 @@ public class TmAlign {
             }
 
             // evaluate the score
-            _kabsch.execute(_r1, _r2, j, 1, _t, _u);
+            _kabsch.execute(_r1, _r2, j, KabschMode.CALC_MATRIX_ONLY, _t, _u);
             tmscore2 = 0;
             for (k = 0; k < n_ali; k++) {
                 Functions.transform(_t, _u, _xtm[k], xrot);
@@ -1344,7 +1341,7 @@ public class TmAlign {
                 }
 
                 // calculate rotation matrix based on the fragment
-                _kabsch.execute(_r1, _r2, frag_len, 1, t, u);
+                _kabsch.execute(_r1, _r2, frag_len, KabschMode.CALC_MATRIX_ONLY, t, u);
                 
                 // peform rotation and store in xt
                 Functions.do_rotation(xtm, _xt, align_len, t, u);
@@ -1390,7 +1387,7 @@ public class TmAlign {
                     }
 
                     // calculate rotation matrix based on the satisfied distances
-                    _kabsch.execute(_r1, _r2, num_sat, 1, t, u);
+                    _kabsch.execute(_r1, _r2, num_sat, KabschMode.CALC_MATRIX_ONLY, t, u);
                     
                     // peform rotation and store in xt
                     Functions.do_rotation(xtm, _xt, align_len, t, u);
@@ -1942,97 +1939,6 @@ public class TmAlign {
             }
         }
         System.out.println(map);
-    }
-    
-    // **********************************************************************************
-    // TBD - to be deprecated
-    // **********************************************************************************
-
-    public double calculateSsap(int align_len, int m1[], int m2[]) {
-    
-        // just CA atoms
-        int xlen = _xgroups.size();
-        double[][] xa_all = new double[xlen][3];
-        double[][] xt_all = new double[xlen][3];
-        
-        // iterate x atoms for xa_all
-        for (int i = 0; i < _xgroups.size(); i++) {
-            
-            Group group = _xgroups.get(i);
-
-            Atom ca = group.getAtom("CA");
-            xa_all[i][0] = ca.getX();
-            xa_all[i][1] = ca.getY();
-            xa_all[i][2] = ca.getZ();
-        }
-
-        // transform xa_all into xt_all
-        Functions.do_rotation(xa_all, xt_all, xlen, _t, _u);
-
-        // just CA atoms
-        int ylen = _ygroups.size();
-        double[][] ya_all = new double[ylen][3];
-        
-        // iterate y atoms for ya_all
-        for (int i = 0; i < _ygroups.size(); i++) {
-            
-            Group group = _ygroups.get(i);
-
-            Atom ca = group.getAtom("CA");
-            ya_all[i][0] = ca.getX();
-            ya_all[i][1] = ca.getY();
-            ya_all[i][2] = ca.getZ();
-        }
-       
-        SsapScoring ssap = new SsapScoring(xt_all, ya_all); 
-
-        // build alignment
-        SsapAlignment alignment = new SsapAlignment();
-        
-        int i, j, k;
-        int i_old = 0;
-        int j_old = 0;
-        
-        for (k = 0; k < align_len; k++) {
-      
-            // gaps 
-            for (i = i_old; i < m1[k]; i++) {
-
-                // align x to gap
-                alignment.add(i, SsapAlignment.NULL_POS);
-            }
-            for (j = j_old; j < m2[k]; j++) {
-
-                // align y to gap
-                alignment.add(SsapAlignment.NULL_POS, j);
-            }
-
-            // aligned pair
-            alignment.add(m1[k], m2[k]);
-
-            i_old = m1[k] + 1;
-            j_old = m2[k] + 1;
-        }
-
-        // end gaps if any
-        for (i = i_old; i < xlen; i++) {
-            
-            // align x to gap
-            alignment.add(i, SsapAlignment.NULL_POS);
-        }
-        for (j = j_old; j < ylen; j++) {
-        
-            // align y to gap
-            alignment.add(SsapAlignment.NULL_POS, j);
-        }
-
-        // DEBUG
-        //System.out.println(alignment.toString());
-
-        // score alignment
-        double ssapScore = ssap.getScore(alignment);
-
-        return ssapScore;
     }
 }
 

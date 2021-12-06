@@ -253,12 +253,6 @@ public class OptionFunctions {
         if (searchType == SearchType.RMSD) {
             sortBy = SortBy.RMSD;
         }
-        else if (searchType == SearchType.Q_SCORE) {
-            sortBy = SortBy.Q_SCORE;
-        }
-        else if (searchType == SearchType.SSAP_SCORE) {
-            sortBy = SortBy.SSAP_SCORE;
-        }
         else {
             sortBy = SortBy.TM_SCORE;
         }
@@ -308,14 +302,12 @@ public class OptionFunctions {
            
                 ScopSearchRecord record = (ScopSearchRecord) baseRecord;
 
-                String data = String.format("%d,%s,%s,%.4f,%.4f,%.4f,%.4f,%s,%s",
+                String data = String.format("%d,%s,%s,%.4f,%.4f,%s,%s",
                     record.getN(),
                     criteria.dbId,
                     record.getDbId(),
                     record.getRmsd(),
                     record.getTmScore(),
-                    record.getQScore(),
-                    record.getSsapScore(),
                     criteria.searchMode.name().toLowerCase(),
                     criteria.searchType.name().toLowerCase()
                 );
@@ -378,14 +370,12 @@ public class OptionFunctions {
              
                 CathSearchRecord record = (CathSearchRecord) baseRecord; 
 
-                String data = String.format("%d,%s,%s,%.4f,%.4f,%.4f,%.4f,%s,%s",
+                String data = String.format("%d,%s,%s,%.4f,%.4f,%s,%s",
                     record.getN(),
                     criteria.dbId,
                     record.getDbId(),
                     record.getRmsd(),
                     record.getTmScore(),
-                    record.getQScore(),
-                    record.getSsapScore(),
                     criteria.searchMode.name().toLowerCase(),
                     criteria.searchType.name().toLowerCase()
                 );
@@ -443,14 +433,12 @@ public class OptionFunctions {
                 EcodSearchRecord record = (EcodSearchRecord) baseRecord;
 
                 // gathering results
-                System.out.printf("%d,%s,%s,%.4f,%.4f,%.4f,%.4f,%s,%s\n",
+                System.out.printf("%d,%s,%s,%.4f,%.4f,%s,%s\n",
                     record.getN(),
                     criteria.dbId,
                     record.getDbId(),
                     record.getRmsd(),
                     record.getTmScore(),
-                    record.getQScore(),
-                    record.getSsapScore(),
                     criteria.searchMode.name().toLowerCase(),
                     criteria.searchType.name().toLowerCase()
                 );
@@ -491,14 +479,12 @@ public class OptionFunctions {
                 ChainSearchRecord record = (ChainSearchRecord) baseRecord;
 
                 // gathering results
-                System.out.printf("%d,%s,%s,%.4f,%.4f,%.4f,%.4f,%s,%s\n",
+                System.out.printf("%d,%s,%s,%.4f,%.4f,%s,%s\n",
                     record.getN(),
                     criteria.dbId,
                     record.getDbId(),
                     record.getRmsd(),
                     record.getTmScore(),
-                    record.getQScore(),
-                    record.getSsapScore(),
                     criteria.searchMode.name().toLowerCase(),
                     criteria.searchType.name().toLowerCase()
                 );
@@ -539,14 +525,12 @@ public class OptionFunctions {
                 AfdbSearchRecord record = (AfdbSearchRecord) baseRecord;
 
                 // gathering results
-                System.out.printf("%d,%s,%s,%.4f,%.4f,%.4f,%.4f,%s,%s\n",
+                System.out.printf("%d,%s,%s,%.4f,%.4f,%s,%s\n",
                     record.getN(),
                     criteria.dbId,
                     record.getDbId(),
                     record.getRmsd(),
                     record.getTmScore(),
-                    record.getQScore(),
-                    record.getSsapScore(),
                     criteria.searchMode.name().toLowerCase(),
                     criteria.searchType.name().toLowerCase()
                 );
@@ -587,14 +571,12 @@ public class OptionFunctions {
                 DirSearchRecord record = (DirSearchRecord) baseRecord;
 
                 // gathering results
-                System.out.printf("%d,%s,%s,%.4f,%.4f,%.4f,%.4f,%s,%s\n",
+                System.out.printf("%d,%s,%s,%.4f,%.4f,%s,%s\n",
                     record.getN(),
                     criteria.dbId,
                     record.getDbId(),
                     record.getRmsd(),
                     record.getTmScore(),
-                    record.getQScore(),
-                    record.getSsapScore(),
                     criteria.searchMode.name().toLowerCase(),
                     criteria.searchType.name().toLowerCase()
                 );
