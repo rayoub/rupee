@@ -113,6 +113,33 @@ public class TmAlignOutput {
         return sb.toString();
     }
 
+    public static String multiAlign3dOutput(List<TmResults> results) {
+       
+        // *** all y structures are identical 
+
+        SecStrucCalc yssCalc = new SecStrucCalc();
+        try {
+            yssCalc.calculate(results.get(0).get_ystruct(), true);
+        } catch (StructureException e) {
+            // do nothing
+        }
+
+        StringBuilder sb = new StringBuilder();
+
+        // set sec structs
+        writeHelicesToPdb(sb, results.get(0).get_ygroups(), "A");
+        writeStrandsToPdb(sb, results.get(0).get_ygroups(), "A");
+        writeChainToPdb(sb, results.get(0).get_ygroups(), "A");
+
+        char chainId = 'B';
+        for (TmResults current : results) {
+            writeChainToPdb(sb, current.get_xgroups(), String.valueOf(chainId));
+            chainId++;
+        }
+
+        return sb.toString(); 
+    }
+
     public static String align3dOutput(TmResults results) {
 
         // assign secondary structure
