@@ -1,6 +1,0 @@
-benchmark,app,db_id,timing,n,gram_count
-dummy,mTM,dummy,0,0,0
-dummy,RUPEE Top-Aligned,dummy,0,0,0
-dummy,RUPEE Fast,dummy,0,0,0
-dummy,SSM,dummy,0,0,0
-dummy,CATHEDRAL,dummy,0,0,0
