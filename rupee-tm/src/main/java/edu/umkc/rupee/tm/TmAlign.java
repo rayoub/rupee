@@ -1,9 +1,7 @@
 package edu.umkc.rupee.tm;
 
 import java.util.Arrays;
-import java.util.Formatter;
 import java.util.List;
-import java.util.Locale;
 import java.util.stream.Collectors;
 
 import org.apache.commons.lang3.mutable.MutableDouble;
@@ -13,9 +11,6 @@ import org.biojava.nbio.structure.Atom;
 import org.biojava.nbio.structure.Chain;
 import org.biojava.nbio.structure.Group;
 import org.biojava.nbio.structure.Structure;
-import org.biojava.nbio.structure.StructureException;
-import org.biojava.nbio.structure.secstruc.SecStrucCalc;
-import org.biojava.nbio.structure.secstruc.SecStrucInfo;
 
 public class TmAlign {
 
@@ -27,30 +22,39 @@ public class TmAlign {
     private Kabsch _kabsch; 
 
     // structure privates
-    private Structure _xstruct;
-    private Structure _ystruct;
     private String _xname;
     private String _yname;
-    private Chain _xchain;
-    private Chain _ychain;
+    private Structure _xstruct;
+    private Structure _ystruct;
     private List<Group> _xgroups;
     private List<Group> _ygroups;
+    private Chain _xchain;
+    private Chain _ychain;
     private List<Atom> _xatoms;
     private List<Atom> _yatoms;
 
-    // scratch privates 
-    private double _score[][];                      // for dynamic programming
-    private boolean _path[][];                      // for dynamic programming
-    private double _val[][];                        // for dynamic programming
-    private int _xlen, _ylen, _minlen;              // length of proteins
+    // privates 
     private double _xa[][], _ya[][];                // for input coordinates
     private double _xtm[][], _ytm[][];              // for packing alignment without gaps 
     private double _xt[][];                         // for saving the superposition coords of xa or xtm
+    private int _xlen, _ylen;                       // length of proteins
+    private int _minlen;                            // length of proteins
+    private double _score[][];                      // for dynamic programming
+    private boolean _path[][];                      // for dynamic programming
+    private double _val[][];                        // for dynamic programming
     private char _seqx[], _seqy[];                  // for amino acid sequence
     private int _secx[], _secy[];                   // for secondary structure sequence
     private double _r1[][], _r2[][];                // for Kabsch rotation
     private double _t[];                            // Kabsch translation vector and rotation matrix
     private double _u[][];
+
+    // *******************************************************************************
+    // *** Instance Getters and Setters
+    // *******************************************************************************
+    
+    // *******************************************************************************
+    // *** Constructor 1
+    // *******************************************************************************
 
     public TmAlign(Structure xstruct, Structure ystruct, TmMode mode, Kabsch kabsch) {
 
@@ -60,12 +64,12 @@ public class TmAlign {
         _kabsch = kabsch;
 
         // chain names
-        _xname = xstruct.getName();
-        _yname = ystruct.getName();
+        _xname = _xstruct.getName();
+        _yname = _ystruct.getName();
 
         // get first chain in each structure
-        _xchain = xstruct.getChains().get(0);
-        _ychain = ystruct.getChains().get(0);
+        _xchain = _xstruct.getChains().get(0);
+        _ychain = _ystruct.getChains().get(0);
 
         // get groups of atoms per residue
         _xgroups = _xchain.getAtomGroups().stream().filter(g -> !g.isHetAtomInFile() && g.hasAtom("CA")).collect(Collectors.toList());
@@ -134,12 +138,12 @@ public class TmAlign {
             _ya[i][2] = atom.getZ();
         }
     }
+    
+    // *******************************************************************************
+    // *** Constructor 2
+    // *******************************************************************************
 
     public TmAlign(double[][] xa, double[][] ya, TmMode mode, Kabsch kabsch) {
-
-        if (mode == TmMode.ALIGN_TEXT || mode == TmMode.ALIGN_3D) {
-            throw new IllegalArgumentException("ALIGN_TEXT and ALIGN_3D modes not supported by this constructor");
-        }
 
         _mode = mode; 
         _kabsch = kabsch;
@@ -167,6 +171,10 @@ public class TmAlign {
         _xa = xa;
         _ya = ya;        
     }
+    
+    // *******************************************************************************
+    // *** Public Instance Functions
+    // *******************************************************************************
 
     public TmResults align() { 
 
@@ -388,7 +396,7 @@ public class TmAlign {
         // * Final TMscore *
         // ********************************************************************************* //
         
-        double tmQ, tmT, tmAvg; 
+        double tmq, tmt, tmavg; 
 
         // set score method 
         simplify_step = 1;
@@ -396,38 +404,50 @@ public class TmAlign {
     
         // normalized by length of first structure
         params = Parameters.getFinalParameters(_xlen, _ylen, _xlen);
-        tmQ = detailed_search(_xtm, _ytm, align_len, _t, _u, simplify_step, score_sum_method, false, params);
+        tmq = detailed_search(_xtm, _ytm, align_len, _t, _u, simplify_step, score_sum_method, false, params);
 
         //normalized by length of second structure
         params = Parameters.getFinalParameters(_xlen, _ylen, _ylen);
-        tmT = detailed_search(_xtm, _ytm, align_len, _t, _u, simplify_step, score_sum_method, false, params);
+        tmt = detailed_search(_xtm, _ytm, align_len, _t, _u, simplify_step, score_sum_method, false, params);
         
         // normalized by average length of structures
         params = Parameters.getFinalParameters(_xlen, _ylen, (_xlen + _ylen) * 0.5);
-        tmAvg = detailed_search(_xtm, _ytm, align_len, _t, _u, simplify_step, score_sum_method, false, params);
+        tmavg = detailed_search(_xtm, _ytm, align_len, _t, _u, simplify_step, score_sum_method, false, params);
         
         // ********************************************************************************* //
         // * Output *
         // ********************************************************************************* //
-
-        TmResults results = new TmResults();
-        results.setChainLength1(_xlen);
-        results.setChainLength2(_ylen);
-        results.setAlignedLength(align_len);
-        results.setTmScoreQ(tmQ);
-        results.setTmScoreT(tmT);
-        results.setTmScoreAvg(tmAvg);
-        results.setRmsd(rmsd);
-
-        if (this._mode == TmMode.ALIGN_TEXT) {
-
-            results.setOutput(alignTextOutput(results, m1, m2));
-        }
-        else if (_mode == TmMode.ALIGN_3D) {
-
-            results.setOutput(align3dOutput(results));
-        } 
         
+        TmResults results = new TmResults();
+
+        // structures
+        results.set_xname(_xname);
+        results.set_yname(_yname);
+        results.set_xstruct(_xstruct);
+        results.set_ystruct(_ystruct);
+        results.set_xgroups(_xgroups);
+        results.set_ygroups(_ygroups);
+  
+        // alignment
+        results.set_xlen(_xlen);
+        results.set_ylen(_ylen);
+        results.set_xa(_xa);
+        results.set_ya(_ya);
+        results.set_xt(_xt);
+        results.set_seqx(_seqx);
+        results.set_seqy(_seqy);
+        results.set_m1(m1);
+        results.set_m2(m2);
+        results.set_t(_t);
+        results.set_u(_u);
+
+        // scoring
+        results.set_alignlen(align_len);
+        results.set_tmq(tmq);
+        results.set_tmt(tmt);   
+        results.set_tmavg(tmavg);
+        results.set_rmsd(rmsd);
+      
         return results;
     }
 
@@ -535,10 +555,14 @@ public class TmAlign {
     }
 
     // **********************************************************************************
-    // initial alignments
+    // ONLY PRIVATES BELOW
+    // **********************************************************************************
+
+    // **********************************************************************************
+    // private initial alignments
     // **********************************************************************************
     
-    public double get_initial(double xa[][], double ya[][], int xlen, int ylen, int invmap[], Parameters params) {
+    private double get_initial(double xa[][], double ya[][], int xlen, int ylen, int invmap[], Parameters params) {
 
         // Output:
         // y2x: alignment of y to x (-1 indicates unaligned)
@@ -597,7 +621,7 @@ public class TmAlign {
     }
 
     // get initial alignment from secondary structure 
-    public void get_initial_ss(double xa[][], double ya[][], int xlen, int ylen, int invmap[]) {
+    private void get_initial_ss(double xa[][], double ya[][], int xlen, int ylen, int invmap[]) {
 
         // assign secondary structures
         make_sec(xa, xlen, _secx);
@@ -608,7 +632,7 @@ public class TmAlign {
     }
     
     // get initial alignment from secondary structure plus previous alignments
-    public void get_initial_ssplus(double xa[][], double ya[][], int xlen, int ylen, 
+    private void get_initial_ssplus(double xa[][], double ya[][], int xlen, int ylen, 
             int invmap_best[], int invmap[], 
             Parameters params) {
         
@@ -620,7 +644,7 @@ public class TmAlign {
     }
     
     // 1->coil, 2->helix, 3->turn, 4->strand
-    public void make_sec(double a[][], int len, int sec[]) {
+    private void make_sec(double a[][], int len, int sec[]) {
         
         int j1, j2, j3, j4, j5;
         double d13, d14, d15, d24, d25, d35;
@@ -644,7 +668,7 @@ public class TmAlign {
         }
     }
 
-    public int sec_str(double dis13, double dis14, double dis15, double dis24, double dis25, double dis35) {
+    private int sec_str(double dis13, double dis14, double dis15, double dis24, double dis25, double dis35) {
         
         int s = 1; // coil
 
@@ -687,7 +711,7 @@ public class TmAlign {
         return s;
     }
 
-    public void score_matrix_rmsd_sec(double xa[][], double ya[][], int xlen, int ylen, int invmap[], Parameters params) {
+    private void score_matrix_rmsd_sec(double xa[][], double ya[][], int xlen, int ylen, int invmap[], Parameters params) {
 
         double t[] = new double[3];
         double u[][] = new double[3][3];
@@ -726,7 +750,7 @@ public class TmAlign {
         }
     }
     
-    public boolean get_initial5(double xa[][], double ya[][], int xlen, int ylen, int invmap[], Parameters params) {
+    private boolean get_initial5(double xa[][], double ya[][], int xlen, int ylen, int invmap[], Parameters params) {
         
         double GL;
         double t[] = new double[3];
@@ -818,9 +842,8 @@ public class TmAlign {
         return flag;
     }
     
-    public double get_initial_fgt(double xa[][], double ya[][], int xlen, int ylen, int invmap[], Parameters params) {
+    private double get_initial_fgt(double xa[][], double ya[][], int xlen, int ylen, int invmap[], Parameters params) {
 
-        // TODO: 
         // I think there is a bug here introduced in the original translation to C++
         // My hunch is that the fragments generated in the loop below are not symmetric
         // with respect to chain 1 and chain 2 so that when presented in reverse
@@ -948,7 +971,7 @@ public class TmAlign {
         return tmscore_max;
     }
     
-    public void find_max_frag(double a[][], int len, MutableInt start_max, MutableInt end_max) {
+    private void find_max_frag(double a[][], int len, MutableInt start_max, MutableInt end_max) {
         
         int r_min, fra_min = 4; // minimum fragment for search
         double d;
@@ -1015,10 +1038,10 @@ public class TmAlign {
     }
     
     // **********************************************************************************
-    // dynamic programming iteration
+    // private dynamic programming iteration
     // **********************************************************************************
     
-    public double dp_iteration(
+    private double dp_iteration(
             double xa[][], double ya[][], 
             int xlen, int ylen, 
             double t[], double u[][], 
@@ -1096,10 +1119,10 @@ public class TmAlign {
     }
 
     // **********************************************************************************
-    // searching
+    // private searching
     // **********************************************************************************
     
-    public double fast_search(double xa[][], double ya[][], int xlen, int ylen, int invmap[], Parameters params) {
+    private double fast_search(double xa[][], double ya[][], int xlen, int ylen, int invmap[], Parameters params) {
         
         double tmscore, tmscore1, tmscore2;
         int i, j, k;
@@ -1232,7 +1255,7 @@ public class TmAlign {
                         // be used for latter scoring
     }
     
-    public double detailed_search_wrapper(
+    private double detailed_search_wrapper(
             double xa[][], double ya[][], 
             int xlen, int ylen, 
             int invmap[], 
@@ -1266,7 +1289,7 @@ public class TmAlign {
         return detailed_search(_xtm, _ytm, k, t_out, u_out, simplify_step, score_sum_method, align_normalize, params);
     }
     
-    public double detailed_search(
+    private double detailed_search(
             double xtm[][], double ytm[][], 
             int align_len, 
             double t_out[], double u_out[][],
@@ -1431,7 +1454,7 @@ public class TmAlign {
         return max_score;
     }
     
-    public int calculate_tm_score(
+    private int calculate_tm_score(
             double x[][], double y[][],
             int align_len, 
             double dist_th, int sat_indices[], 
@@ -1481,460 +1504,6 @@ public class TmAlign {
         }
 
         return num_sat;
-    }
-
-    // **********************************************************************************
-    // output functions
-    // **********************************************************************************
-
-    public String alignTextOutput(TmResults results, int[] m1, int[] m2) {
-
-        int k = 0;
-        double d = 0.0;
-        double d0_out = 5.0;  
-
-        double seq_id;          
-        int i, j;
-        int ali_len = _xlen + _ylen;
-        char[] seqM = new char[ali_len];
-        char[] seqxA = new char[ali_len];
-        char[] seqyA = new char[ali_len];
-       
-        // i think i should not be doing this rotation since it is already done 
-        Functions.do_rotation(_xa, _xt, _xlen, _t, _u);
-
-        seq_id=0;
-        int kk=0, i_old=0, j_old=0;
-        for(k=0; k< results.getAlignedLength(); k++)
-        {
-            for(i=i_old; i<m1[k]; i++)
-            {
-                //align x to gap
-                seqxA[kk]=_seqx[i];
-                seqyA[kk]='-';
-                seqM[kk]=' ';
-                kk++;
-            }
-
-            for(j=j_old; j<m2[k]; j++)
-            {
-                //align y to gap
-                seqxA[kk]='-';
-                seqyA[kk]=_seqy[j];
-                seqM[kk]=' ';
-                kk++;
-            }
-
-            seqxA[kk]=_seqx[m1[k]];
-            seqyA[kk]=_seqy[m2[k]];
-            if(seqxA[kk]==seqyA[kk])
-            {
-                seq_id++;
-            }
-            d = Math.sqrt(Functions.dist(_xt[m1[k]], _ya[m2[k]]));
-            if(d < d0_out)
-            {
-                seqM[kk]=':';
-            }
-            else
-            {
-                seqM[kk]='.';
-            }
-            kk++;
-            i_old=m1[k]+1;
-            j_old=m2[k]+1;
-        }
-
-        //tail
-        for(i=i_old; i<_xlen; i++)
-        {
-            //align x to gap
-            seqxA[kk]=_seqx[i];
-            seqyA[kk]='-';
-            seqM[kk]=' ';                   
-            kk++;
-        }    
-        for(j=j_old; j<_ylen; j++)
-        {
-            //align y to gap
-            seqxA[kk]='-';
-            seqyA[kk]=_seqy[j];
-            seqM[kk]=' ';
-            kk++;
-        }
-     
-        seq_id = seq_id/(results.getAlignedLength() + 0.00000001); //what did by TMalign, but not reasonable, it should be n_ali8
-    
-        StringBuilder sb = new StringBuilder();
-        Formatter formatter = new Formatter(sb, Locale.US);
-        
-        formatter.format("\nName of Chain_1: %s\n", _xname); 
-        formatter.format("Name of Chain_2: %s\n", _yname);
-        formatter.format("Length of Chain_1: %d residues\n", _xlen);
-        formatter.format("Length of Chain_2: %d residues\n\n", _ylen);
-
-        formatter.format("Aligned length= %d, RMSD= %6.2f, Seq_ID=n_identical/n_aligned= %4.3f\n", results.getAlignedLength(), results.getRmsd(), seq_id); 
-        formatter.format("TM-score= %6.5f (if normalized by length of Chain_1)\n", results.getTmScoreQ());
-        formatter.format("TM-score= %6.5f (if normalized by length of Chain_2)\n", results.getTmScoreT());
-        
-        formatter.format("TM-score= %6.5f (if normalized by average length of chains)\n", results.getTmScoreAvg());
-        
-        //output structure alignment
-        formatter.format("\n(\":\" denotes residue pairs of d < %4.1f Angstrom, ", d0_out);
-        formatter.format("\".\" denotes other aligned residues)\n");
-
-        for (i = 0; i < ali_len; i = i + 120) {
-
-            int from = i;
-            int to = Math.min(ali_len, i + 120);
-
-            formatter.format("%s\n", new String(Arrays.copyOfRange(seqxA, from, to)));
-            formatter.format("%s\n", new String(Arrays.copyOfRange(seqM, from, to)));
-            formatter.format("%s\n\n", new String(Arrays.copyOfRange(seqyA, from, to)));
-        }
-
-        formatter.close();
-
-        return sb.toString();
-    }
-
-    public String align3dOutput(TmResults results) {
-
-        // assign secondary structure
-        SecStrucCalc xssCalc = new SecStrucCalc();
-        try {
-            xssCalc.calculate(_xstruct, true);
-        } catch (StructureException e) {
-            // do nothing
-        }
-        SecStrucCalc yssCalc = new SecStrucCalc();
-        try {
-            yssCalc.calculate(_ystruct, true);
-        } catch (StructureException e) {
-            // do nothing
-        }
-
-        int xlenreal = 0;
-        for(Group g : _xgroups) {
-           
-            if (g.hasAtom("N")) xlenreal++;
-            xlenreal++; // for known CA
-            if (g.hasAtom("C")) xlenreal++;
-            if (g.hasAtom("O")) xlenreal++;
-        }
-
-        double[][] xa_all = new double[xlenreal][3];
-        double[][] xt_all = new double[xlenreal][3];
-        
-        // iterate x atoms for xa_all
-        int j = 0;
-        for (int i = 0; i < _xgroups.size(); i++) {
-            
-            Group group = _xgroups.get(i);
-
-            if (group.hasAtom("N")) {
-                
-                Atom n = group.getAtom("N");
-                xa_all[j][0] = n.getX();
-                xa_all[j][1] = n.getY();
-                xa_all[j][2] = n.getZ();
-                j++;
-            }
-
-            // for known CA
-            Atom ca = group.getAtom("CA");
-            xa_all[j][0] = ca.getX();
-            xa_all[j][1] = ca.getY();
-            xa_all[j][2] = ca.getZ();
-            j++;
-
-            if (group.hasAtom("C")) {
-
-                Atom c = group.getAtom("C");
-                xa_all[j][0] = c.getX();
-                xa_all[j][1] = c.getY();
-                xa_all[j][2] = c.getZ();
-                j++;
-            }
-            
-            if (group.hasAtom("O")) {
-
-                Atom o = group.getAtom("O");
-                xa_all[j][0] = o.getX();
-                xa_all[j][1] = o.getY();
-                xa_all[j][2] = o.getZ();
-                j++;
-            }
-        }
-
-        // transform xa_all into xt_all
-        Functions.do_rotation(xa_all, xt_all, xlenreal, _t, _u);
-
-        // set x atom coords
-        j = 0;
-        for (int i = 0; i < _xgroups.size(); i++) {
-            
-            Group group = _xgroups.get(i);
-
-            if (group.hasAtom("N")) {
-                
-                Atom n = group.getAtom("N");
-                n.setX(xt_all[j][0]);
-                n.setY(xt_all[j][1]);
-                n.setZ(xt_all[j][2]);
-                j++;
-            }
-
-            // for known CA
-            Atom ca = group.getAtom("CA");
-            ca.setX(xt_all[j][0]);
-            ca.setY(xt_all[j][1]);
-            ca.setZ(xt_all[j][2]);
-            j++;
-
-            if (group.hasAtom("C")) {
-
-                Atom c = group.getAtom("C");
-                c.setX(xt_all[j][0]);
-                c.setY(xt_all[j][1]);
-                c.setZ(xt_all[j][2]);
-                j++;
-            }
-            
-            if (group.hasAtom("O")) {
-
-                Atom o = group.getAtom("O");
-                o.setX(xt_all[j][0]);
-                o.setY(xt_all[j][1]);
-                o.setZ(xt_all[j][2]);
-                j++;
-            }
-        }
-
-        StringBuilder sb = new StringBuilder();
-
-        // set sec structs
-        setHelices(sb, _xgroups, "A");
-        setHelices(sb, _ygroups, "B");
-        setStrands(sb, _xgroups, "A");
-        setStrands(sb, _ygroups, "B");
-
-        // iterate x atoms for chain A
-        j = 0;
-        for (int i = 0; i < _xgroups.size(); i++) {
-            
-            Group group = _xgroups.get(i);
-            group.getChain().setName("A");
-            
-            if (group.hasAtom("N")) {
-                
-                Atom n = group.getAtom("N");
-                sb.append(n.toPDB());
-                j++;
-            }
-
-            // for known CA
-            Atom ca = group.getAtom("CA");
-            sb.append(ca.toPDB());
-            j++;
-
-            if (group.hasAtom("C")) {
-
-                Atom c = group.getAtom("C");
-                sb.append(c.toPDB());
-                j++;
-            }
-            
-            if (group.hasAtom("O")) {
-
-                Atom o = group.getAtom("O");
-                sb.append(o.toPDB());
-                j++;
-            }
-        }
-
-        // chain termination
-        sb.append("TER\n");
-
-        // iterate y atoms for chain B
-        j = 0;
-        for (int i = 0; i < _ygroups.size(); i++) {
-
-            Group group = _ygroups.get(i);
-            group.getChain().setName("B");
-            
-            if (group.hasAtom("N")) {
-                
-                Atom n = group.getAtom("N");
-                sb.append(n.toPDB());
-                j++;
-            }
-
-            // for known CA
-            Atom ca = group.getAtom("CA");
-            sb.append(ca.toPDB());
-            j++;
-
-            if (group.hasAtom("C")) {
-
-                Atom c = group.getAtom("C");
-                sb.append(c.toPDB());
-                j++;
-            }
-            
-            if (group.hasAtom("O")) {
-
-                Atom o = group.getAtom("O");
-                sb.append(o.toPDB());
-                j++;
-            }
-        }
-       
-        return sb.toString(); 
-    }
-
-    public String map8state(String ss8) {
-
-        String ss3;
-        switch(ss8) {
-            case "G":
-            case "H":
-            case "I":
-                ss3 = "HELIX";
-                break;
-            case "E":
-                ss3 = "STRAND";
-                break;
-            default:
-                ss3 = "LOOP";
-        }
-        return ss3;
-    }
-
-    public String get3state(Group g) {
-
-        String ss8 = "";
-        Object obj = g.getProperty(Group.SEC_STRUC);
-        if (obj instanceof SecStrucInfo) {
-           SecStrucInfo info = (SecStrucInfo)obj;
-           ss8 = String.valueOf(info.getType().type).trim();
-        }
-        return map8state(ss8);
-    }
-
-    public String spaces(int n) {
-        
-        StringBuilder sb = new StringBuilder("");
-        for (int i = 0; i < n; i++) {
-            sb.append(" "); 
-        }
-        return sb.toString();
-    }
-
-    public void setHelices(StringBuilder sb, List<Group> groups, String chainId) {
-
-        // iterate helices
-        boolean lastWasHelix = false;
-        int lastResidue = Integer.MIN_VALUE;
-        for (int i = 0; i < groups.size(); i++) {
-
-            Group group = groups.get(i);
-            String ss = get3state(group);
-            if (ss.equals("HELIX")) {
-
-                if (!lastWasHelix) {
-
-                    sb.append("HELIX");
-                    sb.append(spaces(14));
-                    sb.append(chainId);
-                    sb.append(String.format("%5d", group.getResidueNumber().getSeqNum()));
-                    sb.append(spaces(8));
-                }
-                lastWasHelix = true;
-            }
-            else {
-
-                if (lastWasHelix) {
-                    sb.append(String.format("%4d", lastResidue));
-                    sb.append("\n");
-                }
-                lastWasHelix = false;
-            }
-            lastResidue = group.getResidueNumber().getSeqNum();
-        }
-    }
-
-    public void setStrands(StringBuilder sb, List<Group> groups, String chainId) {
-
-        // iterate helices
-        boolean lastWasStrand = false;
-        int lastResidue = Integer.MIN_VALUE;
-        for (int i = 0; i < groups.size(); i++) {
-
-            Group group = groups.get(i);
-            String ss = get3state(group);
-            if (ss.equals("STRAND")) {
-
-                if (!lastWasStrand) {
-
-                    sb.append("SHEET");
-                    sb.append(spaces(16));
-                    sb.append(chainId);
-                    sb.append(String.format("%4d", group.getResidueNumber().getSeqNum()));
-                    sb.append(spaces(7));
-                }
-                lastWasStrand = true;
-            }
-            else {
-
-                if (lastWasStrand) {
-                    sb.append(String.format("%4d", lastResidue));
-                    sb.append("\n");
-                }
-                lastWasStrand = false;
-            }
-            lastResidue = group.getResidueNumber().getSeqNum();
-        }
-    }
-
-    // **********************************************************************************
-    // debug functions
-    // **********************************************************************************
-
-    public void printMap(int xlen, int ylen, int[] invmap) {
-
-        String map = "";
-        for (int j = 0; j < ylen; j++) {
-            if (invmap[j] >= 0) {
-                map += "1";
-            }
-            else {
-                map += "0";
-            }
-        }
-        System.out.println(map);
-    }
-    
-    public void printReverseMap(int xlen, int ylen, int[] invmap) {
-
-        String map = "";
-        for (int i = 0; i < xlen; i++) {
-
-            boolean mapped = false;
-            for (int j = 0; j < ylen; j++) {
-                if (invmap[j] == i) {
-                    mapped = true;
-                    break;
-                } 
-            }
-            if (mapped) {
-                map += "1";
-            }
-            else {
-                map += "0";
-            }
-        }
-        System.out.println(map);
     }
 }
 

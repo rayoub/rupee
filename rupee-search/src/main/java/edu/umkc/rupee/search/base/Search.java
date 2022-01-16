@@ -448,22 +448,22 @@ public abstract class Search {
             TmResults results = tm.align();
 
             // always get it because it's there
-            record.setRmsd(results.getRmsd());
+            record.setRmsd(results.get_rmsd());
 
             if (criteria.searchType == SearchType.FULL_LENGTH) {
-                record.setTmScore(results.getTmScoreAvg());    
-                record.setTmScoreQ(results.getTmScoreQ());    
+                record.setTmScore(results.get_tmavg());    
+                record.setTmScoreQ(results.get_tmq());    
             }
             else if (criteria.searchType == SearchType.CONTAINED_IN) {
-                record.setTmScore(results.getTmScoreQ());    
+                record.setTmScore(results.get_tmq());    
             }
             else if (criteria.searchType == SearchType.CONTAINS) {
-                record.setTmScore(results.getTmScoreT());
+                record.setTmScore(results.get_tmt());
             }
             else {
 
                 // just get the average for other search types
-                record.setTmScore(results.getTmScoreAvg());
+                record.setTmScore(results.get_tmavg());
             }
         }
         catch (IOException e) {
