@@ -55,7 +55,7 @@ import edu.umkc.rupee.search.scop.ScopSearchCriteria;
 import edu.umkc.rupee.search.scop.ScopSearchRecord;
 import edu.umkc.rupee.tm.TmAlignOutput;
 import edu.umkc.rupee.tm.TmMode;
-import edu.umkc.rupee.tm.TmResults;
+import edu.umkc.rupee.tm.TmResult;
 
 public class OptionFunctions {
 
@@ -634,7 +634,7 @@ public class OptionFunctions {
         }
 
         // perform alignment
-        TmResults results = null;
+        TmResult results = null;
         if (uploadId != -1) {
 
             results = Aligning.tmAlign(uploadId, dbId, TmMode.REGULAR);

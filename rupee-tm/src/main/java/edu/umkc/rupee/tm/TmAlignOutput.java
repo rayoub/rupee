@@ -13,7 +13,7 @@ import org.biojava.nbio.structure.secstruc.SecStrucInfo;
 
 public class TmAlignOutput {
 
-    public static String alignTextOutput(TmResults results) {
+    public static String alignTextOutput(TmResult results) {
 
         int k = 0;
         double d = 0.0;
@@ -113,7 +113,7 @@ public class TmAlignOutput {
         return sb.toString();
     }
 
-    public static String multiAlign3dOutput(List<TmResults> results) {
+    public static String multiAlign3dOutput(List<TmResult> results) {
        
         // *** all y structures are identical 
 
@@ -132,7 +132,7 @@ public class TmAlignOutput {
         writeChainToPdb(sb, results.get(0).get_ygroups(), "A");
 
         char chainId = 'B';
-        for (TmResults current : results) {
+        for (TmResult current : results) {
             writeChainToPdb(sb, current.get_xgroups(), String.valueOf(chainId));
             chainId++;
         }
@@ -140,7 +140,7 @@ public class TmAlignOutput {
         return sb.toString(); 
     }
 
-    public static String align3dOutput(TmResults results) {
+    public static String align3dOutput(TmResult results) {
 
         // assign secondary structure
         SecStrucCalc xssCalc = new SecStrucCalc();

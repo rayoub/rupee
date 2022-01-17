@@ -39,7 +39,7 @@ import edu.umkc.rupee.tm.Kabsch;
 import edu.umkc.rupee.tm.KabschTLS;
 import edu.umkc.rupee.tm.TmAlign;
 import edu.umkc.rupee.tm.TmMode;
-import edu.umkc.rupee.tm.TmResults;
+import edu.umkc.rupee.tm.TmResult;
 
 // ASSUMPTIONS: 
 // 1. if search mode == FAST sort by must be SIMILARITY
@@ -445,7 +445,7 @@ public abstract class Search {
 
             Kabsch kabsch = KabschTLS.get();     
             TmAlign tm = new TmAlign(queryStructure, targetStructure, mode, kabsch);
-            TmResults results = tm.align();
+            TmResult results = tm.align();
 
             // always get it because it's there
             record.setRmsd(results.get_rmsd());

@@ -14,13 +14,13 @@ import edu.umkc.rupee.search.defs.DbType;
 import edu.umkc.rupee.tm.Kabsch;
 import edu.umkc.rupee.tm.TmAlign;
 import edu.umkc.rupee.tm.TmMode;
-import edu.umkc.rupee.tm.TmResults;
+import edu.umkc.rupee.tm.TmResult;
 
 public class Aligning {
 
-    public static TmResults tmAlign(String dbId1, String dbId2, TmMode mode) {
+    public static TmResult tmAlign(String dbId1, String dbId2, TmMode mode) {
 
-        TmResults results = null;
+        TmResult results = null;
 
         try {
 
@@ -57,9 +57,9 @@ public class Aligning {
         return results;
     }
 
-    public static TmResults tmAlign(int uploadId, String dbId, TmMode mode) {
+    public static TmResult tmAlign(int uploadId, String dbId, TmMode mode) {
 
-        TmResults results = null;
+        TmResult results = null;
 
         try {
 

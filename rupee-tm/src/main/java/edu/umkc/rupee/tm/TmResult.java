@@ -5,7 +5,7 @@ import java.util.List;
 import org.biojava.nbio.structure.Group;
 import org.biojava.nbio.structure.Structure;
 
-public class TmResults {
+public class TmResult {
 
     // structures
     private String _xname;

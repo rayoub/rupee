@@ -176,7 +176,7 @@ public class TmAlign {
     // *** Public Instance Functions
     // *******************************************************************************
 
-    public TmResults align() { 
+    public TmResult align() { 
 
         // ********************************************************************************** //
         // * initialization *
@@ -418,7 +418,7 @@ public class TmAlign {
         // * Output *
         // ********************************************************************************* //
         
-        TmResults results = new TmResults();
+        TmResult results = new TmResult();
 
         // structures
         results.set_xname(_xname);
