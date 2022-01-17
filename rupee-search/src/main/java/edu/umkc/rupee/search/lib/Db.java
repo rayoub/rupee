@@ -19,10 +19,12 @@ public class Db {
     public static PGSimpleDataSource getDataSource() {
 
         PGSimpleDataSource ds = new PGSimpleDataSource();
+        //ds.setServerNames(new String[] { "DESKTOP-K5RRL74" });     
+        //ds.setPortNumbers(new int[] { 5432 });
         ds.setDatabaseName(Constants.DB_NAME);
         ds.setUser(Constants.DB_USER);
         ds.setPassword(Constants.DB_PASSWORD);
-
+        
         return ds;
     }
 
