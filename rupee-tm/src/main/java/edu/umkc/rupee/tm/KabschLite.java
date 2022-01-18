@@ -1,5 +1,7 @@
 package edu.umkc.rupee.tm;
 
+// Note: the diff between KabschLite and Kabsch is that Kabsch keeps track of the rotation matrix
+
 public class KabschLite {
 
     private double xc[] = new double[3];
