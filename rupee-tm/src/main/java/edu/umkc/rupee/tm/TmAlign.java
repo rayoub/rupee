@@ -49,11 +49,7 @@ public class TmAlign {
     private double _u[][];
 
     // *******************************************************************************
-    // *** Instance Getters and Setters
-    // *******************************************************************************
-    
-    // *******************************************************************************
-    // *** Constructor 1
+    // *** Constructor and Align Function Pair 1
     // *******************************************************************************
 
     public TmAlign(Structure xstruct, Structure ystruct, TmMode mode, Kabsch kabsch) {
@@ -139,43 +135,6 @@ public class TmAlign {
         }
     }
     
-    // *******************************************************************************
-    // *** Constructor 2
-    // *******************************************************************************
-
-    public TmAlign(double[][] xa, double[][] ya, TmMode mode, Kabsch kabsch) {
-
-        _mode = mode; 
-        _kabsch = kabsch;
-
-        // get number of residues
-        _xlen = xa.length;
-        _ylen = ya.length;
-        _minlen = Math.min(_xlen, _ylen);
-
-        // allocate storage
-        _score = new double[_xlen + 1][_ylen + 1];
-        _path = new boolean[_xlen + 1][_ylen + 1];
-        _val = new double[_xlen + 1][_ylen + 1];
-        _xtm = new double[_minlen][3];
-        _ytm = new double[_minlen][3];
-        _xt = new double[_xlen][3];
-        _secx = new int[_xlen];
-        _secy = new int[_ylen];
-        _r1 = new double[_minlen][3];
-        _r2 = new double[_minlen][3];
-        _t = new double[3];
-        _u = new double[3][3];
-
-        // atom coordinates
-        _xa = xa;
-        _ya = ya;        
-    }
-    
-    // *******************************************************************************
-    // *** Public Instance Functions
-    // *******************************************************************************
-
     public TmResult align() { 
 
         // ********************************************************************************** //
@@ -450,7 +409,40 @@ public class TmAlign {
       
         return results;
     }
+   
+    // *******************************************************************************
+    // *** Constructor and Align Function Pair 2 (this will not give you a TmResult)
+    // *******************************************************************************
+    
+    public TmAlign(double[][] xa, double[][] ya, TmMode mode, Kabsch kabsch) {
 
+        _mode = mode; 
+        _kabsch = kabsch;
+
+        // get number of residues
+        _xlen = xa.length;
+        _ylen = ya.length;
+        _minlen = Math.min(_xlen, _ylen);
+
+        // allocate storage
+        _score = new double[_xlen + 1][_ylen + 1];
+        _path = new boolean[_xlen + 1][_ylen + 1];
+        _val = new double[_xlen + 1][_ylen + 1];
+        _xtm = new double[_minlen][3];
+        _ytm = new double[_minlen][3];
+        _xt = new double[_xlen][3];
+        _secx = new int[_xlen];
+        _secy = new int[_ylen];
+        _r1 = new double[_minlen][3];
+        _r2 = new double[_minlen][3];
+        _t = new double[3];
+        _u = new double[3][3];
+
+        // atom coordinates
+        _xa = xa;
+        _ya = ya;        
+    }
+    
     public double alignDescriptors(int[] invmap, double normalizeBy) { 
 
         // set d0 terms and normalization term
