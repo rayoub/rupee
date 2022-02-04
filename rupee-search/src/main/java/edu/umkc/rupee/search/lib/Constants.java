@@ -11,7 +11,7 @@ public class Constants {
     public final static String DB_USER = "postgres";
     public final static String DB_PASSWORD = "postgres";
 
-    public final static String DATA_PATH = "C:/git/rupee/data/";
+    public final static String DATA_PATH = "D:/git/rupee/data/";
     //public final static String DATA_PATH = "//DESKTOP-K5RRL74/data/";
 
     public final static String CHAIN_PATH = DATA_PATH + "chain/";
