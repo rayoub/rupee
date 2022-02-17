@@ -7,15 +7,42 @@ UP000000803,Drosophila melanogaster,Fruit fly
 UP000000625,Escherichia coli,E. coli
 UP000008827,Glycine max,Soybean
 UP000005640,Homo sapiens,Human
-UP000008153,Leishmania infantum,L. infantum
 UP000000805,Methanocaldococcus jannaschii,M. jannaschii
 UP000000589,Mus musculus,Mouse
-UP000001584,Mycobacterium tuberculosis,M. tuberculosis
 UP000059680,Oryza sativa,Asian rice
-UP000001450,Plasmodium falciparum,P. falciparum
 UP000002494,Rattus norvegicus,Rat
 UP000002311,Saccharomyces cerevisiae,Budding yeast
 UP000002485,Schizosaccharomyces pombe,Fission yeast
-UP000008816,Staphylococcus aureus,S. aureus
-UP000002296,Trypanosoma cruzi,T. cruzi
 UP000007305,Zea mays,Maize
+UP000001631,Ajellomyces capsulatus,Ajellomyces capsulatus
+UP000006672,Brugia malayi,Brugia malayi
+UP000000799,Campylobacter jejuni,C. jejuni
+UP000094526,Cladophialophora carrionii,Cladophialophora carrionii
+UP000274756,Dracunculus medinensis,Dracunculus medinensis
+UP000325664,Enterococcus faecium,Enterococcus faecium
+UP000053029,Fonsecaea pedrosoi,Fonsecaea pedrosoi
+UP000000579,Haemophilus influenzae,H. influenzae
+UP000000429,Helicobacter pylori,H. pylori
+UP000007841,Klebsiella pneumoniae,K. pneumoniae
+UP000008153,Leishmania infantum,L. infantum
+UP000078237,Madurella mycetomatis,Madurella mycetomatis
+UP000000806,Mycobacterium leprae,Mycobacterium leprae
+UP000001584,Mycobacterium tuberculosis,M. tuberculosis
+UP000020681,Mycobacterium ulcerans,Mycobacterium ulcerans
+UP000000535,Neisseria gonorrhoeae,N. gonorrhoeae
+UP000006304,Nocardia brasiliensis,Nocardia brasiliensis
+UP000024404,Onchocerca volvulus,Onchocerca volvulus
+UP000002059,Paracoccidioides lutzii,Paracoccidioides lutzii
+UP000001450,Plasmodium falciparum,P. falciparum
+UP000002438,Pseudomonas aeruginosa,P. aeruginosa
+UP000001014,Salmonella typhimurium,S. typhimurium
+UP000008854,Schistosoma mansoni,Schistosoma mansoni
+UP000002716,Shigella dysenteriae,S. dysenteriae
+UP000018087,Sporothrix schenckii,Sporothrix schenckii
+UP000008816,Staphylococcus aureus,S. aureus
+UP000000586,Streptococcus pneumoniae,S. pneumoniae
+UP000035681,Strongyloides stercoralis,Strongyloides stercoralis
+UP000030665,Trichuris trichiura,Trichuris trichiura
+UP000008524,Trypanosoma brucei,Trypanosoma brucei
+UP000002296,Trypanosoma cruzi,T. cruzi
+UP000270924,Wuchereria bancrofti,Wuchereria bancrofti
