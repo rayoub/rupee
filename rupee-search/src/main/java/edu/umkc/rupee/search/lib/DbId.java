@@ -18,7 +18,7 @@ public class DbId {
     private static Pattern CATH_PATTERN = Pattern.compile("[1-9][a-z0-9]{3}[a-z1-9][0-9]{2}", Pattern.CASE_INSENSITIVE);            // maxlen = 7
     private static Pattern ECOD_PATTERN = Pattern.compile("e[1-9][a-z0-9]{3}[a-z1-9\\.]+[0-9]+", Pattern.CASE_INSENSITIVE);         // maxlen = 12 (fudge)
     private static Pattern CHAIN_PATTERN = Pattern.compile("[1-9][a-z0-9]{3}[a-z0-9]+", Pattern.CASE_INSENSITIVE);                  // maxlen = 12 (fudge)
-    private static Pattern AFDB_PATTERN = Pattern.compile("AF\\-[a-z0-9\\-]+\\-model_v1", Pattern.CASE_INSENSITIVE);                // maxlen = 26
+    private static Pattern AFDB_PATTERN = Pattern.compile("AF\\-[a-z0-9\\-]+\\-model_v2", Pattern.CASE_INSENSITIVE);                // maxlen = 26
    
     private static boolean isScopId(String id) {
 
