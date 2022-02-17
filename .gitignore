@@ -29,24 +29,10 @@ data/ecod/ecod.develop282.domains.txt
 data/ecod/domains.txt
 data/ecod/segments.txt
 
-# temp directories
-eval/results/mtm/temp/
-eval/results/ssm/temp/
-eval/results/cathedral/temp/
-
-# result import files
-eval/results/cathedral/cathedral_results.txt
-eval/results/mtm/mtm_results.txt
-eval/results/ssm/ssm_results_q_score.txt
-eval/results/ssm/ssm_results_rmsd.txt
-eval/results/vast/vast_results_fl.txt
-eval/results/vast/vast_results_rmsd.txt
-
 # build ignores
 rupee-core/target/
 rupee-tm/target/
 rupee-search/target/
-eval/rupee-eval/target/
 
 # file types
 **/*.swp
@@ -73,10 +59,4 @@ rupee-tm/.project
 rupee-search/.settings/
 rupee-search/.classpath
 rupee-search/.project
-eval/rupee-eval/.settings/
-eval/rupee-eval/.classpath
-eval/rupee-eval/.project
-
-# ssap
-eval/results/ssap/cath-ssap
 
