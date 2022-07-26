@@ -16,7 +16,6 @@ public class DbId {
 
     private static Pattern SCOP_PATTERN = Pattern.compile("d[1-9][a-z0-9]{3}[_a-z0-9\\.][_a-z1-9]", Pattern.CASE_INSENSITIVE);      // maxlen = 7
     private static Pattern CATH_PATTERN = Pattern.compile("[1-9][a-z0-9]{3}[a-z1-9][0-9]{2}", Pattern.CASE_INSENSITIVE);            // maxlen = 7
-    private static Pattern ECOD_PATTERN = Pattern.compile("e[1-9][a-z0-9]{3}[a-z1-9\\.]+[0-9]+", Pattern.CASE_INSENSITIVE);         // maxlen = 12 (fudge)
     private static Pattern CHAIN_PATTERN = Pattern.compile("[1-9][a-z0-9]{3}[a-z0-9]+", Pattern.CASE_INSENSITIVE);                  // maxlen = 12 (fudge)
     private static Pattern AFDB_PATTERN = Pattern.compile("AF\\-[a-z0-9\\-]+\\-model_v2", Pattern.CASE_INSENSITIVE);                // maxlen = 26
    
@@ -32,12 +31,6 @@ public class DbId {
         return m.matches();
     } 
     
-    private static boolean isEcodId(String id) {
-
-        Matcher m = ECOD_PATTERN.matcher(id);
-        return m.matches();
-    } 
-
     private static boolean isChainId(String id) {
 
         Matcher m = CHAIN_PATTERN.matcher(id);
@@ -58,9 +51,6 @@ public class DbId {
         else if (isCathId(id)) {
             // CATH takes precedence over CHAIN
             return DbType.CATH;
-        }
-        else if (isEcodId(id)) {
-            return DbType.ECOD;
         }
         else if (isChainId(id)) {
             return DbType.CHAIN;
@@ -85,9 +75,6 @@ public class DbId {
                 break;
             case CATH:
                 normalizedId = id.substring(0,4).toLowerCase() + id.substring(4,id.length());
-                break;
-            case ECOD:
-                normalizedId = id.substring(0,5).toLowerCase() + id.substring(5,id.length());
                 break;
             case CHAIN:
                 normalizedId = id.substring(0,4).toLowerCase() + id.substring(4,id.length());
@@ -119,16 +106,6 @@ public class DbId {
                     suffix = suffix.toLowerCase();
                 }
                 alternateId = id.substring(0,4).toLowerCase() + suffix; 
-                break;
-            case ECOD:
-                suffix = id.substring(5, id.length());
-                if (isStringLowerCase(suffix)) {
-                    suffix = suffix.toUpperCase();
-                }
-                else {
-                    suffix = suffix.toLowerCase();
-                }
-                alternateId = id.substring(0,5).toLowerCase() + suffix;
                 break;
             case CHAIN:
                 suffix = id.substring(4, id.length());

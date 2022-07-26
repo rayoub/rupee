@@ -40,11 +40,6 @@ import edu.umkc.rupee.search.dir.DirInit;
 import edu.umkc.rupee.search.dir.DirSearch;
 import edu.umkc.rupee.search.dir.DirSearchCriteria;
 import edu.umkc.rupee.search.dir.DirSearchRecord;
-import edu.umkc.rupee.search.ecod.EcodHash;
-import edu.umkc.rupee.search.ecod.EcodImport;
-import edu.umkc.rupee.search.ecod.EcodSearch;
-import edu.umkc.rupee.search.ecod.EcodSearchCriteria;
-import edu.umkc.rupee.search.ecod.EcodSearchRecord;
 import edu.umkc.rupee.search.lib.Aligning;
 import edu.umkc.rupee.search.lib.DbId;
 import edu.umkc.rupee.search.lib.Uploading;
@@ -79,10 +74,6 @@ public class OptionFunctions {
         else if (dbType == DbType.SCOP) {
             ScopImport scopImport = new ScopImport();
             scopImport.importGrams();
-        }
-        else if (dbType == DbType.ECOD) {
-            EcodImport ecodImport = new EcodImport();
-            ecodImport.importGrams();
         }
         else if (dbType == DbType.CHAIN) { 
             ChainImport chainImport = new ChainImport();
@@ -124,10 +115,6 @@ public class OptionFunctions {
         else if (dbType == DbType.SCOP) {
             ScopHash scopHash = new ScopHash();
             scopHash.hash();
-        }
-        else if (dbType == DbType.ECOD) {
-            EcodHash ecodHash = new EcodHash();
-            ecodHash.hash();
         }
         else if (dbType == DbType.CHAIN) { 
             ChainHash chainHash = new ChainHash();
@@ -394,55 +381,6 @@ public class OptionFunctions {
                 }
 
                 System.out.println(data);
-            }
-        }
-        else if (dbType == DbType.ECOD) {
-
-            EcodSearchCriteria criteria = new EcodSearchCriteria();
-            
-            criteria.searchBy = searchBy;
-            criteria.idDbType = idDbType;
-            criteria.searchDbType = dbType;
-            criteria.dbId = idOrPath;
-            if (criteria.searchBy == SearchBy.UPLOAD) {
-                criteria.uploadId = uploadId;
-            }
-
-            criteria.limit = limit;
-            criteria.searchType = searchType;
-            criteria.searchMode = searchMode;
-            criteria.sortBy = sortBy;
-            criteria.differentH = diff1;
-            criteria.differentT = diff2;
-            criteria.differentF = diff3;
-
-            EcodSearch ecodSearch = new EcodSearch();
-            SearchResults results = ecodSearch.search(criteria);
-            List<SearchRecord> records = results.getRecords();
-
-            // print headers 
-            if (printHeader) {
-                String header = "n,db_id_1,db_id_2,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
-                if (searchBy == SearchBy.UPLOAD) {
-                    header = "n,file_name,db_id,rmsd,tm_score,q_score,ssap_score,search_mode,search_type";
-                }
-                System.out.println(header);
-            }   
-        
-            for (SearchRecord baseRecord : records) {
-           
-                EcodSearchRecord record = (EcodSearchRecord) baseRecord;
-
-                // gathering results
-                System.out.printf("%d,%s,%s,%.4f,%.4f,%s,%s\n",
-                    record.getN(),
-                    criteria.dbId,
-                    record.getDbId(),
-                    record.getRmsd(),
-                    record.getTmScore(),
-                    criteria.searchMode.name().toLowerCase(),
-                    criteria.searchType.name().toLowerCase()
-                );
             }
         }
         else if (dbType == DbType.CHAIN) { // CHAIN

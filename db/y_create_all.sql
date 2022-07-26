@@ -10,9 +10,6 @@
 \i dir_chain.sql
 \i dir_grams.sql
 \i dir_hashes.sql
-\i ecod_domain.sql
-\i ecod_grams.sql
-\i ecod_hashes.sql
 \i scop_domain.sql
 \i scop_grams.sql
 \i scop_hashes.sql
@@ -42,13 +39,6 @@
 \i get_dir_hashes.sql
 \i get_dir_split_matches.sql
 \i get_dir_split.sql
-\i get_ecod_augmented_results.sql
-\i get_ecod_band_matches.sql
-\i get_ecod_grams_split.sql
-\i get_ecod_grams.sql
-\i get_ecod_hashes.sql
-\i get_ecod_split_matches.sql
-\i get_ecod_split.sql
 \i get_probabilities.sql
 \i get_scop_augmented_results.sql
 \i get_scop_band_matches.sql
@@ -66,8 +56,6 @@
 \i insert_dir_chains.sql
 \i insert_dir_grams.sql
 \i insert_dir_hashes.sql
-\i insert_ecod_grams.sql
-\i insert_ecod_hashes.sql
 \i insert_scop_grams.sql
 \i insert_scop_hashes.sql
 \i insert_upload_grams.sql

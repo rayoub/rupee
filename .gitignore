@@ -7,7 +7,6 @@ data/pdb/obsolete/
 data/scop/pdb/
 data/cath/pdb/
 data/cath/pdb_diverse/
-data/ecod/pdb/
 data/chain/pdb/
 data/chain/obsolete/
 data/afdb/pdb/
@@ -25,9 +24,6 @@ data/cath/cath-names-v4_3_0.txt
 data/cath/domains.txt
 data/cath/names.txt
 data/cath/segments.txt
-data/ecod/ecod.develop282.domains.txt
-data/ecod/domains.txt
-data/ecod/segments.txt
 
 # build ignores
 rupee-core/target/

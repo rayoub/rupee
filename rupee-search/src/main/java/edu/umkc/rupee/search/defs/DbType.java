@@ -8,7 +8,6 @@ public enum DbType {
     DIR(0, "Directory", "dir", Constants.DIR_PATH),
     SCOP(1, "SCOPe", "scop", Constants.SCOP_PDB_PATH),
     CATH(2, "CATH", "cath", Constants.CATH_PDB_PATH),
-    ECOD(3, "ECOD", "ecod", Constants.ECOD_PDB_PATH),
     CHAIN(4, "PDB Chains", "chain", Constants.CHAIN_PDB_PATH),
     AFDB(5, "AlphaFold DB", "afdb", Constants.AFDB_PDB_PATH),
     UPLOAD(10, "Upload", "upload", Constants.UPLOAD_PATH);
@@ -50,9 +49,6 @@ public enum DbType {
         }
         else if (id == CATH.getId()) {
             return CATH;
-        }
-        else if (id == ECOD.getId()) {
-            return ECOD;
         }
         else if (id == CHAIN.getId()) {
             return CHAIN;
