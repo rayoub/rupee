@@ -15,7 +15,7 @@ The instructions below assume you are operating within a bash shell.
 Typically, this will be under Linux. 
 However, Windows 10 does contain a bash shell if you follow some steps to enable it or else you can install Cygwin on earlier versions of Windows. 
 
-If you need additional info or have questions not addressed below, contact me at ronaldayoub@mail.umkc.edu.
+If you need additional info or have questions not addressed below, contact me at ronaldayoub@gmail.com.
 
 ### Database Installation
 
