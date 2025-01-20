@@ -38,7 +38,6 @@ echo "Ignore the WARNINGS"
 # write chain definitions
 java -jar rupee-search-0.0.1-SNAPSHOT-jar-with-dependencies.jar -c $ver 
 
-
 echo "Finished writing ..\chain\pdb_$ver.txt"
 echo "Finished writing ..\chain\obsolete_$ver.txt"
 
