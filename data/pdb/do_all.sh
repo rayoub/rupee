@@ -18,13 +18,15 @@ echo "To the chopper! takes about 45 minutes"
 xargs -a bundle.txt -P8 -L1 ./chopper.sh
 
 # delete empty chopped files
-find ./chopped -size 0 -delete
+# remove the path for linux
+/c/git-sdk-64/usr/bin/find ./chopped -type f -size 0 -delete
 
 # message
 echo "Zipping the chopped files: takes about 30 minutes"
 
 # gzip the chopped files 
-find ./chopped -name "*.pdb" -exec gzip {} \;
+# remove the path for linux
+/c/git-sdk-64/usr/bin/find ./chopped -name "*.pdb" -exec gzip {} \;
 
 # move to app directory
 cd ../../rupee-search/target
@@ -35,6 +37,13 @@ echo "Writing chain definitions: takes about 4 hours"
 # write chain definitions
 java -jar rupee-search-0.0.1-SNAPSHOT-jar-with-dependencies.jar -c $ver 
 
+
+echo "Finished writing ..\chain\pdb_$ver.txt"
+echo "Finished writing ..\chain\obsolete_$ver.txt"
+
 # done
+echo
 echo "Done"
+
+
 
