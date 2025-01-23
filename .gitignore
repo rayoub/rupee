@@ -18,9 +18,9 @@ data/scop/dir.des.scope.2.08-stable.txt
 data/scop/domains.txt
 data/scop/names.txt
 data/scop/segments.txt
-data/cath/cath-domain-boundaries-v4_3_0.txt
-data/cath/cath-domain-list-v4_3_0.txt
-data/cath/cath-names-v4_3_0.txt
+data/cath/cath-domain-boundaries-v4_4_0.txt
+data/cath/cath-domain-list-v4_4_0.txt
+data/cath/cath-names-v4_4_0.txt
 data/cath/domains.txt
 data/cath/names.txt
 data/cath/segments.txt

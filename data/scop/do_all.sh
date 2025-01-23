@@ -1,3 +1,4 @@
+#! /bin/bash
 
 cla=$1
 des=$2
@@ -23,7 +24,7 @@ xargs -a segments.txt -L1 ./chopper.sh
 cd ../../db
 
 # prepare database (will prompt for password)
-psql -d rupee <<EOF
+psql -d rupee -U postgres <<EOF
     truncate table scop_name;
     truncate table scop_domain;
     truncate table scop_grams;
@@ -39,4 +40,7 @@ cd ../rupee-search/target
 java -jar rupee-search-0.0.1-SNAPSHOT-jar-with-dependencies.jar -i SCOP
 java -jar rupee-search-0.0.1-SNAPSHOT-jar-with-dependencies.jar -h SCOP
 
+# done
+echo
+echo "Done"
 

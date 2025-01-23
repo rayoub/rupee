@@ -16,7 +16,7 @@ if [ ! -e "../pdb/${dir}/pdb${pdb_id}.ent.gz" ]; then
     exit 1
 fi
 
-echo "Processing ${chain_id}"
+echo "Processing ${dir} chain ${chain_id}"
 
 # 1. get ATOM and HETATM records only
 # 2. stop processing at the end of the first model 
