@@ -1,7 +1,6 @@
 #! /bin/bash
 
-cla=$1
-des=$2
+ver=$1
 
 # delete output directory if it already exist
 [ -d ./pdb ] && rm -r pdb
@@ -10,9 +9,9 @@ des=$2
 mkdir ./pdb
 
 # parse definition files
-awk -f domains.awk $cla | sort > domains.txt
-awk -f segments.awk $cla | sort > segments.txt
-awk -f names.awk $des > names.txt
+awk -f domains.awk dir.cla.scope.${ver}-stable.txt | sort > domains.txt
+awk -f segments.awk dir.cla.scope.${ver}-stable.txt | sort > segments.txt
+awk -f names.awk dir.des.scope.${ver}-stable.txt > names.txt
 
 # message
 echo "To the chopper!"
