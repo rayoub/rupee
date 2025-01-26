@@ -15,7 +15,7 @@ awk -f segments.awk cath-domain-boundaries-${ver}.txt > segments.txt
 awk -f names.awk cath-names-${ver}.txt > names.txt
 
 # DO NOT PARALLELIZE THIS CALL 
-# parse pdb files (takes forever, like a full day. I've been storing the zips)
+# parse pdb files: (takes forever, like a day and a half)
 xargs -a segments.txt -L1 ./chopper.sh
 
 # move to db directory
