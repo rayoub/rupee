@@ -11,9 +11,9 @@ RUPEE itself is available for use at <https://ayoubresearch.com>.
 
 If you any questions after reading the below, contact me at ronaldayoub@gmail.com.
 
-The instructions below assume you are operating within a bash shell. 
+The instructions below assume you're operating within a bash shell. 
 Typically, this will be under Linux.
-However, if you are working on a Windows machine, you can use the bash shell that comes with an installation of ***Git for Windows***.
+However, if you're working on a Windows machine, you can use the bash shell that comes with an installation of ***Git for Windows***.
 If using ***Git for Windows***, you will have to edit occurrences of the `find` command in a few scripts below in order to hide the Windows native `find` command.
 I'll point that out when needed. 
 
@@ -27,14 +27,14 @@ To install on Ubuntu, run the following command:
 ```
 > sudo apt-get install postgresql
 ```
-If you're using another flavor of Linux, I'm sure there is another equally simple command to execute. 
+If you're using another flavor of Linux, I'm sure there's another equally simple command to execute. 
 For a Windows installation, it's even easier. 
 Just download the installer from <https://www.enterprisedb.com/downloads/postgres-postgresql-downloads> and run it.
 If prompted for a password for the 'postgres' user, use 'postgres'. 
 
 ### Database Creation
 
-These steps may be incomplete or inaccurate since I have switched from running RUPEE on a Linux machine to a Windows machine and I didn't update the documentation as I went through that process. 
+These steps may be incomplete or inaccurate since I've switched from running RUPEE on a Linux machine to a Windows machine and I didn't update the documentation as I went through that process. 
 I also switched to using the 'postgres' user for everything and didn't document how to do that in Linux, so the below Linux instructions are my best guess.
 
 To keep things simple, I use the 'postgres' user for everything and I set the password to 'postgres'. 
@@ -46,14 +46,14 @@ For Linux, switch to the 'postgres' user, login to the ***psql*** utility and is
 > \password
 ```
 To exit ***psql*** type the `\q` command. 
-The ***psql*** utility is used below in both Linux and Windows so it is recommended you familiarize yourself with it.  
+The ***psql*** utility is used below in both Linux and Windows so it's recommended you familiarize yourself with it.  
 
 Next, create the 'rupee' database with the following commands below. 
 ```
 sudo -u postgres
 createdb -O postgres rupee
 ```
-For everything below, it is assumed the database name will be 'rupee', the username 'postgres', and the password 'postgres'. 
+For everything below, it's assumed the database name will be 'rupee', the username 'postgres', and the password 'postgres'. 
 If you wish to change this you have to edit the [Constants.java](rupee-search/src/main/java/edu/umkc/rupee/search/lib/Constants.java) file in the rupee-search project before building. 
 
 Next, navigate to the db/ directory and login to the rupee database by executing the following command:
@@ -66,8 +66,8 @@ Finally, within the __psql__ prompt, execute the following command to create the
 ```
 ### Database Configuration
 
-Now, locate the ```pg_hba.conf``` file associated with the ***PostgreSQL*** installation. 
-On Windows, it is located in the ```C:\Program Files\PostgreSQL\[Version]\data``` directory.
+Next, locate the ```pg_hba.conf``` file associated with the ***PostgreSQL*** installation. 
+On Windows, it's located in the ```C:\Program Files\PostgreSQL\[Version]\data``` directory.
 You should add the uncommented line below.
 The comments are there to provide context. 
 They should already be part of the ```pg_hba.conf``` file.
@@ -84,7 +84,7 @@ local   rupee           postgres                                scram-sha-256
 On Windows, start and stop the ***PostgreSQL*** service in order for the new configuration to take effect.  
 On Linux, reboot your computer or do it some other way that doesn't require a reboot. 
 
-### Maven Build
+## Maven Build
 
 First, in the [Constants.java](rupee-search/src/main/java/edu/umkc/rupee/search/lib/Constants.java) file, edit the ```DATA_PATH``` constant to point to the local directory you plan to use as the root of all the locally stored pdb files. 
 The actual pdb files will be stored under subdirectories within this directory. 
@@ -99,7 +99,7 @@ To build, from each project's root directory execute the following command:
 ```
 > mvn clean package install
 ```
-To test the build, navigate to the rupee-search/target/ directory and issue the following command:
+To test the build, navigate to the ```rupee-search/target/``` directory and execute the following command:
 ```
 > java -jar rupee-search-0.0.1-SNAPSHOT-jar-with-dependencies.jar -?
 Usage: RUPEE
@@ -109,7 +109,7 @@ Usage: RUPEE
      -u,--search-upload <DB_TYPE>,<FILE_PATH>,<REP1>,<REP2>,<REP3>,<DIFF1>,<DIFF2>,<DIFF3>,<SEARCH_MODE>,<SEARCH_TYPE>
      -?,--help
 ```
-Where 
+where 
 
 ```
 <DB_TYPE>       = DIR | SCOP | CATH | CHAIN
@@ -128,7 +128,7 @@ Option | Description
 -u  | search for similar structures using a file path
 -?  | print the available options
 
-### The local directory database 
+## The local directory database 
 
 To process the pdb files at ```DIR_PATH```, execute the following commands:
 ```
@@ -147,7 +147,7 @@ java -jar -Dlog4j.configurationFile=log4j2.xml rupee-search-0.0.1-SNAPSHOT-jar-w
 ### Importing SCOP, CATH and CHAIN databases
 
 If you're only interested in importing DIR data from the ```DIR_PATH```, you can safely ignore the following. 
-However, if you are interested in duplicating the functionality at <https://ayoubresearch.com> or you're interested in duplicating the results in the PLoS ONE paper, you should read on. 
+However, if you're interested in duplicating the functionality at <https://ayoubresearch.com> or you're interested in duplicating the results in the PLoS ONE paper, you should read on. 
 
 Some files, especially data files, are too numerous or too large to include in the GitHub repo. 
 The .gitignore file list the files and directories that have been explicitly excluded from the repo. 
@@ -197,7 +197,7 @@ These commands take around 5 minutes and do not give any progress indicator.
 find ./bundles -mindepth 2 -type f -exec mv -t ./bundles -i '{}' +
 find ./obsolete -mindepth 2 -type f -exec mv -t ./obsolete -i '{}' +
 
-If you are running in a BASH shell on a Windows computer, the Linux __find__ is hidden by the Windows __find__ command.
+If you're running in a BASH shell on a Windows computer, the Linux __find__ is hidden by the Windows __find__ command.
 Something like the following commands will work. 
 
 /c/git-sdk-64/usr/bin/find ./bundles -mindepth 2 -type f -exec mv -t ./bundles -i '{}' +
