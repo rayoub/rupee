@@ -17,15 +17,14 @@ public class Constants {
     public final static String SCOP_PATH = DATA_PATH + "scop/";
     public final static String CATH_PATH = DATA_PATH + "cath/";
     public final static String AFDB_PATH = DATA_PATH + "afdb/";
+    public final static String DIR_PATH = DATA_PATH + "dir/";
+    
+    public final static String UPLOAD_PATH = DATA_PATH + "upload/";
     
     public final static String CHAIN_PDB_PATH = CHAIN_PATH + "pdb/";
     public final static String SCOP_PDB_PATH = SCOP_PATH + "pdb/";
     public final static String CATH_PDB_PATH = CATH_PATH + "pdb/"; 
     public final static String AFDB_PDB_PATH = AFDB_PATH + "pdb/";
-
-    public final static String UPLOAD_PATH = DATA_PATH + "upload/";
-
-    public final static String DIR_PATH = "";
 
     public final static String PDB_PATH = DATA_PATH + "pdb/";
     public final static String PDB_PDB_PATH = PDB_PATH + "pdb/";
