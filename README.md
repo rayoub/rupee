@@ -144,7 +144,7 @@ The following command shows an example search:
 java -jar -Dlog4j.configurationFile=log4j2.xml rupee-search-0.0.1-SNAPSHOT-jar-with-dependencies.jar -s DIR,d9rubb2,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TOP_ALIGNED,FULL_LENGTH
 ```
 
-### Importing SCOP, CATH and CHAIN databases
+## Importing SCOP, CATH and CHAIN databases
 
 If you're only interested in importing DIR data from the ```DIR_PATH```, you can safely ignore the following. 
 However, if you're interested in duplicating the functionality at <https://ayoubresearch.com> or you're interested in duplicating the results in the PLoS ONE paper, you should read on. 
@@ -270,13 +270,13 @@ Type in the following command in each directory in any order:
 > ./do_all.sh v4_4_0
 ```
 
-### Some tips
+## Some tips
 
 You may need to get more familiar with the do_all.sh scripts.
 When a script errors out midway through, carefully comment out the completed lines, address the issue, and run again. 
 In some cases, the do_all.sh bash script will execute the above rupee-search application for importing and hashing structures. 
 
-### Conclusion
+## Conclusion
 
 If you have successfully processed one of the data directories, you can now run searches with the rupee-search application.  
 
