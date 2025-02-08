@@ -1,8 +1,4 @@
 
-# CURRENTLY UNDER CONSTRUCTION
-The web site has already been fully updated for 2025. 
-
-
 ## Introduction
 
 This project contains code and data to accompany the PLoS ONE paper: <br/>[RUPEE: A fast and accurate purely geometric protein structure search](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0213712). 
@@ -128,9 +124,13 @@ Option | Description
 -u  | search for similar structures using a file path
 -?  | print the available options
 
-## The local directory database 
+## Single Directory Database
 
-To process the pdb files at ```DIR_PATH```, execute the following commands:
+First, in the [Constants.java](rupee-search/src/main/java/edu/umkc/rupee/search/lib/Constants.java) file, edit the ```DATA_PATH``` constant to point to the local directory you plan to use as the root of all the locally stored pdb files. 
+The actual pdb files will be stored under subdirectories within this directory. 
+Next, create a subdirectory ```dir``` under the ```DATA_PATH``` above. 
+
+To process the pdb files under ```dir```, execute the following commands:
 ```
 > java -jar rupee-search-0.0.1-SNAPSHOT-jar-with-dependencies.jar -i DIR
 > java -jar rupee-search-0.0.1-SNAPSHOT-jar-with-dependencies.jar -h DIR
@@ -144,25 +144,28 @@ The following command shows an example search:
 java -jar -Dlog4j.configurationFile=log4j2.xml rupee-search-0.0.1-SNAPSHOT-jar-with-dependencies.jar -s DIR,d9rubb2,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TOP_ALIGNED,FULL_LENGTH
 ```
 
-## Importing SCOP, CATH and CHAIN databases
+## Importing SCOP, CATH and CHAIN Databases
 
-If you're only interested in importing DIR data from the ```DIR_PATH```, you can safely ignore the following. 
-However, if you're interested in duplicating the functionality at <https://ayoubresearch.com> or you're interested in duplicating the results in the PLoS ONE paper, you should read on. 
+If you're only interested in importing DIR data from the ```dir``` directory, you can safely ignore the following. 
+However, if you're interested in duplicating the functionality at <https://ayoubresearch.com>, you should read on. 
 
 Some files, especially data files, are too numerous or too large to include in the GitHub repo. 
 The .gitignore file list the files and directories that have been explicitly excluded from the repo. 
 
-### db/
+### rupee/db/ directory
 
 This directory contains SQL definitions files. 
 All files except files prefixed with x\_ or y\_ contain SQL definitions. 
 
 x\_ files are used for populating tables and should only be run when parsed data files are present.
-Please note, the x\_ files contain __hard-coded references__ to file locations that should be changed to match your Linux home directory.
+Please note, the x\_ files contain __hard-coded references__ to file locations that should be changed to match your directories.
 Unfortunately, the postgres COPY command does not accept relative directories. 
+The y\_ are used for creating the database objects, as noted above. 
 
-### data/
+### rupee/data/ directory
 
+This directory should probably correspond to your ```DATA_PATH``` but it is not required. 
+If not, you should mirror the contents of this directory in your ```DATA_PATH``` directory. 
 This directory contains all data files and scripts used in parsing the files. 
 
 The following directories, along with brief descriptions, are excluded from the repo so you must create them. 
@@ -170,107 +173,114 @@ Create them now or create them as you go.
 
 Excluded Directory | Description
 ------------------ | -----------
-data/pdb/pdb/      | From /pub/pdb/data/structures/all/pdb/ at files.wwpdb.org
-data/pdb/obsolete/ | From /pub/pdb/data/structures/obsolete/pdb/ at files.wwpdb.org
-data/pdb/bundles/  | From /pub/pdb/compatible/pdb_bundle/ at files.wwpdb.org
+data/pdb/pdb/      | see ```rysnc``` below
+data/pdb/obsolete/ | see ```rysnc``` below
+data/pdb/bundles/  | see ```rysnc``` below
 data/chain/pdb/    | parsed pdb files containing whole chains
 data/scop/pdb/     | parsed pdb files based on scop definitions
 data/cath/pdb/     | parsed pdb files based on cath definitions
 data/upload/       | directory used for temporary storage of uploaded pdb files
 
-__NOTE: DO NOT EXTRACT THE DOWNLOADED ARCHIVE FILES UNLESS EXPLICITY STATED__
+___PLEASE NOTE: DO NOT EXTRACT THE DOWNLOADED ARCHIVE FILES UNLESS EXPLICITY STATED___
 
-The PDB FTP site has been deprecated so you have to use the rsync command to get the data. 
+The PDB FTP site has been deprecated so you have to use the ```rsync``` command to get the data. 
 
 __While in the data/pdb__ directory run the following commands. 
 
 You must include the final forward slash for the rsync source directories otherwise it will copy the directory itself in addition to the files.
 
+```
 rsync -rLpt -v -z --delete --port=33444 rsync.rcsb.org::ftp_data/structures/all/pdb/ ./pdb
 rsync -rLpt -v -z --delete --port=33444 rsync.rcsb.org::ftp_data/structures/obsolete/pdb/ ./obsolete
 rsync -rLpt -v -z --delete --port=33444 rsync.rcsb.org::ftp/compatible/pdb_bundle/ ./bundles
+```
 
 The files in the bundles and the obsolete directories are organized into subfolders. 
 Execute the following commands in order move all files in the subfolders into the parent folder. 
 These commands take around 5 minutes and do not give any progress indicator. 
-
+```
 find ./bundles -mindepth 2 -type f -exec mv -t ./bundles -i '{}' +
 find ./obsolete -mindepth 2 -type f -exec mv -t ./obsolete -i '{}' +
+```
 
-If you're running in a BASH shell on a Windows computer, the Linux __find__ is hidden by the Windows __find__ command.
-Something like the following commands will work. 
+If you're running in a ***Git for Windows*** bash shell on a Windows computer, the Linux __find__ command is hidden by the native Windows __find__ command.
+The above commands should look like this. 
 
+```
 /c/git-sdk-64/usr/bin/find ./bundles -mindepth 2 -type f -exec mv -t ./bundles -i '{}' +
 /c/git-sdk-64/usr/bin/find ./obsolete -mindepth 2 -type f -exec mv -t ./obsolete -i '{}' +
+```
 
-The tar files in the /data/pdb/bundles/ local directory have to be extracted.
-To extract, while in the /data/pdb/bundles/ directory, run the following commands:
+The tar files in the ```/data/pdb/bundles/``` local directory have to be extracted.
+To extract, while in the ```/data/pdb/bundles/``` directory, run the following commands. 
+Remove the path if running in Linux.
 
+```
 /c/git-sdk-64/usr/bin/find . -name "*.gz" -exec tar xvfz {} \;
+```
 
-The gz files in the /data/pdb/obsolete directory should be left as is and not extracted. 
+The ***gzip*** files in the /data/pdb/obsolete directory should not be extracted. 
 
-Once downloaded and preprocessed as above, the files can be processed to populate the remaining data/pdb/ directory in addition to the data/chain/, data/scop/ and data/cath/ directories. 
-The data/pdb/ directory must be processed first followed by the data/chain/ directory.
-Then the remaining directories can be processed independently. 
+Once downloaded and preprocessed as above, the files can be processed to populate the remaining ```data/pdb/``` directory in addition to the ```data/chain/```, ```data/scop/``` and ```data/cath/``` directories. 
+The ```data/pdb/``` directory must be processed first followed by the ```data/chain/``` directory.
+Then, the remaining directories can be processed independently. 
 The following is what to do in each directory with it set as your working directory.
 
-### data/pdb/
+### data/pdb/ directory
 
-If you downloaded the pdb data on the date of MM/DD/YYYY, then your version is "vMM_DD_YYYY" and needs to be passed as the argument to the do_all.sh bash script.
+If you downloaded the pdb data on the date of MM/DD/YYYY, then your version is "vMM_DD_YYYY" and needs to be passed as the argument to the ```do_all.sh``` bash script.
 This script chops bundle files and puts them in the data/pdb/chopped/ directory. 
-This script may take up to 6 hours more or less based on your computer specs. 
+This script may take up to 6 hours more or less based on your computer.
 Below is an example:
 
-
 ```
 > ./do_all.sh v01_15_2025
 ```
-Next, files are created in the data/pdb/chain/ directory that define the chains present in the pdb files, including bundle files and obsolete files.  
+Next, this same script creates files in the ```data/pdb/chain/``` directory that define the chains present in the pdb files, including bundle files and obsolete files.  
 The passed in version is used to name these definition files. 
 
-### data/chain/
+### data/chain/ directory
 
-Using the same version as above, type the following command:
-This command takes some time. 
+Using the same version as above, type the following command.
+This command takes some time - like a full day.  
 
-### make sure to update the file reference containing a version number to the version passed into the command in rupee/db/x_chain.sql file 
+___PLEASE NOTE: make sure to update the file reference containing a version number to the version passed into the command in the ```rupee/db/x_chain.sql``` file.___
 
 ```
 > ./do_all.sh v01_15_2025
 ```
 
-### data/scop/ and data/cath/  this needs to be broken up and scop needs parameters
+### data/scop/ directory
 
-goto https://scop.berkeley.edu/downloads/ver=2.08
+Go to the https://scop.berkeley.edu/downloads/ver=2.08 web site and download the files below to the ```data/scop/``` directory.  
+The download links themselves will not contain the version information. 
+```
+dir.cla.scope.2.08-stable.txt
+dir.des.scope.2.08-stable.txt
+```
+While in the ```data/scop/``` directory, for version 2.08, run the following command passing in the version information. There is no 'v' prepended. 
 
-Download the link dir.cla.scope.txt
+```
+> ./do_all.sh 2.08
+```
 
-The link names are different from the file names, which have version information
+### data/cath/ directory
 
-The file name should have this exact form in order for the do_all script to work. In 2.08 as the version to the do_all script
+While in the ```data/cath/``` directory, using ***FileZilla*** or some other FTP app, go to the ```ftp://orengoftp.biochem.ucl.ac.uk``` site. 
+Navigate to the ```/cath/releases/all-releases/v4_4_0/cath-classification-data``` directory and download the files below. 
 
-data/scop/dir.cla.scope.2.08-stable.txt
-data/scop/dir.des.scope.2.08-stable.txt
-
-
-ftp://orengoftp.biochem.ucl.ac.uk
-
-navigate to /cath/releases/all-releases/v4_4_0/cath-classification-data
-
-
+```
 data/cath/cath-domain-boundaries-v4_4_0.txt
 data/cath/cath-domain-list-v4_4_0.txt
 data/cath/cath-names-v4_4_0.txt
-
-
-Type in the following command in each directory in any order:
+```
+Next, enter the following command in the bash shell.
 
 ```
 > ./do_all.sh v4_4_0
 ```
 
-## Some tips
+## Some Tips
 
 You may need to get more familiar with the do_all.sh scripts.
 When a script errors out midway through, carefully comment out the completed lines, address the issue, and run again. 
