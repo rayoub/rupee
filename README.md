@@ -41,7 +41,7 @@ For Linux, switch to the 'postgres' user, login to the ***psql*** utility and is
 > sudo -u postgres psql
 > \password
 ```
-To exit ***psql*** type the `\q` command. 
+To exit ***psql***, type the `\q` command. 
 The ***psql*** utility is used below in both Linux and Windows so it's recommended you familiarize yourself with it.  
 
 Next, create the 'rupee' database with the following commands below. 
@@ -52,7 +52,7 @@ createdb -O postgres rupee
 For everything below, it's assumed the database name will be 'rupee', the username 'postgres', and the password 'postgres'. 
 If you wish to change this you have to edit the [Constants.java](rupee-search/src/main/java/edu/umkc/rupee/search/lib/Constants.java) file in the rupee-search project before building. 
 
-Next, navigate to the db/ directory and login to the rupee database by executing the following command:
+Next, navigate to the ```rupee/db/``` directory and login to the rupee database by executing the following command:
 ```
 psql -U postgres rupee
 ```
